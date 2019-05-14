@@ -16,7 +16,58 @@ public class TD_ButtonController : MonoBehaviour
     ////////////////////////////////
 
     private bool isMusicPlaying;
-    private bool isSFXPlaying; 
+    private bool isSFXPlaying;
+
+    ///////////////////////////////////////////////////////////////// - Extra uttons
+
+    private void Button_StartNextWave()
+    {
+
+    }
+
+    ///////////////////////////////////////////////////////////////// - Tower Buttons
+
+    private void Button_TowerFire()
+    {
+
+    }
+
+    private void Button_TowerIce()
+    {
+
+    }
+
+    private void Button_TowerEarth()
+    {
+
+    }
+
+    private void Button_TowerLightning()
+    {
+
+    }
+
+    ///////////////////////////////////////////////////////////////// - Skill Buttons
+
+    private void Button_SkillFire()
+    {
+
+    }
+
+    private void Button_SkillIce()
+    {
+
+    }
+
+    private void Button_SkillEarth()
+    {
+
+    }
+
+    private void Button_SkillLightning()
+    {
+
+    }
 
     ///////////////////////////////////////////////////////////////// - Main Menu
 
