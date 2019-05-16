@@ -9,15 +9,12 @@ public class TD_TileNodes : MonoBehaviour
 
     //changed execution order for this and world builder
     public Grid gridBase;
-    public Tilemap floor;
-
+    public Tilemap[] tileMapFloorList;
     //floor of world
     public List<Tilemap> obstacleLayers;
-
     //all layers that contain objects to navigate around
-    public GameObject nodePrefab;
-    public GameObject nodePrefab_Yellow;
-
+    public GameObject[] nodePrefabs;
+    public GameObject nodePrefab_Unwalkable;
 
     //these are the bounds of where we are searching in the world for tiles, have to use world coords to check for tiles in the tile map
     public int scanStartingPoint_X = -250;
@@ -35,6 +32,7 @@ public class TD_TileNodes : MonoBehaviour
     public int gridBoundX = 0;
     public int gridBoundY = 0;
 
+    public int unwalkableNodeBorder = 1;
 
     //////////////////////////////////////////////////////////
 
@@ -52,16 +50,44 @@ public class TD_TileNodes : MonoBehaviour
 
     //////////////////////////////////////////////////////////
 
-    public void generateNodes()
-    {
-        //just call this and plug the resulting 2d array of nodes into your own A* algorithm
-        createNodes();
-    }
+    // public void generateNodes()
+    // {
+    //     //just call this and plug the resulting 2d array of nodes into your own A* algorithm
+    //     createNodes();
+    // }
 
     //////////////////////////////////////////////////////////
 
+    ///<summary>
+    ///just call this and plug the resulting 2d array of nodes into your own A* algorithm
+    ///</summary>
+    public void generateNodes()
+    {
+        LoopThroughFloorList(tileMapFloorList, nodePrefabs);
+    }
 
-    void createNodes()
+    ///<summary>
+    ///Loop through all available floor in list, which will then instantiate node accordingly
+    ///</summary>
+    /// <param name="floorList">List of tilemap to iterate through</param>
+    /// <param name="nodePrefabs">List of node correspond to suitable floor</param>
+    private void LoopThroughFloorList(Tilemap[] floorList, GameObject[] nodePrefabs)
+    {
+        if(floorList.Length > nodePrefabs.Length || floorList.Length < nodePrefabs.Length)
+        {
+            Debug.LogError("Number of node does not match number of floor");
+            return;
+        }
+        for(int i = 0; i < floorList.Length; i++)
+            createNodes(floorList[i], nodePrefabs[i]);
+    }
+
+    ///<summary>
+    ///Main method to handle node creation
+    ///</summary>
+    /// <param name="tileMapFloor">Tilemap that will spawn in game</param>
+    /// <param name="nodePrefab">Node that corresponds to the tileMapFloor</param>
+    private void createNodes(Tilemap tileMapFloor, GameObject nodePrefab)
     {
         //use these to work out the size and where each node should be in the 2d array we'll use to store our nodes so we can work out neighbours and get paths
         int gridX = 0;
@@ -69,6 +95,7 @@ public class TD_TileNodes : MonoBehaviour
 
         //Bool for finding a tile so that you may increment the grid size
         bool foundTileOnLastPass = false;
+        GameObject parentNode = Instantiate(new GameObject("Parent_" + tileMapFloor.name), new Vector3(0,0,0), Quaternion.identity);
 
         //scan tiles and create nodes based on where they are
         for (int x = scanStartingPoint_X; x < scanFinishPoint_X; x++)
@@ -76,8 +103,7 @@ public class TD_TileNodes : MonoBehaviour
             for (int y = scanStartingPoint_Y; y < scanFinishPoint_Y; y++)
             {
                 //go through our world bounds in increments of 1
-                TileBase tb = floor.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
-
+                TileBase tb = tileMapFloor.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
 
                 if (tb == null)
                 {
@@ -122,17 +148,16 @@ public class TD_TileNodes : MonoBehaviour
                     {
                         //if we havent found an obstacle then we create a walkable node and assign its grid coords
 
-
-
                         float mapConstant = 11.2f;
 
                         Vector3 nodePosition = new Vector3(11.2f + ((x + gridBase.transform.position.x) * mapConstant), 5.6f + ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);     
                         Quaternion nodeRotation = Quaternion.Euler(0, 0, 0);
 
-                        GameObject node = Instantiate(nodePrefab, nodePosition, nodeRotation);
+//                        GameObject node = Instantiate(nodePrefab, nodePosition, nodeRotation);
 
+                        GameObject node = Instantiate(nodePrefab, nodePosition, Quaternion.identity, parentNode.transform);
 
-
+                        
                         WorldTile wt = node.GetComponent<WorldTile>();
                         wt.gridX = gridX;
                         wt.gridY = gridY;
@@ -153,7 +178,7 @@ public class TD_TileNodes : MonoBehaviour
                         Vector3 nodePosition = new Vector3(11.2f + ((x + gridBase.transform.position.x) * mapConstant), 5.6f + ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
                         Quaternion nodeRotation = Quaternion.Euler(0, 0, 0);
 
-                        GameObject node = (GameObject)Instantiate(nodePrefab_Yellow, nodePosition, nodeRotation);
+                        GameObject node = (GameObject)Instantiate(nodePrefab_Unwalkable, nodePosition, nodeRotation);
                         //we add the gridBase position to ensure that the nodes are ontop of the tile they relate too
                         node.GetComponent<SpriteRenderer>().color = Color.red;
                         WorldTile wt = node.GetComponent<WorldTile>();
@@ -163,8 +188,6 @@ public class TD_TileNodes : MonoBehaviour
                         foundTileOnLastPass = true;
                         unsortedNodes.Add(node);
                         node.name = "UNWALKABLE NODE " + gridX.ToString() + " : " + gridY.ToString();
-
-
                     }
                     gridY++; //increment the y counter
 
@@ -220,10 +243,11 @@ public class TD_TileNodes : MonoBehaviour
         //after this we have our grid of nodes ready to be used by the astar algorigthm
 
     }
-
-
     //gets neighbours of a tile at x/y in a specific tilemap, can also have a border
-    public int unwalkableNodeBorder = 1;
+
+    ///<summary>
+    ///Undocumented
+    ///</summary>
     public List<TileBase> getNeighbouringTiles(int x, int y, Tilemap t)
     {
         List<TileBase> retVal = new List<TileBase>();
@@ -242,12 +266,16 @@ public class TD_TileNodes : MonoBehaviour
                     retVal.Add(tile);
                 }
             }
+
         }
 
         return retVal;
     }
 
-    //gets the neighbours of the coords passed in
+    
+    ///<summary>
+    ///Undocumented
+    ///</summary>
     public List<WorldTile> getNeighbours(int x, int y, int width, int height)
     {
 
@@ -725,7 +753,6 @@ public class TD_TileNodes : MonoBehaviour
                 }
             }
         }
-
 
         return myNeighbours;
     }
