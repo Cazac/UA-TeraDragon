@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class UpgradeNode : ScriptableObject {
     public string upgradeName;
-    public UpgradeType upgradeType;
+    private UpgradeType upgradeType;
     public bool isActive;
     public UpgradeNode[] necessaryNodes;
 
@@ -17,7 +17,9 @@ public class UpgradeNode : ScriptableObject {
         isActive = true;
     }
 
-
+    public UpgradeType GetUpgradeType() {
+        return upgradeType;
+    }
     
 }
 

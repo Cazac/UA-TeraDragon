@@ -11,7 +11,7 @@ public class UpgradeTree : ScriptableObject {
     public float GetTotalStatsUpgrade(StatsCategory category) {
         float total = 0f;
         foreach (UpgradeNode upgradeNode in tree) {
-            if (upgradeNode.upgradeType == UpgradeType.STATS_MODIFIER && upgradeNode.isActive) {
+            if (upgradeNode.GetUpgradeType() == UpgradeType.STATS_MODIFIER && upgradeNode.isActive) {
                 if(((StatsUpgrade)upgradeNode).statsCategory == category) {
                     total += ((StatsUpgrade)upgradeNode).StatsMultiplier;
                 }
@@ -24,7 +24,7 @@ public class UpgradeTree : ScriptableObject {
         List<string> activeAbilities = new List<string>();
 
         foreach (UpgradeNode upgradeNode in tree) {
-            if (upgradeNode.upgradeType == UpgradeType.EFFECT && upgradeNode.isActive) {
+            if (upgradeNode.GetUpgradeType() == UpgradeType.EFFECT && upgradeNode.isActive) {
                 activeAbilities.Add(((EffectUpgrade)upgradeNode).effectUpgrade);
             }
         }
