@@ -16,7 +16,7 @@ public class UpgradeNode : ScriptableObject {
         }
         isActive = true;
     }
-
+    
     public UpgradeType GetUpgradeType() {
         return upgradeType;
     }
