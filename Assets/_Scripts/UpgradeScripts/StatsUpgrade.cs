@@ -12,8 +12,10 @@ public class StatsUpgrade : UpgradeNode {
 }
 
 public enum StatsCategory {
-    ATTACK_SPEED,
-    DAMAGE,
-    RANGE,
+    TOWER_ATTACK_SPEED,
+    TOWER_DAMAGE,
+    TOWER_RANGE,
+    ABILITY_TIMER,
+    ABILITY_STATS,
     OTHER
 }
