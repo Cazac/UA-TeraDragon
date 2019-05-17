@@ -122,9 +122,7 @@ public class TD_TileNodes : MonoBehaviour
 
                         }
                         else
-                        {
                             foundObstacle = true;
-                        }
 
                         //if we want to add an unwalkable edge round our unwalkable nodes then we use this to get the neighbours and make them unwalkable
                         if (unwalkableNodeBorder > 0)
@@ -137,9 +135,7 @@ public class TD_TileNodes : MonoBehaviour
 
                                 }
                                 else
-                                {
                                     foundObstacle = true;
-                                }
                             }
                         }
                     }
@@ -170,6 +166,7 @@ public class TD_TileNodes : MonoBehaviour
                     else
                     {
                         //if we have found an obstacle then we do the same but make the node unwalkable
+                        Debug.Log("Found unwalkable");
 
                         print("Test Code: ????");
 
