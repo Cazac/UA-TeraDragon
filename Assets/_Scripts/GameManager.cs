@@ -12,8 +12,6 @@ public class GameManager : MonoBehaviour
     // remove gems spent and place the tower( tower manager)
     // increase the size of the map every level. (Level manager?)
 
-
-
     // Start is called before the first frame update
     void Start()
     {
