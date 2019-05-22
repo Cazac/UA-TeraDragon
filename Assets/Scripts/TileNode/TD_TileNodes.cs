@@ -237,30 +237,30 @@ public class TD_TileNodes : MonoBehaviour {
 
             AddNodeToList(myNeighbours, x - 1, y);
             AddNodeToList(myNeighbours, x + 1, y);
-            if (y >= 0) { //just top
+            if (y > 0) { //just top
                 AddNodeToList(myNeighbours, x, y - 1);
             }
-            if (y <= height - 1) { //just bottom
+            if (y < height - 1) { //just bottom
                 AddNodeToList(myNeighbours, x, y + 1);
             }
         }
         else if (x == 0) {
             AddNodeToList(myNeighbours, x + 1, y);
             //can't get tile on left
-            if (y >= 0) { //just top
+            if (y > 0) { //just top
                 AddNodeToList(myNeighbours, x, y - 1);
             }
-            if (y <= height - 1) { //just bottom
+            if (y < height - 1) { //just bottom
                 AddNodeToList(myNeighbours, x, y + 1);
             }
         }
         else if (x == width - 1) {
             AddNodeToList(myNeighbours, x - 1, y);
             //can't get tile on right
-            if (y >= 0) { //just top
+            if (y > 0) { //just top
                 AddNodeToList(myNeighbours, x, y - 1);
             }
-            if (y <= height - 1) { //just bottom
+            if (y < height - 1) { //just bottom
                 AddNodeToList(myNeighbours, x, y + 1);
             }
         }
