@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class UpgradeNode : ScriptableObject {
+public abstract class UpgradeNode : ScriptableObject {
     public string upgradeName;
     private UpgradeType upgradeType;
     public bool isActive;
