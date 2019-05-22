@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class TD_ButtonController : MonoBehaviour
@@ -20,87 +21,89 @@ public class TD_ButtonController : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////// - Extra uttons
 
-    private void Button_StartNextWave()
+    public void Button_StartNextWave()
     {
-
+        Debug.Log("Wave");
     }
 
     ///////////////////////////////////////////////////////////////// - Tower Buttons
 
-    private void Button_TowerFire()
+    public void Button_TowerFire()
     {
-
+        Debug.Log("Tower");
     }
 
-    private void Button_TowerIce()
+    public void Button_TowerIce()
     {
-
+        Debug.Log("Tower");
     }
 
-    private void Button_TowerEarth()
+    public void Button_TowerEarth()
     {
-
+        Debug.Log("Tower");
     }
 
-    private void Button_TowerLightning()
+    public void Button_TowerLightning()
     {
-
+        Debug.Log("Tower");
     }
 
     ///////////////////////////////////////////////////////////////// - Skill Buttons
 
-    private void Button_SkillFire()
+    public void Button_SkillFire()
     {
-
+        Debug.Log("Fire");
     }
 
-    private void Button_SkillIce()
+    public void Button_SkillIce()
     {
-
+        Debug.Log("Ice");
     }
 
-    private void Button_SkillEarth()
+    public void Button_SkillEarth()
     {
-
+        Debug.Log("Earth");
     }
 
-    private void Button_SkillLightning()
+    public void Button_SkillLightning()
     {
-
+        Debug.Log("Lightning");
     }
 
     ///////////////////////////////////////////////////////////////// - Main Menu
 
-    private void Button_Play()
+    public void Button_Play()
     {
-
+        //Load into main game
+        SceneManager.LoadScene("Main Game");
     }
 
-    private void Button_Help()
+    public void Button_Help()
     {
-
+        Debug.Log("Fire");
     }
 
-    private void Button_Credits()
+    public void Button_Credits()
     {
-
+        Debug.Log("Fire");
     }
 
-    private void Button_Quit()
+    public void Button_Quit()
     {
-
+        //Close game
+        Application.Quit();
     }
 
     ///////////////////////////////////////////////////////////////// - Audio Menu
 
-    private void Button_Music()
+    public void Button_Music()
     {
-
+        Debug.Log("Mute Music");
     }
 
-    private void Button_SFX()
+    public void Button_SFX()
     {
-
+        Debug.Log("Mute SFX");
     }
 
     /////////////////////////////////////////////////////////////////
