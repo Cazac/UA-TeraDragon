@@ -238,30 +238,30 @@ public class TD_TileNodes : MonoBehaviour {
             AddNodeToList(myNeighbours, x - 1, y);
             AddNodeToList(myNeighbours, x + 1, y);
             if (y >= 0) { //just top
-                AddNodeToList(myNeighbours, x, y + 1);
+                AddNodeToList(myNeighbours, x, y - 1);
             }
             if (y <= height - 1) { //just bottom
-                AddNodeToList(myNeighbours, x, y - 1);
+                AddNodeToList(myNeighbours, x, y + 1);
             }
         }
         else if (x == 0) {
             AddNodeToList(myNeighbours, x + 1, y);
             //can't get tile on left
             if (y >= 0) { //just top
-                AddNodeToList(myNeighbours, x, y + 1);
+                AddNodeToList(myNeighbours, x, y - 1);
             }
             if (y <= height - 1) { //just bottom
-                AddNodeToList(myNeighbours, x, y - 1);
+                AddNodeToList(myNeighbours, x, y + 1);
             }
         }
         else if (x == width - 1) {
             AddNodeToList(myNeighbours, x - 1, y);
             //can't get tile on right
             if (y >= 0) { //just top
-                AddNodeToList(myNeighbours, x, y + 1);
+                AddNodeToList(myNeighbours, x, y - 1);
             }
             if (y <= height - 1) { //just bottom
-                AddNodeToList(myNeighbours, x, y - 1);
+                AddNodeToList(myNeighbours, x, y + 1);
             }
         }
 
@@ -269,8 +269,8 @@ public class TD_TileNodes : MonoBehaviour {
     }
 
     void AddNodeToList(List<WorldTile> list, int x, int y) {
-        if (nodes[x, y - 1] != null) {
-            WorldTile wt = nodes[x, y - 1].GetComponent<WorldTile>();
+        if (nodes[x, y] != null) {
+            WorldTile wt = nodes[x, y].GetComponent<WorldTile>();
             if (wt != null) {
                 list.Add(wt);
             }
