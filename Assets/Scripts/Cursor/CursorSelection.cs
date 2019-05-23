@@ -48,6 +48,6 @@ public class CursorSelection : MonoBehaviour
     internal void LogRaycasthitObject(String position, String type)
     {
         String logString = String.Format("Hit node at position: {0}, is type of: {1}", position, type);
-        Debug.Log(logString);
+    //    Debug.Log(logString);
     }
 }
