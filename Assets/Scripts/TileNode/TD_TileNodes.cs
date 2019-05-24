@@ -130,7 +130,6 @@ public class TD_TileNodes : MonoBehaviour {
 
                         GameObject node = Instantiate(nodePrefab, nodePosition, Quaternion.identity, parentNode.transform);
 
-
                         WorldTile wt = node.GetComponent<WorldTile>();
                         wt.gridX = gridX;
                         wt.gridY = gridY;
