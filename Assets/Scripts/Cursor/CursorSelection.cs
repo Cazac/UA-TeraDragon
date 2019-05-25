@@ -8,10 +8,16 @@ public class CursorSelection : MonoBehaviour
     [Header("The layer that floor tile is in")]
     public int tileLayer;
 
+    private WaveManager waveManager;
+
     private void Start() 
     {
         //Bit shift tileLayer
         tileLayer = 1 << tileLayer;
+
+        //Caching reference
+        waveManager = GameObject.FindObjectOfType<WaveManager>();
+        Debug.Log(waveManager);
     }
 
     private void Update() => OnClickSelect();
@@ -36,7 +42,9 @@ public class CursorSelection : MonoBehaviour
             hit.collider.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
             LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(),
             hit.collider.gameObject.transform.parent.gameObject.name);
-            //TODO: Delete logging
+
+            waveManager.NodeSpawnPosition.Add(hit.collider.gameObject.transform.position);
+            Debug.Log("Node added");
         }
     }
 
@@ -50,4 +58,6 @@ public class CursorSelection : MonoBehaviour
         String logString = String.Format("Hit node at position: {0}, is type of: {1}", position, type);
     //    Debug.Log(logString);
     }
+
+    
 }
