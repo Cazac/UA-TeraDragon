@@ -3,20 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class TD_TEST : MonoBehaviour
+public class TD_OrignalNodeScript : MonoBehaviour
 {
-
-    /*
     //did some stuff to the actions in npc so they can get closer to the Nodes without the glitchyness
 
     //changed execution order for this and world builder
     public Grid gridBase;
-    public Tilemap floor;
-    
-    //floor of world
-    public List<Tilemap> obstacleLayers; 
-    
-    //all layers that contain objects to navigate around
+    public Tilemap floor;//floor of world
+    public List<Tilemap> obstacleLayers; //all layers that contain objects to navigate around
     public GameObject nodePrefab;
 
     //these are the bounds of where we are searching in the world for tiles, have to use world coords to check for tiles in the tile map
@@ -25,9 +19,6 @@ public class TD_TEST : MonoBehaviour
 
     public List<GameObject> unsortedNodes;//all the nodes in the world
     public GameObject[,] nodes; //sorted 2d array of nodes, may contain null entries if the map is of an odd shape e.g. gaps
-
-    public int gridBoundX = 0, gridBoundY = 0;
-
     // Use this for initialization
     void Awake()
     {
@@ -46,13 +37,16 @@ public class TD_TEST : MonoBehaviour
         //just call this and plug the resulting 2d array of nodes into your own A* algorithm
     }
 
+    // Update is called once per frame
+    void Update()
+    {
 
-
+    }
+    public int gridBoundX = 0, gridBoundY = 0;
 
     void createNodes()
     {
-        //use these to work out the size and where each node should be in the 2d array we'll use to store our nodes so we can work out neighbours and get paths
-        int gridX = 0; 
+        int gridX = 0; //use these to work out the size and where each node should be in the 2d array we'll use to store our nodes so we can work out neighbours and get paths
         int gridY = 0;
 
         bool foundTileOnLastPass = false;
@@ -694,6 +688,4 @@ public class TD_TEST : MonoBehaviour
 
         return myNeighbours;
     }
-
-    */
 }
