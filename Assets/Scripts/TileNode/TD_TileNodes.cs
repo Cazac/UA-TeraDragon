@@ -12,9 +12,17 @@ public class TD_TileNodes : MonoBehaviour {
     //floor of world
     public List<Tilemap> obstacleLayers;
     //all layers that contain objects to navigate around
+
+    [Header("List of node for tilemap")]
     public GameObject[] nodePrefabs;
     public GameObject nodePrefab_Unwalkable;
 
+    [Header("Selected node")]
+    [SerializeField]
+    private List<GameObject> selectedNode = new List<GameObject>();
+    public List<GameObject> SelectedNode { get => selectedNode; set => selectedNode = value; }
+
+    [Header("Scan coordinate for tilemap")]
     //these are the bounds of where we are searching in the world for tiles, have to use world coords to check for tiles in the tile map
     public int scanStartingPoint_X = -250;
     public int scanStartingPoint_Y = -250;
@@ -32,6 +40,7 @@ public class TD_TileNodes : MonoBehaviour {
     public int gridBoundY = 0;
 
     public int unwalkableNodeBorder = 1;
+
 
     //////////////////////////////////////////////////////////
 
@@ -129,7 +138,6 @@ public class TD_TileNodes : MonoBehaviour {
                         //                        GameObject node = Instantiate(nodePrefab, nodePosition, nodeRotation);
 
                         GameObject node = Instantiate(nodePrefab, nodePosition, Quaternion.identity, parentNode.transform);
-
 
                         WorldTile wt = node.GetComponent<WorldTile>();
                         wt.gridX = gridX;
