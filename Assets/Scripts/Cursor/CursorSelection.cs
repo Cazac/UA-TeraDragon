@@ -10,8 +10,12 @@ public class CursorSelection : MonoBehaviour
 
     private WaveManager waveManager;
 
+    private TD_TileNodes tD_TileNodes;
+
     private void Start() 
     {
+        tD_TileNodes = GameObject.FindObjectOfType<TD_TileNodes>();
+
         //Bit shift tileLayer
         tileLayer = 1 << tileLayer;
 
@@ -42,6 +46,9 @@ public class CursorSelection : MonoBehaviour
             hit.collider.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
             LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(),
             hit.collider.gameObject.transform.parent.gameObject.name);
+
+            //Store hit tile node in a list in tD_TileNodes
+            tD_TileNodes.SelectedNode.Add(hit.collider.gameObject);
 
             waveManager.NodeSpawnPosition.Add(hit.collider.gameObject.transform.position);
             Debug.Log("Node added");
