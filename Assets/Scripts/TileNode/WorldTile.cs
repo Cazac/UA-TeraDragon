@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,4 +14,9 @@ public class WorldTile : MonoBehaviour
     public bool walkable;
 
     public List<WorldTile> myNeighbours;
+        
+    public override string ToString() {
+        return "x: " + gridX.ToString() + " y: " + gridY.ToString();
+    }
+
 }

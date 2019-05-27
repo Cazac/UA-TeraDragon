@@ -8,6 +8,8 @@ public class TD_TileNodes : MonoBehaviour {
 
     //changed execution order for this and world builder
     public Grid gridBase;
+    float mapConstant;
+    // 0 == Road, 1 == Ground
     public Tilemap[] tileMapFloorList;
     //floor of world
     public List<Tilemap> obstacleLayers;
@@ -28,8 +30,8 @@ public class TD_TileNodes : MonoBehaviour {
     public GameObject[,] nodes;
 
     //Actual Calulated Grid Bounds Found From Searching
-    public int gridBoundX = 0;
-    public int gridBoundY = 0;
+    public int gridBoundX = 10;
+    public int gridBoundY = 10;
 
     public int unwalkableNodeBorder = 1;
 
@@ -38,237 +40,157 @@ public class TD_TileNodes : MonoBehaviour {
     private void Awake() {
         //Set List
         unsortedNodes = new List<GameObject>();
+        mapConstant = gridBase.cellSize.x;
     }
 
     private void Start() {
+
         //Start it all
         generateNodes();
+
     }
-
-    //////////////////////////////////////////////////////////
-
-    // public void generateNodes()
-    // {
-    //     //just call this and plug the resulting 2d array of nodes into your own A* algorithm
-    //     createNodes();
-    // }
-
-    //////////////////////////////////////////////////////////
-
-    ///<summary>
-    ///just call this and plug the resulting 2d array of nodes into your own A* algorithm
-    ///</summary>
+    
+    
     public void generateNodes() {
+        int tableX = 0, tableY = 0;
+        for (int i = 0; i < tileMapFloorList.Length; i++) {
+            tileMapFloorList[i].CompressBounds();
+            if (tileMapFloorList[i].cellBounds.size.x  > tableX) {
+                tableX = tileMapFloorList[i].cellBounds.size.x;
+            }
+            if (tileMapFloorList[i].cellBounds.size.y > tableY) {
+                tableY = tileMapFloorList[i].cellBounds.size.y;
+            }
+        }
+        Debug.Log("Table:" + tableX + " " + tableY);
+        nodes = new GameObject[tableX, tableY];
         LoopThroughFloorList(tileMapFloorList, nodePrefabs);
     }
-
-    ///<summary>
-    ///Loop through all available floor in list, which will then instantiate node accordingly
-    ///</summary>
-    /// <param name="floorList">List of tilemap to iterate through</param>
-    /// <param name="nodePrefabs">List of node correspond to suitable floor</param>
+    
     private void LoopThroughFloorList(Tilemap[] floorList, GameObject[] nodePrefabs) {
-        if (floorList.Length > nodePrefabs.Length || floorList.Length < nodePrefabs.Length) {
+        if (floorList.Length != nodePrefabs.Length) {
             Debug.LogError("Number of node does not match number of floor");
             return;
         }
-        for (int i = 0; i < floorList.Length; i++)
-            createNodes(floorList[i], nodePrefabs[i]);
+        for (int i = 0; i < floorList.Length; i++) {
+            createNodes(floorList[i], nodePrefabs[i], i);
+        }
+        FillNodeTable();
+        SetNeigbours();
     }
+
 
     ///<summary>
     ///Main method to handle node creation
     ///</summary>
     /// <param name="tileMapFloor">Tilemap that will spawn in game</param>
     /// <param name="nodePrefab">Node that corresponds to the tileMapFloor</param>
-    private void createNodes(Tilemap tileMapFloor, GameObject nodePrefab) {
+    private void createNodes(Tilemap tileMapFloor, GameObject nodePrefab, int i) {
         //use these to work out the size and where each node should be in the 2d array we'll use to store our nodes so we can work out neighbours and get paths
-        int gridX = 0;
-        int gridY = 0;
 
-        //Bool for finding a tile so that you may increment the grid size
-        bool foundTileOnLastPass = false;
-        GameObject parentNode = Instantiate(new GameObject("Parent_" + tileMapFloor.name), new Vector3(0, 0, 0), Quaternion.identity);
+        WorldTile wt;
+
+        GameObject parentNode = new GameObject("Parent_" + tileMapFloor.name);
+        tileMapFloorList[i].CompressBounds();
+        BoundsInt bounds = tileMapFloorList[i].cellBounds;
+        Debug.Log("Bound:" + bounds.size.x + " " + bounds.size.y);
+
 
         //scan tiles and create nodes based on where they are
-        for (int x = scanStartingPoint_X; x < scanFinishPoint_X; x++) {
-            for (int y = scanStartingPoint_Y; y < scanFinishPoint_Y; y++) {
-                //go through our world bounds in increments of 1
+        int GridX = 0; int GirdY = 0;
+
+        for (int x = -(nodes.GetLength(0)) / 2 - 1; x < nodes.GetLength(0) / 2 + 1; x++) {
+            for (int y = -(nodes.GetLength(1)) / 2 - 1; y < nodes.GetLength(1) / 2 + 1; y++) {
+
                 TileBase tb = tileMapFloor.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
 
                 if (tb != null) {
-                    //if we do we go through the obstacle layers and check if there is also a tile at those coords if so we set founObstacle to true
-                    bool foundObstacle = false;
-                    foreach (Tilemap t in obstacleLayers) {
-                        TileBase tb2 = t.GetTile(new Vector3Int(x, y, 0));
 
-                        if (tb2 != null) {
-                            foundObstacle = true;
+                    float mapConstant = tileMapFloorList[0].cellSize.x;
 
-                        }
-
-                        //if we want to add an unwalkable edge round our unwalkable nodes then we use this to get the neighbours and make them unwalkable
-                        if (unwalkableNodeBorder > 0) {
-                            List<TileBase> neighbours = getNeighbouringTiles(x, y, t);
-                            foreach (TileBase tl in neighbours) {
-                                if (tl != null) {
-                                    foundObstacle = true;
-                                }
-                            }
-                        }
-                    }
-
-                    if (foundObstacle == false) {
-                        //if we havent found an obstacle then we create a walkable node and assign its grid coords
-
-                        float mapConstant = 11.2f;
-
-                        Vector3 nodePosition = new Vector3(11.2f + ((x + gridBase.transform.position.x) * mapConstant), 5.6f + ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
-                        Quaternion nodeRotation = Quaternion.Euler(0, 0, 0);
-
-                        //                        GameObject node = Instantiate(nodePrefab, nodePosition, nodeRotation);
-
-                        GameObject node = Instantiate(nodePrefab, nodePosition, Quaternion.identity, parentNode.transform);
+                    Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
+                    Quaternion nodeRotation = Quaternion.Euler(0, 0, 0);
 
 
-                        WorldTile wt = node.GetComponent<WorldTile>();
-                        wt.gridX = gridX;
-                        wt.gridY = gridY;
-                        foundTileOnLastPass = true; //say that we have found a tile so we know to increment the index counters
-                        unsortedNodes.Add(node);
+                    GameObject node = Instantiate(nodePrefab, nodePosition, Quaternion.identity, parentNode.transform);
 
-                        node.name = "NODE " + gridX.ToString() + " : " + gridY.ToString();
+                    wt = node.GetComponent<WorldTile>();
+                    wt.gridX = GridX;
+                    wt.gridY = GirdY;
+                    unsortedNodes.Add(node);
+                    
+                   
 
-                    }
-                    else {
-                        //if we have found an obstacle then we do the same but make the node unwalkable
-                        Debug.Log("Found unwalkable");
-
-                        print("Test Code: ????");
-
-                        float mapConstant = 11.2f;
-
-                        Vector3 nodePosition = new Vector3(11.2f + ((x + gridBase.transform.position.x) * mapConstant), 5.6f + ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
-                        Quaternion nodeRotation = Quaternion.Euler(0, 0, 0);
-
-                        GameObject node = Instantiate(nodePrefab_Unwalkable, nodePosition, nodeRotation);
-                        //we add the gridBase position to ensure that the nodes are ontop of the tile they relate too
-                        node.GetComponent<SpriteRenderer>().color = Color.red;
-                        WorldTile wt = node.GetComponent<WorldTile>();
-                        wt.gridX = gridX;
-                        wt.gridY = gridY;
-                        wt.walkable = false;
-                        foundTileOnLastPass = true;
-                        unsortedNodes.Add(node);
-                        node.name = "UNWALKABLE NODE " + gridX.ToString() + " : " + gridY.ToString();
-                    }
-                    gridY++; //increment the y counter
-
-
-                    if (gridX > gridBoundX) { //if the current gridX/gridY is higher than the existing then replace it with the new value
-                        gridBoundX = gridX;
-                    }
-
-                    if (gridY > gridBoundY) {
-                        gridBoundY = gridY;
-                    }
                 }
+                GirdY++;
             }
-            if (foundTileOnLastPass == true) {//since the grid is going from bottom to top on the Y axis on each iteration of the inside loop, if we have found tiles on this iteration we increment the gridX value and
-                //reset the y value
-                gridX++;
-                gridY = 0;
-                foundTileOnLastPass = false;
-            }
+            GirdY = 0; ;
+            GridX++;
         }
-
-        //put nodes into 2d array based on the
-        nodes = new GameObject[gridBoundX + 1, gridBoundY + 1];//initialise the 2d array that will store our nodes in their position
-        foreach (GameObject g in unsortedNodes) { //go through the unsorted list of nodes and put them into the 2d array in the correct position
-            WorldTile wt = g.GetComponent<WorldTile>();
-            //Debug.Log (wt.gridX + " " + wt.gridY);
-            nodes[wt.gridX, wt.gridY] = g;
-        }
-
-        //assign neighbours to nodes
-        for (int x = 0; x < gridBoundX; x++) { //go through the 2d array and assign the neighbours of each node
-            for (int y = 0; y < gridBoundY; y++) {
-                if (nodes[x, y] != null) { //check if the coords in the array contain a node
-
-                    WorldTile wt = nodes[x, y].GetComponent<WorldTile>(); //if they do then assign the neighbours
-                                                                          //if (wt.walkable == true) {
-                    wt.myNeighbours = getNeighbours(x, y, gridBoundX, gridBoundY);
-                    //}
-                }
-            }
-        }
-        //after this we have our grid of nodes ready to be used by the astar algorigthm
+        
     }
-    //gets neighbours of a tile at x/y in a specific tilemap, can also have a border
+    int minX, minY;
 
-    ///<summary>
-    ///Undocumented
-    ///</summary>
-    public List<TileBase> getNeighbouringTiles(int x, int y, Tilemap t) {
-        List<TileBase> retVal = new List<TileBase>();
+    void FillNodeTable() {
 
-        for (int i = x - unwalkableNodeBorder; i < x + unwalkableNodeBorder; i++) {
-            for (int j = y - unwalkableNodeBorder; j < y + unwalkableNodeBorder; j++) {
-                TileBase tile = t.GetTile(new Vector3Int(i, j, 0));
-                if (tile != null) {
-                    retVal.Add(tile);
+        minX = nodes.GetLength(0); minY = nodes.GetLength(1);
+        WorldTile wt;
+        foreach (GameObject g in unsortedNodes) {
+            wt = g.GetComponent<WorldTile>();
+            if (wt.gridX < minX)
+                minX = wt.gridX;
+            if (wt.gridY < minY)
+                minY = wt.gridY;
+        }
+        // makes sure grid is correctly alligned
+        foreach (GameObject g in unsortedNodes) {
+            wt = g.GetComponent<WorldTile>();
+            wt.gridX -= minX;
+            wt.gridY -= minY;
+            wt.name = "NODE " + wt.gridX.ToString() + " : " + wt.gridY.ToString();
+            //  nodes[wt.gridX, wt.gridY] = g;
+        }
+
+        unsortedNodes.Clear();
+
+
+    }
+
+    private void SetNeigbours() {
+
+        WorldTile wt;
+        for (int x = 0; x < nodes.GetLength(0); x++) {
+            for (int y = 0; y < nodes.GetLength(1); y++) {
+                if (nodes[x, y] != null) {
+                    wt = nodes[x, y].GetComponent<WorldTile>();
+                    wt.myNeighbours = getNeighbours(x, y, nodes.GetLength(0), nodes.GetLength(1), wt.walkable);
                 }
             }
         }
-        return retVal;
     }
-    
-    ///<summary>
-    ///Undocumented
-    ///</summary>
-    public List<WorldTile> getNeighbours(int x, int y, int width, int height) {
+
+    private List<WorldTile> getNeighbours(int x, int y, int width, int height, bool walkable) {
         List<WorldTile> myNeighbours = new List<WorldTile>();
         if (x < 0 || x >= width || y < 0 || y >= height)
             return myNeighbours;
 
-        //needs the width & height to work out if a tile is not on the edge, also needs to check if the nodes is null due to the accounting for odd shapes
-        if (x > 0 && x < width - 1) {
-            //can get tiles on both left and right of the tile
-
-            AddNodeToList(myNeighbours, x - 1, y);
-            AddNodeToList(myNeighbours, x + 1, y);
-            if (y > 0) { //just top
-                AddNodeToList(myNeighbours, x, y - 1);
-            }
-            if (y < height - 1) { //just bottom
-                AddNodeToList(myNeighbours, x, y + 1);
-            }
+        if (x > 0) {
+            AddNodeToList(myNeighbours, x - 1, y, walkable);
         }
-        else if (x == 0) {
-            AddNodeToList(myNeighbours, x + 1, y);
-            //can't get tile on left
-            if (y > 0) { //just top
-                AddNodeToList(myNeighbours, x, y - 1);
-            }
-            if (y < height - 1) { //just bottom
-                AddNodeToList(myNeighbours, x, y + 1);
-            }
+        else if (x < width - 1) {
+            AddNodeToList(myNeighbours, x + 1, y, walkable);
         }
-        else if (x == width - 1) {
-            AddNodeToList(myNeighbours, x - 1, y);
-            //can't get tile on right
-            if (y > 0) { //just top
-                AddNodeToList(myNeighbours, x, y - 1);
-            }
-            if (y < height - 1) { //just bottom
-                AddNodeToList(myNeighbours, x, y + 1);
-            }
+        if (y > 0) {
+            AddNodeToList(myNeighbours, x, y - 1, walkable);
+        }
+        if (y < height - 1) {
+            AddNodeToList(myNeighbours, x, y + 1, walkable);
         }
 
         return myNeighbours;
     }
 
-    void AddNodeToList(List<WorldTile> list, int x, int y) {
+    void AddNodeToList(List<WorldTile> list, int x, int y, bool currentWalkableState) {
         if (nodes[x, y] != null) {
             WorldTile wt = nodes[x, y].GetComponent<WorldTile>();
             if (wt != null) {

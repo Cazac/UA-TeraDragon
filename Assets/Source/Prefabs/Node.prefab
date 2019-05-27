@@ -98,7 +98,7 @@ MonoBehaviour:
   hValue: 0
   gridY: 0
   gridX: 0
-  walkable: 0
+  walkable: 1
   myNeighbours: []
 --- !u!65 &840626407863212011
 BoxCollider:
