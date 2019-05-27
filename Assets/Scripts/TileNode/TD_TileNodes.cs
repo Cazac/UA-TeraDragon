@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+[ExecuteInEditMode]
 public class TD_TileNodes : MonoBehaviour {
     //did some stuff to the actions in npc so they can get closer to the Nodes without the glitchyness
 
@@ -90,13 +91,15 @@ public class TD_TileNodes : MonoBehaviour {
     ///</summary>
     /// <param name="tileMapFloor">Tilemap that will spawn in game</param>
     /// <param name="nodePrefab">Node that corresponds to the tileMapFloor</param>
-    private void createNodes(Tilemap tileMapFloor, GameObject nodePrefab) {
+    private void createNodes(Tilemap tileMapFloor, GameObject nodePrefab) 
+    {
         //use these to work out the size and where each node should be in the 2d array we'll use to store our nodes so we can work out neighbours and get paths
         int gridX = 0;
         int gridY = 0;
 
         //Bool for finding a tile so that you may increment the grid size
         bool foundTileOnLastPass = false;
+        ClearDuplicateParent("Parent_" + tileMapFloor.name);
         GameObject parentNode = Instantiate(new GameObject("Parent_" + tileMapFloor.name), new Vector3(0, 0, 0), Quaternion.identity);
 
         //scan tiles and create nodes based on where they are
@@ -274,6 +277,17 @@ public class TD_TileNodes : MonoBehaviour {
         }
 
         return myNeighbours;
+    }
+
+    private void ClearDuplicateParent(string name)
+    {
+        GameObject parent = GameObject.Find(name);
+        GameObject parentClone = GameObject.Find(name+"(Clone)");
+
+        if(parent)
+            DestroyImmediate(parent.gameObject);
+        if(parentClone)
+            DestroyImmediate(parentClone.gameObject);
     }
 
     void AddNodeToList(List<WorldTile> list, int x, int y) {

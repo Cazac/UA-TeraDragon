@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 5961444709136488351, guid: 74bde71b71320e9428b1872582c53518,
     type: 3}
+  EnemiesPrefab: []
+  SpawnPositionByNodes:
+  - {fileID: 5156625069933391446, guid: 4afde34a43f975546ac0d4e197d473c6, type: 3}
+  - {fileID: 1589860022452514571, guid: 1a2e205dacaa44a4e9caad8eb1098202, type: 3}
   SpawnPosition: []
   ParentGameobject: {fileID: 0}
-  TimeUntilSpawn: 0
+  NumberOfEnemyPerPos: 2
