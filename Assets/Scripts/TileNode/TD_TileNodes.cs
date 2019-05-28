@@ -10,7 +10,7 @@ public class TD_TileNodes : MonoBehaviour {
     public Grid gridBase;
     float mapConstant;
     // 0 == Road, 1 == Ground
-    public Tilemap[] tileMapFloorList;
+     List<Tilemap> tileMapFloorList;
     //floor of world
     public List<Tilemap> obstacleLayers;
     //all layers that contain objects to navigate around
@@ -28,6 +28,7 @@ public class TD_TileNodes : MonoBehaviour {
 
     //sorted 2d array of nodes, may contain null entries if the map is of an odd shape e.g. gaps
     public GameObject[,] nodes;
+    public List<WorldTile> permanentSpawnPoints;
 
     //Actual Calulated Grid Bounds Found From Searching
     public int gridBoundX = 10;
@@ -39,21 +40,40 @@ public class TD_TileNodes : MonoBehaviour {
 
     private void Awake() {
         //Set List
+        tileMapFloorList = new List<Tilemap>();
+        foreach (Transform t in gridBase.transform) {
+            Debug.Log(t.name);
+            tileMapFloorList.Add(t.GetComponent<Tilemap>());
+        }
         unsortedNodes = new List<GameObject>();
         mapConstant = gridBase.cellSize.x;
+        generateNodes();
     }
 
+    public List<List<WorldTile>> paths = new List<List<WorldTile>>();
     private void Start() {
 
         //Start it all
-        generateNodes();
+        paths = PathFinding.GetPaths(nodes, permanentSpawnPoints);
 
+        Debug.Log("Paths numbers: " + paths.Count);
+
+        foreach (List<WorldTile> list in paths) {
+
+        string s = "";
+            for (int i = 0; i < list.Count; i++) {
+                s = s + "->(" + list[i].gridX + "," + list[i].gridY + ")";
+            }
+         Debug.Log(s);
+        }
+
+     //   Debug.Log("Num of permanent spawn pts:" + permanentSpawnPoints.Count);
     }
     
     
     public void generateNodes() {
         int tableX = 0, tableY = 0;
-        for (int i = 0; i < tileMapFloorList.Length; i++) {
+        for (int i = 0; i < tileMapFloorList.Count; i++) {
             tileMapFloorList[i].CompressBounds();
             if (tileMapFloorList[i].cellBounds.size.x  > tableX) {
                 tableX = tileMapFloorList[i].cellBounds.size.x;
@@ -67,12 +87,12 @@ public class TD_TileNodes : MonoBehaviour {
         LoopThroughFloorList(tileMapFloorList, nodePrefabs);
     }
     
-    private void LoopThroughFloorList(Tilemap[] floorList, GameObject[] nodePrefabs) {
-        if (floorList.Length != nodePrefabs.Length) {
+    private void LoopThroughFloorList(List<Tilemap> floorList, GameObject[] nodePrefabs) {
+        if (floorList.Count != nodePrefabs.Length) {
             Debug.LogError("Number of node does not match number of floor");
             return;
         }
-        for (int i = 0; i < floorList.Length; i++) {
+        for (int i = 0; i < floorList.Count; i++) {
             createNodes(floorList[i], nodePrefabs[i], i);
         }
         FillNodeTable();
@@ -93,7 +113,6 @@ public class TD_TileNodes : MonoBehaviour {
         GameObject parentNode = new GameObject("Parent_" + tileMapFloor.name);
         tileMapFloorList[i].CompressBounds();
         BoundsInt bounds = tileMapFloorList[i].cellBounds;
-        Debug.Log("Bound:" + bounds.size.x + " " + bounds.size.y);
 
 
         //scan tiles and create nodes based on where they are
@@ -118,8 +137,10 @@ public class TD_TileNodes : MonoBehaviour {
                     wt.gridX = GridX;
                     wt.gridY = GirdY;
                     unsortedNodes.Add(node);
-                    
-                   
+
+                    if (tileMapFloor.name == "Spawns") {
+                        permanentSpawnPoints.Add(wt);
+                    }
 
                 }
                 GirdY++;
@@ -129,10 +150,10 @@ public class TD_TileNodes : MonoBehaviour {
         }
         
     }
-    int minX, minY;
 
     void FillNodeTable() {
 
+        int minX, minY;
         minX = nodes.GetLength(0); minY = nodes.GetLength(1);
         WorldTile wt;
         foreach (GameObject g in unsortedNodes) {
@@ -148,12 +169,10 @@ public class TD_TileNodes : MonoBehaviour {
             wt.gridX -= minX;
             wt.gridY -= minY;
             wt.name = "NODE " + wt.gridX.ToString() + " : " + wt.gridY.ToString();
-            //  nodes[wt.gridX, wt.gridY] = g;
+              nodes[wt.gridX, wt.gridY] = g;
         }
-
         unsortedNodes.Clear();
-
-
+        
     }
 
     private void SetNeigbours() {
@@ -177,7 +196,7 @@ public class TD_TileNodes : MonoBehaviour {
         if (x > 0) {
             AddNodeToList(myNeighbours, x - 1, y, walkable);
         }
-        else if (x < width - 1) {
+        if (x < width - 1) {
             AddNodeToList(myNeighbours, x + 1, y, walkable);
         }
         if (y > 0) {
@@ -193,7 +212,7 @@ public class TD_TileNodes : MonoBehaviour {
     void AddNodeToList(List<WorldTile> list, int x, int y, bool currentWalkableState) {
         if (nodes[x, y] != null) {
             WorldTile wt = nodes[x, y].GetComponent<WorldTile>();
-            if (wt != null) {
+            if (wt != null && wt.walkable == currentWalkableState) {
                 list.Add(wt);
             }
         }
