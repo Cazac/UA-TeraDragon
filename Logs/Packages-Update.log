@@ -67,3 +67,13 @@ The following packages were added:
   com.unity.timeline@1.0.0
   com.unity.multiplayer-hlapi@1.0.2
   com.unity.xr.legacyinputhelpers@2.0.2
+
+=== Sun May 26 01:25:33 2019
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were added:
+  com.unity.timeline@1.0.0
+  com.unity.multiplayer-hlapi@1.0.2
+  com.unity.xr.legacyinputhelpers@2.0.2
