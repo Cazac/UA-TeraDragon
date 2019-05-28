@@ -1,13 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SphereCollider))]
 public class WorldTile : MonoBehaviour
 {
-    public int gvalue;
-    public int hValue;
-
     public int gridY;
     public int gridX;
 
@@ -17,4 +14,9 @@ public class WorldTile : MonoBehaviour
     public bool walkable;
 
     public List<WorldTile> myNeighbours;
+        
+    public override string ToString() {
+        return "x: " + gridX.ToString() + " y: " + gridY.ToString();
+    }
+
 }
