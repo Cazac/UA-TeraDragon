@@ -4,10 +4,13 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public static class PathFinding
-{
+public static class PathFinding {
+
+    static List<WorldTile> endTiles;
+
+
     // rules: start alwats last column and end always last
-    public static List<List<WorldTile>> GetPaths( GameObject[,] map, List<WorldTile> constSpawn) {
+    public static PathsData GetPaths( GameObject[,] map, List<WorldTile> constSpawn) {
 
 
         /*  Steps:
@@ -44,22 +47,23 @@ public static class PathFinding
         foreach(WorldTile wt in startingTiles) {
             DFS(wt);
         }
+        
 
-        return paths;
+        PathsData PathData = new PathsData(paths);
+
+        return PathData;
     }
 
-    static List<WorldTile> endTiles;
-    static Queue<WorldTile> enqueuedTiles = new Queue<WorldTile>();
     static void DFS(WorldTile tile) {
         List<WorldTile> list = new List<WorldTile>();
-        list.Add(tile);
+       // list.Add(tile);
         DFS_Util(tile, list);
 
         string s = "";
         for (int i = 0; i < list.Count; i++) {
             s = s + "->(" + list[i].gridX + "," + list[i].gridY + ")";
         }
-        Debug.Log(s);
+      //  Debug.Log(s);
 
     }
     static List<List<WorldTile>> paths;
@@ -88,20 +92,60 @@ public static class PathFinding
         else {
             paths.Add(DeepClone<WorldTile>(worldTiles));
         }
-        //if (nextTile.myNeighbours.Count == 0) {
-        //    string s = "";
-        //    foreach (WorldTile tile in worldTiles) {
-        //        s = s + tile.ToString() + "  ";
-        //    }
-        //    Debug.Log(s);
-        //}
 
     }
 
+
+
+
+
+
+     
     public static List<T> DeepClone<T>(this List<T> items) {
         return new List<T>(items);
     }
+    
+}
+class ListSize : IComparer<List<WorldTile>> {
+    public int Compare(List<WorldTile> l1, List<WorldTile> l2) {
+        if(l1.Count > l2.Count) {
+            return 1;
+        }
+        else {
+            return l1.Count.CompareTo(l2.Count);
+        }
+    }
+}
+
+public class PathsData {
+
+    public List<List<WorldTile>> paths;
+    public Dictionary<WorldTile, List<List<WorldTile>>> PathsByStart;
+    public Dictionary<WorldTile, List<List<WorldTile>>> PathsByEnd;
 
 
+    public PathsData(List<List<WorldTile>> paths) {
+        ListSize comparator = new ListSize();
+        this.paths = paths;
+        PathsByStart = new Dictionary<WorldTile, List<List<WorldTile>>>();
+        PathsByEnd = new Dictionary<WorldTile, List<List<WorldTile>>>();
 
+        paths.Sort(comparator);
+
+        foreach (List<WorldTile> wt in paths) {
+            if (!PathsByStart.ContainsKey(wt[0])) {
+            PathsByStart.Add(wt[0], new List<List<WorldTile>>());
+            }
+            else {
+                PathsByStart[wt[0]].Add(wt);
+            }
+            if (!PathsByEnd.ContainsKey(wt[wt.Count-1])) {
+                PathsByEnd.Add(wt[wt.Count-1], new List<List<WorldTile>>());
+            }
+            else {
+                PathsByEnd[wt[wt.Count - 1]].Add(wt);
+            }
+        }
+        
+    }
 }

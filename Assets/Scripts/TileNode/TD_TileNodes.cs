@@ -59,24 +59,29 @@ public class TD_TileNodes : MonoBehaviour {
         generateNodes();
     }
 
-    public List<List<WorldTile>> paths = new List<List<WorldTile>>();
+    public PathsData pathData;
     private void Start() {
 
         //Start it all
-        paths = PathFinding.GetPaths(nodes, permanentSpawnPoints);
+        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
 
-        Debug.Log("Paths numbers: " + paths.Count);
+        Debug.Log("Paths numbers: " + pathData.paths.Count);
 
-        foreach (List<WorldTile> list in paths) {
-
+        foreach (List<WorldTile> list in pathData.paths) {
         string s = "";
             for (int i = 0; i < list.Count; i++) {
                 s = s + "->(" + list[i].gridX + "," + list[i].gridY + ")";
             }
-         Debug.Log(s);
+         //   Debug.Log(s);
         }
+        string s2 = "";
+        foreach (List<WorldTile> list in pathData.paths) {
 
-     //   Debug.Log("Num of permanent spawn pts:" + permanentSpawnPoints.Count);
+            s2 = s2 + "," + list.Count;
+        }
+        Debug.Log(s2);
+
+        //   Debug.Log("Num of permanent spawn pts:" + permanentSpawnPoints.Count);
     }
     
     
@@ -127,8 +132,9 @@ public class TD_TileNodes : MonoBehaviour {
         //scan tiles and create nodes based on where they are
         int GridX = 0; int GirdY = 0;
 
-        for (int x = -(nodes.GetLength(0)) / 2 - 1; x < nodes.GetLength(0) / 2 + 1; x++) {
-            for (int y = -(nodes.GetLength(1)) / 2 - 1; y < nodes.GetLength(1) / 2 + 1; y++) {
+
+        for (int x = -(nodes.GetLength(0)) - 1; x < nodes.GetLength(0) + 1; x++) {
+            for (int y = -(nodes.GetLength(1)) - 1; y < nodes.GetLength(1) + 1; y++) {
 
                 TileBase tb = tileMapFloor.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
 
