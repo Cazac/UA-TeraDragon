@@ -44,6 +44,7 @@ public class TD_TileNodes : MonoBehaviour {
 
     public int unwalkableNodeBorder = 1;
 
+    public PathsData pathData;
 
     //////////////////////////////////////////////////////////
 
@@ -59,29 +60,13 @@ public class TD_TileNodes : MonoBehaviour {
         generateNodes();
     }
 
-    public PathsData pathData;
     private void Start() {
 
         //Start it all
         pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
 
         Debug.Log("Paths numbers: " + pathData.paths.Count);
-
-        foreach (List<WorldTile> list in pathData.paths) {
-        string s = "";
-            for (int i = 0; i < list.Count; i++) {
-                s = s + "->(" + list[i].gridX + "," + list[i].gridY + ")";
-            }
-         //   Debug.Log(s);
-        }
-        string s2 = "";
-        foreach (List<WorldTile> list in pathData.paths) {
-
-            s2 = s2 + "," + list.Count;
-        }
-        Debug.Log(s2);
-
-        //   Debug.Log("Num of permanent spawn pts:" + permanentSpawnPoints.Count);
+        
     }
     
     
@@ -96,7 +81,7 @@ public class TD_TileNodes : MonoBehaviour {
                 tableY = tileMapFloorList[i].cellBounds.size.y;
             }
         }
-        Debug.Log("Table:" + tableX + " " + tableY);
+
         nodes = new GameObject[tableX, tableY];
         LoopThroughFloorList(tileMapFloorList, nodePrefabs);
     }
