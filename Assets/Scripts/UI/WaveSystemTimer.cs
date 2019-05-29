@@ -14,7 +14,6 @@ public class WaveSystemTimer : MonoBehaviour, WaveInterface
 
     public void UIConnection(WaveManager waveManager)
     {
-
         if(waveManager.EnableSpawning)
             this.GetComponent<Text>().text = "Wave " + waveManager.WaveIndex + " " + waveManager.WaveTimer;
 

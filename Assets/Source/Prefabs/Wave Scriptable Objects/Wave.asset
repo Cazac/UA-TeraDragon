@@ -23,4 +23,4 @@ MonoBehaviour:
   NumberOfEnemyPerPos: 2
   TimeUntilSpawn: 3
   WaveTimer: 10
-  SpawnRatePerSecond: 5
+  SpawnRate: 3

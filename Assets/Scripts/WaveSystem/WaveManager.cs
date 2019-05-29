@@ -13,7 +13,6 @@ namespace WaveSystem
         public bool EnableSpawning { get => enableSpawning; set => enableSpawning = value; }
 
         // public Vector3[] positions;
-        public List<Vector3> NodeSpawnPosition { get => selectedNodeSpawnPosition; set => selectedNodeSpawnPosition = value; }
 
         // [SerializeField]
         // private float internalTimer;
@@ -25,6 +24,8 @@ namespace WaveSystem
 
         [SerializeField] //TODO: Delete serializeField
         private List<Vector3> selectedNodeSpawnPosition = new List<Vector3>();
+        public List<Vector3> NodeSpawnPosition { get => selectedNodeSpawnPosition; set => selectedNodeSpawnPosition = value; }
+
         private const string WAVE_PARENT_NAME = "Parent_EnemyWave";
 
         private Timer currentTimer;
@@ -39,7 +40,7 @@ namespace WaveSystem
         {
             get
             {
-                if(currentTimer != null)
+                if (currentTimer != null)
                 {
                     return currentTimer.TimeUntilNextSpawn.ToString();
                 }
@@ -57,7 +58,7 @@ namespace WaveSystem
         }
 
 
-        private void Awake() 
+        private void Awake()
         {
             currentWave = waves[0];
         }
@@ -72,21 +73,24 @@ namespace WaveSystem
 
         private void Update()
         {
+            //Create new timer object for current wave 
             if (EnableSpawning == true && currentTimer == null)
             {
                 InstantiateNewTimer(currentWave.TimeUntilSpawn, currentWave.WaveTimer, ref currentTimer);
-
             }
 
-            if(currentTimer != null && EnableSpawning == true)
+            //If timer for a wave hits 0, turn off spawning
+            if (currentTimer != null && EnableSpawning == true)
             {
-                if(currentTimer.WaveCountdown())
+                if (currentTimer.WaveCountdown())
                     EnableSpawning = false;
             }
 
-            if(currentTimer != null && EnableSpawning == false && !AllWaveCompleted())
+
+            //If timer between wave hits 0, turn on spawning
+            if (currentTimer != null && EnableSpawning == false && !AllWaveCompleted())
             {
-                if(currentTimer.NextWaveCountdown())
+                if (currentTimer.NextWaveCountdown())
                     EnableSpawning = true;
             }
         }
@@ -100,22 +104,31 @@ namespace WaveSystem
             Instantiate(new GameObject(WAVE_PARENT_NAME));
         }
 
+
+        /// <summary>
+        ///Create a new timer instance when a wave is finished
+        /// </summary>
+        /// <param name="timeUntilSpawn">Timer between wave until next wave starts</param>
+        /// <param name="waveTimer">Timer for current wave</param>
+        /// <param name="timer">ref variable timer to reference the timer instance</param>
         private void InstantiateNewTimer(float timeUntilSpawn, float waveTimer, ref Timer timer)
         {
             timer = null;
             timer = new Timer(timeUntilSpawn, waveTimer);
         }
 
-        public void SpawnEnemyWorldPos(GameObject enemyPrefab, Vector3 spawnPosition, GameObject parentGameobject)
-        {
-            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity, parentGameobject.transform);
-        }
-
+        /// <summary>
+        ///Main method for spawning a single type of enemy in multiple position
+        /// </summary>
+        /// <remarks>
+        ///Use IEnumerator and must only be called in Start() 
+        ///</remarks>
         public IEnumerator SpawnSingleEnemyPerWave()
         {
+            //While loop to keep function running every frame if possible
             while (true)
             {
-                if (EnableSpawning == true )
+                if (EnableSpawning == true)
                 {
                     currentWave.ParentGameobject = GameObject.Find(WAVE_PARENT_NAME);
 
@@ -126,21 +139,18 @@ namespace WaveSystem
                             Instantiate(currentWave.EnemyPrefab, node.transform.position, Quaternion.identity, currentWave.ParentGameobject.transform);
 
                             //Enumerator will return at this index, need to check if spawning option is still available
-                            if(EnableSpawning)
+                            if (EnableSpawning)
                             {
-                                yield return new WaitForSeconds(currentWave.SpawnRatePerSecond);
+                                yield return new WaitForSeconds(currentWave.SpawnRate);
                             }
                         }
                     }
 
                     EnableSpawning = false;
 
-
-                    Debug.Log("Check current wave");
                     //Move on to the next scriptable wave in waves array
-                    if(!AllWaveCompleted() && currentTimer.WaveTimer <= 0)
+                    if (!AllWaveCompleted() && currentTimer.WaveTimer <= 0)
                     {
-                        Debug.Log("Check current wave inside");
                         currentWave = null;
                         currentWave = waves[++waveIndex];
                         Debug.Log("Current wave: " + currentWave.ToString());
@@ -148,7 +158,7 @@ namespace WaveSystem
                         InstantiateNewTimer(currentWave.TimeUntilSpawn, currentWave.WaveTimer, ref currentTimer);
                     }
 
-                    if(AllWaveCompleted())
+                    if (AllWaveCompleted())
                     {
                         EnableSpawning = false;
                         StopCoroutine(SpawnSingleEnemyPerWave());
@@ -159,11 +169,15 @@ namespace WaveSystem
             }
         }
 
+        /// <summary>
+        ///Check if all waves in waves[] have been processed
+        /// </summary>
+        ///<returns>Returns true if reaches the end of array</returns> 
         private Boolean AllWaveCompleted()
         {
             Debug.Log("Wave index: " + waveIndex);
 
-            if(waveIndex > waves.Length - 1)
+            if (waveIndex > waves.Length - 1)
             {
                 Debug.Log("End of alll waves");
                 return true;
@@ -172,7 +186,11 @@ namespace WaveSystem
         }
     }
 
-    public interface WaveInterface 
+
+    /// <summary>
+    ///Interface for connection UI to WaveManager class
+    /// </summary>
+    public interface WaveInterface
     {
         void UIConnection(WaveManager waveManager);
     }
