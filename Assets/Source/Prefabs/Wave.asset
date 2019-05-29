@@ -21,3 +21,6 @@ MonoBehaviour:
   SpawnPosition: []
   ParentGameobject: {fileID: 0}
   NumberOfEnemyPerPos: 2
+  TimeUntilSpawn: 3
+  WaveTimer: 20
+  SpawnRatePerSecond: 3

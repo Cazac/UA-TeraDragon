@@ -14,6 +14,9 @@ public class Wave : ScriptableObject
     [HideInInspector]
     public GameObject ParentGameobject;
     public int NumberOfEnemyPerPos;
+    public float TimeUntilSpawn;
+    public float WaveTimer;
+    public float SpawnRatePerSecond;
 
 
     public Wave(GameObject enemyPrefab, List<Vector3> spawnPosition, GameObject parentGameobject, int numberOfEnemyPerPos)

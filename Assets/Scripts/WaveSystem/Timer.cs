@@ -4,23 +4,60 @@ using UnityEngine;
 
 public class Timer
 {
-    public int TimeUntilSpawn { get; set; }
-    public int WaveTimer { get; set; }
+    private float timeUntilNextSpawn;
+    private float waveTimer;
 
-    private float internalTimer;
-
-    public bool SpawnCountdown()
+    public float TimeUntilNextSpawn
     {
-        internalTimer += Time.deltaTime;
-        if(internalTimer >= TimeUntilSpawn)
+        get
+        {
+            return (int)Mathf.RoundToInt(timeUntilNextSpawn);
+        }
+        set => timeUntilNextSpawn = value;
+    }
+
+    public Timer(float timeUntilSpawn, float waveTimer)
+    {
+        this.timeUntilNextSpawn = timeUntilSpawn;
+        this.waveTimer = waveTimer;
+    }
+
+    private float spawnRatePerSecond; 
+    public float SpawnRatePerSecond { get => SpawnRatePerSecond; set => SpawnRatePerSecond = value; }
+
+
+    public Timer(float timeUntilSpawn, float waveTimer, float spawnRatePerSecond) 
+    {
+        TimeUntilNextSpawn = timeUntilSpawn;
+        WaveTimer = waveTimer;
+        SpawnRatePerSecond = spawnRatePerSecond;
+    }
+
+    public float WaveTimer 
+    {
+         get
+         {
+             return (int)Mathf.RoundToInt(waveTimer);
+         }
+         set => waveTimer = value; 
+    }
+
+
+    public bool NextWaveCountdown(float setTime)
+    {
+        timeUntilNextSpawn = setTime;
+        timeUntilNextSpawn -= Time.deltaTime;
+
+        if (timeUntilNextSpawn <= TimeUntilNextSpawn)
             return true;
         return false;
     }
 
-    public bool WaveCountdown()
+    public bool WaveCountdown(float setTime)
     {
-        internalTimer += Time.deltaTime;
-        if(internalTimer >= TimeUntilSpawn)
+        waveTimer = setTime;
+        waveTimer -= Time.deltaTime;
+        if (waveTimer <= TimeUntilNextSpawn)
             return true;
         return false;
     }

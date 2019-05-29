@@ -7,11 +7,11 @@ namespace WaveSystem
 {
     public class WaveManager : MonoBehaviour
     {
-        public float timeUntilSpawn;
-
         // public GameObject[] spawnEnemies; //TODO: Reimplement this!
         public GameObject spawnSingleEnemy;
-        public bool enableSpawning;
+        private bool enableSpawning;
+        public bool EnableSpawning { get => enableSpawning; set => enableSpawning = value; }
+
         // public Vector3[] positions;
         public List<Vector3> NodeSpawnPosition { get => selectedNodeSpawnPosition; set => selectedNodeSpawnPosition = value; }
 
@@ -27,8 +27,25 @@ namespace WaveSystem
         private List<Vector3> selectedNodeSpawnPosition = new List<Vector3>();
         private const string WAVE_PARENT_NAME = "Parent_EnemyWave";
 
-        private Timer timer;
+        private Timer currentTimer;
         private int waveIndex;
+
+        public String TimeUntilNextWave
+        {
+            get
+            {
+                return currentTimer.TimeUntilNextSpawn.ToString();
+            }
+        }
+
+        public String WaveTimer
+        {
+            get
+            {
+                return currentTimer.TimeUntilNextSpawn.ToString();
+            }
+        }
+
 
         private void Start()
         {
@@ -38,11 +55,23 @@ namespace WaveSystem
 
         private void Update()
         {
-            if (currentWave == null && enableSpawning == true)
-            {
+            if (currentWave == null && EnableSpawning == true)
                 currentWave = waves[0];
+
+            if(currentTimer != null && EnableSpawning == true)
+            {
+                if(currentTimer.WaveCountdown(currentWave.WaveTimer))
+                    EnableSpawning = false;
+            }
+
+            if(!EnableSpawning)
+            {
+                if(!currentTimer.NextWaveCountdown(currentWave.TimeUntilSpawn))
+                    EnableSpawning = true;
             }
         }
+
+
 
         /// <summary>
         ///Create new parent gameobject to store enemy info
@@ -52,9 +81,10 @@ namespace WaveSystem
             Instantiate(new GameObject(WAVE_PARENT_NAME));
         }
 
-        private void LateUpdate()
+        private void InstantiateNewTimer(float timeUntilSpawn, float waveTimer, ref Timer timer)
         {
-
+            timer = null;
+            timer = new Timer(timeUntilSpawn, waveTimer);
         }
 
         public void SpawnEnemyWorldPos(GameObject enemyPrefab, Vector3 spawnPosition, GameObject parentGameobject)
@@ -66,7 +96,7 @@ namespace WaveSystem
         {
             while (true)
             {
-                if (enableSpawning == true)
+                if (EnableSpawning == true )
                 {
                     currentWave.ParentGameobject = GameObject.Find(WAVE_PARENT_NAME);
 
@@ -75,15 +105,16 @@ namespace WaveSystem
                         for (int i = 0; i < currentWave.NumberOfEnemyPerPos; i++)
                         {
                             Instantiate(currentWave.EnemyPrefab, node.transform.position, Quaternion.identity, currentWave.ParentGameobject.transform);
-                            yield return new WaitForSeconds(timeUntilSpawn);
+                            yield return new WaitForSeconds(currentWave.SpawnRatePerSecond);
                         }
                     }
-                    enableSpawning = false;
+                    EnableSpawning = false;
 
                     //Move on to the next scriptable wave in waves array
                     if(!AllWaveCompleted())
                     {
                         currentWave = waves[waveIndex++];
+                        InstantiateNewTimer(currentWave.TimeUntilSpawn, currentWave.WaveTimer, ref currentTimer);
                     }
                 }
 
@@ -101,6 +132,6 @@ namespace WaveSystem
 
     public interface WaveInterface 
     {
-        void UIConnection();
+        void UIConnection(WaveManager waveManager);
     }
 }
