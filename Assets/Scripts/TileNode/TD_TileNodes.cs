@@ -44,6 +44,7 @@ public class TD_TileNodes : MonoBehaviour {
 
     public int unwalkableNodeBorder = 1;
 
+    public PathsData pathData;
 
     //////////////////////////////////////////////////////////
 
@@ -59,24 +60,13 @@ public class TD_TileNodes : MonoBehaviour {
         generateNodes();
     }
 
-    public List<List<WorldTile>> paths = new List<List<WorldTile>>();
     private void Start() {
 
         //Start it all
-        paths = PathFinding.GetPaths(nodes, permanentSpawnPoints);
+        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
 
-        Debug.Log("Paths numbers: " + paths.Count);
-
-        foreach (List<WorldTile> list in paths) {
-
-        string s = "";
-            for (int i = 0; i < list.Count; i++) {
-                s = s + "->(" + list[i].gridX + "," + list[i].gridY + ")";
-            }
-         Debug.Log(s);
-        }
-
-     //   Debug.Log("Num of permanent spawn pts:" + permanentSpawnPoints.Count);
+        Debug.Log("Paths numbers: " + pathData.paths.Count);
+        
     }
     
     
@@ -91,7 +81,7 @@ public class TD_TileNodes : MonoBehaviour {
                 tableY = tileMapFloorList[i].cellBounds.size.y;
             }
         }
-        Debug.Log("Table:" + tableX + " " + tableY);
+
         nodes = new GameObject[tableX, tableY];
         LoopThroughFloorList(tileMapFloorList, nodePrefabs);
     }
@@ -127,8 +117,9 @@ public class TD_TileNodes : MonoBehaviour {
         //scan tiles and create nodes based on where they are
         int GridX = 0; int GirdY = 0;
 
-        for (int x = -(nodes.GetLength(0)) / 2 - 1; x < nodes.GetLength(0) / 2 + 1; x++) {
-            for (int y = -(nodes.GetLength(1)) / 2 - 1; y < nodes.GetLength(1) / 2 + 1; y++) {
+
+        for (int x = -(nodes.GetLength(0)) - 1; x < nodes.GetLength(0) + 1; x++) {
+            for (int y = -(nodes.GetLength(1)) - 1; y < nodes.GetLength(1) + 1; y++) {
 
                 TileBase tb = tileMapFloor.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
 

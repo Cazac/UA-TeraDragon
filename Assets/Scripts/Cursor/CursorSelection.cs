@@ -21,7 +21,7 @@ public class CursorSelection : MonoBehaviour
 
         //Caching reference
         waveManager = GameObject.FindObjectOfType<WaveManager>();
-        Debug.Log(waveManager);
+       // Debug.Log(waveManager);
     }
 
     private void Update() => OnClickSelect();
