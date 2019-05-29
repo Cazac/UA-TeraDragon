@@ -10,7 +10,13 @@ public static class PathFinding {
     static List<List<WorldTile>> paths;
     static List<WorldTile> startingTiles;
 
-    // rules: start alwats last column and end always last
+    /// <summary>
+    /// Returns object contianing a list of paths, form shorst to longest, and 2 dictionaries of these paths
+    /// with starting and ending tiles as keys
+    /// </summary>
+    /// <param name="map"></param>
+    /// <param name="constSpawn"></param>
+    /// <returns></returns>
     public static PathsData GetPaths( GameObject[,] map, List<WorldTile> constSpawn) {
 
 
@@ -84,7 +90,7 @@ public static class PathFinding {
 
     }
     
-    public static List<T> DeepClone<T>(this List<T> items) {
+    static List<T> DeepClone<T>(this List<T> items) {
         return new List<T>(items);
     }
     
