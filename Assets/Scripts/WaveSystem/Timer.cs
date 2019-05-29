@@ -43,22 +43,24 @@ public class Timer
     }
 
 
-    public bool NextWaveCountdown(float setTime)
+    public bool NextWaveCountdown()
     {
-        timeUntilNextSpawn = setTime;
         timeUntilNextSpawn -= Time.deltaTime;
 
-        if (timeUntilNextSpawn <= TimeUntilNextSpawn)
+        if (timeUntilNextSpawn <= 0)
             return true;
         return false;
     }
 
-    public bool WaveCountdown(float setTime)
+    public bool WaveCountdown()
     {
-        waveTimer = setTime;
         waveTimer -= Time.deltaTime;
-        if (waveTimer <= TimeUntilNextSpawn)
+        if (waveTimer <= 0)
+        {
+            Debug.Log("End of wave");
             return true;
+        }
+
         return false;
     }
 }
