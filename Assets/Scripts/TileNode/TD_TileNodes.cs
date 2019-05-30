@@ -46,7 +46,7 @@ public class TD_TileNodes : MonoBehaviour {
 
     public PathsData pathData;
 
-    //////////////////////////////////////////////////////////
+    public GameObject enemyPrefab;
 
     private void Awake() {
         //Set List
@@ -67,9 +67,38 @@ public class TD_TileNodes : MonoBehaviour {
 
         Debug.Log("Paths numbers: " + pathData.paths.Count);
         
+        foreach(WorldTile wt in pathData.PathsByStart.Keys) {
+
+            GameObject go = Instantiate(enemyPrefab, wt.transform.position, new Quaternion());
+            EnemyScript enemy = go.GetComponent<EnemyScript>();
+            enemy.waypoints = pathData.PathsByStart[wt][0];
+
+        }
+        
+
     }
-    
-    
+
+    float timer = 0;
+    bool testBool = false;
+    private void Update() {
+        timer += Time.deltaTime;
+        if(timer > 1f && !testBool) {
+
+            foreach (WorldTile wt2 in pathData.PathsByEnd.Keys) {
+
+                GameObject go = Instantiate(enemyPrefab, pathData.PathsByEnd[wt2][0][0].transform.position, new Quaternion());
+                EnemyScript enemy = go.GetComponent<EnemyScript>();
+                enemy.waypoints = pathData.PathsByEnd[wt2][0];
+
+            }
+
+            testBool = true;
+        }
+
+    }
+
+
+
     public void generateNodes() {
         int tableX = 0, tableY = 0;
         for (int i = 0; i < tileMapFloorList.Count; i++) {

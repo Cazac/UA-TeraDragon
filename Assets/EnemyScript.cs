@@ -16,38 +16,16 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move2();
+        Move();
     }
 
     private void FixedUpdate() {
         
     }
+    
 
-    void Move1() {
-        Vector3 startPosition = waypoints[currentWaypoint].transform.position;
-        Vector3 endPosition = waypoints[currentWaypoint + 1].transform.position;
-        // 2 
-        float pathLength = Vector3.Distance(startPosition, endPosition);
-        float totalTimeForPath = pathLength / speed;
-        float currentTimeOnPath = Time.time - lastWaypointSwitchTime;
-        gameObject.transform.position = Vector2.Lerp(startPosition, endPosition, currentTimeOnPath / totalTimeForPath);
-        // 3 
-        if (gameObject.transform.position.Equals(endPosition)) {
-            if (currentWaypoint < waypoints.Length - 2) {
-                // 3.a 
-                currentWaypoint++;
-                lastWaypointSwitchTime = Time.time;
-                // TODO: Rotate into move direction
-            }
-            else {
-                // 3.b 
-                Destroy(gameObject);
-
-            }
-        }
-    }
-
-    void Move2() {
+    // This seems better because allows us to change speed and reverse it
+    void Move() {
         Vector3 startPosition = waypoints[currentWaypoint].transform.position;
         Vector3 endPosition = waypoints[currentWaypoint + 1].transform.position;
 
@@ -56,14 +34,14 @@ public class EnemyScript : MonoBehaviour
         transform.position += dir.normalized * speed * Time.deltaTime;
 
         if (Vector3.Distance(gameObject.transform.position,endPosition) < 1f) {
-            if (currentWaypoint < waypoints.Length - 2) {
-                // 3.a 
+            if (currentWaypoint < waypoints.Count - 2) {
+
                 currentWaypoint++;
                 lastWaypointSwitchTime = Time.time;
                 // TODO: Rotate into move direction
             }
             else {
-                // 3.b 
+                // to be replaced with more complete function
                 Destroy(gameObject);
 
             }
@@ -75,7 +53,7 @@ public class EnemyScript : MonoBehaviour
 
     // Move Enemies 
     //   [HideInInspector]
-    public GameObject[] waypoints;
+    public List<WorldTile> waypoints;
     private int currentWaypoint = 0;
     private float lastWaypointSwitchTime;
     public float speed = 1.0f;
