@@ -6,41 +6,49 @@ public class EnemyScript : MonoBehaviour
 {
 
     EnemyData enemyData;
+    public List<WorldTile> waypoints;
+    private int currentWaypoint = 0;
+    [Range(0.05f, 30f)]
+    public float speed = 1.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        lastWaypointSwitchTime = Time.time;
+        if (enemyData != null)
+        {
+            // TO-DO: need to add modifyier calculations
+            speed = enemyData.BaseSpeed;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
+
         Move();
     }
 
-    private void FixedUpdate() {
-        
-    }
-    
 
+    Vector3 startPosition, endPosition, dir;
     // This seems better because allows us to change speed and reverse it
-    void Move() {
-        Vector3 startPosition = waypoints[currentWaypoint].transform.position;
-        Vector3 endPosition = waypoints[currentWaypoint + 1].transform.position;
+    void Move()
+    {
+        startPosition = waypoints[currentWaypoint].transform.position;
+        endPosition = waypoints[currentWaypoint + 1].transform.position;
 
-        Vector3 dir = waypoints[currentWaypoint + 1].transform.position - waypoints[currentWaypoint].transform.position;
+        dir = endPosition - startPosition;
 
-        transform.position += dir.normalized * speed * Time.deltaTime;
+        transform.position += dir.normalized * speed * Time.fixedDeltaTime;
 
-        if (Vector3.Distance(gameObject.transform.position,endPosition) < 1f) {
-            if (currentWaypoint < waypoints.Count - 2) {
-
+        if (Vector3.Distance(gameObject.transform.position, endPosition) < 0.5f)
+        {
+            if (currentWaypoint < waypoints.Count - 2)
+            {
                 currentWaypoint++;
-                lastWaypointSwitchTime = Time.time;
                 // TODO: Rotate into move direction
             }
-            else {
+            else
+            {
                 // to be replaced with more complete function
                 Destroy(gameObject);
 
@@ -49,14 +57,6 @@ public class EnemyScript : MonoBehaviour
 
     }
 
-    // Copying tutorial: https://www.raywenderlich.com/269-how-to-create-a-tower-defense-game-in-unity-part-1
-
-    // Move Enemies 
-    //   [HideInInspector]
-    public List<WorldTile> waypoints;
-    private int currentWaypoint = 0;
-    private float lastWaypointSwitchTime;
-    public float speed = 1.0f;
 
 
 }

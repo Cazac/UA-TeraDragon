@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  speed: 10
+  speed: 30
 --- !u!58 &5954217775785473982
 CircleCollider2D:
   m_ObjectHideFlags: 0
