@@ -8,8 +8,14 @@ public class EnemyScript : MonoBehaviour
     EnemyData enemyData;
     public List<WorldTile> waypoints;
     private int currentWaypoint = 0;
+
+
+    [Header("Enemy Stats")]
+    public int MaxHealth;
+    public int CurrentHealth;
     [Range(0.05f, 30f)]
     public float speed = 1.0f;
+    public string[] attributes;
 
     // Start is called before the first frame update
     void Start()
