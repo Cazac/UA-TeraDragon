@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8394991996450785514}
   - component: {fileID: 216382684837161934}
-  - component: {fileID: 2833388371888390876}
   - component: {fileID: 3666348204253816783}
   - component: {fileID: 877387452300099738}
-  - component: {fileID: 4605183770677374876}
+  - component: {fileID: 2833388371888390876}
   m_Layer: 8
-  m_Name: Node 2
+  m_Name: UI Node Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,24 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2833388371888390876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695939135748994880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82e4a07c7fe951541afe5abc560b6fa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gvalue: 0
-  hValue: 0
-  gridY: 0
-  gridX: 0
-  walkable: 0
-  myNeighbours: []
 --- !u!65 &3666348204253816783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -130,11 +111,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!222 &4605183770677374876
-CanvasRenderer:
+--- !u!114 &2833388371888390876
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695939135748994880}
-  m_CullTransparentMesh: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e4a07c7fe951541afe5abc560b6fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridY: 0
+  gridX: 0
+  posX: 0
+  posY: 0
+  walkable: 0
+  myNeighbours: []
