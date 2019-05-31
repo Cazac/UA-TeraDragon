@@ -66,36 +66,20 @@ public class TD_TileNodes : MonoBehaviour
     private void Start()
     {
 
+        
         //Start it all
         pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
-
-        Debug.Log("Paths numbers: " + pathData.paths.Count);
-        Debug.Log("Nodes length:" + nodes.GetLength(0) + " " + nodes.GetLength(1));
-
+        
 
         foreach (WorldTile wt in pathData.PathsByStart.Keys)
         {
-
             GameObject go = Instantiate(enemyPrefab, wt.transform.position, new Quaternion());
             EnemyScript enemy = go.GetComponent<EnemyScript>();
             enemy.waypoints = pathData.PathsByStart[wt][0];
 
         }
-
-        for (int i = 0; i < nodes.GetLength(0); i++)
-        {
-            for (int j = 0; j < nodes.GetLength(1); j++)
-            {
-                ;
-                if (tileMapFloorList[0].GetTile(new Vector3Int(i, j, 0)) != null)
-                {
-
-                    Debug.Log(tileMapFloorList[0].GetTile(new Vector3Int(i, j, 0)).name);
-                }
-            }
-        }
-
-
+        
+        
         /*
 
         ///
@@ -132,7 +116,6 @@ public class TD_TileNodes : MonoBehaviour
         {
             foreach (WorldTile wt2 in pathData.PathsByEnd.Keys)
             {
-
                 GameObject go = Instantiate(enemyPrefab, pathData.PathsByEnd[wt2][0][0].transform.position, new Quaternion());
                 EnemyScript enemy = go.GetComponent<EnemyScript>();
                 enemy.waypoints = pathData.PathsByEnd[wt2][0];
@@ -321,8 +304,5 @@ public class TD_TileNodes : MonoBehaviour
         }
     }
 
-
-    private void OnDrawGizmos()
-    {
-    }
+    
 }
