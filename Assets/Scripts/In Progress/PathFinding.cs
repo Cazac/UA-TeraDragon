@@ -17,7 +17,8 @@ public static class PathFinding {
     /// <param name="map"></param>
     /// <param name="constSpawn"></param>
     /// <returns></returns>
-    public static PathsData GetPaths( GameObject[,] map, List<WorldTile> constSpawn) {
+    public static PathsData GetPaths(GameObject[,] map, List<WorldTile> constSpawn)
+    {
 
 
         /*  Steps:
@@ -32,30 +33,37 @@ public static class PathFinding {
         startingTiles = new List<WorldTile>();
 
         // finds all rightmost paths tiles
-        for (int i = 0; i < map.GetLength(1); i++) {
-            if (map[map.GetLength(0) -1, i] != null) {
-                if (map[map.GetLength(0)-1, i].GetComponent<WorldTile>().walkable) {
-                    startingTiles.Add(map[map.GetLength(0)-1, i].GetComponent<WorldTile>());
+        for (int i = 0; i < map.GetLength(1); i++)
+        {
+            if (map[map.GetLength(0) - 1, i] != null)
+            {
+                if (map[map.GetLength(0) - 1, i].GetComponent<WorldTile>().walkable)
+                {
+                    startingTiles.Add(map[map.GetLength(0) - 1, i].GetComponent<WorldTile>());
                 }
             }
         }
 
         // finds all leftmost paths tile
-        for (int i = 0; i < map.GetLength(1); i++) {
-            if (map[0, i] != null) {
-                if (map[0, i].GetComponent<WorldTile>().walkable) {
+        for (int i = 0; i < map.GetLength(1); i++)
+        {
+            if (map[0, i] != null)
+            {
+                if (map[0, i].GetComponent<WorldTile>().walkable)
+                {
                     endTiles.Add(map[0, i].GetComponent<WorldTile>());
                 }
             }
         }
         startingTiles.AddRange(constSpawn);
-        
-        foreach(WorldTile wt in startingTiles) {
+
+        foreach (WorldTile wt in startingTiles)
+        {
             DFS(wt);
         }
-        
-        PathsData PathData = new PathsData(paths);
 
+        PathsData PathData = new PathsData(paths);
+        
         return PathData;
     }
 
@@ -113,17 +121,22 @@ public class PathsData {
 
         paths.Sort(comparator);
 
-        foreach (List<WorldTile> wt in paths) {
-            if (!PathsByStart.ContainsKey(wt[0])) {
-            PathsByStart.Add(wt[0], new List<List<WorldTile>>());
+        foreach (List<WorldTile> wt in paths)
+        {
+            if (!PathsByStart.ContainsKey(wt[0]))
+            {
+                PathsByStart.Add(wt[0], new List<List<WorldTile>>() { wt });
             }
-            else {
+            else
+            {
                 PathsByStart[wt[0]].Add(wt);
             }
-            if (!PathsByEnd.ContainsKey(wt[wt.Count-1])) {
-                PathsByEnd.Add(wt[wt.Count-1], new List<List<WorldTile>>());
+            if (!PathsByEnd.ContainsKey(wt[wt.Count - 1]))
+            {
+                PathsByEnd.Add(wt[wt.Count - 1], new List<List<WorldTile>>() { wt });
             }
-            else {
+            else
+            {
                 PathsByEnd[wt[wt.Count - 1]].Add(wt);
             }
         }

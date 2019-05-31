@@ -127,5 +127,5 @@ MonoBehaviour:
   gridX: 0
   posX: 0
   posY: 0
-  walkable: 0
+  walkable: 1
   myNeighbours: []
