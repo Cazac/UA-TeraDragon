@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8790127397424774518
+--- !u!1 &1680119057987682411
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7579355493398273147}
-  - component: {fileID: 2159974013474230063}
+  - component: {fileID: 1680119057987682409}
+  - component: {fileID: 1680119057987682408}
   m_Layer: 0
-  m_Name: Node Manager
+  m_Name: Node Manager (Refactor)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7579355493398273147
+  m_IsActive: 0
+--- !u!4 &1680119057987682409
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8790127397424774518}
+  m_GameObject: {fileID: 1680119057987682411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,30 +31,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2159974013474230063
+--- !u!114 &1680119057987682408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8790127397424774518}
+  m_GameObject: {fileID: 1680119057987682411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb675caeb18cb545b59858189d296f3, type: 3}
+  m_Script: {fileID: 11500000, guid: f2238643d250a5e40b333a94a9c92235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gridBase: {fileID: 0}
-  obstacleLayers: []
-  nodePrefabs: []
+  nodePrefabs:
+  - {fileID: 695939135748994880, guid: 8fdf08ac0c929984c9587e0fe6af5d77, type: 3}
+  - {fileID: 600481993440625538, guid: 722e960f73644fc489cd4eb9db10bf23, type: 3}
+  - {fileID: 2526764204735165664, guid: b87f3557477ece044a3fb068d5b2ef32, type: 3}
   nodePrefab_Unwalkable: {fileID: 0}
+  enemyPrefab: {fileID: 5954217775785473978, guid: 6ab4dc02809beb4489972762b75f5fc8,
+    type: 3}
   selectedNode: []
-  scanStartingPoint_X: -250
-  scanStartingPoint_Y: -250
-  scanFinishPoint_X: 250
-  scanFinishPoint_Y: 250
+  scanStartingPoint_X: -100
+  scanStartingPoint_Y: -100
+  scanFinishPoint_X: 100
+  scanFinishPoint_Y: 100
+  arrayOffsetSize_X: 10
+  arrayOffsetSize_Y: 6
+  tileMapFloorList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   unsortedNodes: []
   permanentSpawnPoints: []
-  gridBoundX: 0
-  gridBoundY: 0
-  unwalkableNodeBorder: 1
-  enemyPrefab: {fileID: 0}

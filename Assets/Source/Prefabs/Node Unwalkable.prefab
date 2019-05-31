@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4500074788318752365}
   - component: {fileID: 2633839752977675612}
   - component: {fileID: 62995545499343950}
-  - component: {fileID: 2727424140612044065}
   m_Layer: 0
   m_Name: Node Unwalkable
   m_TagString: Untagged
@@ -93,27 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e4a07c7fe951541afe5abc560b6fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gvalue: 0
-  hValue: 0
   gridY: 0
   gridX: 0
-  walkable: 0
-  myNeighbours: []
---- !u!114 &2727424140612044065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3325206148484082130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82e4a07c7fe951541afe5abc560b6fa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gvalue: 0
-  hValue: 0
-  gridY: 0
-  gridX: 0
+  posX: 0
+  posY: 0
   walkable: 0
   myNeighbours: []

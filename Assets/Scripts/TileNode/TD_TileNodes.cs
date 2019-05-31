@@ -285,7 +285,9 @@ public class TD_TileNodes : MonoBehaviour
     {
         List<WorldTile> myNeighbours = new List<WorldTile>();
         if (x < 0 || x >= width || y < 0 || y >= height)
+        {
             return myNeighbours;
+        }
 
         if (x > 0)
         {

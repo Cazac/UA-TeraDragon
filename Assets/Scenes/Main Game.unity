@@ -217,20 +217,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Node Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 8790127397424774518, guid: 52e0e53088bba134e8676cc16b8e79a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7579355493398273147, guid: 52e0e53088bba134e8676cc16b8e79a0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.403877
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7579355493398273147, guid: 52e0e53088bba134e8676cc16b8e79a0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.603506
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7579355493398273147, guid: 52e0e53088bba134e8676cc16b8e79a0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -469.63513
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7579355493398273147, guid: 52e0e53088bba134e8676cc16b8e79a0,
         type: 3}
@@ -337,6 +342,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5954217775785473978, guid: 6ab4dc02809beb4489972762b75f5fc8,
         type: 3}
+    - target: {fileID: 2159974013474230063, guid: 52e0e53088bba134e8676cc16b8e79a0,
+        type: 3}
+      propertyPath: unwalkableNodeBorder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52e0e53088bba134e8676cc16b8e79a0, type: 3}
 --- !u!114 &827379758
@@ -531,6 +541,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82761e9df1db0444f8eab900b7834bec, type: 3}
+--- !u!1 &934439036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5954217775785473978, guid: 6ab4dc02809beb4489972762b75f5fc8,
+    type: 3}
+  m_PrefabInstance: {fileID: 5954217775246264251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1607491523
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,7 +4023,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &3905994754878764181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4020,7 +4036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60e9738d94ce3fa4499b11ff72705ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 934439036}
 --- !u!1 &4076377550972429770
 GameObject:
   m_ObjectHideFlags: 0
