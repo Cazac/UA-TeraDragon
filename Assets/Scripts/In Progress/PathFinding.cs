@@ -121,6 +121,7 @@ public class PathsData {
 
         paths.Sort(comparator);
 
+
         foreach (List<WorldTile> wt in paths)
         {
             if (!PathsByStart.ContainsKey(wt[0]))
@@ -131,6 +132,7 @@ public class PathsData {
             {
                 PathsByStart[wt[0]].Add(wt);
             }
+
             if (!PathsByEnd.ContainsKey(wt[wt.Count - 1]))
             {
                 PathsByEnd.Add(wt[wt.Count - 1], new List<List<WorldTile>>() { wt });
