@@ -115,13 +115,13 @@ public class PathsData {
 
         foreach (List<WorldTile> wt in paths) {
             if (!PathsByStart.ContainsKey(wt[0])) {
-            PathsByStart.Add(wt[0], new List<List<WorldTile>>());
+            PathsByStart.Add(wt[0], new List<List<WorldTile>>() { wt });
             }
             else {
                 PathsByStart[wt[0]].Add(wt);
             }
             if (!PathsByEnd.ContainsKey(wt[wt.Count-1])) {
-                PathsByEnd.Add(wt[wt.Count-1], new List<List<WorldTile>>());
+                PathsByEnd.Add(wt[wt.Count-1], new List<List<WorldTile>>() { wt });
             }
             else {
                 PathsByEnd[wt[wt.Count - 1]].Add(wt);
