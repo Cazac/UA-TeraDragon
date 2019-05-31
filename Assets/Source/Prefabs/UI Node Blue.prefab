@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3666348204253816783}
   - component: {fileID: 877387452300099738}
   - component: {fileID: 2833388371888390876}
+  - component: {fileID: -6196980978996275369}
   m_Layer: 8
   m_Name: UI Node Blue
   m_TagString: Untagged
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0.12585497, b: 1, a: 0.50980395}
+  m_Color: {r: 0, g: 0.12585497, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -129,3 +130,15 @@ MonoBehaviour:
   posY: 0
   walkable: 1
   myNeighbours: []
+--- !u!114 &-6196980978996275369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695939135748994880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 687bff9137857ac47beea67b5fac95fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

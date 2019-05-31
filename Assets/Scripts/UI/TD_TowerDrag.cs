@@ -24,23 +24,13 @@ public class TD_TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public int tileLayer;
 
-    private WaveManager waveManager;
-
-    private TD_TileNodes tD_TileNodes;
 
 
     /////////////////////////////////////////////////////////////////
 
-    // Start is called before the first frame update
     void Start()
     {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     /////////////////////////////////////////////////////////////////
@@ -51,7 +41,7 @@ public class TD_TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
         currentTower = Instantiate(towerPrefab);
 
-
+        print(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -59,7 +49,11 @@ public class TD_TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         //print("THOG");
 
 
-        currentTower.transform.position = cursor.transform.position;
+        //currentTower.transform.position = cursor.transform.position;
+        Vector3 test = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        test.z = 0;
+
+        currentTower.transform.position = test;
 
 
 
@@ -74,41 +68,39 @@ public class TD_TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        print("Destroy");
-        Destroy(currentTower);
-
-
-
-
-
-        /// <summary>
-        ///Detects mouse click and performs raycast to a tile, if detected then turn that tile to the color black
-        /// </summary>
-        ///<para>
-        ///Uses raycast from mouse position to collider
-        ///</para>
-
-
-        return;
+ 
         
 
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity, tileLayer))
+        if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
         {
-            //TODO: Color is hardcoded to black when a tile is clicked, need to change to dynamic
-            hit.collider.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
-            LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(),
-            hit.collider.gameObject.transform.parent.gameObject.name);
 
-            //Store hit tile node in a list in tD_TileNodes
-            tD_TileNodes.SelectedNode.Add(hit.collider.gameObject);
+            string tileLayerParent = hit.collider.gameObject.transform.parent.gameObject.name;
 
+            //  TO DO   // - HARD CODED ???
+            if (tileLayerParent == "Parent_Ground")
+            {
+                currentTower.transform.position = hit.collider.gameObject.transform.position;
+                LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
+            }
+            else
+            {
+                print("Destroy Tower");
+                Destroy(currentTower);
+            }
+
+           
+
+        }
+        else
+        {
+            print("Destroy Tower");
+            Destroy(currentTower);
         }
 
 
-     
 
         //Find Nearest Node
 
@@ -122,11 +114,20 @@ public class TD_TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     }
 
+    /////////////////////////////////////////////////////////////////
+
+    public void SpawnTower()
+    {
+        //currentTower.transform.position
+    }
+
+
+    /////////////////////////////////////////////////////////////////
 
     internal void LogRaycasthitObject(String position, String type)
     {
-        String logString = String.Format("Hit node at position: {0}, is type of: {1}", position, type);
-          Debug.Log(logString);
+        String logString = String.Format("Hit node spawing tower at position: {0}, is type of: {1}", position, type);
+        Debug.Log(logString);
     }
 
     /////////////////////////////////////////////////////////////////
