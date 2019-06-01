@@ -60,6 +60,7 @@ public class TD_TileNodes : MonoBehaviour
         }
         unsortedNodes = new List<GameObject>();
         mapConstant = gridBase.cellSize.x;
+
         generateNodes();
     }
 
@@ -75,7 +76,6 @@ public class TD_TileNodes : MonoBehaviour
 
         foreach (WorldTile wt in pathData.PathsByStart.Keys)
         {
-
             GameObject go = Instantiate(enemyPrefab, wt.transform.position, new Quaternion());
             EnemyScript enemy = go.GetComponent<EnemyScript>();
             enemy.waypoints = pathData.PathsByStart[wt][0];
@@ -86,42 +86,16 @@ public class TD_TileNodes : MonoBehaviour
         {
             for (int j = 0; j < nodes.GetLength(1); j++)
             {
-                ;
                 if (tileMapFloorList[0].GetTile(new Vector3Int(i, j, 0)) != null)
                 {
-
-                    Debug.Log(tileMapFloorList[0].GetTile(new Vector3Int(i, j, 0)).name);
+                 //   Debug.Log(tileMapFloorList[0].GetTile(new Vector3Int(i, j, 0)).name);
                 }
             }
         }
-
-
-        /*
-
-        ///
-        /// This is code that couls allow us to use only 1 tilemap instead of multiple ones. 
-        ///
-        if (nodes != null) {
-
-            for (int i = -(nodes.GetLength(0)) - 1; i < nodes.GetLength(0) + 1; i++) {
-                for (int j = -(nodes.GetLength(1)) - 1; j < nodes.GetLength(1) + 1; j++) {
-                    Vector3 nodePosition = new Vector3(mapConstant / 2 + ((i + gridBase.transform.position.x) * mapConstant),
-                        (j + 0.5f + gridBase.transform.position.y) * mapConstant, 0);
-                    //    Debug.Log(mapConstant / 2 + ((i + gridBase.transform.position.x) * mapConstant) + ", " + (j + 0.5f + gridBase.transform.position.y) * mapConstant);
-
-                    //Debug.Log("Tile:" + nodePosition.x + " " + nodePosition.y + ", There is tile:" +
-                    //    (tileMapFloorList[1].GetTile(tileMapFloorList[1].WorldToCell(nodePosition)) != null ));
-                    //;
-
-                    if (tileMapFloorList[1].GetTile(tileMapFloorList[1].WorldToCell(nodePosition)) != null) {
-                        Debug.Log("Tile:" + tileMapFloorList[1].GetTile(tileMapFloorList[1].WorldToCell(nodePosition)).name);
-                    }
-                }
-            }
-        }
-
-        */
+        
     }
+
+
     float timer = 0;
     bool testBool = false;
     private void Update()
@@ -144,7 +118,6 @@ public class TD_TileNodes : MonoBehaviour
     }
 
 
-
     public void generateNodes()
     {
         int tableX = 0, tableY = 0;
@@ -162,10 +135,14 @@ public class TD_TileNodes : MonoBehaviour
         }
 
         nodes = new GameObject[tableX, tableY];
-        LoopThroughFloorList(tileMapFloorList, nodePrefabs);
+        LoopThroughTileset();
+   
+        FillNodeTable();
+        SetNeigbours();
+        //     LoopThroughFloorList(tileMapFloorList);
     }
 
-    private void LoopThroughFloorList(List<Tilemap> floorList, GameObject[] nodePrefabs)
+    private void LoopThroughFloorList(List<Tilemap> floorList)
     {
         if (floorList.Count != nodePrefabs.Length)
         {
@@ -176,11 +153,93 @@ public class TD_TileNodes : MonoBehaviour
         {
             createNodes(floorList[i], nodePrefabs[i], i);
         }
-        FillNodeTable();
-        SetNeigbours();
+        // Place tiles
+
+
+        //
     }
 
 
+    public Dictionary<string, GameObject> nodesForTiles;
+    public Tilemap uniqueTilemap;
+    public GameObject[] TileNodes;
+    public bool[] NodeWalable;
+    public GameObject[] Tilesprites;
+
+    void LoopThroughTileset()
+    {
+
+        WorldTile wt;
+        GameObject[] parentNodes = new GameObject[TileNodes.Length];
+        for (int i = 0; i < TileNodes.Length; i++)
+        {
+            parentNodes[i] = new GameObject("Parent_" + TileNodes[i].name);
+        }
+        uniqueTilemap.CompressBounds();
+        BoundsInt bounds = uniqueTilemap.cellBounds;
+
+        int GridX = 0; int GirdY = 0;
+        for (int x = -(nodes.GetLength(0)) - 1; x < nodes.GetLength(0) + 1; x++)
+        {
+            for (int y = -(nodes.GetLength(1)) - 1; y < nodes.GetLength(1) + 1; y++)
+            {
+                TileBase tb = uniqueTilemap.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
+
+                if (tb != null)
+                {
+                    float mapConstant = tileMapFloorList[0].cellSize.x;
+                    Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
+                    Quaternion nodeRotation = Quaternion.Euler(0, 0, 0);
+
+                    GameObject node;
+
+
+                    // this part is ugly and wnt work in the future.
+                    if (uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name == "Grass Tile")
+                    {
+                        node = Instantiate(TileNodes[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                    }
+                    else
+                    {
+                        node = Instantiate(TileNodes[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+
+                    }
+                    wt = node.GetComponent<WorldTile>();
+                    wt.gridX = GridX;
+                    wt.gridY = GirdY;
+                    unsortedNodes.Add(node);
+
+                    if (uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name == "Temp Spawn Tile")
+                    {
+
+                        permanentSpawnPoints.Add(wt);
+                    }
+                    //if (tileMapFloor.name == "Spawns")
+                    //{
+                    //    permanentSpawnPoints.Add(wt);
+                    //}
+                }
+                GirdY++;
+            }
+            GirdY = 0; ;
+            GridX++;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    ////////////////////////////////////////////////////////////
+    //////        Old code
+    ////////////////////////////////////////////////////////////
     ///<summary>
     ///Main method to handle node creation
     ///</summary>
@@ -189,18 +248,14 @@ public class TD_TileNodes : MonoBehaviour
     private void createNodes(Tilemap tileMapFloor, GameObject nodePrefab, int i)
     {
         //use these to work out the size and where each node should be in the 2d array we'll use to store our nodes so we can work out neighbours and get paths
-
         WorldTile wt;
-
         GameObject parentNode = new GameObject("Parent_" + tileMapFloor.name);
         tileMapFloorList[i].CompressBounds();
         BoundsInt bounds = tileMapFloorList[i].cellBounds;
-
-
+        
         //scan tiles and create nodes based on where they are
         int GridX = 0; int GirdY = 0;
-
-
+        
         for (int x = -(nodes.GetLength(0)) - 1; x < nodes.GetLength(0) + 1; x++)
         {
             for (int y = -(nodes.GetLength(1)) - 1; y < nodes.GetLength(1) + 1; y++)
@@ -239,7 +294,6 @@ public class TD_TileNodes : MonoBehaviour
 
     void FillNodeTable()
     {
-
         int minX, minY;
         minX = nodes.GetLength(0); minY = nodes.GetLength(1);
         WorldTile wt;
@@ -321,8 +375,5 @@ public class TD_TileNodes : MonoBehaviour
         }
     }
 
-
-    private void OnDrawGizmos()
-    {
-    }
+    
 }

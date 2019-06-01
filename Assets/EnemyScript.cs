@@ -25,7 +25,8 @@ public class EnemyScript : MonoBehaviour
             // TO-DO: need to add modifyier calculations
             speed = enemyData.BaseSpeed;
         }
-        Debug.Log(enemyData.name + " has spawned");
+        if (enemyData != null)
+         Debug.Log(enemyData.name + " has spawned");
     }
 
 
@@ -57,7 +58,9 @@ public class EnemyScript : MonoBehaviour
             else
             {
                 // to be replaced with more complete function
-                Debug.Log(enemyData.name + " has died");
+
+                if (enemyData != null)
+                    Debug.Log(enemyData.name + " has died");
                 Destroy(gameObject);
 
             }
