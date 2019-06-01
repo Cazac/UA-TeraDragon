@@ -10,54 +10,39 @@ public class TD_TileNodes : MonoBehaviour
     //changed execution order for this and world builder
     public Grid gridBase;
     float mapConstant;
-    // 0 == Road, 1 == Ground
-    List<Tilemap> tileMapFloorList;
-    //floor of world
-    public List<Tilemap> obstacleLayers;
-    //all layers that contain objects to navigate around
 
     [Header("List of node for tilemap")]
-    public GameObject[] nodePrefabs;
-    public GameObject nodePrefab_Unwalkable;
+
 
     [Header("Selected node")]
     [SerializeField]
     private List<GameObject> selectedNode = new List<GameObject>();
     public List<GameObject> SelectedNode { get => selectedNode; set => selectedNode = value; }
-
-    [Header("Scan coordinate for tilemap")]
-    //these are the bounds of where we are searching in the world for tiles, have to use world coords to check for tiles in the tile map
-    public int scanStartingPoint_X = -250;
-    public int scanStartingPoint_Y = -250;
-    public int scanFinishPoint_X = 250;
-    public int scanFinishPoint_Y = 250;
-
-    //all the nodes in the world
-    public List<GameObject> unsortedNodes;
+    
+    //List of nodes before they are sorted
+    private List<GameObject> unsortedNodes;
 
     //sorted 2d array of nodes, may contain null entries if the map is of an odd shape e.g. gaps
     public GameObject[,] nodes;
     public List<WorldTile> permanentSpawnPoints;
+    
+    public Tilemap uniqueTilemap;
 
-    //Actual Calulated Grid Bounds Found From Searching
-    public int gridBoundX = 10;
-    public int gridBoundY = 10;
-
-    public int unwalkableNodeBorder = 1;
+    // nodes that can be placed;
+    public GameObject[] TileNodes;
+    // this is not the best
+    public Tile[] WalkableTiles;
+    public Tile[] UnwalkableTiles;
+    public Tile[] SpawnTiles;
 
     public PathsData pathData;
 
+    // Temporary variable
     public GameObject enemyPrefab;
 
     private void Awake()
     {
         //Set List
-        tileMapFloorList = new List<Tilemap>();
-        foreach (Transform t in gridBase.transform)
-        {
-            //       Debug.Log(t.name);
-            tileMapFloorList.Add(t.GetComponent<Tilemap>());
-        }
         unsortedNodes = new List<GameObject>();
         mapConstant = gridBase.cellSize.x;
 
@@ -68,6 +53,7 @@ public class TD_TileNodes : MonoBehaviour
     {
 
         //Start it all
+        Debug.Log("permanentSpawnPoints: " + permanentSpawnPoints.Count);
         pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
 
         Debug.Log("Paths numbers: " + pathData.paths.Count);
@@ -80,17 +66,6 @@ public class TD_TileNodes : MonoBehaviour
             EnemyScript enemy = go.GetComponent<EnemyScript>();
             enemy.waypoints = pathData.PathsByStart[wt][0];
 
-        }
-
-        for (int i = 0; i < nodes.GetLength(0); i++)
-        {
-            for (int j = 0; j < nodes.GetLength(1); j++)
-            {
-                if (tileMapFloorList[0].GetTile(new Vector3Int(i, j, 0)) != null)
-                {
-                 //   Debug.Log(tileMapFloorList[0].GetTile(new Vector3Int(i, j, 0)).name);
-                }
-            }
         }
         
     }
@@ -120,63 +95,25 @@ public class TD_TileNodes : MonoBehaviour
 
     public void generateNodes()
     {
-        int tableX = 0, tableY = 0;
-        for (int i = 0; i < tileMapFloorList.Count; i++)
-        {
-            tileMapFloorList[i].CompressBounds();
-            if (tileMapFloorList[i].cellBounds.size.x > tableX)
-            {
-                tableX = tileMapFloorList[i].cellBounds.size.x;
-            }
-            if (tileMapFloorList[i].cellBounds.size.y > tableY)
-            {
-                tableY = tileMapFloorList[i].cellBounds.size.y;
-            }
-        }
-
-        nodes = new GameObject[tableX, tableY];
-        LoopThroughTileset();
-   
-        FillNodeTable();
-        SetNeigbours();
-        //     LoopThroughFloorList(tileMapFloorList);
-    }
-
-    private void LoopThroughFloorList(List<Tilemap> floorList)
-    {
-        if (floorList.Count != nodePrefabs.Length)
-        {
-            Debug.LogError("Number of node does not match number of floor");
-            return;
-        }
-        for (int i = 0; i < floorList.Count; i++)
-        {
-            createNodes(floorList[i], nodePrefabs[i], i);
-        }
-        // Place tiles
-
-
-        //
-    }
-
-
-    public Dictionary<string, GameObject> nodesForTiles;
-    public Tilemap uniqueTilemap;
-    public GameObject[] TileNodes;
-    public bool[] NodeWalable;
-    public GameObject[] Tilesprites;
-
-    void LoopThroughTileset()
-    {
-
-        WorldTile wt;
-        GameObject[] parentNodes = new GameObject[TileNodes.Length];
-        for (int i = 0; i < TileNodes.Length; i++)
-        {
-            parentNodes[i] = new GameObject("Parent_" + TileNodes[i].name);
-        }
         uniqueTilemap.CompressBounds();
         BoundsInt bounds = uniqueTilemap.cellBounds;
+        int tableX = uniqueTilemap.cellBounds.size.x;
+        int tableY = uniqueTilemap.cellBounds.size.y;
+        
+        nodes = new GameObject[tableX, tableY];
+
+        LoopThroughTileset();
+        FillNodeTable();
+        SetNeigbours();
+    }
+    
+    void LoopThroughTileset()
+    {
+        WorldTile wt;
+        GameObject[] parentNodes = new GameObject[TileNodes.Length];
+        parentNodes[0] = new GameObject("Parent_WalkableTiles");
+        parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
+
 
         int GridX = 0; int GirdY = 0;
         for (int x = -(nodes.GetLength(0)) - 1; x < nodes.GetLength(0) + 1; x++)
@@ -187,37 +124,47 @@ public class TD_TileNodes : MonoBehaviour
 
                 if (tb != null)
                 {
-                    float mapConstant = tileMapFloorList[0].cellSize.x;
                     Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
                     Quaternion nodeRotation = Quaternion.Euler(0, 0, 0);
 
-                    GameObject node;
+                    GameObject node = null;
+                    
+                    string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
-
-                    // this part is ugly and wnt work in the future.
-                    if (uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name == "Grass Tile")
+                    foreach (Tile tile in WalkableTiles)
                     {
-                        node = Instantiate(TileNodes[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                        if (name == tile.name)
+                        {
+                            node = Instantiate(TileNodes[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                            foreach(Tile spTile in SpawnTiles)
+                            {
+                                if (name == spTile.name)
+                                {
+                                    permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
+                                }
+                            }
+                        }
+                    }
+                    foreach (Tile tile in UnwalkableTiles)
+                    {
+                        if (name == tile.name)
+                        {
+                            node = Instantiate(TileNodes[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                        }
+                    }
+
+                    if (node == null)
+                    {
+                        Debug.LogError(name + " is not registered.");
                     }
                     else
                     {
-                        node = Instantiate(TileNodes[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
-
+                        unsortedNodes.Add(node);
+                        wt = node.GetComponent<WorldTile>();
+                        wt.gridX = GridX;
+                        wt.gridY = GirdY;
                     }
-                    wt = node.GetComponent<WorldTile>();
-                    wt.gridX = GridX;
-                    wt.gridY = GirdY;
-                    unsortedNodes.Add(node);
-
-                    if (uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name == "Temp Spawn Tile")
-                    {
-
-                        permanentSpawnPoints.Add(wt);
-                    }
-                    //if (tileMapFloor.name == "Spawns")
-                    //{
-                    //    permanentSpawnPoints.Add(wt);
-                    //}
+                    
                 }
                 GirdY++;
             }
@@ -225,73 +172,7 @@ public class TD_TileNodes : MonoBehaviour
             GridX++;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-    ////////////////////////////////////////////////////////////
-    //////        Old code
-    ////////////////////////////////////////////////////////////
-    ///<summary>
-    ///Main method to handle node creation
-    ///</summary>
-    /// <param name="tileMapFloor">Tilemap that will spawn in game</param>
-    /// <param name="nodePrefab">Node that corresponds to the tileMapFloor</param>
-    private void createNodes(Tilemap tileMapFloor, GameObject nodePrefab, int i)
-    {
-        //use these to work out the size and where each node should be in the 2d array we'll use to store our nodes so we can work out neighbours and get paths
-        WorldTile wt;
-        GameObject parentNode = new GameObject("Parent_" + tileMapFloor.name);
-        tileMapFloorList[i].CompressBounds();
-        BoundsInt bounds = tileMapFloorList[i].cellBounds;
-        
-        //scan tiles and create nodes based on where they are
-        int GridX = 0; int GirdY = 0;
-        
-        for (int x = -(nodes.GetLength(0)) - 1; x < nodes.GetLength(0) + 1; x++)
-        {
-            for (int y = -(nodes.GetLength(1)) - 1; y < nodes.GetLength(1) + 1; y++)
-            {
-
-                TileBase tb = tileMapFloor.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
-
-                if (tb != null)
-                {
-
-                    float mapConstant = tileMapFloorList[0].cellSize.x;
-
-                    Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
-                    Quaternion nodeRotation = Quaternion.Euler(0, 0, 0);
-
-                    GameObject node = Instantiate(nodePrefab, nodePosition, Quaternion.identity, parentNode.transform);
-
-                    wt = node.GetComponent<WorldTile>();
-                    wt.gridX = GridX;
-                    wt.gridY = GirdY;
-                    unsortedNodes.Add(node);
-
-                    if (tileMapFloor.name == "Spawns")
-                    {
-                        permanentSpawnPoints.Add(wt);
-                    }
-
-                }
-                GirdY++;
-            }
-            GirdY = 0; ;
-            GridX++;
-        }
-
-    }
-
+    
     void FillNodeTable()
     {
         int minX, minY;
@@ -315,7 +196,6 @@ public class TD_TileNodes : MonoBehaviour
             nodes[wt.gridX, wt.gridY] = g;
         }
         unsortedNodes.Clear();
-
     }
 
     private void SetNeigbours()
