@@ -109,7 +109,7 @@ public class TD_TileNodes : MonoBehaviour
     
     void LoopThroughTileset()
     {
-        WorldTile wt;
+        WorldTile wt; GameObject node;
         GameObject[] parentNodes = new GameObject[TileNodes.Length];
         parentNodes[0] = new GameObject("Parent_WalkableTiles");
         parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
@@ -125,10 +125,9 @@ public class TD_TileNodes : MonoBehaviour
                 if (tb != null)
                 {
                     Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
-                    Quaternion nodeRotation = Quaternion.Euler(0, 0, 0);
 
-                    GameObject node = null;
-                    
+
+                    node = null;
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
                     foreach (Tile tile in WalkableTiles)
@@ -173,11 +172,13 @@ public class TD_TileNodes : MonoBehaviour
         }
     }
     
+
     void FillNodeTable()
     {
         int minX, minY;
         minX = nodes.GetLength(0); minY = nodes.GetLength(1);
         WorldTile wt;
+        // makes sure grid is correctly alligned
         foreach (GameObject g in unsortedNodes)
         {
             wt = g.GetComponent<WorldTile>();
@@ -186,7 +187,6 @@ public class TD_TileNodes : MonoBehaviour
             if (wt.gridY < minY)
                 minY = wt.gridY;
         }
-        // makes sure grid is correctly alligned
         foreach (GameObject g in unsortedNodes)
         {
             wt = g.GetComponent<WorldTile>();
@@ -200,7 +200,6 @@ public class TD_TileNodes : MonoBehaviour
 
     private void SetNeigbours()
     {
-
         WorldTile wt;
         for (int x = 0; x < nodes.GetLength(0); x++)
         {
@@ -209,13 +208,13 @@ public class TD_TileNodes : MonoBehaviour
                 if (nodes[x, y] != null)
                 {
                     wt = nodes[x, y].GetComponent<WorldTile>();
-                    wt.myNeighbours = getNeighbours(x, y, nodes.GetLength(0), nodes.GetLength(1), wt.walkable);
+                    wt.myNeighbours = SetNeigbour(x, y, nodes.GetLength(0), nodes.GetLength(1), wt.walkable);
                 }
             }
         }
     }
 
-    private List<WorldTile> getNeighbours(int x, int y, int width, int height, bool walkable)
+    private List<WorldTile> SetNeigbour(int x, int y, int width, int height, bool walkable)
     {
         List<WorldTile> myNeighbours = new List<WorldTile>();
         if (x < 0 || x >= width || y < 0 || y >= height)
