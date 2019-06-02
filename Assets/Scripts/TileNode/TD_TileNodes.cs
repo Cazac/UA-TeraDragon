@@ -3,46 +3,57 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+///////////////
+/// <summary>
+///     
+/// TD_TileNodes is used to spawn and keep track of all nodes attached to the tilemap sprites
+/// 
+/// </summary>
+///////////////
+
 public class TD_TileNodes : MonoBehaviour
 {
-    //did some stuff to the actions in npc so they can get closer to the Nodes without the glitchyness
-
-    //changed execution order for this and world builder
+    [Header("Main Grid / Tilemap")]
     public Grid gridBase;
-    float mapConstant;
-
-    [Header("List of node for tilemap")]
-
-
-    [Header("Selected node")]
-    [SerializeField]
-    private List<GameObject> selectedNode = new List<GameObject>();
-    public List<GameObject> SelectedNode { get => selectedNode; set => selectedNode = value; }
-    
-    //List of nodes before they are sorted
-    private List<GameObject> unsortedNodes;
-
-    //sorted 2d array of nodes, may contain null entries if the map is of an odd shape e.g. gaps
-    public GameObject[,] nodes;
-    public List<WorldTile> permanentSpawnPoints;
-    
     public Tilemap uniqueTilemap;
 
-    // nodes that can be placed;
+    [Header("Monster Prefabs")]
+    public GameObject enemyPrefab;
+
+    [Header("Tile Node Prefabs")]
     public GameObject[] TileNodes;
-    // this is not the best
+
+    //  TO DO   // - This is not the best?
+    [Header("Tile Sprites For Layers")]
     public Tile[] WalkableTiles;
     public Tile[] UnwalkableTiles;
     public Tile[] SpawnTiles;
 
+    //  TO DO   // - Legacy?
+    [Header("Selected Nodes")]
+    [SerializeField]
+    private List<GameObject> selectedNode = new List<GameObject>();
+    public List<GameObject> SelectedNode { get => selectedNode; set => selectedNode = value; }
+
+    //Sorted 2D array of nodes
+    public GameObject[,] nodes;
+
+    //List of nodes before they are sorted
+    private List<GameObject> unsortedNodes;
+    public List<WorldTile> permanentSpawnPoints;
+
+    //Auto set to size of the tilemap tiles
+    private float mapConstant;
+
     public PathsData pathData;
 
-    // Temporary variable
-    public GameObject enemyPrefab;
+    float timer = 0;
+    bool testBool = false;
+
+    //////////////////////////////////////////////////////////
 
     private void Awake()
     {
-        //Set List
         unsortedNodes = new List<GameObject>();
         mapConstant = gridBase.cellSize.x;
 
@@ -70,9 +81,6 @@ public class TD_TileNodes : MonoBehaviour
         
     }
 
-
-    float timer = 0;
-    bool testBool = false;
     private void Update()
     {
         ///////////  for testing  //////////////////////
@@ -92,8 +100,12 @@ public class TD_TileNodes : MonoBehaviour
         /////////////////////////////////////////////////
     }
 
-
-    public void generateNodes()
+    ///////////////
+    /// <summary>
+    /// Undocumented
+    /// </summary>
+    ///////////////
+    private void generateNodes()
     {
         uniqueTilemap.CompressBounds();
         BoundsInt bounds = uniqueTilemap.cellBounds;
@@ -106,8 +118,14 @@ public class TD_TileNodes : MonoBehaviour
         FillNodeTable();
         SetNeigbours();
     }
-    
-    void LoopThroughTileset()
+
+
+    ///////////////
+    /// <summary>
+    /// Undocumented
+    /// </summary>
+    ///////////////
+    private void LoopThroughTileset()
     {
         WorldTile wt; GameObject node;
         GameObject[] parentNodes = new GameObject[TileNodes.Length];
@@ -171,13 +189,19 @@ public class TD_TileNodes : MonoBehaviour
             GridX++;
         }
     }
-    
 
+
+    ///////////////
+    /// <summary>
+    /// Undocumented
+    /// </summary>
+    ///////////////
     void FillNodeTable()
     {
-        int minX, minY;
-        minX = nodes.GetLength(0); minY = nodes.GetLength(1);
+        int minX = nodes.GetLength(0);
+        int minY = nodes.GetLength(1);
         WorldTile wt;
+
         // makes sure grid is correctly alligned
         foreach (GameObject g in unsortedNodes)
         {
@@ -195,9 +219,16 @@ public class TD_TileNodes : MonoBehaviour
             wt.name = "NODE " + wt.gridX.ToString() + " : " + wt.gridY.ToString();
             nodes[wt.gridX, wt.gridY] = g;
         }
+
         unsortedNodes.Clear();
     }
 
+
+    ///////////////
+    /// <summary>
+    /// For each tile in nodes[] add the 4 surrounding tiles to WorldTile myNeighbours
+    /// </summary>
+    //////////////////
     private void SetNeigbours()
     {
         WorldTile wt;
@@ -214,6 +245,12 @@ public class TD_TileNodes : MonoBehaviour
         }
     }
 
+
+    ///////////////
+    /// <summary>
+    /// Grab 4 surrounding tiles (N, E, S, W) from all tilemaps and return them
+    /// </summary>
+    ///////////////
     private List<WorldTile> SetNeigbour(int x, int y, int width, int height, bool walkable)
     {
         List<WorldTile> myNeighbours = new List<WorldTile>();
@@ -242,7 +279,13 @@ public class TD_TileNodes : MonoBehaviour
         return myNeighbours;
     }
 
-    void AddNodeToList(List<WorldTile> list, int x, int y, bool currentWalkableState)
+
+    ///////////////
+    /// <summary>
+    /// Error check each node before adding to the WorldTile neighbours list
+    /// </summary>
+    ///////////////
+    private void AddNodeToList(List<WorldTile> list, int x, int y, bool currentWalkableState)
     {
         if (nodes[x, y] != null)
         {
