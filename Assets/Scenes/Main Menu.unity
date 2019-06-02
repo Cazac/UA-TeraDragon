@@ -373,8 +373,7 @@ MonoBehaviour:
   - {fileID: 38953395}
   - {fileID: 1492123318}
   - {fileID: 1381358230}
-  currentNode: {fileID: 0}
-  targetNode: {fileID: 0}
+  - {fileID: 751450204}
   currentNodeCounter: 0
   IncrementPerNode: 3
   currentIncrement: 0
@@ -831,6 +830,7 @@ Transform:
   - {fileID: 38953396}
   - {fileID: 1492123319}
   - {fileID: 1381358231}
+  - {fileID: 751450205}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -955,6 +955,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677804248}
   m_CullTransparentMesh: 0
+--- !u!1 &751450204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 751450205}
+  m_Layer: 0
+  m_Name: Camera Node 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &751450205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751450204}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 55.9, y: 37.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 667046502}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &797028724
 GameObject:
   m_ObjectHideFlags: 0

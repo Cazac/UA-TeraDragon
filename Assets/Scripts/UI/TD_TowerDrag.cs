@@ -4,79 +4,76 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+///////////////
+/// <summary>
+///     
+/// TD_TowerDrag is used to drag and drop all towers into the game onto TD_TowerDrop sockets
+/// 
+/// </summary>
+///////////////
+
 public class TD_TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    ///////////////
-    /// <summary>
-    ///     
-    /// TD_TowerDrag is used to drag and drop all towers into the game onto TD_TowerDrop sockets
-    /// 
-    /// </summary>
-    ///////////////
-
+   
     public GameObject towerPrefab;
-    public GameObject currentTower;
+    private GameObject currentTower;
 
-    public GameObject cursor;
-
-    ////////////////////////////////
-
-
+    // TO DO ???
     public int tileLayer;
 
-
-
     /////////////////////////////////////////////////////////////////
 
-    void Start()
-    {
 
-    }
-
-    /////////////////////////////////////////////////////////////////
-
+    ///////////////
+    /// <summary>
+    /// Undocumented
+    /// </summary>
+    ///////////////
     public void OnBeginDrag(PointerEventData eventData)
     {
-        print("Thing");
-
-        currentTower = Instantiate(towerPrefab);
-
-        print(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        //print("THOG");
-
-
-        //currentTower.transform.position = cursor.transform.position;
-        Vector3 test = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        test.z = 0;
-
-        currentTower.transform.position = test;
-
-
-
         //Check Money
         //Charge PLyaer
         //Spawn Tower UI
         //Get Reff To Tower
         //Attach to Cursor
-        //
 
+        print("Start Dragging At: " + Camera.main.ScreenToWorldPoint(Input.mousePosition));
+
+        currentTower = Instantiate(towerPrefab);
     }
 
-    public void OnEndDrag(PointerEventData eventData)
-    {
- 
-        
 
+    ///////////////
+    /// <summary>
+    /// Undocumented
+    /// </summary>
+    ///////////////
+    public void OnDrag(PointerEventData eventData)
+    {
+        //currentTower.transform.position = cursor.transform.position;
+        Vector3 test = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        test.z = 0;
+
+        currentTower.transform.position = test;
+    }
+
+
+    ///////////////
+    /// <summary>
+    /// Undocumented
+    /// </summary>
+    ///////////////
+    public void OnEndDrag(PointerEventData eventData)
+    {    
+        //Get current mouse raycast
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+
 
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
         {
 
+            //  TO DO   // - Will break on Next Pass
             string tileLayerParent = hit.collider.gameObject.transform.parent.gameObject.name;
 
             //  TO DO   // - HARD CODED ???
@@ -90,9 +87,6 @@ public class TD_TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 print("Destroy Tower");
                 Destroy(currentTower);
             }
-
-           
-
         }
         else
         {
@@ -101,30 +95,18 @@ public class TD_TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         }
 
 
-
         //Find Nearest Node
-
         //No Node Then Refund
-
-
         //if Node Call Tower Spawner on Node
-
-
-
-
-    }
-
-    /////////////////////////////////////////////////////////////////
-
-    public void SpawnTower()
-    {
-        //currentTower.transform.position
     }
 
 
-    /////////////////////////////////////////////////////////////////
-
-    internal void LogRaycasthitObject(String position, String type)
+    ///////////////
+    /// <summary>
+    /// Undocumented
+    /// </summary>
+    ///////////////
+    private void LogRaycasthitObject(String position, String type)
     {
         String logString = String.Format("Hit node spawing tower at position: {0}, is type of: {1}", position, type);
         Debug.Log(logString);
