@@ -70,15 +70,14 @@ public class TD_TileNodes : MonoBehaviour
         Debug.Log("Paths numbers: " + pathData.paths.Count);
         Debug.Log("Nodes length:" + nodes.GetLength(0) + " " + nodes.GetLength(1));
 
-
+        ///// for testing //////
         foreach (WorldTile wt in pathData.PathsByStart.Keys)
         {
             GameObject go = Instantiate(enemyPrefab, wt.transform.position, new Quaternion());
             EnemyScript enemy = go.GetComponent<EnemyScript>();
             enemy.waypoints = pathData.PathsByStart[wt][0];
-
         }
-        
+        /////////////////////////////////////////////////
     }
 
     private void Update()
@@ -102,7 +101,7 @@ public class TD_TileNodes : MonoBehaviour
 
     ///////////////
     /// <summary>
-    /// Undocumented
+    /// Creates the nodes, places them in a table and sets each nodes neighbours
     /// </summary>
     ///////////////
     private void generateNodes()
@@ -122,7 +121,7 @@ public class TD_TileNodes : MonoBehaviour
 
     ///////////////
     /// <summary>
-    /// Undocumented
+    /// Scans tileset for tiles and places the corresponding tile node when it enconters one.
     /// </summary>
     ///////////////
     private void LoopThroughTileset()
@@ -131,8 +130,7 @@ public class TD_TileNodes : MonoBehaviour
         GameObject[] parentNodes = new GameObject[TileNodes.Length];
         parentNodes[0] = new GameObject("Parent_WalkableTiles");
         parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
-
-
+        
         int GridX = 0; int GirdY = 0;
         for (int x = -(nodes.GetLength(0)) - 1; x < nodes.GetLength(0) + 1; x++)
         {
@@ -193,16 +191,17 @@ public class TD_TileNodes : MonoBehaviour
 
     ///////////////
     /// <summary>
-    /// Undocumented
+    /// Checks tilemap for size of node array then places existing nodes in their corresponding place in the table.
     /// </summary>
     ///////////////
-    void FillNodeTable()
+    private void FillNodeTable()
     {
         int minX = nodes.GetLength(0);
         int minY = nodes.GetLength(1);
         WorldTile wt;
 
-        // makes sure grid is correctly alligned
+        // makes sure grid is correctly alligned by finding
+        // the lowest value for x and y and making sure it is zero
         foreach (GameObject g in unsortedNodes)
         {
             wt = g.GetComponent<WorldTile>();
@@ -226,7 +225,7 @@ public class TD_TileNodes : MonoBehaviour
 
     ///////////////
     /// <summary>
-    /// For each tile in nodes[] add the 4 surrounding tiles to WorldTile myNeighbours
+    /// For each tile in nodes[] checks the 4 surrounding tiles for neighbours
     /// </summary>
     //////////////////
     private void SetNeigbours()
@@ -248,7 +247,7 @@ public class TD_TileNodes : MonoBehaviour
 
     ///////////////
     /// <summary>
-    /// Grab 4 surrounding tiles (N, E, S, W) from all tilemaps and return them
+    /// Grab 4 surrounding tiles from all tilemaps and checks if they are neigbours
     /// </summary>
     ///////////////
     private List<WorldTile> SetNeigbour(int x, int y, int width, int height, bool walkable)
@@ -282,7 +281,7 @@ public class TD_TileNodes : MonoBehaviour
 
     ///////////////
     /// <summary>
-    /// Error check each node before adding to the WorldTile neighbours list
+    /// Error check each node and walkable status before adding to the WorldTile neighbours list
     /// </summary>
     ///////////////
     private void AddNodeToList(List<WorldTile> list, int x, int y, bool currentWalkableState)
