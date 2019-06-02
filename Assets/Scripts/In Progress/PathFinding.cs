@@ -14,8 +14,8 @@ public static class PathFinding {
     /// Returns object contianing a list of paths, form shorst to longest, and 2 dictionaries of these paths
     /// with starting and ending tiles as keys
     /// </summary>
-    /// <param name="map"></param>
-    /// <param name="constSpawn"></param>
+    /// <param name="map">table of nodes with their neighbours set</param>
+    /// <param name="constSpawn">list of tiles that spawns enemies irrespective of location</param>
     /// <returns></returns>
     public static PathsData GetPaths( GameObject[,] map, List<WorldTile> constSpawn) {
 
@@ -31,7 +31,7 @@ public static class PathFinding {
         paths = new List<List<WorldTile>>();
         startingTiles = new List<WorldTile>();
 
-        // finds all rightmost paths tiles
+        // finds all rightmost path tiles
         for (int i = 0; i < map.GetLength(1); i++) {
             if (map[map.GetLength(0) -1, i] != null) {
                 if (map[map.GetLength(0)-1, i].GetComponent<WorldTile>().walkable) {
@@ -40,7 +40,7 @@ public static class PathFinding {
             }
         }
 
-        // finds all leftmost paths tile
+        // finds all leftmost path tiles
         for (int i = 0; i < map.GetLength(1); i++) {
             if (map[0, i] != null) {
                 if (map[0, i].GetComponent<WorldTile>().walkable) {
@@ -59,6 +59,10 @@ public static class PathFinding {
         return PathData;
     }
 
+    /// <summary>
+    /// Use depth first search to find all paths from start tiles to end tiles with limited backtrack.
+    /// </summary>
+    /// <param name="tile"></param>
     static void DFS(WorldTile tile) {
         List<WorldTile> list = new List<WorldTile>();
         DFS_Util(tile, list, tile.gridX);
@@ -73,6 +77,7 @@ public static class PathFinding {
                 nextfurthest = furthest;
                 if (worldTiles.Contains(tile))
                     continue;
+                // prevents to much backtracking
                 if (tile.gridX > furthest )
                     continue;
 
@@ -96,8 +101,13 @@ public static class PathFinding {
     
 }
 
-// class meant to send all data needed for the rest of the features. 
-// changes may occure as game is developped.
+/// <summary>
+/// Contains all paths for each starting tiles to each ending tile
+/// Paths can be retrived in 3 ways:
+///  - paths: all paths from shortest to longest
+///  - PathsByStarts: starting tiles as keys, retrieves all paths associated with key 
+///  - PathsByEnd: ending tiles as keys, retrieves all paths associated with key 
+/// </summary>
 public class PathsData {
 
     public List<List<WorldTile>> paths;
@@ -132,7 +142,7 @@ public class PathsData {
 
 }
 
-// Comparor thta sorts by List size
+// Comparor that sorts lists by size
 class ListSize : IComparer<List<WorldTile>> {
     public int Compare(List<WorldTile> l1, List<WorldTile> l2) {
         if(l1.Count > l2.Count) {
