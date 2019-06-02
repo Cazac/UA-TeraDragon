@@ -9,7 +9,7 @@ public class TD_TileNodes : MonoBehaviour
 
     //changed execution order for this and world builder
     public Grid gridBase;
-    float mapConstant;
+    float mapConstant = 11.2f;
     // 0 == Road, 1 == Ground
     List<Tilemap> tileMapFloorList;
     //floor of world

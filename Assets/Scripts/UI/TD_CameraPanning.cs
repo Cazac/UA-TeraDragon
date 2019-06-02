@@ -12,18 +12,21 @@ using UnityEngine;
 
 public class TD_CameraPanning : MonoBehaviour
 {
-    
+    [Header("Camera")]
     public GameObject movingCamera;
 
+    [Header("Position Nodes")]
     public GameObject[] CameraNodes;
 
     private GameObject currentNode;
     private GameObject targetNode;
 
-    public int currentNodeCounter = 0;
+    [Header("Speed")]
     public float IncrementPerNode = 3f;
-    public float currentIncrement = 0;
-    public float currentProgress = 0;
+
+    private int currentNodeCounter = 0;
+    private float currentIncrement = 0;
+    private float currentProgress = 0;
 
     /////////////////////////////////////////////////////////////////
 

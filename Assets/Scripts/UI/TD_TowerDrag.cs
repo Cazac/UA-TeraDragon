@@ -31,6 +31,7 @@ public class TD_TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     ///////////////
     public void OnBeginDrag(PointerEventData eventData)
     {
+        // TO DO ???
         //Check Money
         //Charge PLyaer
         //Spawn Tower UI
