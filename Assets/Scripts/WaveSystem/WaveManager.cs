@@ -7,6 +7,8 @@ namespace WaveSystem
 {
     public class WaveManager : MonoBehaviour
     {
+        public TD_TileNodes tiles;
+        
         // public GameObject[] spawnEnemies; //TODO: Reimplement this!
         public GameObject spawnSingleEnemy;
         public bool enableSpawning;
@@ -60,12 +62,17 @@ namespace WaveSystem
 
         private void Awake()
         {
-            currentWave = waves[0];
         }
 
 
         private void Start()
         {
+            for(int i = 0; i < waves.Length; i++)
+            {
+                waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
+            }
+
+            currentWave = waves[0];
             MakeParent();
 
             StartCoroutine(SpawnSingleEnemyPerWave());
@@ -132,12 +139,12 @@ namespace WaveSystem
                 {
                     currentWave.ParentGameobject = GameObject.Find(WAVE_PARENT_NAME);
 
-                    foreach (var node in currentWave.SpawnPositionByNodes)
+                    foreach (List<WorldTile> path in currentWave.Paths)
                     {
                         for (int i = 0; i < currentWave.NumberOfEnemyPerPos; i++)
                         {
-                            Instantiate(currentWave.EnemyPrefab, node.transform.position, Quaternion.identity, currentWave.ParentGameobject.transform);
-
+                            GameObject enemy = Instantiate(currentWave.EnemyPrefab, path[0].transform.position, Quaternion.identity, currentWave.ParentGameobject.transform);
+                            enemy.GetComponent<EnemyScript>().waypoints = path;
                             //Enumerator will return at this index, need to check if spawning option is still available
                             if (EnableSpawning)
                             {

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,8 +9,7 @@ public class Wave : ScriptableObject
     public GameObject[] EnemiesPrefab;
 
     //Add node to list will set value of SpawnPosition
-    public List<GameObject> SpawnPositionByNodes;
-    public List<Vector3> SpawnPosition;
+    public List<List<WorldTile>> Paths;
     [HideInInspector]
     public GameObject ParentGameobject;
     public int NumberOfEnemyPerPos; //Numver of enemy per position
@@ -18,41 +17,37 @@ public class Wave : ScriptableObject
     public float WaveTimer; //Timer for current wave
     public float SpawnRate; //How many enemy should be spawn after some time
 
-     /// <summary>
-     ///Constructor with parameter for spawning one type of enemy
+    /// <summary>
+    ///Constructor with parameter for spawning one type of enemy
     /// </summary>
     /// <param name="enemyPrefab">Enemy prefab that will be spawned</param>
-    /// <param name="spawnPosition">List of Vector3 positions that enemy will spawn respectively</param>
+    /// <param name="spawnPosition">List of List positions that the enemy will follow</param>
     /// <param name="parentGameobject">Parent to store spawned enemy</param>
     /// <param name="numberOfEnemyPerPos">Amount of enemy that can spawn in a specific position</param>
-    public Wave(GameObject enemyPrefab, List<Vector3> spawnPosition, GameObject parentGameobject, int numberOfEnemyPerPos)
+    public Wave(GameObject enemyPrefab, List<List<WorldTile>> paths, GameObject parentGameobject, int numberOfEnemyPerPos)
     {
         EnemyPrefab = enemyPrefab;
-        SpawnPosition = spawnPosition;
         ParentGameobject = parentGameobject;
         NumberOfEnemyPerPos = numberOfEnemyPerPos;
+        Paths = paths;
 
-        foreach (var node in SpawnPositionByNodes)
-            SpawnPosition.Add(node.transform.position);
     }
 
 
-     /// <summary>
-     ///Constructor with parameter for spawning more than 1 type of enemy
+    /// <summary>
+    ///Constructor with parameter for spawning more than 1 type of enemy
     /// </summary>
     /// <param name="enemyPrefabs">Enemy prefab that will be spawned</param>
-    /// <param name="spawnPosition">List of Vector3 positions that enemy will spawn respectively</param>
+    /// <param name="paths">List of List positions that the enemy will follow</param>
     /// <param name="parentGameobject">Parent to store spawned enemy</param>
     /// <param name="numberOfEnemyPerPos">Amount of enemy that can spawn in a specific position</param>
-    public Wave(GameObject[] enemyPrefabs, List<Vector3> spawnPosition, GameObject parentGameobject, int numberOfEnemyPerPos)
+    public Wave(GameObject[] enemyPrefabs, List<List<WorldTile>> paths, GameObject parentGameobject, int numberOfEnemyPerPos)
     {
         EnemiesPrefab = enemyPrefabs;
-        SpawnPosition = spawnPosition;
+        Paths = paths;
         ParentGameobject = parentGameobject;
         NumberOfEnemyPerPos = numberOfEnemyPerPos;
-
-        foreach (var node in SpawnPositionByNodes)
-            SpawnPosition.Add(node.transform.position);
+        
     }
     
 }

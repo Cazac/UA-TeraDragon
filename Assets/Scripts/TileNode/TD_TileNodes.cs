@@ -58,6 +58,7 @@ public class TD_TileNodes : MonoBehaviour
         mapConstant = gridBase.cellSize.x;
 
         generateNodes();
+        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
     }
 
     private void Start()
@@ -65,37 +66,36 @@ public class TD_TileNodes : MonoBehaviour
 
         //Start it all
         Debug.Log("permanentSpawnPoints: " + permanentSpawnPoints.Count);
-        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
 
         Debug.Log("Paths numbers: " + pathData.paths.Count);
         Debug.Log("Nodes length:" + nodes.GetLength(0) + " " + nodes.GetLength(1));
 
         ///// for testing //////
-        foreach (WorldTile wt in pathData.PathsByStart.Keys)
-        {
-            GameObject go = Instantiate(enemyPrefab, wt.transform.position, new Quaternion());
-            EnemyScript enemy = go.GetComponent<EnemyScript>();
-            enemy.waypoints = pathData.PathsByStart[wt][0];
-        }
+        //foreach (WorldTile wt in pathData.PathsByStart.Keys)
+        //{
+        //    GameObject go = Instantiate(enemyPrefab, wt.transform.position, new Quaternion());
+        //    EnemyScript enemy = go.GetComponent<EnemyScript>();
+        //    enemy.waypoints = pathData.PathsByStart[wt][0];
+        //}
         /////////////////////////////////////////////////
     }
 
     private void Update()
     {
         ///////////  for testing  //////////////////////
-        timer += Time.deltaTime;
-        if (timer > 1f && !testBool)
-        {
-            foreach (WorldTile wt2 in pathData.PathsByEnd.Keys)
-            {
+        //timer += Time.deltaTime;
+        //if (timer > 1f && !testBool)
+        //{
+        //    foreach (WorldTile wt2 in pathData.PathsByEnd.Keys)
+        //    {
 
-                GameObject go = Instantiate(enemyPrefab, pathData.PathsByEnd[wt2][0][0].transform.position, new Quaternion());
-                EnemyScript enemy = go.GetComponent<EnemyScript>();
-                enemy.waypoints = pathData.PathsByEnd[wt2][0];
+        //        GameObject go = Instantiate(enemyPrefab, pathData.PathsByEnd[wt2][0][0].transform.position, new Quaternion());
+        //        EnemyScript enemy = go.GetComponent<EnemyScript>();
+        //        enemy.waypoints = pathData.PathsByEnd[wt2][0];
 
-            }
-            testBool = true;
-        }
+        //    }
+        //    testBool = true;
+        //}
         /////////////////////////////////////////////////
     }
 
