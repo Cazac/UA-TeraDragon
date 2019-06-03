@@ -11,7 +11,7 @@ using UnityEngine.Tilemaps;
 /// </summary>
 ///////////////
 
-public class TD_TileNodes : MonoBehaviour
+public class TileNodes : MonoBehaviour
 {
     [Header("Main Grid / Tilemap")]
     public Grid gridBase;
@@ -21,7 +21,7 @@ public class TD_TileNodes : MonoBehaviour
     public GameObject enemyPrefab;
 
     [Header("Tile Node Prefabs")]
-    public GameObject[] TileNodes;
+    public GameObject[] TileNoesPrefabs;
 
     //  TO DO   // - This is not the best?
     [Header("Tile Sprites For Layers")]
@@ -64,7 +64,7 @@ public class TD_TileNodes : MonoBehaviour
     private void Start()
     {
 
-        
+
         //Start it all
         Debug.Log("permanentSpawnPoints: " + permanentSpawnPoints.Count);
 
@@ -111,7 +111,7 @@ public class TD_TileNodes : MonoBehaviour
         BoundsInt bounds = uniqueTilemap.cellBounds;
         int tableX = uniqueTilemap.cellBounds.size.x;
         int tableY = uniqueTilemap.cellBounds.size.y;
-        
+
         nodes = new GameObject[tableX, tableY];
 
         LoopThroughTileset();
@@ -128,10 +128,10 @@ public class TD_TileNodes : MonoBehaviour
     private void LoopThroughTileset()
     {
         WorldTile wt; GameObject node;
-        GameObject[] parentNodes = new GameObject[TileNodes.Length];
+        GameObject[] parentNodes = new GameObject[TileNoesPrefabs.Length];
         parentNodes[0] = new GameObject("Parent_WalkableTiles");
         parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
-        
+
         int GridX = 0; int GirdY = 0;
         for (int x = -(nodes.GetLength(0)) - 1; x < nodes.GetLength(0) + 1; x++)
         {
@@ -139,10 +139,10 @@ public class TD_TileNodes : MonoBehaviour
             {
                 TileBase tb = uniqueTilemap.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
 
-                if (tb != null )
+                if (tb != null)
                 {
                     Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
-                   
+
                     node = null;
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
@@ -151,7 +151,7 @@ public class TD_TileNodes : MonoBehaviour
                     {
                         if (name == tile.name)
                         {
-                            node = Instantiate(TileNodes[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                            node = Instantiate(TileNoesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
 
                             // checks if walkable tile is a spawning tile
                             foreach (Tile spTile in SpawnTiles)
@@ -168,7 +168,7 @@ public class TD_TileNodes : MonoBehaviour
                     {
                         if (name == tile.name)
                         {
-                            node = Instantiate(TileNodes[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                            node = Instantiate(TileNoesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
                         }
                     }
 
@@ -183,7 +183,7 @@ public class TD_TileNodes : MonoBehaviour
                         wt.gridX = GridX;
                         wt.gridY = GirdY;
                     }
-                    
+
                 }
                 GirdY++;
             }
@@ -300,5 +300,5 @@ public class TD_TileNodes : MonoBehaviour
         }
     }
 
-    
+
 }

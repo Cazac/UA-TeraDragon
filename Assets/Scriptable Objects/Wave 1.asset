@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63481b4f989909643afd3e309ea1f415, type: 3}
-  m_Name: Wave
+  m_Name: Wave 1
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 5961444709136488351, guid: 74bde71b71320e9428b1872582c53518,
+  EnemyPrefab: {fileID: 5954217775785473978, guid: 6ab4dc02809beb4489972762b75f5fc8,
     type: 3}
   EnemiesPrefab: []
-  SpawnPositionByNodes:
-  - {fileID: 5156625069933391446, guid: 4afde34a43f975546ac0d4e197d473c6, type: 3}
-  - {fileID: 1589860022452514571, guid: 1a2e205dacaa44a4e9caad8eb1098202, type: 3}
-  SpawnPosition: []
   ParentGameobject: {fileID: 0}
-  NumberOfEnemyPerPos: 2
+  NumberOfEnemyPerPos: 1
   TimeUntilSpawn: 3
-  WaveTimer: 10
-  SpawnRate: 3
+  WaveTimer: 15
+  SpawnRate: 2

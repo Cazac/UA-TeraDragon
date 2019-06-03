@@ -7,7 +7,7 @@ namespace WaveSystem
 {
     public class WaveManager : MonoBehaviour
     {
-        public TD_TileNodes tiles;
+        public TileNodes tiles;
         
         // public GameObject[] spawnEnemies; //TODO: Reimplement this!
         public GameObject spawnSingleEnemy;
