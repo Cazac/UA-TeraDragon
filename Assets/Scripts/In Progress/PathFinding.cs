@@ -86,7 +86,7 @@ public static class PathFinding {
                 if (worldTiles.Contains(tile))
                     continue;
                 // prevents to much backtracking
-                if (tile.gridX > furthest )
+                if (tile.gridX > furthest + 2 )
                     continue;
 
                 if(tile.gridX < nextfurthest) {
