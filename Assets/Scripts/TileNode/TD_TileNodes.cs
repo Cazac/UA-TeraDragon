@@ -139,20 +139,22 @@ public class TD_TileNodes : MonoBehaviour
             {
                 TileBase tb = uniqueTilemap.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
 
-                if (tb != null)
+                if (tb != null )
                 {
                     Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
-
-
+                   
                     node = null;
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
+                    // checks if tile is found in walkable
                     foreach (Tile tile in WalkableTiles)
                     {
                         if (name == tile.name)
                         {
                             node = Instantiate(TileNodes[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
-                            foreach(Tile spTile in SpawnTiles)
+
+                            // checks if walkable tile is a spawning tile
+                            foreach (Tile spTile in SpawnTiles)
                             {
                                 if (name == spTile.name)
                                 {
@@ -161,6 +163,7 @@ public class TD_TileNodes : MonoBehaviour
                             }
                         }
                     }
+                    // checks if tile is found in unwalkable
                     foreach (Tile tile in UnwalkableTiles)
                     {
                         if (name == tile.name)
