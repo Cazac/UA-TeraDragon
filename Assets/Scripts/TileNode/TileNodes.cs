@@ -61,10 +61,27 @@ public class TileNodes : MonoBehaviour
         pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
     }
 
+    public void EditorTestFunction()
+    {
+        permanentSpawnPoints = new List<WorldTile>();
+        for (int i = 0; i < parentNodes.Length; i++)
+        {
+            DestroyImmediate(parentNodes[i]);
+        }
+        Debug.Log("test function");
+        unsortedNodes = new List<GameObject>();
+        mapConstant = gridBase.cellSize.x;
+
+        generateNodes();
+        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
+        Debug.Log("permanentSpawnPoints: " + permanentSpawnPoints.Count);
+
+        Debug.Log("Paths numbers: " + pathData.paths.Count);
+        Debug.Log("Nodes length:" + nodes.GetLength(0) + " " + nodes.GetLength(1));
+    }
+
     private void Start()
     {
-
-
         //Start it all
         Debug.Log("permanentSpawnPoints: " + permanentSpawnPoints.Count);
 
@@ -119,7 +136,7 @@ public class TileNodes : MonoBehaviour
         SetNeigbours();
     }
 
-
+    GameObject[] parentNodes = new GameObject[0];
     ///////////////
     /// <summary>
     /// Scans tileset for tiles and places the corresponding tile node when it enconters one.
@@ -128,9 +145,11 @@ public class TileNodes : MonoBehaviour
     private void LoopThroughTileset()
     {
         WorldTile wt; GameObject node;
-        GameObject[] parentNodes = new GameObject[TileNoesPrefabs.Length];
+        parentNodes = new GameObject[TileNoesPrefabs.Length];
         parentNodes[0] = new GameObject("Parent_WalkableTiles");
+        parentNodes[0].transform.SetParent(transform);
         parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
+        parentNodes[1].transform.SetParent(transform);
 
         int GridX = 0; int GirdY = 0;
         for (int x = -(nodes.GetLength(0)) - 1; x < nodes.GetLength(0) + 1; x++)
@@ -298,6 +317,23 @@ public class TileNodes : MonoBehaviour
                 list.Add(wt);
             }
         }
+    }
+
+    public int SelectedPath = 0;
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        if(pathData.paths != null && SelectedPath >= 0 && SelectedPath < pathData.paths.Count)
+        {
+            for(int i = 0; i < pathData.paths[SelectedPath].Count-1; i++)
+            {
+                Gizmos.DrawLine(pathData.paths[SelectedPath][i].transform.position, pathData.paths[SelectedPath][i+1].transform.position);
+            }
+        }
+        if (SelectedPath < 0)
+            SelectedPath = 0;
+        else if (SelectedPath > pathData.paths.Count)
+            SelectedPath = pathData.paths.Count - 1;
     }
 
 
