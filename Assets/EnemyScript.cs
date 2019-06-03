@@ -41,6 +41,7 @@ public class EnemyScript : MonoBehaviour
     // This seems better because allows us to change speed and reverse it
     void Move()
     {
+        
         startPosition = waypoints[currentWaypoint].transform.position;
         endPosition = waypoints[currentWaypoint + 1].transform.position;
 

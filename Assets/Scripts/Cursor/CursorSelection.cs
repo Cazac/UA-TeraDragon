@@ -3,19 +3,27 @@ using System;
 using System.Collections;
 using WaveSystem;
 
+///////////////
+/// <summary>
+///     
+/// CursorSelection
+/// 
+/// </summary>
+///////////////
+
 public class CursorSelection : MonoBehaviour
 {
-
     [Header("The layer that floor tile is in")]
     public int tileLayer;
 
     private WaveManager waveManager;
+    private TD_TileNodes tileNodes;
 
-    private TD_TileNodes tD_TileNodes;
+    /////////////////////////////////////////////////////////////////
 
     private void Start() 
     {
-        tD_TileNodes = GameObject.FindObjectOfType<TD_TileNodes>();
+        tileNodes = GameObject.FindObjectOfType<TD_TileNodes>();
 
         //Bit shift tileLayer
         tileLayer = 1 << tileLayer;
@@ -27,17 +35,23 @@ public class CursorSelection : MonoBehaviour
 
     private void Update() => OnClickSelect();
 
+
+
+    ///////////////
     /// <summary>
-    ///Detects mouse click and performs raycast to a tile, if detected then turn that tile to the color black
+    /// Detects mouse click and performs raycast to a tile, if detected then turn that tile to the color black
     /// </summary>
-     ///<para>
-    ///Uses raycast from mouse position to collider
-    ///</para>
+    /// <para>
+    /// Uses raycast from mouse position to collider
+    /// </para>
+    ///////////////
     private void OnClickSelect()
     {
         if (!Input.GetMouseButtonDown(0))
+        {
             return;
-
+        }
+            
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
@@ -49,23 +63,24 @@ public class CursorSelection : MonoBehaviour
             hit.collider.gameObject.transform.parent.gameObject.name);
 
             //Store hit tile node in a list in tD_TileNodes
-            tD_TileNodes.SelectedNode.Add(hit.collider.gameObject);
+            tileNodes.SelectedNode.Add(hit.collider.gameObject);
 
             waveManager.NodeSpawnPosition.Add(hit.collider.gameObject.transform.position);
             Debug.Log("Node added");
         }
     }
 
+
+    ///////////////
     /// <summary>
-    ///Print position and type of object detected by raycast
-    ///</summary>
-     /// <param name="position">Transform position of gameobject</param>
-     /// <param name="type">Parent name of gameobject</param>
+    /// Print position and type of object detected by raycast
+    /// </summary>
+    ///     <param name="position">Transform position of gameobject</param>
+    ///     <param name="type">Parent name of gameobject</param>
+    ///////////////
     internal void LogRaycasthitObject(String position, String type)
     {
         String logString = String.Format("Hit node at position: {0}, is type of: {1}", position, type);
-    //    Debug.Log(logString);
+        //Debug.Log(logString);
     }
-
-    
 }

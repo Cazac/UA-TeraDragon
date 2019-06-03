@@ -64,6 +64,7 @@ public class TD_TileNodes : MonoBehaviour
     private void Start()
     {
 
+        
         //Start it all
         Debug.Log("permanentSpawnPoints: " + permanentSpawnPoints.Count);
 
