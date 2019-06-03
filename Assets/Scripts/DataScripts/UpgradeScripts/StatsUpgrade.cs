@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-[CreateAssetMenu(fileName = "NewStatsUpgrade", menuName = "ScriptableObjects/Stats Upgrade")]
+[CreateAssetMenu(fileName = "NewStatsUpgrade", menuName = "Scriptable Objects/Stats Upgrade")]
 public class StatsUpgrade : UpgradeNode {
 
     public float StatsMultiplier;

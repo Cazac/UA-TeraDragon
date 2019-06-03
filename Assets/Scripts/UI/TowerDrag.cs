@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +12,7 @@ using UnityEngine.EventSystems;
 /// </summary>
 ///////////////
 
-public class TD_TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
    
     public GameObject towerPrefab;

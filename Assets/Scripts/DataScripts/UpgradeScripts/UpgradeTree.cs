@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-[CreateAssetMenu(fileName = "NewUpgradeTree", menuName = "ScriptableObjects/Upgrade Tree")]
+[CreateAssetMenu(fileName = "NewUpgradeTree", menuName = "Scriptable Objects/Upgrade Tree")]
 public class UpgradeTree : ScriptableObject {
     
     public UpgradeNode[] tree;

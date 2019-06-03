@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ using UnityEngine;
 /// </summary>
 ///////////////
 
-public class TD_CameraPanning : MonoBehaviour
+public class CameraPanning : MonoBehaviour
 {
     [Header("Camera")]
     public GameObject movingCamera;

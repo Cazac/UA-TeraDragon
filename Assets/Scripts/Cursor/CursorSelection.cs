@@ -17,13 +17,13 @@ public class CursorSelection : MonoBehaviour
     public int tileLayer;
 
     private WaveManager waveManager;
-    private TD_TileNodes tileNodes;
+    private TileNodes tileNodes;
 
     /////////////////////////////////////////////////////////////////
 
     private void Start() 
     {
-        tileNodes = GameObject.FindObjectOfType<TD_TileNodes>();
+        tileNodes = GameObject.FindObjectOfType<TileNodes>();
 
         //Bit shift tileLayer
         tileLayer = 1 << tileLayer;
