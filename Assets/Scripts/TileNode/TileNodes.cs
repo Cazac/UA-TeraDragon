@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -44,78 +45,51 @@ public class TileNodes : MonoBehaviour
 
     //Auto set to size of the tilemap tiles
     private float mapConstant;
+    GameObject[] parentNodes = new GameObject[0];
+
+    // variables used for gizmo draw and 
+    public int SelectedPath = 0;
+    public List<WorldTile> selectedList;
+    public PathWrapper listWapper;
 
     public PathsData pathData;
 
-    float timer = 0;
-    bool testBool = false;
-
     //////////////////////////////////////////////////////////
 
-    private void Awake()
-    {
-        unsortedNodes = new List<GameObject>();
-        mapConstant = gridBase.cellSize.x;
+    private void Awake() { Editior_BuildTable(); }
+    private void Start() { }
+    private void Update() { }
 
-        generateNodes();
-        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
-    }
-
-    public void EditorTestFunction()
+    public void Editior_BuildTable()
     {
+     //   listWapper = new ListWapper();
         permanentSpawnPoints = new List<WorldTile>();
         for (int i = 0; i < parentNodes.Length; i++)
         {
             DestroyImmediate(parentNodes[i]);
         }
-        Debug.Log("test function");
+
         unsortedNodes = new List<GameObject>();
         mapConstant = gridBase.cellSize.x;
 
         generateNodes();
         pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
-        Debug.Log("permanentSpawnPoints: " + permanentSpawnPoints.Count);
 
-        Debug.Log("Paths numbers: " + pathData.paths.Count);
-        Debug.Log("Nodes length:" + nodes.GetLength(0) + " " + nodes.GetLength(1));
     }
 
-    private void Start()
+    public void Editor_SelectList()
     {
-        //Start it all
-        Debug.Log("permanentSpawnPoints: " + permanentSpawnPoints.Count);
-
-        Debug.Log("Paths numbers: " + pathData.paths.Count);
-        Debug.Log("Nodes length:" + nodes.GetLength(0) + " " + nodes.GetLength(1));
-
-        ///// for testing //////
-        //foreach (WorldTile wt in pathData.PathsByStart.Keys)
-        //{
-        //    GameObject go = Instantiate(enemyPrefab, wt.transform.position, new Quaternion());
-        //    EnemyScript enemy = go.GetComponent<EnemyScript>();
-        //    enemy.waypoints = pathData.PathsByStart[wt][0];
-        //}
-        /////////////////////////////////////////////////
+        listWapper = ScriptableObject.CreateInstance<PathWrapper>();
+        if (pathData != null && pathData.paths != null)
+        {
+            if (SelectedPath >= 0 && SelectedPath < pathData.paths.Count)
+            {
+                selectedList = pathData.paths[SelectedPath];
+                listWapper.selectedPath = selectedList;
+            }
+        }
     }
 
-    private void Update()
-    {
-        ///////////  for testing  //////////////////////
-        //timer += Time.deltaTime;
-        //if (timer > 1f && !testBool)
-        //{
-        //    foreach (WorldTile wt2 in pathData.PathsByEnd.Keys)
-        //    {
-
-        //        GameObject go = Instantiate(enemyPrefab, pathData.PathsByEnd[wt2][0][0].transform.position, new Quaternion());
-        //        EnemyScript enemy = go.GetComponent<EnemyScript>();
-        //        enemy.waypoints = pathData.PathsByEnd[wt2][0];
-
-        //    }
-        //    testBool = true;
-        //}
-        /////////////////////////////////////////////////
-    }
 
     ///////////////
     /// <summary>
@@ -136,7 +110,6 @@ public class TileNodes : MonoBehaviour
         SetNeigbours();
     }
 
-    GameObject[] parentNodes = new GameObject[0];
     ///////////////
     /// <summary>
     /// Scans tileset for tiles and places the corresponding tile node when it enconters one.
@@ -319,22 +292,24 @@ public class TileNodes : MonoBehaviour
         }
     }
 
-    public int SelectedPath = 0;
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        if(pathData.paths != null && SelectedPath >= 0 && SelectedPath < pathData.paths.Count)
+        if (pathData != null && pathData.paths != null)
         {
-            for(int i = 0; i < pathData.paths[SelectedPath].Count-1; i++)
+            if (SelectedPath >= 0 && SelectedPath < pathData.paths.Count)
             {
-                Gizmos.DrawLine(pathData.paths[SelectedPath][i].transform.position, pathData.paths[SelectedPath][i+1].transform.position);
+                for (int i = 0; i < pathData.paths[SelectedPath].Count - 1; i++)
+                {
+                    Gizmos.DrawLine(pathData.paths[SelectedPath][i].transform.position, pathData.paths[SelectedPath][i + 1].transform.position);
+                }
             }
+            if (SelectedPath < 0)
+                SelectedPath = 0;
+            else if (SelectedPath > pathData.paths.Count)
+                SelectedPath = pathData.paths.Count - 1;
         }
-        if (SelectedPath < 0)
-            SelectedPath = 0;
-        else if (SelectedPath > pathData.paths.Count)
-            SelectedPath = pathData.paths.Count - 1;
     }
-
+    
 
 }

@@ -11,9 +11,13 @@ public class TileNodesEditor : Editor
         DrawDefaultInspector();
 
         TileNodes myScript = (TileNodes) target;
-        if (GUILayout.Button("Build Object"))
+        if (GUILayout.Button("Build Map"))
         {
-            myScript.EditorTestFunction();
+            myScript.Editior_BuildTable();
+        }
+        if (GUILayout.Button("Get List"))
+        {
+            myScript.Editor_SelectList();
         }
     }
 }
