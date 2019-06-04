@@ -39,6 +39,7 @@ public static class PathFinding {
             {
                 if (map[map.GetLength(0) - 1, i].GetComponent<WorldTile>().walkable)
                 {
+                    //FIXME: Hard-coded right most tile
                     startingTiles.Add(map[map.GetLength(0) - 1, i].GetComponent<WorldTile>());
                 }
             }
@@ -55,6 +56,7 @@ public static class PathFinding {
                 }
             }
         }
+        
         startingTiles.AddRange(constSpawn);
 
         foreach (WorldTile wt in startingTiles)

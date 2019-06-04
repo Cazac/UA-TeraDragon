@@ -10,7 +10,7 @@ using UnityEngine.Tilemaps;
 /// 
 /// </summary>
 ///////////////
-
+[ExecuteInEditMode]
 public class TileNodes : MonoBehaviour
 {
     [Header("Main Grid / Tilemap")]
@@ -32,8 +32,8 @@ public class TileNodes : MonoBehaviour
     //  TO DO   // - Legacy?
     [Header("Selected Nodes")]
     [SerializeField]
-    private List<GameObject> selectedNode = new List<GameObject>();
-    public List<GameObject> SelectedNode { get => selectedNode; set => selectedNode = value; }
+    private List<GameObject> selectedNodes = new List<GameObject>();
+    public List<GameObject> SelectedNodes { get => selectedNodes; set => selectedNodes = value; }
 
     //Sorted 2D array of nodes
     public GameObject[,] nodes;
@@ -63,7 +63,7 @@ public class TileNodes : MonoBehaviour
 
     public void EditorTestFunction()
     {
-        permanentSpawnPoints = new List<WorldTile>();
+        // permanentSpawnPoints = new List<WorldTile>();
         for (int i = 0; i < parentNodes.Length; i++)
         {
             DestroyImmediate(parentNodes[i]);
@@ -88,6 +88,12 @@ public class TileNodes : MonoBehaviour
         Debug.Log("Paths numbers: " + pathData.paths.Count);
         Debug.Log("Nodes length:" + nodes.GetLength(0) + " " + nodes.GetLength(1));
 
+        if (SelectedNodes != null && SelectedNodes.Count > 0)
+            SetSpawnStartPosFromSelected(ref permanentSpawnPoints, ref selectedNodes);
+
+
+
+
         ///// for testing //////
         //foreach (WorldTile wt in pathData.PathsByStart.Keys)
         //{
@@ -100,6 +106,7 @@ public class TileNodes : MonoBehaviour
 
     private void Update()
     {
+
         ///////////  for testing  //////////////////////
         //timer += Time.deltaTime;
         //if (timer > 1f && !testBool)
@@ -323,18 +330,29 @@ public class TileNodes : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        if(pathData.paths != null && SelectedPath >= 0 && SelectedPath < pathData.paths.Count)
+        if (pathData.paths != null && SelectedPath >= 0 && SelectedPath < pathData.paths.Count)
         {
-            for(int i = 0; i < pathData.paths[SelectedPath].Count-1; i++)
+            for (int i = 0; i < pathData.paths.Count; i++)
             {
-                Gizmos.DrawLine(pathData.paths[SelectedPath][i].transform.position, pathData.paths[SelectedPath][i+1].transform.position);
+                for (int j = 0; j < pathData.paths[i].Count - 1; j++)
+                {
+                    Gizmos.DrawLine(pathData.paths[i][j].transform.position, pathData.paths[i][j + 1].transform.position);
+                }
             }
         }
+
         if (SelectedPath < 0)
             SelectedPath = 0;
         else if (SelectedPath > pathData.paths.Count)
             SelectedPath = pathData.paths.Count - 1;
     }
 
+    public void SetSpawnStartPosFromSelected(ref List<WorldTile> permanentSpawnPoints, ref List<GameObject> selectedNodes)
+    {
+        foreach (GameObject selectedNode in selectedNodes)
+        {
+            permanentSpawnPoints.Add(selectedNode.GetComponent<WorldTile>());
+        }
+    }
 
 }

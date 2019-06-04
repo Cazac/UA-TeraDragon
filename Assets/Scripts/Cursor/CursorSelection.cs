@@ -10,7 +10,7 @@ using WaveSystem;
 /// 
 /// </summary>
 ///////////////
-
+[ExecuteInEditMode]
 public class CursorSelection : MonoBehaviour
 {
     [Header("The layer that floor tile is in")]
@@ -63,7 +63,7 @@ public class CursorSelection : MonoBehaviour
             hit.collider.gameObject.transform.parent.gameObject.name);
 
             //Store hit tile node in a list in tD_TileNodes
-            tileNodes.SelectedNode.Add(hit.collider.gameObject);
+            tileNodes.SelectedNodes.Add(hit.collider.gameObject);
 
             waveManager.NodeSpawnPosition.Add(hit.collider.gameObject.transform.position);
             Debug.Log("Node added");

@@ -8,7 +8,7 @@ namespace WaveSystem
     public class WaveManager : MonoBehaviour
     {
         public TileNodes tiles;
-        
+
         // public GameObject[] spawnEnemies; //TODO: Reimplement this!
         public GameObject spawnSingleEnemy;
         public bool enableSpawning;
@@ -33,6 +33,9 @@ namespace WaveSystem
         private Timer currentTimer;
         private int waveIndex = 0;
 
+        private TileNodes tileNodes;
+
+        private CursorSelection cursorSelection;
         public int WaveIndex
         {
             get => waveIndex;
@@ -67,16 +70,31 @@ namespace WaveSystem
 
         private void Start()
         {
-            for (int i = 0; i < waves.Length; i++)
+            tileNodes = GameObject.FindObjectOfType<TileNodes>();
+            //Cached CursorSelection
+            cursorSelection = GameObject.FindObjectOfType<CursorSelection>();
+
+            // for (int i = 0; i < waves.Length; i++)
+            // {
+            //     if (i >= tiles.pathData.paths.Count)
+            //     {
+            //         waves[i].Paths = new List<List<WorldTile>>()
+            //         {
+            //             tiles.pathData.paths[tiles.pathData.paths.Count-1]
+            //         };
+            //     }
+            //     else
+            //     {
+            //         waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
+            //     }
+            // }
+
+            for(int i = 0; i < tiles.pathData.paths.Count; i++)
             {
-                if (i >= tiles.pathData.paths.Count)
-                {
-                    waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[tiles.pathData.paths.Count-1] };
-                }
-                else
-                {
-                    waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
-                }
+                waves[i].Paths = new List<List<WorldTile>>()
+                    {
+                        tiles.pathData.paths[i]
+                    };
             }
 
             currentWave = waves[0];
@@ -198,7 +216,13 @@ namespace WaveSystem
             }
             return false;
         }
+
+        public void WaveStartPosSelection()
+        {
+        }
+
     }
+
 
 
     /// <summary>
