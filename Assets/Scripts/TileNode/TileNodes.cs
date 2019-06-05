@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using System.IO;
 using UnityEngine.Tilemaps;
 
 ///////////////
@@ -21,7 +24,7 @@ public class TileNodes : MonoBehaviour
     public GameObject enemyPrefab;
 
     [Header("Tile Node Prefabs")]
-    public GameObject[] TileNoesPrefabs;
+    public GameObject[] TileNodesPrefabs;
 
     //  TO DO   // - This is not the best?
     [Header("Tile Sprites For Layers")]
@@ -29,76 +32,75 @@ public class TileNodes : MonoBehaviour
     public Tile[] UnwalkableTiles;
     public Tile[] SpawnTiles;
 
-    //  TO DO   // - Legacy?
+    //  TO DO   // - Used for 
     [Header("Selected Nodes")]
     [SerializeField]
     private List<GameObject> selectedNode = new List<GameObject>();
     public List<GameObject> SelectedNode { get => selectedNode; set => selectedNode = value; }
 
-    //Sorted 2D array of nodes
+    // Sorted 2D array of nodes
     public GameObject[,] nodes;
 
-    //List of nodes before they are sorted
+    // List of nodes before they are sorted
     private List<GameObject> unsortedNodes;
-    public List<WorldTile> permanentSpawnPoints;
+    private List<WorldTile> permanentSpawnPoints;
 
-    //Auto set to size of the tilemap tiles
+    // Auto set to size of the tilemap tiles
     private float mapConstant;
 
-    public PathsData pathData;
+    [SerializeField] // necessary to have the nodes saved in and out of play
+    GameObject[] parentNodes = new GameObject[0];
 
-    float timer = 0;
-    bool testBool = false;
+    [Header("Editor variables")]
+    // variables used for gizmo draw and 
+    public int SelectedPath = 0;
+    public List<WorldTile> selectedList;
+    public PathsData pathData;
 
     //////////////////////////////////////////////////////////
 
-    private void Awake()
+    private void Awake() { }
+    private void Start() { }
+    private void Update() { }
+
+    public void Editior_BuildTable()
     {
+        //   listWapper = new ListWapper();
+        permanentSpawnPoints = new List<WorldTile>();
+        //  
+        for (int i = 0; i < parentNodes.Length; i++)
+        {
+            if (parentNodes[i] != null)
+            {
+                DestroyImmediate(parentNodes[i]);
+            }
+        }
+
         unsortedNodes = new List<GameObject>();
         mapConstant = gridBase.cellSize.x;
 
         generateNodes();
         pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
+
     }
 
-    private void Start()
+
+    ///////////////
+    /// <summary>
+    /// Allows you to see the list that is currently selected
+    /// </summary>
+    ///////////////
+    public void Editor_SelectList()
     {
-
-
-        //Start it all
-        Debug.Log("permanentSpawnPoints: " + permanentSpawnPoints.Count);
-
-        Debug.Log("Paths numbers: " + pathData.paths.Count);
-        Debug.Log("Nodes length:" + nodes.GetLength(0) + " " + nodes.GetLength(1));
-
-        ///// for testing //////
-        //foreach (WorldTile wt in pathData.PathsByStart.Keys)
-        //{
-        //    GameObject go = Instantiate(enemyPrefab, wt.transform.position, new Quaternion());
-        //    EnemyScript enemy = go.GetComponent<EnemyScript>();
-        //    enemy.waypoints = pathData.PathsByStart[wt][0];
-        //}
-        /////////////////////////////////////////////////
+        if (pathData != null && pathData.paths != null)
+        {
+            if (SelectedPath >= 0 && SelectedPath < pathData.paths.Count)
+            {
+                selectedList = pathData.paths[SelectedPath];
+            }
+        }
     }
 
-    private void Update()
-    {
-        ///////////  for testing  //////////////////////
-        //timer += Time.deltaTime;
-        //if (timer > 1f && !testBool)
-        //{
-        //    foreach (WorldTile wt2 in pathData.PathsByEnd.Keys)
-        //    {
-
-        //        GameObject go = Instantiate(enemyPrefab, pathData.PathsByEnd[wt2][0][0].transform.position, new Quaternion());
-        //        EnemyScript enemy = go.GetComponent<EnemyScript>();
-        //        enemy.waypoints = pathData.PathsByEnd[wt2][0];
-
-        //    }
-        //    testBool = true;
-        //}
-        /////////////////////////////////////////////////
-    }
 
     ///////////////
     /// <summary>
@@ -114,11 +116,13 @@ public class TileNodes : MonoBehaviour
 
         nodes = new GameObject[tableX, tableY];
 
+        // create nodes
         LoopThroughTileset();
+        // places these nodes in a table
         FillNodeTable();
+        // give each node their neighbours
         SetNeigbours();
     }
-
 
     ///////////////
     /// <summary>
@@ -128,9 +132,13 @@ public class TileNodes : MonoBehaviour
     private void LoopThroughTileset()
     {
         WorldTile wt; GameObject node;
-        GameObject[] parentNodes = new GameObject[TileNoesPrefabs.Length];
+        parentNodes = new GameObject[TileNodesPrefabs.Length];
+
         parentNodes[0] = new GameObject("Parent_WalkableTiles");
+        parentNodes[0].transform.SetParent(transform);
+
         parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
+        parentNodes[1].transform.SetParent(transform);
 
         int GridX = 0; int GirdY = 0;
         for (int x = -(nodes.GetLength(0)) - 1; x < nodes.GetLength(0) + 1; x++)
@@ -151,16 +159,17 @@ public class TileNodes : MonoBehaviour
                     {
                         if (name == tile.name)
                         {
-                            node = Instantiate(TileNoesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
 
-                            // checks if walkable tile is a spawning tile
-                            foreach (Tile spTile in SpawnTiles)
-                            {
-                                if (name == spTile.name)
-                                {
-                                    permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
-                                }
-                            }
+
+                        }
+                    }// checks if walkable tile is a spawning tile
+                    foreach (Tile spTile in SpawnTiles)
+                    {
+                        if (name == spTile.name)
+                        {
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                            permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
                         }
                     }
                     // checks if tile is found in unwalkable
@@ -168,7 +177,7 @@ public class TileNodes : MonoBehaviour
                     {
                         if (name == tile.name)
                         {
-                            node = Instantiate(TileNoesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                            node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
                         }
                     }
 
@@ -297,6 +306,28 @@ public class TileNodes : MonoBehaviour
             {
                 list.Add(wt);
             }
+        }
+    }
+
+
+
+    private void OnDrawGizmos()
+    {
+        // draws the lines that represent the path currently selected
+        Gizmos.color = Color.blue;
+        if (pathData != null && pathData.paths != null)
+        {
+            if (SelectedPath >= 0 && SelectedPath < pathData.paths.Count)
+            {
+                for (int i = 0; i < pathData.paths[SelectedPath].Count - 1; i++)
+                {
+                    Gizmos.DrawLine(pathData.paths[SelectedPath][i].transform.position, pathData.paths[SelectedPath][i + 1].transform.position);
+                }
+            }
+            if (SelectedPath < 0)
+                SelectedPath = 0;
+            else if (SelectedPath >= (pathData.paths.Count))
+                SelectedPath = pathData.paths.Count - 1;
         }
     }
 

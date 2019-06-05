@@ -23,6 +23,7 @@ public class WaveSystemTimer : MonoBehaviour, WaveInterface
 
     private void Update() 
     {
-        UIConnection(waveManager);
+        if (waveManager != null)
+            UIConnection(waveManager);
     }
 }
