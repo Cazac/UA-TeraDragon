@@ -14,6 +14,7 @@ public class TileNodesEditor : Editor
         if (GUILayout.Button("Build Map"))
         {
             myScript.Editior_BuildTable();
+            
         }
         if (GUILayout.Button("Get List"))
         {

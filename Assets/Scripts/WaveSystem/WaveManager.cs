@@ -67,46 +67,48 @@ namespace WaveSystem
 
         private void Start()
         {
-            for (int i = 0; i < waves.Length; i++)
-            {
-                if (i >= tiles.pathData.paths.Count)
-                {
-                    waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[tiles.pathData.paths.Count-1] };
-                }
-                else
-                {
-                    waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
-                }
-            }
+            // // for testing purposes
+            // // gives waves paths form shortest to longest
+            //for (int i = 0; i < waves.Length; i++)
+            //{
+            //    if (i >= tiles.pathData.paths.Count)
+            //    {
+            //     //   waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[tiles.pathData.paths.Count-1] };
+            //    }
+            //    else
+            //    {
+            //     //   waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
+            //    }
+            //}
 
-            currentWave = waves[0];
-            MakeParent();
+            //currentWave = waves[0];
+            //MakeParent();
 
-            StartCoroutine(SpawnSingleEnemyPerWave());
+            //StartCoroutine(SpawnSingleEnemyPerWave());
         }
 
         private void Update()
         {
             //Create new timer object for current wave 
-            if (EnableSpawning == true && currentTimer == null)
-            {
-                InstantiateNewTimer(currentWave.TimeUntilSpawn, currentWave.WaveTimer, ref currentTimer);
-            }
+            //if (EnableSpawning == true && currentTimer == null)
+            //{
+            //    InstantiateNewTimer(currentWave.TimeUntilSpawn, currentWave.WaveTimer, ref currentTimer);
+            //}
 
-            //If timer for a wave hits 0, turn off spawning
-            if (currentTimer != null && EnableSpawning == true)
-            {
-                if (currentTimer.WaveCountdown())
-                    EnableSpawning = false;
-            }
+            ////If timer for a wave hits 0, turn off spawning
+            //if (currentTimer != null && EnableSpawning == true)
+            //{
+            //    if (currentTimer.WaveCountdown())
+            //        EnableSpawning = false;
+            //}
 
 
-            //If timer between wave hits 0, turn on spawning
-            if (currentTimer != null && EnableSpawning == false && !AllWaveCompleted())
-            {
-                if (currentTimer.NextWaveCountdown())
-                    EnableSpawning = true;
-            }
+            ////If timer between wave hits 0, turn on spawning
+            //if (currentTimer != null && EnableSpawning == false && !AllWaveCompleted())
+            //{
+            //    if (currentTimer.NextWaveCountdown())
+            //        EnableSpawning = true;
+            //}
         }
 
 

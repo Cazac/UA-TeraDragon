@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using System.IO;
 using UnityEngine.Tilemaps;
 
 ///////////////
@@ -22,7 +24,7 @@ public class TileNodes : MonoBehaviour
     public GameObject enemyPrefab;
 
     [Header("Tile Node Prefabs")]
-    public GameObject[] TileNoesPrefabs;
+    public GameObject[] TileNodesPrefabs;
 
     //  TO DO   // - This is not the best?
     [Header("Tile Sprites For Layers")]
@@ -30,33 +32,34 @@ public class TileNodes : MonoBehaviour
     public Tile[] UnwalkableTiles;
     public Tile[] SpawnTiles;
 
-    //  TO DO   // - Legacy?
+    //  TO DO   // - Used for 
     [Header("Selected Nodes")]
     [SerializeField]
     private List<GameObject> selectedNode = new List<GameObject>();
     public List<GameObject> SelectedNode { get => selectedNode; set => selectedNode = value; }
 
-    //Sorted 2D array of nodes
+    // Sorted 2D array of nodes
     public GameObject[,] nodes;
 
-    //List of nodes before they are sorted
+    // List of nodes before they are sorted
     private List<GameObject> unsortedNodes;
-    public List<WorldTile> permanentSpawnPoints;
+    private List<WorldTile> permanentSpawnPoints;
 
-    //Auto set to size of the tilemap tiles
+    // Auto set to size of the tilemap tiles
     private float mapConstant;
+
+    [SerializeField] // necessary to have the nodes saved in and out of play
     GameObject[] parentNodes = new GameObject[0];
 
+    [Header("Editor variables")]
     // variables used for gizmo draw and 
     public int SelectedPath = 0;
     public List<WorldTile> selectedList;
-    public PathWrapper listWapper;
-
     public PathsData pathData;
 
     //////////////////////////////////////////////////////////
 
-    private void Awake() { Editior_BuildTable(); }
+    private void Awake() { }
     private void Start() { }
     private void Update() { }
 
@@ -64,9 +67,12 @@ public class TileNodes : MonoBehaviour
     {
      //   listWapper = new ListWapper();
         permanentSpawnPoints = new List<WorldTile>();
+        //  
         for (int i = 0; i < parentNodes.Length; i++)
         {
-            DestroyImmediate(parentNodes[i]);
+            if(parentNodes[i] != null){
+                DestroyImmediate(parentNodes[i]);
+            }
         }
 
         unsortedNodes = new List<GameObject>();
@@ -74,18 +80,22 @@ public class TileNodes : MonoBehaviour
 
         generateNodes();
         pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
-
+        
     }
 
+    
+    ///////////////
+    /// <summary>
+    /// Allows you to see the list that is currently selected
+    /// </summary>
+    ///////////////
     public void Editor_SelectList()
     {
-        listWapper = ScriptableObject.CreateInstance<PathWrapper>();
         if (pathData != null && pathData.paths != null)
         {
             if (SelectedPath >= 0 && SelectedPath < pathData.paths.Count)
             {
                 selectedList = pathData.paths[SelectedPath];
-                listWapper.selectedPath = selectedList;
             }
         }
     }
@@ -105,8 +115,11 @@ public class TileNodes : MonoBehaviour
 
         nodes = new GameObject[tableX, tableY];
 
+        // create nodes
         LoopThroughTileset();
+        // places these nodes in a table
         FillNodeTable();
+        // give each node their neighbours
         SetNeigbours();
     }
 
@@ -118,9 +131,11 @@ public class TileNodes : MonoBehaviour
     private void LoopThroughTileset()
     {
         WorldTile wt; GameObject node;
-        parentNodes = new GameObject[TileNoesPrefabs.Length];
+        parentNodes = new GameObject[TileNodesPrefabs.Length];
+
         parentNodes[0] = new GameObject("Parent_WalkableTiles");
         parentNodes[0].transform.SetParent(transform);
+
         parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
         parentNodes[1].transform.SetParent(transform);
 
@@ -143,7 +158,7 @@ public class TileNodes : MonoBehaviour
                     {
                         if (name == tile.name)
                         {
-                            node = Instantiate(TileNoesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
 
                             // checks if walkable tile is a spawning tile
                             foreach (Tile spTile in SpawnTiles)
@@ -160,7 +175,7 @@ public class TileNodes : MonoBehaviour
                     {
                         if (name == tile.name)
                         {
-                            node = Instantiate(TileNoesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                            node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
                         }
                     }
 
@@ -292,8 +307,11 @@ public class TileNodes : MonoBehaviour
         }
     }
 
+
+    
     private void OnDrawGizmos()
     {
+        // draws the lines that represent the path currently selected
         Gizmos.color = Color.blue;
         if (pathData != null && pathData.paths != null)
         {
@@ -306,7 +324,7 @@ public class TileNodes : MonoBehaviour
             }
             if (SelectedPath < 0)
                 SelectedPath = 0;
-            else if (SelectedPath > pathData.paths.Count)
+            else if (SelectedPath >= (pathData.paths.Count))
                 SelectedPath = pathData.paths.Count - 1;
         }
     }
