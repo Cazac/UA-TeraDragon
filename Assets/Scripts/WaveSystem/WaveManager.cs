@@ -74,20 +74,20 @@ namespace WaveSystem
             //Cached CursorSelection
             cursorSelection = GameObject.FindObjectOfType<CursorSelection>();
 
-            // for (int i = 0; i < waves.Length; i++)
-            // {
-            //     if (i >= tiles.pathData.paths.Count)
-            //     {
-            //         waves[i].Paths = new List<List<WorldTile>>()
-            //         {
-            //             tiles.pathData.paths[tiles.pathData.paths.Count-1]
-            //         };
-            //     }
-            //     else
-            //     {
-            //         waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
-            //     }
-            // }
+            for (int i = 0; i < waves.Length; i++)
+            {
+                if (i >= tiles.pathData.paths.Count)
+                {
+                    waves[i].Paths = new List<List<WorldTile>>()
+                    {
+                        tiles.pathData.paths[tiles.pathData.paths.Count-1]
+                    };
+                }
+                else
+                {
+                    waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
+                }
+            }
 
             for(int i = 0; i < tiles.pathData.paths.Count; i++)
             {

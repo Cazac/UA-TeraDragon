@@ -39,7 +39,6 @@ public static class PathFinding {
             {
                 if (map[map.GetLength(0) - 1, i].GetComponent<WorldTile>().walkable)
                 {
-                    //FIXME: Hard-coded right most tile
                     startingTiles.Add(map[map.GetLength(0) - 1, i].GetComponent<WorldTile>());
                 }
             }
@@ -56,7 +55,6 @@ public static class PathFinding {
                 }
             }
         }
-        
         startingTiles.AddRange(constSpawn);
 
         foreach (WorldTile wt in startingTiles)
@@ -64,7 +62,7 @@ public static class PathFinding {
             DFS(wt);
         }
 
-        PathsData PathData = new PathsData(paths);
+        PathsData PathData = new PathsData(paths);  
         
         return PathData;
     }
@@ -155,8 +153,6 @@ public class PathsData {
             }
         }
     }
-
-
 }
 
 // Comparor that sorts lists by size
