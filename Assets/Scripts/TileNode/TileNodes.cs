@@ -65,12 +65,13 @@ public class TileNodes : MonoBehaviour
 
     public void Editior_BuildTable()
     {
-     //   listWapper = new ListWapper();
+        //   listWapper = new ListWapper();
         permanentSpawnPoints = new List<WorldTile>();
         //  
         for (int i = 0; i < parentNodes.Length; i++)
         {
-            if(parentNodes[i] != null){
+            if (parentNodes[i] != null)
+            {
                 DestroyImmediate(parentNodes[i]);
             }
         }
@@ -80,10 +81,10 @@ public class TileNodes : MonoBehaviour
 
         generateNodes();
         pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
-        
+
     }
 
-    
+
     ///////////////
     /// <summary>
     /// Allows you to see the list that is currently selected
@@ -160,14 +161,15 @@ public class TileNodes : MonoBehaviour
                         {
                             node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
 
-                            // checks if walkable tile is a spawning tile
-                            foreach (Tile spTile in SpawnTiles)
-                            {
-                                if (name == spTile.name)
-                                {
-                                    permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
-                                }
-                            }
+
+                        }
+                    }// checks if walkable tile is a spawning tile
+                    foreach (Tile spTile in SpawnTiles)
+                    {
+                        if (name == spTile.name)
+                        {
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                            permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
                         }
                     }
                     // checks if tile is found in unwalkable
@@ -308,7 +310,7 @@ public class TileNodes : MonoBehaviour
     }
 
 
-    
+
     private void OnDrawGizmos()
     {
         // draws the lines that represent the path currently selected
@@ -328,6 +330,6 @@ public class TileNodes : MonoBehaviour
                 SelectedPath = pathData.paths.Count - 1;
         }
     }
-    
+
 
 }
