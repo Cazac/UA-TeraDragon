@@ -80,7 +80,7 @@ public class TileNodes : MonoBehaviour
         mapConstant = gridBase.cellSize.x;
 
         generateNodes();
-        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
+        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints, maxGridX);
 
     }
 
@@ -152,6 +152,7 @@ public class TileNodes : MonoBehaviour
                     Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
 
                     node = null;
+
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
                     // checks if tile is found in walkable
@@ -183,7 +184,7 @@ public class TileNodes : MonoBehaviour
 
                     if (node == null)
                     {
-                        Debug.LogError(name + " is not registered.");
+                        //Debug.LogError(name + " is not registered.");
                     }
                     else
                     {
@@ -192,7 +193,6 @@ public class TileNodes : MonoBehaviour
                         wt.gridX = GridX;
                         wt.gridY = GirdY;
                     }
-
                 }
                 GirdY++;
             }
@@ -213,6 +213,8 @@ public class TileNodes : MonoBehaviour
         int minY = nodes.GetLength(1);
         WorldTile wt;
 
+        // temp variable
+
         // makes sure grid is correctly alligned by finding
         // the lowest value for x and y and making sure it is zero
         foreach (GameObject g in unsortedNodes)
@@ -222,6 +224,7 @@ public class TileNodes : MonoBehaviour
                 minX = wt.gridX;
             if (wt.gridY < minY)
                 minY = wt.gridY;
+
         }
         foreach (GameObject g in unsortedNodes)
         {
@@ -230,10 +233,13 @@ public class TileNodes : MonoBehaviour
             wt.gridY -= minY;
             wt.name = "NODE " + wt.gridX.ToString() + " : " + wt.gridY.ToString();
             nodes[wt.gridX, wt.gridY] = g;
+            if (wt.gridX > maxGridX)
+                maxGridX = wt.gridX;
         }
-
+        Debug.Log("Max Grid:" + maxGridX);
         unsortedNodes.Clear();
     }
+    int maxGridX = 0;
 
 
     ///////////////

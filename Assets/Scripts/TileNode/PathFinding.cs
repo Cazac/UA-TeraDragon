@@ -19,7 +19,22 @@ public static class PathFinding {
     /// <returns></returns>
     public static PathsData GetPaths(GameObject[,] map, List<WorldTile> constSpawn)
     {
+        return GetPaths( map, constSpawn, map.GetLength(0) - 1);
+    }
 
+    /// <summary>
+    /// Returns object contianing a list of paths, form shorst to longest, and 2 dictionaries of these paths
+    /// with starting and ending tiles as keys
+    /// </summary>
+    /// <param name="map">table of nodes with their neighbours set</param>
+    /// <param name="constSpawn">list of tiles that spawns enemies irrespective of location</param>
+    /// <param name="startingColumn">column where we search fo starting tiles. First colum is 0</param>
+    /// <returns></returns>
+    public static PathsData GetPaths(GameObject[,] map, List<WorldTile> constSpawn, int startingColumn)
+    {
+        if(startingColumn <= 0 || map.GetLength(0) <= startingColumn){
+            return new PathsData(new List<List<WorldTile>>() );
+        }
         /*  Steps:
          *  Find End tiles (all paths tiles on most leftward column)
          *  Find starts (all paths tiles on most rightward column
@@ -35,11 +50,11 @@ public static class PathFinding {
         // finds all rightmost paths tiles
         for (int i = 0; i < map.GetLength(1); i++)
         {
-            if (map[map.GetLength(0) - 1, i] != null)
+            if (map[startingColumn, i] != null)
             {
-                if (map[map.GetLength(0) - 1, i].GetComponent<WorldTile>().walkable)
+                if (map[startingColumn, i].GetComponent<WorldTile>().walkable)
                 {
-                    startingTiles.Add(map[map.GetLength(0) - 1, i].GetComponent<WorldTile>());
+                    startingTiles.Add(map[startingColumn, i].GetComponent<WorldTile>());
                 }
             }
         }
@@ -56,23 +71,24 @@ public static class PathFinding {
             }
         }
 
+        int dfsLimit = Mathf.Max(0, startingColumn - 2);
         foreach (WorldTile wt in startingTiles)
         {
-            DFS(wt);
+            DFS(wt, dfsLimit);
         }
-
         PathsData PathData = new PathsData(paths);
         
         return PathData;
     }
 
+
     /// <summary>
     /// Use depth first search to find all paths from start tiles to end tiles with limited ability to go right.
     /// </summary>
     /// <param name="tile"></param>
-    static void DFS(WorldTile tile) {
+    static void DFS(WorldTile tile, int limit) {
         List<WorldTile> list = new List<WorldTile>();
-        DFS_Util(tile, list, tile.gridX);
+        DFS_Util(tile, list, limit);
     }
 
     // Actual function, is recursive
