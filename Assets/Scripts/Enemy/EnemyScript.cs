@@ -26,13 +26,13 @@ public class EnemyScript : MonoBehaviour
             speed = enemyData.BaseSpeed;
         }
         if (enemyData != null)
-         Debug.Log(enemyData.name + " has spawned");
+            Debug.Log(enemyData.name + " has spawned");
     }
 
 
     private void FixedUpdate()
     {
-        if(waypoints.Count> 1)
+        if (waypoints.Count > 1)
             Move();
     }
 
@@ -41,7 +41,7 @@ public class EnemyScript : MonoBehaviour
     // This seems better because allows us to change speed and reverse it
     void Move()
     {
-        
+
         startPosition = waypoints[currentWaypoint].transform.position;
         endPosition = waypoints[currentWaypoint + 1].transform.position;
 
@@ -68,7 +68,18 @@ public class EnemyScript : MonoBehaviour
         }
 
     }
+    
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Enemy 2D:" + collision.name);
+        if (collision.transform.GetComponent<BaseNode>() != null)
+        {
+            Debug.Log("collision.transform.GetComponent<BaseNode>():" + (collision.transform.GetComponent<BaseNode>() == null));
 
+            collision.transform.GetComponent<BaseNode>().BaseIsHit(1);
+        }
+    }
+    
 
 }

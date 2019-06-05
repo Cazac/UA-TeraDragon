@@ -59,11 +59,11 @@ public class TileNodes : MonoBehaviour
 
     //////////////////////////////////////////////////////////
 
-    private void Awake() { }
+    private void Awake() { BuildTable(); }
     private void Start() { }
     private void Update() { }
 
-    public void Editior_BuildTable()
+    public void BuildTable()
     {
         //   listWapper = new ListWapper();
         permanentSpawnPoints = new List<WorldTile>();
@@ -155,36 +155,43 @@ public class TileNodes : MonoBehaviour
 
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
-                    // checks if tile is found in walkable
-                    foreach (Tile tile in WalkableTiles)
+                    if (name == "Temp Base Tile")
                     {
-                        if (name == tile.name)
-                        {
-                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                        node = Instantiate(TileNodesPrefabs[2], nodePosition, Quaternion.identity, parentNodes[0].transform);
 
-
-                        }
-                    }// checks if walkable tile is a spawning tile
-                    foreach (Tile spTile in SpawnTiles)
-                    {
-                        if (name == spTile.name)
-                        {
-                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
-                            permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
-                        }
                     }
-                    // checks if tile is found in unwalkable
-                    foreach (Tile tile in UnwalkableTiles)
+                    else
                     {
-                        if (name == tile.name)
+                        // checks if tile is found in walkable
+                        foreach (Tile tile in WalkableTiles)
                         {
-                            node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                            if (name == tile.name)
+                            {
+                                node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                            }
+                        }// checks if walkable tile is a spawning tile
+                        foreach (Tile spTile in SpawnTiles)
+                        {
+                            if (name == spTile.name)
+                            {
+                                node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                                permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
+                            }
                         }
+                        // checks if tile is found in unwalkable
+                        foreach (Tile tile in UnwalkableTiles)
+                        {
+                            if (name == tile.name)
+                            {
+                                node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                            }
+                        }
+
                     }
 
                     if (node == null)
                     {
-                        //Debug.LogError(name + " is not registered.");
+                        //    Debug.LogError(name + " is not registered.");
                     }
                     else
                     {

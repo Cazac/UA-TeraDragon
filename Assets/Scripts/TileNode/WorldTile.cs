@@ -10,7 +10,7 @@ using UnityEngine;
 /// </summary>
 ///////////////
 
-[RequireComponent(typeof(SphereCollider))]
+// [RequireComponent(typeof(2D))]
 public class WorldTile : MonoBehaviour
 {
     public int gridY;

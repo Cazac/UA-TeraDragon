@@ -67,24 +67,25 @@ namespace WaveSystem
 
         private void Start()
         {
-            // // for testing purposes
-            // // gives waves paths form shortest to longest
-            //for (int i = 0; i < waves.Length; i++)
-            //{
-            //    if (i >= tiles.pathData.paths.Count)
-            //    {
-            //     //   waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[tiles.pathData.paths.Count-1] };
-            //    }
-            //    else
-            //    {
-            //     //   waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
-            //    }
-            //}
+            // for testing purposes
+            // gives waves paths form shortest to longest
+            for (int i = 0; i < waves.Length; i++)
+            {
 
-            //currentWave = waves[0];
-            //MakeParent();
+                if (i >= tiles.pathData.paths.Count)
+                {
+                       waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[tiles.pathData.paths.Count-1] };
+                }
+                else
+                {
+                       waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
+                }
+            }
 
-            //StartCoroutine(SpawnSingleEnemyPerWave());
+            currentWave = waves[0];
+            MakeParent();
+
+            StartCoroutine(SpawnSingleEnemyPerWave());
         }
 
         private void Update()
