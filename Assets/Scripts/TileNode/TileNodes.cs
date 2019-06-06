@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using System.IO;
 using UnityEngine.Tilemaps;
 
 ///////////////
@@ -21,7 +24,7 @@ public class TileNodes : MonoBehaviour
     public GameObject enemyPrefab;
 
     [Header("Tile Node Prefabs")]
-    public GameObject[] TileNoesPrefabs;
+    public GameObject[] TileNodesPrefabs;
 
     //  TO DO   // - This is not the best?
     [Header("Tile Sprites For Layers")]
@@ -29,100 +32,75 @@ public class TileNodes : MonoBehaviour
     public Tile[] UnwalkableTiles;
     public Tile[] SpawnTiles;
 
-    //  TO DO   // - Legacy?
+    //  TO DO   // - Used for 
     [Header("Selected Nodes")]
     [SerializeField]
     private List<GameObject> selectedNodes = new List<GameObject>();
     public List<GameObject> SelectedNodes { get => selectedNodes; set => selectedNodes = value; }
 
-    //Sorted 2D array of nodes
+    // Sorted 2D array of nodes
     public GameObject[,] nodes;
 
-    //List of nodes before they are sorted
+    // List of nodes before they are sorted
     private List<GameObject> unsortedNodes;
-    public List<WorldTile> permanentSpawnPoints;
+    private List<WorldTile> permanentSpawnPoints;
 
-    //Auto set to size of the tilemap tiles
+    // Auto set to size of the tilemap tiles
     private float mapConstant;
 
-    public PathsData pathData;
+    [SerializeField] // necessary to have the nodes saved in and out of play
+    GameObject[] parentNodes = new GameObject[0];
 
-    float timer = 0;
-    bool testBool = false;
+    [Header("Editor variables")]
+    // variables used for gizmo draw and 
+    public int SelectedPath = 0;
+    public List<WorldTile> selectedList;
+    public PathsData pathData;
 
     //////////////////////////////////////////////////////////
 
-    private void Awake()
-    {
-        unsortedNodes = new List<GameObject>();
-        mapConstant = gridBase.cellSize.x;
+    private void Awake() { }
+    private void Start() { }
+    private void Update() { }
 
-        generateNodes();
-        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
-    }
-
-    public void EditorTestFunction()
+    public void Editior_BuildTable()
     {
-        // permanentSpawnPoints = new List<WorldTile>();
+        //   listWapper = new ListWapper();
+        permanentSpawnPoints = new List<WorldTile>();
+        //  
         for (int i = 0; i < parentNodes.Length; i++)
         {
-            DestroyImmediate(parentNodes[i]);
+            if (parentNodes[i] != null)
+            {
+                DestroyImmediate(parentNodes[i]);
+            }
         }
-        Debug.Log("test function");
+
         unsortedNodes = new List<GameObject>();
         mapConstant = gridBase.cellSize.x;
 
         generateNodes();
-        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints);
-        Debug.Log("permanentSpawnPoints: " + permanentSpawnPoints.Count);
+        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints, maxGridX);
 
-        Debug.Log("Paths numbers: " + pathData.paths.Count);
-        Debug.Log("Nodes length:" + nodes.GetLength(0) + " " + nodes.GetLength(1));
     }
 
-    private void Start()
+
+    ///////////////
+    /// <summary>
+    /// Allows you to see the list that is currently selected
+    /// </summary>
+    ///////////////
+    public void Editor_SelectList()
     {
-        //Start it all
-        Debug.Log("permanentSpawnPoints: " + permanentSpawnPoints.Count);
-
-        Debug.Log("Paths numbers: " + pathData.paths.Count);
-        Debug.Log("Nodes length:" + nodes.GetLength(0) + " " + nodes.GetLength(1));
-
-        if (SelectedNodes != null && SelectedNodes.Count > 0)
-            SetSpawnStartPosFromSelected(ref permanentSpawnPoints, ref selectedNodes);
-
-
-
-
-        ///// for testing //////
-        //foreach (WorldTile wt in pathData.PathsByStart.Keys)
-        //{
-        //    GameObject go = Instantiate(enemyPrefab, wt.transform.position, new Quaternion());
-        //    EnemyScript enemy = go.GetComponent<EnemyScript>();
-        //    enemy.waypoints = pathData.PathsByStart[wt][0];
-        //}
-        /////////////////////////////////////////////////
+        if (pathData != null && pathData.paths != null)
+        {
+            if (SelectedPath >= 0 && SelectedPath < pathData.paths.Count)
+            {
+                selectedList = pathData.paths[SelectedPath];
+            }
+        }
     }
 
-    private void Update()
-    {
-
-        ///////////  for testing  //////////////////////
-        //timer += Time.deltaTime;
-        //if (timer > 1f && !testBool)
-        //{
-        //    foreach (WorldTile wt2 in pathData.PathsByEnd.Keys)
-        //    {
-
-        //        GameObject go = Instantiate(enemyPrefab, pathData.PathsByEnd[wt2][0][0].transform.position, new Quaternion());
-        //        EnemyScript enemy = go.GetComponent<EnemyScript>();
-        //        enemy.waypoints = pathData.PathsByEnd[wt2][0];
-
-        //    }
-        //    testBool = true;
-        //}
-        /////////////////////////////////////////////////
-    }
 
     ///////////////
     /// <summary>
@@ -138,12 +116,14 @@ public class TileNodes : MonoBehaviour
 
         nodes = new GameObject[tableX, tableY];
 
+        // create nodes
         LoopThroughTileset();
+        // places these nodes in a table
         FillNodeTable();
+        // give each node their neighbours
         SetNeigbours();
     }
 
-    GameObject[] parentNodes = new GameObject[0];
     ///////////////
     /// <summary>
     /// Scans tileset for tiles and places the corresponding tile node when it enconters one.
@@ -152,9 +132,11 @@ public class TileNodes : MonoBehaviour
     private void LoopThroughTileset()
     {
         WorldTile wt; GameObject node;
-        parentNodes = new GameObject[TileNoesPrefabs.Length];
+        parentNodes = new GameObject[TileNodesPrefabs.Length];
+
         parentNodes[0] = new GameObject("Parent_WalkableTiles");
         parentNodes[0].transform.SetParent(transform);
+
         parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
         parentNodes[1].transform.SetParent(transform);
 
@@ -170,6 +152,7 @@ public class TileNodes : MonoBehaviour
                     Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
 
                     node = null;
+
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
                     // checks if tile is found in walkable
@@ -177,16 +160,17 @@ public class TileNodes : MonoBehaviour
                     {
                         if (name == tile.name)
                         {
-                            node = Instantiate(TileNoesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
 
-                            // checks if walkable tile is a spawning tile
-                            foreach (Tile spTile in SpawnTiles)
-                            {
-                                if (name == spTile.name)
-                                {
-                                    permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
-                                }
-                            }
+
+                        }
+                    }// checks if walkable tile is a spawning tile
+                    foreach (Tile spTile in SpawnTiles)
+                    {
+                        if (name == spTile.name)
+                        {
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                            permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
                         }
                     }
                     // checks if tile is found in unwalkable
@@ -194,13 +178,13 @@ public class TileNodes : MonoBehaviour
                     {
                         if (name == tile.name)
                         {
-                            node = Instantiate(TileNoesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                            node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
                         }
                     }
 
                     if (node == null)
                     {
-                        Debug.LogError(name + " is not registered.");
+                        //Debug.LogError(name + " is not registered.");
                     }
                     else
                     {
@@ -209,7 +193,6 @@ public class TileNodes : MonoBehaviour
                         wt.gridX = GridX;
                         wt.gridY = GirdY;
                     }
-
                 }
                 GirdY++;
             }
@@ -230,6 +213,8 @@ public class TileNodes : MonoBehaviour
         int minY = nodes.GetLength(1);
         WorldTile wt;
 
+        // temp variable
+
         // makes sure grid is correctly alligned by finding
         // the lowest value for x and y and making sure it is zero
         foreach (GameObject g in unsortedNodes)
@@ -239,6 +224,7 @@ public class TileNodes : MonoBehaviour
                 minX = wt.gridX;
             if (wt.gridY < minY)
                 minY = wt.gridY;
+
         }
         foreach (GameObject g in unsortedNodes)
         {
@@ -247,10 +233,13 @@ public class TileNodes : MonoBehaviour
             wt.gridY -= minY;
             wt.name = "NODE " + wt.gridX.ToString() + " : " + wt.gridY.ToString();
             nodes[wt.gridX, wt.gridY] = g;
+            if (wt.gridX > maxGridX)
+                maxGridX = wt.gridX;
         }
-
+        Debug.Log("Max Grid:" + maxGridX);
         unsortedNodes.Clear();
     }
+    int maxGridX = 0;
 
 
     ///////////////
@@ -326,25 +315,26 @@ public class TileNodes : MonoBehaviour
         }
     }
 
-    public int SelectedPath = 0;
+
+
     private void OnDrawGizmos()
     {
+        // draws the lines that represent the path currently selected
         Gizmos.color = Color.blue;
-        if (pathData.paths != null && SelectedPath >= 0 && SelectedPath < pathData.paths.Count)
+        if (pathData != null && pathData.paths != null)
         {
-            for (int i = 0; i < pathData.paths.Count; i++)
+            if (SelectedPath >= 0 && SelectedPath < pathData.paths.Count)
             {
-                for (int j = 0; j < pathData.paths[i].Count - 1; j++)
+                for (int i = 0; i < pathData.paths[SelectedPath].Count - 1; i++)
                 {
-                    Gizmos.DrawLine(pathData.paths[i][j].transform.position, pathData.paths[i][j + 1].transform.position);
+                    Gizmos.DrawLine(pathData.paths[SelectedPath][i].transform.position, pathData.paths[SelectedPath][i + 1].transform.position);
                 }
             }
+            if (SelectedPath < 0)
+                SelectedPath = 0;
+            else if (SelectedPath >= (pathData.paths.Count))
+                SelectedPath = pathData.paths.Count - 1;
         }
-
-        if (SelectedPath < 0)
-            SelectedPath = 0;
-        else if (SelectedPath > pathData.paths.Count)
-            SelectedPath = pathData.paths.Count - 1;
     }
 
     public void SetSpawnStartPosFromSelected(ref List<WorldTile> permanentSpawnPoints, ref List<GameObject> selectedNodes)

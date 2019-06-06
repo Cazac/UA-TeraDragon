@@ -19,8 +19,22 @@ public static class PathFinding {
     /// <returns></returns>
     public static PathsData GetPaths(GameObject[,] map, List<WorldTile> constSpawn)
     {
+        return GetPaths( map, constSpawn, map.GetLength(0) - 1);
+    }
 
-
+    /// <summary>
+    /// Returns object contianing a list of paths, form shorst to longest, and 2 dictionaries of these paths
+    /// with starting and ending tiles as keys
+    /// </summary>
+    /// <param name="map">table of nodes with their neighbours set</param>
+    /// <param name="constSpawn">list of tiles that spawns enemies irrespective of location</param>
+    /// <param name="startingColumn">column where we search fo starting tiles. First colum is 0</param>
+    /// <returns></returns>
+    public static PathsData GetPaths(GameObject[,] map, List<WorldTile> constSpawn, int startingColumn)
+    {
+        if(startingColumn <= 0 || map.GetLength(0) <= startingColumn){
+            return new PathsData(new List<List<WorldTile>>() );
+        }
         /*  Steps:
          *  Find End tiles (all paths tiles on most leftward column)
          *  Find starts (all paths tiles on most rightward column
@@ -32,14 +46,15 @@ public static class PathFinding {
         paths = new List<List<WorldTile>>();
         startingTiles = new List<WorldTile>();
 
+        startingTiles.AddRange(constSpawn);
         // finds all rightmost paths tiles
         for (int i = 0; i < map.GetLength(1); i++)
         {
-            if (map[map.GetLength(0) - 1, i] != null)
+            if (map[startingColumn, i] != null)
             {
-                if (map[map.GetLength(0) - 1, i].GetComponent<WorldTile>().walkable)
+                if (map[startingColumn, i].GetComponent<WorldTile>().walkable)
                 {
-                    startingTiles.Add(map[map.GetLength(0) - 1, i].GetComponent<WorldTile>());
+                    startingTiles.Add(map[startingColumn, i].GetComponent<WorldTile>());
                 }
             }
         }
@@ -55,27 +70,28 @@ public static class PathFinding {
                 }
             }
         }
-        startingTiles.AddRange(constSpawn);
 
+        int dfsLimit = Mathf.Max(0, startingColumn - 2);
         foreach (WorldTile wt in startingTiles)
         {
-            DFS(wt);
+            DFS(wt, dfsLimit);
         }
-
-        PathsData PathData = new PathsData(paths);  
+        PathsData PathData = new PathsData(paths);
         
         return PathData;
     }
 
+
     /// <summary>
-    /// Use depth first search to find all paths from start tiles to end tiles with limited backtrack.
+    /// Use depth first search to find all paths from start tiles to end tiles with limited ability to go right.
     /// </summary>
     /// <param name="tile"></param>
-    static void DFS(WorldTile tile) {
+    static void DFS(WorldTile tile, int limit) {
         List<WorldTile> list = new List<WorldTile>();
-        DFS_Util(tile, list, tile.gridX);
+        DFS_Util(tile, list, limit);
     }
 
+    // Actual function, is recursive
     static void DFS_Util(WorldTile nextTile, List<WorldTile> worldTiles, int furthest) {
         worldTiles.Add(nextTile);
         int nextfurthest;
@@ -109,60 +125,3 @@ public static class PathFinding {
     
 }
 
-/// <summary>
-/// Contains all paths for each starting tiles to each ending tile
-/// Paths can be retrived in 3 ways:
-///  - paths: all paths from shortest to longest
-///  - PathsByStarts: starting tiles as keys, retrieves all paths associated with key 
-///  - PathsByEnd: ending tiles as keys, retrieves all paths associated with key 
-/// </summary>
-public class PathsData {
-
-    public List<List<WorldTile>> paths;
-    public Dictionary<WorldTile, List<List<WorldTile>>> PathsByStart;
-    public Dictionary<WorldTile, List<List<WorldTile>>> PathsByEnd;
-
-
-    public PathsData(List<List<WorldTile>> paths) {
-        ListSize comparator = new ListSize();
-        this.paths = paths;
-        PathsByStart = new Dictionary<WorldTile, List<List<WorldTile>>>();
-        PathsByEnd = new Dictionary<WorldTile, List<List<WorldTile>>>();
-
-        paths.Sort(comparator);
-
-
-        foreach (List<WorldTile> wt in paths)
-        {
-            if (!PathsByStart.ContainsKey(wt[0]))
-            {
-                PathsByStart.Add(wt[0], new List<List<WorldTile>>() { wt });
-            }
-            else
-            {
-                PathsByStart[wt[0]].Add(wt);
-            }
-
-            if (!PathsByEnd.ContainsKey(wt[wt.Count - 1]))
-            {
-                PathsByEnd.Add(wt[wt.Count - 1], new List<List<WorldTile>>() { wt });
-            }
-            else
-            {
-                PathsByEnd[wt[wt.Count - 1]].Add(wt);
-            }
-        }
-    }
-}
-
-// Comparor that sorts lists by size
-class ListSize : IComparer<List<WorldTile>> {
-    public int Compare(List<WorldTile> l1, List<WorldTile> l2) {
-        if(l1.Count > l2.Count) {
-            return 1;
-        }
-        else {
-            return l1.Count.CompareTo(l2.Count);
-        }
-    }
-}
