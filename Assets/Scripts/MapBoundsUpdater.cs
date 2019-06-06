@@ -26,25 +26,59 @@ public class MapBoundsUpdater : MonoBehaviour
     {
         tileNodes = GetComponent<TileNodes>();
 
-        //                                      Is this bad form to use with getter / setter?
+        //                                      Is this bad form to use without getter / setter?
         uniqueTilemap = tileNodes.uniqueTilemap;
         nodes = tileNodes.nodes;
 
-
-        GameObject worldTile_GO = nodes[0, 0];
-
-
-        //string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
-
-        //TileBase tileBase = uniqueTilemap.GetTile(new Vector3(worldTile_GO.transform.position));
+        uniqueTilemap.CompressBounds();
+        BoundsInt bounds = uniqueTilemap.cellBounds;
 
 
+        print("Test Start");
+
+        //GameObject worldTile_GO = nodes[0, 0];
+        string name = uniqueTilemap.GetTile(new Vector3Int(20, -10, 0)).name;
+
+        TileBase tileBase = uniqueTilemap.GetTile(new Vector3Int(20, -10, 0));
+
+        print(" null? " + tileBase == null);
+
+        //Tile
+
+        print(" Name? " + tileBase.name);
+
+
+
+
+        TileData tileData = new TileData();
+
+
+        tileData.sprite = newSprite;
+
+
+        Vector3Int testINT = new Vector3Int(20, -10, 0);
 
         //    Change Sprite
-        //tileData.sprite = newSprite;
+        //tileBase.GetTileData(testINT, uniqueTilemap, tileData);
 
 
-        RefreshMap();
+
+
+        
+        
+        
+        //.sprite = newSprite;
+
+
+
+
+
+
+
+        //Refresh the sprites
+        uniqueTilemap.RefreshAllTiles();
+
+        //RefreshMap();
     }
 
     //////////////////////////////////////////////////////////
@@ -59,10 +93,7 @@ public class MapBoundsUpdater : MonoBehaviour
     }
 
 
-    public Sprite Spring;
-    public Sprite Summer;
-    public Sprite Fall;
-    public Sprite Winter;
+
 
     //////////////////////////////////////////////////////////
 
