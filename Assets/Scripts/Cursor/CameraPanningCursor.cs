@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.Tilemaps;
 
 public class CameraPanningCursor : MonoBehaviour
 {
@@ -48,7 +49,7 @@ public class CameraPanningCursor : MonoBehaviour
     /// </example>
     private void TranslateWithMousePos()
     {
-        if (camera != null && !CameraLock(playAreaBorder))
+        if (camera != null && !CameraLock())
         {
             Vector3 mousePosition = Input.mousePosition;
             Vector3 mousePosToWorld = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -95,6 +96,7 @@ public class CameraPanningCursor : MonoBehaviour
             return "Scrolling";
         }
 
+
         return "None";
     }
 
@@ -129,8 +131,6 @@ public class CameraPanningCursor : MonoBehaviour
     private bool CameraLock()
     {
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit;
-
 
         if (playArea.gameObject == null)
         {
@@ -141,19 +141,28 @@ public class CameraPanningCursor : MonoBehaviour
         {
             //Performs bit shifting:
             int hitLayer = playArea.gameObject.layer;
+            Debug.Log(hitLayer);
             hitLayer = 1 << hitLayer;
 
-            // if (Physics2D.Raycast(raycastMouse, out hit, Mathf.Infinity, hitLayer))
-            if(Physics2D.Raycast(raycastMouse, Vector3.forward, Mathf.Infinity, hitLayer))
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward, Mathf.Infinity, hitLayer);
+            Debug.DrawRay(Input.mousePosition, Vector3.forward, Color.red);
+            Debug.Log(hit.collider);
+            if(hit.collider != null)
             {
+                Bounds bounds = playArea.GetComponent<Tilemap>().localBounds;
+                Debug.Log(bounds.size.ToString());
                 return false;
-            }
-
-            else
-            {
-                return true;
             }
         }
 
+        return true;
     }
+
+    public static class CameraUtils
+    {
+        public static Vector3 TilemapSize { get; set; }
+    }
+
 }
+
+
