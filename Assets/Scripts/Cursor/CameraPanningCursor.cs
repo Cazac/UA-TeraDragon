@@ -10,12 +10,14 @@ public class CameraPanningCursor : MonoBehaviour
 
     [Header("Layer for play area")]
     public int playAreaBorder;
-    
+
     [Header("Zoom threshold")]
     public int zoomMin;
     public int zoomMax;
 
     private Camera camera;
+
+    public GameObject playArea;
 
     private void Start()
     {
@@ -54,7 +56,7 @@ public class CameraPanningCursor : MonoBehaviour
         }
     }
 
-     /// <summary>
+    /// <summary>
     ///Main function to perform camera zooming, function is called when camera size is inside a predefined range, uses Mathf.Lerp()
     /// </summary>
     /// <example>
@@ -64,16 +66,16 @@ public class CameraPanningCursor : MonoBehaviour
     /// </example>
     private void ZoomWithMouseWheel()
     {
-        if(camera.orthographicSize < zoomMin )
+        if (camera.orthographicSize < zoomMin)
         {
             camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, zoomMin, 0.8f);
         }
 
-        if(camera.orthographicSize > zoomMax)
+        if (camera.orthographicSize > zoomMax)
         {
-            camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, zoomMax, 0.8f);;
+            camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, zoomMax, 0.8f); ;
         }
-            camera.orthographicSize += -Input.mouseScrollDelta.y;
+        camera.orthographicSize += -Input.mouseScrollDelta.y;
 
     }
 
@@ -116,5 +118,42 @@ public class CameraPanningCursor : MonoBehaviour
         {
             return true;
         }
+    }
+
+
+    /// <summary>
+    ///Detect if camera is out of play area by using Raycast
+    /// </summary>
+    /// <param name="playAreaBorder">The layer of the play area</param>
+    ///<returns>True if raycast is hit, otherwise false</returns> 
+    private bool CameraLock()
+    {
+        Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit;
+
+
+        if (playArea.gameObject == null)
+        {
+            Debug.LogError("Play area is not assigned in CameraPanning.cs");
+        }
+
+        else
+        {
+            //Performs bit shifting:
+            int hitLayer = playArea.gameObject.layer;
+            hitLayer = 1 << hitLayer;
+
+            // if (Physics2D.Raycast(raycastMouse, out hit, Mathf.Infinity, hitLayer))
+            if(Physics2D.Raycast(raycastMouse, Vector3.forward, Mathf.Infinity, hitLayer))
+            {
+                return false;
+            }
+
+            else
+            {
+                return true;
+            }
+        }
+
     }
 }

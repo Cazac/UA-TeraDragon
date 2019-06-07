@@ -7764,7 +7764,8 @@ GameObject:
   - component: {fileID: 299934486}
   - component: {fileID: 299934484}
   - component: {fileID: 299934485}
-  m_Layer: 0
+  - component: {fileID: 299934487}
+  m_Layer: 8
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15966,6 +15967,36 @@ Transform:
   m_Father: {fileID: 5387829968003339724}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &299934487
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299934483}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 95.2, y: 273.9604}
+      - {x: -170.67772, y: 80.78891}
+      - {x: -69.121445, y: -231.76909}
+      - {x: 259.52148, y: -231.76906}
+      - {x: 361.0777, y: 80.78895}
 --- !u!1 &307506912
 GameObject:
   m_ObjectHideFlags: 0
@@ -53281,6 +53312,7 @@ GameObject:
   - component: {fileID: 1641272379}
   - component: {fileID: 1641272378}
   - component: {fileID: 1641272377}
+  - component: {fileID: 1641272380}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -53353,6 +53385,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1641272380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641272376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc54a0264389da43b34500eb2f8848e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpSpeed: 0.8
+  playAreaBorder: 8
+  zoomMin: 20
+  zoomMax: 50
 --- !u!1 &1646496760
 GameObject:
   m_ObjectHideFlags: 0
@@ -66838,7 +66886,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3f9e18acac6b7f54d9346616837738c7, type: 2}
   SpawnTiles:
   - {fileID: 11400000, guid: c2795b61ee6d7f440b39574e19f2c3dd, type: 2}
-  selectedNode: []
+  selectedNodes: []
   parentNodes:
   - {fileID: 577532608}
   - {fileID: 1984760440}
