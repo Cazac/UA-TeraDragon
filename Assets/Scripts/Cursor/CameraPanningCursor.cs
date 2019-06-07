@@ -17,6 +17,11 @@ public class CameraPanningCursor : MonoBehaviour
     public int zoomMax;
 
     private Camera camera;
+    public Vector2 CameraBoundingX { get; set; }
+    public Vector2 CameraBoundingY { get; set; }
+
+    private SwipeDetection swipeDetection = new SwipeDetection();
+
 
     public GameObject playArea;
 
@@ -24,6 +29,24 @@ public class CameraPanningCursor : MonoBehaviour
     {
         playAreaBorder = 1 << playAreaBorder;
         camera = Camera.main;
+
+
+        if(playArea.GetComponent<Tilemap>() == null)
+        {
+            Debug.LogError("TileMap not found");
+        }
+
+        else
+        {
+            CameraBoundingX = new Vector2(-GetTileMapSize(playArea.GetComponent<Tilemap>()).x / 2, 
+            GetTileMapSize(playArea.GetComponent<Tilemap>()).x / 2);
+
+            CameraBoundingY = new Vector2(-GetTileMapSize(playArea.GetComponent<Tilemap>()).y / 2, 
+            GetTileMapSize(playArea.GetComponent<Tilemap>()).y / 2);
+        }
+
+        Debug.Log(CameraBoundingX.ToString());
+
     }
 
     private void Update()
@@ -36,6 +59,16 @@ public class CameraPanningCursor : MonoBehaviour
         if (InputClickEvent() == "Scrolling")
         {
             ZoomWithMouseWheel();
+        }
+
+        swipeDetection.DetectingSwipe();
+    }
+
+    private void LateUpdate() 
+    {
+        if(!IsInsideBound())
+        {
+            ReshiftCam(CameraBoundingX, CameraBoundingY);
         }
     }
 
@@ -53,7 +86,39 @@ public class CameraPanningCursor : MonoBehaviour
         {
             Vector3 mousePosition = Input.mousePosition;
             Vector3 mousePosToWorld = Camera.main.ScreenToWorldPoint(mousePosition);
-            camera.transform.position = Vector3.Lerp(camera.transform.position, mousePosToWorld, lerpSpeed * Time.deltaTime);
+
+
+            if(IsInsideBound() && swipeDetection.IsSwiping)  
+            {
+                camera.transform.position = new Vector3(camera.transform.position.x + swipeDetection.DeltaSwipe * -lerpSpeed * Time.deltaTime, camera.transform.position.y,
+                camera.transform.position.z );
+            }
+                // camera.transform.position = new Vector3(Mathf.Lerp(camera.transform.position.x, mousePosToWorld.x, lerpSpeed * Time.deltaTime), camera.transform.position.y,
+                // camera.transform.position.z);
+        }
+    }
+
+    public bool IsInsideBound()
+    {
+        if(((camera.transform.position.x > CameraBoundingX.x) && (camera.transform.position.x < CameraBoundingX.y)))  
+            return true;
+        return false;
+    }
+
+
+    private void ReshiftCam(Vector2 boundingX, Vector2 boundingY)
+    {
+
+        if(camera.transform.position.x > boundingX.y)
+        {
+            Debug.Log("Reshift right bound");
+            camera.transform.position = new Vector3(boundingX.y - 1, camera.transform.position.y, camera.transform.position.z);
+        }
+        
+        if( camera.transform.position.x < boundingX.x)
+        {
+            Debug.Log("Reshift left bound");
+            camera.transform.position = new Vector3(boundingX.x + 1, camera.transform.position.y, camera.transform.position.z);
         }
     }
 
@@ -126,8 +191,7 @@ public class CameraPanningCursor : MonoBehaviour
     /// <summary>
     ///Detect if camera is out of play area by using Raycast
     /// </summary>
-    /// <param name="playAreaBorder">The layer of the play area</param>
-    ///<returns>True if raycast is hit, otherwise false</returns> 
+    ///<returns>False if raycast hits tilemap box collider, otherwise true</returns> 
     private bool CameraLock()
     {
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -141,16 +205,12 @@ public class CameraPanningCursor : MonoBehaviour
         {
             //Performs bit shifting:
             int hitLayer = playArea.gameObject.layer;
-            Debug.Log(hitLayer);
             hitLayer = 1 << hitLayer;
 
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward, Mathf.Infinity, hitLayer);
-            Debug.DrawRay(Input.mousePosition, Vector3.forward, Color.red);
-            Debug.Log(hit.collider);
             if(hit.collider != null)
             {
                 Bounds bounds = playArea.GetComponent<Tilemap>().localBounds;
-                Debug.Log(bounds.size.ToString());
                 return false;
             }
         }
@@ -158,11 +218,11 @@ public class CameraPanningCursor : MonoBehaviour
         return true;
     }
 
-    public static class CameraUtils
+    private Vector3 GetTileMapSize(Tilemap playArea)
     {
-        public static Vector3 TilemapSize { get; set; }
+        Bounds bounds = playArea.GetComponent<Tilemap>().localBounds;
+        return bounds.size;
     }
-
 }
 
 
