@@ -53446,9 +53446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lerpSpeed: 1
-  playAreaBorder: 8
   zoomMin: 20
-  zoomMax: 80
+  zoomMax: 120
   playArea: {fileID: 299934483}
 --- !u!1 &1646496760
 GameObject:

@@ -10,7 +10,8 @@ public class CameraPanningCursor : MonoBehaviour
     public float lerpSpeed;
 
     [Header("Layer for play area")]
-    public int playAreaBorder;
+
+    // public int playAreaBorder;
 
     [Header("Zoom threshold")]
     public int zoomMin;
@@ -27,7 +28,7 @@ public class CameraPanningCursor : MonoBehaviour
 
     private void Start()
     {
-        playAreaBorder = 1 << playAreaBorder;
+        // playAreaBorder = 1 << playAreaBorder;
         camera = Camera.main;
 
 
@@ -93,8 +94,6 @@ public class CameraPanningCursor : MonoBehaviour
                 camera.transform.position = new Vector3(camera.transform.position.x + swipeDetection.DeltaSwipe * -lerpSpeed * Time.deltaTime, camera.transform.position.y,
                 camera.transform.position.z );
             }
-                // camera.transform.position = new Vector3(Mathf.Lerp(camera.transform.position.x, mousePosToWorld.x, lerpSpeed * Time.deltaTime), camera.transform.position.y,
-                // camera.transform.position.z);
         }
     }
 

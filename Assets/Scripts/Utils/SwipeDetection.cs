@@ -10,6 +10,10 @@ public class SwipeDetection
     private float deltaSwipe;
     public float DeltaSwipe { get => deltaSwipe;}
 
+    private bool isKeyboardInput;
+    public bool IsKeyboardInput { get => isKeyboardInput; set => isKeyboardInput = value; }
+
+
     private Vector3 firstMousePos;
     public void DetectingSwipe()
     {
@@ -30,6 +34,19 @@ public class SwipeDetection
         {
             deltaSwipe = 0;
             isSwiping = false;
+        }
+    }
+
+    public void DetectingKeyboardInput()
+    {
+        if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+        {
+            IsKeyboardInput = true;
+        }
+
+        if(Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            IsKeyboardInput = false;
         }
     }
 }
