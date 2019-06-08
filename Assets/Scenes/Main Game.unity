@@ -66802,6 +66802,7 @@ GameObject:
   - component: {fileID: 5387829968003339724}
   - component: {fileID: 1886300025436196685}
   - component: {fileID: 3905994754878764182}
+  - component: {fileID: 3905994754878764181}
   m_Layer: 8
   m_Name: Tile Map
   m_TagString: Untagged
@@ -66809,6 +66810,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3905994754878764181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3905994754878764180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07aeb5fed84a459438ca180d8928c56b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newSprite: {fileID: 21300000, guid: f842ce6508a9f3e4fa511596a4eea654, type: 3}
+  testbase: {fileID: 11400000, guid: 9c63374c59118334da270216ab7ac451, type: 2}
 --- !u!114 &3905994754878764182
 MonoBehaviour:
   m_ObjectHideFlags: 0

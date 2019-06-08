@@ -19,6 +19,12 @@ public class MapBoundsUpdater : MonoBehaviour
     private TileNodes tileNodes;
     private GameObject[,] nodes;
 
+
+
+    public TileBase testbase;
+
+
+
     //////////////////////////////////////////////////////////
 
 
@@ -50,10 +56,10 @@ public class MapBoundsUpdater : MonoBehaviour
 
 
 
-        TileData tileData = new TileData();
+        //TileData tileData = new TileData();
 
 
-        tileData.sprite = newSprite;
+        //tileData.sprite = newSprite;
 
 
         Vector3Int testINT = new Vector3Int(20, -10, 0);
@@ -63,10 +69,13 @@ public class MapBoundsUpdater : MonoBehaviour
 
 
 
+        uniqueTilemap.SetTile(testINT, testbase);
 
-        
-        
-        
+
+        //uniqueTilemap.SwapTile(tileBase, testbase);
+
+
+
         //.sprite = newSprite;
 
 
