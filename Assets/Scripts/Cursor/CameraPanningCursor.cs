@@ -58,6 +58,12 @@ public class CameraPanningCursor : MonoBehaviour
         StartCoroutine(ReshiftCam(CameraBoundingX, CameraBoundingY));
     }
 
+    /// <summary>
+    ///Coroutine to reshift camera position when camera is out of predefined bound
+    /// </summary>
+    /// <param name="boundingX"> Play area left and right width bound</param>
+    /// <param name="boundingY"> Play area upmost and downmost bound</param>
+    ///<returns>Returns null each frame as base condition for coroutine</returns> 
     private IEnumerator ReshiftCam(Vector2 boundingX, Vector2 boundingY)
     {
         while (true)
@@ -139,6 +145,19 @@ public class CameraPanningCursor : MonoBehaviour
         }
     }
 
+
+
+     /// <summary>
+     ///Check if camera is inside play area bound
+    /// </summary>
+    /// <param name="CameraBoundingX"> Play area left and right width bound</param>
+    /// <param name="CameraBoundingY"> Play area upmost and downmost bound</param>
+    /// <para></para> 
+    /// <example>
+    /// <code>
+    /// </code>
+    /// </example>
+    ///<returns>True if camera position is inside play area.Otherwuse false</returns> 
     public bool IsInsideBound()
     {
         if (((camera.transform.position.x > CameraBoundingX.x) && (camera.transform.position.x < CameraBoundingX.y)))
@@ -229,6 +248,12 @@ public class CameraPanningCursor : MonoBehaviour
         return true;
     }
 
+
+     /// <summary>
+     ///Get the size of tilemap using Bounds class
+    /// </summary>
+    /// <param name="playArea">Play area that contains Tilemap component</param>
+    ///<returns>Size of tilemap as vector3</returns> 
     private Vector3 GetTileMapSize(Tilemap playArea)
     {
         Bounds bounds = playArea.GetComponent<Tilemap>().localBounds;

@@ -53446,7 +53446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraLerpSpeed: 1
-  zoomMin: 20
+  zoomMin: 40
   zoomMax: 120
   keyboardLerpSpeed: 3
   zoomSpeed: 1.31
