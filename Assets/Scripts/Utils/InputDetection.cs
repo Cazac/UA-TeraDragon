@@ -1,8 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
-
-public class SwipeDetection
+public class InputDetection
 {
 
     private bool isSwiping;
@@ -15,6 +14,8 @@ public class SwipeDetection
 
 
     private Vector3 firstMousePos;
+
+    
     public void DetectingSwipe()
     {
         if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
@@ -37,16 +38,60 @@ public class SwipeDetection
         }
     }
 
-    public void DetectingKeyboardInput()
+    
+    public String DetectingKeyboardInputEvent()
     {
-        if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.A))
         {
             IsKeyboardInput = true;
+            return "Left";
         }
 
-        if(Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.D))
+        {
+            IsKeyboardInput = true;
+            return "Right";
+        }
+
+        if(Input.GetKey(KeyCode.W))
+        {
+            IsKeyboardInput = true;
+            return "Up";
+        }
+
+            
+        if(Input.GetKey(KeyCode.S))
+        {
+            IsKeyboardInput = true;
+            return "Down";
+        }
+
+        if(!Input.anyKey)
         {
             IsKeyboardInput = false;
+            return "None";
         }
+
+        return "None";
+    }
+
+      /// <summary>
+    ///Detect if left or right mouse button is pressed
+    /// </summary>
+    ///<returns>String stating whhich event has been captured(click, press, scroll,...)</returns> 
+    public String BeginClickEvent()
+    {
+        if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
+        {
+            return "Pressed";
+        }
+
+        if (Input.mouseScrollDelta != new Vector2(0, 0))
+        {
+            return "Scrolling";
+        }
+
+
+        return "None";
     }
 }
