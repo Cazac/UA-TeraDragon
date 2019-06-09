@@ -19,8 +19,8 @@ public class MapBoundsUpdater : MonoBehaviour
 
     //  SET FROM OUTSIDE SOURCE???????
     List<int> yValues;
-    int minY = -12;
-    int maxY = 10;
+    int minY;
+    int maxY;
 
     //  SET FROM OUTSIDE SOURCE???????
     public int WaveCounter = 0;
@@ -67,6 +67,9 @@ public class MapBoundsUpdater : MonoBehaviour
 
         yValues = new List<int>();
         restorationTiles = new List<TileBase>();
+
+        minY = uniqueTilemap.cellBounds.yMin;
+        maxY = uniqueTilemap.cellBounds.yMax - 1;
 
         //Set height values
         while (minY <= maxY)
@@ -165,6 +168,9 @@ public class MapBoundsUpdater : MonoBehaviour
     ///////////////
     public void MoveCameraBounds()
     {
+
+        //Send Bounds Position X + 1 right
+
 
     }
 
