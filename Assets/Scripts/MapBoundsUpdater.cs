@@ -66,6 +66,7 @@ public class MapBoundsUpdater : MonoBehaviour
         uniqueTilemap = tileNodes.uniqueTilemap;
 
         yValues = new List<int>();
+        restorationTiles = new List<TileBase>();
 
         //Set height values
         while (minY <= maxY)
