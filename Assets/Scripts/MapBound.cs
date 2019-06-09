@@ -6,14 +6,6 @@ using UnityEngine.Tilemaps;
 [CreateAssetMenu(fileName = "NewMapBound", menuName = "Scriptable Objects/Map Bound")]
 public class MapBound : ScriptableObject
 {
-
-
-
-
-
-    public int[] waveID;
+    //Where the map bounds will be placed next
     public int[] positionX;
-
-    public List<TileBase> NewTiles;
-
 }

@@ -13,19 +13,20 @@ public class MapBoundsUpdater : MonoBehaviour
     public GameObject TileMap;
     private TileNodes tileNodes;
     private Tilemap uniqueTilemap;
-    private GameObject[,] nodes;
 
-    TileBase[,] restoreTile;
-
-    int minY = -12;
-    int maxY = 10;
-    List<int> yValues;
-
+    [Header("Tile Used As a Border")]
     public TileBase barrierTile;
 
+    //  SET FROM OUTSIDE SOURCE???????
+    List<int> yValues;
+    int minY = -12;
+    int maxY = 10;
+
+    //  SET FROM OUTSIDE SOURCE???????
     public int WaveCounter = 0;
 
-    public List<TileBase> restorationTiles;
+    //For reversing the list
+    private List<TileBase> restorationTiles;
 
     //////////////////////////////////////////////////////////
 
@@ -42,24 +43,8 @@ public class MapBoundsUpdater : MonoBehaviour
         //Set first pass bounds
         MoveMapBounds();
 
-        //Set new wave line TESTING THIS
+        //Set new wave line TESTING PURPOSES
         StartCoroutine(WaitTime());
-
-
-
-        //Set new wave line TESTING THIS
-
-
-
-
-        //TileData tileData = new TileData();
-        //tileData.sprite = newSprite;
-        //    Change Sprite
-        //tileBase.GetTileData(testINT, uniqueTilemap, tileData);
-        // uniqueTilemap.SetTile(testINT, testbase);
-        //uniqueTilemap.SwapTile(tileBase, testbase);
-
-
 
         //Refresh the sprites
         uniqueTilemap.RefreshAllTiles();
@@ -79,7 +64,6 @@ public class MapBoundsUpdater : MonoBehaviour
 
         // Is this bad form to use without getter / setter?         ???
         uniqueTilemap = tileNodes.uniqueTilemap;
-        nodes = tileNodes.nodes;
 
         yValues = new List<int>();
 
@@ -107,11 +91,6 @@ public class MapBoundsUpdater : MonoBehaviour
         {
             Debug.LogError("No Map Bounds Gameobject");
         }
-
-        if (mapBounds.waveID.Length != mapBounds.positionX.Length)
-        {
-            Debug.LogError("Map Bounds Not Equal");
-        }
     }
 
     //////////////////////////////////////////////////////////
@@ -123,7 +102,7 @@ public class MapBoundsUpdater : MonoBehaviour
     ///////////////
     public IEnumerator WaitTime()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
 
 
         print("New Test Wave");
@@ -144,7 +123,7 @@ public class MapBoundsUpdater : MonoBehaviour
 
     ///////////////
     /// <summary>
-    /// Error checking for invalid setup.
+    /// Move the map boudaires over to the next X position provided by the MapBound Scriptable Object
     /// </summary>
     ///////////////
     public void MoveMapBounds()
