@@ -25,7 +25,7 @@ public class MapBoundsUpdater : MonoBehaviour
 
     public int WaveCounter = 0;
 
-    public List<TileBase> restorationTile;
+    public List<TileBase> restorationTiles;
 
     //////////////////////////////////////////////////////////
 
@@ -47,6 +47,8 @@ public class MapBoundsUpdater : MonoBehaviour
 
 
 
+        //Set new wave line TESTING THIS
+
 
 
 
@@ -54,7 +56,7 @@ public class MapBoundsUpdater : MonoBehaviour
         //tileData.sprite = newSprite;
         //    Change Sprite
         //tileBase.GetTileData(testINT, uniqueTilemap, tileData);
-       // uniqueTilemap.SetTile(testINT, testbase);
+        // uniqueTilemap.SetTile(testINT, testbase);
         //uniqueTilemap.SwapTile(tileBase, testbase);
 
 
@@ -65,6 +67,11 @@ public class MapBoundsUpdater : MonoBehaviour
 
     //////////////////////////////////////////////////////////
 
+    ///////////////
+    /// <summary>
+    /// Setups up all of the lists, refferences and y value sizing.
+    /// </summary>
+    ///////////////
     public void Setup()
     {
         //Get Script
@@ -84,6 +91,11 @@ public class MapBoundsUpdater : MonoBehaviour
         }
     }
 
+    ///////////////
+    /// <summary>
+    /// Error checking for invalid setup.
+    /// </summary>
+    ///////////////
     public void CheckForMatchingBounds()
     {
         if (mapBounds == null)
@@ -104,53 +116,86 @@ public class MapBoundsUpdater : MonoBehaviour
 
     //////////////////////////////////////////////////////////
 
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
     public IEnumerator WaitTime()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
 
 
         print("New Test Wave");
         WaveCounter++;
 
+
+
         MoveMapBounds();
+
+        if (mapBounds.positionX.Length > WaveCounter)
+        {
+
+            StartCoroutine(WaitTime());
+        }
 
         yield break;
     }
 
+    ///////////////
+    /// <summary>
+    /// Error checking for invalid setup.
+    /// </summary>
+    ///////////////
     public void MoveMapBounds()
     {
-        //Set base X
-        int pos_X = mapBounds.positionX[WaveCounter];
+        //Restore old tiles before adding new
+        RestoreTiles();
 
-        foreach (int pos_Y in yValues)
+        if (mapBounds.positionX.Length > WaveCounter)
         {
-            //Create position
-            Vector3Int tilePosition = new Vector3Int(pos_X, pos_Y, 0);
+            //Set base X
+            int pos_X = mapBounds.positionX[WaveCounter];
 
-            //Get tile at position
-            TileBase tileBase = uniqueTilemap.GetTile(tilePosition);
+            foreach (int pos_Y in yValues)
+            {
+                //Create position
+                Vector3Int tilePosition = new Vector3Int(pos_X, pos_Y, 0);
 
-            //Save for later
-            restorationTile.Add(tileBase);
+                //Get tile at position
+                TileBase tileBase = uniqueTilemap.GetTile(tilePosition);
 
-            //Set tile at position
-            uniqueTilemap.SetTile(tilePosition, barrierTile);
+                //Save for later
+                restorationTiles.Add(tileBase);
+
+                //Set tile at position
+                uniqueTilemap.SetTile(tilePosition, barrierTile);
+            }
+        }
+        else
+        {
+            print("No More Waves Bounds!");
         }
     }
 
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
     public void MoveCameraBounds()
     {
 
     }
 
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
     public void RestoreTiles()
     {
-        foreach (TileBase tilebase in restorationTile)
-        {
-            
-        }
-
-        if (WaveCounter - 1 <= 0)
+        if (WaveCounter - 1 < 0)
         {
             print("No Restoration to be made!");
         }
@@ -164,19 +209,16 @@ public class MapBoundsUpdater : MonoBehaviour
                 //Create position
                 Vector3Int tilePosition = new Vector3Int(pos_X, pos_Y, 0);
 
-                //Get tile at position
-                TileBase tileBase = uniqueTilemap.GetTile(tilePosition);
-
-                //Save for later
-                //restoreTile[pos_X, pos_Y] = tileBase;
-
                 //Set tile at position
-                uniqueTilemap.SetTile(tilePosition, barrierTile);
+                uniqueTilemap.SetTile(tilePosition, restorationTiles[0]);
+
+                //clear last used tile form list
+                restorationTiles.RemoveAt(0);
             }
         }
 
         //reset for next addition
-        restorationTile.Clear();
+        restorationTiles.Clear();
     }
 
     //////////////////////////////////////////////////////////
