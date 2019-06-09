@@ -18,6 +18,6 @@ public class BaseNode : WorldTile
 
     public void BaseIsHit(int i)
     {
-        PlayerStats.RemoveLife(i);
+        ((PlayerStats)FindObjectOfType(typeof(PlayerStats))).RemoveLife(i);
     }
 }

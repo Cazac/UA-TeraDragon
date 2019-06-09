@@ -2,26 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PlayerStats
+public class PlayerStats : MonoBehaviour
 {
-    static int MaxLives;
-    static int CurrentLives;
+    public int MaxLives;
+    public int CurrentLives;
 
-    public static void RemoveLife(int i)
+    public void RemoveLife(int i)
     {
         CurrentLives -= i;
         Debug.Log("Lose " + i + " lives, Current Lives:" + CurrentLives);
         if (CurrentLives < 0)
+        {
             CurrentLives = 0;
+        }
+
+        if(CurrentLives == 0)
+        {
+            GameOverScript gos = (GameOverScript)FindObjectOfType(typeof(GameOverScript));
+            gos.TurnOnGameOver();
+        }
 
     }
 
-    public static int CheckLife()
+    public int CheckLife()
     {
         return CurrentLives;
     }
 
-    public static void GameOver()
+    public void GameOver()
     {
         Debug.Log("Game over man, Game over");
     }

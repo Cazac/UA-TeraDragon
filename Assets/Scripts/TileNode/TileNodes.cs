@@ -67,7 +67,6 @@ public class TileNodes : MonoBehaviour
     {
         //   listWapper = new ListWapper();
         permanentSpawnPoints = new List<WorldTile>();
-        //  
         for (int i = 0; i < parentNodes.Length; i++)
         {
             if (parentNodes[i] != null)
@@ -113,6 +112,7 @@ public class TileNodes : MonoBehaviour
         BoundsInt bounds = uniqueTilemap.cellBounds;
         int tableX = uniqueTilemap.cellBounds.size.x;
         int tableY = uniqueTilemap.cellBounds.size.y;
+
 
         nodes = new GameObject[tableX, tableY];
 
@@ -243,7 +243,7 @@ public class TileNodes : MonoBehaviour
             if (wt.gridX > maxGridX)
                 maxGridX = wt.gridX;
         }
-        Debug.Log("Max Grid:" + maxGridX);
+
         unsortedNodes.Clear();
     }
     int maxGridX = 0;

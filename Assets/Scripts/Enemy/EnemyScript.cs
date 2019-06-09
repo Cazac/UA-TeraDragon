@@ -72,7 +72,7 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Enemy 2D:" + collision.name);
+        Debug.Log("Enemy:" + collision.name);
         if (collision.transform.GetComponent<BaseNode>() != null)
         {
             Debug.Log("collision.transform.GetComponent<BaseNode>():" + (collision.transform.GetComponent<BaseNode>() == null));
