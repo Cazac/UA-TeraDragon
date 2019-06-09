@@ -7,9 +7,12 @@ using UnityEngine.Tilemaps;
 public class MapBound : ScriptableObject
 {
 
-    public int waveID;
-    public int positionX;
 
+
+
+
+    public int[] waveID;
+    public int[] positionX;
 
     public List<TileBase> NewTiles;
 
