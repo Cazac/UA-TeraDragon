@@ -56,6 +56,8 @@ public class CameraPanningCursor : MonoBehaviour
         }
 
         StartCoroutine(ReshiftCam(CameraBoundingX, CameraBoundingY));
+
+        SetCameraBounds(5);
     }
 
     /// <summary>
@@ -122,12 +124,10 @@ public class CameraPanningCursor : MonoBehaviour
     }
 
     /// <summary>
-    ///Main function to perform camera panning, function is called when camera is not out of play area bound, uses Vector3.Lerp()
+    ///     Main function to perform camera panning, function is called when camera is not out of play area bound, uses Vector3.Lerp()
     /// </summary>
     /// <example>
-    /// <code>
-    ///Vector3.Lerp(camera.transform.position, mousePosToWorld, cameraLerpSpeed*Time.deltaTime);
-    /// </code>
+    ///     Vector3.Lerp(camera.transform.position, mousePosToWorld, cameraLerpSpeed*Time.deltaTime);
     /// </example>
     private void TranslateWithMousePos()
     {
@@ -258,6 +258,26 @@ public class CameraPanningCursor : MonoBehaviour
     {
         Bounds bounds = playArea.GetComponent<Tilemap>().localBounds;
         return bounds.size;
+    }
+
+
+    ///////////////
+    /// <summary>
+    /// TO DO, Does not sync well with the given bounds, how to convert?
+    /// </summary>
+    ///////////////
+    public void SetCameraBounds(float boundRight)
+    {
+        //Vector3 tileSize = GetTileMapSize(playArea.GetComponent<Tilemap>());
+
+
+        //Multiple the base value by tile size
+        //boundRight = boundRight * 11.2f;
+        //print(boundRight);
+
+        //CameraBoundingX = new Vector2(-boundRight, boundRight);
+
+        //StartCoroutine(ReshiftCam(CameraBoundingX, CameraBoundingY));
     }
 }
 
