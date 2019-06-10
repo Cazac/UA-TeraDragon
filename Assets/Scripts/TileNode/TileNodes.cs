@@ -147,6 +147,8 @@ public class TileNodes : MonoBehaviour
             {
                 TileBase tb = uniqueTilemap.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
 
+                print(x + " " + y);
+
                 if (tb != null)
                 {
                     Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
@@ -154,6 +156,8 @@ public class TileNodes : MonoBehaviour
                     node = null;
 
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
+
+                    print(name);
 
                     // checks if tile is found in walkable
                     foreach (Tile tile in WalkableTiles)
