@@ -89,14 +89,14 @@ namespace WaveSystem
                 }
             }
 
-            for(int i = 0; i < tiles.pathData.paths.Count; i++)
-            {
-                waves[i].Paths = new List<List<WorldTile>>()
-                    {
-                        tiles.pathData.paths[i]
-                    };
-            }
-
+            //for(int i = 0; i < tiles.pathData.paths.Count; i++)
+            //{
+               // waves[i].Paths = new List<List<WorldTile>>()
+                   // {
+                      //  tiles.pathData.paths[i]
+                   // };
+            //}
+        
             currentWave = waves[0];
             MakeParent();
 
@@ -197,6 +197,9 @@ namespace WaveSystem
                     }
 
                     EnableSpawning = false;
+
+
+                    print(currentTimer.WaveTimer);
 
                     //Move on to the next scriptable wave in waves array
                     if (!AllWaveCompleted() && currentTimer.WaveTimer <= 0)
