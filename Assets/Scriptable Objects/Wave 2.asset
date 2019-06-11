@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63481b4f989909643afd3e309ea1f415, type: 3}
-  m_Name: Wave
+  m_Name: Wave 2
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 5954217775785473978, guid: 6ab4dc02809beb4489972762b75f5fc8,
+  EnemyPrefab: {fileID: 5183016958187622406, guid: a657b833a5a8ebf4fab21ec3d8c8d087,
     type: 3}
   EnemiesPrefab: []
   listWapper: {fileID: 0}

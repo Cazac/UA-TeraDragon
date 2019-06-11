@@ -15,15 +15,22 @@ public class WaveSystemTimer : MonoBehaviour, WaveInterface
     public void UIConnection(WaveManager waveManager)
     {
         if(waveManager.EnableSpawning)
-            this.GetComponent<Text>().text = "Wave " + waveManager.WaveIndex + " " + waveManager.WaveTimer;
+        {
+            //TO DO Fix the last bit as a it casuses arrors due to invalid reff
+            gameObject.GetComponent<Text>().text = "Wave " +  waveManager.WaveIndex + " " /*+  waveManager.WaveTimer */;
+        }
 
         if(!waveManager.EnableSpawning)
-            this.GetComponent<Text>().text = "Count down to next wave " + waveManager.TimeUntilNextWave;
+        {
+            gameObject.GetComponent<Text>().text = "Count down to next wave " + waveManager.TimeUntilNextWave;
+        }
     }
 
     private void Update() 
     {
         if (waveManager != null)
+        {
             UIConnection(waveManager);
+        }
     }
 }
