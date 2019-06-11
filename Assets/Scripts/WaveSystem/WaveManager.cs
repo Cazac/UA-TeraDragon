@@ -151,7 +151,7 @@ namespace WaveSystem
         /// </summary>
         private void MakeParent()
         {
-            Instantiate(new GameObject(WAVE_PARENT_NAME));
+            new GameObject(WAVE_PARENT_NAME);
         }
 
 
