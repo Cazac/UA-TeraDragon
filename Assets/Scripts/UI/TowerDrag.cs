@@ -70,8 +70,11 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
+        int playAreaBorder = 5;
 
-        if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
+        print(raycastMouse);
+
+        if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity, playAreaBorder))
         {
 
             //  TO DO   // - Will break on Next Pass
