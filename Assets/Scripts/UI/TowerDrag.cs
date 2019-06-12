@@ -75,10 +75,13 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         {
 
             //  TO DO   // - Will break on Next Pass
-            string tileLayerParent = hit.collider.gameObject.transform.parent.gameObject.name;
+            string tileLayer = hit.collider.gameObject.transform.parent.gameObject.name;
+
+
+            print(tileLayer);
 
             //  TO DO   // - HARD CODED ???
-            if (tileLayerParent == "Parent_Ground")
+            if (tileLayer == "Parent_Ground")
             {
                 currentTower.transform.position = hit.collider.gameObject.transform.position;
                 LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
