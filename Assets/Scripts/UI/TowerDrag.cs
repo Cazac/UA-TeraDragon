@@ -38,8 +38,6 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         //Get Reff To Tower
         //Attach to Cursor
 
-        print("Start Dragging At: " + Camera.main.ScreenToWorldPoint(Input.mousePosition));
-
         currentTower = Instantiate(towerPrefab);
     }
 
@@ -52,16 +50,16 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public void OnDrag(PointerEventData eventData)
     {
         //currentTower.transform.position = cursor.transform.position;
-        Vector3 test = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        test.z = 0;
+        Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        cursorPosition.z = 0;
 
-        currentTower.transform.position = test;
+        currentTower.transform.position = cursorPosition;
     }
 
 
     ///////////////
     /// <summary>
-    /// Undocumented
+    /// Raycast the tilemap looking for a node under the mouse when the tower is dropped onto the map, validation check the tile then add it to the map. If not valid remove the tower from the cursor.
     /// </summary>
     ///////////////
     public void OnEndDrag(PointerEventData eventData)
@@ -70,22 +68,20 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        int playAreaBorder = 5;
 
-        print(raycastMouse);
-
-        if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity, playAreaBorder))
+        //Check Raycast for any hit with COLLIDERS
+        if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
         {
-
-            //  TO DO   // - Will break on Next Pass
+            //Check node name
             string tileLayer = hit.collider.gameObject.transform.parent.gameObject.name;
 
 
             print(tileLayer);
 
             //  TO DO   // - HARD CODED ???
-            if (tileLayer == "Parent_Ground")
+            if (tileLayer == "Parent_Ground" || tileLayer == "Parent_WalkableTiles" || tileLayer == "Parent_UnwalkableTiles")
             {
+                //Leave the Tower on the node, Call spawner later for init
                 currentTower.transform.position = hit.collider.gameObject.transform.position;
                 LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
             }
@@ -100,11 +96,6 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             print("Destroy Tower");
             Destroy(currentTower);
         }
-
-
-        //Find Nearest Node
-        //No Node Then Refund
-        //if Node Call Tower Spawner on Node
     }
 
 
