@@ -8,7 +8,7 @@ namespace WaveSystem
     public class WaveManager : MonoBehaviour
     {
         public TileNodes tiles;
-        
+
         // public GameObject[] spawnEnemies; //TODO: Reimplement this!
         public GameObject spawnSingleEnemy;
         public bool enableSpawning;
@@ -33,6 +33,9 @@ namespace WaveSystem
         private Timer currentTimer;
         private int waveIndex = 0;
 
+        private TileNodes tileNodes;
+
+        private CursorSelection cursorSelection;
         public int WaveIndex
         {
             get => waveIndex;
@@ -67,20 +70,50 @@ namespace WaveSystem
 
         private void Start()
         {
-            // for testing purposes
-            // gives waves paths form shortest to longest
+            tileNodes = GameObject.FindObjectOfType<TileNodes>();
+            //Cached CursorSelection
+            cursorSelection = GameObject.FindObjectOfType<CursorSelection>();
+
             for (int i = 0; i < waves.Length; i++)
             {
-
                 if (i >= tiles.pathData.paths.Count)
                 {
-                       waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[tiles.pathData.paths.Count-1] };
+                    waves[i].Paths = new List<List<WorldTile>>()
+                    {
+                        tiles.pathData.paths[tiles.pathData.paths.Count-1]
+                    };
                 }
                 else
                 {
-                       waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
+                    waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
                 }
             }
+
+            //for(int i = 0; i < tiles.pathData.paths.Count; i++)
+            //{
+               // waves[i].Paths = new List<List<WorldTile>>()
+                   // {
+                      //  tiles.pathData.paths[i]
+                   // };
+            //}
+        
+            currentWave = waves[0];
+            MakeParent();
+
+            StartCoroutine(SpawnSingleEnemyPerWave());
+            // // for testing purposes
+            // // gives waves paths form shortest to longest
+            //for (int i = 0; i < waves.Length; i++)
+            //{
+            //    if (i >= tiles.pathData.paths.Count)
+            //    {
+            //     //   waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[tiles.pathData.paths.Count-1] };
+            //    }
+            //    else
+            //    {
+            //     //   waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
+            //    }
+            //}
 
             currentWave = waves[0];
             MakeParent();
@@ -118,7 +151,7 @@ namespace WaveSystem
         /// </summary>
         private void MakeParent()
         {
-            Instantiate(new GameObject(WAVE_PARENT_NAME));
+            new GameObject(WAVE_PARENT_NAME);
         }
 
 
@@ -165,6 +198,9 @@ namespace WaveSystem
 
                     EnableSpawning = false;
 
+
+                    print(currentTimer.WaveTimer);
+
                     //Move on to the next scriptable wave in waves array
                     if (!AllWaveCompleted() && currentTimer.WaveTimer <= 0)
                     {
@@ -201,7 +237,13 @@ namespace WaveSystem
             }
             return false;
         }
+
+        public void WaveStartPosSelection()
+        {
+        }
+
     }
+
 
 
     /// <summary>

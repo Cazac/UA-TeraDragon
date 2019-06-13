@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/GameOverScript.cs.meta
 guid: 08fd2039ac5c7de4490622c6b38321d2
 MonoImporter:
+=======
+guid: 8e7e8f5a82a3a134e91c54efd2274ea9
+folderAsset: yes
+DefaultImporter:
+>>>>>>> dev:Assets/TextMesh Pro/Documentation.meta
   externalObjects: {}
   serializedVersion: 2
   defaultReferences: []

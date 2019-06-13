@@ -13,7 +13,8 @@ using UnityEngine.Tilemaps;
 /// 
 /// </summary>
 ///////////////
-
+[ExecuteInEditMode]
+[Serializable]
 public class TileNodes : MonoBehaviour
 {
     [Header("Main Grid / Tilemap")]
@@ -35,8 +36,8 @@ public class TileNodes : MonoBehaviour
     //  TO DO   // - Used for 
     [Header("Selected Nodes")]
     [SerializeField]
-    private List<GameObject> selectedNode = new List<GameObject>();
-    public List<GameObject> SelectedNode { get => selectedNode; set => selectedNode = value; }
+    private List<GameObject> selectedNodes = new List<GameObject>();
+    public List<GameObject> SelectedNodes { get => selectedNodes; set => selectedNodes = value; }
 
     // Sorted 2D array of nodes
     public GameObject[,] nodes;
@@ -152,7 +153,7 @@ public class TileNodes : MonoBehaviour
                     Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
 
                     node = null;
-
+         
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
                     if (name == "Temp Base Tile")
@@ -344,5 +345,12 @@ public class TileNodes : MonoBehaviour
         }
     }
 
+    public void SetSpawnStartPosFromSelected(ref List<WorldTile> permanentSpawnPoints, ref List<GameObject> selectedNodes)
+    {
+        foreach (GameObject selectedNode in selectedNodes)
+        {
+            permanentSpawnPoints.Add(selectedNode.GetComponent<WorldTile>());
+        }
+    }
 
 }
