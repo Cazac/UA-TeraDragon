@@ -7,6 +7,11 @@ public class PlayerStats : MonoBehaviour
     public int MaxLives;
     public int CurrentLives;
 
+    private void Start()
+    {
+        CurrentLives = MaxLives;
+    }
+
     public void RemoveLife(int i)
     {
         CurrentLives -= i;
@@ -16,7 +21,7 @@ public class PlayerStats : MonoBehaviour
             CurrentLives = 0;
         }
 
-        if(CurrentLives <= 0)
+        if(CurrentLives == 0)
         {
             GameOver();
         }

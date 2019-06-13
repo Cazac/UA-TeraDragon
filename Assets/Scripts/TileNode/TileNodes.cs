@@ -242,9 +242,13 @@ public class TileNodes : MonoBehaviour
             wt.name = "NODE " + wt.gridX.ToString() + " : " + wt.gridY.ToString();
             nodes[wt.gridX, wt.gridY] = g;
             if (wt.gridX > maxGridX)
+            {
                 maxGridX = wt.gridX;
+                
+            }
+            
         }
-
+        print("MaxGridx:" + maxGridX);
         unsortedNodes.Clear();
     }
     int maxGridX = 0;
