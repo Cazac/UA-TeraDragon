@@ -69,7 +69,7 @@ public class EnemyScript : MonoBehaviour
 
     }
     
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Enemy:" + collision.name);
@@ -78,6 +78,7 @@ public class EnemyScript : MonoBehaviour
             Debug.Log("collision.transform.GetComponent<BaseNode>():" + (collision.transform.GetComponent<BaseNode>() == null));
 
             collision.transform.GetComponent<BaseNode>().BaseIsHit(1);
+                Destroy(gameObject);
         }
     }
     

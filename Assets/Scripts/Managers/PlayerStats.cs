@@ -16,10 +16,9 @@ public class PlayerStats : MonoBehaviour
             CurrentLives = 0;
         }
 
-        if(CurrentLives == 0)
+        if(CurrentLives <= 0)
         {
-            GameOverScript gos = (GameOverScript)FindObjectOfType(typeof(GameOverScript));
-            gos.TurnOnGameOver();
+            GameOver();
         }
 
     }
@@ -31,6 +30,8 @@ public class PlayerStats : MonoBehaviour
 
     public void GameOver()
     {
+        GameOverScript gos = (GameOverScript) FindObjectOfType(typeof(GameOverScript));
+        gos.TurnOnGameOver();
         Debug.Log("Game over man, Game over");
     }
 
