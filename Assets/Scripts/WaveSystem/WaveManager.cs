@@ -115,10 +115,10 @@ namespace WaveSystem
             //    }
             //}
 
-            //currentWave = waves[0];
-            //MakeParent();
+            currentWave = waves[0];
+            MakeParent();
 
-            //StartCoroutine(SpawnSingleEnemyPerWave());
+            StartCoroutine(SpawnSingleEnemyPerWave());
         }
 
         private void Update()

@@ -13,7 +13,7 @@ public class TileNodesEditor : Editor
         TileNodes myScript = (TileNodes) target;
         if (GUILayout.Button("Build Map"))
         {
-            myScript.Editior_BuildTable();
+            myScript.BuildTable();
             
         }
         if (GUILayout.Button("Get List"))
