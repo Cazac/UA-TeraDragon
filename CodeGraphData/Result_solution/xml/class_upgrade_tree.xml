@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_upgrade_tree" kind="class" prot="public">
+    <compoundname>UpgradeTree</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ScriptableObject</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_upgrade_tree_1a5e3cb67ad80be39d260f009c018fecae" prot="public" static="no" mutable="no">
+        <type><ref refid="class_upgrade_node" kindref="compound">UpgradeNode</ref>[]</type>
+        <definition>UpgradeNode [] UpgradeTree.tree</definition>
+        <argsstring></argsstring>
+        <name>tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/UpgradeTree.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/UpgradeTree.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_upgrade_tree_1a5ba19043ebbecfc5b6ec055e8dedd9cf" compoundref="_upgrade_tree_8cs" startline="23" endline="32">GetActivateAbilities</referencedby>
+        <referencedby refid="class_upgrade_tree_1ac0fb5815446cafdedf58c5161386e8a9" compoundref="_upgrade_tree_8cs" startline="11" endline="21">GetTotalStatsUpgrade</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_upgrade_tree_1ac0fb5815446cafdedf58c5161386e8a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float UpgradeTree.GetTotalStatsUpgrade</definition>
+        <argsstring>(StatsCategory category)</argsstring>
+        <name>GetTotalStatsUpgrade</name>
+        <param>
+          <type><ref refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddd" kindref="member">StatsCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/UpgradeTree.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/UpgradeTree.cs" bodystart="11" bodyend="21"/>
+        <references refid="class_upgrade_node_1a2dd3d766f2689e12e9c28ff4da02e321" compoundref="_upgrade_node_8cs" startline="20" endline="22">UpgradeNode.GetUpgradeType</references>
+        <references refid="class_upgrade_tree_1a5e3cb67ad80be39d260f009c018fecae" compoundref="_upgrade_tree_8cs" startline="9">tree</references>
+      </memberdef>
+      <memberdef kind="function" id="class_upgrade_tree_1a5ba19043ebbecfc5b6ec055e8dedd9cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; UpgradeTree.GetActivateAbilities</definition>
+        <argsstring>()</argsstring>
+        <name>GetActivateAbilities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/UpgradeTree.cs" line="23" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/UpgradeTree.cs" bodystart="23" bodyend="32"/>
+        <references refid="class_upgrade_node_1a2dd3d766f2689e12e9c28ff4da02e321" compoundref="_upgrade_node_8cs" startline="20" endline="22">UpgradeNode.GetUpgradeType</references>
+        <references refid="class_upgrade_tree_1a5e3cb67ad80be39d260f009c018fecae" compoundref="_upgrade_tree_8cs" startline="9">tree</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="135">
+        <label>UpgradeTree</label>
+        <link refid="class_upgrade_tree"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="136">
+        <label>ScriptableObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="139">
+        <label>UpgradeNode</label>
+        <link refid="class_upgrade_node"/>
+        <childnode refid="138" relation="public-inheritance">
+        </childnode>
+        <childnode refid="139" relation="usage">
+          <edgelabel>necessaryNodes</edgelabel>
+        </childnode>
+      </node>
+      <node id="137">
+        <label>UpgradeTree</label>
+        <link refid="class_upgrade_tree"/>
+        <childnode refid="138" relation="public-inheritance">
+        </childnode>
+        <childnode refid="139" relation="usage">
+          <edgelabel>tree</edgelabel>
+        </childnode>
+      </node>
+      <node id="138">
+        <label>ScriptableObject</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/UpgradeTree.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/UpgradeTree.cs" bodystart="7" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_upgrade_tree_1a5ba19043ebbecfc5b6ec055e8dedd9cf" prot="public" virt="non-virtual"><scope>UpgradeTree</scope><name>GetActivateAbilities</name></member>
+      <member refid="class_upgrade_tree_1ac0fb5815446cafdedf58c5161386e8a9" prot="public" virt="non-virtual"><scope>UpgradeTree</scope><name>GetTotalStatsUpgrade</name></member>
+      <member refid="class_upgrade_tree_1a5e3cb67ad80be39d260f009c018fecae" prot="public" virt="non-virtual"><scope>UpgradeTree</scope><name>tree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

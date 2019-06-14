@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_8998884d9f10414bed60e5d1d6e9013e" kind="dir">
+    <compoundname>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts</compoundname>
+    <innerfile refid="_back_ground_pan_around_8cs">BackGroundPanAround.cs</innerfile>
+    <innerfile refid="_particle_controller_8cs">ParticleController.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/"/>
+  </compounddef>
+</doxygen>

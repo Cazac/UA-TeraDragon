@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_9b0ece36241103ddd5e2e4f9d8db92d0" kind="dir">
+    <compoundname>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts</compoundname>
+    <innerdir refid="dir_24f99c80f880cec65c3c5399f5520f6c">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts</innerdir>
+    <innerfile refid="_enemy_data_8cs">EnemyData.cs</innerfile>
+    <innerfile refid="_path_wrapper_8cs">PathWrapper.cs</innerfile>
+    <innerfile refid="_projectile_data_8cs">ProjectileData.cs</innerfile>
+    <innerfile refid="_scriptable_object_utility_8cs">ScriptableObjectUtility.cs</innerfile>
+    <innerfile refid="_tower_data_8cs">TowerData.cs</innerfile>
+    <innerfile refid="_wave_8cs">Wave.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/"/>
+  </compounddef>
+</doxygen>

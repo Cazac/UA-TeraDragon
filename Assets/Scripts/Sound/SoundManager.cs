@@ -9,7 +9,9 @@ class SoundManager : MonoBehaviour
 {
     public AudioSource mainAudioSource;
     public SoundObject[] soundClips;
-    private List<GameObject> uiGeneratedSounds = new List<GameObject>();
+    //private List<GameObject> uiGeneratedSounds = new List<GameObject>();
+
+    private AudioClip currentClip;
 
     private void Update()
     {
@@ -24,7 +26,7 @@ class SoundManager : MonoBehaviour
         audioEvent.GetComponent<AudioSource>().Play();
         AutoDestruct autoDestruct = audioEvent.AddComponent<AutoDestruct>();
         
-        uiGeneratedSounds.Add(audioEvent);
+        //uiGeneratedSounds.Add(audioEvent);
      }
 
     private void LoopThroughSoundList(SoundObject[] clips)
@@ -34,7 +36,7 @@ class SoundManager : MonoBehaviour
             if (clip.SoundName.Contains("Menu") && SceneManager.GetActiveScene().name.Contains("Menu"))
                 PlaySoundByName(clip);
 
-            if (clip.SoundName.Contains("MainGame") && SceneManager.GetActiveScene().name.Contains("MainGame"))
+            else if (clip.SoundName.Contains("MainGame") && SceneManager.GetActiveScene().name.Contains("MainGame"))
                 PlaySoundByName(clip);
         }
     }

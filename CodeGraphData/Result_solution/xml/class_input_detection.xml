@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_input_detection" kind="class" prot="public">
+    <compoundname>InputDetection</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_input_detection_1ac8ed2cac98caa1d0f952630ebec4bf9a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool InputDetection.isSwiping</definition>
+        <argsstring></argsstring>
+        <name>isSwiping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" bodystart="7" bodyend="-1"/>
+        <referencedby refid="class_input_detection_1a7e1ced5e8db1bf1a0dd266f6acd09f97" compoundref="_input_detection_8cs" startline="19" endline="39">DetectingSwipe</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_input_detection_1a92b215dade834fe699a81611d944eac2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float InputDetection.deltaSwipe</definition>
+        <argsstring></argsstring>
+        <name>deltaSwipe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_input_detection_1a7e1ced5e8db1bf1a0dd266f6acd09f97" compoundref="_input_detection_8cs" startline="19" endline="39">DetectingSwipe</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_input_detection_1a757624836e5e69754f0f5d96afe672c7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool InputDetection.isKeyboardInput</definition>
+        <argsstring></argsstring>
+        <name>isKeyboardInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_input_detection_1a33f79b4aa6ce7d0d2799d525b417918d" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 InputDetection.firstMousePos</definition>
+        <argsstring></argsstring>
+        <name>firstMousePos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_input_detection_1a7e1ced5e8db1bf1a0dd266f6acd09f97" compoundref="_input_detection_8cs" startline="19" endline="39">DetectingSwipe</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_input_detection_1a8d4a14085d3a4e6d945aab25dddf85a9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>bool</type>
+        <definition>bool InputDetection.IsSwiping</definition>
+        <argsstring></argsstring>
+        <name>IsSwiping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_input_detection_1a7be977662f89a7c2d74d982c9af1c674" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>float</type>
+        <definition>float InputDetection.DeltaSwipe</definition>
+        <argsstring></argsstring>
+        <name>DeltaSwipe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_camera_panning_cursor_1ae438a598214e661cccca4798abe87dc5" compoundref="_camera_panning_cursor_8cs" startline="158" endline="171">CameraPanningCursor.TranslateWithMousePos</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_input_detection_1af281ecbd28d3f638553ec81c355c502d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool InputDetection.IsKeyboardInput</definition>
+        <argsstring></argsstring>
+        <name>IsKeyboardInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_input_detection_1a88a00ed4234fc9d96456fcb59ea7e1e0" compoundref="_input_detection_8cs" startline="42" endline="76">DetectingKeyboardInputEvent</referencedby>
+        <referencedby refid="class_camera_panning_cursor_1afe648ec2e57ab6385fcae2fdff56c5f9" compoundref="_camera_panning_cursor_8cs" startline="122" endline="142">CameraPanningCursor.Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_input_detection_1a7e1ced5e8db1bf1a0dd266f6acd09f97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputDetection.DetectingSwipe</definition>
+        <argsstring>()</argsstring>
+        <name>DetectingSwipe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" bodystart="19" bodyend="39"/>
+        <references refid="class_input_detection_1a92b215dade834fe699a81611d944eac2" compoundref="_input_detection_8cs" startline="9">deltaSwipe</references>
+        <references refid="class_input_detection_1a33f79b4aa6ce7d0d2799d525b417918d" compoundref="_input_detection_8cs" startline="16">firstMousePos</references>
+        <references refid="class_input_detection_1ac8ed2cac98caa1d0f952630ebec4bf9a" compoundref="_input_detection_8cs" startline="7">isSwiping</references>
+      </memberdef>
+      <memberdef kind="function" id="class_input_detection_1a88a00ed4234fc9d96456fcb59ea7e1e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String InputDetection.DetectingKeyboardInputEvent</definition>
+        <argsstring>()</argsstring>
+        <name>DetectingKeyboardInputEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" line="42" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" bodystart="42" bodyend="76"/>
+        <references refid="class_input_detection_1af281ecbd28d3f638553ec81c355c502d" compoundref="_input_detection_8cs" startline="13">IsKeyboardInput</references>
+        <referencedby refid="class_camera_panning_cursor_1a09b25fffa7a251a08969d5b373984934" compoundref="_camera_panning_cursor_8cs" startline="208" endline="221">CameraPanningCursor.TranslateWithKeyboard</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_input_detection_1af83989ead0d3e78a6c7f9ce7b32e01b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String InputDetection.BeginClickEvent</definition>
+        <argsstring>()</argsstring>
+        <name>BeginClickEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Detect if left or right mouse button is pressed </para><para>returns&gt;String stating whhich event has been captured(click, press, scroll,...)</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" line="82" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" bodystart="82" bodyend="96"/>
+        <referencedby refid="class_camera_panning_cursor_1afe648ec2e57ab6385fcae2fdff56c5f9" compoundref="_camera_panning_cursor_8cs" startline="122" endline="142">CameraPanningCursor.Update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" line="5" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils/InputDetection.cs" bodystart="4" bodyend="97"/>
+    <listofallmembers>
+      <member refid="class_input_detection_1af83989ead0d3e78a6c7f9ce7b32e01b0" prot="public" virt="non-virtual"><scope>InputDetection</scope><name>BeginClickEvent</name></member>
+      <member refid="class_input_detection_1a92b215dade834fe699a81611d944eac2" prot="private" virt="non-virtual"><scope>InputDetection</scope><name>deltaSwipe</name></member>
+      <member refid="class_input_detection_1a7be977662f89a7c2d74d982c9af1c674" prot="public" virt="non-virtual"><scope>InputDetection</scope><name>DeltaSwipe</name></member>
+      <member refid="class_input_detection_1a88a00ed4234fc9d96456fcb59ea7e1e0" prot="public" virt="non-virtual"><scope>InputDetection</scope><name>DetectingKeyboardInputEvent</name></member>
+      <member refid="class_input_detection_1a7e1ced5e8db1bf1a0dd266f6acd09f97" prot="public" virt="non-virtual"><scope>InputDetection</scope><name>DetectingSwipe</name></member>
+      <member refid="class_input_detection_1a33f79b4aa6ce7d0d2799d525b417918d" prot="private" virt="non-virtual"><scope>InputDetection</scope><name>firstMousePos</name></member>
+      <member refid="class_input_detection_1a757624836e5e69754f0f5d96afe672c7" prot="private" virt="non-virtual"><scope>InputDetection</scope><name>isKeyboardInput</name></member>
+      <member refid="class_input_detection_1af281ecbd28d3f638553ec81c355c502d" prot="public" virt="non-virtual"><scope>InputDetection</scope><name>IsKeyboardInput</name></member>
+      <member refid="class_input_detection_1ac8ed2cac98caa1d0f952630ebec4bf9a" prot="private" virt="non-virtual"><scope>InputDetection</scope><name>isSwiping</name></member>
+      <member refid="class_input_detection_1a8d4a14085d3a4e6d945aab25dddf85a9" prot="public" virt="non-virtual"><scope>InputDetection</scope><name>IsSwiping</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
