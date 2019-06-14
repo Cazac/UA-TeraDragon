@@ -14,6 +14,7 @@ using UnityEngine.Tilemaps;
 /// </summary>
 ///////////////
 [ExecuteInEditMode]
+[Serializable]
 public class TileNodes : MonoBehaviour
 {
     [Header("Main Grid / Tilemap")]
@@ -59,7 +60,7 @@ public class TileNodes : MonoBehaviour
 
     //////////////////////////////////////////////////////////
 
-    private void Awake() { }
+    private void Awake() { Editior_BuildTable(); }
     private void Start() { }
     private void Update() { }
 
@@ -154,7 +155,7 @@ public class TileNodes : MonoBehaviour
                     Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
 
                     node = null;
-
+         
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
                     print(name);
