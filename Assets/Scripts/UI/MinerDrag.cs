@@ -1,8 +1,9 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Tilemaps;
 
 ///////////////
 /// <summary>
@@ -12,14 +13,14 @@ using UnityEngine.EventSystems;
 /// </summary>
 ///////////////
 
-public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-   
-    public GameObject towerPrefab;
-    private GameObject currentTower;
 
-    // TO DO ???
-    public int tileLayer;
+    public GameObject minerPrefab;
+    private GameObject currentMiner;
+
+    //Permitted Tiles
+    public TileBase[] validTileTypes;
 
     /////////////////////////////////////////////////////////////////
 
@@ -31,39 +32,32 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     ///////////////
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // TO DO ???
-        //Check Money
-        //Charge PLyaer
-        //Spawn Tower UI
-        //Get Reff To Tower
-        //Attach to Cursor
-
-        currentTower = Instantiate(towerPrefab);
+        currentMiner = Instantiate(minerPrefab);
     }
 
 
     ///////////////
     /// <summary>
-    /// Undocumented
+    /// Every time the mouse moves, match the new dragged miner to the mouse position
     /// </summary>
     ///////////////
     public void OnDrag(PointerEventData eventData)
     {
-        //currentTower.transform.position = cursor.transform.position;
         Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         cursorPosition.z = 0;
 
-        currentTower.transform.position = cursorPosition;
+
+        currentMiner.transform.position = cursorPosition;
     }
 
 
     ///////////////
     /// <summary>
-    /// Raycast the tilemap looking for a node under the mouse when the tower is dropped onto the map, validation check the tile then add it to the map. If not valid remove the tower from the cursor.
+    /// Raycast the tilemap looking for a node under the mouse when the tower is dropped onto the map, validation check the tile then add it to the map. If not valid remove the miner from the cursor.
     /// </summary>
     ///////////////
     public void OnEndDrag(PointerEventData eventData)
-    {    
+    {
         //Get current mouse raycast
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -72,29 +66,37 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         //Check Raycast for any hit with COLLIDERS
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
         {
-            //Check node name
-            string tileLayer = hit.collider.gameObject.transform.parent.gameObject.name;
+            //Check hit tile name
+            string tileTypeName = hit.collider.gameObject.transform.parent.gameObject.name;
 
 
-            print(tileLayer);
+            print(tileTypeName);
 
-            //  TO DO   // - HARD CODED ???
-            if (tileLayer == "Parent_Ground" || tileLayer == "Parent_WalkableTiles" || tileLayer == "Parent_UnwalkableTiles")
+
+            foreach (TileBase validTile in validTileTypes)
             {
-                //Leave the Tower on the node, Call spawner later for init
-                currentTower.transform.position = hit.collider.gameObject.transform.position;
-                LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
-            }
-            else
-            {
-                print("Destroy Tower");
-                Destroy(currentTower);
+                if (tileTypeName == validTile.name)
+                {
+                    //Leave the Miner on the node, Call spawner later for init
+                    currentMiner.transform.position = hit.collider.gameObject.transform.position;
+                    LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
+
+
+                    //Spawn Miner TO DO
+
+                    return;
+                }
+
+                //No Match
+                print("Destroy Miner");
+                Destroy(currentMiner);
             }
         }
         else
         {
-            print("Destroy Tower");
-            Destroy(currentTower);
+            //No Raycast
+            print("Destroy Miner");
+            Destroy(currentMiner);
         }
     }
 
