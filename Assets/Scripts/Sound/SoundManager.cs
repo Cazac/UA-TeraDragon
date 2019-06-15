@@ -7,7 +7,9 @@ using UnityEngine.UI;
 
 class SoundManager : MonoBehaviour
 {
-    public AudioSource mainAudioSource;
+    public AudioSource mainAudioSourceSoundtrack;
+    public AudioSource mainAudioSourceUI;
+
     public SoundObject[] soundClips;
     //private List<GameObject> uiGeneratedSounds = new List<GameObject>();
 
@@ -15,26 +17,29 @@ class SoundManager : MonoBehaviour
 
     private void Update()
     {
-        if (!GameObject.FindObjectOfType<AudioSource>().isPlaying)
+        DontDestroyOnLoad(this);
+        if (!mainAudioSourceSoundtrack.GetComponent<AudioSource>().isPlaying)
             LoopThroughSoundList(soundClips);
     }
 
     public void PlayOnUIClick(SoundObject clip)
     {
-        GameObject audioEvent = new GameObject("Audio Event_" + clip.SoundName);
-        audioEvent.AddComponent<AudioSource>().clip = clip.AudioClip;
-        audioEvent.GetComponent<AudioSource>().Play();
-        AutoDestruct autoDestruct = audioEvent.AddComponent<AutoDestruct>();
-        
-        //uiGeneratedSounds.Add(audioEvent);
-     }
+        if (mainAudioSourceUI.GetComponent<AudioSource>().isPlaying)
+            mainAudioSourceUI.clip = null;
+        mainAudioSourceUI.clip = clip.AudioClip;
+
+        mainAudioSourceUI.Play();
+    }
 
     private void LoopThroughSoundList(SoundObject[] clips)
     {
         foreach (var clip in clips)
         {
+            Debug.Log("Looping");
             if (clip.SoundName.Contains("Menu") && SceneManager.GetActiveScene().name.Contains("Menu"))
+            {
                 PlaySoundByName(clip);
+            }
 
             else if (clip.SoundName.Contains("MainGame") && SceneManager.GetActiveScene().name.Contains("MainGame"))
                 PlaySoundByName(clip);
@@ -43,12 +48,23 @@ class SoundManager : MonoBehaviour
 
     public void PlaySoundByName(SoundObject audioClip)
     {
-       mainAudioSource.clip = audioClip.AudioClip;
-       mainAudioSource.volume = audioClip.Volume;
-       mainAudioSource.pitch = audioClip.Pitch;
+       mainAudioSourceSoundtrack.clip = audioClip.AudioClip;
+       mainAudioSourceSoundtrack.volume = audioClip.Volume;
+       mainAudioSourceSoundtrack.pitch = audioClip.Pitch;
 
-       mainAudioSource.loop = true;
-       mainAudioSource.Play();
+       mainAudioSourceSoundtrack.loop = true;
+       mainAudioSourceSoundtrack.Play();
     }
+
+    public void VolumeChangeSoundtrack(Slider slider)
+    {
+        mainAudioSourceSoundtrack.volume = slider.value;
+    }
+
+    public void VolumeChangeUI(Slider slider)
+    {
+        mainAudioSourceUI.volume = slider.value;
+    }
+
 }
 
