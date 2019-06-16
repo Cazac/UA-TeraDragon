@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_tower_data" kind="class" prot="public">
+    <compoundname>TowerData</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ScriptableObject</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_tower_data_1ae7c7d327b1624094114fd772704e353d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TowerData.TowerLevel</definition>
+        <argsstring></argsstring>
+        <name>TowerLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tower_data_1a25e266b092dfa6ec263ec0eaa3ab12db" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TowerData.BaseAttack</definition>
+        <argsstring></argsstring>
+        <name>BaseAttack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tower_data_1abbcc2685678bd2b87920a25ed0e4501f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TowerData.BaseRange</definition>
+        <argsstring></argsstring>
+        <name>BaseRange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tower_data_1a2d127aa058ce41013fd988231729affe" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TowerData.BaseAttackSpeed</definition>
+        <argsstring></argsstring>
+        <name>BaseAttackSpeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tower_data_1a56436388c773b0f97505ffef1af36f1b" prot="public" static="no" mutable="no">
+        <type>Sprite</type>
+        <definition>Sprite TowerData.towerSprite</definition>
+        <argsstring></argsstring>
+        <name>towerSprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tower_data_1a914dd90f022d05fd4f501a0eb47d7822" prot="public" static="no" mutable="no">
+        <type><ref refid="class_projectile" kindref="compound">Projectile</ref></type>
+        <definition>Projectile TowerData.projectile</definition>
+        <argsstring></argsstring>
+        <name>projectile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tower_data_1ae785b01d7b9d4b01c037da56033b365b" prot="public" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] TowerData.Effects</definition>
+        <argsstring></argsstring>
+        <name>Effects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="113">
+        <label>TowerData</label>
+        <link refid="class_tower_data"/>
+        <childnode refid="114" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="114">
+        <label>ScriptableObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="117">
+        <label>Projectile</label>
+        <link refid="class_projectile"/>
+        <childnode refid="118" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>TowerData</label>
+        <link refid="class_tower_data"/>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+        <childnode refid="117" relation="usage">
+          <edgelabel>projectile</edgelabel>
+        </childnode>
+      </node>
+      <node id="116">
+        <label>ScriptableObject</label>
+      </node>
+      <node id="118">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/TowerData.cs" bodystart="6" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_tower_data_1a25e266b092dfa6ec263ec0eaa3ab12db" prot="public" virt="non-virtual"><scope>TowerData</scope><name>BaseAttack</name></member>
+      <member refid="class_tower_data_1a2d127aa058ce41013fd988231729affe" prot="public" virt="non-virtual"><scope>TowerData</scope><name>BaseAttackSpeed</name></member>
+      <member refid="class_tower_data_1abbcc2685678bd2b87920a25ed0e4501f" prot="public" virt="non-virtual"><scope>TowerData</scope><name>BaseRange</name></member>
+      <member refid="class_tower_data_1ae785b01d7b9d4b01c037da56033b365b" prot="public" virt="non-virtual"><scope>TowerData</scope><name>Effects</name></member>
+      <member refid="class_tower_data_1a914dd90f022d05fd4f501a0eb47d7822" prot="public" virt="non-virtual"><scope>TowerData</scope><name>projectile</name></member>
+      <member refid="class_tower_data_1ae7c7d327b1624094114fd772704e353d" prot="public" virt="non-virtual"><scope>TowerData</scope><name>TowerLevel</name></member>
+      <member refid="class_tower_data_1a56436388c773b0f97505ffef1af36f1b" prot="public" virt="non-virtual"><scope>TowerData</scope><name>towerSprite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

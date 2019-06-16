@@ -10,7 +10,7 @@ using UnityEngine;
 /// </summary>
 ///////////////
 
-[RequireComponent(typeof(SphereCollider))]
+// [RequireComponent(typeof(2D))]
 public class WorldTile : MonoBehaviour
 {
     public int gridY;
@@ -25,6 +25,15 @@ public class WorldTile : MonoBehaviour
     public bool towering;
 
     public List<WorldTile> myNeighbours;
+
+
+
+    //General Crystal Values, Better place to put it ???
+
+    public float crystalValueRed;
+    public float crystalValueBlue;
+    public float crystalValueGreen;
+    public float crystalValueYellow;
 
     /////////////////////////////////////////////////////////////////
 
