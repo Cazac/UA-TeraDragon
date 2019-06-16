@@ -150,15 +150,14 @@ public class TileNodes : MonoBehaviour
             for (int y = -(nodes.GetLength(1)) - 1; y < nodes.GetLength(1) + 1; y++)
             {
                 TileBase tb = uniqueTilemap.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
-
-                print(x + " " + y);
+                
 
                 if (tb != null)
                 {
                     Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
 
                     node = null;
-         
+
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
                     print(name);
@@ -166,46 +165,38 @@ public class TileNodes : MonoBehaviour
                     // checks if tile is found in walkable
                     foreach (Tile tile in WalkableTiles)
                     {
-                        node = Instantiate(TileNodesPrefabs[2], nodePosition, Quaternion.identity, parentNodes[0].transform);
-
+                        if (name == tile.name)
+                        {
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                        }
                     }
-                    else
+                    // checks if walkable tile is a spawning tile
+                    foreach (Tile spTile in SpawnTiles)
                     {
-                        // checks if tile is found in walkable
-                        foreach (Tile tile in WalkableTiles)
+                        if (name == spTile.name)
                         {
-                            if (name == tile.name)
-                            {
-                                node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
-                            }
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                            permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
                         }
-                        // checks if walkable tile is a spawning tile
-                        foreach (Tile spTile in SpawnTiles)
-                        {
-                            if (name == spTile.name)
-                            {
-                                node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
-                                permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
-                            }
-                        }
-                        // checks if tile is found in unwalkable
-                        foreach (Tile tile in UnwalkableTiles)
-                        {
-                            if (name == tile.name)
-                            {
-                                node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
-                            }
-                        }
-                        // checks if tile is found in unwalkable
-                        foreach (Tile tile in TowerTiles)
-                        {
-                            if (name == tile.name)
-                            {
-                                node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
-                            }
-                        }
-
                     }
+                    // checks if tile is found in unwalkable
+                    foreach (Tile tile in UnwalkableTiles)
+                    {
+                        if (name == tile.name)
+                        {
+                            node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                        }
+                    }
+                    // checks if tile is found in unwalkable
+                    foreach (Tile tile in TowerTiles)
+                    {
+                        if (name == tile.name)
+                        {
+                            node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                        }
+                    }
+
+
 
                     if (node == null)
                     {
