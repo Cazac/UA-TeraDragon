@@ -35,6 +35,8 @@ public class CursorSelection : MonoBehaviour
 
     private void Update() => OnClickSelect();
 
+
+
     ///////////////
     /// <summary>
     /// Detects mouse click and performs raycast to a tile, if detected then turn that tile to the color black

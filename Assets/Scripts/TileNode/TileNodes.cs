@@ -33,10 +33,7 @@ public class TileNodes : MonoBehaviour
     public Tile[] UnwalkableTiles;
     public Tile[] SpawnTiles;
 
-    public Tile[] TowerTiles;
-    public Tile[] CrystalTiles;
-
-    //  TO DO   // - Used for ???
+    //  TO DO   // - Used for 
     [Header("Selected Nodes")]
     [SerializeField]
     private List<GameObject> selectedNodes = new List<GameObject>();
@@ -63,14 +60,15 @@ public class TileNodes : MonoBehaviour
 
     //////////////////////////////////////////////////////////
 
-    private void Awake() { BuildTable(); }
+    private void Awake() { Editior_BuildTable(); }
     private void Start() { }
     private void Update() { }
 
-    public void BuildTable()
+    public void Editior_BuildTable()
     {
         //   listWapper = new ListWapper();
         permanentSpawnPoints = new List<WorldTile>();
+        //  
         for (int i = 0; i < parentNodes.Length; i++)
         {
             if (parentNodes[i] != null)
@@ -117,7 +115,6 @@ public class TileNodes : MonoBehaviour
         int tableX = uniqueTilemap.cellBounds.size.x;
         int tableY = uniqueTilemap.cellBounds.size.y;
 
-
         nodes = new GameObject[tableX, tableY];
 
         // create nodes
@@ -151,8 +148,6 @@ public class TileNodes : MonoBehaviour
             {
                 TileBase tb = uniqueTilemap.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
 
-                print(x + " " + y);
-
                 if (tb != null)
                 {
                     Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
@@ -161,26 +156,28 @@ public class TileNodes : MonoBehaviour
          
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
-                    print(name);
-
                     // checks if tile is found in walkable
                     foreach (Tile tile in WalkableTiles)
                     {
-                        node = Instantiate(TileNodesPrefabs[2], nodePosition, Quaternion.identity, parentNodes[0].transform);
-
-                    }
-                    else
-                    {
-                        // checks if tile is found in walkable
-                        foreach (Tile tile in WalkableTiles)
+                        if (name == tile.name)
                         {
-                            if (name == tile.name)
-                            {
-                                node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
-                            }
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+
+
                         }
-                        // checks if walkable tile is a spawning tile
-                        foreach (Tile spTile in SpawnTiles)
+                    }// checks if walkable tile is a spawning tile
+                    foreach (Tile spTile in SpawnTiles)
+                    {
+                        if (name == spTile.name)
+                        {
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                            permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
+                        }
+                    }
+                    // checks if tile is found in unwalkable
+                    foreach (Tile tile in UnwalkableTiles)
+                    {
+                        if (name == tile.name)
                         {
                             node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
                             if(name == "Crystal Tile")
@@ -188,28 +185,11 @@ public class TileNodes : MonoBehaviour
                                 node.GetComponent<WorldTile>().towering = false;
                             }
                         }
-                        // checks if tile is found in unwalkable
-                        foreach (Tile tile in UnwalkableTiles)
-                        {
-                            if (name == tile.name)
-                            {
-                                node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
-                            }
-                        }
-                        // checks if tile is found in unwalkable
-                        foreach (Tile tile in TowerTiles)
-                        {
-                            if (name == tile.name)
-                            {
-                                node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
-                            }
-                        }
-
                     }
 
                     if (node == null)
                     {
-                        //    Debug.LogError(name + " is not registered.");
+                        //Debug.LogError(name + " is not registered.");
                     }
                     else
                     {
@@ -259,13 +239,9 @@ public class TileNodes : MonoBehaviour
             wt.name = "NODE " + wt.gridX.ToString() + " : " + wt.gridY.ToString();
             nodes[wt.gridX, wt.gridY] = g;
             if (wt.gridX > maxGridX)
-            {
                 maxGridX = wt.gridX;
-                
-            }
-            
         }
-        print("MaxGridx:" + maxGridX);
+        Debug.Log("Max Grid:" + maxGridX);
         unsortedNodes.Clear();
     }
     int maxGridX = 0;

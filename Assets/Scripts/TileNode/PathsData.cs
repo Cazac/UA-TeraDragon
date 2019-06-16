@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +10,7 @@ using UnityEngine;
 ///  - PathsByStarts: starting tiles as keys, retrieves all paths associated with key 
 ///  - PathsByEnd: ending tiles as keys, retrieves all paths associated with key 
 /// </summary>
+
 [Serializable]
 public class PathsData {
 

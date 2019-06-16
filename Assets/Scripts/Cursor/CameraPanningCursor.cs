@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using System;
 using UnityEngine.Tilemaps;
-using System.Collections.Generic;
 
 public class CameraPanningCursor : MonoBehaviour
 {
@@ -28,34 +27,13 @@ public class CameraPanningCursor : MonoBehaviour
     public float bounceSpeed = 0.045f;
 
     private Camera camera;
-    private Vector2 cameraBoundingX;
-    private Vector2 cameraBoundingY;
-    public Vector2 CameraBoundingX { get => cameraBoundingX; set => cameraBoundingX = value; }
-    public Vector2 CameraBoundingY { get => cameraBoundingY; set => cameraBoundingY = value; }
+    public Vector2 CameraBoundingX { get; set; }
+    public Vector2 CameraBoundingY { get; set; }
 
     private InputDetection inputDetection = new InputDetection();
-    public Vector2[] CameraFOVBounds
-    {
-        get
-        {
-            float height = camera.orthographicSize * 2;
-            float width = height * camera.aspect;
-
-            Vector2 xAxisBound = new Vector2(camera.transform.position.x - width / 2, camera.transform.position.x + width / 2);
-            Vector2 yAxisBound = new Vector2(camera.transform.position.y + height / 2, camera.transform.position.y - height / 2);
-
-            Vector2[] returnResult = new Vector2[2];
-            returnResult[0] = xAxisBound;
-            returnResult[1] = yAxisBound;
-
-            return returnResult;
-        }
-    }
-
 
 
     public GameObject playArea;
-   
 
     private void Start()
     {
@@ -66,7 +44,6 @@ public class CameraPanningCursor : MonoBehaviour
         if (playArea.GetComponent<Tilemap>() == null)
         {
             Debug.LogError("TileMap not found");
-            return;
         }
 
         else
@@ -78,7 +55,7 @@ public class CameraPanningCursor : MonoBehaviour
             -GetTileMapSize(playArea.GetComponent<Tilemap>()).y / 2);
         }
 
-        StartCoroutine(ReshiftCam( 11.2f));
+        StartCoroutine(ReshiftCam(CameraBoundingX, CameraBoundingY));
 
         SetCameraBounds(5);
     }
@@ -89,29 +66,26 @@ public class CameraPanningCursor : MonoBehaviour
     /// <param name="boundingX"> Play area left and right width bound</param>
     /// <param name="boundingY"> Play area upmost and downmost bound</param>
     ///<returns>Returns null each frame as base condition for coroutine</returns> 
-    private IEnumerator ReshiftCam(float tileSize)
+    private IEnumerator ReshiftCam(Vector2 boundingX, Vector2 boundingY)
     {
         while (true)
         {
-            Vector2 boundingX = cameraBoundingX;
-            Vector2 boundingY = cameraBoundingY;
-
-            if (CameraFOVBounds[0].y >= boundingX.y)
+            if (camera.transform.position.x > boundingX.y)
             {
-                camera.transform.position = Vector3.Lerp(camera.transform.position, new Vector3(camera.transform.position.x - (CameraFOVBounds[0].y - CameraBoundingX.y), camera.transform.position.y, camera.transform.position.z), bounceSpeed);
+                camera.transform.position = Vector3.Lerp(camera.transform.position, new Vector3(CameraBoundingX.y - 1, camera.transform.position.y, camera.transform.position.z), bounceSpeed);
             }
 
-            if (CameraFOVBounds[0].x <= boundingX.x)
+            if (camera.transform.position.x < boundingX.x)
             {
-                camera.transform.position = Vector3.Lerp(camera.transform.position, new Vector3(camera.transform.position.x + (Math.Abs(CameraFOVBounds[0].x)- Math.Abs(CameraBoundingX.x)), camera.transform.position.y, camera.transform.position.z), bounceSpeed);
+                camera.transform.position = Vector3.Lerp(camera.transform.position, new Vector3(CameraBoundingX.x + 1, camera.transform.position.y, camera.transform.position.z), bounceSpeed);
             }
 
-            if (camera.orthographicSize <= zoomMin)
+            if (camera.orthographicSize < zoomMin)
             {
                 camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, zoomMin, bounceSpeed);
             }
 
-            if (camera.orthographicSize >= zoomMax)
+            if (camera.orthographicSize > zoomMax)
             {
                 camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, zoomMax, bounceSpeed);
             }
@@ -145,7 +119,7 @@ public class CameraPanningCursor : MonoBehaviour
     {
         if (!IsInsideBound())
         {
-            ReshiftCam(11.2f);
+            ReshiftCam(CameraBoundingX, CameraBoundingY);
         }
     }
 
@@ -157,10 +131,11 @@ public class CameraPanningCursor : MonoBehaviour
     /// </example>
     private void TranslateWithMousePos()
     {
-        if (camera != null)
+        if (camera != null && !CameraLock())
         {
             Vector3 mousePosition = Input.mousePosition;
             Vector3 mousePosToWorld = Camera.main.ScreenToWorldPoint(mousePosition);
+
 
             if (IsInsideBound() && inputDetection.IsSwiping)
             {
@@ -172,8 +147,8 @@ public class CameraPanningCursor : MonoBehaviour
 
 
 
-    /// <summary>
-    ///Check if camera is inside play area bound
+     /// <summary>
+     ///Check if camera is inside play area bound
     /// </summary>
     /// <param name="CameraBoundingX"> Play area left and right width bound</param>
     /// <param name="CameraBoundingY"> Play area upmost and downmost bound</param>
@@ -220,8 +195,62 @@ public class CameraPanningCursor : MonoBehaviour
         }
     }
 
+
     /// <summary>
-    ///Get the size of tilemap using Bounds class
+    ///Detect if camera is out of play area by using Raycast
+    /// </summary>
+    /// <param name="playAreaBorder">The layer of the play area</param>
+    ///<returns>True if raycast is hit, otherwise false</returns> 
+    private bool CameraLock(int playAreaBorder)
+    {
+        Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity, playAreaBorder))
+        {
+            return false;
+        }
+
+        else
+        {
+            return true;
+        }
+    }
+
+
+    /// <summary>
+    ///Detect if camera is out of play area by using Raycast
+    /// </summary>
+    ///<returns>False if raycast hits tilemap box collider, otherwise true</returns> 
+    private bool CameraLock()
+    {
+        Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (playArea.gameObject == null)
+        {
+            Debug.LogError("Play area is not assigned in CameraPanning.cs");
+        }
+
+        else
+        {
+            //Performs bit shifting:
+            int hitLayer = playArea.gameObject.layer;
+            hitLayer = 1 << hitLayer;
+
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward, Mathf.Infinity, hitLayer);
+            if (hit.collider != null)
+            {
+                Bounds bounds = playArea.GetComponent<Tilemap>().localBounds;
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+
+     /// <summary>
+     ///Get the size of tilemap using Bounds class
     /// </summary>
     /// <param name="playArea">Play area that contains Tilemap component</param>
     ///<returns>Size of tilemap as vector3</returns> 
@@ -239,19 +268,17 @@ public class CameraPanningCursor : MonoBehaviour
     ///////////////
     public void SetCameraBounds(float boundRight)
     {
-        Vector3 tileSize = GetTileMapSize(playArea.GetComponent<Tilemap>());
+        //Vector3 tileSize = GetTileMapSize(playArea.GetComponent<Tilemap>());
 
 
         //Multiple the base value by tile size
-        boundRight = boundRight * 11.2f;
-        print(boundRight);
+        //boundRight = boundRight * 11.2f;
+        //print(boundRight);
 
-        CameraBoundingX = new Vector2(-tileSize.x / 2, boundRight);
-
+        //CameraBoundingX = new Vector2(-boundRight, boundRight);
 
         //StartCoroutine(ReshiftCam(CameraBoundingX, CameraBoundingY));
     }
-
 }
 
 

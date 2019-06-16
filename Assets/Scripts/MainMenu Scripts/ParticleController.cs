@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Button))]
+[RequireComponent(typeof(Toggle))]
 public class ParticleController : MonoBehaviour
 {
 
-    public Button thisButton;
+    public Toggle thisToggle;
     public ParticleSystem[] boundsParticles;
-
-    private bool internalSwitch = false;
     // Start is called before the first frame update
     void Start()
     {
-        thisButton = GetComponent<Button>();
-        thisButton.onClick.AddListener(MenuButtonClickListener);
+        thisToggle = GetComponent<Toggle>();
         boundsParticles = new ParticleSystem[4];
 
         for (int i = 0; i < boundsParticles.Length; i++)
@@ -27,7 +24,7 @@ public class ParticleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (internalSwitch)
+        if (thisToggle.isOn)
         {
             for (int i = 0; i < boundsParticles.Length; i++)
             {
@@ -37,9 +34,7 @@ public class ParticleController : MonoBehaviour
                 }
                 //Debug.Log(i.ToString() + " " + boundsParticles[i].isEmitting);
             }
-        }
-
-        else
+        } else
         {
             for (int i = 0; i < boundsParticles.Length; i++)
             {
@@ -50,10 +45,5 @@ public class ParticleController : MonoBehaviour
                 //Debug.Log(i.ToString() + " " + boundsParticles[i].isEmitting);
             }
         }
-    }
-
-    void MenuButtonClickListener()
-    {
-            internalSwitch = true;
     }
 }

@@ -88,7 +88,6 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             }
             if (hit.collider.GetComponent<WorldTile>().towering)
             {
-                //Leave the Tower on the node, Call spawner later for init
                 currentTower.transform.position = hit.collider.gameObject.transform.position;
                 LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
                 hit.collider.GetComponent<WorldTile>().towering = false;
