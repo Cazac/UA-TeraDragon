@@ -72,6 +72,8 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
             print(tileTypeName);
 
+            print(validTileTypes[0]);
+            print(validTileTypes[0].name);
 
             foreach (TileBase validTile in validTileTypes)
             {

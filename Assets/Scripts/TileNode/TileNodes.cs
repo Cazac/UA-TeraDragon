@@ -33,7 +33,10 @@ public class TileNodes : MonoBehaviour
     public Tile[] UnwalkableTiles;
     public Tile[] SpawnTiles;
 
-    //  TO DO   // - Used for 
+    public Tile[] TowerTiles;
+    public Tile[] CrystalTiles;
+
+    //  TO DO   // - Used for ???
     [Header("Selected Nodes")]
     [SerializeField]
     private List<GameObject> selectedNodes = new List<GameObject>();
@@ -170,7 +173,8 @@ public class TileNodes : MonoBehaviour
                             {
                                 node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
                             }
-                        }// checks if walkable tile is a spawning tile
+                        }
+                        // checks if walkable tile is a spawning tile
                         foreach (Tile spTile in SpawnTiles)
                         {
                             if (name == spTile.name)
@@ -181,6 +185,14 @@ public class TileNodes : MonoBehaviour
                         }
                         // checks if tile is found in unwalkable
                         foreach (Tile tile in UnwalkableTiles)
+                        {
+                            if (name == tile.name)
+                            {
+                                node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                            }
+                        }
+                        // checks if tile is found in unwalkable
+                        foreach (Tile tile in TowerTiles)
                         {
                             if (name == tile.name)
                             {
