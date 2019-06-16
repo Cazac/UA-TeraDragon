@@ -178,6 +178,7 @@ namespace WaveSystem
             //While loop to keep function running every frame if possible
             while (true)
             {
+                Debug.Log("Wave index: " + waveIndex);
                 if (EnableSpawning == true)
                 {
                     currentWave.ParentGameobject = GameObject.Find(WAVE_PARENT_NAME);
@@ -197,9 +198,6 @@ namespace WaveSystem
                     }
 
                     EnableSpawning = false;
-
-
-                    //print(currentTimer.WaveTimer);
 
                     //Move on to the next scriptable wave in waves array
                     if (!AllWaveCompleted() && currentTimer.WaveTimer <= 0)

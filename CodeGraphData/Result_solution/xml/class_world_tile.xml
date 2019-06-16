@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_world_tile" kind="class" prot="public">
+    <compoundname>WorldTile</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_world_tile_1aa4c5505813dc257adb4a4255d5025641" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WorldTile.gridY</definition>
+        <argsstring></argsstring>
+        <name>gridY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="211" endline="242">TileNodes.FillNodeTable</referencedby>
+        <referencedby refid="class_world_tile_1a68744bed9f6974f656c7677e5fcc500a" compoundref="_world_tile_8cs" startline="30" endline="33">ToString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_world_tile_1a0e656c3b5770c4c79608125683ea7709" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WorldTile.gridX</definition>
+        <argsstring></argsstring>
+        <name>gridX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="17" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_path_finding_1a9fcc7ba7419672643ecf2b9715b5862e" compoundref="_path_finding_8cs" startline="95" endline="120">PathFinding.DFS_Util</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_world_tile_1a3183df67122339b04fae067faf461b8a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WorldTile.posX</definition>
+        <argsstring></argsstring>
+        <name>posX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_world_tile_1a84ee3d3afbc295ad8003ba0cf8490b24" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WorldTile.posY</definition>
+        <argsstring></argsstring>
+        <name>posY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_world_tile_1a67a5d10ed54c58b0959281ecd844ec69" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WorldTile.walkable</definition>
+        <argsstring></argsstring>
+        <name>walkable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="24" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1a3cc3cf231a636206585be0dd45083fef" compoundref="_tile_nodes_8cs" startline="307" endline="317">TileNodes.AddNodeToList</referencedby>
+        <referencedby refid="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" compoundref="_tile_nodes_8cs" startline="251" endline="265">TileNodes.SetNeigbours</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_world_tile_1a8bb9aed53ffb5e7251e04003f75022c5" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_world_tile" kindref="compound">WorldTile</ref> &gt;</type>
+        <definition>List&lt;WorldTile&gt; WorldTile.myNeighbours</definition>
+        <argsstring></argsstring>
+        <name>myNeighbours</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="26" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_path_finding_1a9fcc7ba7419672643ecf2b9715b5862e" compoundref="_path_finding_8cs" startline="95" endline="120">PathFinding.DFS_Util</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_world_tile_1a68744bed9f6974f656c7677e5fcc500a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string WorldTile.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="30" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="30" bodyend="33"/>
+        <references refid="class_world_tile_1aa4c5505813dc257adb4a4255d5025641" compoundref="_world_tile_8cs" startline="16">gridY</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_world_tile" kindref="compound">WorldTile</ref></para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="173">
+        <label>WorldTile</label>
+        <link refid="class_world_tile"/>
+        <childnode refid="174" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="174">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="175">
+        <label>WorldTile</label>
+        <link refid="class_world_tile"/>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="176">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="14" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_world_tile_1a0e656c3b5770c4c79608125683ea7709" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>gridX</name></member>
+      <member refid="class_world_tile_1aa4c5505813dc257adb4a4255d5025641" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>gridY</name></member>
+      <member refid="class_world_tile_1a8bb9aed53ffb5e7251e04003f75022c5" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>myNeighbours</name></member>
+      <member refid="class_world_tile_1a3183df67122339b04fae067faf461b8a" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>posX</name></member>
+      <member refid="class_world_tile_1a84ee3d3afbc295ad8003ba0cf8490b24" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>posY</name></member>
+      <member refid="class_world_tile_1a68744bed9f6974f656c7677e5fcc500a" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>ToString</name></member>
+      <member refid="class_world_tile_1a67a5d10ed54c58b0959281ecd844ec69" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>walkable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

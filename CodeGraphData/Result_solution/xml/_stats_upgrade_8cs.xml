@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_stats_upgrade_8cs" kind="file">
+    <compoundname>StatsUpgrade.cs</compoundname>
+    <innerclass refid="class_stats_upgrade" prot="public">StatsUpgrade</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddd" prot="public" static="no">
+        <name>StatsCategory</name>
+        <enumvalue id="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda70531809254e32b055043b61eaa5b93a" prot="public">
+          <name>TOWER_ATTACK_SPEED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda024654549439ceab44519637ea86b792" prot="public">
+          <name>TOWER_DAMAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda122c7521934216845be321f3401c4328" prot="public">
+          <name>TOWER_RANGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda90ca2c392061b5ba4eacfd95a0904fd5" prot="public">
+          <name>ABILITY_TIMER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda740fab2b9581e75a9ba06126e7d280d6" prot="public">
+          <name>ABILITY_STATS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda03570470bad94692ce93e32700d2e1cb" prot="public">
+          <name>OTHER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/StatsUpgrade.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/StatsUpgrade.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">[System.Serializable]</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">[CreateAssetMenu(fileName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;NewStatsUpgrade&quot;</highlight><highlight class="normal">,<sp/>menuName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Scriptable<sp/>Objects/Stats<sp/>Upgrade&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="7" refid="class_stats_upgrade" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_stats_upgrade" kindref="compound">StatsUpgrade</ref><sp/>:<sp/><ref refid="class_upgrade_node" kindref="compound">UpgradeNode</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_stats_upgrade_1a44b7424413127f7afcb69796c8214eeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_stats_upgrade_1a44b7424413127f7afcb69796c8214eeb" kindref="member">StatsMultiplier</ref>;</highlight></codeline>
+<codeline lineno="10" refid="class_stats_upgrade_1a33fc58a59ef75880d2ed14d5680361f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddd" kindref="member">StatsCategory</ref><sp/><ref refid="class_stats_upgrade_1a33fc58a59ef75880d2ed14d5680361f0" kindref="member">statsCategory</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddd" kindref="member">StatsCategory</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda70531809254e32b055043b61eaa5b93a" kindref="member">TOWER_ATTACK_SPEED</ref>,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda024654549439ceab44519637ea86b792" kindref="member">TOWER_DAMAGE</ref>,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda122c7521934216845be321f3401c4328" kindref="member">TOWER_RANGE</ref>,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda90ca2c392061b5ba4eacfd95a0904fd5" kindref="member">ABILITY_TIMER</ref>,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda740fab2b9581e75a9ba06126e7d280d6" kindref="member">ABILITY_STATS</ref>,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda03570470bad94692ce93e32700d2e1cb" kindref="member">OTHER</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/StatsUpgrade.cs"/>
+  </compounddef>
+</doxygen>

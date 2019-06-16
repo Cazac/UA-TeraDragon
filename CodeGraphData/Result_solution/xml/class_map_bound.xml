@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_map_bound" kind="class" prot="public">
+    <compoundname>MapBound</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ScriptableObject</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_map_bound_1a517236adf607f6ac6ec9ea84451156dc" prot="public" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] MapBound.positionX</definition>
+        <argsstring></argsstring>
+        <name>positionX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBound.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBound.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a4c32493e9d4f2f275201c289927a3272" compoundref="_map_bounds_updater_8cs" startline="144" endline="176">MapBoundsUpdater.MoveMapBounds</referencedby>
+        <referencedby refid="class_map_bounds_updater_1a79041b21c2ad3f3a1093ba1907e2574f" compoundref="_map_bounds_updater_8cs" startline="121" endline="137">MapBoundsUpdater.WaitTime</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="62">
+        <label>MapBound</label>
+        <link refid="class_map_bound"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>ScriptableObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="64">
+        <label>MapBound</label>
+        <link refid="class_map_bound"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>ScriptableObject</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBound.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBound.cs" bodystart="7" bodyend="11"/>
+    <listofallmembers>
+      <member refid="class_map_bound_1a517236adf607f6ac6ec9ea84451156dc" prot="public" virt="non-virtual"><scope>MapBound</scope><name>positionX</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

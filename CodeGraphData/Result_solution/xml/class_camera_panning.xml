@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_camera_panning" kind="class" prot="public">
+    <compoundname>CameraPanning</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_camera_panning_1a8ef1eed570eb5b30216f71259f94bb6a" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject CameraPanning.movingCamera</definition>
+        <argsstring></argsstring>
+        <name>movingCamera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_camera_panning_1a66a793af19cd6778777dbabf40225290" prot="public" static="no" mutable="no">
+        <type>GameObject[]</type>
+        <definition>GameObject [] CameraPanning.CameraNodes</definition>
+        <argsstring></argsstring>
+        <name>CameraNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
+        <referencedby refid="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" compoundref="_camera_panning_8cs" startline="49" endline="53">Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_camera_panning_1a948c604ade3da3c1a1285115bbe94b17" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CameraPanning.IncrementPerNode</definition>
+        <argsstring></argsstring>
+        <name>IncrementPerNode</name>
+        <initializer>= 3f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_camera_panning_1afaa577e5a6f07aca30fec925a8ab7870" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject CameraPanning.currentNode</definition>
+        <argsstring></argsstring>
+        <name>currentNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
+        <referencedby refid="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" compoundref="_camera_panning_8cs" startline="49" endline="53">Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_camera_panning_1a1f12c46780cfcd5210da3a008f9190d2" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject CameraPanning.targetNode</definition>
+        <argsstring></argsstring>
+        <name>targetNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
+        <referencedby refid="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" compoundref="_camera_panning_8cs" startline="49" endline="53">Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_camera_panning_1a2cbe73009281c0bcdcf11a41f6d63103" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CameraPanning.currentNodeCounter</definition>
+        <argsstring></argsstring>
+        <name>currentNodeCounter</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
+        <referencedby refid="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" compoundref="_camera_panning_8cs" startline="49" endline="53">Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_camera_panning_1a8a94ec647b1ebf20f9775e541e13b1b5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CameraPanning.currentIncrement</definition>
+        <argsstring></argsstring>
+        <name>currentIncrement</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="28" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_camera_panning_1a91052c8cd59b6eaddc63d39146343780" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CameraPanning.currentProgress</definition>
+        <argsstring></argsstring>
+        <name>currentProgress</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="29" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_camera_panning_1a424f0508a35b296f24cbf016edbc13c9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CameraPanning.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="33" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="33" bodyend="36"/>
+        <references refid="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" compoundref="_camera_panning_8cs" startline="49" endline="53">Setup</references>
+      </memberdef>
+      <memberdef kind="function" id="class_camera_panning_1a4a8d0c62b000a2a1242fda486321e537" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CameraPanning.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="38" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="38" bodyend="41"/>
+        <references refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</references>
+      </memberdef>
+      <memberdef kind="function" id="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CameraPanning.Setup</definition>
+        <argsstring>()</argsstring>
+        <name>Setup</name>
+        <briefdescription>
+<para>Setup variables for first pass of camera movement </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="49" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="49" bodyend="53"/>
+        <references refid="class_camera_panning_1a66a793af19cd6778777dbabf40225290" compoundref="_camera_panning_8cs" startline="19">CameraNodes</references>
+        <references refid="class_camera_panning_1afaa577e5a6f07aca30fec925a8ab7870" compoundref="_camera_panning_8cs" startline="21">currentNode</references>
+        <references refid="class_camera_panning_1a2cbe73009281c0bcdcf11a41f6d63103" compoundref="_camera_panning_8cs" startline="27">currentNodeCounter</references>
+        <references refid="class_camera_panning_1a1f12c46780cfcd5210da3a008f9190d2" compoundref="_camera_panning_8cs" startline="22">targetNode</references>
+        <referencedby refid="class_camera_panning_1a424f0508a35b296f24cbf016edbc13c9" compoundref="_camera_panning_8cs" startline="33" endline="36">Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CameraPanning.MoveCamera</definition>
+        <argsstring>()</argsstring>
+        <name>MoveCamera</name>
+        <briefdescription>
+<para>Loop through each node placement and move the camera with lerp </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="61" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="61" bodyend="96"/>
+        <references refid="class_camera_panning_1a66a793af19cd6778777dbabf40225290" compoundref="_camera_panning_8cs" startline="19">CameraNodes</references>
+        <references refid="class_camera_panning_1a8a94ec647b1ebf20f9775e541e13b1b5" compoundref="_camera_panning_8cs" startline="28">currentIncrement</references>
+        <references refid="class_camera_panning_1afaa577e5a6f07aca30fec925a8ab7870" compoundref="_camera_panning_8cs" startline="21">currentNode</references>
+        <references refid="class_camera_panning_1a2cbe73009281c0bcdcf11a41f6d63103" compoundref="_camera_panning_8cs" startline="27">currentNodeCounter</references>
+        <references refid="class_camera_panning_1a91052c8cd59b6eaddc63d39146343780" compoundref="_camera_panning_8cs" startline="29">currentProgress</references>
+        <references refid="class_camera_panning_1a948c604ade3da3c1a1285115bbe94b17" compoundref="_camera_panning_8cs" startline="25">IncrementPerNode</references>
+        <references refid="class_camera_panning_1a1f12c46780cfcd5210da3a008f9190d2" compoundref="_camera_panning_8cs" startline="22">targetNode</references>
+        <referencedby refid="class_camera_panning_1a4a8d0c62b000a2a1242fda486321e537" compoundref="_camera_panning_8cs" startline="38" endline="41">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>TD_CameraPanning is used to move the camera around the title screen</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="8">
+        <label>CameraPanning</label>
+        <link refid="class_camera_panning"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>CameraPanning</label>
+        <link refid="class_camera_panning"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="13" bodyend="98"/>
+    <listofallmembers>
+      <member refid="class_camera_panning_1a66a793af19cd6778777dbabf40225290" prot="public" virt="non-virtual"><scope>CameraPanning</scope><name>CameraNodes</name></member>
+      <member refid="class_camera_panning_1a8a94ec647b1ebf20f9775e541e13b1b5" prot="private" virt="non-virtual"><scope>CameraPanning</scope><name>currentIncrement</name></member>
+      <member refid="class_camera_panning_1afaa577e5a6f07aca30fec925a8ab7870" prot="private" virt="non-virtual"><scope>CameraPanning</scope><name>currentNode</name></member>
+      <member refid="class_camera_panning_1a2cbe73009281c0bcdcf11a41f6d63103" prot="private" virt="non-virtual"><scope>CameraPanning</scope><name>currentNodeCounter</name></member>
+      <member refid="class_camera_panning_1a91052c8cd59b6eaddc63d39146343780" prot="private" virt="non-virtual"><scope>CameraPanning</scope><name>currentProgress</name></member>
+      <member refid="class_camera_panning_1a948c604ade3da3c1a1285115bbe94b17" prot="public" virt="non-virtual"><scope>CameraPanning</scope><name>IncrementPerNode</name></member>
+      <member refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" prot="private" virt="non-virtual"><scope>CameraPanning</scope><name>MoveCamera</name></member>
+      <member refid="class_camera_panning_1a8ef1eed570eb5b30216f71259f94bb6a" prot="public" virt="non-virtual"><scope>CameraPanning</scope><name>movingCamera</name></member>
+      <member refid="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" prot="private" virt="non-virtual"><scope>CameraPanning</scope><name>Setup</name></member>
+      <member refid="class_camera_panning_1a424f0508a35b296f24cbf016edbc13c9" prot="private" virt="non-virtual"><scope>CameraPanning</scope><name>Start</name></member>
+      <member refid="class_camera_panning_1a1f12c46780cfcd5210da3a008f9190d2" prot="private" virt="non-virtual"><scope>CameraPanning</scope><name>targetNode</name></member>
+      <member refid="class_camera_panning_1a4a8d0c62b000a2a1242fda486321e537" prot="private" virt="non-virtual"><scope>CameraPanning</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
