@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4500074788318752365}
   - component: {fileID: 2633839752977675612}
   - component: {fileID: 62995545499343950}
+  - component: {fileID: 2046935725686586913}
   m_Layer: 0
   m_Name: Node Unwalkable
   m_TagString: Untagged
@@ -98,3 +99,20 @@ MonoBehaviour:
   posY: 0
   walkable: 0
   myNeighbours: []
+  crystalValueRed: 0
+  crystalValueBlue: 0
+  crystalValueGreen: 0
+  crystalValueYellow: 0
+--- !u!65 &2046935725686586913
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325206148484082130}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.25, z: 0.25}
+  m_Center: {x: 0, y: 0, z: 0}

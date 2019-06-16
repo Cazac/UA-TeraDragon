@@ -124,25 +124,25 @@ namespace WaveSystem
         private void Update()
         {
             //Create new timer object for current wave 
-            //if (EnableSpawning == true && currentTimer == null)
-            //{
-            //    InstantiateNewTimer(currentWave.TimeUntilSpawn, currentWave.WaveTimer, ref currentTimer);
-            //}
+            if (EnableSpawning == true && currentTimer == null)
+            {
+                InstantiateNewTimer(currentWave.TimeUntilSpawn, currentWave.WaveTimer, ref currentTimer);
+            }
 
-            ////If timer for a wave hits 0, turn off spawning
-            //if (currentTimer != null && EnableSpawning == true)
-            //{
-            //    if (currentTimer.WaveCountdown())
-            //        EnableSpawning = false;
-            //}
+            //If timer for a wave hits 0, turn off spawning
+            if (currentTimer != null && EnableSpawning == true)
+            {
+                if (currentTimer.WaveCountdown())
+                    EnableSpawning = false;
+            }
 
 
-            ////If timer between wave hits 0, turn on spawning
-            //if (currentTimer != null && EnableSpawning == false && !AllWaveCompleted())
-            //{
-            //    if (currentTimer.NextWaveCountdown())
-            //        EnableSpawning = true;
-            //}
+            //If timer between wave hits 0, turn on spawning
+            if (currentTimer != null && EnableSpawning == false && !AllWaveCompleted())
+            {
+                if (currentTimer.NextWaveCountdown())
+                    EnableSpawning = true;
+            }
         }
 
 
@@ -199,7 +199,7 @@ namespace WaveSystem
                     EnableSpawning = false;
 
 
-                    print(currentTimer.WaveTimer);
+                    //print(currentTimer.WaveTimer);
 
                     //Move on to the next scriptable wave in waves array
                     if (!AllWaveCompleted() && currentTimer.WaveTimer <= 0)

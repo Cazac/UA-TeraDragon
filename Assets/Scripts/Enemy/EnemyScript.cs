@@ -75,10 +75,10 @@ public class EnemyScript : MonoBehaviour
         Debug.Log("Enemy:" + collision.name);
         if (collision.transform.GetComponent<BaseNode>() != null)
         {
-            Debug.Log("collision.transform.GetComponent<BaseNode>():" + (collision.transform.GetComponent<BaseNode>() == null));
+            //Debug.Log("collision.transform.GetComponent<BaseNode>():" + (collision.transform.GetComponent<BaseNode>() == null));
 
             collision.transform.GetComponent<BaseNode>().BaseIsHit(1);
-                Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
     

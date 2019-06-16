@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScript : MonoBehaviour
 {
+    public bool isGameOver { get; set; }
     public GameObject GameOverPanel;
 
     public void TurnOnGameOver()
     {
+        isGameOver = true;
         GameOverPanel.SetActive(true);
         Time.timeScale = 0;
     }
