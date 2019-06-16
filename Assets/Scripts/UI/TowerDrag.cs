@@ -77,13 +77,21 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
 
             print(tileLayer);
+            print("Name:" + hit.collider.gameObject.name);
+            print("Name:" + hit.collider.GetComponent<WorldTile>().towering);
+
 
             //  TO DO   // - HARD CODED ???
-            if (tileLayer == "Parent_Ground" || tileLayer == "Parent_WalkableTiles" || tileLayer == "Parent_UnwalkableTiles")
+            if (tileLayer == "Parent_Ground" || tileLayer == "Parent_UnwalkableTiles")
             {
                 //Leave the Tower on the node, Call spawner later for init
+            }
+            if (hit.collider.GetComponent<WorldTile>().towering)
+            {
                 currentTower.transform.position = hit.collider.gameObject.transform.position;
                 LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
+                hit.collider.GetComponent<WorldTile>().towering = false;
+
             }
             else
             {
@@ -107,7 +115,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     private void LogRaycasthitObject(String position, String type)
     {
         String logString = String.Format("Hit node spawing tower at position: {0}, is type of: {1}", position, type);
-        Debug.Log(logString);
+      //  Debug.Log(logString);
     }
 
     /////////////////////////////////////////////////////////////////
