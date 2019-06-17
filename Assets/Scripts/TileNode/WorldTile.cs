@@ -22,6 +22,7 @@ public class WorldTile : MonoBehaviour
     public int posY;
 
     public bool walkable;
+    public bool towering;
 
     public List<WorldTile> myNeighbours;
 

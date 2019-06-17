@@ -194,9 +194,10 @@ public class TileNodes : MonoBehaviour
                         // checks if tile is found in unwalkable
                         foreach (Tile tile in TowerTiles)
                         {
-                            if (name == tile.name)
+                            node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                            if(name == "Crystal Tile")
                             {
-                                node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                                node.GetComponent<WorldTile>().towering = false;
                             }
                         }
 

@@ -98,6 +98,7 @@ MonoBehaviour:
   posX: 0
   posY: 0
   walkable: 0
+  towering: 1
   myNeighbours: []
   crystalValueRed: 0
   crystalValueBlue: 0
