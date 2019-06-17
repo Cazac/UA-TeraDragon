@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_back_ground_pan_around_8cs" kind="file">
+    <compoundname>BackGroundPanAround.cs</compoundname>
+    <innerclass refid="class_back_ground_pan_around" prot="public">BackGroundPanAround</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_back_ground_pan_around" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_back_ground_pan_around" kindref="compound">BackGroundPanAround</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="class_back_ground_pan_around_1adaf79dc6668e70e70dec6a2cf918bc99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_back_ground_pan_around_1adaf79dc6668e70e70dec6a2cf918bc99" kindref="member">mouseX</ref>;</highlight></codeline>
+<codeline lineno="8" refid="class_back_ground_pan_around_1a5f44c441cfbd2b34d9608351551d8bf9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_back_ground_pan_around_1a5f44c441cfbd2b34d9608351551d8bf9" kindref="member">mouseY</ref>;</highlight></codeline>
+<codeline lineno="9" refid="class_back_ground_pan_around_1ad0fb9186c83ac11c095f09c34ed76c17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_back_ground_pan_around_1ad0fb9186c83ac11c095f09c34ed76c17" kindref="member">smoothSpeed</ref>;</highlight></codeline>
+<codeline lineno="10" refid="class_back_ground_pan_around_1a050c7784584679971dc617c07c398a21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_back_ground_pan_around_1a050c7784584679971dc617c07c398a21" kindref="member">moveSensitivity</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_back_ground_pan_around_1a45d78ac148474303b0f4f672f2df6734" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Vector3<sp/><ref refid="class_back_ground_pan_around_1a45d78ac148474303b0f4f672f2df6734" kindref="member">targetPosition</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>is<sp/>called<sp/>before<sp/>the<sp/>first<sp/>frame<sp/>update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_back_ground_pan_around_1a0d7239e3a0dc6fd02c96f8c6377d34c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_back_ground_pan_around_1a0d7239e3a0dc6fd02c96f8c6377d34c4" kindref="member">Start</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>is<sp/>called<sp/>once<sp/>per<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_back_ground_pan_around_1a67f76e481b8e7e151491c0f3b0c1ef50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_back_ground_pan_around_1a67f76e481b8e7e151491c0f3b0c1ef50" kindref="member">Update</ref>()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_back_ground_pan_around_1adaf79dc6668e70e70dec6a2cf918bc99" kindref="member">mouseX</ref><sp/>+=<sp/>Input.GetAxis(</highlight><highlight class="stringliteral">&quot;Mouse<sp/>X&quot;</highlight><highlight class="normal">)<sp/>*<sp/><ref refid="class_back_ground_pan_around_1a050c7784584679971dc617c07c398a21" kindref="member">moveSensitivity</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_back_ground_pan_around_1a5f44c441cfbd2b34d9608351551d8bf9" kindref="member">mouseY</ref><sp/>+=<sp/>Input.GetAxis(</highlight><highlight class="stringliteral">&quot;Mouse<sp/>Y&quot;</highlight><highlight class="normal">)<sp/>*<sp/><ref refid="class_back_ground_pan_around_1a050c7784584679971dc617c07c398a21" kindref="member">moveSensitivity</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_back_ground_pan_around_1adaf79dc6668e70e70dec6a2cf918bc99" kindref="member">mouseX</ref><sp/>=<sp/>Mathf.Clamp(<ref refid="class_back_ground_pan_around_1adaf79dc6668e70e70dec6a2cf918bc99" kindref="member">mouseX</ref>,<sp/>-20,<sp/>20);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mouseY<sp/>=<sp/>Mathf.Clamp(<ref refid="class_back_ground_pan_around_1a5f44c441cfbd2b34d9608351551d8bf9" kindref="member">mouseY</ref>,<sp/>-5,<sp/>5);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_back_ground_pan_around_1a45d78ac148474303b0f4f672f2df6734" kindref="member">targetPosition</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector3(mouseX,<sp/>mouseY,<sp/>-10);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.transform.position<sp/>=<sp/>Vector3.Lerp(this.transform.position,<sp/><ref refid="class_back_ground_pan_around_1a45d78ac148474303b0f4f672f2df6734" kindref="member">targetPosition</ref>,<sp/>Time.deltaTime<sp/>*<sp/><ref refid="class_back_ground_pan_around_1ad0fb9186c83ac11c095f09c34ed76c17" kindref="member">smoothSpeed</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this.transform.Translate(mouseX,<sp/>mouseY,<sp/>0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/BackGroundPanAround.cs"/>
+  </compounddef>
+</doxygen>

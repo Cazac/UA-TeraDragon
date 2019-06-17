@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_map_bounds_updater" kind="class" prot="public">
+    <compoundname>MapBoundsUpdater</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_map_bounds_updater_1a4bb81360b5a1ddfebb822c4264d250a1" prot="public" static="no" mutable="no">
+        <type><ref refid="class_map_bound" kindref="compound">MapBound</ref></type>
+        <definition>MapBound MapBoundsUpdater.mapBounds</definition>
+        <argsstring></argsstring>
+        <name>mapBounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a3f7f9196b8ef5071917cf1b99f18c8bc" compoundref="_map_bounds_updater_8cs" startline="101" endline="112">CheckForMatchingBounds</referencedby>
+        <referencedby refid="class_map_bounds_updater_1a4c32493e9d4f2f275201c289927a3272" compoundref="_map_bounds_updater_8cs" startline="144" endline="176">MoveMapBounds</referencedby>
+        <referencedby refid="class_map_bounds_updater_1a79041b21c2ad3f3a1093ba1907e2574f" compoundref="_map_bounds_updater_8cs" startline="121" endline="137">WaitTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1a02b24fd4f916d7a7c69aace3cecb26e3" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject MapBoundsUpdater.TileMap</definition>
+        <argsstring></argsstring>
+        <name>TileMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1a180d14d9ab2b06d4ad399596a04a5530" prot="public" static="no" mutable="no">
+        <type>TileBase</type>
+        <definition>TileBase MapBoundsUpdater.barrierTile</definition>
+        <argsstring></argsstring>
+        <name>barrierTile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a4c32493e9d4f2f275201c289927a3272" compoundref="_map_bounds_updater_8cs" startline="144" endline="176">MoveMapBounds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1a440ede38052f70f901b460facd325074" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject MapBoundsUpdater.SpawnManager</definition>
+        <argsstring></argsstring>
+        <name>SpawnManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1a0b14a48c3a6e492cadb3b2c7818791d6" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject MapBoundsUpdater.Camera</definition>
+        <argsstring></argsstring>
+        <name>Camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1a8489bc9745ed7b3afc7fbae9a0763097" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MapBoundsUpdater.WaveCounter</definition>
+        <argsstring></argsstring>
+        <name>WaveCounter</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="30" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a4c32493e9d4f2f275201c289927a3272" compoundref="_map_bounds_updater_8cs" startline="144" endline="176">MoveMapBounds</referencedby>
+        <referencedby refid="class_map_bounds_updater_1a93d8dda50f6b91a4dbec0fe72b9fe6a0" compoundref="_map_bounds_updater_8cs" startline="196" endline="222">RestoreTiles</referencedby>
+        <referencedby refid="class_map_bounds_updater_1a79041b21c2ad3f3a1093ba1907e2574f" compoundref="_map_bounds_updater_8cs" startline="121" endline="137">WaitTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1aee25b167135bb962916bbf47aa441e22" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MapBoundsUpdater.time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="33" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a79041b21c2ad3f3a1093ba1907e2574f" compoundref="_map_bounds_updater_8cs" startline="121" endline="137">WaitTime</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_map_bounds_updater_1ab0f152e36f664f8a37702935141219fe" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_nodes" kindref="compound">TileNodes</ref></type>
+        <definition>TileNodes MapBoundsUpdater.tileNodes</definition>
+        <argsstring></argsstring>
+        <name>tileNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a1cbc4d7f37f6242b07f1328b9db96658" compoundref="_map_bounds_updater_8cs" startline="72" endline="94">Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1a01e2606f1619ee8fa6d00c013d6f206b" prot="private" static="no" mutable="no">
+        <type>Tilemap</type>
+        <definition>Tilemap MapBoundsUpdater.uniqueTilemap</definition>
+        <argsstring></argsstring>
+        <name>uniqueTilemap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a1cbc4d7f37f6242b07f1328b9db96658" compoundref="_map_bounds_updater_8cs" startline="72" endline="94">Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1a1afd96e60be33388d723f73817922ee5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_wave_system_1_1_wave_manager" kindref="compound">WaveSystem.WaveManager</ref></type>
+        <definition>WaveSystem.WaveManager MapBoundsUpdater.waveManger</definition>
+        <argsstring></argsstring>
+        <name>waveManger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a1cbc4d7f37f6242b07f1328b9db96658" compoundref="_map_bounds_updater_8cs" startline="72" endline="94">Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1a3ff179ba9570ab3fd1de6ac261dd4cd6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_camera_panning_cursor" kindref="compound">CameraPanningCursor</ref></type>
+        <definition>CameraPanningCursor MapBoundsUpdater.cameraPanningCursor</definition>
+        <argsstring></argsstring>
+        <name>cameraPanningCursor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="26" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a1cbc4d7f37f6242b07f1328b9db96658" compoundref="_map_bounds_updater_8cs" startline="72" endline="94">Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1adad16ebbd32b71abcad4d346bc028fc0" prot="private" static="no" mutable="no">
+        <type>List&lt; int &gt;</type>
+        <definition>List&lt;int&gt; MapBoundsUpdater.yValues</definition>
+        <argsstring></argsstring>
+        <name>yValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="36" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a4c32493e9d4f2f275201c289927a3272" compoundref="_map_bounds_updater_8cs" startline="144" endline="176">MoveMapBounds</referencedby>
+        <referencedby refid="class_map_bounds_updater_1a93d8dda50f6b91a4dbec0fe72b9fe6a0" compoundref="_map_bounds_updater_8cs" startline="196" endline="222">RestoreTiles</referencedby>
+        <referencedby refid="class_map_bounds_updater_1a1cbc4d7f37f6242b07f1328b9db96658" compoundref="_map_bounds_updater_8cs" startline="72" endline="94">Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1afffef00500a0dc570f4487e2ed7fb0b8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MapBoundsUpdater.minY</definition>
+        <argsstring></argsstring>
+        <name>minY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="37" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a1cbc4d7f37f6242b07f1328b9db96658" compoundref="_map_bounds_updater_8cs" startline="72" endline="94">Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1aa420952443ae38806e0abe0bcb5dfb29" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MapBoundsUpdater.maxY</definition>
+        <argsstring></argsstring>
+        <name>maxY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="38" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a1cbc4d7f37f6242b07f1328b9db96658" compoundref="_map_bounds_updater_8cs" startline="72" endline="94">Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_bounds_updater_1a6d470f3d9c3a61a1491f9f7439e9003a" prot="private" static="no" mutable="no">
+        <type>List&lt; TileBase &gt;</type>
+        <definition>List&lt;TileBase&gt; MapBoundsUpdater.restorationTiles</definition>
+        <argsstring></argsstring>
+        <name>restorationTiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="41" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_map_bounds_updater_1a93d8dda50f6b91a4dbec0fe72b9fe6a0" compoundref="_map_bounds_updater_8cs" startline="196" endline="222">RestoreTiles</referencedby>
+        <referencedby refid="class_map_bounds_updater_1a1cbc4d7f37f6242b07f1328b9db96658" compoundref="_map_bounds_updater_8cs" startline="72" endline="94">Setup</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_map_bounds_updater_1a6025f8bf09a0fbb1bbfc9bec42ba9f92" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapBoundsUpdater.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="45" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="45" bodyend="63"/>
+        <references refid="class_map_bounds_updater_1a3f7f9196b8ef5071917cf1b99f18c8bc" compoundref="_map_bounds_updater_8cs" startline="101" endline="112">CheckForMatchingBounds</references>
+        <references refid="class_map_bounds_updater_1a4c32493e9d4f2f275201c289927a3272" compoundref="_map_bounds_updater_8cs" startline="144" endline="176">MoveMapBounds</references>
+        <references refid="class_map_bounds_updater_1a1cbc4d7f37f6242b07f1328b9db96658" compoundref="_map_bounds_updater_8cs" startline="72" endline="94">Setup</references>
+        <references refid="class_map_bounds_updater_1a79041b21c2ad3f3a1093ba1907e2574f" compoundref="_map_bounds_updater_8cs" startline="121" endline="137">WaitTime</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_map_bounds_updater_1a1cbc4d7f37f6242b07f1328b9db96658" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapBoundsUpdater.Setup</definition>
+        <argsstring>()</argsstring>
+        <name>Setup</name>
+        <briefdescription>
+<para>Setups up all of the lists, refferences and y value sizing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="72" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="72" bodyend="94"/>
+        <references refid="class_map_bounds_updater_1a3ff179ba9570ab3fd1de6ac261dd4cd6" compoundref="_map_bounds_updater_8cs" startline="26">cameraPanningCursor</references>
+        <references refid="class_map_bounds_updater_1aa420952443ae38806e0abe0bcb5dfb29" compoundref="_map_bounds_updater_8cs" startline="38">maxY</references>
+        <references refid="class_map_bounds_updater_1afffef00500a0dc570f4487e2ed7fb0b8" compoundref="_map_bounds_updater_8cs" startline="37">minY</references>
+        <references refid="class_map_bounds_updater_1a6d470f3d9c3a61a1491f9f7439e9003a" compoundref="_map_bounds_updater_8cs" startline="41">restorationTiles</references>
+        <references refid="class_map_bounds_updater_1ab0f152e36f664f8a37702935141219fe" compoundref="_map_bounds_updater_8cs" startline="14">tileNodes</references>
+        <references refid="class_map_bounds_updater_1a01e2606f1619ee8fa6d00c013d6f206b" compoundref="_map_bounds_updater_8cs" startline="15">uniqueTilemap</references>
+        <references refid="class_map_bounds_updater_1a1afd96e60be33388d723f73817922ee5" compoundref="_map_bounds_updater_8cs" startline="22">waveManger</references>
+        <references refid="class_map_bounds_updater_1adad16ebbd32b71abcad4d346bc028fc0" compoundref="_map_bounds_updater_8cs" startline="36">yValues</references>
+        <referencedby refid="class_map_bounds_updater_1a6025f8bf09a0fbb1bbfc9bec42ba9f92" compoundref="_map_bounds_updater_8cs" startline="45" endline="63">Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_map_bounds_updater_1a3f7f9196b8ef5071917cf1b99f18c8bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapBoundsUpdater.CheckForMatchingBounds</definition>
+        <argsstring>()</argsstring>
+        <name>CheckForMatchingBounds</name>
+        <briefdescription>
+<para>Error checking for invalid setup. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="101" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="101" bodyend="112"/>
+        <references refid="class_map_bounds_updater_1a4bb81360b5a1ddfebb822c4264d250a1" compoundref="_map_bounds_updater_8cs" startline="10">mapBounds</references>
+        <referencedby refid="class_map_bounds_updater_1a6025f8bf09a0fbb1bbfc9bec42ba9f92" compoundref="_map_bounds_updater_8cs" startline="45" endline="63">Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_map_bounds_updater_1a79041b21c2ad3f3a1093ba1907e2574f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator MapBoundsUpdater.WaitTime</definition>
+        <argsstring>()</argsstring>
+        <name>WaitTime</name>
+        <briefdescription>
+<para>UNDOCUMENTED </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="121" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="121" bodyend="137"/>
+        <references refid="class_map_bounds_updater_1a4bb81360b5a1ddfebb822c4264d250a1" compoundref="_map_bounds_updater_8cs" startline="10">mapBounds</references>
+        <references refid="class_map_bounds_updater_1a4c32493e9d4f2f275201c289927a3272" compoundref="_map_bounds_updater_8cs" startline="144" endline="176">MoveMapBounds</references>
+        <references refid="class_map_bound_1a517236adf607f6ac6ec9ea84451156dc" compoundref="_map_bound_8cs" startline="10">MapBound.positionX</references>
+        <references refid="class_map_bounds_updater_1aee25b167135bb962916bbf47aa441e22" compoundref="_map_bounds_updater_8cs" startline="33">time</references>
+        <references refid="class_map_bounds_updater_1a8489bc9745ed7b3afc7fbae9a0763097" compoundref="_map_bounds_updater_8cs" startline="30">WaveCounter</references>
+        <referencedby refid="class_map_bounds_updater_1a6025f8bf09a0fbb1bbfc9bec42ba9f92" compoundref="_map_bounds_updater_8cs" startline="45" endline="63">Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_map_bounds_updater_1a4c32493e9d4f2f275201c289927a3272" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapBoundsUpdater.MoveMapBounds</definition>
+        <argsstring>()</argsstring>
+        <name>MoveMapBounds</name>
+        <briefdescription>
+<para>Move the map boudaires over to the next X position provided by the <ref refid="class_map_bound" kindref="compound">MapBound</ref> Scriptable Object </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="144" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="144" bodyend="176"/>
+        <references refid="class_map_bounds_updater_1a180d14d9ab2b06d4ad399596a04a5530" compoundref="_map_bounds_updater_8cs" startline="18">barrierTile</references>
+        <references refid="class_map_bounds_updater_1a4bb81360b5a1ddfebb822c4264d250a1" compoundref="_map_bounds_updater_8cs" startline="10">mapBounds</references>
+        <references refid="class_map_bound_1a517236adf607f6ac6ec9ea84451156dc" compoundref="_map_bound_8cs" startline="10">MapBound.positionX</references>
+        <references refid="class_map_bounds_updater_1a93d8dda50f6b91a4dbec0fe72b9fe6a0" compoundref="_map_bounds_updater_8cs" startline="196" endline="222">RestoreTiles</references>
+        <references refid="class_map_bounds_updater_1a8489bc9745ed7b3afc7fbae9a0763097" compoundref="_map_bounds_updater_8cs" startline="30">WaveCounter</references>
+        <references refid="class_map_bounds_updater_1adad16ebbd32b71abcad4d346bc028fc0" compoundref="_map_bounds_updater_8cs" startline="36">yValues</references>
+        <referencedby refid="class_map_bounds_updater_1a6025f8bf09a0fbb1bbfc9bec42ba9f92" compoundref="_map_bounds_updater_8cs" startline="45" endline="63">Start</referencedby>
+        <referencedby refid="class_map_bounds_updater_1a79041b21c2ad3f3a1093ba1907e2574f" compoundref="_map_bounds_updater_8cs" startline="121" endline="137">WaitTime</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_map_bounds_updater_1ac2e854b4416c51f83b3b16d0c45d5d33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapBoundsUpdater.MoveCameraBounds</definition>
+        <argsstring>()</argsstring>
+        <name>MoveCameraBounds</name>
+        <briefdescription>
+<para>UNDOCUMENTED </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="183" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="183" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_bounds_updater_1a93d8dda50f6b91a4dbec0fe72b9fe6a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapBoundsUpdater.RestoreTiles</definition>
+        <argsstring>()</argsstring>
+        <name>RestoreTiles</name>
+        <briefdescription>
+<para>UNDOCUMENTED </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="196" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="196" bodyend="222"/>
+        <references refid="class_map_bounds_updater_1a6d470f3d9c3a61a1491f9f7439e9003a" compoundref="_map_bounds_updater_8cs" startline="41">restorationTiles</references>
+        <references refid="class_map_bounds_updater_1a8489bc9745ed7b3afc7fbae9a0763097" compoundref="_map_bounds_updater_8cs" startline="30">WaveCounter</references>
+        <references refid="class_map_bounds_updater_1adad16ebbd32b71abcad4d346bc028fc0" compoundref="_map_bounds_updater_8cs" startline="36">yValues</references>
+        <referencedby refid="class_map_bounds_updater_1a4c32493e9d4f2f275201c289927a3272" compoundref="_map_bounds_updater_8cs" startline="144" endline="176">MoveMapBounds</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="67">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="66">
+        <label>MapBoundsUpdater</label>
+        <link refid="class_map_bounds_updater"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="74">
+        <label>PathsData</label>
+        <link refid="class_paths_data"/>
+      </node>
+      <node id="70">
+        <label>MapBound</label>
+        <link refid="class_map_bound"/>
+        <childnode refid="71" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>InputDetection</label>
+        <link refid="class_input_detection"/>
+      </node>
+      <node id="73">
+        <label>TileNodes</label>
+        <link refid="class_tile_nodes"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+        <childnode refid="74" relation="usage">
+          <edgelabel>pathData</edgelabel>
+        </childnode>
+      </node>
+      <node id="71">
+        <label>ScriptableObject</label>
+      </node>
+      <node id="69">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="68">
+        <label>MapBoundsUpdater</label>
+        <link refid="class_map_bounds_updater"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+        <childnode refid="70" relation="usage">
+          <edgelabel>mapBounds</edgelabel>
+        </childnode>
+        <childnode refid="72" relation="usage">
+          <edgelabel>waveManger</edgelabel>
+        </childnode>
+        <childnode refid="73" relation="usage">
+          <edgelabel>tileNodes</edgelabel>
+        </childnode>
+        <childnode refid="75" relation="usage">
+          <edgelabel>cameraPanningCursor</edgelabel>
+        </childnode>
+      </node>
+      <node id="75">
+        <label>CameraPanningCursor</label>
+        <link refid="class_camera_panning_cursor"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+        <childnode refid="76" relation="usage">
+          <edgelabel>inputDetection</edgelabel>
+        </childnode>
+      </node>
+      <node id="72">
+        <label>WaveSystem</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBoundsUpdater.cs" bodystart="6" bodyend="225"/>
+    <listofallmembers>
+      <member refid="class_map_bounds_updater_1a180d14d9ab2b06d4ad399596a04a5530" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>barrierTile</name></member>
+      <member refid="class_map_bounds_updater_1a0b14a48c3a6e492cadb3b2c7818791d6" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>Camera</name></member>
+      <member refid="class_map_bounds_updater_1a3ff179ba9570ab3fd1de6ac261dd4cd6" prot="private" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>cameraPanningCursor</name></member>
+      <member refid="class_map_bounds_updater_1a3f7f9196b8ef5071917cf1b99f18c8bc" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>CheckForMatchingBounds</name></member>
+      <member refid="class_map_bounds_updater_1a4bb81360b5a1ddfebb822c4264d250a1" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>mapBounds</name></member>
+      <member refid="class_map_bounds_updater_1aa420952443ae38806e0abe0bcb5dfb29" prot="private" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>maxY</name></member>
+      <member refid="class_map_bounds_updater_1afffef00500a0dc570f4487e2ed7fb0b8" prot="private" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>minY</name></member>
+      <member refid="class_map_bounds_updater_1ac2e854b4416c51f83b3b16d0c45d5d33" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>MoveCameraBounds</name></member>
+      <member refid="class_map_bounds_updater_1a4c32493e9d4f2f275201c289927a3272" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>MoveMapBounds</name></member>
+      <member refid="class_map_bounds_updater_1a6d470f3d9c3a61a1491f9f7439e9003a" prot="private" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>restorationTiles</name></member>
+      <member refid="class_map_bounds_updater_1a93d8dda50f6b91a4dbec0fe72b9fe6a0" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>RestoreTiles</name></member>
+      <member refid="class_map_bounds_updater_1a1cbc4d7f37f6242b07f1328b9db96658" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>Setup</name></member>
+      <member refid="class_map_bounds_updater_1a440ede38052f70f901b460facd325074" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>SpawnManager</name></member>
+      <member refid="class_map_bounds_updater_1a6025f8bf09a0fbb1bbfc9bec42ba9f92" prot="private" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>Start</name></member>
+      <member refid="class_map_bounds_updater_1a02b24fd4f916d7a7c69aace3cecb26e3" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>TileMap</name></member>
+      <member refid="class_map_bounds_updater_1ab0f152e36f664f8a37702935141219fe" prot="private" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>tileNodes</name></member>
+      <member refid="class_map_bounds_updater_1aee25b167135bb962916bbf47aa441e22" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>time</name></member>
+      <member refid="class_map_bounds_updater_1a01e2606f1619ee8fa6d00c013d6f206b" prot="private" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>uniqueTilemap</name></member>
+      <member refid="class_map_bounds_updater_1a79041b21c2ad3f3a1093ba1907e2574f" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>WaitTime</name></member>
+      <member refid="class_map_bounds_updater_1a8489bc9745ed7b3afc7fbae9a0763097" prot="public" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>WaveCounter</name></member>
+      <member refid="class_map_bounds_updater_1a1afd96e60be33388d723f73817922ee5" prot="private" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>waveManger</name></member>
+      <member refid="class_map_bounds_updater_1adad16ebbd32b71abcad4d346bc028fc0" prot="private" virt="non-virtual"><scope>MapBoundsUpdater</scope><name>yValues</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
