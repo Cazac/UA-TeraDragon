@@ -229,11 +229,11 @@ namespace WaveSystem
         ///<returns>Returns true if reaches the end of array</returns> 
         private Boolean AllWaveCompleted()
         {
-            Debug.Log("Wave index: " + waveIndex);
+        //    Debug.Log("Wave index: " + waveIndex);
 
             if (waveIndex > waves.Length - 1)
             {
-                Debug.Log("End of alll waves");
+            //   Debug.Log("End of alll waves");
                 return true;
             }
             return false;

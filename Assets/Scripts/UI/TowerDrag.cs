@@ -77,8 +77,8 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
 
             print(tileLayer);
-            print("Name:" + hit.collider.gameObject.name);
-            print("Name:" + hit.collider.GetComponent<WorldTile>().towering);
+      //      print("Name:" + hit.collider.gameObject.name);
+      //      print("Name:" + hit.collider.GetComponent<WorldTile>().towering);
 
 
             //  TO DO   // - HARD CODED ???
