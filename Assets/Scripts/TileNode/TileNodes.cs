@@ -150,53 +150,53 @@ public class TileNodes : MonoBehaviour
             for (int y = -(nodes.GetLength(1)) - 1; y < nodes.GetLength(1) + 1; y++)
             {
                 TileBase tb = uniqueTilemap.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
+                
 
                 if (tb != null)
                 {
                     Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
 
                     node = null;
-         
+
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
-                    if (name == "Temp Base Tile")
-                    {
-                        node = Instantiate(TileNodesPrefabs[2], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                    //print(name);
 
-                    }
-                    else
+                    // checks if tile is found in walkable
+                    foreach (Tile tile in WalkableTiles)
                     {
-                        // checks if tile is found in walkable
-                        foreach (Tile tile in WalkableTiles)
+                        if (name == tile.name)
                         {
-                            if (name == tile.name)
-                            {
-                                node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
-                            }
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
                         }
-                        // checks if walkable tile is a spawning tile
-                        foreach (Tile spTile in SpawnTiles)
-                        {
-                            if (name == spTile.name)
-                            {
-                                node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
-                                permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
-                            }
-                        }
-                        // checks if tile is found in unwalkable
-                        foreach (Tile tile in UnwalkableTiles)
-                        {
-                            if (name == tile.name)
-                            {
-                                node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
-                                if (name == "Crystal Tile")
-                                {
-                                    node.GetComponent<WorldTile>().towering = false;
-                                }
-                            }
-                        }
-
                     }
+                    // checks if walkable tile is a spawning tile
+                    foreach (Tile spTile in SpawnTiles)
+                    {
+                        if (name == spTile.name)
+                        {
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentNodes[0].transform);
+                            permanentSpawnPoints.Add(node.GetComponent<WorldTile>());
+                        }
+                    }
+                    // checks if tile is found in unwalkable
+                    foreach (Tile tile in UnwalkableTiles)
+                    {
+                        if (name == tile.name)
+                        {
+                            node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                        }
+                    }
+                    // checks if tile is found in unwalkable
+                    //foreach (Tile tile in TowerTiles)
+                    //{
+                        //if (name == tile.name)
+                        //{
+                            //node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                       //}
+                    //}
+
+
 
                     if (node == null)
                     {
@@ -256,7 +256,7 @@ public class TileNodes : MonoBehaviour
             }
             
         }
-        print("MaxGridx:" + maxGridX);
+        //print("MaxGridx:" + maxGridX);
         unsortedNodes.Clear();
     }
     int maxGridX = 0;

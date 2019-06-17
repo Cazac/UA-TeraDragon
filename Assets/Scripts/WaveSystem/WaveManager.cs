@@ -199,9 +199,6 @@ namespace WaveSystem
 
                     EnableSpawning = false;
 
-
-                    //print(currentTimer.WaveTimer);
-
                     //Move on to the next scriptable wave in waves array
                     if (!AllWaveCompleted() && currentTimer.WaveTimer <= 0)
                     {
@@ -229,11 +226,11 @@ namespace WaveSystem
         ///<returns>Returns true if reaches the end of array</returns> 
         private Boolean AllWaveCompleted()
         {
-        //    Debug.Log("Wave index: " + waveIndex);
+            //Debug.Log("Wave index: " + waveIndex);
 
             if (waveIndex > waves.Length - 1)
             {
-            //   Debug.Log("End of alll waves");
+                Debug.Log("End of all waves");
                 return true;
             }
             return false;
