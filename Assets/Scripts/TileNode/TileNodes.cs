@@ -160,7 +160,7 @@ public class TileNodes : MonoBehaviour
 
                     string name = uniqueTilemap.GetTile(uniqueTilemap.WorldToCell(nodePosition)).name;
 
-                    print(name);
+                    //print(name);
 
                     // checks if tile is found in walkable
                     foreach (Tile tile in WalkableTiles)
@@ -188,13 +188,13 @@ public class TileNodes : MonoBehaviour
                         }
                     }
                     // checks if tile is found in unwalkable
-                    foreach (Tile tile in TowerTiles)
-                    {
-                        if (name == tile.name)
-                        {
-                            node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
-                        }
-                    }
+                    //foreach (Tile tile in TowerTiles)
+                    //{
+                        //if (name == tile.name)
+                        //{
+                            //node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                       //}
+                    //}
 
 
 
@@ -256,7 +256,7 @@ public class TileNodes : MonoBehaviour
             }
             
         }
-        print("MaxGridx:" + maxGridX);
+        //print("MaxGridx:" + maxGridX);
         unsortedNodes.Clear();
     }
     int maxGridX = 0;
