@@ -15,31 +15,43 @@ public class EnemyScript : MonoBehaviour
     public int CurrentHealth;
     [Range(0.05f, 30f)]
     public float speed = 1.0f;
-    public string[] attributes;
 
-    // Start is called before the first frame update
-    void Start()
+    // This seems better because allows us to change speed and reverse it
+    Vector3 startPosition, endPosition, dir;
+  
+
+    /////////////////////////////////////////////////////////////////
+
+    private void Start()
     {
         if (enemyData != null)
         {
             // TO-DO: need to add modifyier calculations
             speed = enemyData.BaseSpeed;
-        }
-        if (enemyData != null)
             Debug.Log(enemyData.name + " has spawned");
+        }
+        else
+        {
+            Debug.Log("Spawing Monster from prefab data");
+        }
     }
-
 
     private void FixedUpdate()
     {
         if (waypoints.Count > 1)
+        {
             Move();
+        }
     }
 
+    /////////////////////////////////////////////////////////////////
 
-    Vector3 startPosition, endPosition, dir;
-    // This seems better because allows us to change speed and reverse it
-    void Move()
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
+    private void Move()
     {
 
         startPosition = waypoints[currentWaypoint].transform.position;
@@ -61,26 +73,55 @@ public class EnemyScript : MonoBehaviour
                 // to be replaced with more complete function
 
                 if (enemyData != null)
+                {
                     Debug.Log(enemyData.name + " has died");
+                }
+                else
+                {
+                    Debug.Log("Death???");
+                }
+
                 Destroy(gameObject);
+
 
             }
         }
 
     }
-    
-    
+
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("Enemy:" + collision.name);
+        //Check for collision with the ending tile
         if (collision.transform.GetComponent<BaseNode>() != null)
         {
-            //Debug.Log("collision.transform.GetComponent<BaseNode>():" + (collision.transform.GetComponent<BaseNode>() == null));
-
             collision.transform.GetComponent<BaseNode>().BaseIsHit(1);
             Destroy(gameObject);
         }
     }
-    
 
+
+    public void TakeDamage(float damage)
+    {
+        //Normalize float vs int???
+        CurrentHealth -= (int)damage;
+
+        //Armor??????
+
+        if (CurrentHealth <= 0)
+        {
+            print("Death takes me...");
+            Destroy(gameObject);
+        }
+    }
+
+    //To DO
+    public void ApplySlow()
+    {
+
+    }
 }

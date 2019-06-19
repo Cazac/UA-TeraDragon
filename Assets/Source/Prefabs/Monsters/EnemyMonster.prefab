@@ -95,10 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  MaxHealth: 0
-  CurrentHealth: 0
+  MaxHealth: 10
+  CurrentHealth: 10
   speed: 30
-  attributes: []
 --- !u!58 &5183016958187622402
 CircleCollider2D:
   m_ObjectHideFlags: 0

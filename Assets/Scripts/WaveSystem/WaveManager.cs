@@ -20,9 +20,9 @@ namespace WaveSystem
         // private float internalTimer;
 
         [Header("Scriptable wave object")]
-        public Wave[] waves;
+        public WaveData[] waves;
 
-        public Wave currentWave;
+        public WaveData currentWave;
 
         [SerializeField] //TODO: Delete serializeField
         private List<Vector3> selectedNodeSpawnPosition = new List<Vector3>();
@@ -233,7 +233,7 @@ namespace WaveSystem
 
             if (waveIndex > waves.Length - 1)
             {
-                Debug.Log("End of all waves");
+                //Debug.Log("End of all waves");
                 return true;
             }
             return false;

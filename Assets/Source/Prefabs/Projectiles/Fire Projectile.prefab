@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5317403578337270706}
   - component: {fileID: 6548182430718121695}
+  - component: {fileID: 3675311549555964979}
   - component: {fileID: -2048015160182510449}
   m_Layer: 0
   m_Name: Fire Projectile
@@ -80,6 +81,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &3675311549555964979
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2979316478175632068}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 20.835001
 --- !u!114 &-2048015160182510449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,4 +110,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
-  speed: 0.5
+  isBeam: 0
+  beamDamage: 0
+  beamSlowdown: 0
+  beamChainTargets: 0
+  isProjectile: 0
+  projectileDamage: 5
+  projectileSpeed: 0
+  projectileSlowdown: 0
+  isExplosive: 0
+  explosionRadius: 0
+  explosionLinger: 0
+  explosionDamage: 0
+  explosionSlowdown: 0
