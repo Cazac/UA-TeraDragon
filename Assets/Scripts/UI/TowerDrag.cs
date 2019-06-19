@@ -14,12 +14,15 @@ using UnityEngine.EventSystems;
 
 public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-   
-    public GameObject towerPrefab;
+    [Header("Prefab Towers")]
+    public GameObject towerPrefab_UI;
+    public GameObject towerPrefab_Spawn;
+
+    [Header("Parent Gameobject")]
+    public GameObject towerParent;
+
     private GameObject currentTower;
 
-    // TO DO ???
-    public int tileLayer;
 
     /////////////////////////////////////////////////////////////////
 
@@ -38,7 +41,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         //Get Reff To Tower
         //Attach to Cursor
 
-        currentTower = Instantiate(towerPrefab);
+        currentTower = Instantiate(towerPrefab_UI);
     }
 
 
@@ -69,6 +72,10 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         RaycastHit hit;
 
 
+
+        print("Destroy Tower");
+        Destroy(currentTower);
+
         //Check Raycast for any hit with COLLIDERS
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
         {
@@ -76,34 +83,35 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             string tileLayer = hit.collider.gameObject.transform.parent.gameObject.name;
 
 
-            print(tileLayer);
-      //      print("Name:" + hit.collider.gameObject.name);
-      //      print("Name:" + hit.collider.GetComponent<WorldTile>().towering);
+            //print(tileLayer);
 
+         
 
-            //  TO DO   // - HARD CODED ???
-            if (tileLayer == "Parent_Ground" || tileLayer == "Parent_UnwalkableTiles")
-            {
-                //Leave the Tower on the node, Call spawner later for init
-            }
             if (hit.collider.GetComponent<WorldTile>().towering)
             {
                 //Leave the Tower on the node, Call spawner later for init
-                currentTower.transform.position = hit.collider.gameObject.transform.position;
-                LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
+                //currentTower.transform.position = hit.collider.gameObject.transform.position;
+
+
+
+                GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
+
+                
+
+
                 hit.collider.GetComponent<WorldTile>().towering = false;
 
             }
             else
             {
                 print("Destroy Tower");
-                Destroy(currentTower);
+                //Destroy(currentTower);
             }
         }
         else
         {
             print("Destroy Tower");
-            Destroy(currentTower);
+            //Destroy(currentTower);
         }
     }
 
