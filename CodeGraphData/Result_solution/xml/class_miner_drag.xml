@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_miner_drag" kind="class" prot="public">
+    <compoundname>MinerDrag</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IBeginDragHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IDragHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IEndDragHandler</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_miner_drag_1a0f9f4acaf3cfacfcfe0101deb41eb2ee" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject MinerDrag.minerPrefab</definition>
+        <argsstring></argsstring>
+        <name>minerPrefab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_miner_drag_1acc2e88b7aa03718290134984ce684fc6" compoundref="_miner_drag_8cs" startline="33" endline="36">OnBeginDrag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_miner_drag_1a09e96b3d3f541c0102065ea8e0924821" prot="public" static="no" mutable="no">
+        <type>TileBase[]</type>
+        <definition>TileBase [] MinerDrag.validTileTypes</definition>
+        <argsstring></argsstring>
+        <name>validTileTypes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="23" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_miner_drag_1acde9eb2bd049cd3e0577eea6d6881f86" compoundref="_miner_drag_8cs" startline="59" endline="103">OnEndDrag</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_miner_drag_1a636b2403050d6fd48bea95e287d5fdcb" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject MinerDrag.currentMiner</definition>
+        <argsstring></argsstring>
+        <name>currentMiner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_miner_drag_1acc2e88b7aa03718290134984ce684fc6" compoundref="_miner_drag_8cs" startline="33" endline="36">OnBeginDrag</referencedby>
+        <referencedby refid="class_miner_drag_1acde9eb2bd049cd3e0577eea6d6881f86" compoundref="_miner_drag_8cs" startline="59" endline="103">OnEndDrag</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_miner_drag_1acc2e88b7aa03718290134984ce684fc6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinerDrag.OnBeginDrag</definition>
+        <argsstring>(PointerEventData eventData)</argsstring>
+        <name>OnBeginDrag</name>
+        <param>
+          <type>PointerEventData</type>
+          <declname>eventData</declname>
+        </param>
+        <briefdescription>
+<para>Undocumented </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="33" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="33" bodyend="36"/>
+        <references refid="class_miner_drag_1a636b2403050d6fd48bea95e287d5fdcb" compoundref="_miner_drag_8cs" startline="20">currentMiner</references>
+        <references refid="class_miner_drag_1a0f9f4acaf3cfacfcfe0101deb41eb2ee" compoundref="_miner_drag_8cs" startline="19">minerPrefab</references>
+      </memberdef>
+      <memberdef kind="function" id="class_miner_drag_1a505170f0c4daeedd14a4800dd9214109" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinerDrag.OnDrag</definition>
+        <argsstring>(PointerEventData eventData)</argsstring>
+        <name>OnDrag</name>
+        <param>
+          <type>PointerEventData</type>
+          <declname>eventData</declname>
+        </param>
+        <briefdescription>
+<para>Every time the mouse moves, match the new dragged miner to the mouse position </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="44" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="44" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_miner_drag_1acde9eb2bd049cd3e0577eea6d6881f86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinerDrag.OnEndDrag</definition>
+        <argsstring>(PointerEventData eventData)</argsstring>
+        <name>OnEndDrag</name>
+        <param>
+          <type>PointerEventData</type>
+          <declname>eventData</declname>
+        </param>
+        <briefdescription>
+<para>Raycast the tilemap looking for a node under the mouse when the tower is dropped onto the map, validation check the tile then add it to the map. If not valid remove the miner from the cursor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="59" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="59" bodyend="103"/>
+        <references refid="class_miner_drag_1a636b2403050d6fd48bea95e287d5fdcb" compoundref="_miner_drag_8cs" startline="20">currentMiner</references>
+        <references refid="class_miner_drag_1ad0fb2891077169acdf5dc4d4cd1655b8" compoundref="_miner_drag_8cs" startline="111" endline="115">LogRaycasthitObject</references>
+        <references refid="class_miner_drag_1a09e96b3d3f541c0102065ea8e0924821" compoundref="_miner_drag_8cs" startline="23">validTileTypes</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_miner_drag_1ad0fb2891077169acdf5dc4d4cd1655b8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinerDrag.LogRaycasthitObject</definition>
+        <argsstring>(String position, String type)</argsstring>
+        <name>LogRaycasthitObject</name>
+        <param>
+          <type>String</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Undocumented </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="111" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="111" bodyend="115"/>
+        <referencedby refid="class_miner_drag_1acde9eb2bd049cd3e0577eea6d6881f86" compoundref="_miner_drag_8cs" startline="59" endline="103">OnEndDrag</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>TD_TowerDrag is used to drag and drop all towers into the game onto TD_TowerDrop sockets</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="95">
+        <label>IEndDragHandler</label>
+      </node>
+      <node id="93">
+        <label>IBeginDragHandler</label>
+      </node>
+      <node id="91">
+        <label>MinerDrag</label>
+        <link refid="class_miner_drag"/>
+        <childnode refid="92" relation="public-inheritance">
+        </childnode>
+        <childnode refid="93" relation="public-inheritance">
+        </childnode>
+        <childnode refid="94" relation="public-inheritance">
+        </childnode>
+        <childnode refid="95" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="94">
+        <label>IDragHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="100">
+        <label>IEndDragHandler</label>
+      </node>
+      <node id="98">
+        <label>IBeginDragHandler</label>
+      </node>
+      <node id="96">
+        <label>MinerDrag</label>
+        <link refid="class_miner_drag"/>
+        <childnode refid="97" relation="public-inheritance">
+        </childnode>
+        <childnode refid="98" relation="public-inheritance">
+        </childnode>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+        <childnode refid="100" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="99">
+        <label>IDragHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="17" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="16" bodyend="118"/>
+    <listofallmembers>
+      <member refid="class_miner_drag_1a636b2403050d6fd48bea95e287d5fdcb" prot="private" virt="non-virtual"><scope>MinerDrag</scope><name>currentMiner</name></member>
+      <member refid="class_miner_drag_1ad0fb2891077169acdf5dc4d4cd1655b8" prot="private" virt="non-virtual"><scope>MinerDrag</scope><name>LogRaycasthitObject</name></member>
+      <member refid="class_miner_drag_1a0f9f4acaf3cfacfcfe0101deb41eb2ee" prot="public" virt="non-virtual"><scope>MinerDrag</scope><name>minerPrefab</name></member>
+      <member refid="class_miner_drag_1acc2e88b7aa03718290134984ce684fc6" prot="public" virt="non-virtual"><scope>MinerDrag</scope><name>OnBeginDrag</name></member>
+      <member refid="class_miner_drag_1a505170f0c4daeedd14a4800dd9214109" prot="public" virt="non-virtual"><scope>MinerDrag</scope><name>OnDrag</name></member>
+      <member refid="class_miner_drag_1acde9eb2bd049cd3e0577eea6d6881f86" prot="public" virt="non-virtual"><scope>MinerDrag</scope><name>OnEndDrag</name></member>
+      <member refid="class_miner_drag_1a09e96b3d3f541c0102065ea8e0924821" prot="public" virt="non-virtual"><scope>MinerDrag</scope><name>validTileTypes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

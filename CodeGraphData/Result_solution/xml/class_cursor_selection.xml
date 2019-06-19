@@ -16,7 +16,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="17" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="17" bodyend="-1"/>
-        <referencedby refid="class_cursor_selection_1a9149264a75d97d444104e894fc21e5e6" compoundref="_cursor_selection_8cs" startline="48" endline="71">OnClickSelect</referencedby>
+        <referencedby refid="class_cursor_selection_1a9149264a75d97d444104e894fc21e5e6" compoundref="_cursor_selection_8cs" startline="46" endline="69">OnClickSelect</referencedby>
         <referencedby refid="class_cursor_selection_1a64278855cb9178d6e2aff31760135974" compoundref="_cursor_selection_8cs" startline="24" endline="34">Start</referencedby>
       </memberdef>
       </sectiondef>
@@ -91,8 +91,8 @@
 <para>Uses raycast from mouse position to collider </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="48" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="48" bodyend="71"/>
-        <references refid="class_cursor_selection_1afbc1cc83e29a8dac9824286fcf36138f" compoundref="_cursor_selection_8cs" startline="81" endline="85">LogRaycasthitObject</references>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="46" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="46" bodyend="69"/>
+        <references refid="class_cursor_selection_1afbc1cc83e29a8dac9824286fcf36138f" compoundref="_cursor_selection_8cs" startline="79" endline="83">LogRaycasthitObject</references>
         <references refid="class_cursor_selection_1abfeaa9d3cc2925c0bb990521fecca61d" compoundref="_cursor_selection_8cs" startline="17">tileLayer</references>
       </memberdef>
       </sectiondef>
@@ -131,8 +131,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="81" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="81" bodyend="85"/>
-        <referencedby refid="class_cursor_selection_1a9149264a75d97d444104e894fc21e5e6" compoundref="_cursor_selection_8cs" startline="48" endline="71">OnClickSelect</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="79" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="79" bodyend="83"/>
+        <referencedby refid="class_cursor_selection_1a9149264a75d97d444104e894fc21e5e6" compoundref="_cursor_selection_8cs" startline="46" endline="69">OnClickSelect</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -140,89 +140,89 @@
     <detaileddescription>
 <para><ref refid="class_cursor_selection" kindref="compound">CursorSelection</ref></para>    </detaileddescription>
     <inheritancegraph>
-      <node id="22">
+      <node id="32">
         <label>MonoBehaviour</label>
       </node>
-      <node id="21">
+      <node id="31">
         <label>CursorSelection</label>
         <link refid="class_cursor_selection"/>
-        <childnode refid="22" relation="public-inheritance">
+        <childnode refid="32" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="27">
+      <node id="37">
         <label>WaveSystem.WaveManager</label>
         <link refid="class_wave_system_1_1_wave_manager"/>
-        <childnode refid="24" relation="public-inheritance">
+        <childnode refid="34" relation="public-inheritance">
         </childnode>
-        <childnode refid="25" relation="usage">
+        <childnode refid="35" relation="usage">
           <edgelabel>tileNodes</edgelabel>
           <edgelabel>tiles</edgelabel>
         </childnode>
-        <childnode refid="23" relation="usage">
+        <childnode refid="33" relation="usage">
           <edgelabel>cursorSelection</edgelabel>
         </childnode>
-        <childnode refid="28" relation="usage">
+        <childnode refid="38" relation="usage">
           <edgelabel>waves</edgelabel>
           <edgelabel>currentWave</edgelabel>
         </childnode>
-        <childnode refid="31" relation="usage">
+        <childnode refid="41" relation="usage">
           <edgelabel>currentTimer</edgelabel>
         </childnode>
       </node>
-      <node id="30">
+      <node id="40">
         <label>PathWrapper</label>
         <link refid="class_path_wrapper"/>
-        <childnode refid="29" relation="public-inheritance">
+        <childnode refid="39" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="26">
+      <node id="36">
         <label>PathsData</label>
         <link refid="class_paths_data"/>
       </node>
-      <node id="31">
+      <node id="41">
         <label>Timer</label>
         <link refid="class_timer"/>
       </node>
-      <node id="25">
+      <node id="35">
         <label>TileNodes</label>
         <link refid="class_tile_nodes"/>
-        <childnode refid="24" relation="public-inheritance">
+        <childnode refid="34" relation="public-inheritance">
         </childnode>
-        <childnode refid="26" relation="usage">
+        <childnode refid="36" relation="usage">
           <edgelabel>pathData</edgelabel>
         </childnode>
       </node>
-      <node id="29">
+      <node id="39">
         <label>ScriptableObject</label>
       </node>
-      <node id="24">
+      <node id="34">
         <label>MonoBehaviour</label>
       </node>
-      <node id="28">
+      <node id="38">
         <label>Wave</label>
         <link refid="class_wave"/>
-        <childnode refid="29" relation="public-inheritance">
+        <childnode refid="39" relation="public-inheritance">
         </childnode>
-        <childnode refid="30" relation="usage">
+        <childnode refid="40" relation="usage">
           <edgelabel>listWapper</edgelabel>
         </childnode>
       </node>
-      <node id="23">
+      <node id="33">
         <label>CursorSelection</label>
         <link refid="class_cursor_selection"/>
-        <childnode refid="24" relation="public-inheritance">
+        <childnode refid="34" relation="public-inheritance">
         </childnode>
-        <childnode refid="25" relation="usage">
+        <childnode refid="35" relation="usage">
           <edgelabel>tileNodes</edgelabel>
         </childnode>
-        <childnode refid="27" relation="usage">
+        <childnode refid="37" relation="usage">
           <edgelabel>waveManager</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="14" bodyend="86"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="14" bodyend="84"/>
     <listofallmembers>
       <member refid="class_cursor_selection_1afbc1cc83e29a8dac9824286fcf36138f" prot="package" virt="non-virtual"><scope>CursorSelection</scope><name>LogRaycasthitObject</name></member>
       <member refid="class_cursor_selection_1a9149264a75d97d444104e894fc21e5e6" prot="private" virt="non-virtual"><scope>CursorSelection</scope><name>OnClickSelect</name></member>

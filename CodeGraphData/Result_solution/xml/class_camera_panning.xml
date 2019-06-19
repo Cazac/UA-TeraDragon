@@ -200,24 +200,24 @@
     <detaileddescription>
 <para>TD_CameraPanning is used to move the camera around the title screen</para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8">
+      <node id="18">
         <label>CameraPanning</label>
         <link refid="class_camera_panning"/>
-        <childnode refid="9" relation="public-inheritance">
+        <childnode refid="19" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9">
+      <node id="19">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10">
+      <node id="20">
         <label>CameraPanning</label>
         <link refid="class_camera_panning"/>
-        <childnode refid="11" relation="public-inheritance">
+        <childnode refid="21" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11">
+      <node id="21">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>

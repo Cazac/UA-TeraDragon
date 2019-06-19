@@ -233,24 +233,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4">
+      <node id="14">
         <label>ButtonController</label>
         <link refid="class_button_controller"/>
-        <childnode refid="5" relation="public-inheritance">
+        <childnode refid="15" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5">
+      <node id="15">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6">
+      <node id="16">
         <label>ButtonController</label>
         <link refid="class_button_controller"/>
-        <childnode refid="7" relation="public-inheritance">
+        <childnode refid="17" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7">
+      <node id="17">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>

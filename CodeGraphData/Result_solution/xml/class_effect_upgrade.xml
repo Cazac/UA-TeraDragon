@@ -23,39 +23,39 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="33">
+      <node id="43">
         <label>UpgradeNode</label>
         <link refid="class_upgrade_node"/>
-        <childnode refid="34" relation="public-inheritance">
+        <childnode refid="44" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="34">
+      <node id="44">
         <label>ScriptableObject</label>
       </node>
-      <node id="32">
+      <node id="42">
         <label>EffectUpgrade</label>
         <link refid="class_effect_upgrade"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="43" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="36">
+      <node id="46">
         <label>UpgradeNode</label>
         <link refid="class_upgrade_node"/>
-        <childnode refid="37" relation="public-inheritance">
+        <childnode refid="47" relation="public-inheritance">
         </childnode>
-        <childnode refid="36" relation="usage">
+        <childnode refid="46" relation="usage">
           <edgelabel>necessaryNodes</edgelabel>
         </childnode>
       </node>
-      <node id="37">
+      <node id="47">
         <label>ScriptableObject</label>
       </node>
-      <node id="35">
+      <node id="45">
         <label>EffectUpgrade</label>
         <link refid="class_effect_upgrade"/>
-        <childnode refid="36" relation="public-inheritance">
+        <childnode refid="46" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

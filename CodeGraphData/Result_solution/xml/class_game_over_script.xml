@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_game_over_script" kind="class" prot="public">
+    <compoundname>GameOverScript</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_game_over_script_1aa2031ce3e750bbcb7e7c442ef20bee4c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool GameOverScript.isGameOver</definition>
+        <argsstring></argsstring>
+        <name>isGameOver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_game_over_script_1a71a6e9ada2a17603dbff6fa95d1ee16c" compoundref="_game_over_script_8cs" startline="11" endline="16">TurnOnGameOver</referencedby>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">PlayerStats.UpdateCrystalValues</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_game_over_script_1add101bb06c576bea5e8133b78c1e56a6" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject GameOverScript.GameOverPanel</definition>
+        <argsstring></argsstring>
+        <name>GameOverPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_over_script_1a71a6e9ada2a17603dbff6fa95d1ee16c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameOverScript.TurnOnGameOver</definition>
+        <argsstring>()</argsstring>
+        <name>TurnOnGameOver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" bodystart="11" bodyend="16"/>
+        <references refid="class_game_over_script_1aa2031ce3e750bbcb7e7c442ef20bee4c" compoundref="_game_over_script_8cs" startline="8">isGameOver</references>
+      </memberdef>
+      <memberdef kind="function" id="class_game_over_script_1ac5da7bf9a7e1b97f9f4c7da1cc4f56ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameOverScript.TurnOffGameOver</definition>
+        <argsstring>()</argsstring>
+        <name>TurnOffGameOver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" bodystart="18" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_over_script_1a1864d5411c86e5df22bc8963b2dedf58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameOverScript.TestingButton</definition>
+        <argsstring>()</argsstring>
+        <name>TestingButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" line="24" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="67">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="66">
+        <label>GameOverScript</label>
+        <link refid="class_game_over_script"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="69">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="68">
+        <label>GameOverScript</label>
+        <link refid="class_game_over_script"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" bodystart="6" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_game_over_script_1add101bb06c576bea5e8133b78c1e56a6" prot="public" virt="non-virtual"><scope>GameOverScript</scope><name>GameOverPanel</name></member>
+      <member refid="class_game_over_script_1aa2031ce3e750bbcb7e7c442ef20bee4c" prot="public" virt="non-virtual"><scope>GameOverScript</scope><name>isGameOver</name></member>
+      <member refid="class_game_over_script_1a1864d5411c86e5df22bc8963b2dedf58" prot="public" virt="non-virtual"><scope>GameOverScript</scope><name>TestingButton</name></member>
+      <member refid="class_game_over_script_1ac5da7bf9a7e1b97f9f4c7da1cc4f56ca" prot="public" virt="non-virtual"><scope>GameOverScript</scope><name>TurnOffGameOver</name></member>
+      <member refid="class_game_over_script_1a71a6e9ada2a17603dbff6fa95d1ee16c" prot="public" virt="non-virtual"><scope>GameOverScript</scope><name>TurnOnGameOver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

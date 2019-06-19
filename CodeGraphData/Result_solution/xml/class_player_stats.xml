@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_player_stats" kind="class" prot="public">
+    <compoundname>PlayerStats</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_player_stats_1a04a9245d1a63c62a33bc7c1e03bc008b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PlayerStats.MaxLives</definition>
+        <argsstring></argsstring>
+        <name>MaxLives</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1ae25b7817bb5fb9dad046cf347ae7af45" compoundref="_player_stats_8cs" startline="36" endline="42">Start</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1a5742e6643d482229e324c872a90cdf2d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PlayerStats.CurrentLives</definition>
+        <argsstring></argsstring>
+        <name>CurrentLives</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1a2423f642f67c16f9f6e507dbd9db3387" compoundref="_player_stats_8cs" startline="60" endline="63">CheckLife</referencedby>
+        <referencedby refid="class_player_stats_1a9af9d64b3ac36bcb38da32fc95815321" compoundref="_player_stats_8cs" startline="44" endline="58">RemoveLife</referencedby>
+        <referencedby refid="class_player_stats_1ae25b7817bb5fb9dad046cf347ae7af45" compoundref="_player_stats_8cs" startline="36" endline="42">Start</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1a1ad4fad4bd2c10e18cfdb7d232d56cec" prot="public" static="no" mutable="no">
+        <type>Text</type>
+        <definition>Text PlayerStats.crystalText_Red</definition>
+        <argsstring></argsstring>
+        <name>crystalText_Red</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1acea1de33ef1abdce9829ab21908f2d6f" prot="public" static="no" mutable="no">
+        <type>Text</type>
+        <definition>Text PlayerStats.crystalText_Blue</definition>
+        <argsstring></argsstring>
+        <name>crystalText_Blue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1a9d44161e296f30b66e559d9ab6fa87ea" prot="public" static="no" mutable="no">
+        <type>Text</type>
+        <definition>Text PlayerStats.crystalText_Green</definition>
+        <argsstring></argsstring>
+        <name>crystalText_Green</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1a104b7281571dea1b8e2cc095eea7fb98" prot="public" static="no" mutable="no">
+        <type>Text</type>
+        <definition>Text PlayerStats.crystalText_Yellow</definition>
+        <argsstring></argsstring>
+        <name>crystalText_Yellow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_stats_1a87118025180e06ffcb07ff5530cdf954" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PlayerStats.crystalsOwned_Red</definition>
+        <argsstring></argsstring>
+        <name>crystalsOwned_Red</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1ad19f9c0d74ea78c8d734baac7ac18ebf" compoundref="_player_stats_8cs" startline="129" endline="135">UpdateCrystalUI</referencedby>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1ae346c822a365b4a406d4b185ed6642a2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PlayerStats.crystalsOwned_Blue</definition>
+        <argsstring></argsstring>
+        <name>crystalsOwned_Blue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1ad19f9c0d74ea78c8d734baac7ac18ebf" compoundref="_player_stats_8cs" startline="129" endline="135">UpdateCrystalUI</referencedby>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1afaf802b7bbad087ba7616cb658a5f001" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PlayerStats.crystalsOwned_Green</definition>
+        <argsstring></argsstring>
+        <name>crystalsOwned_Green</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1ad19f9c0d74ea78c8d734baac7ac18ebf" compoundref="_player_stats_8cs" startline="129" endline="135">UpdateCrystalUI</referencedby>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1a0e3f0082e4d75b3ea818e2480f7b5417" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PlayerStats.crystalsOwned_Yellow</definition>
+        <argsstring></argsstring>
+        <name>crystalsOwned_Yellow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1ad19f9c0d74ea78c8d734baac7ac18ebf" compoundref="_player_stats_8cs" startline="129" endline="135">UpdateCrystalUI</referencedby>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1ae259b1cad31cb6f924f1cef90897baf3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerStats.crystalsExtra_Red</definition>
+        <argsstring></argsstring>
+        <name>crystalsExtra_Red</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="24" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1af020a6edbe7a8a263810d96c8265639b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerStats.crystalsExtra_Blue</definition>
+        <argsstring></argsstring>
+        <name>crystalsExtra_Blue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1a15d715d61ff77fb58c6aef39e1e2b4e9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerStats.crystalsExtra_Green</definition>
+        <argsstring></argsstring>
+        <name>crystalsExtra_Green</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="26" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1a425f05bbd4b2bdb5b62bc95bbc3dec9b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerStats.crystalsExtra_Yellow</definition>
+        <argsstring></argsstring>
+        <name>crystalsExtra_Yellow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1a15f8c15f6e95cd74b5208e19c92df028" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerStats.crystalsPerSecond_Red</definition>
+        <argsstring></argsstring>
+        <name>crystalsPerSecond_Red</name>
+        <initializer>= 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="29" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1a3edc8421cff1aa0a9946dee63e4e2e5e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerStats.crystalsPerSecond_Blue</definition>
+        <argsstring></argsstring>
+        <name>crystalsPerSecond_Blue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="30" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1a006450b8aca5f111cf02229de955bf16" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerStats.crystalsPerSecond_Green</definition>
+        <argsstring></argsstring>
+        <name>crystalsPerSecond_Green</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="31" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_stats_1a647acb62138ddedace7a4b865af984c8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerStats.crystalsPerSecond_Yellow</definition>
+        <argsstring></argsstring>
+        <name>crystalsPerSecond_Yellow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="32" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_stats_1ae25b7817bb5fb9dad046cf347ae7af45" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerStats.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="36" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="36" bodyend="42"/>
+        <references refid="class_player_stats_1a5742e6643d482229e324c872a90cdf2d" compoundref="_player_stats_8cs" startline="10">CurrentLives</references>
+        <references refid="class_player_stats_1a04a9245d1a63c62a33bc7c1e03bc008b" compoundref="_player_stats_8cs" startline="9">MaxLives</references>
+        <references refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_stats_1a9af9d64b3ac36bcb38da32fc95815321" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerStats.RemoveLife</definition>
+        <argsstring>(int i)</argsstring>
+        <name>RemoveLife</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="44" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="44" bodyend="58"/>
+        <references refid="class_player_stats_1a5742e6643d482229e324c872a90cdf2d" compoundref="_player_stats_8cs" startline="10">CurrentLives</references>
+        <references refid="class_player_stats_1a393666cb5cf63349e182c35860736c14" compoundref="_player_stats_8cs" startline="65" endline="70">GameOver</references>
+      </memberdef>
+      <memberdef kind="function" id="class_player_stats_1a2423f642f67c16f9f6e507dbd9db3387" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int PlayerStats.CheckLife</definition>
+        <argsstring>()</argsstring>
+        <name>CheckLife</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="60" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="60" bodyend="63"/>
+        <references refid="class_player_stats_1a5742e6643d482229e324c872a90cdf2d" compoundref="_player_stats_8cs" startline="10">CurrentLives</references>
+      </memberdef>
+      <memberdef kind="function" id="class_player_stats_1a393666cb5cf63349e182c35860736c14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerStats.GameOver</definition>
+        <argsstring>()</argsstring>
+        <name>GameOver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="65" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="65" bodyend="70"/>
+        <referencedby refid="class_player_stats_1a9af9d64b3ac36bcb38da32fc95815321" compoundref="_player_stats_8cs" startline="44" endline="58">RemoveLife</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator PlayerStats.UpdateCrystalValues</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateCrystalValues</name>
+        <briefdescription>
+<para>Undocumented </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="79" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="79" bodyend="121"/>
+        <references refid="class_player_stats_1af020a6edbe7a8a263810d96c8265639b" compoundref="_player_stats_8cs" startline="25">crystalsExtra_Blue</references>
+        <references refid="class_player_stats_1a15d715d61ff77fb58c6aef39e1e2b4e9" compoundref="_player_stats_8cs" startline="26">crystalsExtra_Green</references>
+        <references refid="class_player_stats_1ae259b1cad31cb6f924f1cef90897baf3" compoundref="_player_stats_8cs" startline="24">crystalsExtra_Red</references>
+        <references refid="class_player_stats_1a425f05bbd4b2bdb5b62bc95bbc3dec9b" compoundref="_player_stats_8cs" startline="27">crystalsExtra_Yellow</references>
+        <references refid="class_player_stats_1ae346c822a365b4a406d4b185ed6642a2" compoundref="_player_stats_8cs" startline="20">crystalsOwned_Blue</references>
+        <references refid="class_player_stats_1afaf802b7bbad087ba7616cb658a5f001" compoundref="_player_stats_8cs" startline="21">crystalsOwned_Green</references>
+        <references refid="class_player_stats_1a87118025180e06ffcb07ff5530cdf954" compoundref="_player_stats_8cs" startline="19">crystalsOwned_Red</references>
+        <references refid="class_player_stats_1a0e3f0082e4d75b3ea818e2480f7b5417" compoundref="_player_stats_8cs" startline="22">crystalsOwned_Yellow</references>
+        <references refid="class_player_stats_1a3edc8421cff1aa0a9946dee63e4e2e5e" compoundref="_player_stats_8cs" startline="30">crystalsPerSecond_Blue</references>
+        <references refid="class_player_stats_1a006450b8aca5f111cf02229de955bf16" compoundref="_player_stats_8cs" startline="31">crystalsPerSecond_Green</references>
+        <references refid="class_player_stats_1a15f8c15f6e95cd74b5208e19c92df028" compoundref="_player_stats_8cs" startline="29">crystalsPerSecond_Red</references>
+        <references refid="class_player_stats_1a647acb62138ddedace7a4b865af984c8" compoundref="_player_stats_8cs" startline="32">crystalsPerSecond_Yellow</references>
+        <references refid="class_game_over_script_1aa2031ce3e750bbcb7e7c442ef20bee4c" compoundref="_game_over_script_8cs" startline="8">GameOverScript.isGameOver</references>
+        <references refid="class_player_stats_1ad19f9c0d74ea78c8d734baac7ac18ebf" compoundref="_player_stats_8cs" startline="129" endline="135">UpdateCrystalUI</references>
+        <referencedby refid="class_player_stats_1ae25b7817bb5fb9dad046cf347ae7af45" compoundref="_player_stats_8cs" startline="36" endline="42">Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_player_stats_1ad19f9c0d74ea78c8d734baac7ac18ebf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerStats.UpdateCrystalUI</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateCrystalUI</name>
+        <briefdescription>
+<para>Update Crystal UI elements </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="129" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="129" bodyend="135"/>
+        <references refid="class_player_stats_1ae346c822a365b4a406d4b185ed6642a2" compoundref="_player_stats_8cs" startline="20">crystalsOwned_Blue</references>
+        <references refid="class_player_stats_1afaf802b7bbad087ba7616cb658a5f001" compoundref="_player_stats_8cs" startline="21">crystalsOwned_Green</references>
+        <references refid="class_player_stats_1a87118025180e06ffcb07ff5530cdf954" compoundref="_player_stats_8cs" startline="19">crystalsOwned_Red</references>
+        <references refid="class_player_stats_1a0e3f0082e4d75b3ea818e2480f7b5417" compoundref="_player_stats_8cs" startline="22">crystalsOwned_Yellow</references>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">UpdateCrystalValues</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="114">
+        <label>PlayerStats</label>
+        <link refid="class_player_stats"/>
+        <childnode refid="115" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="116">
+        <label>PlayerStats</label>
+        <link refid="class_player_stats"/>
+        <childnode refid="117" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers/PlayerStats.cs" bodystart="6" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_player_stats_1a2423f642f67c16f9f6e507dbd9db3387" prot="public" virt="non-virtual"><scope>PlayerStats</scope><name>CheckLife</name></member>
+      <member refid="class_player_stats_1af020a6edbe7a8a263810d96c8265639b" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>crystalsExtra_Blue</name></member>
+      <member refid="class_player_stats_1a15d715d61ff77fb58c6aef39e1e2b4e9" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>crystalsExtra_Green</name></member>
+      <member refid="class_player_stats_1ae259b1cad31cb6f924f1cef90897baf3" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>crystalsExtra_Red</name></member>
+      <member refid="class_player_stats_1a425f05bbd4b2bdb5b62bc95bbc3dec9b" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>crystalsExtra_Yellow</name></member>
+      <member refid="class_player_stats_1ae346c822a365b4a406d4b185ed6642a2" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>crystalsOwned_Blue</name></member>
+      <member refid="class_player_stats_1afaf802b7bbad087ba7616cb658a5f001" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>crystalsOwned_Green</name></member>
+      <member refid="class_player_stats_1a87118025180e06ffcb07ff5530cdf954" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>crystalsOwned_Red</name></member>
+      <member refid="class_player_stats_1a0e3f0082e4d75b3ea818e2480f7b5417" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>crystalsOwned_Yellow</name></member>
+      <member refid="class_player_stats_1a3edc8421cff1aa0a9946dee63e4e2e5e" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>crystalsPerSecond_Blue</name></member>
+      <member refid="class_player_stats_1a006450b8aca5f111cf02229de955bf16" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>crystalsPerSecond_Green</name></member>
+      <member refid="class_player_stats_1a15f8c15f6e95cd74b5208e19c92df028" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>crystalsPerSecond_Red</name></member>
+      <member refid="class_player_stats_1a647acb62138ddedace7a4b865af984c8" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>crystalsPerSecond_Yellow</name></member>
+      <member refid="class_player_stats_1acea1de33ef1abdce9829ab21908f2d6f" prot="public" virt="non-virtual"><scope>PlayerStats</scope><name>crystalText_Blue</name></member>
+      <member refid="class_player_stats_1a9d44161e296f30b66e559d9ab6fa87ea" prot="public" virt="non-virtual"><scope>PlayerStats</scope><name>crystalText_Green</name></member>
+      <member refid="class_player_stats_1a1ad4fad4bd2c10e18cfdb7d232d56cec" prot="public" virt="non-virtual"><scope>PlayerStats</scope><name>crystalText_Red</name></member>
+      <member refid="class_player_stats_1a104b7281571dea1b8e2cc095eea7fb98" prot="public" virt="non-virtual"><scope>PlayerStats</scope><name>crystalText_Yellow</name></member>
+      <member refid="class_player_stats_1a5742e6643d482229e324c872a90cdf2d" prot="public" virt="non-virtual"><scope>PlayerStats</scope><name>CurrentLives</name></member>
+      <member refid="class_player_stats_1a393666cb5cf63349e182c35860736c14" prot="public" virt="non-virtual"><scope>PlayerStats</scope><name>GameOver</name></member>
+      <member refid="class_player_stats_1a04a9245d1a63c62a33bc7c1e03bc008b" prot="public" virt="non-virtual"><scope>PlayerStats</scope><name>MaxLives</name></member>
+      <member refid="class_player_stats_1a9af9d64b3ac36bcb38da32fc95815321" prot="public" virt="non-virtual"><scope>PlayerStats</scope><name>RemoveLife</name></member>
+      <member refid="class_player_stats_1ae25b7817bb5fb9dad046cf347ae7af45" prot="private" virt="non-virtual"><scope>PlayerStats</scope><name>Start</name></member>
+      <member refid="class_player_stats_1ad19f9c0d74ea78c8d734baac7ac18ebf" prot="public" virt="non-virtual"><scope>PlayerStats</scope><name>UpdateCrystalUI</name></member>
+      <member refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" prot="public" virt="non-virtual"><scope>PlayerStats</scope><name>UpdateCrystalValues</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

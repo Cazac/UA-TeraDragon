@@ -457,30 +457,30 @@ returns&gt;Size of tilemap as vector3</para>        </detaileddescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="13">
+      <node id="23">
         <label>MonoBehaviour</label>
       </node>
-      <node id="12">
+      <node id="22">
         <label>CameraPanningCursor</label>
         <link refid="class_camera_panning_cursor"/>
-        <childnode refid="13" relation="public-inheritance">
+        <childnode refid="23" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="16">
+      <node id="26">
         <label>InputDetection</label>
         <link refid="class_input_detection"/>
       </node>
-      <node id="15">
+      <node id="25">
         <label>MonoBehaviour</label>
       </node>
-      <node id="14">
+      <node id="24">
         <label>CameraPanningCursor</label>
         <link refid="class_camera_panning_cursor"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="25" relation="public-inheritance">
         </childnode>
-        <childnode refid="16" relation="usage">
+        <childnode refid="26" relation="usage">
           <edgelabel>inputDetection</edgelabel>
         </childnode>
       </node>

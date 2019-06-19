@@ -3,6 +3,7 @@
   <compounddef id="dir_a7511bee0c07a6fc403cd31d2569a9a0" kind="dir">
     <compoundname>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers</compoundname>
     <innerfile refid="_game_manager_8cs">GameManager.cs</innerfile>
+    <innerfile refid="_player_stats_8cs">PlayerStats.cs</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

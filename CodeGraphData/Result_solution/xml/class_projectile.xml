@@ -75,24 +75,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="90">
+      <node id="118">
         <label>Projectile</label>
         <link refid="class_projectile"/>
-        <childnode refid="91" relation="public-inheritance">
+        <childnode refid="119" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="91">
+      <node id="119">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="92">
+      <node id="120">
         <label>Projectile</label>
         <link refid="class_projectile"/>
-        <childnode refid="93" relation="public-inheritance">
+        <childnode refid="121" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="93">
+      <node id="121">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>

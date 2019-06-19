@@ -201,46 +201,63 @@
         <references refid="class_enemy_script_1a4f66dc52b089b078d41ea14724a35c7e" compoundref="_enemy_script_8cs" startline="9">waypoints</references>
         <referencedby refid="class_enemy_script_1a1033134339a3ffbee7e98c9b6dbd756d" compoundref="_enemy_script_8cs" startline="33" endline="37">FixedUpdate</referencedby>
       </memberdef>
+      <memberdef kind="function" id="class_enemy_script_1a6d35ab0bc6c1d726f22424e67dda462e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyScript.OnTriggerEnter2D</definition>
+        <argsstring>(Collider2D collision)</argsstring>
+        <name>OnTriggerEnter2D</name>
+        <param>
+          <type>Collider2D</type>
+          <declname>collision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="73" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="73" bodyend="83"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="42">
+      <node id="52">
         <label>EnemyScript</label>
         <link refid="class_enemy_script"/>
-        <childnode refid="43" relation="public-inheritance">
+        <childnode refid="53" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="43">
+      <node id="53">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="46">
+      <node id="56">
         <label>EnemyData</label>
         <link refid="class_enemy_data"/>
-        <childnode refid="47" relation="public-inheritance">
+        <childnode refid="57" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="44">
+      <node id="54">
         <label>EnemyScript</label>
         <link refid="class_enemy_script"/>
-        <childnode refid="45" relation="public-inheritance">
+        <childnode refid="55" relation="public-inheritance">
         </childnode>
-        <childnode refid="46" relation="usage">
+        <childnode refid="56" relation="usage">
           <edgelabel>enemyData</edgelabel>
         </childnode>
       </node>
-      <node id="47">
+      <node id="57">
         <label>ScriptableObject</label>
       </node>
-      <node id="45">
+      <node id="55">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="5" bodyend="74"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="5" bodyend="86"/>
     <listofallmembers>
       <member refid="class_enemy_script_1a5d9521957bc18d478d927f23ac6066df" prot="public" virt="non-virtual"><scope>EnemyScript</scope><name>attributes</name></member>
       <member refid="class_enemy_script_1ae8f37b47dbf347e64db652cf78174ad7" prot="public" virt="non-virtual"><scope>EnemyScript</scope><name>CurrentHealth</name></member>
@@ -251,6 +268,7 @@
       <member refid="class_enemy_script_1a1033134339a3ffbee7e98c9b6dbd756d" prot="private" virt="non-virtual"><scope>EnemyScript</scope><name>FixedUpdate</name></member>
       <member refid="class_enemy_script_1ab16cb5c586d820cbf42ca4d9a33e7843" prot="public" virt="non-virtual"><scope>EnemyScript</scope><name>MaxHealth</name></member>
       <member refid="class_enemy_script_1add0f8eee29617a94df0467533cad1d74" prot="private" virt="non-virtual"><scope>EnemyScript</scope><name>Move</name></member>
+      <member refid="class_enemy_script_1a6d35ab0bc6c1d726f22424e67dda462e" prot="private" virt="non-virtual"><scope>EnemyScript</scope><name>OnTriggerEnter2D</name></member>
       <member refid="class_enemy_script_1a2c618fda4a3b98cd7fc1089c682c3e90" prot="public" virt="non-virtual"><scope>EnemyScript</scope><name>speed</name></member>
       <member refid="class_enemy_script_1a61a56df6ca1e4301e3b17525a2885f0a" prot="private" virt="non-virtual"><scope>EnemyScript</scope><name>Start</name></member>
       <member refid="class_enemy_script_1a8a4debfb9cc25fb192dec4f958ee5d06" prot="private" virt="non-virtual"><scope>EnemyScript</scope><name>startPosition</name></member>

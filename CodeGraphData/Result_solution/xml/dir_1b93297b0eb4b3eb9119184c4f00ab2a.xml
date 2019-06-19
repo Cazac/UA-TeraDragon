@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_1b93297b0eb4b3eb9119184c4f00ab2a" kind="dir">
+    <compoundname>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound</compoundname>
+    <innerfile refid="_auto_destruct_8cs">AutoDestruct.cs</innerfile>
+    <innerfile refid="_sound_manager_8cs">SoundManager.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/"/>
+  </compounddef>
+</doxygen>

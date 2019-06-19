@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_base_node" kind="class" prot="public">
+    <compoundname>BaseNode</compoundname>
+    <basecompoundref refid="class_world_tile" prot="public" virt="non-virtual">WorldTile</basecompoundref>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_base_node_1abd7cff8011b1ab4f62481184fe85b64e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BaseNode.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_node_1a65578d9665e406df72a181c35cc1d916" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BaseNode.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_base_node_1a91d540fbf54039dbd21845c6f519b5e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BaseNode.BaseIsHit</definition>
+        <argsstring>(int i)</argsstring>
+        <name>BaseIsHit</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="9">
+        <label>WorldTile</label>
+        <link refid="class_world_tile"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>BaseNode</label>
+        <link refid="class_base_node"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12">
+        <label>WorldTile</label>
+        <link refid="class_world_tile"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>BaseNode</label>
+        <link refid="class_base_node"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" bodystart="5" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_base_node_1a91d540fbf54039dbd21845c6f519b5e4" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>BaseIsHit</name></member>
+      <member refid="class_world_tile_1a5faa48b04daa3e69fa2ba7f2b0a4f58e" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>crystalValueBlue</name></member>
+      <member refid="class_world_tile_1a04bc708e60c4d6650cedfeb2f76bedfd" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>crystalValueGreen</name></member>
+      <member refid="class_world_tile_1aa329cbb27cdbc33d78816e5067043f3f" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>crystalValueRed</name></member>
+      <member refid="class_world_tile_1a815dd72c7a6d5bca1630fe88b8c1a65e" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>crystalValueYellow</name></member>
+      <member refid="class_world_tile_1a0e656c3b5770c4c79608125683ea7709" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>gridX</name></member>
+      <member refid="class_world_tile_1aa4c5505813dc257adb4a4255d5025641" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>gridY</name></member>
+      <member refid="class_world_tile_1a8bb9aed53ffb5e7251e04003f75022c5" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>myNeighbours</name></member>
+      <member refid="class_world_tile_1a3183df67122339b04fae067faf461b8a" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>posX</name></member>
+      <member refid="class_world_tile_1a84ee3d3afbc295ad8003ba0cf8490b24" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>posY</name></member>
+      <member refid="class_base_node_1abd7cff8011b1ab4f62481184fe85b64e" prot="private" virt="non-virtual"><scope>BaseNode</scope><name>Start</name></member>
+      <member refid="class_world_tile_1a68744bed9f6974f656c7677e5fcc500a" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>ToString</name></member>
+      <member refid="class_world_tile_1a73553fd14575c6acc8c0eeb2c8132e4a" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>towering</name></member>
+      <member refid="class_base_node_1a65578d9665e406df72a181c35cc1d916" prot="private" virt="non-virtual"><scope>BaseNode</scope><name>Update</name></member>
+      <member refid="class_world_tile_1a67a5d10ed54c58b0959281ecd844ec69" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>walkable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

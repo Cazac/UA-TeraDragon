@@ -51,24 +51,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="48">
+      <node id="58">
         <label>EnemyTestingScript</label>
         <link refid="class_enemy_testing_script"/>
-        <childnode refid="49" relation="public-inheritance">
+        <childnode refid="59" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="49">
+      <node id="59">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="50">
+      <node id="60">
         <label>EnemyTestingScript</label>
         <link refid="class_enemy_testing_script"/>
-        <childnode refid="51" relation="public-inheritance">
+        <childnode refid="61" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="51">
+      <node id="61">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>

@@ -36,39 +36,39 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="97">
+      <node id="135">
         <label>UpgradeNode</label>
         <link refid="class_upgrade_node"/>
-        <childnode refid="98" relation="public-inheritance">
+        <childnode refid="136" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="98">
+      <node id="136">
         <label>ScriptableObject</label>
       </node>
-      <node id="96">
+      <node id="134">
         <label>StatsUpgrade</label>
         <link refid="class_stats_upgrade"/>
-        <childnode refid="97" relation="public-inheritance">
+        <childnode refid="135" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="100">
+      <node id="138">
         <label>UpgradeNode</label>
         <link refid="class_upgrade_node"/>
-        <childnode refid="101" relation="public-inheritance">
+        <childnode refid="139" relation="public-inheritance">
         </childnode>
-        <childnode refid="100" relation="usage">
+        <childnode refid="138" relation="usage">
           <edgelabel>necessaryNodes</edgelabel>
         </childnode>
       </node>
-      <node id="101">
+      <node id="139">
         <label>ScriptableObject</label>
       </node>
-      <node id="99">
+      <node id="137">
         <label>StatsUpgrade</label>
         <link refid="class_stats_upgrade"/>
-        <childnode refid="100" relation="public-inheritance">
+        <childnode refid="138" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

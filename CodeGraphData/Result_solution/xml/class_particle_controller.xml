@@ -4,11 +4,11 @@
     <compoundname>ParticleController</compoundname>
     <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="class_particle_controller_1ae496d0f342860ccf5c56261b1ddd75ce" prot="public" static="no" mutable="no">
-        <type>Toggle</type>
-        <definition>Toggle ParticleController.thisToggle</definition>
+      <memberdef kind="variable" id="class_particle_controller_1acc84482972387ae6c09811da69277661" prot="public" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button ParticleController.thisButton</definition>
         <argsstring></argsstring>
-        <name>thisToggle</name>
+        <name>thisButton</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -16,8 +16,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" bodystart="10" bodyend="-1"/>
-        <referencedby refid="class_particle_controller_1adb98fe0a1a4a6016576b7eb3f739ae9f" compoundref="_particle_controller_8cs" startline="13" endline="22">Start</referencedby>
-        <referencedby refid="class_particle_controller_1a7ee60e3bdf79d825d11608d29613249f" compoundref="_particle_controller_8cs" startline="25" endline="48">Update</referencedby>
+        <referencedby refid="class_particle_controller_1adb98fe0a1a4a6016576b7eb3f739ae9f" compoundref="_particle_controller_8cs" startline="15" endline="25">Start</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_particle_controller_1a1fc95ae704617b07d32817a798f7b032" prot="public" static="no" mutable="no">
         <type>ParticleSystem[]</type>
@@ -31,8 +30,26 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" bodystart="11" bodyend="-1"/>
-        <referencedby refid="class_particle_controller_1adb98fe0a1a4a6016576b7eb3f739ae9f" compoundref="_particle_controller_8cs" startline="13" endline="22">Start</referencedby>
-        <referencedby refid="class_particle_controller_1a7ee60e3bdf79d825d11608d29613249f" compoundref="_particle_controller_8cs" startline="25" endline="48">Update</referencedby>
+        <referencedby refid="class_particle_controller_1adb98fe0a1a4a6016576b7eb3f739ae9f" compoundref="_particle_controller_8cs" startline="15" endline="25">Start</referencedby>
+        <referencedby refid="class_particle_controller_1a7ee60e3bdf79d825d11608d29613249f" compoundref="_particle_controller_8cs" startline="28" endline="53">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_particle_controller_1a0582a9ff0385eb48ace33dfa692427f5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ParticleController.internalSwitch</definition>
+        <argsstring></argsstring>
+        <name>internalSwitch</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_particle_controller_1a66d474f053e1e8a2889c1aba36a8d960" compoundref="_particle_controller_8cs" startline="55" endline="58">MenuButtonClickListener</referencedby>
+        <referencedby refid="class_particle_controller_1a7ee60e3bdf79d825d11608d29613249f" compoundref="_particle_controller_8cs" startline="28" endline="53">Update</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -47,9 +64,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" bodystart="13" bodyend="22"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" bodystart="15" bodyend="25"/>
         <references refid="class_particle_controller_1a1fc95ae704617b07d32817a798f7b032" compoundref="_particle_controller_8cs" startline="11">boundsParticles</references>
-        <references refid="class_particle_controller_1ae496d0f342860ccf5c56261b1ddd75ce" compoundref="_particle_controller_8cs" startline="10">thisToggle</references>
+        <references refid="class_particle_controller_1a66d474f053e1e8a2889c1aba36a8d960" compoundref="_particle_controller_8cs" startline="55" endline="58">MenuButtonClickListener</references>
+        <references refid="class_particle_controller_1acc84482972387ae6c09811da69277661" compoundref="_particle_controller_8cs" startline="10">thisButton</references>
       </memberdef>
       <memberdef kind="function" id="class_particle_controller_1a7ee60e3bdf79d825d11608d29613249f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -62,9 +80,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" bodystart="25" bodyend="48"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" line="28" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" bodystart="28" bodyend="53"/>
         <references refid="class_particle_controller_1a1fc95ae704617b07d32817a798f7b032" compoundref="_particle_controller_8cs" startline="11">boundsParticles</references>
-        <references refid="class_particle_controller_1ae496d0f342860ccf5c56261b1ddd75ce" compoundref="_particle_controller_8cs" startline="10">thisToggle</references>
+        <references refid="class_particle_controller_1a0582a9ff0385eb48ace33dfa692427f5" compoundref="_particle_controller_8cs" startline="13">internalSwitch</references>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_controller_1a66d474f053e1e8a2889c1aba36a8d960" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleController.MenuButtonClickListener</definition>
+        <argsstring>()</argsstring>
+        <name>MenuButtonClickListener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" line="55" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" bodystart="55" bodyend="58"/>
+        <references refid="class_particle_controller_1a0582a9ff0385eb48ace33dfa692427f5" compoundref="_particle_controller_8cs" startline="13">internalSwitch</references>
+        <referencedby refid="class_particle_controller_1adb98fe0a1a4a6016576b7eb3f739ae9f" compoundref="_particle_controller_8cs" startline="15" endline="25">Start</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -72,32 +105,34 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="78">
+      <node id="102">
         <label>MonoBehaviour</label>
       </node>
-      <node id="77">
+      <node id="101">
         <label>ParticleController</label>
         <link refid="class_particle_controller"/>
-        <childnode refid="78" relation="public-inheritance">
+        <childnode refid="102" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="80">
+      <node id="104">
         <label>MonoBehaviour</label>
       </node>
-      <node id="79">
+      <node id="103">
         <label>ParticleController</label>
         <link refid="class_particle_controller"/>
-        <childnode refid="80" relation="public-inheritance">
+        <childnode refid="104" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" bodystart="7" bodyend="49"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts/ParticleController.cs" bodystart="7" bodyend="59"/>
     <listofallmembers>
       <member refid="class_particle_controller_1a1fc95ae704617b07d32817a798f7b032" prot="public" virt="non-virtual"><scope>ParticleController</scope><name>boundsParticles</name></member>
+      <member refid="class_particle_controller_1a0582a9ff0385eb48ace33dfa692427f5" prot="private" virt="non-virtual"><scope>ParticleController</scope><name>internalSwitch</name></member>
+      <member refid="class_particle_controller_1a66d474f053e1e8a2889c1aba36a8d960" prot="private" virt="non-virtual"><scope>ParticleController</scope><name>MenuButtonClickListener</name></member>
       <member refid="class_particle_controller_1adb98fe0a1a4a6016576b7eb3f739ae9f" prot="private" virt="non-virtual"><scope>ParticleController</scope><name>Start</name></member>
-      <member refid="class_particle_controller_1ae496d0f342860ccf5c56261b1ddd75ce" prot="public" virt="non-virtual"><scope>ParticleController</scope><name>thisToggle</name></member>
+      <member refid="class_particle_controller_1acc84482972387ae6c09811da69277661" prot="public" virt="non-virtual"><scope>ParticleController</scope><name>thisButton</name></member>
       <member refid="class_particle_controller_1a7ee60e3bdf79d825d11608d29613249f" prot="private" virt="non-virtual"><scope>ParticleController</scope><name>Update</name></member>
     </listofallmembers>
   </compounddef>

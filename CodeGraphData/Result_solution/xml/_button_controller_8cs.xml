@@ -3,7 +3,6 @@
   <compounddef id="_button_controller_8cs" kind="file">
     <compoundname>ButtonController.cs</compoundname>
     <innerclass refid="class_button_controller" prot="public">ButtonController</innerclass>
-    <innernamespace refid="namespace_unity_engine_1_1_scene_management">UnityEngine::SceneManagement</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

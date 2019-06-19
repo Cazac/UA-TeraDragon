@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="class_auto_destruct" kind="class"><name>AutoDestruct</name>
+    <member refid="class_auto_destruct_1a0d2f43392b64188335c5b611aa3d3374" kind="function"><name>Update</name></member>
+    <member refid="class_auto_destruct_1a85267ddfe1d4ffbf9c3a8c8e28203c56" kind="function"><name>DestroySelf</name></member>
+  </compound>
   <compound refid="class_back_ground_pan_around" kind="class"><name>BackGroundPanAround</name>
     <member refid="class_back_ground_pan_around_1adaf79dc6668e70e70dec6a2cf918bc99" kind="variable"><name>mouseX</name></member>
     <member refid="class_back_ground_pan_around_1a5f44c441cfbd2b34d9608351551d8bf9" kind="variable"><name>mouseY</name></member>
@@ -8,6 +12,11 @@
     <member refid="class_back_ground_pan_around_1a45d78ac148474303b0f4f672f2df6734" kind="variable"><name>targetPosition</name></member>
     <member refid="class_back_ground_pan_around_1a0d7239e3a0dc6fd02c96f8c6377d34c4" kind="function"><name>Start</name></member>
     <member refid="class_back_ground_pan_around_1a67f76e481b8e7e151491c0f3b0c1ef50" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_base_node" kind="class"><name>BaseNode</name>
+    <member refid="class_base_node_1abd7cff8011b1ab4f62481184fe85b64e" kind="function"><name>Start</name></member>
+    <member refid="class_base_node_1a65578d9665e406df72a181c35cc1d916" kind="function"><name>Update</name></member>
+    <member refid="class_base_node_1a91d540fbf54039dbd21845c6f519b5e4" kind="function"><name>BaseIsHit</name></member>
   </compound>
   <compound refid="class_button_controller" kind="class"><name>ButtonController</name>
     <member refid="class_button_controller_1af7f7034d22d66b36e0648e8e38dcda69" kind="variable"><name>isMusicPlaying</name></member>
@@ -113,6 +122,7 @@
     <member refid="class_enemy_script_1a61a56df6ca1e4301e3b17525a2885f0a" kind="function"><name>Start</name></member>
     <member refid="class_enemy_script_1a1033134339a3ffbee7e98c9b6dbd756d" kind="function"><name>FixedUpdate</name></member>
     <member refid="class_enemy_script_1add0f8eee29617a94df0467533cad1d74" kind="function"><name>Move</name></member>
+    <member refid="class_enemy_script_1a6d35ab0bc6c1d726f22424e67dda462e" kind="function"><name>OnTriggerEnter2D</name></member>
   </compound>
   <compound refid="class_enemy_testing_script" kind="class"><name>EnemyTestingScript</name>
     <member refid="class_enemy_testing_script_1a9d5a952cba455bd30b4b884534b8d446" kind="variable"><name>enemyPrefab</name></member>
@@ -122,6 +132,13 @@
   <compound refid="class_game_manager" kind="class"><name>GameManager</name>
     <member refid="class_game_manager_1a5ccfacd027ad08eeb4ff1f25a7f59c98" kind="function"><name>Start</name></member>
     <member refid="class_game_manager_1a44c79b205dec16bfe650e21259860c5b" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_game_over_script" kind="class"><name>GameOverScript</name>
+    <member refid="class_game_over_script_1aa2031ce3e750bbcb7e7c442ef20bee4c" kind="property"><name>isGameOver</name></member>
+    <member refid="class_game_over_script_1add101bb06c576bea5e8133b78c1e56a6" kind="variable"><name>GameOverPanel</name></member>
+    <member refid="class_game_over_script_1a71a6e9ada2a17603dbff6fa95d1ee16c" kind="function"><name>TurnOnGameOver</name></member>
+    <member refid="class_game_over_script_1ac5da7bf9a7e1b97f9f4c7da1cc4f56ca" kind="function"><name>TurnOffGameOver</name></member>
+    <member refid="class_game_over_script_1a1864d5411c86e5df22bc8963b2dedf58" kind="function"><name>TestingButton</name></member>
   </compound>
   <compound refid="class_input_detection" kind="class"><name>InputDetection</name>
     <member refid="class_input_detection_1ac8ed2cac98caa1d0f952630ebec4bf9a" kind="variable"><name>isSwiping</name></member>
@@ -165,11 +182,22 @@
     <member refid="class_map_bounds_updater_1ac2e854b4416c51f83b3b16d0c45d5d33" kind="function"><name>MoveCameraBounds</name></member>
     <member refid="class_map_bounds_updater_1a93d8dda50f6b91a4dbec0fe72b9fe6a0" kind="function"><name>RestoreTiles</name></member>
   </compound>
+  <compound refid="class_miner_drag" kind="class"><name>MinerDrag</name>
+    <member refid="class_miner_drag_1a0f9f4acaf3cfacfcfe0101deb41eb2ee" kind="variable"><name>minerPrefab</name></member>
+    <member refid="class_miner_drag_1a09e96b3d3f541c0102065ea8e0924821" kind="variable"><name>validTileTypes</name></member>
+    <member refid="class_miner_drag_1a636b2403050d6fd48bea95e287d5fdcb" kind="variable"><name>currentMiner</name></member>
+    <member refid="class_miner_drag_1acc2e88b7aa03718290134984ce684fc6" kind="function"><name>OnBeginDrag</name></member>
+    <member refid="class_miner_drag_1a505170f0c4daeedd14a4800dd9214109" kind="function"><name>OnDrag</name></member>
+    <member refid="class_miner_drag_1acde9eb2bd049cd3e0577eea6d6881f86" kind="function"><name>OnEndDrag</name></member>
+    <member refid="class_miner_drag_1ad0fb2891077169acdf5dc4d4cd1655b8" kind="function"><name>LogRaycasthitObject</name></member>
+  </compound>
   <compound refid="class_particle_controller" kind="class"><name>ParticleController</name>
-    <member refid="class_particle_controller_1ae496d0f342860ccf5c56261b1ddd75ce" kind="variable"><name>thisToggle</name></member>
+    <member refid="class_particle_controller_1acc84482972387ae6c09811da69277661" kind="variable"><name>thisButton</name></member>
     <member refid="class_particle_controller_1a1fc95ae704617b07d32817a798f7b032" kind="variable"><name>boundsParticles</name></member>
+    <member refid="class_particle_controller_1a0582a9ff0385eb48ace33dfa692427f5" kind="variable"><name>internalSwitch</name></member>
     <member refid="class_particle_controller_1adb98fe0a1a4a6016576b7eb3f739ae9f" kind="function"><name>Start</name></member>
     <member refid="class_particle_controller_1a7ee60e3bdf79d825d11608d29613249f" kind="function"><name>Update</name></member>
+    <member refid="class_particle_controller_1a66d474f053e1e8a2889c1aba36a8d960" kind="function"><name>MenuButtonClickListener</name></member>
   </compound>
   <compound refid="class_path_finding" kind="class"><name>PathFinding</name>
     <member refid="class_path_finding_1ae738cf000ecc3600f51c6eb0fc759e4a" kind="variable"><name>endTiles</name></member>
@@ -190,6 +218,32 @@
   <compound refid="class_path_wrapper" kind="class"><name>PathWrapper</name>
     <member refid="class_path_wrapper_1a2752a3aadeb4e18d4728d34e9b5a8d4e" kind="variable"><name>selectedPath</name></member>
   </compound>
+  <compound refid="class_player_stats" kind="class"><name>PlayerStats</name>
+    <member refid="class_player_stats_1a04a9245d1a63c62a33bc7c1e03bc008b" kind="variable"><name>MaxLives</name></member>
+    <member refid="class_player_stats_1a5742e6643d482229e324c872a90cdf2d" kind="variable"><name>CurrentLives</name></member>
+    <member refid="class_player_stats_1a1ad4fad4bd2c10e18cfdb7d232d56cec" kind="variable"><name>crystalText_Red</name></member>
+    <member refid="class_player_stats_1acea1de33ef1abdce9829ab21908f2d6f" kind="variable"><name>crystalText_Blue</name></member>
+    <member refid="class_player_stats_1a9d44161e296f30b66e559d9ab6fa87ea" kind="variable"><name>crystalText_Green</name></member>
+    <member refid="class_player_stats_1a104b7281571dea1b8e2cc095eea7fb98" kind="variable"><name>crystalText_Yellow</name></member>
+    <member refid="class_player_stats_1a87118025180e06ffcb07ff5530cdf954" kind="variable"><name>crystalsOwned_Red</name></member>
+    <member refid="class_player_stats_1ae346c822a365b4a406d4b185ed6642a2" kind="variable"><name>crystalsOwned_Blue</name></member>
+    <member refid="class_player_stats_1afaf802b7bbad087ba7616cb658a5f001" kind="variable"><name>crystalsOwned_Green</name></member>
+    <member refid="class_player_stats_1a0e3f0082e4d75b3ea818e2480f7b5417" kind="variable"><name>crystalsOwned_Yellow</name></member>
+    <member refid="class_player_stats_1ae259b1cad31cb6f924f1cef90897baf3" kind="variable"><name>crystalsExtra_Red</name></member>
+    <member refid="class_player_stats_1af020a6edbe7a8a263810d96c8265639b" kind="variable"><name>crystalsExtra_Blue</name></member>
+    <member refid="class_player_stats_1a15d715d61ff77fb58c6aef39e1e2b4e9" kind="variable"><name>crystalsExtra_Green</name></member>
+    <member refid="class_player_stats_1a425f05bbd4b2bdb5b62bc95bbc3dec9b" kind="variable"><name>crystalsExtra_Yellow</name></member>
+    <member refid="class_player_stats_1a15f8c15f6e95cd74b5208e19c92df028" kind="variable"><name>crystalsPerSecond_Red</name></member>
+    <member refid="class_player_stats_1a3edc8421cff1aa0a9946dee63e4e2e5e" kind="variable"><name>crystalsPerSecond_Blue</name></member>
+    <member refid="class_player_stats_1a006450b8aca5f111cf02229de955bf16" kind="variable"><name>crystalsPerSecond_Green</name></member>
+    <member refid="class_player_stats_1a647acb62138ddedace7a4b865af984c8" kind="variable"><name>crystalsPerSecond_Yellow</name></member>
+    <member refid="class_player_stats_1ae25b7817bb5fb9dad046cf347ae7af45" kind="function"><name>Start</name></member>
+    <member refid="class_player_stats_1a9af9d64b3ac36bcb38da32fc95815321" kind="function"><name>RemoveLife</name></member>
+    <member refid="class_player_stats_1a2423f642f67c16f9f6e507dbd9db3387" kind="function"><name>CheckLife</name></member>
+    <member refid="class_player_stats_1a393666cb5cf63349e182c35860736c14" kind="function"><name>GameOver</name></member>
+    <member refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" kind="function"><name>UpdateCrystalValues</name></member>
+    <member refid="class_player_stats_1ad19f9c0d74ea78c8d734baac7ac18ebf" kind="function"><name>UpdateCrystalUI</name></member>
+  </compound>
   <compound refid="class_projectile" kind="class"><name>Projectile</name>
     <member refid="class_projectile_1a346860eaea2a553b425f1d278c1bae3c" kind="variable"><name>ProjectileName</name></member>
     <member refid="class_projectile_1a3fab349abea4a67162837393e0e4e9c1" kind="variable"><name>BaseProjectileSpeed</name></member>
@@ -199,6 +253,33 @@
   </compound>
   <compound refid="class_scriptable_object_utility" kind="class"><name>ScriptableObjectUtility</name>
     <member refid="class_scriptable_object_utility_1a5f1b4da1f6c5173e35559068ab51a49d" kind="function"><name>CreateAsset&lt; T &gt;</name></member>
+  </compound>
+  <compound refid="class_sound_manager" kind="class"><name>SoundManager</name>
+    <member refid="class_sound_manager_1a33785dd8a306005d6c1c84c35f830f07" kind="variable"><name>mainAudioSourceSoundtrack</name></member>
+    <member refid="class_sound_manager_1a59e38a1fc5c8112de9f7770fc009f198" kind="variable"><name>mainAudioSourceUI</name></member>
+    <member refid="class_sound_manager_1affd71095ab7b38b825db04ef71be4902" kind="variable"><name>soundClips</name></member>
+    <member refid="class_sound_manager_1ae639244e333cd1bf7fff696cf71edd94" kind="property"><name>IsMuteSoundtrack</name></member>
+    <member refid="class_sound_manager_1a957078d2abc628a2c60ddf027fa3ac2f" kind="property"><name>IsMuteUI</name></member>
+    <member refid="class_sound_manager_1ab77112f63239f2503f4bc273472bebc3" kind="variable"><name>currentClip</name></member>
+    <member refid="class_sound_manager_1aba6cc29a03dfe5117ef532e875558ff3" kind="function"><name>Update</name></member>
+    <member refid="class_sound_manager_1a18ef1b2d4a921ec25ad598dc23eb7b32" kind="function"><name>LoopThroughSoundList</name></member>
+    <member refid="class_sound_manager_1a924de54b1c4fabfe9089d5d28dbd0fe7" kind="function"><name>PlayOnUIClick</name></member>
+    <member refid="class_sound_manager_1afd74d3df47593fc56585731e5cdc513e" kind="function"><name>PlaySoundByName</name></member>
+    <member refid="class_sound_manager_1a2eca8f953b8bc13c90ddb87a779a89fc" kind="function"><name>VolumeChangeSoundtrack</name></member>
+    <member refid="class_sound_manager_1a2735ec67a565d38055679b3cbf9e5329" kind="function"><name>VolumeChangeUI</name></member>
+    <member refid="class_sound_manager_1a479d26fa6b28b6680a9f7d6d8dc7f932" kind="function"><name>MuteUI</name></member>
+    <member refid="class_sound_manager_1ac4504c77e7aaa04c3544a09827a0a331" kind="function"><name>MuteSoundtrack</name></member>
+  </compound>
+  <compound refid="class_sound_object" kind="class"><name>SoundObject</name>
+    <member refid="class_sound_object_1ad6ff29123c5e7d4f38c96abfd9355e31" kind="variable"><name>SoundName</name></member>
+    <member refid="class_sound_object_1a23ac4b8c602d9c2ea2befbf2fd567a4f" kind="variable"><name>AudioClip</name></member>
+    <member refid="class_sound_object_1a57ebb473ec885be4e3075c8abcc97530" kind="variable"><name>Volume</name></member>
+    <member refid="class_sound_object_1afddeed821f4a00c61f8a2db80ed969e4" kind="variable"><name>Pitch</name></member>
+    <member refid="class_sound_object_1a97c03dad70f2623ffe749eb82ee493aa" kind="variable"><name>IsAllowedLooping</name></member>
+    <member refid="class_sound_object_1a724e14474a945ce44e90c5bdf4dc7cb6" kind="variable"><name>IsAllowedAutoDestruct</name></member>
+    <member refid="class_sound_object_1a30fb49aa89aaf38a9822e24078bda160" kind="function"><name>SoundObject</name></member>
+    <member refid="class_sound_object_1a2e773002d5b8f0297e55abe2db86e162" kind="function"><name>SoundObject</name></member>
+    <member refid="class_sound_object_1a4e901c9ff067b95f1dadd24fa0943b51" kind="function"><name>PlayClip</name></member>
   </compound>
   <compound refid="class_stats_upgrade" kind="class"><name>StatsUpgrade</name>
     <member refid="class_stats_upgrade_1a44b7424413127f7afcb69796c8214eeb" kind="variable"><name>StatsMultiplier</name></member>
@@ -212,6 +293,8 @@
     <member refid="class_tile_nodes_1a5045dd74604c69bdb42a845726a81149" kind="variable"><name>WalkableTiles</name></member>
     <member refid="class_tile_nodes_1afbd4396a653b8f88f7f0030886ec8e78" kind="variable"><name>UnwalkableTiles</name></member>
     <member refid="class_tile_nodes_1a64c51f701381910490db9134ea449961" kind="variable"><name>SpawnTiles</name></member>
+    <member refid="class_tile_nodes_1a1a5c4d10fd07916dd0db500baa4ef933" kind="variable"><name>TowerTiles</name></member>
+    <member refid="class_tile_nodes_1a557c8490c2b6401b62434f2864ef2021" kind="variable"><name>CrystalTiles</name></member>
     <member refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" kind="variable"><name>nodes</name></member>
     <member refid="class_tile_nodes_1ab946891fc9a68468265108a701287107" kind="variable"><name>SelectedPath</name></member>
     <member refid="class_tile_nodes_1ac0c4f96c30c24ce1a95a74f6653a7cb4" kind="variable"><name>selectedList</name></member>
@@ -233,7 +316,7 @@
     <member refid="class_tile_nodes_1a9a38710f1a4db631749ce324fdce45b5" kind="function"><name>SetNeigbour</name></member>
     <member refid="class_tile_nodes_1a3cc3cf231a636206585be0dd45083fef" kind="function"><name>AddNodeToList</name></member>
     <member refid="class_tile_nodes_1a01f4a1ba0ca7e1f2ab7e415d6c7f9659" kind="function"><name>OnDrawGizmos</name></member>
-    <member refid="class_tile_nodes_1a9787a4d466840b3c3d2a095aec7d33b8" kind="function"><name>Editior_BuildTable</name></member>
+    <member refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" kind="function"><name>BuildTable</name></member>
     <member refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" kind="function"><name>Editor_SelectList</name></member>
     <member refid="class_tile_nodes_1a682a75a288b3455f7118464c72d1ade8" kind="function"><name>SetSpawnStartPosFromSelected</name></member>
   </compound>
@@ -340,7 +423,12 @@
     <member refid="class_world_tile_1a3183df67122339b04fae067faf461b8a" kind="variable"><name>posX</name></member>
     <member refid="class_world_tile_1a84ee3d3afbc295ad8003ba0cf8490b24" kind="variable"><name>posY</name></member>
     <member refid="class_world_tile_1a67a5d10ed54c58b0959281ecd844ec69" kind="variable"><name>walkable</name></member>
+    <member refid="class_world_tile_1a73553fd14575c6acc8c0eeb2c8132e4a" kind="variable"><name>towering</name></member>
     <member refid="class_world_tile_1a8bb9aed53ffb5e7251e04003f75022c5" kind="variable"><name>myNeighbours</name></member>
+    <member refid="class_world_tile_1aa329cbb27cdbc33d78816e5067043f3f" kind="variable"><name>crystalValueRed</name></member>
+    <member refid="class_world_tile_1a5faa48b04daa3e69fa2ba7f2b0a4f58e" kind="variable"><name>crystalValueBlue</name></member>
+    <member refid="class_world_tile_1a04bc708e60c4d6650cedfeb2f76bedfd" kind="variable"><name>crystalValueGreen</name></member>
+    <member refid="class_world_tile_1a815dd72c7a6d5bca1630fe88b8c1a65e" kind="variable"><name>crystalValueYellow</name></member>
     <member refid="class_world_tile_1a68744bed9f6974f656c7677e5fcc500a" kind="function"><name>ToString</name></member>
   </compound>
   <compound refid="namespacestatic" kind="namespace"><name>static</name>
@@ -413,15 +501,27 @@
   </compound>
   <compound refid="_enemy_testing_script_8cs" kind="file"><name>EnemyTestingScript.cs</name>
   </compound>
+  <compound refid="_game_over_script_8cs" kind="file"><name>GameOverScript.cs</name>
+  </compound>
   <compound refid="_back_ground_pan_around_8cs" kind="file"><name>BackGroundPanAround.cs</name>
   </compound>
   <compound refid="_particle_controller_8cs" kind="file"><name>ParticleController.cs</name>
   </compound>
   <compound refid="_game_manager_8cs" kind="file"><name>GameManager.cs</name>
   </compound>
+  <compound refid="_player_stats_8cs" kind="file"><name>PlayerStats.cs</name>
+  </compound>
   <compound refid="_map_bound_8cs" kind="file"><name>MapBound.cs</name>
   </compound>
   <compound refid="_map_bounds_updater_8cs" kind="file"><name>MapBoundsUpdater.cs</name>
+  </compound>
+  <compound refid="_auto_destruct_8cs" kind="file"><name>AutoDestruct.cs</name>
+  </compound>
+  <compound refid="_sound_manager_8cs" kind="file"><name>SoundManager.cs</name>
+  </compound>
+  <compound refid="_sound_object_8cs" kind="file"><name>SoundObject.cs</name>
+  </compound>
+  <compound refid="_base_node_8cs" kind="file"><name>BaseNode.cs</name>
   </compound>
   <compound refid="_path_finding_8cs" kind="file"><name>PathFinding.cs</name>
   </compound>
@@ -436,6 +536,8 @@
   <compound refid="_button_controller_8cs" kind="file"><name>ButtonController.cs</name>
   </compound>
   <compound refid="_camera_panning_8cs" kind="file"><name>CameraPanning.cs</name>
+  </compound>
+  <compound refid="_miner_drag_8cs" kind="file"><name>MinerDrag.cs</name>
   </compound>
   <compound refid="_timer_8cs" kind="file"><name>Timer.cs</name>
   </compound>
@@ -462,6 +564,8 @@
   <compound refid="dir_afff80df7e0b2612f1e3dd7497a06e77" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds</name>
   </compound>
   <compound refid="dir_d4f379ff019d8f672cac2d1996aa7805" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts</name>
+  </compound>
+  <compound refid="dir_1b93297b0eb4b3eb9119184c4f00ab2a" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound</name>
   </compound>
   <compound refid="dir_c9d9335cbf4dbd92660c4bcc108b7e12" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode</name>
   </compound>

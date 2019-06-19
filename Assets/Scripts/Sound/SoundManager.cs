@@ -9,6 +9,9 @@ class SoundManager : MonoBehaviour
 {
     public AudioSource mainAudioSourceSoundtrack;
     public AudioSource mainAudioSourceUI;
+    public bool IsMuteSoundtrack{ get; set; }
+    public bool IsMuteUI{ get; set; }
+
 
     public SoundObject[] soundClips;
     //private List<GameObject> uiGeneratedSounds = new List<GameObject>();
@@ -64,6 +67,35 @@ class SoundManager : MonoBehaviour
     public void VolumeChangeUI(Slider slider)
     {
         mainAudioSourceUI.volume = slider.value;
+    }
+
+    public void MuteUI()
+    {
+        if (IsMuteUI)
+        {
+            IsMuteUI = false;
+        }
+
+        else
+        {
+            IsMuteUI = true;
+        }
+        mainAudioSourceUI.mute = IsMuteUI;
+    }
+
+    public void MuteSoundtrack()
+    {
+
+        if (IsMuteSoundtrack)
+        {
+            IsMuteSoundtrack = false;
+        }
+
+        else
+        {
+            IsMuteSoundtrack = true;
+        }
+        mainAudioSourceUI.mute = IsMuteSoundtrack;
     }
 
 }

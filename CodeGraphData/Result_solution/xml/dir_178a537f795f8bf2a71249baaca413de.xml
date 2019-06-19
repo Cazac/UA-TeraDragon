@@ -4,6 +4,7 @@
     <compoundname>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI</compoundname>
     <innerfile refid="_button_controller_8cs">ButtonController.cs</innerfile>
     <innerfile refid="_camera_panning_8cs">CameraPanning.cs</innerfile>
+    <innerfile refid="_miner_drag_8cs">MinerDrag.cs</innerfile>
     <innerfile refid="_timer_8cs">Timer.cs</innerfile>
     <innerfile refid="_tower_drag_8cs">TowerDrag.cs</innerfile>
     <briefdescription>
