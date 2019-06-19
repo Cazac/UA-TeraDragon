@@ -49,7 +49,7 @@ public class TowerShooting : MonoBehaviour
         //Check if collider is a monster
         if (monster != null)
         {
-            Debug.Log("Tower Adding To List: " + collider.name);
+            //Debug.Log("Tower Adding To List: " + collider.name);
             MonstersToShoot.Add(monster);
         }
         else
@@ -92,7 +92,6 @@ public class TowerShooting : MonoBehaviour
         {
             if (MonstersToShoot.Count > 0)
             {
-                print("Shoot!");
 
                 GameObject monster_GO = MonstersToShoot[0].gameObject;
 
@@ -151,14 +150,14 @@ public class TowerShooting : MonoBehaviour
     ///////////////
     public void OnTriggerExit2D(Collider2D collider)
     {
-        Debug.Log("Tower Removing From List: " + collider.name);
-
         if (collider == null)
         {
             print("ERROR");
         }
-
-        //Remove From List
-        MonstersToShoot.Remove(collider.gameObject.GetComponent<EnemyScript>());
+        else
+        {
+            //Remove From List
+            MonstersToShoot.Remove(collider.gameObject.GetComponent<EnemyScript>());
+        }
     }
 }

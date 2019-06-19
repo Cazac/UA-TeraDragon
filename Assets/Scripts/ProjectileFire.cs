@@ -84,17 +84,13 @@ public class ProjectileFire : MonoBehaviour
     {
         if (collider.gameObject == enemy)
         {
-            print("Hit!");
+            //print("Hit!");
 
             //Deal damage
             HitTarget();
 
             //Destroy Projectile
             Destroy(gameObject);
-        }
-        else
-        {
-            print("WRONG");
         }
     }
 
