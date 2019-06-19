@@ -220,7 +220,7 @@ namespace WaveSystem
                         soundManager.PlaySpecificSound("Inter");
                     }
 
-                    if (AllWaveCompleted())
+                    else if (AllWaveCompleted())
                     {
                         EnableSpawning = false;
                         StopCoroutine(SpawnSingleEnemyPerWave());
