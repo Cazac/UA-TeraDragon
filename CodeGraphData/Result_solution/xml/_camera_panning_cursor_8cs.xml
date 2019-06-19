@@ -3,11 +3,6 @@
   <compounddef id="_camera_panning_cursor_8cs" kind="file">
     <compoundname>CameraPanningCursor.cs</compoundname>
     <innerclass refid="class_camera_panning_cursor" prot="public">CameraPanningCursor</innerclass>
-    <innernamespace refid="namespace_unity_engine">UnityEngine</innernamespace>
-    <innernamespace refid="namespace_system_1_1_collections">System::Collections</innernamespace>
-    <innernamespace refid="namespace_system">System</innernamespace>
-    <innernamespace refid="namespace_unity_engine_1_1_tilemaps">UnityEngine::Tilemaps</innernamespace>
-    <innernamespace refid="namespace_system_1_1_collections_1_1_generic">System::Collections::Generic</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -218,7 +213,7 @@
 <codeline lineno="244"><highlight class="normal"></highlight></codeline>
 <codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Multiple<sp/>the<sp/>base<sp/>value<sp/>by<sp/>tile<sp/>size</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boundRight<sp/>=<sp/>boundRight<sp/>*<sp/>11.2f;</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(boundRight);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//print(boundRight);</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="248"><highlight class="normal"></highlight></codeline>
 <codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_camera_panning_cursor_1ae71798879b65d39e58ed9f38a4cfab59" kindref="member">CameraBoundingX</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector2(-tileSize.x<sp/>/<sp/>2,<sp/>boundRight);</highlight></codeline>
 <codeline lineno="250"><highlight class="normal"></highlight></codeline>
@@ -230,6 +225,6 @@
 <codeline lineno="256"><highlight class="normal"></highlight></codeline>
 <codeline lineno="257"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CameraPanningCursor.cs"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanningCursor.cs"/>
   </compounddef>
 </doxygen>

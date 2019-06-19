@@ -14,14 +14,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/ScriptableObjectUtility.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/ScriptableObjectUtility.cs" bodystart="11" bodyend="33"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/ScriptableObjectUtility.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/ScriptableObjectUtility.cs" bodystart="11" bodyend="33"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/ScriptableObjectUtility.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/ScriptableObjectUtility.cs" bodystart="6" bodyend="35"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/ScriptableObjectUtility.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/ScriptableObjectUtility.cs" bodystart="6" bodyend="35"/>
     <listofallmembers>
       <member refid="class_scriptable_object_utility_1a5f1b4da1f6c5173e35559068ab51a49d" prot="public" virt="non-virtual"><scope>ScriptableObjectUtility</scope><name>CreateAsset&lt; T &gt;</name></member>
     </listofallmembers>

@@ -22,16 +22,24 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public GameObject towerParent;
 
     private GameObject currentTower;
+    private SoundManager soundManager;
+
+    [Header("UI_SoundEffect onclick")]
+    public SoundObject soundEffect;
 
 
+    private void Start()
+    {
+        soundManager = GameObject.FindObjectOfType<SoundManager>();
+    }
     /////////////////////////////////////////////////////////////////
-
 
     ///////////////
     /// <summary>
     /// Undocumented
     /// </summary>
     ///////////////
+    ///
     public void OnBeginDrag(PointerEventData eventData)
     {
         // TO DO ???
@@ -42,6 +50,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         //Attach to Cursor
 
         currentTower = Instantiate(towerPrefab_UI);
+        soundManager.PlayOnUIClick(soundEffect);
     }
 
 
@@ -52,6 +61,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     ///////////////
     public void OnDrag(PointerEventData eventData)
     {
+        
         //currentTower.transform.position = cursor.transform.position;
         Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         cursorPosition.z = 0;

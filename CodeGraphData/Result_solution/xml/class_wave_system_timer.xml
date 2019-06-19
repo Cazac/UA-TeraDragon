@@ -71,8 +71,8 @@
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" bodystart="15" bodyend="27"/>
         <references refid="class_wave_system_1_1_wave_manager_1ae0efbb3ae5ba3700d3912d1198c7691b" compoundref="_wave_manager_8cs" startline="15">WaveSystem.WaveManager.EnableSpawning</references>
-        <references refid="class_wave_system_1_1_wave_manager_1a05b66e32c5d56f17d121215199172893" compoundref="_wave_manager_8cs" startline="45">WaveSystem.WaveManager.TimeUntilNextWave</references>
-        <references refid="class_wave_system_1_1_wave_manager_1a728712f4cbff12c14de142dc0914a36a" compoundref="_wave_manager_8cs" startline="40">WaveSystem.WaveManager.WaveIndex</references>
+        <references refid="class_wave_system_1_1_wave_manager_1a05b66e32c5d56f17d121215199172893" compoundref="_wave_manager_8cs" startline="48">WaveSystem.WaveManager.TimeUntilNextWave</references>
+        <references refid="class_wave_system_1_1_wave_manager_1a728712f4cbff12c14de142dc0914a36a" compoundref="_wave_manager_8cs" startline="43">WaveSystem.WaveManager.WaveIndex</references>
         <referencedby refid="class_wave_system_timer_1a395d9d7e8ff65beb96dbb88d0796310e" compoundref="_wave_system_timer_8cs" startline="29" endline="35">Update</referencedby>
       </memberdef>
       </sectiondef>
@@ -81,105 +81,105 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="197">
+      <node id="210">
         <label>WaveSystemTimer</label>
         <link refid="class_wave_system_timer"/>
-        <childnode refid="198" relation="public-inheritance">
+        <childnode refid="211" relation="public-inheritance">
         </childnode>
-        <childnode refid="199" relation="public-inheritance">
+        <childnode refid="212" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="198">
+      <node id="211">
         <label>MonoBehaviour</label>
       </node>
-      <node id="199">
+      <node id="212">
         <label>WaveInterface</label>
         <link refid="interface_wave_system_1_1_wave_interface"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="203">
+      <node id="216">
         <label>WaveSystem.WaveManager</label>
         <link refid="class_wave_system_1_1_wave_manager"/>
-        <childnode refid="201" relation="public-inheritance">
+        <childnode refid="214" relation="public-inheritance">
         </childnode>
-        <childnode refid="204" relation="usage">
-          <edgelabel>tileNodes</edgelabel>
-          <edgelabel>tiles</edgelabel>
-        </childnode>
-        <childnode refid="206" relation="usage">
-          <edgelabel>cursorSelection</edgelabel>
-        </childnode>
-        <childnode refid="207" relation="usage">
+        <childnode refid="217" relation="usage">
           <edgelabel>waves</edgelabel>
           <edgelabel>currentWave</edgelabel>
         </childnode>
-        <childnode refid="210" relation="usage">
+        <childnode refid="220" relation="usage">
+          <edgelabel>tileNodes</edgelabel>
+          <edgelabel>tiles</edgelabel>
+        </childnode>
+        <childnode refid="222" relation="usage">
+          <edgelabel>cursorSelection</edgelabel>
+        </childnode>
+        <childnode refid="223" relation="usage">
           <edgelabel>currentTimer</edgelabel>
         </childnode>
       </node>
-      <node id="209">
+      <node id="219">
         <label>PathWrapper</label>
         <link refid="class_path_wrapper"/>
-        <childnode refid="208" relation="public-inheritance">
+        <childnode refid="218" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="205">
+      <node id="221">
         <label>PathsData</label>
         <link refid="class_paths_data"/>
       </node>
-      <node id="200">
+      <node id="213">
         <label>WaveSystemTimer</label>
         <link refid="class_wave_system_timer"/>
-        <childnode refid="201" relation="public-inheritance">
+        <childnode refid="214" relation="public-inheritance">
         </childnode>
-        <childnode refid="202" relation="public-inheritance">
+        <childnode refid="215" relation="public-inheritance">
         </childnode>
-        <childnode refid="203" relation="usage">
+        <childnode refid="216" relation="usage">
           <edgelabel>waveManager</edgelabel>
         </childnode>
       </node>
-      <node id="210">
+      <node id="223">
         <label>Timer</label>
         <link refid="class_timer"/>
       </node>
-      <node id="204">
+      <node id="220">
         <label>TileNodes</label>
         <link refid="class_tile_nodes"/>
-        <childnode refid="201" relation="public-inheritance">
+        <childnode refid="214" relation="public-inheritance">
         </childnode>
-        <childnode refid="205" relation="usage">
+        <childnode refid="221" relation="usage">
           <edgelabel>pathData</edgelabel>
         </childnode>
       </node>
-      <node id="208">
+      <node id="218">
         <label>ScriptableObject</label>
       </node>
-      <node id="201">
+      <node id="214">
         <label>MonoBehaviour</label>
       </node>
-      <node id="207">
-        <label>Wave</label>
-        <link refid="class_wave"/>
-        <childnode refid="208" relation="public-inheritance">
+      <node id="217">
+        <label>WaveData</label>
+        <link refid="class_wave_data"/>
+        <childnode refid="218" relation="public-inheritance">
         </childnode>
-        <childnode refid="209" relation="usage">
+        <childnode refid="219" relation="usage">
           <edgelabel>listWapper</edgelabel>
         </childnode>
       </node>
-      <node id="206">
+      <node id="222">
         <label>CursorSelection</label>
         <link refid="class_cursor_selection"/>
-        <childnode refid="201" relation="public-inheritance">
+        <childnode refid="214" relation="public-inheritance">
         </childnode>
-        <childnode refid="204" relation="usage">
+        <childnode refid="220" relation="usage">
           <edgelabel>tileNodes</edgelabel>
         </childnode>
-        <childnode refid="203" relation="usage">
+        <childnode refid="216" relation="usage">
           <edgelabel>waveManager</edgelabel>
         </childnode>
       </node>
-      <node id="202">
+      <node id="215">
         <label>WaveInterface</label>
         <link refid="interface_wave_system_1_1_wave_interface"/>
       </node>

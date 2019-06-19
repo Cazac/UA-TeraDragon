@@ -1,0 +1,350 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_projectile_fire" kind="class" prot="public">
+    <compoundname>ProjectileFire</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_projectile_fire_1a4f8c159959a9eba135b1175cc1fd2806" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject ProjectileFire.enemy</definition>
+        <argsstring></argsstring>
+        <name>enemy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_projectile_fire_1aef5def8b3b252a7a2ff40b24be25fddd" compoundref="_projectile_fire_8cs" startline="121" endline="142">BeamTarget</referencedby>
+        <referencedby refid="class_projectile_fire_1a3d7884cd3578758cdf3297b645aa02ef" compoundref="_projectile_fire_8cs" startline="56" endline="76">ChaseTarget</referencedby>
+        <referencedby refid="class_projectile_fire_1accf5d055ef45cf89b29510fe4b90e3dc" compoundref="_projectile_fire_8cs" startline="98" endline="119">HitTarget</referencedby>
+        <referencedby refid="class_projectile_fire_1a4402e527166f2a4adc15ed3eb99d8e46" compoundref="_projectile_fire_8cs" startline="83" endline="95">OnTriggerEnter2D</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1a5d769162adf84789046f2a4a59e7b3e6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ProjectileFire.isProjectile</definition>
+        <argsstring></argsstring>
+        <name>isProjectile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_projectile_fire_1aefe60993b84cafabcb12aebc3821fe0e" compoundref="_projectile_fire_8cs" startline="37" endline="48">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1a6c96072637ed7e0558a62c5b398f2a28" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProjectileFire.projectileDamage</definition>
+        <argsstring></argsstring>
+        <name>projectileDamage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_projectile_fire_1aef5def8b3b252a7a2ff40b24be25fddd" compoundref="_projectile_fire_8cs" startline="121" endline="142">BeamTarget</referencedby>
+        <referencedby refid="class_projectile_fire_1accf5d055ef45cf89b29510fe4b90e3dc" compoundref="_projectile_fire_8cs" startline="98" endline="119">HitTarget</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1a6b0ca42bcf1fcfe0ae6676544d9a0cda" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProjectileFire.projectileSpeed</definition>
+        <argsstring></argsstring>
+        <name>projectileSpeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1a0928b50b14dacfffd66ed859757900c9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProjectileFire.projectileSlowdown</definition>
+        <argsstring></argsstring>
+        <name>projectileSlowdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1aadda343133a41cf3fef52007f2e83cd5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ProjectileFire.isExplosive</definition>
+        <argsstring></argsstring>
+        <name>isExplosive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_projectile_fire_1aef5def8b3b252a7a2ff40b24be25fddd" compoundref="_projectile_fire_8cs" startline="121" endline="142">BeamTarget</referencedby>
+        <referencedby refid="class_projectile_fire_1accf5d055ef45cf89b29510fe4b90e3dc" compoundref="_projectile_fire_8cs" startline="98" endline="119">HitTarget</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1a2b3867d6468efa11e7fb35a94dda0d66" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProjectileFire.explosionRadius</definition>
+        <argsstring></argsstring>
+        <name>explosionRadius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1af25c448fcb294a47f328cfe25105c588" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProjectileFire.explosionLinger</definition>
+        <argsstring></argsstring>
+        <name>explosionLinger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1a59529d02af04a4f991d66e4be417f294" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProjectileFire.explosionDamage</definition>
+        <argsstring></argsstring>
+        <name>explosionDamage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1a9ee1f15dbaf9d5c7773975ec83552699" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProjectileFire.explosionSlowdown</definition>
+        <argsstring></argsstring>
+        <name>explosionSlowdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1af516b7e2acb6d38662c85e2db02816b9" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ProjectileFire.isBeam</definition>
+        <argsstring></argsstring>
+        <name>isBeam</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_projectile_fire_1aefe60993b84cafabcb12aebc3821fe0e" compoundref="_projectile_fire_8cs" startline="37" endline="48">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1a3a621549b4ad701c59826ab8f460a6c4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProjectileFire.beamDamage</definition>
+        <argsstring></argsstring>
+        <name>beamDamage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="26" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1aea09677f3082eed496178c90dcd00c4d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProjectileFire.beamSlowdown</definition>
+        <argsstring></argsstring>
+        <name>beamSlowdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_projectile_fire_1a616d0c3f47ac8e46e9481cb87775f100" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ProjectileFire.beamChainTargets</definition>
+        <argsstring></argsstring>
+        <name>beamChainTargets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="28" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_projectile_fire_1aaed1ce4d00ea2c031c992b8cb1b45ad2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectileFire.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="32" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_projectile_fire_1aefe60993b84cafabcb12aebc3821fe0e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectileFire.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="37" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="37" bodyend="48"/>
+        <references refid="class_projectile_fire_1a3d7884cd3578758cdf3297b645aa02ef" compoundref="_projectile_fire_8cs" startline="56" endline="76">ChaseTarget</references>
+        <references refid="class_projectile_fire_1af516b7e2acb6d38662c85e2db02816b9" compoundref="_projectile_fire_8cs" startline="25">isBeam</references>
+        <references refid="class_projectile_fire_1a5d769162adf84789046f2a4a59e7b3e6" compoundref="_projectile_fire_8cs" startline="12">isProjectile</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_projectile_fire_1a3d7884cd3578758cdf3297b645aa02ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectileFire.ChaseTarget</definition>
+        <argsstring>()</argsstring>
+        <name>ChaseTarget</name>
+        <briefdescription>
+<para>UNDOCUMTNETED </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="56" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="56" bodyend="76"/>
+        <references refid="class_projectile_fire_1a4f8c159959a9eba135b1175cc1fd2806" compoundref="_projectile_fire_8cs" startline="8">enemy</references>
+        <referencedby refid="class_projectile_fire_1aefe60993b84cafabcb12aebc3821fe0e" compoundref="_projectile_fire_8cs" startline="37" endline="48">Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_projectile_fire_1a4402e527166f2a4adc15ed3eb99d8e46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectileFire.OnTriggerEnter2D</definition>
+        <argsstring>(Collider2D collider)</argsstring>
+        <name>OnTriggerEnter2D</name>
+        <param>
+          <type>Collider2D</type>
+          <declname>collider</declname>
+        </param>
+        <briefdescription>
+<para>UNDOCUMTNETED </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="83" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="83" bodyend="95"/>
+        <references refid="class_projectile_fire_1a4f8c159959a9eba135b1175cc1fd2806" compoundref="_projectile_fire_8cs" startline="8">enemy</references>
+        <references refid="class_projectile_fire_1accf5d055ef45cf89b29510fe4b90e3dc" compoundref="_projectile_fire_8cs" startline="98" endline="119">HitTarget</references>
+      </memberdef>
+      <memberdef kind="function" id="class_projectile_fire_1accf5d055ef45cf89b29510fe4b90e3dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectileFire.HitTarget</definition>
+        <argsstring>()</argsstring>
+        <name>HitTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="98" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="98" bodyend="119"/>
+        <references refid="class_projectile_fire_1a4f8c159959a9eba135b1175cc1fd2806" compoundref="_projectile_fire_8cs" startline="8">enemy</references>
+        <references refid="class_projectile_fire_1aadda343133a41cf3fef52007f2e83cd5" compoundref="_projectile_fire_8cs" startline="18">isExplosive</references>
+        <references refid="class_projectile_fire_1a6c96072637ed7e0558a62c5b398f2a28" compoundref="_projectile_fire_8cs" startline="13">projectileDamage</references>
+        <referencedby refid="class_projectile_fire_1a4402e527166f2a4adc15ed3eb99d8e46" compoundref="_projectile_fire_8cs" startline="83" endline="95">OnTriggerEnter2D</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_projectile_fire_1aef5def8b3b252a7a2ff40b24be25fddd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectileFire.BeamTarget</definition>
+        <argsstring>()</argsstring>
+        <name>BeamTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="121" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="121" bodyend="142"/>
+        <references refid="class_projectile_fire_1a4f8c159959a9eba135b1175cc1fd2806" compoundref="_projectile_fire_8cs" startline="8">enemy</references>
+        <references refid="class_projectile_fire_1aadda343133a41cf3fef52007f2e83cd5" compoundref="_projectile_fire_8cs" startline="18">isExplosive</references>
+        <references refid="class_projectile_fire_1a6c96072637ed7e0558a62c5b398f2a28" compoundref="_projectile_fire_8cs" startline="13">projectileDamage</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="123">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="122">
+        <label>ProjectileFire</label>
+        <link refid="class_projectile_fire"/>
+        <childnode refid="123" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="125">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="124">
+        <label>ProjectileFire</label>
+        <link refid="class_projectile_fire"/>
+        <childnode refid="125" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="5" bodyend="143"/>
+    <listofallmembers>
+      <member refid="class_projectile_fire_1a616d0c3f47ac8e46e9481cb87775f100" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>beamChainTargets</name></member>
+      <member refid="class_projectile_fire_1a3a621549b4ad701c59826ab8f460a6c4" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>beamDamage</name></member>
+      <member refid="class_projectile_fire_1aea09677f3082eed496178c90dcd00c4d" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>beamSlowdown</name></member>
+      <member refid="class_projectile_fire_1aef5def8b3b252a7a2ff40b24be25fddd" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>BeamTarget</name></member>
+      <member refid="class_projectile_fire_1a3d7884cd3578758cdf3297b645aa02ef" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>ChaseTarget</name></member>
+      <member refid="class_projectile_fire_1a4f8c159959a9eba135b1175cc1fd2806" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>enemy</name></member>
+      <member refid="class_projectile_fire_1a59529d02af04a4f991d66e4be417f294" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>explosionDamage</name></member>
+      <member refid="class_projectile_fire_1af25c448fcb294a47f328cfe25105c588" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>explosionLinger</name></member>
+      <member refid="class_projectile_fire_1a2b3867d6468efa11e7fb35a94dda0d66" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>explosionRadius</name></member>
+      <member refid="class_projectile_fire_1a9ee1f15dbaf9d5c7773975ec83552699" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>explosionSlowdown</name></member>
+      <member refid="class_projectile_fire_1accf5d055ef45cf89b29510fe4b90e3dc" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>HitTarget</name></member>
+      <member refid="class_projectile_fire_1af516b7e2acb6d38662c85e2db02816b9" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>isBeam</name></member>
+      <member refid="class_projectile_fire_1aadda343133a41cf3fef52007f2e83cd5" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>isExplosive</name></member>
+      <member refid="class_projectile_fire_1a5d769162adf84789046f2a4a59e7b3e6" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>isProjectile</name></member>
+      <member refid="class_projectile_fire_1a4402e527166f2a4adc15ed3eb99d8e46" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>OnTriggerEnter2D</name></member>
+      <member refid="class_projectile_fire_1a6c96072637ed7e0558a62c5b398f2a28" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>projectileDamage</name></member>
+      <member refid="class_projectile_fire_1a0928b50b14dacfffd66ed859757900c9" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>projectileSlowdown</name></member>
+      <member refid="class_projectile_fire_1a6b0ca42bcf1fcfe0ae6676544d9a0cda" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>projectileSpeed</name></member>
+      <member refid="class_projectile_fire_1aaed1ce4d00ea2c031c992b8cb1b45ad2" prot="private" virt="non-virtual"><scope>ProjectileFire</scope><name>Start</name></member>
+      <member refid="class_projectile_fire_1aefe60993b84cafabcb12aebc3821fe0e" prot="private" virt="non-virtual"><scope>ProjectileFire</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

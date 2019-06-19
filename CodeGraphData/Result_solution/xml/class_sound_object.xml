@@ -169,24 +169,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="130">
+      <node id="138">
         <label>SoundObject</label>
         <link refid="class_sound_object"/>
-        <childnode refid="131" relation="public-inheritance">
+        <childnode refid="139" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="131">
+      <node id="139">
         <label>ScriptableObject</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="132">
+      <node id="140">
         <label>SoundObject</label>
         <link refid="class_sound_object"/>
-        <childnode refid="133" relation="public-inheritance">
+        <childnode refid="141" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="133">
+      <node id="141">
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>

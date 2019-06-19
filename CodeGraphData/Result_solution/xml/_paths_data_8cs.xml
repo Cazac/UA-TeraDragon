@@ -4,6 +4,7 @@
     <compoundname>PathsData.cs</compoundname>
     <innerclass refid="class_paths_data" prot="public">PathsData</innerclass>
     <innerclass refid="class_list_size" prot="public">ListSize</innerclass>
+    <innernamespace refid="namespace_system">System</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -67,6 +68,6 @@
 <codeline lineno="63"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/PathsData.cs"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs"/>
   </compounddef>
 </doxygen>

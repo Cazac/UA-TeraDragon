@@ -39,6 +39,7 @@ namespace WaveSystem
         private TileNodes tileNodes;
 
         private CursorSelection cursorSelection;
+        private SoundManager soundManager;
         public int WaveIndex
         {
             get => waveIndex;
@@ -73,6 +74,7 @@ namespace WaveSystem
 
         private void Start()
         {
+            soundManager = GameManager.FindObjectOfType<SoundManager>();
             tileNodes = GameObject.FindObjectOfType<TileNodes>();
             //Cached CursorSelection
             cursorSelection = GameObject.FindObjectOfType<CursorSelection>();
@@ -145,6 +147,8 @@ namespace WaveSystem
             {
                 if (currentTimer.NextWaveCountdown())
                     EnableSpawning = true;
+                soundManager.PlaySpecificSound("Main");
+                soundManager.ReturnControl = true;
             }
         }
 
@@ -209,7 +213,11 @@ namespace WaveSystem
                         currentWave = waves[++waveIndex];
                         Debug.Log("Current wave: " + currentWave.ToString());
 
+                        
+
                         InstantiateNewTimer(currentWave.TimeUntilSpawn, currentWave.WaveTimer, ref currentTimer);
+                        soundManager.ReturnControl = false;
+                        soundManager.PlaySpecificSound("Inter");
                     }
 
                     if (AllWaveCompleted())
@@ -234,6 +242,7 @@ namespace WaveSystem
             if (waveIndex > waves.Length - 1)
             {
                 //Debug.Log("End of all waves");
+                waveIndex = 0;
                 return true;
             }
             return false;

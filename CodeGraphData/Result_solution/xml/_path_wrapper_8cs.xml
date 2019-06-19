@@ -19,6 +19,6 @@
 <codeline lineno="9" refid="class_path_wrapper_1a2752a3aadeb4e18d4728d34e9b5a8d4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;WorldTile&gt;<sp/><ref refid="class_path_wrapper_1a2752a3aadeb4e18d4728d34e9b5a8d4e" kindref="member">selectedPath</ref>;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/PathWrapper.cs"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathWrapper.cs"/>
   </compounddef>
 </doxygen>

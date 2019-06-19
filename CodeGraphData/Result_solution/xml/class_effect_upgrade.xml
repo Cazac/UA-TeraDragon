@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/EffectUpgrade.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/EffectUpgrade.cs" bodystart="9" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/EffectUpgrade.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/EffectUpgrade.cs" bodystart="9" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -59,7 +59,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/EffectUpgrade.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts/EffectUpgrade.cs" bodystart="7" bodyend="11"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/EffectUpgrade.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/EffectUpgrade.cs" bodystart="7" bodyend="11"/>
     <listofallmembers>
       <member refid="class_upgrade_node_1ac3956a662ddd6978fdad97ae1eb42966" prot="public" virt="non-virtual"><scope>EffectUpgrade</scope><name>ActivateUpgrade</name></member>
       <member refid="class_effect_upgrade_1adb4a226c7a8a6592e868fbafa67a0eea" prot="public" virt="non-virtual"><scope>EffectUpgrade</scope><name>effectUpgrade</name></member>

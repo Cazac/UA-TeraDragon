@@ -25,24 +25,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="76">
+      <node id="72">
         <label>MapBound</label>
         <link refid="class_map_bound"/>
-        <childnode refid="77" relation="public-inheritance">
+        <childnode refid="73" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="77">
+      <node id="73">
         <label>ScriptableObject</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="78">
+      <node id="74">
         <label>MapBound</label>
         <link refid="class_map_bound"/>
-        <childnode refid="79" relation="public-inheritance">
+        <childnode refid="75" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="79">
+      <node id="75">
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>

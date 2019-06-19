@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "SoundObject", menuName = "Scriptable Objects/Sound System")]
-class SoundObject : ScriptableObject
+public class SoundObject : ScriptableObject
 {
     public string SoundName;
     public AudioClip AudioClip;
@@ -11,8 +11,9 @@ class SoundObject : ScriptableObject
     public float Pitch;
     public Boolean IsAllowedLooping;
     public Boolean IsAllowedAutoDestruct;
+    public Boolean IsAllowedAudioDampening;
 
-    public SoundObject(string soundName, AudioClip audioClip, float volume, float pitch, bool isAllowedLooping, bool isAllowedAutoDestruct)
+    public SoundObject(string soundName, AudioClip audioClip, float volume, float pitch, bool isAllowedLooping, bool isAllowedAutoDestruct, bool isAllowedAudioDampening)
     {
         SoundName = soundName;
         AudioClip = audioClip;
@@ -20,6 +21,7 @@ class SoundObject : ScriptableObject
         Pitch = pitch;
         IsAllowedLooping = isAllowedLooping;
         IsAllowedAutoDestruct = isAllowedAutoDestruct;
+        IsAllowedAudioDampening = isAllowedAudioDampening;
     }
 
     public SoundObject()

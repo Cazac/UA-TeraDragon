@@ -8,5 +8,5 @@ class ScenceSwitch : MonoBehaviour
     public void SwitchToScence(String scenceName)
     {
         SceneManager.LoadScene(scenceName);
-    }
+    }   
 }

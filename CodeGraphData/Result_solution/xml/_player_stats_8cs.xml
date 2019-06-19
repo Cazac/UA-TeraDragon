@@ -3,6 +3,7 @@
   <compounddef id="_player_stats_8cs" kind="file">
     <compoundname>PlayerStats.cs</compoundname>
     <innerclass refid="class_player_stats" prot="public">PlayerStats</innerclass>
+    <innernamespace refid="namespace_unity_engine_1_1_u_i">UnityEngine::UI</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

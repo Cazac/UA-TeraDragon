@@ -234,36 +234,36 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="124">
+      <node id="132">
         <label>SoundManager</label>
         <link refid="class_sound_manager"/>
-        <childnode refid="125" relation="public-inheritance">
+        <childnode refid="133" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="125">
+      <node id="133">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="128">
+      <node id="136">
         <label>SoundObject</label>
         <link refid="class_sound_object"/>
-        <childnode refid="129" relation="public-inheritance">
+        <childnode refid="137" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="126">
+      <node id="134">
         <label>SoundManager</label>
         <link refid="class_sound_manager"/>
-        <childnode refid="127" relation="public-inheritance">
+        <childnode refid="135" relation="public-inheritance">
         </childnode>
-        <childnode refid="128" relation="usage">
+        <childnode refid="136" relation="usage">
           <edgelabel>soundClips</edgelabel>
         </childnode>
       </node>
-      <node id="129">
+      <node id="137">
         <label>ScriptableObject</label>
       </node>
-      <node id="127">
+      <node id="135">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>

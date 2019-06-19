@@ -15,8 +15,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/PathWrapper.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/PathWrapper.cs" bodystart="9" bodyend="-1"/>
-        <referencedby refid="class_wave_1a51ed2770ad4e3d3d76f5d0e53301992d" compoundref="_wave_8cs" startline="55" endline="74">Wave.GetPath</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathWrapper.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathWrapper.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_wave_data_1a0b6119c3f2a704247921c750d127a736" compoundref="_wave_data_8cs" startline="55" endline="74">WaveData.GetPath</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -24,28 +24,28 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="110">
+      <node id="106">
         <label>PathWrapper</label>
         <link refid="class_path_wrapper"/>
-        <childnode refid="111" relation="public-inheritance">
+        <childnode refid="107" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="111">
+      <node id="107">
         <label>ScriptableObject</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="112">
+      <node id="108">
         <label>PathWrapper</label>
         <link refid="class_path_wrapper"/>
-        <childnode refid="113" relation="public-inheritance">
+        <childnode refid="109" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="113">
+      <node id="109">
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/PathWrapper.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/PathWrapper.cs" bodystart="7" bodyend="10"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathWrapper.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathWrapper.cs" bodystart="7" bodyend="10"/>
     <listofallmembers>
       <member refid="class_path_wrapper_1a2752a3aadeb4e18d4728d34e9b5a8d4e" prot="public" virt="non-virtual"><scope>PathWrapper</scope><name>selectedPath</name></member>
     </listofallmembers>

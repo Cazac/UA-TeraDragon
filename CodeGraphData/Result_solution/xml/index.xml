@@ -118,16 +118,12 @@
     <member refid="class_enemy_script_1ab16cb5c586d820cbf42ca4d9a33e7843" kind="variable"><name>MaxHealth</name></member>
     <member refid="class_enemy_script_1ae8f37b47dbf347e64db652cf78174ad7" kind="variable"><name>CurrentHealth</name></member>
     <member refid="class_enemy_script_1a2c618fda4a3b98cd7fc1089c682c3e90" kind="variable"><name>speed</name></member>
-    <member refid="class_enemy_script_1a5d9521957bc18d478d927f23ac6066df" kind="variable"><name>attributes</name></member>
     <member refid="class_enemy_script_1a61a56df6ca1e4301e3b17525a2885f0a" kind="function"><name>Start</name></member>
     <member refid="class_enemy_script_1a1033134339a3ffbee7e98c9b6dbd756d" kind="function"><name>FixedUpdate</name></member>
     <member refid="class_enemy_script_1add0f8eee29617a94df0467533cad1d74" kind="function"><name>Move</name></member>
     <member refid="class_enemy_script_1a6d35ab0bc6c1d726f22424e67dda462e" kind="function"><name>OnTriggerEnter2D</name></member>
-  </compound>
-  <compound refid="class_enemy_testing_script" kind="class"><name>EnemyTestingScript</name>
-    <member refid="class_enemy_testing_script_1a9d5a952cba455bd30b4b884534b8d446" kind="variable"><name>enemyPrefab</name></member>
-    <member refid="class_enemy_testing_script_1a034aa05167547c87c1e5a63df7ffb314" kind="function"><name>Start</name></member>
-    <member refid="class_enemy_testing_script_1a4fb0013557fe2a7d9d8c193a188eba70" kind="function"><name>Update</name></member>
+    <member refid="class_enemy_script_1a5d7e4e7d49ee735c2b1ceec83f2a3f31" kind="function"><name>TakeDamage</name></member>
+    <member refid="class_enemy_script_1a6ee07f1345fa5e6c4491c52a7b25ad4e" kind="function"><name>ApplySlow</name></member>
   </compound>
   <compound refid="class_game_manager" kind="class"><name>GameManager</name>
     <member refid="class_game_manager_1a5ccfacd027ad08eeb4ff1f25a7f59c98" kind="function"><name>Start</name></member>
@@ -251,6 +247,47 @@
     <member refid="class_projectile_1a9b441f6ff0558e322ea53269ec8f063d" kind="variable"><name>sprite</name></member>
     <member refid="class_projectile_1a02308b63d1c7f05a3c2db9b4475d4801" kind="variable"><name>Effects</name></member>
   </compound>
+  <compound refid="class_projectile_data" kind="class"><name>ProjectileData</name>
+    <member refid="class_projectile_data_1ae1536a05d49e3e0c25f65da2a0d23866" kind="variable"><name>projectilePrefab</name></member>
+    <member refid="class_projectile_data_1a774f95eea4a0e76a8e8448f1415d6fe2" kind="variable"><name>isProjectile</name></member>
+    <member refid="class_projectile_data_1ae6ec668f9fed759af6e430455abfeca7" kind="variable"><name>projectileDamage</name></member>
+    <member refid="class_projectile_data_1aa721f5f4003cf2cfe104ffc7f7d25a8c" kind="variable"><name>projectileSpeed</name></member>
+    <member refid="class_projectile_data_1a1d29b76a026a9936793941a5f24223ac" kind="variable"><name>projectileSlowdown</name></member>
+    <member refid="class_projectile_data_1a92e20a40e47900ac06d3596f88365942" kind="variable"><name>isExplosive</name></member>
+    <member refid="class_projectile_data_1ad12b00eb61767c8301811dc50f58db21" kind="variable"><name>explosionRadius</name></member>
+    <member refid="class_projectile_data_1aa516b96cb7a0896688a926dc651d8e94" kind="variable"><name>explosionLinger</name></member>
+    <member refid="class_projectile_data_1a01537fbe5f1ca4a174dfa172c68c0f34" kind="variable"><name>explosionDamage</name></member>
+    <member refid="class_projectile_data_1ae79e644dc35b8c78ac9e09634fc4b7d1" kind="variable"><name>explosionSlowdown</name></member>
+    <member refid="class_projectile_data_1aa812422626f89a178c193ea11e0b87da" kind="variable"><name>isBeam</name></member>
+    <member refid="class_projectile_data_1aa55cd6673e9b926c5194c7752dfff2c1" kind="variable"><name>beamDamage</name></member>
+    <member refid="class_projectile_data_1ab2ac0c87d8e9ba67ea32f211ff757bca" kind="variable"><name>beamSlowdown</name></member>
+    <member refid="class_projectile_data_1af6dec5b0cc17d83f1af5eea7721a44b7" kind="variable"><name>beamChainTargets</name></member>
+  </compound>
+  <compound refid="class_projectile_fire" kind="class"><name>ProjectileFire</name>
+    <member refid="class_projectile_fire_1a4f8c159959a9eba135b1175cc1fd2806" kind="variable"><name>enemy</name></member>
+    <member refid="class_projectile_fire_1a5d769162adf84789046f2a4a59e7b3e6" kind="variable"><name>isProjectile</name></member>
+    <member refid="class_projectile_fire_1a6c96072637ed7e0558a62c5b398f2a28" kind="variable"><name>projectileDamage</name></member>
+    <member refid="class_projectile_fire_1a6b0ca42bcf1fcfe0ae6676544d9a0cda" kind="variable"><name>projectileSpeed</name></member>
+    <member refid="class_projectile_fire_1a0928b50b14dacfffd66ed859757900c9" kind="variable"><name>projectileSlowdown</name></member>
+    <member refid="class_projectile_fire_1aadda343133a41cf3fef52007f2e83cd5" kind="variable"><name>isExplosive</name></member>
+    <member refid="class_projectile_fire_1a2b3867d6468efa11e7fb35a94dda0d66" kind="variable"><name>explosionRadius</name></member>
+    <member refid="class_projectile_fire_1af25c448fcb294a47f328cfe25105c588" kind="variable"><name>explosionLinger</name></member>
+    <member refid="class_projectile_fire_1a59529d02af04a4f991d66e4be417f294" kind="variable"><name>explosionDamage</name></member>
+    <member refid="class_projectile_fire_1a9ee1f15dbaf9d5c7773975ec83552699" kind="variable"><name>explosionSlowdown</name></member>
+    <member refid="class_projectile_fire_1af516b7e2acb6d38662c85e2db02816b9" kind="variable"><name>isBeam</name></member>
+    <member refid="class_projectile_fire_1a3a621549b4ad701c59826ab8f460a6c4" kind="variable"><name>beamDamage</name></member>
+    <member refid="class_projectile_fire_1aea09677f3082eed496178c90dcd00c4d" kind="variable"><name>beamSlowdown</name></member>
+    <member refid="class_projectile_fire_1a616d0c3f47ac8e46e9481cb87775f100" kind="variable"><name>beamChainTargets</name></member>
+    <member refid="class_projectile_fire_1aaed1ce4d00ea2c031c992b8cb1b45ad2" kind="function"><name>Start</name></member>
+    <member refid="class_projectile_fire_1aefe60993b84cafabcb12aebc3821fe0e" kind="function"><name>Update</name></member>
+    <member refid="class_projectile_fire_1a3d7884cd3578758cdf3297b645aa02ef" kind="function"><name>ChaseTarget</name></member>
+    <member refid="class_projectile_fire_1a4402e527166f2a4adc15ed3eb99d8e46" kind="function"><name>OnTriggerEnter2D</name></member>
+    <member refid="class_projectile_fire_1accf5d055ef45cf89b29510fe4b90e3dc" kind="function"><name>HitTarget</name></member>
+    <member refid="class_projectile_fire_1aef5def8b3b252a7a2ff40b24be25fddd" kind="function"><name>BeamTarget</name></member>
+  </compound>
+  <compound refid="class_scence_switch" kind="class"><name>ScenceSwitch</name>
+    <member refid="class_scence_switch_1affe2721fb02441c79d86049b8251386e" kind="function"><name>SwitchToScence</name></member>
+  </compound>
   <compound refid="class_scriptable_object_utility" kind="class"><name>ScriptableObjectUtility</name>
     <member refid="class_scriptable_object_utility_1a5f1b4da1f6c5173e35559068ab51a49d" kind="function"><name>CreateAsset&lt; T &gt;</name></member>
   </compound>
@@ -345,13 +382,28 @@
     <member refid="class_tower_data_1ae785b01d7b9d4b01c037da56033b365b" kind="variable"><name>Effects</name></member>
   </compound>
   <compound refid="class_tower_drag" kind="class"><name>TowerDrag</name>
-    <member refid="class_tower_drag_1a65e7108129066118f5a7c29c2330667c" kind="variable"><name>towerPrefab</name></member>
-    <member refid="class_tower_drag_1a1987f32180dc1f2e89bc122dc556423d" kind="variable"><name>tileLayer</name></member>
+    <member refid="class_tower_drag_1a99ddd4c5542440707df225641e66fe93" kind="variable"><name>towerPrefab_UI</name></member>
+    <member refid="class_tower_drag_1a610155e220a57773f5735d02d539f395" kind="variable"><name>towerPrefab_Spawn</name></member>
+    <member refid="class_tower_drag_1a8c82ab96f978a777463aa67fb18f27d6" kind="variable"><name>towerParent</name></member>
     <member refid="class_tower_drag_1a609315919fd1c1590067f5e31e865a35" kind="variable"><name>currentTower</name></member>
     <member refid="class_tower_drag_1a8b0712fcbb9e25ec01081a540505a019" kind="function"><name>OnBeginDrag</name></member>
     <member refid="class_tower_drag_1a5249c368ce5257c2acc56c5276a90b4d" kind="function"><name>OnDrag</name></member>
     <member refid="class_tower_drag_1a942a12b2f914655d1e71a166b4c9a968" kind="function"><name>OnEndDrag</name></member>
     <member refid="class_tower_drag_1ae70d73d2f9d64501f7273424f334a70d" kind="function"><name>LogRaycasthitObject</name></member>
+  </compound>
+  <compound refid="class_tower_shooting" kind="class"><name>TowerShooting</name>
+    <member refid="class_tower_shooting_1a29006971761aef5abcfaa06fc01e0827" kind="variable"><name>projectilePresetData</name></member>
+    <member refid="class_tower_shooting_1a57e01b1047df849d6e2f697c350f3a0c" kind="variable"><name>MonstersToShoot</name></member>
+    <member refid="class_tower_shooting_1a6f9e73e1c3856626f766c808e481dcd7" kind="variable"><name>timeToReload</name></member>
+    <member refid="class_tower_shooting_1a5898947be2e876d3a5009f0d546fb37d" kind="variable"><name>reloadProgress</name></member>
+    <member refid="class_tower_shooting_1afcfd922542db64a2510694ccf17a998b" kind="variable"><name>isReadyToShoot</name></member>
+    <member refid="class_tower_shooting_1aa2d1b232a6a1913e23246b5379521e3e" kind="function"><name>Start</name></member>
+    <member refid="class_tower_shooting_1ad4ba1c48a0fac4d930f8e737b6161a26" kind="function"><name>Update</name></member>
+    <member refid="class_tower_shooting_1a00afbeda51bf6665fe0832a2786f981a" kind="function"><name>OnTriggerEnter2D</name></member>
+    <member refid="class_tower_shooting_1a9aa881979b8fcc0a2e54b6096cd5fd0e" kind="function"><name>Reload</name></member>
+    <member refid="class_tower_shooting_1ad2ed80efbe0a076f2a87d4bce82be28d" kind="function"><name>Shoot</name></member>
+    <member refid="class_tower_shooting_1afd34e057e56cd84875dcab6f313b1223" kind="function"><name>GenerateProjectile</name></member>
+    <member refid="class_tower_shooting_1a1b5b0f7bce1b6c0c8c39dba48fb8c850" kind="function"><name>OnTriggerExit2D</name></member>
   </compound>
   <compound refid="class_upgrade_node" kind="class"><name>UpgradeNode</name>
     <member refid="class_upgrade_node_1a23963e928ee9d6e13be978c081a4f044" kind="variable"><name>upgradeName</name></member>
@@ -366,21 +418,21 @@
     <member refid="class_upgrade_tree_1ac0fb5815446cafdedf58c5161386e8a9" kind="function"><name>GetTotalStatsUpgrade</name></member>
     <member refid="class_upgrade_tree_1a5ba19043ebbecfc5b6ec055e8dedd9cf" kind="function"><name>GetActivateAbilities</name></member>
   </compound>
-  <compound refid="class_wave" kind="class"><name>Wave</name>
-    <member refid="class_wave_1aba89c22b2f836915583257b1cefdf33e" kind="variable"><name>EnemyPrefab</name></member>
-    <member refid="class_wave_1ab2552abc2494b749e21eac9564f94bb8" kind="variable"><name>EnemiesPrefab</name></member>
-    <member refid="class_wave_1a5db785c903c2e361c95d553a693b6f59" kind="variable"><name>listWapper</name></member>
-    <member refid="class_wave_1a33b61841c31c1e920c926b499bc4a7a3" kind="variable"><name>Path</name></member>
-    <member refid="class_wave_1a8bb1cbae13393c3e7dc7b53644ca50e3" kind="variable"><name>Paths</name></member>
-    <member refid="class_wave_1a08bb67b3313aeed86910df9897bb9bdd" kind="variable"><name>ParentGameobject</name></member>
-    <member refid="class_wave_1a43b9f0c53fe9ca715fd5d4a6c6d07229" kind="variable"><name>NumberOfEnemyPerPos</name></member>
-    <member refid="class_wave_1ae264f4e3abb2f70ac40592223016096d" kind="variable"><name>TimeUntilSpawn</name></member>
-    <member refid="class_wave_1aad4f4ecb27050015238ec79239b943ff" kind="variable"><name>WaveTimer</name></member>
-    <member refid="class_wave_1a5081891ce79b81ced36b6f50a9791067" kind="variable"><name>SpawnRate</name></member>
-    <member refid="class_wave_1a402e63ede16adb7572d174d9673af340" kind="function"><name>Wave</name></member>
-    <member refid="class_wave_1ad774f8c72d296be6d2c5ddc570c5c7d1" kind="function"><name>Wave</name></member>
-    <member refid="class_wave_1a51ed2770ad4e3d3d76f5d0e53301992d" kind="function"><name>GetPath</name></member>
-    <member refid="class_wave_1a90a11049982ae74e296ad4788a4e3a58" kind="function"><name>GetPath</name></member>
+  <compound refid="class_wave_data" kind="class"><name>WaveData</name>
+    <member refid="class_wave_data_1a66301593d24cc3a46c5c972ae57d484e" kind="variable"><name>EnemyPrefab</name></member>
+    <member refid="class_wave_data_1a7e39d2413007a76b616ffbd3ae368ddd" kind="variable"><name>EnemiesPrefab</name></member>
+    <member refid="class_wave_data_1a51aaf6885d5614a43d93d6d1dfaac192" kind="variable"><name>listWapper</name></member>
+    <member refid="class_wave_data_1acaaa33244034527c67f42b8c6c129f88" kind="variable"><name>Path</name></member>
+    <member refid="class_wave_data_1a0b1369739ef25a1bc9ae75a9a6c0f6e5" kind="variable"><name>Paths</name></member>
+    <member refid="class_wave_data_1ab9f2a0334c4ce248e61321bb7095fd8c" kind="variable"><name>ParentGameobject</name></member>
+    <member refid="class_wave_data_1aabe9bbb52076fffb3257d76e2ed27631" kind="variable"><name>NumberOfEnemyPerPos</name></member>
+    <member refid="class_wave_data_1ad318fd064fa8f6a7ada170b23caec261" kind="variable"><name>TimeUntilSpawn</name></member>
+    <member refid="class_wave_data_1a5d79fa024ab9f7de2978517a1dd3d043" kind="variable"><name>WaveTimer</name></member>
+    <member refid="class_wave_data_1a4d546fdd7918cf46da199c7da76b29b3" kind="variable"><name>SpawnRate</name></member>
+    <member refid="class_wave_data_1a0677ae110fd09053c45cc00145f0877c" kind="function"><name>WaveData</name></member>
+    <member refid="class_wave_data_1a74a63abf933adfdedf2bffcd02599c66" kind="function"><name>WaveData</name></member>
+    <member refid="class_wave_data_1a0b6119c3f2a704247921c750d127a736" kind="function"><name>GetPath</name></member>
+    <member refid="class_wave_data_1accf99463b6e2a26b85662418e27f1bd6" kind="function"><name>GetPath</name></member>
   </compound>
   <compound refid="interface_wave_system_1_1_wave_interface" kind="interface"><name>WaveSystem::WaveInterface</name>
     <member refid="interface_wave_system_1_1_wave_interface_1a99dd61cc0260436c7c57b6295606309e" kind="function"><name>UIConnection</name></member>
@@ -389,15 +441,15 @@
     <member refid="class_wave_system_1_1_wave_manager_1a406501ee2c7b0170e142458d3efd4540" kind="variable"><name>tiles</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1a1dc30e09c95979bea48753678e682aef" kind="variable"><name>spawnSingleEnemy</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1a6a33f61d04579bd69162bc3545f57a1b" kind="variable"><name>enableSpawning</name></member>
-    <member refid="class_wave_system_1_1_wave_manager_1a134e888df780722c91adbb6681b5b4de" kind="variable"><name>waves</name></member>
-    <member refid="class_wave_system_1_1_wave_manager_1aee567dba7624f500104a8f9bef3cac92" kind="variable"><name>currentWave</name></member>
+    <member refid="class_wave_system_1_1_wave_manager_1a8450498ba110f280d16598bf44a189d9" kind="variable"><name>waves</name></member>
+    <member refid="class_wave_system_1_1_wave_manager_1af89b7ca732e3fa13ca8db03777c74ce7" kind="variable"><name>currentWave</name></member>
+    <member refid="class_wave_system_1_1_wave_manager_1aad6a69609908c23c61aba6ee53283130" kind="variable"><name>waveParent</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1ae0efbb3ae5ba3700d3912d1198c7691b" kind="property"><name>EnableSpawning</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1afe58f6e5b5639ea299dd52ed52615363" kind="property"><name>NodeSpawnPosition</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1a728712f4cbff12c14de142dc0914a36a" kind="property"><name>WaveIndex</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1a05b66e32c5d56f17d121215199172893" kind="property"><name>TimeUntilNextWave</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1a6eb44158be3bc92603f4334605c7077f" kind="property"><name>WaveTimer</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1a9603388bc15cf87793a9cbc987efa4eb" kind="variable"><name>selectedNodeSpawnPosition</name></member>
-    <member refid="class_wave_system_1_1_wave_manager_1a1110b172bb83835ec38ffd472a428806" kind="variable"><name>WAVE_PARENT_NAME</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1a23ccdd3c346370196014398049bedebd" kind="variable"><name>currentTimer</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1a00902861470e1549acd89c20c187c8dc" kind="variable"><name>waveIndex</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1aefdf67d8689afa7de2bcc8c6277c1f3f" kind="variable"><name>tileNodes</name></member>
@@ -459,15 +511,13 @@
   </compound>
   <compound refid="namespace_wave_system" kind="namespace"><name>WaveSystem</name>
   </compound>
-  <compound refid="_camera_panning_cursor_8cs" kind="file"><name>CameraPanningCursor.cs</name>
-  </compound>
-  <compound refid="_cursor_move_8cs" kind="file"><name>CursorMove.cs</name>
-  </compound>
-  <compound refid="_cursor_selection_8cs" kind="file"><name>CursorSelection.cs</name>
-  </compound>
   <compound refid="_enemy_data_8cs" kind="file"><name>EnemyData.cs</name>
   </compound>
+  <compound refid="_paths_data_8cs" kind="file"><name>PathsData.cs</name>
+  </compound>
   <compound refid="_path_wrapper_8cs" kind="file"><name>PathWrapper.cs</name>
+  </compound>
+  <compound refid="_data_2_projectile_data_8cs" kind="file"><name>ProjectileData.cs</name>
   </compound>
   <compound refid="_projectile_data_8cs" kind="file"><name>ProjectileData.cs</name>
   </compound>
@@ -486,8 +536,6 @@
     <member refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda740fab2b9581e75a9ba06126e7d280d6" kind="enumvalue"><name>ABILITY_STATS</name></member>
     <member refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda03570470bad94692ce93e32700d2e1cb" kind="enumvalue"><name>OTHER</name></member>
   </compound>
-  <compound refid="_test_8cs" kind="file"><name>Test.cs</name>
-  </compound>
   <compound refid="_upgrade_node_8cs" kind="file"><name>UpgradeNode.cs</name>
     <member refid="_upgrade_node_8cs_1aed791e8d3de5c0066e62b3790b3bb10e" kind="enum"><name>UpgradeType</name></member>
     <member refid="_upgrade_node_8cs_1aed791e8d3de5c0066e62b3790b3bb10ea9762a38eff1a9a67b72340b91686b19d" kind="enumvalue"><name>STATS_MODIFIER</name></member>
@@ -495,17 +543,11 @@
   </compound>
   <compound refid="_upgrade_tree_8cs" kind="file"><name>UpgradeTree.cs</name>
   </compound>
-  <compound refid="_wave_8cs" kind="file"><name>Wave.cs</name>
+  <compound refid="_wave_data_8cs" kind="file"><name>WaveData.cs</name>
   </compound>
   <compound refid="_enemy_script_8cs" kind="file"><name>EnemyScript.cs</name>
   </compound>
-  <compound refid="_enemy_testing_script_8cs" kind="file"><name>EnemyTestingScript.cs</name>
-  </compound>
   <compound refid="_game_over_script_8cs" kind="file"><name>GameOverScript.cs</name>
-  </compound>
-  <compound refid="_back_ground_pan_around_8cs" kind="file"><name>BackGroundPanAround.cs</name>
-  </compound>
-  <compound refid="_particle_controller_8cs" kind="file"><name>ParticleController.cs</name>
   </compound>
   <compound refid="_game_manager_8cs" kind="file"><name>GameManager.cs</name>
   </compound>
@@ -514,6 +556,10 @@
   <compound refid="_map_bound_8cs" kind="file"><name>MapBound.cs</name>
   </compound>
   <compound refid="_map_bounds_updater_8cs" kind="file"><name>MapBoundsUpdater.cs</name>
+  </compound>
+  <compound refid="_projectile_fire_8cs" kind="file"><name>ProjectileFire.cs</name>
+  </compound>
+  <compound refid="_scence_switch_8cs" kind="file"><name>ScenceSwitch.cs</name>
   </compound>
   <compound refid="_auto_destruct_8cs" kind="file"><name>AutoDestruct.cs</name>
   </compound>
@@ -525,17 +571,29 @@
   </compound>
   <compound refid="_path_finding_8cs" kind="file"><name>PathFinding.cs</name>
   </compound>
-  <compound refid="_paths_data_8cs" kind="file"><name>PathsData.cs</name>
-  </compound>
   <compound refid="_tile_nodes_8cs" kind="file"><name>TileNodes.cs</name>
   </compound>
   <compound refid="_tile_nodes_editor_8cs" kind="file"><name>TileNodesEditor.cs</name>
   </compound>
   <compound refid="_world_tile_8cs" kind="file"><name>WorldTile.cs</name>
   </compound>
+  <compound refid="_tower_shooting_8cs" kind="file"><name>TowerShooting.cs</name>
+  </compound>
   <compound refid="_button_controller_8cs" kind="file"><name>ButtonController.cs</name>
   </compound>
   <compound refid="_camera_panning_8cs" kind="file"><name>CameraPanning.cs</name>
+  </compound>
+  <compound refid="_camera_panning_cursor_8cs" kind="file"><name>CameraPanningCursor.cs</name>
+  </compound>
+  <compound refid="_cursor_move_8cs" kind="file"><name>CursorMove.cs</name>
+  </compound>
+  <compound refid="_cursor_selection_8cs" kind="file"><name>CursorSelection.cs</name>
+  </compound>
+  <compound refid="_input_detection_8cs" kind="file"><name>InputDetection.cs</name>
+  </compound>
+  <compound refid="_back_ground_pan_around_8cs" kind="file"><name>BackGroundPanAround.cs</name>
+  </compound>
+  <compound refid="_particle_controller_8cs" kind="file"><name>ParticleController.cs</name>
   </compound>
   <compound refid="_miner_drag_8cs" kind="file"><name>MinerDrag.cs</name>
   </compound>
@@ -543,25 +601,23 @@
   </compound>
   <compound refid="_tower_drag_8cs" kind="file"><name>TowerDrag.cs</name>
   </compound>
-  <compound refid="_input_detection_8cs" kind="file"><name>InputDetection.cs</name>
-  </compound>
   <compound refid="_wave_manager_8cs" kind="file"><name>WaveManager.cs</name>
   </compound>
   <compound refid="_wave_system_timer_8cs" kind="file"><name>WaveSystemTimer.cs</name>
   </compound>
   <compound refid="dir_7308abb27ce1242fd940d4e9d9634ab1" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets</name>
   </compound>
-  <compound refid="dir_1f2e302071594fa0f49dc1e45810efef" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor</name>
-  </compound>
-  <compound refid="dir_9b0ece36241103ddd5e2e4f9d8db92d0" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts</name>
+  <compound refid="dir_1f2b0a7adc6883eb1675c8d7263bcca9" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data</name>
   </compound>
   <compound refid="dir_215a866ae79e0865808e2a6893856752" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy</name>
   </compound>
-  <compound refid="dir_8998884d9f10414bed60e5d1d6e9013e" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts</name>
+  <compound refid="dir_fd8049f1820f82d03301a95654a7eae5" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts</name>
   </compound>
   <compound refid="dir_a7511bee0c07a6fc403cd31d2569a9a0" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers</name>
   </compound>
   <compound refid="dir_afff80df7e0b2612f1e3dd7497a06e77" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds</name>
+  </compound>
+  <compound refid="dir_bfecd958422dbbeb04e3d3d3adae3100" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ScenceManager</name>
   </compound>
   <compound refid="dir_d4f379ff019d8f672cac2d1996aa7805" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts</name>
   </compound>
@@ -579,9 +635,7 @@
   </compound>
   <compound refid="dir_2e0266405d61f1795af834bfab0ef0b7" kind="dir"><name>C:/Uniprj</name>
   </compound>
-  <compound refid="dir_24f99c80f880cec65c3c5399f5520f6c" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts/UpgradeScripts</name>
-  </compound>
-  <compound refid="dir_ce23892b43079d8cd56aa9490c62d11d" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils</name>
+  <compound refid="dir_853f47b250ba41a7e26d47c5c41fbfb5" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts</name>
   </compound>
   <compound refid="dir_41932836bf0646e4479392573e51e99c" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem</name>
   </compound>

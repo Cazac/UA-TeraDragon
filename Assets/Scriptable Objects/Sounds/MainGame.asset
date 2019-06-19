@@ -18,3 +18,4 @@ MonoBehaviour:
   Pitch: 1
   IsAllowedLooping: 1
   IsAllowedAutoDestruct: 0
+  IsAllowedAudioDampening: 1

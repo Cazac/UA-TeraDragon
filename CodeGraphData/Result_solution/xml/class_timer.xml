@@ -88,7 +88,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/Timer.cs" line="26" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/Timer.cs" bodystart="27" bodyend="-1"/>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="176" endline="221">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="179" endline="224">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
         <referencedby refid="class_timer_1a8122933e82b97a09c9d9408cc7381302" compoundref="_timer_8cs" startline="43" endline="48">Timer</referencedby>
       </memberdef>
       </sectiondef>
@@ -181,7 +181,7 @@
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/Timer.cs" line="54" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/Timer.cs" bodystart="54" bodyend="62"/>
         <references refid="class_timer_1ac03363a00ec1ba14560f74dde0dfc20e" compoundref="_timer_8cs" startline="7">timeUntilNextSpawn</references>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1a7454ae0f83853fcc5f8176e691b705c9" compoundref="_wave_manager_8cs" startline="124" endline="146">WaveSystem.WaveManager.Update</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1a7454ae0f83853fcc5f8176e691b705c9" compoundref="_wave_manager_8cs" startline="127" endline="149">WaveSystem.WaveManager.Update</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_timer_1aa72cb9db5d144394e72950be8f170260" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -197,7 +197,7 @@
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/Timer.cs" line="68" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/Timer.cs" bodystart="68" bodyend="78"/>
         <references refid="class_timer_1a0d7e14068b8b1bbf3034cc105edf8cd5" compoundref="_timer_8cs" startline="8">waveTimer</references>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1a7454ae0f83853fcc5f8176e691b705c9" compoundref="_wave_manager_8cs" startline="124" endline="146">WaveSystem.WaveManager.Update</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1a7454ae0f83853fcc5f8176e691b705c9" compoundref="_wave_manager_8cs" startline="127" endline="149">WaveSystem.WaveManager.Update</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

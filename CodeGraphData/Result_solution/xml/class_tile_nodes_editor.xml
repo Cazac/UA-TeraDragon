@@ -23,24 +23,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="146">
+      <node id="154">
         <label>Editor</label>
       </node>
-      <node id="145">
+      <node id="153">
         <label>TileNodesEditor</label>
         <link refid="class_tile_nodes_editor"/>
-        <childnode refid="146" relation="public-inheritance">
+        <childnode refid="154" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="148">
+      <node id="156">
         <label>Editor</label>
       </node>
-      <node id="147">
+      <node id="155">
         <label>TileNodesEditor</label>
         <link refid="class_tile_nodes_editor"/>
-        <childnode refid="148" relation="public-inheritance">
+        <childnode refid="156" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

@@ -4,7 +4,6 @@
     <compoundname>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode</compoundname>
     <innerfile refid="_base_node_8cs">BaseNode.cs</innerfile>
     <innerfile refid="_path_finding_8cs">PathFinding.cs</innerfile>
-    <innerfile refid="_paths_data_8cs">PathsData.cs</innerfile>
     <innerfile refid="_tile_nodes_8cs">TileNodes.cs</innerfile>
     <innerfile refid="_tile_nodes_editor_8cs">TileNodesEditor.cs</innerfile>
     <innerfile refid="_world_tile_8cs">WorldTile.cs</innerfile>

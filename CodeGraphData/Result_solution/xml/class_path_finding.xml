@@ -224,16 +224,16 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="106">
+      <node id="102">
         <label>PathFinding</label>
         <link refid="class_path_finding"/>
-        <childnode refid="107" relation="usage">
+        <childnode refid="103" relation="usage">
           <edgelabel>paths</edgelabel>
           <edgelabel>startingTiles</edgelabel>
           <edgelabel>endTiles</edgelabel>
         </childnode>
       </node>
-      <node id="107">
+      <node id="103">
         <label>static</label>
       </node>
     </collaborationgraph>

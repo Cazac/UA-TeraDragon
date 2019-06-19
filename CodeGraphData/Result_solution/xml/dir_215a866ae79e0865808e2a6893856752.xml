@@ -3,7 +3,6 @@
   <compounddef id="dir_215a866ae79e0865808e2a6893856752" kind="dir">
     <compoundname>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy</compoundname>
     <innerfile refid="_enemy_script_8cs">EnemyScript.cs</innerfile>
-    <innerfile refid="_enemy_testing_script_8cs">EnemyTestingScript.cs</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

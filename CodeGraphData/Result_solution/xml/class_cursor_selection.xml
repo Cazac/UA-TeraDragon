@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="17" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="17" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" line="17" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" bodystart="17" bodyend="-1"/>
         <referencedby refid="class_cursor_selection_1a9149264a75d97d444104e894fc21e5e6" compoundref="_cursor_selection_8cs" startline="46" endline="69">OnClickSelect</referencedby>
         <referencedby refid="class_cursor_selection_1a64278855cb9178d6e2aff31760135974" compoundref="_cursor_selection_8cs" startline="24" endline="34">Start</referencedby>
       </memberdef>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="19" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" bodystart="19" bodyend="-1"/>
         <referencedby refid="class_cursor_selection_1a64278855cb9178d6e2aff31760135974" compoundref="_cursor_selection_8cs" startline="24" endline="34">Start</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_cursor_selection_1a059a2ccefb225a4ddd2f36bba55e47c9" prot="private" static="no" mutable="no">
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="20" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" bodystart="20" bodyend="-1"/>
         <referencedby refid="class_cursor_selection_1a64278855cb9178d6e2aff31760135974" compoundref="_cursor_selection_8cs" startline="24" endline="34">Start</referencedby>
       </memberdef>
       </sectiondef>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="24" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="24" bodyend="34"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" line="24" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" bodystart="24" bodyend="34"/>
         <references refid="class_cursor_selection_1abfeaa9d3cc2925c0bb990521fecca61d" compoundref="_cursor_selection_8cs" startline="17">tileLayer</references>
         <references refid="class_cursor_selection_1a059a2ccefb225a4ddd2f36bba55e47c9" compoundref="_cursor_selection_8cs" startline="20">tileNodes</references>
         <references refid="class_cursor_selection_1a06efe3ffa1bafc47f44c1a638f59f368" compoundref="_cursor_selection_8cs" startline="19">waveManager</references>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="36" column="1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" line="36" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_cursor_selection_1a9149264a75d97d444104e894fc21e5e6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -91,7 +91,7 @@
 <para>Uses raycast from mouse position to collider </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="46" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="46" bodyend="69"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" line="46" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" bodystart="46" bodyend="69"/>
         <references refid="class_cursor_selection_1afbc1cc83e29a8dac9824286fcf36138f" compoundref="_cursor_selection_8cs" startline="79" endline="83">LogRaycasthitObject</references>
         <references refid="class_cursor_selection_1abfeaa9d3cc2925c0bb990521fecca61d" compoundref="_cursor_selection_8cs" startline="17">tileLayer</references>
       </memberdef>
@@ -131,7 +131,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="79" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="79" bodyend="83"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" line="79" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" bodystart="79" bodyend="83"/>
         <referencedby refid="class_cursor_selection_1a9149264a75d97d444104e894fc21e5e6" compoundref="_cursor_selection_8cs" startline="46" endline="69">OnClickSelect</referencedby>
       </memberdef>
       </sectiondef>
@@ -156,16 +156,16 @@
         <link refid="class_wave_system_1_1_wave_manager"/>
         <childnode refid="34" relation="public-inheritance">
         </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>waves</edgelabel>
+          <edgelabel>currentWave</edgelabel>
+        </childnode>
         <childnode refid="35" relation="usage">
           <edgelabel>tileNodes</edgelabel>
           <edgelabel>tiles</edgelabel>
         </childnode>
         <childnode refid="33" relation="usage">
           <edgelabel>cursorSelection</edgelabel>
-        </childnode>
-        <childnode refid="38" relation="usage">
-          <edgelabel>waves</edgelabel>
-          <edgelabel>currentWave</edgelabel>
         </childnode>
         <childnode refid="41" relation="usage">
           <edgelabel>currentTimer</edgelabel>
@@ -201,8 +201,8 @@
         <label>MonoBehaviour</label>
       </node>
       <node id="38">
-        <label>Wave</label>
-        <link refid="class_wave"/>
+        <label>WaveData</label>
+        <link refid="class_wave_data"/>
         <childnode refid="39" relation="public-inheritance">
         </childnode>
         <childnode refid="40" relation="usage">
@@ -222,7 +222,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor/CursorSelection.cs" bodystart="14" bodyend="84"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CursorSelection.cs" bodystart="14" bodyend="84"/>
     <listofallmembers>
       <member refid="class_cursor_selection_1afbc1cc83e29a8dac9824286fcf36138f" prot="package" virt="non-virtual"><scope>CursorSelection</scope><name>LogRaycasthitObject</name></member>
       <member refid="class_cursor_selection_1a9149264a75d97d444104e894fc21e5e6" prot="private" virt="non-virtual"><scope>CursorSelection</scope><name>OnClickSelect</name></member>

@@ -2,19 +2,20 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
   <compounddef id="dir_d4f379ff019d8f672cac2d1996aa7805" kind="dir">
     <compoundname>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts</compoundname>
-    <innerdir refid="dir_1f2e302071594fa0f49dc1e45810efef">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Cursor</innerdir>
-    <innerdir refid="dir_9b0ece36241103ddd5e2e4f9d8db92d0">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/DataScripts</innerdir>
+    <innerdir refid="dir_1f2b0a7adc6883eb1675c8d7263bcca9">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data</innerdir>
     <innerdir refid="dir_215a866ae79e0865808e2a6893856752">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy</innerdir>
-    <innerdir refid="dir_8998884d9f10414bed60e5d1d6e9013e">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/MainMenu Scripts</innerdir>
     <innerdir refid="dir_a7511bee0c07a6fc403cd31d2569a9a0">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers</innerdir>
     <innerdir refid="dir_afff80df7e0b2612f1e3dd7497a06e77">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds</innerdir>
+    <innerdir refid="dir_bfecd958422dbbeb04e3d3d3adae3100">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ScenceManager</innerdir>
     <innerdir refid="dir_1b93297b0eb4b3eb9119184c4f00ab2a">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound</innerdir>
     <innerdir refid="dir_c9d9335cbf4dbd92660c4bcc108b7e12">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode</innerdir>
     <innerdir refid="dir_178a537f795f8bf2a71249baaca413de">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI</innerdir>
-    <innerdir refid="dir_ce23892b43079d8cd56aa9490c62d11d">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Utils</innerdir>
     <innerdir refid="dir_41932836bf0646e4479392573e51e99c">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem</innerdir>
     <innerfile refid="_game_over_script_8cs">GameOverScript.cs</innerfile>
+    <innerfile refid="_projectile_data_8cs">ProjectileData.cs</innerfile>
+    <innerfile refid="_projectile_fire_8cs">ProjectileFire.cs</innerfile>
     <innerfile refid="_sound_object_8cs">SoundObject.cs</innerfile>
+    <innerfile refid="_tower_shooting_8cs">TowerShooting.cs</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
