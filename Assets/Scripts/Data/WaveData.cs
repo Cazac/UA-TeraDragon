@@ -4,7 +4,7 @@ using UnityEngine;
 using static TileNodes;
 
 [CreateAssetMenu(fileName="NewWave", menuName= "Scriptable Objects/Wave")]
-public class Wave : ScriptableObject
+public class WaveData : ScriptableObject
 {
     public GameObject EnemyPrefab;
     public GameObject[] EnemiesPrefab;
@@ -28,7 +28,7 @@ public class Wave : ScriptableObject
     /// <param name="spawnPosition">List of List positions that the enemy will follow</param>
     /// <param name="parentGameobject">Parent to store spawned enemy</param>
     /// <param name="numberOfEnemyPerPos">Amount of enemy that can spawn in a specific position</param>
-    public Wave(GameObject enemyPrefab, List<List<WorldTile>> paths, GameObject parentGameobject, int numberOfEnemyPerPos)
+    public WaveData(GameObject enemyPrefab, List<List<WorldTile>> paths, GameObject parentGameobject, int numberOfEnemyPerPos)
     {
         EnemyPrefab = enemyPrefab;
         ParentGameobject = parentGameobject;
@@ -44,7 +44,7 @@ public class Wave : ScriptableObject
     /// <param name="paths">List of List positions that the enemy will follow</param>
     /// <param name="parentGameobject">Parent to store spawned enemy</param>
     /// <param name="numberOfEnemyPerPos">Amount of enemy that can spawn in a specific position</param>
-    public Wave(GameObject[] enemyPrefabs, List<List<WorldTile>> paths, GameObject parentGameobject, int numberOfEnemyPerPos)
+    public WaveData(GameObject[] enemyPrefabs, List<List<WorldTile>> paths, GameObject parentGameobject, int numberOfEnemyPerPos)
     {
         EnemiesPrefab = enemyPrefabs;
         Paths = paths;

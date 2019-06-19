@@ -244,7 +244,7 @@ public class CameraPanningCursor : MonoBehaviour
 
         //Multiple the base value by tile size
         boundRight = boundRight * 11.2f;
-        print(boundRight);
+        //print(boundRight);
 
         CameraBoundingX = new Vector2(-tileSize.x / 2, boundRight);
 

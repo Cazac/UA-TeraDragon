@@ -20,15 +20,18 @@ namespace WaveSystem
         // private float internalTimer;
 
         [Header("Scriptable wave object")]
-        public Wave[] waves;
+        public WaveData[] waves;
 
-        public Wave currentWave;
+        public WaveData currentWave;
 
         [SerializeField] //TODO: Delete serializeField
         private List<Vector3> selectedNodeSpawnPosition = new List<Vector3>();
         public List<Vector3> NodeSpawnPosition { get => selectedNodeSpawnPosition; set => selectedNodeSpawnPosition = value; }
 
-        private const string WAVE_PARENT_NAME = "Parent_EnemyWave";
+        [Header("Parent Gameobject For Waves")]
+        public GameObject waveParent;
+
+        //private const string WAVE_PARENT_NAME = "Parent_EnemyWave";
 
         private Timer currentTimer;
         private int waveIndex = 0;
@@ -115,8 +118,8 @@ namespace WaveSystem
             //    }
             //}
 
-            currentWave = waves[0];
-            MakeParent();
+            //currentWave = waves[0];
+            //MakeParent();
 
             //StartCoroutine(SpawnSingleEnemyPerWave());
         }
@@ -151,7 +154,7 @@ namespace WaveSystem
         /// </summary>
         private void MakeParent()
         {
-            new GameObject(WAVE_PARENT_NAME);
+            //new GameObject(WAVE_PARENT_NAME);
         }
 
 
@@ -178,10 +181,10 @@ namespace WaveSystem
             //While loop to keep function running every frame if possible
             while (true)
             {
-                Debug.Log("Wave index: " + waveIndex);
+                //Debug.Log("Wave index: " + waveIndex);
                 if (EnableSpawning == true)
                 {
-                    currentWave.ParentGameobject = GameObject.Find(WAVE_PARENT_NAME);
+                    currentWave.ParentGameobject = waveParent;
 
                     foreach (List<WorldTile> path in currentWave.Paths)
                     {
@@ -230,7 +233,7 @@ namespace WaveSystem
 
             if (waveIndex > waves.Length - 1)
             {
-                Debug.Log("End of all waves");
+                //Debug.Log("End of all waves");
                 return true;
             }
             return false;

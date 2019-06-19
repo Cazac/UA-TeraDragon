@@ -70,7 +70,7 @@ public class Timer
         waveTimer -= Time.deltaTime;
         if (waveTimer <= 0)
         {
-            Debug.Log("End of wave");
+            //Debug.Log("End of wave");
             return true;
         }
 

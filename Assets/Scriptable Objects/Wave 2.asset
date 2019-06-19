@@ -18,7 +18,7 @@ MonoBehaviour:
   listWapper: {fileID: 0}
   Path: []
   ParentGameobject: {fileID: 0}
-  NumberOfEnemyPerPos: 3
+  NumberOfEnemyPerPos: 10
   TimeUntilSpawn: 3
   WaveTimer: 10
   SpawnRate: 3
