@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7314039990985170530}
   - component: {fileID: 9186936417518568787}
-  - component: {fileID: 6569631105491250241}
   - component: {fileID: 5159972340332285486}
+  - component: {fileID: 6998398397548559391}
   m_Layer: 0
   m_Name: Node Crystal
   m_TagString: Untagged
@@ -81,28 +81,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6569631105491250241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8491057626293246429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82e4a07c7fe951541afe5abc560b6fa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridY: 0
-  gridX: 0
-  posX: 0
-  posY: 0
-  walkable: 0
-  myNeighbours: []
-  crystalValueRed: 0
-  crystalValueBlue: 0
-  crystalValueGreen: 0
-  crystalValueYellow: 0
 --- !u!65 &5159972340332285486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -116,3 +94,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.25, z: 0.25}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6998398397548559391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8491057626293246429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368fb7d5fd5871d4e84f41ef929b1da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridY: 0
+  gridX: 0
+  posX: 0
+  posY: 0
+  walkable: 0
+  towering: 1
+  myNeighbours: []
+  crystalValueRed: 0
+  crystalValueBlue: 0
+  crystalValueGreen: 0
+  crystalValueYellow: 0

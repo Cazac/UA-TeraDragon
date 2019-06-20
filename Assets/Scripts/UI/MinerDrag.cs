@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -67,32 +67,29 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
         {
             //Check hit tile name
-            string tileTypeName = hit.collider.gameObject.transform.parent.gameObject.name;
-
-
-            print(tileTypeName);
-
-            print(validTileTypes[0]);
-            print(validTileTypes[0].name);
-
-            foreach (TileBase validTile in validTileTypes)
+            
+            string tileTypeName = hit.collider.gameObject.name;
+            print(hit.collider.GetComponent<CrystalTile>() != null);
+            if(hit.collider.GetComponent<CrystalTile>() != null && hit.collider.GetComponent<CrystalTile>().towering)
             {
-                if (tileTypeName == validTile.name)
-                {
                     //Leave the Miner on the node, Call spawner later for init
                     currentMiner.transform.position = hit.collider.gameObject.transform.position;
                     LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
 
+                hit.collider.GetComponent<WorldTile>().towering = false;
+                //Spawn Miner TO DO
 
-                    //Spawn Miner TO DO
+                return;
 
-                    return;
-                }
-
+            }
+            else
+            {
                 //No Match
                 print("Destroy Miner");
                 Destroy(currentMiner);
+
             }
+            
         }
         else
         {
