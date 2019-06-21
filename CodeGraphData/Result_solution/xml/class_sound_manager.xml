@@ -16,7 +16,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="10" bodyend="-1"/>
-        <referencedby refid="class_sound_manager_1aba6cc29a03dfe5117ef532e875558ff3" compoundref="_sound_manager_8cs" startline="21" endline="26">Update</referencedby>
+        <referencedby refid="class_sound_manager_1afd74d3df47593fc56585731e5cdc513e" compoundref="_sound_manager_8cs" startline="81" endline="95">PlaySoundByName</referencedby>
+        <referencedby refid="class_sound_manager_1aba6cc29a03dfe5117ef532e875558ff3" compoundref="_sound_manager_8cs" startline="33" endline="46">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_sound_manager_1a59e38a1fc5c8112de9f7770fc009f198" prot="public" static="no" mutable="no">
         <type>AudioSource</type>
@@ -30,7 +31,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="11" bodyend="-1"/>
-        <referencedby refid="class_sound_manager_1a924de54b1c4fabfe9089d5d28dbd0fe7" compoundref="_sound_manager_8cs" startline="28" endline="35">PlayOnUIClick</referencedby>
+        <referencedby refid="class_sound_manager_1a924de54b1c4fabfe9089d5d28dbd0fe7" compoundref="_sound_manager_8cs" startline="57" endline="64">PlayOnUIClick</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_sound_manager_1affd71095ab7b38b825db04ef71be4902" prot="public" static="no" mutable="no">
         <type><ref refid="class_sound_object" kindref="compound">SoundObject</ref>[]</type>
@@ -43,8 +44,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="16" bodyend="-1"/>
-        <referencedby refid="class_sound_manager_1aba6cc29a03dfe5117ef532e875558ff3" compoundref="_sound_manager_8cs" startline="21" endline="26">Update</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_sound_manager_1afa48b9e374b21b43d54f1abee1848384" compoundref="_sound_manager_8cs" startline="48" endline="55">PlaySpecificSound</referencedby>
+        <referencedby refid="class_sound_manager_1aba6cc29a03dfe5117ef532e875558ff3" compoundref="_sound_manager_8cs" startline="33" endline="46">Update</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -60,7 +62,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="12" bodyend="-1"/>
-        <referencedby refid="class_sound_manager_1ac4504c77e7aaa04c3544a09827a0a331" compoundref="_sound_manager_8cs" startline="86" endline="99">MuteSoundtrack</referencedby>
+        <referencedby refid="class_sound_manager_1ac4504c77e7aaa04c3544a09827a0a331" compoundref="_sound_manager_8cs" startline="142" endline="155">MuteSoundtrack</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_sound_manager_1a957078d2abc628a2c60ddf027fa3ac2f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>bool</type>
@@ -74,7 +76,20 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="13" bodyend="-1"/>
-        <referencedby refid="class_sound_manager_1a479d26fa6b28b6680a9f7d6d8dc7f932" compoundref="_sound_manager_8cs" startline="72" endline="84">MuteUI</referencedby>
+        <referencedby refid="class_sound_manager_1a479d26fa6b28b6680a9f7d6d8dc7f932" compoundref="_sound_manager_8cs" startline="128" endline="140">MuteUI</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_sound_manager_1ab7f44673596cd36d8a06438dfc5784c3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool SoundManager.ReturnControl</definition>
+        <argsstring></argsstring>
+        <name>ReturnControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="15" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -89,10 +104,59 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="19" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sound_manager_1a59167aa1b1b16f45a1b38458148c5879" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SoundManager.triggerOnLevelLoad</definition>
+        <argsstring></argsstring>
+        <name>triggerOnLevelLoad</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_sound_manager_1a534c98b5f74fe60260144c3452d77c2d" compoundref="_sound_manager_8cs" startline="25" endline="31">OnLevelWasLoaded</referencedby>
+        <referencedby refid="class_sound_manager_1aba6cc29a03dfe5117ef532e875558ff3" compoundref="_sound_manager_8cs" startline="33" endline="46">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sound_manager_1a7fe30373fb1756965d3173213551c612" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SoundManager.returnControl</definition>
+        <argsstring></argsstring>
+        <name>returnControl</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="23" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_sound_manager_1aba6cc29a03dfe5117ef532e875558ff3" compoundref="_sound_manager_8cs" startline="33" endline="46">Update</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sound_manager_1a534c98b5f74fe60260144c3452d77c2d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoundManager.OnLevelWasLoaded</definition>
+        <argsstring>(int level)</argsstring>
+        <name>OnLevelWasLoaded</name>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="25" bodyend="31"/>
+        <references refid="class_sound_manager_1a59167aa1b1b16f45a1b38458148c5879" compoundref="_sound_manager_8cs" startline="22">triggerOnLevelLoad</references>
+      </memberdef>
       <memberdef kind="function" id="class_sound_manager_1aba6cc29a03dfe5117ef532e875558ff3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void SoundManager.Update</definition>
@@ -104,10 +168,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="21" bodyend="26"/>
-        <references refid="class_sound_manager_1a18ef1b2d4a921ec25ad598dc23eb7b32" compoundref="_sound_manager_8cs" startline="37" endline="50">LoopThroughSoundList</references>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="33" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="33" bodyend="46"/>
+        <references refid="class_sound_manager_1a18ef1b2d4a921ec25ad598dc23eb7b32" compoundref="_sound_manager_8cs" startline="66" endline="79">LoopThroughSoundList</references>
         <references refid="class_sound_manager_1a33785dd8a306005d6c1c84c35f830f07" compoundref="_sound_manager_8cs" startline="10">mainAudioSourceSoundtrack</references>
-        <references refid="class_sound_manager_1affd71095ab7b38b825db04ef71be4902" compoundref="_sound_manager_8cs" startline="16">soundClips</references>
+        <references refid="class_sound_manager_1a7fe30373fb1756965d3173213551c612" compoundref="_sound_manager_8cs" startline="23">returnControl</references>
+        <references refid="class_sound_manager_1affd71095ab7b38b825db04ef71be4902" compoundref="_sound_manager_8cs" startline="18">soundClips</references>
+        <references refid="class_sound_manager_1a59167aa1b1b16f45a1b38458148c5879" compoundref="_sound_manager_8cs" startline="22">triggerOnLevelLoad</references>
       </memberdef>
       <memberdef kind="function" id="class_sound_manager_1a18ef1b2d4a921ec25ad598dc23eb7b32" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -124,12 +190,61 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="37" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="37" bodyend="50"/>
-        <references refid="class_sound_manager_1afd74d3df47593fc56585731e5cdc513e" compoundref="_sound_manager_8cs" startline="52" endline="60">PlaySoundByName</references>
-        <referencedby refid="class_sound_manager_1aba6cc29a03dfe5117ef532e875558ff3" compoundref="_sound_manager_8cs" startline="21" endline="26">Update</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="66" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="66" bodyend="79"/>
+        <references refid="class_sound_manager_1afd74d3df47593fc56585731e5cdc513e" compoundref="_sound_manager_8cs" startline="81" endline="95">PlaySoundByName</references>
+        <referencedby refid="class_sound_manager_1aba6cc29a03dfe5117ef532e875558ff3" compoundref="_sound_manager_8cs" startline="33" endline="46">Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sound_manager_1aba6359f940e385b6730caa33ad7fbf33" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator SoundManager.AudioVolumeDampeningOnLoad</definition>
+        <argsstring>(AudioSource audioSource, float smallestLerpValue, float initialVolumeValue, float lerpTime)</argsstring>
+        <name>AudioVolumeDampeningOnLoad</name>
+        <param>
+          <type>AudioSource</type>
+          <declname>audioSource</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>smallestLerpValue</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>initialVolumeValue</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lerpTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="97" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="97" bodyend="116"/>
+        <referencedby refid="class_sound_manager_1afd74d3df47593fc56585731e5cdc513e" compoundref="_sound_manager_8cs" startline="81" endline="95">PlaySoundByName</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sound_manager_1afa48b9e374b21b43d54f1abee1848384" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoundManager.PlaySpecificSound</definition>
+        <argsstring>(String soundName)</argsstring>
+        <name>PlaySpecificSound</name>
+        <param>
+          <type>String</type>
+          <declname>soundName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="48" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="48" bodyend="55"/>
+        <references refid="class_sound_manager_1afd74d3df47593fc56585731e5cdc513e" compoundref="_sound_manager_8cs" startline="81" endline="95">PlaySoundByName</references>
+        <references refid="class_sound_manager_1affd71095ab7b38b825db04ef71be4902" compoundref="_sound_manager_8cs" startline="18">soundClips</references>
+      </memberdef>
       <memberdef kind="function" id="class_sound_manager_1a924de54b1c4fabfe9089d5d28dbd0fe7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void SoundManager.PlayOnUIClick</definition>
@@ -145,7 +260,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="28" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="28" bodyend="35"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="57" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="57" bodyend="64"/>
         <references refid="class_sound_manager_1a59e38a1fc5c8112de9f7770fc009f198" compoundref="_sound_manager_8cs" startline="11">mainAudioSourceUI</references>
       </memberdef>
       <memberdef kind="function" id="class_sound_manager_1afd74d3df47593fc56585731e5cdc513e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -163,8 +278,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="52" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="52" bodyend="60"/>
-        <referencedby refid="class_sound_manager_1a18ef1b2d4a921ec25ad598dc23eb7b32" compoundref="_sound_manager_8cs" startline="37" endline="50">LoopThroughSoundList</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="81" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="81" bodyend="95"/>
+        <references refid="class_sound_manager_1aba6359f940e385b6730caa33ad7fbf33" compoundref="_sound_manager_8cs" startline="97" endline="116">AudioVolumeDampeningOnLoad</references>
+        <references refid="class_sound_object_1a5a6a09d9fcb2585420ee1458c52174c4" compoundref="_sound_object_8cs" startline="14">SoundObject.IsAllowedAudioDampening</references>
+        <references refid="class_sound_manager_1a33785dd8a306005d6c1c84c35f830f07" compoundref="_sound_manager_8cs" startline="10">mainAudioSourceSoundtrack</references>
+        <referencedby refid="class_sound_manager_1a18ef1b2d4a921ec25ad598dc23eb7b32" compoundref="_sound_manager_8cs" startline="66" endline="79">LoopThroughSoundList</referencedby>
+        <referencedby refid="class_sound_manager_1afa48b9e374b21b43d54f1abee1848384" compoundref="_sound_manager_8cs" startline="48" endline="55">PlaySpecificSound</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_sound_manager_1a2eca8f953b8bc13c90ddb87a779a89fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -181,7 +300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="62" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="62" bodyend="65"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="118" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="118" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="class_sound_manager_1a2735ec67a565d38055679b3cbf9e5329" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -198,7 +317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="67" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="67" bodyend="70"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="123" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="123" bodyend="126"/>
       </memberdef>
       <memberdef kind="function" id="class_sound_manager_1a479d26fa6b28b6680a9f7d6d8dc7f932" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -211,7 +330,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="72" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="72" bodyend="84"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="128" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="128" bodyend="140"/>
         <references refid="class_sound_manager_1a957078d2abc628a2c60ddf027fa3ac2f" compoundref="_sound_manager_8cs" startline="13">IsMuteUI</references>
       </memberdef>
       <memberdef kind="function" id="class_sound_manager_1ac4504c77e7aaa04c3544a09827a0a331" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -225,7 +344,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="86" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="86" bodyend="99"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="142" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="142" bodyend="155"/>
         <references refid="class_sound_manager_1ae639244e333cd1bf7fff696cf71edd94" compoundref="_sound_manager_8cs" startline="12">IsMuteSoundtrack</references>
       </memberdef>
       </sectiondef>
@@ -234,41 +353,42 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="132">
+      <node id="136">
         <label>SoundManager</label>
         <link refid="class_sound_manager"/>
-        <childnode refid="133" relation="public-inheritance">
+        <childnode refid="137" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="133">
+      <node id="137">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="136">
+      <node id="140">
         <label>SoundObject</label>
         <link refid="class_sound_object"/>
-        <childnode refid="137" relation="public-inheritance">
+        <childnode refid="141" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="134">
+      <node id="138">
         <label>SoundManager</label>
         <link refid="class_sound_manager"/>
-        <childnode refid="135" relation="public-inheritance">
+        <childnode refid="139" relation="public-inheritance">
         </childnode>
-        <childnode refid="136" relation="usage">
+        <childnode refid="140" relation="usage">
           <edgelabel>soundClips</edgelabel>
         </childnode>
       </node>
-      <node id="137">
+      <node id="141">
         <label>ScriptableObject</label>
       </node>
-      <node id="135">
+      <node id="139">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="8" bodyend="101"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/SoundManager.cs" bodystart="8" bodyend="158"/>
     <listofallmembers>
+      <member refid="class_sound_manager_1aba6359f940e385b6730caa33ad7fbf33" prot="private" virt="non-virtual"><scope>SoundManager</scope><name>AudioVolumeDampeningOnLoad</name></member>
       <member refid="class_sound_manager_1ab77112f63239f2503f4bc273472bebc3" prot="private" virt="non-virtual"><scope>SoundManager</scope><name>currentClip</name></member>
       <member refid="class_sound_manager_1ae639244e333cd1bf7fff696cf71edd94" prot="public" virt="non-virtual"><scope>SoundManager</scope><name>IsMuteSoundtrack</name></member>
       <member refid="class_sound_manager_1a957078d2abc628a2c60ddf027fa3ac2f" prot="public" virt="non-virtual"><scope>SoundManager</scope><name>IsMuteUI</name></member>
@@ -277,9 +397,14 @@
       <member refid="class_sound_manager_1a59e38a1fc5c8112de9f7770fc009f198" prot="public" virt="non-virtual"><scope>SoundManager</scope><name>mainAudioSourceUI</name></member>
       <member refid="class_sound_manager_1ac4504c77e7aaa04c3544a09827a0a331" prot="public" virt="non-virtual"><scope>SoundManager</scope><name>MuteSoundtrack</name></member>
       <member refid="class_sound_manager_1a479d26fa6b28b6680a9f7d6d8dc7f932" prot="public" virt="non-virtual"><scope>SoundManager</scope><name>MuteUI</name></member>
+      <member refid="class_sound_manager_1a534c98b5f74fe60260144c3452d77c2d" prot="private" virt="non-virtual"><scope>SoundManager</scope><name>OnLevelWasLoaded</name></member>
       <member refid="class_sound_manager_1a924de54b1c4fabfe9089d5d28dbd0fe7" prot="public" virt="non-virtual"><scope>SoundManager</scope><name>PlayOnUIClick</name></member>
       <member refid="class_sound_manager_1afd74d3df47593fc56585731e5cdc513e" prot="public" virt="non-virtual"><scope>SoundManager</scope><name>PlaySoundByName</name></member>
+      <member refid="class_sound_manager_1afa48b9e374b21b43d54f1abee1848384" prot="public" virt="non-virtual"><scope>SoundManager</scope><name>PlaySpecificSound</name></member>
+      <member refid="class_sound_manager_1a7fe30373fb1756965d3173213551c612" prot="private" virt="non-virtual"><scope>SoundManager</scope><name>returnControl</name></member>
+      <member refid="class_sound_manager_1ab7f44673596cd36d8a06438dfc5784c3" prot="public" virt="non-virtual"><scope>SoundManager</scope><name>ReturnControl</name></member>
       <member refid="class_sound_manager_1affd71095ab7b38b825db04ef71be4902" prot="public" virt="non-virtual"><scope>SoundManager</scope><name>soundClips</name></member>
+      <member refid="class_sound_manager_1a59167aa1b1b16f45a1b38458148c5879" prot="private" virt="non-virtual"><scope>SoundManager</scope><name>triggerOnLevelLoad</name></member>
       <member refid="class_sound_manager_1aba6cc29a03dfe5117ef532e875558ff3" prot="private" virt="non-virtual"><scope>SoundManager</scope><name>Update</name></member>
       <member refid="class_sound_manager_1a2eca8f953b8bc13c90ddb87a779a89fc" prot="public" virt="non-virtual"><scope>SoundManager</scope><name>VolumeChangeSoundtrack</name></member>
       <member refid="class_sound_manager_1a2735ec67a565d38055679b3cbf9e5329" prot="public" virt="non-virtual"><scope>SoundManager</scope><name>VolumeChangeUI</name></member>

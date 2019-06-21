@@ -51,17 +51,6 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="48">
-        <label>EnemyData</label>
-        <link refid="class_enemy_data"/>
-        <childnode refid="49" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="49">
-        <label>ScriptableObject</label>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="50">
         <label>EnemyData</label>
         <link refid="class_enemy_data"/>
@@ -69,6 +58,17 @@
         </childnode>
       </node>
       <node id="51">
+        <label>ScriptableObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="52">
+        <label>EnemyData</label>
+        <link refid="class_enemy_data"/>
+        <childnode refid="53" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="53">
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>

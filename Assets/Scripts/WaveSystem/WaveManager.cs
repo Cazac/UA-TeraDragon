@@ -147,8 +147,12 @@ namespace WaveSystem
             {
                 if (currentTimer.NextWaveCountdown())
                     EnableSpawning = true;
-                soundManager.PlaySpecificSound("Main");
-                soundManager.ReturnControl = true;
+
+                if(soundManager !=null)
+                {
+                    soundManager.PlaySpecificSound("Main");
+                    soundManager.ReturnControl = true;
+                }
             }
         }
 
@@ -182,6 +186,7 @@ namespace WaveSystem
         ///</remarks>
         public IEnumerator SpawnSingleEnemyPerWave()
         {
+            waveIndex = 0;
             //While loop to keep function running every frame if possible
             while (true)
             {
@@ -195,7 +200,7 @@ namespace WaveSystem
                         for (int i = 0; i < currentWave.NumberOfEnemyPerPos; i++)
                         {
                             GameObject enemy = Instantiate(currentWave.EnemyPrefab, path[0].transform.position, Quaternion.identity, currentWave.ParentGameobject.transform);
-                            enemy.GetComponent<EnemyScript>().waypoints = path;
+                            enemy.GetComponent<EnemyScript>().currentWaypoints = path;
                             //Enumerator will return at this index, need to check if spawning option is still available
                             if (EnableSpawning)
                             {
@@ -205,7 +210,6 @@ namespace WaveSystem
                     }
 
                     EnableSpawning = false;
-
                     //Move on to the next scriptable wave in waves array
                     if (!AllWaveCompleted() && currentTimer.WaveTimer <= 0)
                     {
@@ -213,11 +217,13 @@ namespace WaveSystem
                         currentWave = waves[++waveIndex];
                         Debug.Log("Current wave: " + currentWave.ToString());
 
-                        
-
                         InstantiateNewTimer(currentWave.TimeUntilSpawn, currentWave.WaveTimer, ref currentTimer);
-                        soundManager.ReturnControl = false;
-                        soundManager.PlaySpecificSound("Inter");
+
+                        if (soundManager != null)
+                        {
+                            soundManager.ReturnControl = false;
+                            soundManager.PlaySpecificSound("Inter");
+                        }
                     }
 
                     else if (AllWaveCompleted())
@@ -241,8 +247,7 @@ namespace WaveSystem
 
             if (waveIndex > waves.Length - 1)
             {
-                //Debug.Log("End of all waves");
-                waveIndex = 0;
+                Debug.Log("End of all waves");
                 return true;
             }
             return false;

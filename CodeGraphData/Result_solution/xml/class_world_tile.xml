@@ -17,8 +17,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="16" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="226" endline="261">TileNodes.FillNodeTable</referencedby>
-        <referencedby refid="class_world_tile_1a68744bed9f6974f656c7677e5fcc500a" compoundref="_world_tile_8cs" startline="40" endline="43">ToString</referencedby>
+        <referencedby refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="227" endline="262">TileNodes.FillNodeTable</referencedby>
+        <referencedby refid="class_world_tile_1a68744bed9f6974f656c7677e5fcc500a" compoundref="_world_tile_8cs" startline="41" endline="44">ToString</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_world_tile_1a0e656c3b5770c4c79608125683ea7709" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -72,8 +72,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="24" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="24" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1a3cc3cf231a636206585be0dd45083fef" compoundref="_tile_nodes_8cs" startline="326" endline="336">TileNodes.AddNodeToList</referencedby>
-        <referencedby refid="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" compoundref="_tile_nodes_8cs" startline="270" endline="284">TileNodes.SetNeigbours</referencedby>
+        <referencedby refid="class_tile_nodes_1a3cc3cf231a636206585be0dd45083fef" compoundref="_tile_nodes_8cs" startline="327" endline="337">TileNodes.AddNodeToList</referencedby>
+        <referencedby refid="class_tower_drag_1a942a12b2f914655d1e71a166b4c9a968" compoundref="_tower_drag_8cs" startline="78" endline="130">TowerDrag.OnEndDrag</referencedby>
+        <referencedby refid="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" compoundref="_tile_nodes_8cs" startline="271" endline="285">TileNodes.SetNeigbours</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_world_tile_1a73553fd14575c6acc8c0eeb2c8132e4a" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -88,6 +89,22 @@
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="25" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="class_world_tile_1a8f5987fb6a965ae214c37cfad2cf7b4b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WorldTile.isBlockedBarrier</definition>
+        <argsstring></argsstring>
+        <name>isBlockedBarrier</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="26" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="131">EnemyScript.DynamicPathRelocation</referencedby>
+        <referencedby refid="class_tower_drag_1a942a12b2f914655d1e71a166b4c9a968" compoundref="_tower_drag_8cs" startline="78" endline="130">TowerDrag.OnEndDrag</referencedby>
+      </memberdef>
       <memberdef kind="variable" id="class_world_tile_1a8bb9aed53ffb5e7251e04003f75022c5" prot="public" static="no" mutable="no">
         <type>List&lt; <ref refid="class_world_tile" kindref="compound">WorldTile</ref> &gt;</type>
         <definition>List&lt;WorldTile&gt; WorldTile.myNeighbours</definition>
@@ -99,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="27" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="28" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="28" bodyend="-1"/>
         <referencedby refid="class_path_finding_1a9fcc7ba7419672643ecf2b9715b5862e" compoundref="_path_finding_8cs" startline="95" endline="120">PathFinding.DFS_Util</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_world_tile_1aa329cbb27cdbc33d78816e5067043f3f" prot="public" static="no" mutable="no">
@@ -113,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="33" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="33" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="34" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_world_tile_1a5faa48b04daa3e69fa2ba7f2b0a4f58e" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -126,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="34" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="34" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="35" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_world_tile_1a04bc708e60c4d6650cedfeb2f76bedfd" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -139,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="35" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="35" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="36" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_world_tile_1a815dd72c7a6d5bca1630fe88b8c1a65e" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -152,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="36" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="36" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="37" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -167,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="40" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="40" bodyend="43"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="41" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="41" bodyend="44"/>
         <references refid="class_world_tile_1aa4c5505813dc257adb4a4255d5025641" compoundref="_world_tile_8cs" startline="16">gridY</references>
       </memberdef>
       </sectiondef>
@@ -176,34 +193,34 @@
     <detaileddescription>
 <para><ref refid="class_world_tile" kindref="compound">WorldTile</ref></para>    </detaileddescription>
     <inheritancegraph>
-      <node id="224">
+      <node id="235">
         <label>WorldTile</label>
         <link refid="class_world_tile"/>
-        <childnode refid="225" relation="public-inheritance">
+        <childnode refid="236" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="226">
+      <node id="237">
         <label>BaseNode</label>
         <link refid="class_base_node"/>
-        <childnode refid="224" relation="public-inheritance">
+        <childnode refid="235" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="225">
+      <node id="236">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="227">
+      <node id="238">
         <label>WorldTile</label>
         <link refid="class_world_tile"/>
-        <childnode refid="228" relation="public-inheritance">
+        <childnode refid="239" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="228">
+      <node id="239">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="14" bodyend="44"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="14" bodyend="45"/>
     <listofallmembers>
       <member refid="class_world_tile_1a5faa48b04daa3e69fa2ba7f2b0a4f58e" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>crystalValueBlue</name></member>
       <member refid="class_world_tile_1a04bc708e60c4d6650cedfeb2f76bedfd" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>crystalValueGreen</name></member>
@@ -211,6 +228,7 @@
       <member refid="class_world_tile_1a815dd72c7a6d5bca1630fe88b8c1a65e" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>crystalValueYellow</name></member>
       <member refid="class_world_tile_1a0e656c3b5770c4c79608125683ea7709" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>gridX</name></member>
       <member refid="class_world_tile_1aa4c5505813dc257adb4a4255d5025641" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>gridY</name></member>
+      <member refid="class_world_tile_1a8f5987fb6a965ae214c37cfad2cf7b4b" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>isBlockedBarrier</name></member>
       <member refid="class_world_tile_1a8bb9aed53ffb5e7251e04003f75022c5" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>myNeighbours</name></member>
       <member refid="class_world_tile_1a3183df67122339b04fae067faf461b8a" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>posX</name></member>
       <member refid="class_world_tile_1a84ee3d3afbc295ad8003ba0cf8490b24" prot="public" virt="non-virtual"><scope>WorldTile</scope><name>posY</name></member>

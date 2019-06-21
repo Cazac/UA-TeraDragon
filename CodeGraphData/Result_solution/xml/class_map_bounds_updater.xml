@@ -356,74 +356,74 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="77">
+      <node id="81">
         <label>MonoBehaviour</label>
       </node>
-      <node id="76">
+      <node id="80">
         <label>MapBoundsUpdater</label>
         <link refid="class_map_bounds_updater"/>
-        <childnode refid="77" relation="public-inheritance">
+        <childnode refid="81" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="84">
+      <node id="88">
         <label>PathsData</label>
         <link refid="class_paths_data"/>
       </node>
-      <node id="80">
+      <node id="84">
         <label>MapBound</label>
         <link refid="class_map_bound"/>
-        <childnode refid="81" relation="public-inheritance">
+        <childnode refid="85" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="86">
+      <node id="90">
         <label>InputDetection</label>
         <link refid="class_input_detection"/>
       </node>
-      <node id="83">
+      <node id="87">
         <label>TileNodes</label>
         <link refid="class_tile_nodes"/>
-        <childnode refid="79" relation="public-inheritance">
+        <childnode refid="83" relation="public-inheritance">
         </childnode>
-        <childnode refid="84" relation="usage">
+        <childnode refid="88" relation="usage">
           <edgelabel>pathData</edgelabel>
         </childnode>
       </node>
-      <node id="81">
+      <node id="85">
         <label>ScriptableObject</label>
       </node>
-      <node id="79">
+      <node id="83">
         <label>MonoBehaviour</label>
       </node>
-      <node id="78">
+      <node id="82">
         <label>MapBoundsUpdater</label>
         <link refid="class_map_bounds_updater"/>
-        <childnode refid="79" relation="public-inheritance">
+        <childnode refid="83" relation="public-inheritance">
         </childnode>
-        <childnode refid="80" relation="usage">
+        <childnode refid="84" relation="usage">
           <edgelabel>mapBounds</edgelabel>
         </childnode>
-        <childnode refid="82" relation="usage">
+        <childnode refid="86" relation="usage">
           <edgelabel>waveManger</edgelabel>
         </childnode>
-        <childnode refid="83" relation="usage">
+        <childnode refid="87" relation="usage">
           <edgelabel>tileNodes</edgelabel>
         </childnode>
-        <childnode refid="85" relation="usage">
+        <childnode refid="89" relation="usage">
           <edgelabel>cameraPanningCursor</edgelabel>
         </childnode>
       </node>
-      <node id="85">
+      <node id="89">
         <label>CameraPanningCursor</label>
         <link refid="class_camera_panning_cursor"/>
-        <childnode refid="79" relation="public-inheritance">
+        <childnode refid="83" relation="public-inheritance">
         </childnode>
-        <childnode refid="86" relation="usage">
+        <childnode refid="90" relation="usage">
           <edgelabel>inputDetection</edgelabel>
         </childnode>
       </node>
-      <node id="82">
+      <node id="86">
         <label>WaveSystem</label>
       </node>
     </collaborationgraph>

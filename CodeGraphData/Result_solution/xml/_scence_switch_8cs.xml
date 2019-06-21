@@ -18,7 +18,7 @@
 <codeline lineno="8" refid="class_scence_switch_1affe2721fb02441c79d86049b8251386e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scence_switch_1affe2721fb02441c79d86049b8251386e" kindref="member">SwitchToScence</ref>(String<sp/>scenceName)</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SceneManager.LoadScene(scenceName);</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="12"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ScenceManager/ScenceSwitch.cs"/>

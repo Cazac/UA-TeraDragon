@@ -82,24 +82,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="63">
+      <node id="67">
         <label>MonoBehaviour</label>
       </node>
-      <node id="62">
+      <node id="66">
         <label>GameOverScript</label>
         <link refid="class_game_over_script"/>
-        <childnode refid="63" relation="public-inheritance">
+        <childnode refid="67" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="65">
+      <node id="69">
         <label>MonoBehaviour</label>
       </node>
-      <node id="64">
+      <node id="68">
         <label>GameOverScript</label>
         <link refid="class_game_over_script"/>
-        <childnode refid="65" relation="public-inheritance">
+        <childnode refid="69" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

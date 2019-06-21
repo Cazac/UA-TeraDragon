@@ -160,6 +160,9 @@
           <edgelabel>waves</edgelabel>
           <edgelabel>currentWave</edgelabel>
         </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>soundManager</edgelabel>
+        </childnode>
         <childnode refid="35" relation="usage">
           <edgelabel>tileNodes</edgelabel>
           <edgelabel>tiles</edgelabel>
@@ -167,7 +170,7 @@
         <childnode refid="33" relation="usage">
           <edgelabel>cursorSelection</edgelabel>
         </childnode>
-        <childnode refid="41" relation="usage">
+        <childnode refid="43" relation="usage">
           <edgelabel>currentTimer</edgelabel>
         </childnode>
       </node>
@@ -181,7 +184,22 @@
         <label>PathsData</label>
         <link refid="class_paths_data"/>
       </node>
+      <node id="42">
+        <label>SoundObject</label>
+        <link refid="class_sound_object"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="41">
+        <label>SoundManager</label>
+        <link refid="class_sound_manager"/>
+        <childnode refid="34" relation="public-inheritance">
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>soundClips</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
         <label>Timer</label>
         <link refid="class_timer"/>
       </node>

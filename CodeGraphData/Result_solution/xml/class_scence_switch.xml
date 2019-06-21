@@ -27,24 +27,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="126">
+      <node id="130">
         <label>ScenceSwitch</label>
         <link refid="class_scence_switch"/>
-        <childnode refid="127" relation="public-inheritance">
+        <childnode refid="131" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="127">
+      <node id="131">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="128">
+      <node id="132">
         <label>ScenceSwitch</label>
         <link refid="class_scence_switch"/>
-        <childnode refid="129" relation="public-inheritance">
+        <childnode refid="133" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="129">
+      <node id="133">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>

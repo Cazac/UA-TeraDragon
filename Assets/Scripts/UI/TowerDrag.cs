@@ -27,9 +27,12 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     [Header("UI_SoundEffect onclick")]
     public SoundObject soundEffect;
 
+    private TileNodes tileNodes;
+
 
     private void Start()
     {
+        tileNodes = GameObject.FindObjectOfType<TileNodes>();
         soundManager = GameObject.FindObjectOfType<SoundManager>();
     }
     /////////////////////////////////////////////////////////////////
@@ -61,7 +64,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     ///////////////
     public void OnDrag(PointerEventData eventData)
     {
-        
+
         //currentTower.transform.position = cursor.transform.position;
         Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         cursorPosition.z = 0;
@@ -76,7 +79,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     /// </summary>
     ///////////////
     public void OnEndDrag(PointerEventData eventData)
-    {    
+    {
         //Get current mouse raycast
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -84,7 +87,6 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
 
         print("Destroy Tower");
-        Destroy(currentTower);
 
         //Check Raycast for any hit with COLLIDERS
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
@@ -95,34 +97,36 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
             //print(tileLayer);
 
-         
-
-            if (hit.collider.GetComponent<WorldTile>().towering)
+            if (hit.collider.GetComponent<WorldTile>().towering && currentTower.name.Contains("Tower"))
             {
                 //Leave the Tower on the node, Call spawner later for init
                 //currentTower.transform.position = hit.collider.gameObject.transform.position;
 
-
-
                 GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
 
-                
-
-
                 hit.collider.GetComponent<WorldTile>().towering = false;
-
             }
+
+            if(!hit.collider.GetComponent<WorldTile>().isBlockedBarrier && hit.collider.GetComponent<WorldTile>().walkable && currentTower.name.Contains("Barrier")
+                && (tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count))
+            {
+                GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
+                hit.collider.GetComponent<WorldTile>().isBlockedBarrier = true;
+            }
+
             else
             {
                 print("Destroy Tower");
-                //Destroy(currentTower);
+                Destroy(currentTower);
             }
         }
         else
         {
             print("Destroy Tower");
-            //Destroy(currentTower);
+            Destroy(currentTower);
         }
+
+        Destroy(currentTower);
     }
 
 
@@ -134,7 +138,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     private void LogRaycasthitObject(String position, String type)
     {
         String logString = String.Format("Hit node spawing tower at position: {0}, is type of: {1}", position, type);
-      //  Debug.Log(logString);
+        //  Debug.Log(logString);
     }
 
     /////////////////////////////////////////////////////////////////

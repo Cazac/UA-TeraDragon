@@ -109,18 +109,22 @@
     <member refid="class_enemy_data_1ac4be0e528708f8a5ff7cdea523d4df7a" kind="variable"><name>Attributes</name></member>
   </compound>
   <compound refid="class_enemy_script" kind="class"><name>EnemyScript</name>
-    <member refid="class_enemy_script_1a3aeedcb1f3cc4e60a334f337e5482f76" kind="variable"><name>enemyData</name></member>
-    <member refid="class_enemy_script_1ade301a7c5566a0cca65115df4133bd26" kind="variable"><name>currentWaypoint</name></member>
-    <member refid="class_enemy_script_1a8a4debfb9cc25fb192dec4f958ee5d06" kind="variable"><name>startPosition</name></member>
-    <member refid="class_enemy_script_1a7fe78633f9cfa234258792cc7437cce8" kind="variable"><name>endPosition</name></member>
-    <member refid="class_enemy_script_1aeba66babcdcbfb8844f88485d1574d6f" kind="variable"><name>dir</name></member>
-    <member refid="class_enemy_script_1a4f66dc52b089b078d41ea14724a35c7e" kind="variable"><name>waypoints</name></member>
+    <member refid="class_enemy_script_1a20e45acc4753089a439f591cb3eacfc5" kind="variable"><name>currentWaypoints</name></member>
+    <member refid="class_enemy_script_1ae8809313e6b155557feee15e18c823b0" kind="variable"><name>blockedWaypoints</name></member>
     <member refid="class_enemy_script_1ab16cb5c586d820cbf42ca4d9a33e7843" kind="variable"><name>MaxHealth</name></member>
     <member refid="class_enemy_script_1ae8f37b47dbf347e64db652cf78174ad7" kind="variable"><name>CurrentHealth</name></member>
     <member refid="class_enemy_script_1a2c618fda4a3b98cd7fc1089c682c3e90" kind="variable"><name>speed</name></member>
+    <member refid="class_enemy_script_1ade301a7c5566a0cca65115df4133bd26" kind="variable"><name>currentWaypoint</name></member>
+    <member refid="class_enemy_script_1a3aeedcb1f3cc4e60a334f337e5482f76" kind="variable"><name>enemyData</name></member>
+    <member refid="class_enemy_script_1a07d716905f47bff4bcf700119e559425" kind="variable"><name>tileNodes</name></member>
+    <member refid="class_enemy_script_1a8a4debfb9cc25fb192dec4f958ee5d06" kind="variable"><name>startPosition</name></member>
+    <member refid="class_enemy_script_1a7fe78633f9cfa234258792cc7437cce8" kind="variable"><name>endPosition</name></member>
+    <member refid="class_enemy_script_1aeba66babcdcbfb8844f88485d1574d6f" kind="variable"><name>dir</name></member>
+    <member refid="class_enemy_script_1aa5591cdbe1d7223a9a777ffdfee847a7" kind="property"><name>StartPosition</name></member>
     <member refid="class_enemy_script_1a61a56df6ca1e4301e3b17525a2885f0a" kind="function"><name>Start</name></member>
     <member refid="class_enemy_script_1a1033134339a3ffbee7e98c9b6dbd756d" kind="function"><name>FixedUpdate</name></member>
     <member refid="class_enemy_script_1add0f8eee29617a94df0467533cad1d74" kind="function"><name>Move</name></member>
+    <member refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" kind="function"><name>DynamicPathRelocation</name></member>
     <member refid="class_enemy_script_1a6d35ab0bc6c1d726f22424e67dda462e" kind="function"><name>OnTriggerEnter2D</name></member>
     <member refid="class_enemy_script_1a5d7e4e7d49ee735c2b1ceec83f2a3f31" kind="function"><name>TakeDamage</name></member>
     <member refid="class_enemy_script_1a6ee07f1345fa5e6c4491c52a7b25ad4e" kind="function"><name>ApplySlow</name></member>
@@ -297,9 +301,15 @@
     <member refid="class_sound_manager_1affd71095ab7b38b825db04ef71be4902" kind="variable"><name>soundClips</name></member>
     <member refid="class_sound_manager_1ae639244e333cd1bf7fff696cf71edd94" kind="property"><name>IsMuteSoundtrack</name></member>
     <member refid="class_sound_manager_1a957078d2abc628a2c60ddf027fa3ac2f" kind="property"><name>IsMuteUI</name></member>
+    <member refid="class_sound_manager_1ab7f44673596cd36d8a06438dfc5784c3" kind="property"><name>ReturnControl</name></member>
     <member refid="class_sound_manager_1ab77112f63239f2503f4bc273472bebc3" kind="variable"><name>currentClip</name></member>
+    <member refid="class_sound_manager_1a59167aa1b1b16f45a1b38458148c5879" kind="variable"><name>triggerOnLevelLoad</name></member>
+    <member refid="class_sound_manager_1a7fe30373fb1756965d3173213551c612" kind="variable"><name>returnControl</name></member>
+    <member refid="class_sound_manager_1a534c98b5f74fe60260144c3452d77c2d" kind="function"><name>OnLevelWasLoaded</name></member>
     <member refid="class_sound_manager_1aba6cc29a03dfe5117ef532e875558ff3" kind="function"><name>Update</name></member>
     <member refid="class_sound_manager_1a18ef1b2d4a921ec25ad598dc23eb7b32" kind="function"><name>LoopThroughSoundList</name></member>
+    <member refid="class_sound_manager_1aba6359f940e385b6730caa33ad7fbf33" kind="function"><name>AudioVolumeDampeningOnLoad</name></member>
+    <member refid="class_sound_manager_1afa48b9e374b21b43d54f1abee1848384" kind="function"><name>PlaySpecificSound</name></member>
     <member refid="class_sound_manager_1a924de54b1c4fabfe9089d5d28dbd0fe7" kind="function"><name>PlayOnUIClick</name></member>
     <member refid="class_sound_manager_1afd74d3df47593fc56585731e5cdc513e" kind="function"><name>PlaySoundByName</name></member>
     <member refid="class_sound_manager_1a2eca8f953b8bc13c90ddb87a779a89fc" kind="function"><name>VolumeChangeSoundtrack</name></member>
@@ -314,7 +324,8 @@
     <member refid="class_sound_object_1afddeed821f4a00c61f8a2db80ed969e4" kind="variable"><name>Pitch</name></member>
     <member refid="class_sound_object_1a97c03dad70f2623ffe749eb82ee493aa" kind="variable"><name>IsAllowedLooping</name></member>
     <member refid="class_sound_object_1a724e14474a945ce44e90c5bdf4dc7cb6" kind="variable"><name>IsAllowedAutoDestruct</name></member>
-    <member refid="class_sound_object_1a30fb49aa89aaf38a9822e24078bda160" kind="function"><name>SoundObject</name></member>
+    <member refid="class_sound_object_1a5a6a09d9fcb2585420ee1458c52174c4" kind="variable"><name>IsAllowedAudioDampening</name></member>
+    <member refid="class_sound_object_1ae46236f364d8ae25705c253d89dad9fe" kind="function"><name>SoundObject</name></member>
     <member refid="class_sound_object_1a2e773002d5b8f0297e55abe2db86e162" kind="function"><name>SoundObject</name></member>
     <member refid="class_sound_object_1a4e901c9ff067b95f1dadd24fa0943b51" kind="function"><name>PlayClip</name></member>
   </compound>
@@ -385,11 +396,14 @@
     <member refid="class_tower_drag_1a99ddd4c5542440707df225641e66fe93" kind="variable"><name>towerPrefab_UI</name></member>
     <member refid="class_tower_drag_1a610155e220a57773f5735d02d539f395" kind="variable"><name>towerPrefab_Spawn</name></member>
     <member refid="class_tower_drag_1a8c82ab96f978a777463aa67fb18f27d6" kind="variable"><name>towerParent</name></member>
+    <member refid="class_tower_drag_1a97e37af76998afccd5f5aaf1ab421504" kind="variable"><name>soundEffect</name></member>
     <member refid="class_tower_drag_1a609315919fd1c1590067f5e31e865a35" kind="variable"><name>currentTower</name></member>
+    <member refid="class_tower_drag_1aaeac30ea041f6547f384284c9e55d335" kind="variable"><name>soundManager</name></member>
+    <member refid="class_tower_drag_1a923e26de0542f54a3b2f55c3a94cd6cb" kind="function"><name>Start</name></member>
+    <member refid="class_tower_drag_1ae70d73d2f9d64501f7273424f334a70d" kind="function"><name>LogRaycasthitObject</name></member>
     <member refid="class_tower_drag_1a8b0712fcbb9e25ec01081a540505a019" kind="function"><name>OnBeginDrag</name></member>
     <member refid="class_tower_drag_1a5249c368ce5257c2acc56c5276a90b4d" kind="function"><name>OnDrag</name></member>
     <member refid="class_tower_drag_1a942a12b2f914655d1e71a166b4c9a968" kind="function"><name>OnEndDrag</name></member>
-    <member refid="class_tower_drag_1ae70d73d2f9d64501f7273424f334a70d" kind="function"><name>LogRaycasthitObject</name></member>
   </compound>
   <compound refid="class_tower_shooting" kind="class"><name>TowerShooting</name>
     <member refid="class_tower_shooting_1a29006971761aef5abcfaa06fc01e0827" kind="variable"><name>projectilePresetData</name></member>
@@ -454,6 +468,7 @@
     <member refid="class_wave_system_1_1_wave_manager_1a00902861470e1549acd89c20c187c8dc" kind="variable"><name>waveIndex</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1aefdf67d8689afa7de2bcc8c6277c1f3f" kind="variable"><name>tileNodes</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1ab8d5487c4180716e9a76809e24377514" kind="variable"><name>cursorSelection</name></member>
+    <member refid="class_wave_system_1_1_wave_manager_1a923d0978badda20b07fca25961e90c19" kind="variable"><name>soundManager</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1a10d76632a68c101feab700938485181e" kind="function"><name>Awake</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1aa2291654e818f94332b0916457d1204f" kind="function"><name>Start</name></member>
     <member refid="class_wave_system_1_1_wave_manager_1a7454ae0f83853fcc5f8176e691b705c9" kind="function"><name>Update</name></member>
@@ -476,6 +491,7 @@
     <member refid="class_world_tile_1a84ee3d3afbc295ad8003ba0cf8490b24" kind="variable"><name>posY</name></member>
     <member refid="class_world_tile_1a67a5d10ed54c58b0959281ecd844ec69" kind="variable"><name>walkable</name></member>
     <member refid="class_world_tile_1a73553fd14575c6acc8c0eeb2c8132e4a" kind="variable"><name>towering</name></member>
+    <member refid="class_world_tile_1a8f5987fb6a965ae214c37cfad2cf7b4b" kind="variable"><name>isBlockedBarrier</name></member>
     <member refid="class_world_tile_1a8bb9aed53ffb5e7251e04003f75022c5" kind="variable"><name>myNeighbours</name></member>
     <member refid="class_world_tile_1aa329cbb27cdbc33d78816e5067043f3f" kind="variable"><name>crystalValueRed</name></member>
     <member refid="class_world_tile_1a5faa48b04daa3e69fa2ba7f2b0a4f58e" kind="variable"><name>crystalValueBlue</name></member>

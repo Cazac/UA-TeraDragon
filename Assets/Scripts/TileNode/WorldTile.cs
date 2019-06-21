@@ -23,6 +23,7 @@ public class WorldTile : MonoBehaviour
 
     public bool walkable;
     public bool towering;
+    public bool isBlockedBarrier = false;
 
     public List<WorldTile> myNeighbours;
 

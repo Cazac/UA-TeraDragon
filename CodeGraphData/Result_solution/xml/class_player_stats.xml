@@ -380,24 +380,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="110">
+      <node id="114">
         <label>PlayerStats</label>
         <link refid="class_player_stats"/>
-        <childnode refid="111" relation="public-inheritance">
+        <childnode refid="115" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="111">
+      <node id="115">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="112">
+      <node id="116">
         <label>PlayerStats</label>
         <link refid="class_player_stats"/>
-        <childnode refid="113" relation="public-inheritance">
+        <childnode refid="117" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="113">
+      <node id="117">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>

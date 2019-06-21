@@ -302,24 +302,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="123">
+      <node id="127">
         <label>MonoBehaviour</label>
       </node>
-      <node id="122">
+      <node id="126">
         <label>ProjectileFire</label>
         <link refid="class_projectile_fire"/>
-        <childnode refid="123" relation="public-inheritance">
+        <childnode refid="127" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="125">
+      <node id="129">
         <label>MonoBehaviour</label>
       </node>
-      <node id="124">
+      <node id="128">
         <label>ProjectileFire</label>
         <link refid="class_projectile_fire"/>
-        <childnode refid="125" relation="public-inheritance">
+        <childnode refid="129" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

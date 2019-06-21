@@ -101,33 +101,33 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="159">
+      <node id="163">
         <label>TowerData</label>
         <link refid="class_tower_data"/>
-        <childnode refid="160" relation="public-inheritance">
+        <childnode refid="164" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="160">
+      <node id="164">
         <label>ScriptableObject</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="163">
+      <node id="167">
         <label>Projectile</label>
         <link refid="class_projectile"/>
-        <childnode refid="162" relation="public-inheritance">
+        <childnode refid="166" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="161">
+      <node id="165">
         <label>TowerData</label>
         <link refid="class_tower_data"/>
-        <childnode refid="162" relation="public-inheritance">
+        <childnode refid="166" relation="public-inheritance">
         </childnode>
-        <childnode refid="163" relation="usage">
+        <childnode refid="167" relation="usage">
           <edgelabel>projectile</edgelabel>
         </childnode>
       </node>
-      <node id="162">
+      <node id="166">
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>

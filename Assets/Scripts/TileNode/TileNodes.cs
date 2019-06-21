@@ -43,7 +43,7 @@ public class TileNodes : MonoBehaviour
     public List<GameObject> SelectedNodes { get => selectedNodes; set => selectedNodes = value; }
 
     // Sorted 2D array of nodes
-    public GameObject[,] nodes;
+    public GameObject[,] nodes; 
 
     // List of nodes before they are sorted
     private List<GameObject> unsortedNodes;
@@ -61,11 +61,30 @@ public class TileNodes : MonoBehaviour
     public List<WorldTile> selectedList;
     public PathsData pathData;
 
+
     //////////////////////////////////////////////////////////
 
     private void Awake() { BuildTable(); }
     private void Start() { }
-    private void Update() { }
+    private void Update()
+    {
+        CheckBlockedPath();
+    }
+
+    private void CheckBlockedPath()
+    {
+        foreach (var path in pathData.paths)
+        {
+            foreach (WorldTile tile in path)
+            {
+                if (tile.isBlockedBarrier == true)
+                {
+                    pathData.blockedPaths.Add(path);
+                    break;
+                }
+            }
+        }
+    }
 
     public void BuildTable()
     {
@@ -81,12 +100,12 @@ public class TileNodes : MonoBehaviour
 
         unsortedNodes = new List<GameObject>();
         mapConstant = gridBase.cellSize.x;
-
+       
         generateNodes();
         pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints, maxGridX);
 
     }
-
+        
 
     ///////////////
     /// <summary>
@@ -364,5 +383,7 @@ public class TileNodes : MonoBehaviour
             permanentSpawnPoints.Add(selectedNode.GetComponent<WorldTile>());
         }
     }
+
+
 
 }

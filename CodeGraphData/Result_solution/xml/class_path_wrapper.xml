@@ -24,24 +24,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="106">
+      <node id="110">
         <label>PathWrapper</label>
         <link refid="class_path_wrapper"/>
-        <childnode refid="107" relation="public-inheritance">
+        <childnode refid="111" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="107">
+      <node id="111">
         <label>ScriptableObject</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="108">
+      <node id="112">
         <label>PathWrapper</label>
         <link refid="class_path_wrapper"/>
-        <childnode refid="109" relation="public-inheritance">
+        <childnode refid="113" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="109">
+      <node id="113">
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>

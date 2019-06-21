@@ -97,6 +97,7 @@
       <member refid="class_world_tile_1a815dd72c7a6d5bca1630fe88b8c1a65e" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>crystalValueYellow</name></member>
       <member refid="class_world_tile_1a0e656c3b5770c4c79608125683ea7709" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>gridX</name></member>
       <member refid="class_world_tile_1aa4c5505813dc257adb4a4255d5025641" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>gridY</name></member>
+      <member refid="class_world_tile_1a8f5987fb6a965ae214c37cfad2cf7b4b" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>isBlockedBarrier</name></member>
       <member refid="class_world_tile_1a8bb9aed53ffb5e7251e04003f75022c5" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>myNeighbours</name></member>
       <member refid="class_world_tile_1a3183df67122339b04fae067faf461b8a" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>posX</name></member>
       <member refid="class_world_tile_1a84ee3d3afbc295ad8003ba0cf8490b24" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>posY</name></member>

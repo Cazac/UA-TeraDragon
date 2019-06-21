@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-class SoundManager : MonoBehaviour
+public class SoundManager : MonoBehaviour
 {
     public AudioSource mainAudioSourceSoundtrack;
     public AudioSource mainAudioSourceUI;

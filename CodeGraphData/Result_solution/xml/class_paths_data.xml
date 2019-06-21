@@ -15,10 +15,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="16" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" compoundref="_tile_nodes_8cs" startline="96" endline="105">TileNodes.Editor_SelectList</referencedby>
-        <referencedby refid="class_tile_nodes_1a01f4a1ba0ca7e1f2ab7e415d6c7f9659" compoundref="_tile_nodes_8cs" startline="340" endline="358">TileNodes.OnDrawGizmos</referencedby>
+        <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="131">EnemyScript.DynamicPathRelocation</referencedby>
+        <referencedby refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" compoundref="_tile_nodes_8cs" startline="97" endline="106">TileNodes.Editor_SelectList</referencedby>
+        <referencedby refid="class_tile_nodes_1a01f4a1ba0ca7e1f2ab7e415d6c7f9659" compoundref="_tile_nodes_8cs" startline="341" endline="359">TileNodes.OnDrawGizmos</referencedby>
         <referencedby refid="class_paths_data_1af2fab5caabbdac3bed14660f555f63f7" compoundref="_paths_data_8cs" startline="21" endline="50">PathsData</referencedby>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1aa2291654e818f94332b0916457d1204f" compoundref="_wave_manager_8cs" startline="74" endline="125">WaveSystem.WaveManager.Start</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1aa2291654e818f94332b0916457d1204f" compoundref="_wave_manager_8cs" startline="75" endline="127">WaveSystem.WaveManager.Start</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_paths_data_1a1ab725c318985cd37fc7a31f35f02aa2" prot="public" static="no" mutable="no">
         <type>Dictionary&lt; <ref refid="class_world_tile" kindref="compound">WorldTile</ref>, List&lt; List&lt; <ref refid="class_world_tile" kindref="compound">WorldTile</ref> &gt; &gt; &gt;</type>
