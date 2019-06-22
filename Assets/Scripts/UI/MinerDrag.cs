@@ -67,17 +67,19 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
         {
             //Check hit tile name
-            
+
             string tileTypeName = hit.collider.gameObject.name;
             print(hit.collider.GetComponent<CrystalTile>() != null);
-            if(hit.collider.GetComponent<CrystalTile>() != null && hit.collider.GetComponent<CrystalTile>().towering)
+            if (hit.collider.GetComponent<CrystalTile>() != null && hit.collider.GetComponent<CrystalTile>().towering)
             {
-                    //Leave the Miner on the node, Call spawner later for init
-                    currentMiner.transform.position = hit.collider.gameObject.transform.position;
-                    LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
+                //Leave the Miner on the node, Call spawner later for init
+                currentMiner.transform.position = hit.collider.gameObject.transform.position;
+                LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
 
+                currentMiner.GetComponent<MinerScript>().level = 1;
+                currentMiner.GetComponent<MinerScript>().crystalTile = hit.collider.GetComponent<CrystalTile>();
                 hit.collider.GetComponent<WorldTile>().towering = false;
-                //Spawn Miner TO DO
+                
 
                 return;
 
@@ -89,7 +91,7 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 Destroy(currentMiner);
 
             }
-            
+
         }
         else
         {
