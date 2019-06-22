@@ -106,18 +106,7 @@ public class EnemyScript : MonoBehaviour
     private void DynamicPathRelocation(Vector3 currentPosition)
     {
         //scan map for block waypoibt
-        //foreach (var path in tileNodes.pathData.paths)
-        //    {
-        //        foreach (WorldTile tile in path)
-        //        {
-        //            if (tile.isBlockedBarrier == true)
-        //            {
-        //                blockedWaypoints.Add(path);
-        //                break;
-        //            }
-        //        }
-        //    }
-
+      
         //Reapply waypoints
         foreach (var path in tileNodes.pathData.paths)
         {

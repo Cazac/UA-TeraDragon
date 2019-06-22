@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using WaveSystem;
 
 ///////////////
 /// <summary>
@@ -28,10 +29,12 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public SoundObject soundEffect;
 
     private TileNodes tileNodes;
+    private WaveManager waveManager;
 
 
     private void Start()
     {
+        waveManager = GameObject.FindObjectOfType<WaveManager>();
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
         soundManager = GameObject.FindObjectOfType<SoundManager>();
     }
@@ -94,7 +97,6 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             //Check node name
             string tileLayer = hit.collider.gameObject.transform.parent.gameObject.name;
 
-
             //print(tileLayer);
 
             if (hit.collider.GetComponent<WorldTile>().towering && currentTower.name.Contains("Tower"))
@@ -107,8 +109,9 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 hit.collider.GetComponent<WorldTile>().towering = false;
             }
 
+            //Condition for barrier
             if(!hit.collider.GetComponent<WorldTile>().isBlockedBarrier && hit.collider.GetComponent<WorldTile>().walkable && currentTower.name.Contains("Barrier")
-                && (tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count))
+                && (tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count) && waveManager.CurrentWave.TimeUntilSpawn >= 0 && waveManager.EnableSpawning == false)
             {
                 GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
                 hit.collider.GetComponent<WorldTile>().isBlockedBarrier = true;

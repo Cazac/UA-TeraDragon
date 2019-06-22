@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using WaveSystem;
 
 public class SoundManager : MonoBehaviour
 {
@@ -20,38 +21,78 @@ public class SoundManager : MonoBehaviour
 
     private AudioClip currentClip;
     private bool triggerOnLevelLoad = false;
+    private WaveManager waveManager;
     private bool returnControl = true;
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void AutoDestroySelf()
+    {
+        if (GameObject.FindObjectsOfType<SoundManager>().Length > 1)
+        {
+            DestroyImmediate(this.gameObject);
+            //this.GetComponent<AudioSource>().clip = null;
+        }
+    }
+
+    private void Start()
+    {
+        AutoDestroySelf();
+        waveManager = GameObject.FindObjectOfType<WaveManager>();
+    }
 
     private void OnLevelWasLoaded(int level)
     {
-        if (level == 1)
-        {
-            triggerOnLevelLoad = true;
-        }
+        triggerOnLevelLoad = true;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        triggerOnLevelLoad = true;
+    }
+
+
+    private void OnScenceLoad()
+    {
+        triggerOnLevelLoad = true;
     }
 
     private void Update()
     {
         DontDestroyOnLoad(this);
-        if (!mainAudioSourceSoundtrack.GetComponent<AudioSource>().isPlaying && returnControl)
-        {
-            LoopThroughSoundList(soundClips);
-        }
 
         if (triggerOnLevelLoad)
         {
             LoopThroughSoundList(soundClips);
             triggerOnLevelLoad = false;
         }
+
+        if (!mainAudioSourceSoundtrack.GetComponent<AudioSource>().isPlaying && returnControl)
+            LoopThroughSoundList(soundClips);
+
+        if (!returnControl)
+        {
+            LoopThroughSoundList(soundClips);
+            returnControl = true;
+        }
+   
+
+        if (waveManager!=null && waveManager.EnableSpawning == false)
+            returnControl = false;
+        else
+            returnControl = true;
     }
 
     public void PlaySpecificSound(String soundName)
     {
-            foreach (var clip in soundClips)
-            {
-                if (clip.SoundName.Contains(soundName))
-                    PlaySoundByName(clip);
-            }
+        foreach (var clip in soundClips)
+        {
+            if (clip.SoundName.Contains(soundName))
+                PlaySoundByName(clip);
+        }
     }
 
     public void PlayOnUIClick(SoundObject clip)
@@ -68,13 +109,20 @@ public class SoundManager : MonoBehaviour
         foreach (var clip in clips)
         {
             Debug.Log("Looping");
-            if (clip.SoundName.Contains("Menu") && SceneManager.GetActiveScene().name.Contains("Menu"))
+            if (clip.SoundName.Contains("Menu") && SceneManager.GetActiveScene().name.Contains("Menu") && returnControl)
             {
                 PlaySoundByName(clip);
             }
 
-            else if (clip.SoundName.Contains("Main") && SceneManager.GetActiveScene().name.Contains("Main"))
+            if (clip.SoundName.Contains("Game") && SceneManager.GetActiveScene().name.Contains("Game") && returnControl)
+            {
                 PlaySoundByName(clip);
+            }
+
+            if(clip.SoundName.Contains("Inter") && !returnControl)
+            {
+                PlaySoundByName(clip);
+            }
         }
     }
 
@@ -86,12 +134,11 @@ public class SoundManager : MonoBehaviour
         mainAudioSourceSoundtrack.loop = true;
         mainAudioSourceSoundtrack.Play();
 
-
         //Begin lerping volume of sound
-        if (audioClip.IsAllowedAudioDampening == true)
-        {
-            StartCoroutine(AudioVolumeDampeningOnLoad(mainAudioSourceSoundtrack, 0.5f, mainAudioSourceSoundtrack.volume, 0.2f));
-        }
+        //if (audioClip.IsAllowedAudioDampening == true)
+        //{
+        //    StartCoroutine(AudioVolumeDampeningOnLoad(mainAudioSourceSoundtrack, 0.5f, mainAudioSourceSoundtrack.volume, 0.2f));
+        //}
     }
 
     private IEnumerator AudioVolumeDampeningOnLoad(AudioSource audioSource, float smallestLerpValue, float initialVolumeValue, float lerpTime)

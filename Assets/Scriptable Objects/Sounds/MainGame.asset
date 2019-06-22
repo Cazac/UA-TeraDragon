@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8b7bf0263a5c142a06c502cb8e0d7e, type: 3}
   m_Name: MainGame
   m_EditorClassIdentifier: 
-  SoundName: MainGame Clip
+  SoundName: Main Game Clip
   AudioClip: {fileID: 8300000, guid: b305faa52c28c6c4782c78d89d690a5d, type: 3}
   Volume: 1
   Pitch: 1

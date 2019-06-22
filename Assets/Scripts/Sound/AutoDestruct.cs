@@ -7,7 +7,7 @@ public class AutoDestruct : MonoBehaviour
     }
     public void DestroySelf()
     {
-        if (!this.GetComponent<AudioSource>().isPlaying)
+        if (!GameObject.FindObjectOfType<SoundManager>().isActiveAndEnabled)
         {
             DestroyImmediate(this.gameObject);
             //this.GetComponent<AudioSource>().clip = null;

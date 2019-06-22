@@ -22,7 +22,12 @@ namespace WaveSystem
         [Header("Scriptable wave object")]
         public WaveData[] waves;
 
-        public WaveData currentWave;
+
+        [Header("DEBUG ONLY currentWave")]
+        [SerializeField] 
+        private WaveData currentWave;
+
+
 
         [SerializeField] //TODO: Delete serializeField
         private List<Vector3> selectedNodeSpawnPosition = new List<Vector3>();
@@ -34,6 +39,7 @@ namespace WaveSystem
         //private const string WAVE_PARENT_NAME = "Parent_EnemyWave";
 
         private Timer currentTimer;
+        public WaveData CurrentWave { get => currentWave; set => currentWave = value; }
         private int waveIndex = 0;
 
         private TileNodes tileNodes;
@@ -65,6 +71,7 @@ namespace WaveSystem
                 return currentTimer.WaveTimer.ToString();
             }
         }
+
 
 
         private void Awake()
@@ -102,7 +109,7 @@ namespace WaveSystem
                    // };
             //}
         
-            currentWave = waves[0];
+            CurrentWave = waves[0];
             MakeParent();
 
             StartCoroutine(SpawnSingleEnemyPerWave());
@@ -131,7 +138,7 @@ namespace WaveSystem
             //Create new timer object for current wave 
             if (EnableSpawning == true && currentTimer == null)
             {
-                InstantiateNewTimer(currentWave.TimeUntilSpawn, currentWave.WaveTimer, ref currentTimer);
+                InstantiateNewTimer(CurrentWave.TimeUntilSpawn, CurrentWave.WaveTimer, ref currentTimer);
             }
 
             //If timer for a wave hits 0, turn off spawning
@@ -148,12 +155,15 @@ namespace WaveSystem
                 if (currentTimer.NextWaveCountdown())
                     EnableSpawning = true;
 
-                if(soundManager !=null)
-                {
-                    soundManager.PlaySpecificSound("Main");
-                    soundManager.ReturnControl = true;
-                }
+                //if(soundManager !=null)
+                //{
+                //    soundManager.PlaySpecificSound("Main");
+                //    soundManager.ReturnControl = true;
+                //}
             }
+
+            //Debug.Log("Current wave timer: " + currentTimer.WaveTimer);
+            //Debug.Log("Current wave timer interwave: " + currentTimer.TimeUntilNextSpawn);
         }
 
 
@@ -193,37 +203,43 @@ namespace WaveSystem
                 //Debug.Log("Wave index: " + waveIndex);
                 if (EnableSpawning == true)
                 {
-                    currentWave.ParentGameobject = waveParent;
+                    CurrentWave.ParentGameobject = waveParent;
 
-                    foreach (List<WorldTile> path in currentWave.Paths)
+                    foreach (List<WorldTile> path in CurrentWave.Paths)
                     {
-                        for (int i = 0; i < currentWave.NumberOfEnemyPerPos; i++)
+                        for (int i = 0; i < CurrentWave.NumberOfEnemyPerPos; i++)
                         {
-                            GameObject enemy = Instantiate(currentWave.EnemyPrefab, path[0].transform.position, Quaternion.identity, currentWave.ParentGameobject.transform);
-                            enemy.GetComponent<EnemyScript>().currentWaypoints = path;
                             //Enumerator will return at this index, need to check if spawning option is still available
-                            if (EnableSpawning)
+                            if (EnableSpawning == true)
                             {
-                                yield return new WaitForSeconds(currentWave.SpawnRate);
+                                GameObject enemy = Instantiate(CurrentWave.EnemyPrefab, path[0].transform.position, Quaternion.identity, CurrentWave.ParentGameobject.transform);
+                                enemy.GetComponent<EnemyScript>().currentWaypoints = path;
+                                yield return new WaitForSeconds(CurrentWave.SpawnRate);
                             }
                         }
                     }
 
-                    EnableSpawning = false;
+                    //EnableSpawning = false;
+                }
+
+                else
+                {
                     //Move on to the next scriptable wave in waves array
-                    if (!AllWaveCompleted() && currentTimer.WaveTimer <= 0)
+                    if (!AllWaveCompleted() && currentTimer.TimeUntilNextSpawn <= 0)
                     {
-                        currentWave = null;
-                        currentWave = waves[++waveIndex];
-                        Debug.Log("Current wave: " + currentWave.ToString());
+                        CurrentWave = null;
+                        CurrentWave = waves[++waveIndex];
+                        //Debug.Log("Current wave: " + currentWave.ToString());
 
-                        InstantiateNewTimer(currentWave.TimeUntilSpawn, currentWave.WaveTimer, ref currentTimer);
+                        InstantiateNewTimer(CurrentWave.TimeUntilSpawn, CurrentWave.WaveTimer, ref currentTimer);
 
-                        if (soundManager != null)
-                        {
-                            soundManager.ReturnControl = false;
-                            soundManager.PlaySpecificSound("Inter");
-                        }
+                        EnableSpawning = true;
+
+                        //if (soundManager != null)
+                        //{
+                        //    soundManager.ReturnControl = false;
+                        //    soundManager.PlaySpecificSound("Inter");
+                        //}
                     }
 
                     else if (AllWaveCompleted())
@@ -232,6 +248,7 @@ namespace WaveSystem
                         StopCoroutine(SpawnSingleEnemyPerWave());
                     }
                 }
+
 
                 yield return null;
             }
@@ -247,16 +264,11 @@ namespace WaveSystem
 
             if (waveIndex > waves.Length - 1)
             {
-                Debug.Log("End of all waves");
+                //Debug.Log("End of all waves");
                 return true;
             }
             return false;
         }
-
-        public void WaveStartPosSelection()
-        {
-        }
-
     }
 
 

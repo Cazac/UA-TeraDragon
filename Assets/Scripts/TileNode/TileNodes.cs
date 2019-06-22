@@ -32,7 +32,7 @@ public class TileNodes : MonoBehaviour
     public Tile[] WalkableTiles;
     public Tile[] UnwalkableTiles;
     public Tile[] SpawnTiles;
-
+    public Tile[] HiddenTiles;
     public Tile[] TowerTiles;
     public Tile[] CrystalTiles;
 
@@ -60,6 +60,7 @@ public class TileNodes : MonoBehaviour
     public int SelectedPath = 0;
     public List<WorldTile> selectedList;
     public PathsData pathData;
+
 
 
     //////////////////////////////////////////////////////////
