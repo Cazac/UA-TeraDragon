@@ -76,7 +76,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             string tileLayer = hit.collider.gameObject.transform.parent.gameObject.name;
 
 
-            print(tileLayer);
+      //      print(tileLayer);
       //      print("Name:" + hit.collider.gameObject.name);
       //      print("Name:" + hit.collider.GetComponent<WorldTile>().towering);
 
@@ -90,6 +90,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             {
                 //Leave the Tower on the node, Call spawner later for init
                 currentTower.transform.position = hit.collider.gameObject.transform.position;
+                currentTower.transform.position += Vector3.back;
                 LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
                 hit.collider.GetComponent<WorldTile>().towering = false;
 

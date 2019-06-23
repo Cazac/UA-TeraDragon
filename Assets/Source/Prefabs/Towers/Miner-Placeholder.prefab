@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5888837740295101348}
   - component: {fileID: 5888837740295101351}
   - component: {fileID: 5888837740295101350}
-  m_Layer: 0
+  - component: {fileID: 7547828845319087723}
+  m_Layer: 10
   m_Name: Miner-Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 6700916742771646357, guid: 14df72becc16b32409f4a7474091536b,
     type: 3}
   m_Color: {r: 0.3679245, g: 0.109336056, b: 0.109336056, a: 1}
@@ -94,4 +95,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
+  crystalTile: {fileID: 0}
   timer: 0
+--- !u!65 &7547828845319087723
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5888837740295101353}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
