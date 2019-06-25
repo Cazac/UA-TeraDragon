@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using WaveSystem;
 
 ///////////////
@@ -22,22 +23,32 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     [Header("Parent Gameobject")]
     public GameObject towerParent;
 
-    private GameObject currentTower;
-    private SoundManager soundManager;
-
     [Header("UI_SoundEffect onclick")]
     public SoundObject soundEffect;
+
+    [Header("Player Stats")]
+    public PlayerStats playerStats;
+
+    [Header("Color")]
+    public string towerColor;
+
+    private GameObject currentTower;
+    private SoundManager soundManager;
 
     private TileNodes tileNodes;
     private WaveManager waveManager;
 
+    //TO DO HARD CODED COST
+    private int towerCost = 5;
 
+    
     private void Start()
     {
         waveManager = GameObject.FindObjectOfType<WaveManager>();
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
         soundManager = GameObject.FindObjectOfType<SoundManager>();
     }
+
     /////////////////////////////////////////////////////////////////
 
     ///////////////
@@ -45,18 +56,41 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     /// Undocumented
     /// </summary>
     ///////////////
-    ///
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // TO DO ???
-        //Check Money
-        //Charge PLyaer
-        //Spawn Tower UI
-        //Get Reff To Tower
-        //Attach to Cursor
 
-        currentTower = Instantiate(towerPrefab_UI);
-        soundManager.PlayOnUIClick(soundEffect);
+        if (gameObject.GetComponent<Button>().interactable)
+        {
+            //Charge Player
+            if(towerColor == "Red")
+            {
+                playerStats.crystalsOwned_Red -= towerCost;
+            }
+            if (towerColor == "Blue")
+            {
+                playerStats.crystalsOwned_Blue -= towerCost;
+            }
+            if (towerColor == "Green")
+            {
+                playerStats.crystalsOwned_Green -= towerCost;
+            }
+            if (towerColor == "Yellow")
+            {
+                playerStats.crystalsOwned_Yellow -= towerCost;
+            }
+
+            playerStats.UpdateCrystalUI();
+
+            //Spawn Tower Drag
+            currentTower = Instantiate(towerPrefab_UI);
+            soundManager.PlayOnUIClick(soundEffect);
+        }
+        else
+        {
+            //Error SFX
+            Debug.Log("No Money");
+        }
+
     }
 
 
@@ -67,12 +101,15 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     ///////////////
     public void OnDrag(PointerEventData eventData)
     {
+        if (currentTower != null)
+        {
+            //currentTower.transform.position = cursor.transform.position;
+            Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            cursorPosition.z = 0;
 
-        //currentTower.transform.position = cursor.transform.position;
-        Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        cursorPosition.z = 0;
-
-        currentTower.transform.position = cursorPosition;
+            currentTower.transform.position = cursorPosition;
+        }
+       
     }
 
 
@@ -87,9 +124,6 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-
-
-        print("Destroy Tower");
 
         //Check Raycast for any hit with COLLIDERS
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
@@ -107,6 +141,10 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
 
                 hit.collider.GetComponent<WorldTile>().towering = false;
+
+                //Destory old UI Tower
+                Destroy(currentTower);
+                return;
             }
 
             //Condition for barrier
@@ -115,23 +153,48 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             {
                 GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
                 hit.collider.GetComponent<WorldTile>().isBlockedBarrier = true;
-            }
 
-            else
-            {
-                print("Destroy Tower");
+
+                //Destory old UI Tower
                 Destroy(currentTower);
+                return;
             }
         }
-        else
-        {
-            print("Destroy Tower");
-            Destroy(currentTower);
-        }
 
-        Destroy(currentTower);
+        //Refund The Tower
+        RefundDragTower();
     }
 
+
+
+    public void RefundDragTower()
+    {
+        if (currentTower != null)
+        {
+            print("Refund Tower");
+
+            //Refund Player
+            if (towerColor == "Red")
+            {
+                playerStats.crystalsOwned_Red += towerCost;
+            }
+            if (towerColor == "Blue")
+            {
+                playerStats.crystalsOwned_Blue += towerCost;
+            }
+            if (towerColor == "Green")
+            {
+                playerStats.crystalsOwned_Green += towerCost;
+            }
+            if (towerColor == "Yellow")
+            {
+                playerStats.crystalsOwned_Yellow += towerCost;
+            }
+
+            playerStats.UpdateCrystalUI();
+            Destroy(currentTower);
+        }
+    }
 
     ///////////////
     /// <summary>

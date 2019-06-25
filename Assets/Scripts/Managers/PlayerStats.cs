@@ -16,10 +16,10 @@ public class PlayerStats : MonoBehaviour
     public Text crystalText_Yellow;
 
 
-    private int crystalsOwned_Red;
-    private int crystalsOwned_Blue;
-    private int crystalsOwned_Green;
-    private int crystalsOwned_Yellow;
+    public int crystalsOwned_Red;
+    public int crystalsOwned_Blue;
+    public int crystalsOwned_Green;
+    public int crystalsOwned_Yellow;
 
     private float crystalsExtra_Red;
     private float crystalsExtra_Blue;
@@ -27,9 +27,9 @@ public class PlayerStats : MonoBehaviour
     private float crystalsExtra_Yellow;
 
     private float crystalsPerSecond_Red = 0.5f;
-    private float crystalsPerSecond_Blue;
-    private float crystalsPerSecond_Green;
-    private float crystalsPerSecond_Yellow;
+    private float crystalsPerSecond_Blue = 0.1f;
+    private float crystalsPerSecond_Green = 0.1f;
+    private float crystalsPerSecond_Yellow = 0.1f;
 
     /////////////////////////////////////////////////////////////////
 
@@ -132,6 +132,46 @@ public class PlayerStats : MonoBehaviour
         crystalText_Blue.text = "Blue Gems: " + crystalsOwned_Blue;
         crystalText_Green.text = "Green Gems: " + crystalsOwned_Green;
         crystalText_Yellow.text = "Yellow Gems: " + crystalsOwned_Yellow;
+
+        //Red
+        if (crystalsOwned_Red >= 5)
+        {
+            crystalText_Red.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            crystalText_Red.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
+        }
+
+        //Blue
+        if (crystalsOwned_Blue >= 5)
+        {
+            crystalText_Blue.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            crystalText_Blue.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
+        }
+
+        //Green
+        if (crystalsOwned_Green >= 5)
+        {
+            crystalText_Green.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            crystalText_Green.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
+        }
+
+        //Yellow
+        if (crystalsOwned_Yellow >= 5)
+        {
+            crystalText_Yellow.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            crystalText_Yellow.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
+        }
     }
 
 }

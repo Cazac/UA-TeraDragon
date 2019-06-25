@@ -108,7 +108,7 @@ public class SoundManager : MonoBehaviour
     {
         foreach (var clip in clips)
         {
-            Debug.Log("Looping");
+            //Debug.Log("Looping");
             if (clip.SoundName.Contains("Menu") && SceneManager.GetActiveScene().name.Contains("Menu") && returnControl)
             {
                 PlaySoundByName(clip);
