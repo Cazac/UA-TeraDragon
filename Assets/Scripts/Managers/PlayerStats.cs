@@ -9,12 +9,14 @@ public class PlayerStats : MonoBehaviour
     public int MaxLives;
     public int CurrentLives;
 
-    [Header("UI ELements")]
+    [Header("Crystal UI ELements")]
     public Text crystalText_Red;
     public Text crystalText_Blue;
     public Text crystalText_Green;
     public Text crystalText_Yellow;
 
+    [Header("Skill UI Elements")]
+    public GameObject skillGameObject_Red;
 
     public int crystalsOwned_Red;
     public int crystalsOwned_Blue;
@@ -31,6 +33,12 @@ public class PlayerStats : MonoBehaviour
     private float crystalsPerSecond_Green = 0.1f;
     private float crystalsPerSecond_Yellow = 0.1f;
 
+    public bool skillReady_Red;
+
+    private float skillCountdown_Red;
+
+    private float skillCooldown_Red = 5f;
+
     /////////////////////////////////////////////////////////////////
 
     private void Start()
@@ -40,6 +48,13 @@ public class PlayerStats : MonoBehaviour
         //Start the crystal chekcer
         StartCoroutine(UpdateCrystalValues());
     }
+
+    private void Update()
+    {
+        UpdateSkillCooldowns();
+        UpdateSkillUI();
+    }
+
 
     public void RemoveLife(int i)
     {
@@ -70,6 +85,24 @@ public class PlayerStats : MonoBehaviour
     }
 
 
+    ///////////////
+    /// <summary>
+    /// Undocumented
+    /// </summary>
+    ///////////////
+    public void UpdateSkillCooldowns()
+    {
+        if (!skillReady_Red)
+        {
+            skillCountdown_Red += Time.deltaTime;
+
+            if (skillCountdown_Red >= skillCooldown_Red)
+            {
+                skillReady_Red = true;
+                skillCountdown_Red = 0;
+            }
+        }
+    }
 
     ///////////////
     /// <summary>
@@ -172,6 +205,26 @@ public class PlayerStats : MonoBehaviour
         {
             crystalText_Yellow.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
         }
+    }
+
+
+    ///////////////
+    /// <summary>
+    /// Update Crystal UI elements
+    /// </summary>
+    ///////////////
+    public void UpdateSkillUI()
+    {
+        //Red
+        if (skillReady_Red)
+        {
+            skillGameObject_Red.gameObject.transform.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            skillGameObject_Red.gameObject.transform.GetComponent<Button>().interactable = false;
+        }
+
     }
 
 }
