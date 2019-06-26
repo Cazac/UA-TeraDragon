@@ -22,7 +22,7 @@ public class PopupUI : MonoBehaviour
         Vector2 localUiPoint;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(GameObject.Find("Canvas").GetComponent<RectTransform>(), Input.mousePosition, Camera.main, out localUiPoint);
 
-        if (inputDetection.RaycastDetectionWorldTileBreakable(true))
+        //if (inputDetection.RaycastDetectionWorldTileBreakable(true))
             currentUI = Instantiate(uiPrefab, localUiPoint, Quaternion.identity, GameObject.Find("Canvas").transform);
     }
 

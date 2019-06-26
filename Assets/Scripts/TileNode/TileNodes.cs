@@ -405,12 +405,13 @@ public class TileNodes : MonoBehaviour
         {
             foreach (Transform transformPos in tileTransformListObject.list)
             {
-                transformPos.gameObject.SetActive(false);
                 //Remove blocked options for tile, default is Lock Colour
 
                 Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
 
                 SetTileColor(uniqueTilemap.WorldToCell(temp), Color.black, uniqueTilemap);
+                transformPos.gameObject.SetActive(false);
+
             }
         }
     }
@@ -428,9 +429,10 @@ public class TileNodes : MonoBehaviour
             {
                 foreach (Transform transformPos in tileTransformListObject.list)
                 {
-                    transformPos.gameObject.SetActive(true);
                     Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
                     SetTileColor(uniqueTilemap.WorldToCell(temp), Color.white, uniqueTilemap);
+                    transformPos.gameObject.SetActive(true);
+
                 }
             }
         }
