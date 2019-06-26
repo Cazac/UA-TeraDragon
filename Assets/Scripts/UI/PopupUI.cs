@@ -11,7 +11,7 @@ public class PopupUI : MonoBehaviour
     private void Update()
     {
         //Excetue 
-        if(inputDetection.BeginClickEvent() =="Clicked")
+        if (inputDetection.BeginClickEvent() == "Clicked")
         {
 
         }
@@ -19,7 +19,11 @@ public class PopupUI : MonoBehaviour
     public void ShowPopUpPanel(GameObject uiPrefab)
     {
         //Play aniamtion
-        currentUI = Instantiate(uiPrefab, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
+        Vector2 localUiPoint;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(GameObject.Find("Canvas").GetComponent<RectTransform>(), Input.mousePosition, Camera.main, out localUiPoint);
+
+        if (inputDetection.RaycastDetectionWorldTileBreakable(true))
+            currentUI = Instantiate(uiPrefab, localUiPoint, Quaternion.identity, GameObject.Find("Canvas").transform);
     }
 
     public void ClosePopUpPanel()

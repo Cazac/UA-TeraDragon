@@ -399,9 +399,9 @@ public class TileNodes : MonoBehaviour
     /// </summary>
     /// <param name="tileList">HiddenTileMananger object</param>
     /// <param name="tileMap">Tilemap that contains hidden tiles</param>
-    public void HideTiles(List<TransformList> tileList, Tilemap tileMap)
+    public void HideTiles()
     {
-        foreach (TransformList tileTransformListObject in tileList)
+        foreach (TransformList tileTransformListObject in hiddenTileManager.list)
         {
             foreach (Transform transformPos in tileTransformListObject.list)
             {
@@ -409,7 +409,8 @@ public class TileNodes : MonoBehaviour
                 //Remove blocked options for tile, default is Lock Colour
 
                 Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
-                SetTileColor(temp, Color.black, tileMap);
+
+                SetTileColor(uniqueTilemap.WorldToCell(temp), Color.black, uniqueTilemap);
             }
         }
     }
@@ -419,9 +420,9 @@ public class TileNodes : MonoBehaviour
     /// </summary>
     /// <param name="tileList">HiddenTileMananger object</param>
     /// <param name="tileMap">Tilemap that contains hidden tiles</param>
-    public void ShowTiles(List<TransformList> tileList, Tilemap tileMap)
+    public void ShowTiles()
     {
-        foreach (TransformList tileTransformListObject in tileList)
+        foreach (TransformList tileTransformListObject in hiddenTileManager.list)
         {
             if(tileTransformListObject.breakableBlockPos == null)
             {
@@ -429,7 +430,7 @@ public class TileNodes : MonoBehaviour
                 {
                     transformPos.gameObject.SetActive(true);
                     Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
-                    SetTileColor(temp, Color.white, tileMap);
+                    SetTileColor(uniqueTilemap.WorldToCell(temp), Color.white, uniqueTilemap);
                 }
             }
         }

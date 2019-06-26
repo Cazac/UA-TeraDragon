@@ -23,7 +23,7 @@ public class TileNodesEditor : Editor
 
         if (GUILayout.Button("Test hide tile"))
         {
-            myScript.HideTiles(myScript.hiddenTileManager.list, myScript.uniqueTilemap);
+            myScript.HideTiles();
             //foreach (var item in myScript.hiddenTileManager.list)
             //{
             //    foreach (var item1 in item.list)
@@ -35,7 +35,7 @@ public class TileNodesEditor : Editor
 
         if (GUILayout.Button("Test show tile"))
         {
-            myScript.ShowTiles(myScript.hiddenTileManager.list, myScript.uniqueTilemap);
+            myScript.ShowTiles();
             //foreach (var item in myScript.hiddenTileManager.list)
             //{
             //    foreach (var item1 in item.list)
