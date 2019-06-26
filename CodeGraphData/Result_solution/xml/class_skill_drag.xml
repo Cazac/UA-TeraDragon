@@ -1,0 +1,447 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_skill_drag" kind="class" prot="public">
+    <compoundname>SkillDrag</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IBeginDragHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IDragHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IEndDragHandler</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_skill_drag_1a8fa9af620b1a4bdcac508d7adc2d2d69" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject SkillDrag.skillPrefab_UI</definition>
+        <argsstring></argsstring>
+        <name>skillPrefab_UI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_skill_drag_1aac08537def1800149f610732daf85c56" compoundref="_skill_drag_8cs" startline="59" endline="93">OnBeginDrag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_skill_drag_1ac27b3b6444518fb1294a2ae4feaa139f" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject SkillDrag.skillPrefab_Spawn</definition>
+        <argsstring></argsstring>
+        <name>skillPrefab_Spawn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_skill_drag_1a8adf91af83a923670ba8132bac2ea7e8" compoundref="_skill_drag_8cs" startline="119" endline="153">OnEndDrag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_skill_drag_1adec88776e0af48380874294eb0cc5a78" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject SkillDrag.skillParent</definition>
+        <argsstring></argsstring>
+        <name>skillParent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="24" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_skill_drag_1a8adf91af83a923670ba8132bac2ea7e8" compoundref="_skill_drag_8cs" startline="119" endline="153">OnEndDrag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_skill_drag_1ad015fd0e5b13149fa80d4c48754f8462" prot="public" static="no" mutable="no">
+        <type><ref refid="class_sound_object" kindref="compound">SoundObject</ref></type>
+        <definition>SoundObject SkillDrag.soundEffect</definition>
+        <argsstring></argsstring>
+        <name>soundEffect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_skill_drag_1aac08537def1800149f610732daf85c56" compoundref="_skill_drag_8cs" startline="59" endline="93">OnBeginDrag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_skill_drag_1af1a1f9534a55d252cbbd6e346bcf5d01" prot="public" static="no" mutable="no">
+        <type><ref refid="class_player_stats" kindref="compound">PlayerStats</ref></type>
+        <definition>PlayerStats SkillDrag.playerStats</definition>
+        <argsstring></argsstring>
+        <name>playerStats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="30" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_skill_drag_1a22952b8ff1470f76b9662f4b2c7603a6" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string SkillDrag.skillColor</definition>
+        <argsstring></argsstring>
+        <name>skillColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="33" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_skill_drag_1aac08537def1800149f610732daf85c56" compoundref="_skill_drag_8cs" startline="59" endline="93">OnBeginDrag</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_skill_drag_1ad7ebb2c47b862b3ead0f9ccce2b4cd9d" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject SkillDrag.currentSkill</definition>
+        <argsstring></argsstring>
+        <name>currentSkill</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="35" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_skill_drag_1aac08537def1800149f610732daf85c56" compoundref="_skill_drag_8cs" startline="59" endline="93">OnBeginDrag</referencedby>
+        <referencedby refid="class_skill_drag_1a3158e696c116f0bb3c62393a0462bc2d" compoundref="_skill_drag_8cs" startline="101" endline="111">OnDrag</referencedby>
+        <referencedby refid="class_skill_drag_1a8adf91af83a923670ba8132bac2ea7e8" compoundref="_skill_drag_8cs" startline="119" endline="153">OnEndDrag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_skill_drag_1afd15b5f0cd2ae821be184e2cca970bd0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_sound_manager" kindref="compound">SoundManager</ref></type>
+        <definition>SoundManager SkillDrag.soundManager</definition>
+        <argsstring></argsstring>
+        <name>soundManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="36" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_skill_drag_1afe5f557da258ffbbeab425cf6f6b2aba" compoundref="_skill_drag_8cs" startline="45" endline="50">Start</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_skill_drag_1ae6069fbd1e49aa6c661fa7414aafa43d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_nodes" kindref="compound">TileNodes</ref></type>
+        <definition>TileNodes SkillDrag.tileNodes</definition>
+        <argsstring></argsstring>
+        <name>tileNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="38" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_skill_drag_1afe5f557da258ffbbeab425cf6f6b2aba" compoundref="_skill_drag_8cs" startline="45" endline="50">Start</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_skill_drag_1a512c0cef1e2e31739a3c83d9cd398244" prot="private" static="no" mutable="no">
+        <type><ref refid="class_wave_system_1_1_wave_manager" kindref="compound">WaveManager</ref></type>
+        <definition>WaveManager SkillDrag.waveManager</definition>
+        <argsstring></argsstring>
+        <name>waveManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="39" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_skill_drag_1afe5f557da258ffbbeab425cf6f6b2aba" compoundref="_skill_drag_8cs" startline="45" endline="50">Start</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_skill_drag_1a2a80dee193e079e3c539056b8c359242" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SkillDrag.skillCost</definition>
+        <argsstring></argsstring>
+        <name>skillCost</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="42" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_skill_drag_1afe5f557da258ffbbeab425cf6f6b2aba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkillDrag.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="45" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="45" bodyend="50"/>
+        <references refid="class_skill_drag_1afd15b5f0cd2ae821be184e2cca970bd0" compoundref="_skill_drag_8cs" startline="36">soundManager</references>
+        <references refid="class_skill_drag_1ae6069fbd1e49aa6c661fa7414aafa43d" compoundref="_skill_drag_8cs" startline="38">tileNodes</references>
+        <references refid="class_skill_drag_1a512c0cef1e2e31739a3c83d9cd398244" compoundref="_skill_drag_8cs" startline="39">waveManager</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_skill_drag_1aac08537def1800149f610732daf85c56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkillDrag.OnBeginDrag</definition>
+        <argsstring>(PointerEventData eventData)</argsstring>
+        <name>OnBeginDrag</name>
+        <param>
+          <type>PointerEventData</type>
+          <declname>eventData</declname>
+        </param>
+        <briefdescription>
+<para>Undocumented </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="59" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="59" bodyend="93"/>
+        <references refid="class_skill_drag_1ad7ebb2c47b862b3ead0f9ccce2b4cd9d" compoundref="_skill_drag_8cs" startline="35">currentSkill</references>
+        <references refid="class_skill_drag_1a22952b8ff1470f76b9662f4b2c7603a6" compoundref="_skill_drag_8cs" startline="33">skillColor</references>
+        <references refid="class_skill_drag_1a8fa9af620b1a4bdcac508d7adc2d2d69" compoundref="_skill_drag_8cs" startline="20">skillPrefab_UI</references>
+        <references refid="class_skill_drag_1ad015fd0e5b13149fa80d4c48754f8462" compoundref="_skill_drag_8cs" startline="27">soundEffect</references>
+      </memberdef>
+      <memberdef kind="function" id="class_skill_drag_1a3158e696c116f0bb3c62393a0462bc2d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkillDrag.OnDrag</definition>
+        <argsstring>(PointerEventData eventData)</argsstring>
+        <name>OnDrag</name>
+        <param>
+          <type>PointerEventData</type>
+          <declname>eventData</declname>
+        </param>
+        <briefdescription>
+<para>Undocumented </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="101" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="101" bodyend="111"/>
+        <references refid="class_skill_drag_1ad7ebb2c47b862b3ead0f9ccce2b4cd9d" compoundref="_skill_drag_8cs" startline="35">currentSkill</references>
+      </memberdef>
+      <memberdef kind="function" id="class_skill_drag_1a8adf91af83a923670ba8132bac2ea7e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkillDrag.OnEndDrag</definition>
+        <argsstring>(PointerEventData eventData)</argsstring>
+        <name>OnEndDrag</name>
+        <param>
+          <type>PointerEventData</type>
+          <declname>eventData</declname>
+        </param>
+        <briefdescription>
+<para>Raycast the tilemap looking for a node under the mouse when the tower is dropped onto the map, validation check the tile then add it to the map. If not valid remove the tower from the cursor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="119" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="119" bodyend="153"/>
+        <references refid="class_skill_drag_1ad7ebb2c47b862b3ead0f9ccce2b4cd9d" compoundref="_skill_drag_8cs" startline="35">currentSkill</references>
+        <references refid="class_skill_drag_1adec88776e0af48380874294eb0cc5a78" compoundref="_skill_drag_8cs" startline="24">skillParent</references>
+        <references refid="class_skill_drag_1ac27b3b6444518fb1294a2ae4feaa139f" compoundref="_skill_drag_8cs" startline="21">skillPrefab_Spawn</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>TD_TowerDrag is used to drag and drop all towers into the game onto TD_TowerDrop sockets</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="167">
+        <label>SkillDrag</label>
+        <link refid="class_skill_drag"/>
+        <childnode refid="168" relation="public-inheritance">
+        </childnode>
+        <childnode refid="169" relation="public-inheritance">
+        </childnode>
+        <childnode refid="170" relation="public-inheritance">
+        </childnode>
+        <childnode refid="171" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="171">
+        <label>IEndDragHandler</label>
+      </node>
+      <node id="169">
+        <label>IBeginDragHandler</label>
+      </node>
+      <node id="168">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="170">
+        <label>IDragHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="172">
+        <label>SkillDrag</label>
+        <link refid="class_skill_drag"/>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+        <childnode refid="174" relation="public-inheritance">
+        </childnode>
+        <childnode refid="175" relation="public-inheritance">
+        </childnode>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+        <childnode refid="177" relation="usage">
+          <edgelabel>soundEffect</edgelabel>
+        </childnode>
+        <childnode refid="179" relation="usage">
+          <edgelabel>tileNodes</edgelabel>
+        </childnode>
+        <childnode refid="182" relation="usage">
+          <edgelabel>soundManager</edgelabel>
+        </childnode>
+        <childnode refid="183" relation="usage">
+          <edgelabel>waveManager</edgelabel>
+        </childnode>
+        <childnode refid="188" relation="usage">
+          <edgelabel>playerStats</edgelabel>
+        </childnode>
+      </node>
+      <node id="183">
+        <label>WaveSystem.WaveManager</label>
+        <link refid="class_wave_system_1_1_wave_manager"/>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+        <childnode refid="184" relation="usage">
+          <edgelabel>waves</edgelabel>
+          <edgelabel>currentWave</edgelabel>
+        </childnode>
+        <childnode refid="182" relation="usage">
+          <edgelabel>soundManager</edgelabel>
+        </childnode>
+        <childnode refid="179" relation="usage">
+          <edgelabel>tileNodes</edgelabel>
+          <edgelabel>tiles</edgelabel>
+        </childnode>
+        <childnode refid="186" relation="usage">
+          <edgelabel>cursorSelection</edgelabel>
+        </childnode>
+        <childnode refid="187" relation="usage">
+          <edgelabel>currentTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="185">
+        <label>PathWrapper</label>
+        <link refid="class_path_wrapper"/>
+        <childnode refid="178" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="176">
+        <label>IEndDragHandler</label>
+      </node>
+      <node id="180">
+        <label>PathsData</label>
+        <link refid="class_paths_data"/>
+      </node>
+      <node id="188">
+        <label>PlayerStats</label>
+        <link refid="class_player_stats"/>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+        <childnode refid="189" relation="usage">
+          <edgelabel>crystalText_Red</edgelabel>
+          <edgelabel>crystalText_Green</edgelabel>
+          <edgelabel>crystalText_Yellow</edgelabel>
+          <edgelabel>crystalText_Blue</edgelabel>
+        </childnode>
+      </node>
+      <node id="177">
+        <label>SoundObject</label>
+        <link refid="class_sound_object"/>
+        <childnode refid="178" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="182">
+        <label>SoundManager</label>
+        <link refid="class_sound_manager"/>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+        <childnode refid="177" relation="usage">
+          <edgelabel>soundClips</edgelabel>
+        </childnode>
+        <childnode refid="183" relation="usage">
+          <edgelabel>waveManager</edgelabel>
+        </childnode>
+      </node>
+      <node id="181">
+        <label>HiddenTileManager</label>
+        <link refid="class_hidden_tile_manager"/>
+      </node>
+      <node id="187">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="179">
+        <label>TileNodes</label>
+        <link refid="class_tile_nodes"/>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+        <childnode refid="180" relation="usage">
+          <edgelabel>pathData</edgelabel>
+        </childnode>
+        <childnode refid="181" relation="usage">
+          <edgelabel>hiddenTileManager</edgelabel>
+        </childnode>
+      </node>
+      <node id="178">
+        <label>ScriptableObject</label>
+      </node>
+      <node id="189">
+        <label>Text</label>
+      </node>
+      <node id="174">
+        <label>IBeginDragHandler</label>
+      </node>
+      <node id="173">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="184">
+        <label>WaveData</label>
+        <link refid="class_wave_data"/>
+        <childnode refid="178" relation="public-inheritance">
+        </childnode>
+        <childnode refid="185" relation="usage">
+          <edgelabel>listWapper</edgelabel>
+        </childnode>
+      </node>
+      <node id="186">
+        <label>CursorSelection</label>
+        <link refid="class_cursor_selection"/>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+        <childnode refid="179" relation="usage">
+          <edgelabel>tileNodes</edgelabel>
+        </childnode>
+        <childnode refid="183" relation="usage">
+          <edgelabel>waveManager</edgelabel>
+        </childnode>
+      </node>
+      <node id="175">
+        <label>IDragHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/SkillDrag.cs" bodystart="17" bodyend="156"/>
+    <listofallmembers>
+      <member refid="class_skill_drag_1ad7ebb2c47b862b3ead0f9ccce2b4cd9d" prot="private" virt="non-virtual"><scope>SkillDrag</scope><name>currentSkill</name></member>
+      <member refid="class_skill_drag_1aac08537def1800149f610732daf85c56" prot="public" virt="non-virtual"><scope>SkillDrag</scope><name>OnBeginDrag</name></member>
+      <member refid="class_skill_drag_1a3158e696c116f0bb3c62393a0462bc2d" prot="public" virt="non-virtual"><scope>SkillDrag</scope><name>OnDrag</name></member>
+      <member refid="class_skill_drag_1a8adf91af83a923670ba8132bac2ea7e8" prot="public" virt="non-virtual"><scope>SkillDrag</scope><name>OnEndDrag</name></member>
+      <member refid="class_skill_drag_1af1a1f9534a55d252cbbd6e346bcf5d01" prot="public" virt="non-virtual"><scope>SkillDrag</scope><name>playerStats</name></member>
+      <member refid="class_skill_drag_1a22952b8ff1470f76b9662f4b2c7603a6" prot="public" virt="non-virtual"><scope>SkillDrag</scope><name>skillColor</name></member>
+      <member refid="class_skill_drag_1a2a80dee193e079e3c539056b8c359242" prot="private" virt="non-virtual"><scope>SkillDrag</scope><name>skillCost</name></member>
+      <member refid="class_skill_drag_1adec88776e0af48380874294eb0cc5a78" prot="public" virt="non-virtual"><scope>SkillDrag</scope><name>skillParent</name></member>
+      <member refid="class_skill_drag_1ac27b3b6444518fb1294a2ae4feaa139f" prot="public" virt="non-virtual"><scope>SkillDrag</scope><name>skillPrefab_Spawn</name></member>
+      <member refid="class_skill_drag_1a8fa9af620b1a4bdcac508d7adc2d2d69" prot="public" virt="non-virtual"><scope>SkillDrag</scope><name>skillPrefab_UI</name></member>
+      <member refid="class_skill_drag_1ad015fd0e5b13149fa80d4c48754f8462" prot="public" virt="non-virtual"><scope>SkillDrag</scope><name>soundEffect</name></member>
+      <member refid="class_skill_drag_1afd15b5f0cd2ae821be184e2cca970bd0" prot="private" virt="non-virtual"><scope>SkillDrag</scope><name>soundManager</name></member>
+      <member refid="class_skill_drag_1afe5f557da258ffbbeab425cf6f6b2aba" prot="private" virt="non-virtual"><scope>SkillDrag</scope><name>Start</name></member>
+      <member refid="class_skill_drag_1ae6069fbd1e49aa6c661fa7414aafa43d" prot="private" virt="non-virtual"><scope>SkillDrag</scope><name>tileNodes</name></member>
+      <member refid="class_skill_drag_1a512c0cef1e2e31739a3c83d9cd398244" prot="private" virt="non-virtual"><scope>SkillDrag</scope><name>waveManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

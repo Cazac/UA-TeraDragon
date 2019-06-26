@@ -17,7 +17,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="16" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="227" endline="262">TileNodes.FillNodeTable</referencedby>
+        <referencedby refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="257" endline="292">TileNodes.FillNodeTable</referencedby>
         <referencedby refid="class_world_tile_1a68744bed9f6974f656c7677e5fcc500a" compoundref="_world_tile_8cs" startline="41" endline="44">ToString</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_world_tile_1a0e656c3b5770c4c79608125683ea7709" prot="public" static="no" mutable="no">
@@ -72,9 +72,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="24" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="24" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1a3cc3cf231a636206585be0dd45083fef" compoundref="_tile_nodes_8cs" startline="327" endline="337">TileNodes.AddNodeToList</referencedby>
-        <referencedby refid="class_tower_drag_1a942a12b2f914655d1e71a166b4c9a968" compoundref="_tower_drag_8cs" startline="78" endline="130">TowerDrag.OnEndDrag</referencedby>
-        <referencedby refid="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" compoundref="_tile_nodes_8cs" startline="271" endline="285">TileNodes.SetNeigbours</referencedby>
+        <referencedby refid="class_tile_nodes_1a3cc3cf231a636206585be0dd45083fef" compoundref="_tile_nodes_8cs" startline="357" endline="367">TileNodes.AddNodeToList</referencedby>
+        <referencedby refid="class_tower_drag_1a942a12b2f914655d1e71a166b4c9a968" compoundref="_tower_drag_8cs" startline="121" endline="174">TowerDrag.OnEndDrag</referencedby>
+        <referencedby refid="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" compoundref="_tile_nodes_8cs" startline="301" endline="315">TileNodes.SetNeigbours</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_world_tile_1a73553fd14575c6acc8c0eeb2c8132e4a" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -102,8 +102,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" line="26" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/WorldTile.cs" bodystart="26" bodyend="-1"/>
-        <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="131">EnemyScript.DynamicPathRelocation</referencedby>
-        <referencedby refid="class_tower_drag_1a942a12b2f914655d1e71a166b4c9a968" compoundref="_tower_drag_8cs" startline="78" endline="130">TowerDrag.OnEndDrag</referencedby>
+        <referencedby refid="class_tile_nodes_1a1ccf7b0f073c26d31eb580fb09a7deb1" compoundref="_tile_nodes_8cs" startline="82" endline="99">TileNodes.CheckBlockedPath</referencedby>
+        <referencedby refid="class_tower_drag_1a942a12b2f914655d1e71a166b4c9a968" compoundref="_tower_drag_8cs" startline="121" endline="174">TowerDrag.OnEndDrag</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_world_tile_1a8bb9aed53ffb5e7251e04003f75022c5" prot="public" static="no" mutable="no">
         <type>List&lt; <ref refid="class_world_tile" kindref="compound">WorldTile</ref> &gt;</type>
@@ -193,30 +193,30 @@
     <detaileddescription>
 <para><ref refid="class_world_tile" kindref="compound">WorldTile</ref></para>    </detaileddescription>
     <inheritancegraph>
-      <node id="235">
+      <node id="316">
         <label>WorldTile</label>
         <link refid="class_world_tile"/>
-        <childnode refid="236" relation="public-inheritance">
+        <childnode refid="317" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="237">
+      <node id="318">
         <label>BaseNode</label>
         <link refid="class_base_node"/>
-        <childnode refid="235" relation="public-inheritance">
+        <childnode refid="316" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="236">
+      <node id="317">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="238">
+      <node id="319">
         <label>WorldTile</label>
         <link refid="class_world_tile"/>
-        <childnode refid="239" relation="public-inheritance">
+        <childnode refid="320" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="239">
+      <node id="320">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>

@@ -17,7 +17,7 @@
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/GameOverScript.cs" bodystart="8" bodyend="-1"/>
         <referencedby refid="class_game_over_script_1a71a6e9ada2a17603dbff6fa95d1ee16c" compoundref="_game_over_script_8cs" startline="11" endline="16">TurnOnGameOver</referencedby>
-        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="79" endline="121">PlayerStats.UpdateCrystalValues</referencedby>
+        <referencedby refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" compoundref="_player_stats_8cs" startline="112" endline="154">PlayerStats.UpdateCrystalValues</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -82,24 +82,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="67">
+      <node id="94">
         <label>MonoBehaviour</label>
       </node>
-      <node id="66">
+      <node id="93">
         <label>GameOverScript</label>
         <link refid="class_game_over_script"/>
-        <childnode refid="67" relation="public-inheritance">
+        <childnode refid="94" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="69">
+      <node id="96">
         <label>MonoBehaviour</label>
       </node>
-      <node id="68">
+      <node id="95">
         <label>GameOverScript</label>
         <link refid="class_game_over_script"/>
-        <childnode refid="69" relation="public-inheritance">
+        <childnode refid="96" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

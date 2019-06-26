@@ -4,7 +4,6 @@
     <compoundname>EnemyData.cs</compoundname>
     <innerclass refid="class_enemy_data" prot="public">EnemyData</innerclass>
     <innernamespace refid="namespace_system_1_1_collections">System::Collections</innernamespace>
-    <innernamespace refid="namespace_system_1_1_collections_1_1_generic">System::Collections::Generic</innernamespace>
     <innernamespace refid="namespace_unity_engine">UnityEngine</innernamespace>
     <briefdescription>
     </briefdescription>

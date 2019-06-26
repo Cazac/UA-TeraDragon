@@ -110,11 +110,18 @@ public class EnemyScript : MonoBehaviour
         //Reapply waypoints
         foreach (var path in tileNodes.pathData.paths)
         {
+            //If there's still a path to take
             if (!tileNodes.pathData.blockedPaths.Contains(path) && tileNodes.pathData.blockedPaths.Count >= 1)
             {
                 currentWaypoints = path;
                 StartPosition = currentPosition;
                 return;
+            }
+
+            //If there's still a path to take
+            else
+            {
+
             }
         }
     }

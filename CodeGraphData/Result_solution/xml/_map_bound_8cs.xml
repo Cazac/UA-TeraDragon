@@ -3,7 +3,6 @@
   <compounddef id="_map_bound_8cs" kind="file">
     <compoundname>MapBound.cs</compoundname>
     <innerclass refid="class_map_bound" prot="public">MapBound</innerclass>
-    <innernamespace refid="namespace_unity_engine_1_1_tilemaps">UnityEngine::Tilemaps</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

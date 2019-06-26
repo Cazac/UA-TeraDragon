@@ -193,24 +193,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="122">
+      <node id="153">
         <label>ProjectileData</label>
         <link refid="class_projectile_data"/>
-        <childnode refid="123" relation="public-inheritance">
+        <childnode refid="154" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="123">
+      <node id="154">
         <label>ScriptableObject</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="124">
+      <node id="155">
         <label>ProjectileData</label>
         <link refid="class_projectile_data"/>
-        <childnode refid="125" relation="public-inheritance">
+        <childnode refid="156" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="125">
+      <node id="156">
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>

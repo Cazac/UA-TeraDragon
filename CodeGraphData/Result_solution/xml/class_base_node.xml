@@ -55,36 +55,36 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="9">
+      <node id="15">
         <label>WorldTile</label>
         <link refid="class_world_tile"/>
-        <childnode refid="10" relation="public-inheritance">
+        <childnode refid="16" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8">
+      <node id="14">
         <label>BaseNode</label>
         <link refid="class_base_node"/>
-        <childnode refid="9" relation="public-inheritance">
+        <childnode refid="15" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10">
+      <node id="16">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="12">
+      <node id="18">
         <label>WorldTile</label>
         <link refid="class_world_tile"/>
-        <childnode refid="13" relation="public-inheritance">
+        <childnode refid="19" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11">
+      <node id="17">
         <label>BaseNode</label>
         <link refid="class_base_node"/>
-        <childnode refid="12" relation="public-inheritance">
+        <childnode refid="18" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="13">
+      <node id="19">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>

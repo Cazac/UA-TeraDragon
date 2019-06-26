@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_ada129f5bff7359ff04ecf7050045237" kind="dir">
+    <compoundname>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging</compoundname>
+    <innerfile refid="_blockade_drag_8cs">BlockadeDrag.cs</innerfile>
+    <innerfile refid="_miner_drag_8cs">MinerDrag.cs</innerfile>
+    <innerfile refid="_skill_drag_8cs">SkillDrag.cs</innerfile>
+    <innerfile refid="_tower_drag_8cs">TowerDrag.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/"/>
+  </compounddef>
+</doxygen>

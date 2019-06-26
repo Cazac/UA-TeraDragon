@@ -186,24 +186,24 @@
     <detaileddescription>
 <para><ref refid="class_cursor_move" kindref="compound">CursorMove</ref></para>    </detaileddescription>
     <inheritancegraph>
-      <node id="27">
+      <node id="37">
         <label>CursorMove</label>
         <link refid="class_cursor_move"/>
-        <childnode refid="28" relation="public-inheritance">
+        <childnode refid="38" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="28">
+      <node id="38">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="29">
+      <node id="39">
         <label>CursorMove</label>
         <link refid="class_cursor_move"/>
-        <childnode refid="30" relation="public-inheritance">
+        <childnode refid="40" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="30">
+      <node id="40">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>

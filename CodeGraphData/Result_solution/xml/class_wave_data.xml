@@ -16,7 +16,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/WaveData.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/WaveData.cs" bodystart="9" bodyend="-1"/>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="187" endline="238">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="197" endline="255">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
         <referencedby refid="class_wave_data_1a0677ae110fd09053c45cc00145f0877c" compoundref="_wave_data_8cs" startline="31" endline="37">WaveData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_wave_data_1a7e39d2413007a76b616ffbd3ae368ddd" prot="public" static="no" mutable="no">
@@ -74,7 +74,7 @@
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/WaveData.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/WaveData.cs" bodystart="16" bodyend="-1"/>
         <referencedby refid="class_wave_data_1a0b6119c3f2a704247921c750d127a736" compoundref="_wave_data_8cs" startline="55" endline="74">GetPath</referencedby>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="187" endline="238">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="197" endline="255">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
         <referencedby refid="class_wave_data_1a0677ae110fd09053c45cc00145f0877c" compoundref="_wave_data_8cs" startline="31" endline="37">WaveData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_wave_data_1ab9f2a0334c4ce248e61321bb7095fd8c" prot="public" static="no" mutable="no">
@@ -89,7 +89,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/WaveData.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/WaveData.cs" bodystart="18" bodyend="-1"/>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="187" endline="238">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="197" endline="255">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
         <referencedby refid="class_wave_data_1a0677ae110fd09053c45cc00145f0877c" compoundref="_wave_data_8cs" startline="31" endline="37">WaveData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_wave_data_1aabe9bbb52076fffb3257d76e2ed27631" prot="public" static="no" mutable="no">
@@ -118,8 +118,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/WaveData.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/WaveData.cs" bodystart="20" bodyend="-1"/>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="187" endline="238">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1a7454ae0f83853fcc5f8176e691b705c9" compoundref="_wave_manager_8cs" startline="129" endline="157">WaveSystem.WaveManager.Update</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="197" endline="255">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1a7454ae0f83853fcc5f8176e691b705c9" compoundref="_wave_manager_8cs" startline="136" endline="167">WaveSystem.WaveManager.Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_wave_data_1a5d79fa024ab9f7de2978517a1dd3d043" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -133,8 +133,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/WaveData.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/WaveData.cs" bodystart="21" bodyend="-1"/>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="187" endline="238">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1a7454ae0f83853fcc5f8176e691b705c9" compoundref="_wave_manager_8cs" startline="129" endline="157">WaveSystem.WaveManager.Update</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="197" endline="255">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1a7454ae0f83853fcc5f8176e691b705c9" compoundref="_wave_manager_8cs" startline="136" endline="167">WaveSystem.WaveManager.Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_wave_data_1a4d546fdd7918cf46da199c7da76b29b3" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -148,7 +148,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/WaveData.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/WaveData.cs" bodystart="22" bodyend="-1"/>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="187" endline="238">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1a3d6bd3024f4597d96691c1754112f8bc" compoundref="_wave_manager_8cs" startline="197" endline="255">WaveSystem.WaveManager.SpawnSingleEnemyPerWave</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -321,32 +321,32 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="199">
+      <node id="278">
         <label>ScriptableObject</label>
       </node>
-      <node id="198">
+      <node id="277">
         <label>WaveData</label>
         <link refid="class_wave_data"/>
-        <childnode refid="199" relation="public-inheritance">
+        <childnode refid="278" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="202">
+      <node id="281">
         <label>PathWrapper</label>
         <link refid="class_path_wrapper"/>
-        <childnode refid="201" relation="public-inheritance">
+        <childnode refid="280" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="201">
+      <node id="280">
         <label>ScriptableObject</label>
       </node>
-      <node id="200">
+      <node id="279">
         <label>WaveData</label>
         <link refid="class_wave_data"/>
-        <childnode refid="201" relation="public-inheritance">
+        <childnode refid="280" relation="public-inheritance">
         </childnode>
-        <childnode refid="202" relation="usage">
+        <childnode refid="281" relation="usage">
           <edgelabel>listWapper</edgelabel>
         </childnode>
       </node>

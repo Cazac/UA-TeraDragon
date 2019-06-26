@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_hidden_tile_manager" kind="class" prot="public">
+    <compoundname>HiddenTileManager</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_transform_list" kindref="compound">TransformList</ref> &gt;</type>
+        <definition>List&lt;TransformList&gt; HiddenTileManager.list</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="17" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" prot="public" virt="non-virtual"><scope>HiddenTileManager</scope><name>list</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

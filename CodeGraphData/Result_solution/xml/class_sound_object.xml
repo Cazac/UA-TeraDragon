@@ -100,7 +100,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" bodystart="14" bodyend="-1"/>
-        <referencedby refid="class_sound_manager_1afd74d3df47593fc56585731e5cdc513e" compoundref="_sound_manager_8cs" startline="81" endline="95">SoundManager.PlaySoundByName</referencedby>
         <referencedby refid="class_sound_object_1ae46236f364d8ae25705c253d89dad9fe" compoundref="_sound_object_8cs" startline="16" endline="25">SoundObject</referencedby>
       </memberdef>
       </sectiondef>
@@ -189,24 +188,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="142">
+      <node id="208">
         <label>SoundObject</label>
         <link refid="class_sound_object"/>
-        <childnode refid="143" relation="public-inheritance">
+        <childnode refid="209" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="143">
+      <node id="209">
         <label>ScriptableObject</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="144">
+      <node id="210">
         <label>SoundObject</label>
         <link refid="class_sound_object"/>
-        <childnode refid="145" relation="public-inheritance">
+        <childnode refid="211" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="145">
+      <node id="211">
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>

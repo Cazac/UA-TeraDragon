@@ -102,39 +102,39 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="187">
+      <node id="266">
         <label>UpgradeNode</label>
         <link refid="class_upgrade_node"/>
-        <childnode refid="188" relation="public-inheritance">
+        <childnode refid="267" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="188">
+      <node id="267">
         <label>ScriptableObject</label>
       </node>
-      <node id="190">
+      <node id="269">
         <label>StatsUpgrade</label>
         <link refid="class_stats_upgrade"/>
-        <childnode refid="187" relation="public-inheritance">
+        <childnode refid="266" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="189">
+      <node id="268">
         <label>EffectUpgrade</label>
         <link refid="class_effect_upgrade"/>
-        <childnode refid="187" relation="public-inheritance">
+        <childnode refid="266" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="191">
+      <node id="270">
         <label>UpgradeNode</label>
         <link refid="class_upgrade_node"/>
-        <childnode refid="192" relation="public-inheritance">
+        <childnode refid="271" relation="public-inheritance">
         </childnode>
-        <childnode refid="191" relation="usage">
+        <childnode refid="270" relation="usage">
           <edgelabel>necessaryNodes</edgelabel>
         </childnode>
       </node>
-      <node id="192">
+      <node id="271">
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>

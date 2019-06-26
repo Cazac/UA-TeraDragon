@@ -16,7 +16,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="21" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="137" endline="219">LoopThroughTileset</referencedby>
+        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="167" endline="249">LoopThroughTileset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1a8a1664c6685852267f1e2f6bfbc62753" prot="public" static="no" mutable="no">
         <type>Tilemap</type>
@@ -56,7 +56,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="28" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="28" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="137" endline="219">LoopThroughTileset</referencedby>
+        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="167" endline="249">LoopThroughTileset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1a5045dd74604c69bdb42a845726a81149" prot="public" static="no" mutable="no">
         <type>Tile[]</type>
@@ -70,7 +70,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="32" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="32" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="137" endline="219">LoopThroughTileset</referencedby>
+        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="167" endline="249">LoopThroughTileset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1afbd4396a653b8f88f7f0030886ec8e78" prot="public" static="no" mutable="no">
         <type>Tile[]</type>
@@ -84,7 +84,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="33" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="33" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="137" endline="219">LoopThroughTileset</referencedby>
+        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="167" endline="249">LoopThroughTileset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1a64c51f701381910490db9134ea449961" prot="public" static="no" mutable="no">
         <type>Tile[]</type>
@@ -98,7 +98,20 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="34" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="34" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="137" endline="219">LoopThroughTileset</referencedby>
+        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="167" endline="249">LoopThroughTileset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_nodes_1a8caa3de58ed3e18b6e1d62ae7898a13f" prot="public" static="no" mutable="no">
+        <type>Tile[]</type>
+        <definition>Tile [] TileNodes.HiddenTiles</definition>
+        <argsstring></argsstring>
+        <name>HiddenTiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="35" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1a1a5c4d10fd07916dd0db500baa4ef933" prot="public" static="no" mutable="no">
         <type>Tile[]</type>
@@ -137,13 +150,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="46" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="46" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1a3cc3cf231a636206585be0dd45083fef" compoundref="_tile_nodes_8cs" startline="327" endline="337">AddNodeToList</referencedby>
-        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="71" endline="89">BuildTable</referencedby>
-        <referencedby refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="227" endline="262">FillNodeTable</referencedby>
-        <referencedby refid="class_tile_nodes_1a3b290228407d9efe1dee72097542079b" compoundref="_tile_nodes_8cs" startline="114" endline="130">generateNodes</referencedby>
-        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="137" endline="219">LoopThroughTileset</referencedby>
-        <referencedby refid="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" compoundref="_tile_nodes_8cs" startline="271" endline="285">SetNeigbours</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="47" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1a3cc3cf231a636206585be0dd45083fef" compoundref="_tile_nodes_8cs" startline="357" endline="367">AddNodeToList</referencedby>
+        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="101" endline="119">BuildTable</referencedby>
+        <referencedby refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="257" endline="292">FillNodeTable</referencedby>
+        <referencedby refid="class_tile_nodes_1a3b290228407d9efe1dee72097542079b" compoundref="_tile_nodes_8cs" startline="144" endline="160">generateNodes</referencedby>
+        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="167" endline="249">LoopThroughTileset</referencedby>
+        <referencedby refid="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" compoundref="_tile_nodes_8cs" startline="301" endline="315">SetNeigbours</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1ab946891fc9a68468265108a701287107" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -157,9 +170,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="60" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="60" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" compoundref="_tile_nodes_8cs" startline="97" endline="106">Editor_SelectList</referencedby>
-        <referencedby refid="class_tile_nodes_1a01f4a1ba0ca7e1f2ab7e415d6c7f9659" compoundref="_tile_nodes_8cs" startline="341" endline="359">OnDrawGizmos</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="61" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="61" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" compoundref="_tile_nodes_8cs" startline="127" endline="136">Editor_SelectList</referencedby>
+        <referencedby refid="class_tile_nodes_1a01f4a1ba0ca7e1f2ab7e415d6c7f9659" compoundref="_tile_nodes_8cs" startline="369" endline="387">OnDrawGizmos</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1ac0c4f96c30c24ce1a95a74f6653a7cb4" prot="public" static="no" mutable="no">
         <type>List&lt; <ref refid="class_world_tile" kindref="compound">WorldTile</ref> &gt;</type>
@@ -172,8 +185,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="61" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="61" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" compoundref="_tile_nodes_8cs" startline="97" endline="106">Editor_SelectList</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="62" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="62" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" compoundref="_tile_nodes_8cs" startline="127" endline="136">Editor_SelectList</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1a39fcc4af28f59271e7240cd247d82f1c" prot="public" static="no" mutable="no">
         <type><ref refid="class_paths_data" kindref="compound">PathsData</ref></type>
@@ -186,12 +199,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="62" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="62" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="71" endline="89">BuildTable</referencedby>
-        <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="131">EnemyScript.DynamicPathRelocation</referencedby>
-        <referencedby refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" compoundref="_tile_nodes_8cs" startline="97" endline="106">Editor_SelectList</referencedby>
-        <referencedby refid="class_tile_nodes_1a01f4a1ba0ca7e1f2ab7e415d6c7f9659" compoundref="_tile_nodes_8cs" startline="341" endline="359">OnDrawGizmos</referencedby>
-        <referencedby refid="class_wave_system_1_1_wave_manager_1aa2291654e818f94332b0916457d1204f" compoundref="_wave_manager_8cs" startline="75" endline="127">WaveSystem.WaveManager.Start</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="63" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="63" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="101" endline="119">BuildTable</referencedby>
+        <referencedby refid="class_tile_nodes_1a1ccf7b0f073c26d31eb580fb09a7deb1" compoundref="_tile_nodes_8cs" startline="82" endline="99">CheckBlockedPath</referencedby>
+        <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="127">EnemyScript.DynamicPathRelocation</referencedby>
+        <referencedby refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" compoundref="_tile_nodes_8cs" startline="127" endline="136">Editor_SelectList</referencedby>
+        <referencedby refid="class_tile_nodes_1a01f4a1ba0ca7e1f2ab7e415d6c7f9659" compoundref="_tile_nodes_8cs" startline="369" endline="387">OnDrawGizmos</referencedby>
+        <referencedby refid="class_tower_drag_1a942a12b2f914655d1e71a166b4c9a968" compoundref="_tower_drag_8cs" startline="121" endline="174">TowerDrag.OnEndDrag</referencedby>
+        <referencedby refid="class_wave_system_1_1_wave_manager_1aa2291654e818f94332b0916457d1204f" compoundref="_wave_manager_8cs" startline="82" endline="134">WaveSystem.WaveManager.Start</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_nodes_1a6e41f0f9876f665c405751fe82b2f898" prot="public" static="no" mutable="no">
+        <type><ref refid="class_hidden_tile_manager" kindref="compound">HiddenTileManager</ref></type>
+        <definition>HiddenTileManager TileNodes.hiddenTileManager</definition>
+        <argsstring></argsstring>
+        <name>hiddenTileManager</name>
+        <initializer>= new <ref refid="class_hidden_tile_manager" kindref="compound">HiddenTileManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="65" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="65" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -208,7 +237,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="42" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="42" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1a682a75a288b3455f7118464c72d1ade8" compoundref="_tile_nodes_8cs" startline="361" endline="367">SetSpawnStartPosFromSelected</referencedby>
+        <referencedby refid="class_tile_nodes_1a682a75a288b3455f7118464c72d1ade8" compoundref="_tile_nodes_8cs" startline="389" endline="395">SetSpawnStartPosFromSelected</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1a087b01a53f8c26a028516c27d3b1b512" prot="private" static="no" mutable="no">
         <type>List&lt; GameObject &gt;</type>
@@ -221,9 +250,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="49" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="49" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="71" endline="89">BuildTable</referencedby>
-        <referencedby refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="227" endline="262">FillNodeTable</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="50" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="101" endline="119">BuildTable</referencedby>
+        <referencedby refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="257" endline="292">FillNodeTable</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1a01f5f5e71a343d5b80076b2d7cffbf9d" prot="private" static="no" mutable="no">
         <type>List&lt; <ref refid="class_world_tile" kindref="compound">WorldTile</ref> &gt;</type>
@@ -236,8 +265,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="50" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="50" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="71" endline="89">BuildTable</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="51" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="101" endline="119">BuildTable</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1adfe6ff8844ffd91eaa10118f79c6cea8" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -250,9 +279,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="53" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="53" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="71" endline="89">BuildTable</referencedby>
-        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="137" endline="219">LoopThroughTileset</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="54" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="101" endline="119">BuildTable</referencedby>
+        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="167" endline="249">LoopThroughTileset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1a6de8f4d49a8506edbe79598f1ab768a0" prot="private" static="no" mutable="no">
         <type>GameObject[]</type>
@@ -266,9 +295,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="56" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="56" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="71" endline="89">BuildTable</referencedby>
-        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="137" endline="219">LoopThroughTileset</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="57" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="57" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="101" endline="119">BuildTable</referencedby>
+        <referencedby refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="167" endline="249">LoopThroughTileset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_tile_nodes_1a742cad762988dd19f0d42766c68522e0" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -282,9 +311,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="263" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="263" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="71" endline="89">BuildTable</referencedby>
-        <referencedby refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="227" endline="262">FillNodeTable</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="293" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="293" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="101" endline="119">BuildTable</referencedby>
+        <referencedby refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="257" endline="292">FillNodeTable</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -314,8 +343,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="67" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="67" bodyend="67"/>
-        <references refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="71" endline="89">BuildTable</references>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="72" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="72" bodyend="72"/>
+        <references refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="101" endline="119">BuildTable</references>
       </memberdef>
       <memberdef kind="function" id="class_tile_nodes_1a69f9661768889712032eb49c9ed09480" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -328,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="68" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="68" bodyend="68"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="73" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="73" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_nodes_1ac98b771ebb362f8f18ae7f00e7fd02d5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -341,7 +370,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="69" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="69" bodyend="69"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="77" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="77" bodyend="80"/>
+        <references refid="class_tile_nodes_1a1ccf7b0f073c26d31eb580fb09a7deb1" compoundref="_tile_nodes_8cs" startline="82" endline="99">CheckBlockedPath</references>
       </memberdef>
       <memberdef kind="function" id="class_tile_nodes_1a3b290228407d9efe1dee72097542079b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -354,12 +384,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="114" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="114" bodyend="130"/>
-        <references refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="227" endline="262">FillNodeTable</references>
-        <references refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="137" endline="219">LoopThroughTileset</references>
-        <references refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" compoundref="_tile_nodes_8cs" startline="46">nodes</references>
-        <references refid="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" compoundref="_tile_nodes_8cs" startline="271" endline="285">SetNeigbours</references>
-        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="71" endline="89">BuildTable</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="144" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="144" bodyend="160"/>
+        <references refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" compoundref="_tile_nodes_8cs" startline="257" endline="292">FillNodeTable</references>
+        <references refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" compoundref="_tile_nodes_8cs" startline="167" endline="249">LoopThroughTileset</references>
+        <references refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" compoundref="_tile_nodes_8cs" startline="47">nodes</references>
+        <references refid="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" compoundref="_tile_nodes_8cs" startline="301" endline="315">SetNeigbours</references>
+        <referencedby refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" compoundref="_tile_nodes_8cs" startline="101" endline="119">BuildTable</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -372,16 +402,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="137" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="137" bodyend="219"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="167" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="167" bodyend="249"/>
         <references refid="class_tile_nodes_1af16f96ce799acf1980dd093038414a14" compoundref="_tile_nodes_8cs" startline="21">gridBase</references>
-        <references refid="class_tile_nodes_1adfe6ff8844ffd91eaa10118f79c6cea8" compoundref="_tile_nodes_8cs" startline="53">mapConstant</references>
-        <references refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" compoundref="_tile_nodes_8cs" startline="46">nodes</references>
-        <references refid="class_tile_nodes_1a6de8f4d49a8506edbe79598f1ab768a0" compoundref="_tile_nodes_8cs" startline="56">parentNodes</references>
+        <references refid="class_tile_nodes_1adfe6ff8844ffd91eaa10118f79c6cea8" compoundref="_tile_nodes_8cs" startline="54">mapConstant</references>
+        <references refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" compoundref="_tile_nodes_8cs" startline="47">nodes</references>
+        <references refid="class_tile_nodes_1a6de8f4d49a8506edbe79598f1ab768a0" compoundref="_tile_nodes_8cs" startline="57">parentNodes</references>
         <references refid="class_tile_nodes_1a64c51f701381910490db9134ea449961" compoundref="_tile_nodes_8cs" startline="34">SpawnTiles</references>
         <references refid="class_tile_nodes_1a6fd9c73b126eb38c5c430a505c53ac8b" compoundref="_tile_nodes_8cs" startline="28">TileNodesPrefabs</references>
         <references refid="class_tile_nodes_1afbd4396a653b8f88f7f0030886ec8e78" compoundref="_tile_nodes_8cs" startline="33">UnwalkableTiles</references>
         <references refid="class_tile_nodes_1a5045dd74604c69bdb42a845726a81149" compoundref="_tile_nodes_8cs" startline="32">WalkableTiles</references>
-        <referencedby refid="class_tile_nodes_1a3b290228407d9efe1dee72097542079b" compoundref="_tile_nodes_8cs" startline="114" endline="130">generateNodes</referencedby>
+        <referencedby refid="class_tile_nodes_1a3b290228407d9efe1dee72097542079b" compoundref="_tile_nodes_8cs" startline="144" endline="160">generateNodes</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -394,12 +424,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="227" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="227" bodyend="262"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="257" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="257" bodyend="292"/>
         <references refid="class_world_tile_1aa4c5505813dc257adb4a4255d5025641" compoundref="_world_tile_8cs" startline="16">WorldTile.gridY</references>
-        <references refid="class_tile_nodes_1a742cad762988dd19f0d42766c68522e0" compoundref="_tile_nodes_8cs" startline="263">maxGridX</references>
-        <references refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" compoundref="_tile_nodes_8cs" startline="46">nodes</references>
-        <references refid="class_tile_nodes_1a087b01a53f8c26a028516c27d3b1b512" compoundref="_tile_nodes_8cs" startline="49">unsortedNodes</references>
-        <referencedby refid="class_tile_nodes_1a3b290228407d9efe1dee72097542079b" compoundref="_tile_nodes_8cs" startline="114" endline="130">generateNodes</referencedby>
+        <references refid="class_tile_nodes_1a742cad762988dd19f0d42766c68522e0" compoundref="_tile_nodes_8cs" startline="293">maxGridX</references>
+        <references refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" compoundref="_tile_nodes_8cs" startline="47">nodes</references>
+        <references refid="class_tile_nodes_1a087b01a53f8c26a028516c27d3b1b512" compoundref="_tile_nodes_8cs" startline="50">unsortedNodes</references>
+        <referencedby refid="class_tile_nodes_1a3b290228407d9efe1dee72097542079b" compoundref="_tile_nodes_8cs" startline="144" endline="160">generateNodes</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -412,11 +442,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="271" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="271" bodyend="285"/>
-        <references refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" compoundref="_tile_nodes_8cs" startline="46">nodes</references>
-        <references refid="class_tile_nodes_1a9a38710f1a4db631749ce324fdce45b5" compoundref="_tile_nodes_8cs" startline="293" endline="319">SetNeigbour</references>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="301" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="301" bodyend="315"/>
+        <references refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" compoundref="_tile_nodes_8cs" startline="47">nodes</references>
+        <references refid="class_tile_nodes_1a9a38710f1a4db631749ce324fdce45b5" compoundref="_tile_nodes_8cs" startline="323" endline="349">SetNeigbour</references>
         <references refid="class_world_tile_1a67a5d10ed54c58b0959281ecd844ec69" compoundref="_world_tile_8cs" startline="24">WorldTile.walkable</references>
-        <referencedby refid="class_tile_nodes_1a3b290228407d9efe1dee72097542079b" compoundref="_tile_nodes_8cs" startline="114" endline="130">generateNodes</referencedby>
+        <referencedby refid="class_tile_nodes_1a3b290228407d9efe1dee72097542079b" compoundref="_tile_nodes_8cs" startline="144" endline="160">generateNodes</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_tile_nodes_1a9a38710f1a4db631749ce324fdce45b5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_world_tile" kindref="compound">WorldTile</ref> &gt;</type>
@@ -449,9 +479,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="293" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="293" bodyend="319"/>
-        <references refid="class_tile_nodes_1a3cc3cf231a636206585be0dd45083fef" compoundref="_tile_nodes_8cs" startline="327" endline="337">AddNodeToList</references>
-        <referencedby refid="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" compoundref="_tile_nodes_8cs" startline="271" endline="285">SetNeigbours</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="323" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="323" bodyend="349"/>
+        <references refid="class_tile_nodes_1a3cc3cf231a636206585be0dd45083fef" compoundref="_tile_nodes_8cs" startline="357" endline="367">AddNodeToList</references>
+        <referencedby refid="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" compoundref="_tile_nodes_8cs" startline="301" endline="315">SetNeigbours</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_tile_nodes_1a3cc3cf231a636206585be0dd45083fef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -480,10 +510,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="327" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="327" bodyend="337"/>
-        <references refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" compoundref="_tile_nodes_8cs" startline="46">nodes</references>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="357" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="357" bodyend="367"/>
+        <references refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" compoundref="_tile_nodes_8cs" startline="47">nodes</references>
         <references refid="class_world_tile_1a67a5d10ed54c58b0959281ecd844ec69" compoundref="_world_tile_8cs" startline="24">WorldTile.walkable</references>
-        <referencedby refid="class_tile_nodes_1a9a38710f1a4db631749ce324fdce45b5" compoundref="_tile_nodes_8cs" startline="293" endline="319">SetNeigbour</referencedby>
+        <referencedby refid="class_tile_nodes_1a9a38710f1a4db631749ce324fdce45b5" compoundref="_tile_nodes_8cs" startline="323" endline="349">SetNeigbour</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_tile_nodes_1a01f4a1ba0ca7e1f2ab7e415d6c7f9659" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -496,13 +526,77 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="341" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="341" bodyend="359"/>
-        <references refid="class_tile_nodes_1a39fcc4af28f59271e7240cd247d82f1c" compoundref="_tile_nodes_8cs" startline="62">pathData</references>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="369" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="369" bodyend="387"/>
+        <references refid="class_tile_nodes_1a39fcc4af28f59271e7240cd247d82f1c" compoundref="_tile_nodes_8cs" startline="63">pathData</references>
         <references refid="class_paths_data_1a0c983e89eebbb01db59f6d663ff1b7ad" compoundref="_paths_data_8cs" startline="16">PathsData.paths</references>
-        <references refid="class_tile_nodes_1ab946891fc9a68468265108a701287107" compoundref="_tile_nodes_8cs" startline="60">SelectedPath</references>
+        <references refid="class_tile_nodes_1ab946891fc9a68468265108a701287107" compoundref="_tile_nodes_8cs" startline="61">SelectedPath</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_nodes_1ac1408539c724af576e8270f1ba385ae1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileNodes.SetTileColor</definition>
+        <argsstring>(Vector3Int tileCellPosition, Color color, Tilemap tileMap)</argsstring>
+        <name>SetTileColor</name>
+        <param>
+          <type>Vector3Int</type>
+          <declname>tileCellPosition</declname>
+        </param>
+        <param>
+          <type>Color</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>Tilemap</type>
+          <declname>tileMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tileCellPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tileMap</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="430" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="430" bodyend="434"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_nodes_1a1ccf7b0f073c26d31eb580fb09a7deb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileNodes.CheckBlockedPath</definition>
+        <argsstring>()</argsstring>
+        <name>CheckBlockedPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="82" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="82" bodyend="99"/>
+        <references refid="class_world_tile_1a8f5987fb6a965ae214c37cfad2cf7b4b" compoundref="_world_tile_8cs" startline="26">WorldTile.isBlockedBarrier</references>
+        <references refid="class_tile_nodes_1a39fcc4af28f59271e7240cd247d82f1c" compoundref="_tile_nodes_8cs" startline="63">pathData</references>
+        <references refid="class_paths_data_1a0c983e89eebbb01db59f6d663ff1b7ad" compoundref="_paths_data_8cs" startline="16">PathsData.paths</references>
+        <referencedby refid="class_tile_nodes_1ac98b771ebb362f8f18ae7f00e7fd02d5" compoundref="_tile_nodes_8cs" startline="77" endline="80">Update</referencedby>
+      </memberdef>
       <memberdef kind="function" id="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void TileNodes.BuildTable</definition>
@@ -514,16 +608,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="71" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="71" bodyend="89"/>
-        <references refid="class_tile_nodes_1a3b290228407d9efe1dee72097542079b" compoundref="_tile_nodes_8cs" startline="114" endline="130">generateNodes</references>
-        <references refid="class_tile_nodes_1adfe6ff8844ffd91eaa10118f79c6cea8" compoundref="_tile_nodes_8cs" startline="53">mapConstant</references>
-        <references refid="class_tile_nodes_1a742cad762988dd19f0d42766c68522e0" compoundref="_tile_nodes_8cs" startline="263">maxGridX</references>
-        <references refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" compoundref="_tile_nodes_8cs" startline="46">nodes</references>
-        <references refid="class_tile_nodes_1a6de8f4d49a8506edbe79598f1ab768a0" compoundref="_tile_nodes_8cs" startline="56">parentNodes</references>
-        <references refid="class_tile_nodes_1a39fcc4af28f59271e7240cd247d82f1c" compoundref="_tile_nodes_8cs" startline="62">pathData</references>
-        <references refid="class_tile_nodes_1a01f5f5e71a343d5b80076b2d7cffbf9d" compoundref="_tile_nodes_8cs" startline="50">permanentSpawnPoints</references>
-        <references refid="class_tile_nodes_1a087b01a53f8c26a028516c27d3b1b512" compoundref="_tile_nodes_8cs" startline="49">unsortedNodes</references>
-        <referencedby refid="class_tile_nodes_1a7898107bcc8d734c1d17637e79fbccac" compoundref="_tile_nodes_8cs" startline="67" endline="67">Awake</referencedby>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="101" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="101" bodyend="119"/>
+        <references refid="class_tile_nodes_1a3b290228407d9efe1dee72097542079b" compoundref="_tile_nodes_8cs" startline="144" endline="160">generateNodes</references>
+        <references refid="class_tile_nodes_1adfe6ff8844ffd91eaa10118f79c6cea8" compoundref="_tile_nodes_8cs" startline="54">mapConstant</references>
+        <references refid="class_tile_nodes_1a742cad762988dd19f0d42766c68522e0" compoundref="_tile_nodes_8cs" startline="293">maxGridX</references>
+        <references refid="class_tile_nodes_1a62f3d4d066f4d21c9ea2cd6bbd365507" compoundref="_tile_nodes_8cs" startline="47">nodes</references>
+        <references refid="class_tile_nodes_1a6de8f4d49a8506edbe79598f1ab768a0" compoundref="_tile_nodes_8cs" startline="57">parentNodes</references>
+        <references refid="class_tile_nodes_1a39fcc4af28f59271e7240cd247d82f1c" compoundref="_tile_nodes_8cs" startline="63">pathData</references>
+        <references refid="class_tile_nodes_1a01f5f5e71a343d5b80076b2d7cffbf9d" compoundref="_tile_nodes_8cs" startline="51">permanentSpawnPoints</references>
+        <references refid="class_tile_nodes_1a087b01a53f8c26a028516c27d3b1b512" compoundref="_tile_nodes_8cs" startline="50">unsortedNodes</references>
+        <referencedby refid="class_tile_nodes_1a7898107bcc8d734c1d17637e79fbccac" compoundref="_tile_nodes_8cs" startline="72" endline="72">Awake</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -536,11 +630,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="97" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="97" bodyend="106"/>
-        <references refid="class_tile_nodes_1a39fcc4af28f59271e7240cd247d82f1c" compoundref="_tile_nodes_8cs" startline="62">pathData</references>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="127" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="127" bodyend="136"/>
+        <references refid="class_tile_nodes_1a39fcc4af28f59271e7240cd247d82f1c" compoundref="_tile_nodes_8cs" startline="63">pathData</references>
         <references refid="class_paths_data_1a0c983e89eebbb01db59f6d663ff1b7ad" compoundref="_paths_data_8cs" startline="16">PathsData.paths</references>
-        <references refid="class_tile_nodes_1ac0c4f96c30c24ce1a95a74f6653a7cb4" compoundref="_tile_nodes_8cs" startline="61">selectedList</references>
-        <references refid="class_tile_nodes_1ab946891fc9a68468265108a701287107" compoundref="_tile_nodes_8cs" startline="60">SelectedPath</references>
+        <references refid="class_tile_nodes_1ac0c4f96c30c24ce1a95a74f6653a7cb4" compoundref="_tile_nodes_8cs" startline="62">selectedList</references>
+        <references refid="class_tile_nodes_1ab946891fc9a68468265108a701287107" compoundref="_tile_nodes_8cs" startline="61">SelectedPath</references>
       </memberdef>
       <memberdef kind="function" id="class_tile_nodes_1a682a75a288b3455f7118464c72d1ade8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -561,8 +655,52 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="361" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="361" bodyend="367"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="389" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="389" bodyend="395"/>
         <references refid="class_tile_nodes_1ae4cd6d6cc01d53e622c72801248430f7" compoundref="_tile_nodes_8cs" startline="42">selectedNodes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_nodes_1a7083882752d5e8d4e0af43e6d80bd178" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileNodes.HideTiles</definition>
+        <argsstring>(List&lt; TransformList &gt; tileList, Tilemap tileMap)</argsstring>
+        <name>HideTiles</name>
+        <param>
+          <type>List&lt; <ref refid="class_transform_list" kindref="compound">TransformList</ref> &gt;</type>
+          <declname>tileList</declname>
+        </param>
+        <param>
+          <type>Tilemap</type>
+          <declname>tileMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="397" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="397" bodyend="409"/>
+        <references refid="class_transform_list_1a73df2c7ef28634403ce240821069145e" compoundref="_hidden_tile_list_8cs" startline="13">TransformList.list</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_nodes_1a8631d5c16e9a000e5d75a0be86669c9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileNodes.ShowTiles</definition>
+        <argsstring>(List&lt; TransformList &gt; tileList, Tilemap tileMap)</argsstring>
+        <name>ShowTiles</name>
+        <param>
+          <type>List&lt; <ref refid="class_transform_list" kindref="compound">TransformList</ref> &gt;</type>
+          <declname>tileList</declname>
+        </param>
+        <param>
+          <type>Tilemap</type>
+          <declname>tileMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="411" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="411" bodyend="422"/>
+        <references refid="class_transform_list_1a73df2c7ef28634403ce240821069145e" compoundref="_hidden_tile_list_8cs" startline="13">TransformList.list</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -570,45 +708,56 @@
     <detaileddescription>
 <para>TD_TileNodes is used to spawn and keep track of all nodes attached to the tilemap sprites</para>    </detaileddescription>
     <inheritancegraph>
-      <node id="152">
+      <node id="218">
         <label>TileNodes</label>
         <link refid="class_tile_nodes"/>
-        <childnode refid="153" relation="public-inheritance">
+        <childnode refid="219" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="153">
+      <node id="219">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="156">
+      <node id="222">
         <label>PathsData</label>
         <link refid="class_paths_data"/>
       </node>
-      <node id="154">
+      <node id="223">
+        <label>HiddenTileManager</label>
+        <link refid="class_hidden_tile_manager"/>
+      </node>
+      <node id="220">
         <label>TileNodes</label>
         <link refid="class_tile_nodes"/>
-        <childnode refid="155" relation="public-inheritance">
+        <childnode refid="221" relation="public-inheritance">
         </childnode>
-        <childnode refid="156" relation="usage">
+        <childnode refid="222" relation="usage">
           <edgelabel>pathData</edgelabel>
         </childnode>
+        <childnode refid="223" relation="usage">
+          <edgelabel>hiddenTileManager</edgelabel>
+        </childnode>
       </node>
-      <node id="155">
+      <node id="221">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="18" bodyend="369"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/TileNodes.cs" bodystart="18" bodyend="436"/>
     <listofallmembers>
       <member refid="class_tile_nodes_1a3cc3cf231a636206585be0dd45083fef" prot="private" virt="non-virtual"><scope>TileNodes</scope><name>AddNodeToList</name></member>
       <member refid="class_tile_nodes_1a7898107bcc8d734c1d17637e79fbccac" prot="private" virt="non-virtual"><scope>TileNodes</scope><name>Awake</name></member>
       <member refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>BuildTable</name></member>
+      <member refid="class_tile_nodes_1a1ccf7b0f073c26d31eb580fb09a7deb1" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>CheckBlockedPath</name></member>
       <member refid="class_tile_nodes_1a557c8490c2b6401b62434f2864ef2021" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>CrystalTiles</name></member>
       <member refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>Editor_SelectList</name></member>
       <member refid="class_tile_nodes_1a20148be059e178a928b312445f254d09" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>enemyPrefab</name></member>
       <member refid="class_tile_nodes_1a0be3e08a35f2d348adf51bbda7a80156" prot="private" virt="non-virtual"><scope>TileNodes</scope><name>FillNodeTable</name></member>
       <member refid="class_tile_nodes_1a3b290228407d9efe1dee72097542079b" prot="private" virt="non-virtual"><scope>TileNodes</scope><name>generateNodes</name></member>
       <member refid="class_tile_nodes_1af16f96ce799acf1980dd093038414a14" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>gridBase</name></member>
+      <member refid="class_tile_nodes_1a6e41f0f9876f665c405751fe82b2f898" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>hiddenTileManager</name></member>
+      <member refid="class_tile_nodes_1a8caa3de58ed3e18b6e1d62ae7898a13f" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>HiddenTiles</name></member>
+      <member refid="class_tile_nodes_1a7083882752d5e8d4e0af43e6d80bd178" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>HideTiles</name></member>
       <member refid="class_tile_nodes_1ada9f70382a3f5b939e511f66c14a9550" prot="private" virt="non-virtual"><scope>TileNodes</scope><name>LoopThroughTileset</name></member>
       <member refid="class_tile_nodes_1adfe6ff8844ffd91eaa10118f79c6cea8" prot="private" virt="non-virtual"><scope>TileNodes</scope><name>mapConstant</name></member>
       <member refid="class_tile_nodes_1a742cad762988dd19f0d42766c68522e0" prot="private" virt="non-virtual"><scope>TileNodes</scope><name>maxGridX</name></member>
@@ -624,6 +773,8 @@
       <member refid="class_tile_nodes_1a9a38710f1a4db631749ce324fdce45b5" prot="private" virt="non-virtual"><scope>TileNodes</scope><name>SetNeigbour</name></member>
       <member refid="class_tile_nodes_1a31b964ce2d85c182bdb187b590a9f51c" prot="private" virt="non-virtual"><scope>TileNodes</scope><name>SetNeigbours</name></member>
       <member refid="class_tile_nodes_1a682a75a288b3455f7118464c72d1ade8" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>SetSpawnStartPosFromSelected</name></member>
+      <member refid="class_tile_nodes_1ac1408539c724af576e8270f1ba385ae1" prot="private" virt="non-virtual"><scope>TileNodes</scope><name>SetTileColor</name></member>
+      <member refid="class_tile_nodes_1a8631d5c16e9a000e5d75a0be86669c9d" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>ShowTiles</name></member>
       <member refid="class_tile_nodes_1a64c51f701381910490db9134ea449961" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>SpawnTiles</name></member>
       <member refid="class_tile_nodes_1a69f9661768889712032eb49c9ed09480" prot="private" virt="non-virtual"><scope>TileNodes</scope><name>Start</name></member>
       <member refid="class_tile_nodes_1a6fd9c73b126eb38c5c430a505c53ac8b" prot="public" virt="non-virtual"><scope>TileNodes</scope><name>TileNodesPrefabs</name></member>

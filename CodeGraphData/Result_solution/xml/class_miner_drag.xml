@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="19" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" bodystart="19" bodyend="-1"/>
         <referencedby refid="class_miner_drag_1acc2e88b7aa03718290134984ce684fc6" compoundref="_miner_drag_8cs" startline="33" endline="36">OnBeginDrag</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_miner_drag_1a09e96b3d3f541c0102065ea8e0924821" prot="public" static="no" mutable="no">
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="23" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="23" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" line="23" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" bodystart="23" bodyend="-1"/>
         <referencedby refid="class_miner_drag_1acde9eb2bd049cd3e0577eea6d6881f86" compoundref="_miner_drag_8cs" startline="59" endline="103">OnEndDrag</referencedby>
       </memberdef>
       </sectiondef>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="20" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" bodystart="20" bodyend="-1"/>
         <referencedby refid="class_miner_drag_1acc2e88b7aa03718290134984ce684fc6" compoundref="_miner_drag_8cs" startline="33" endline="36">OnBeginDrag</referencedby>
         <referencedby refid="class_miner_drag_1acde9eb2bd049cd3e0577eea6d6881f86" compoundref="_miner_drag_8cs" startline="59" endline="103">OnEndDrag</referencedby>
       </memberdef>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="33" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="33" bodyend="36"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" line="33" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" bodystart="33" bodyend="36"/>
         <references refid="class_miner_drag_1a636b2403050d6fd48bea95e287d5fdcb" compoundref="_miner_drag_8cs" startline="20">currentMiner</references>
         <references refid="class_miner_drag_1a0f9f4acaf3cfacfcfe0101deb41eb2ee" compoundref="_miner_drag_8cs" startline="19">minerPrefab</references>
       </memberdef>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="44" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="44" bodyend="51"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" line="44" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" bodystart="44" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="class_miner_drag_1acde9eb2bd049cd3e0577eea6d6881f86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="59" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="59" bodyend="103"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" line="59" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" bodystart="59" bodyend="103"/>
         <references refid="class_miner_drag_1a636b2403050d6fd48bea95e287d5fdcb" compoundref="_miner_drag_8cs" startline="20">currentMiner</references>
         <references refid="class_miner_drag_1ad0fb2891077169acdf5dc4d4cd1655b8" compoundref="_miner_drag_8cs" startline="111" endline="115">LogRaycasthitObject</references>
         <references refid="class_miner_drag_1a09e96b3d3f541c0102065ea8e0924821" compoundref="_miner_drag_8cs" startline="23">validTileTypes</references>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="111" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="111" bodyend="115"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" line="111" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" bodystart="111" bodyend="115"/>
         <referencedby refid="class_miner_drag_1acde9eb2bd049cd3e0577eea6d6881f86" compoundref="_miner_drag_8cs" startline="59" endline="103">OnEndDrag</referencedby>
       </memberdef>
       </sectiondef>
@@ -140,58 +140,58 @@
     <detaileddescription>
 <para>TD_TowerDrag is used to drag and drop all towers into the game onto TD_TowerDrop sockets</para>    </detaileddescription>
     <inheritancegraph>
-      <node id="95">
+      <node id="125">
         <label>IEndDragHandler</label>
       </node>
-      <node id="93">
+      <node id="123">
         <label>IBeginDragHandler</label>
       </node>
-      <node id="91">
+      <node id="121">
         <label>MinerDrag</label>
         <link refid="class_miner_drag"/>
-        <childnode refid="92" relation="public-inheritance">
+        <childnode refid="122" relation="public-inheritance">
         </childnode>
-        <childnode refid="93" relation="public-inheritance">
+        <childnode refid="123" relation="public-inheritance">
         </childnode>
-        <childnode refid="94" relation="public-inheritance">
+        <childnode refid="124" relation="public-inheritance">
         </childnode>
-        <childnode refid="95" relation="public-inheritance">
+        <childnode refid="125" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="92">
+      <node id="122">
         <label>MonoBehaviour</label>
       </node>
-      <node id="94">
+      <node id="124">
         <label>IDragHandler</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="100">
+      <node id="130">
         <label>IEndDragHandler</label>
       </node>
-      <node id="98">
+      <node id="128">
         <label>IBeginDragHandler</label>
       </node>
-      <node id="96">
+      <node id="126">
         <label>MinerDrag</label>
         <link refid="class_miner_drag"/>
-        <childnode refid="97" relation="public-inheritance">
+        <childnode refid="127" relation="public-inheritance">
         </childnode>
-        <childnode refid="98" relation="public-inheritance">
+        <childnode refid="128" relation="public-inheritance">
         </childnode>
-        <childnode refid="99" relation="public-inheritance">
+        <childnode refid="129" relation="public-inheritance">
         </childnode>
-        <childnode refid="100" relation="public-inheritance">
+        <childnode refid="130" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="97">
+      <node id="127">
         <label>MonoBehaviour</label>
       </node>
-      <node id="99">
+      <node id="129">
         <label>IDragHandler</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" line="17" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MinerDrag.cs" bodystart="16" bodyend="118"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" line="17" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging/MinerDrag.cs" bodystart="16" bodyend="118"/>
     <listofallmembers>
       <member refid="class_miner_drag_1a636b2403050d6fd48bea95e287d5fdcb" prot="private" virt="non-virtual"><scope>MinerDrag</scope><name>currentMiner</name></member>
       <member refid="class_miner_drag_1ad0fb2891077169acdf5dc4d4cd1655b8" prot="private" virt="non-virtual"><scope>MinerDrag</scope><name>LogRaycasthitObject</name></member>

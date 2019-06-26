@@ -3,7 +3,6 @@
   <compounddef id="_path_finding_8cs" kind="file">
     <compoundname>PathFinding.cs</compoundname>
     <innerclass refid="class_path_finding" prot="public">PathFinding</innerclass>
-    <innernamespace refid="namespace_system_1_1_linq">System::Linq</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

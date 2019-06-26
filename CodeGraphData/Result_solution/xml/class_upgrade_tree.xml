@@ -61,36 +61,36 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="193">
+      <node id="272">
         <label>UpgradeTree</label>
         <link refid="class_upgrade_tree"/>
-        <childnode refid="194" relation="public-inheritance">
+        <childnode refid="273" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="194">
+      <node id="273">
         <label>ScriptableObject</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="197">
+      <node id="276">
         <label>UpgradeNode</label>
         <link refid="class_upgrade_node"/>
-        <childnode refid="196" relation="public-inheritance">
+        <childnode refid="275" relation="public-inheritance">
         </childnode>
-        <childnode refid="197" relation="usage">
+        <childnode refid="276" relation="usage">
           <edgelabel>necessaryNodes</edgelabel>
         </childnode>
       </node>
-      <node id="195">
+      <node id="274">
         <label>UpgradeTree</label>
         <link refid="class_upgrade_tree"/>
-        <childnode refid="196" relation="public-inheritance">
+        <childnode refid="275" relation="public-inheritance">
         </childnode>
-        <childnode refid="197" relation="usage">
+        <childnode refid="276" relation="usage">
           <edgelabel>tree</edgelabel>
         </childnode>
       </node>
-      <node id="196">
+      <node id="275">
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>

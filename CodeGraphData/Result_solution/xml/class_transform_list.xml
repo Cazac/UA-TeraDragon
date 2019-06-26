@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_transform_list" kind="class" prot="public">
+    <compoundname>TransformList</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" prot="public" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform TransformList.breakableBlockPos</definition>
+        <argsstring></argsstring>
+        <name>breakableBlockPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_transform_list_1a73df2c7ef28634403ce240821069145e" prot="public" static="no" mutable="no">
+        <type>List&lt; Transform &gt;</type>
+        <definition>List&lt;Transform&gt; TransformList.list</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1a7083882752d5e8d4e0af43e6d80bd178" compoundref="_tile_nodes_8cs" startline="397" endline="409">TileNodes.HideTiles</referencedby>
+        <referencedby refid="class_tile_nodes_1a8631d5c16e9a000e5d75a0be86669c9d" compoundref="_tile_nodes_8cs" startline="411" endline="422">TileNodes.ShowTiles</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="10" bodyend="14"/>
+    <listofallmembers>
+      <member refid="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" prot="public" virt="non-virtual"><scope>TransformList</scope><name>breakableBlockPos</name></member>
+      <member refid="class_transform_list_1a73df2c7ef28634403ce240821069145e" prot="public" virt="non-virtual"><scope>TransformList</scope><name>list</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

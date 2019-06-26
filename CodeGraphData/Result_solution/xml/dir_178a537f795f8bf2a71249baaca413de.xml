@@ -3,15 +3,15 @@
   <compounddef id="dir_178a537f795f8bf2a71249baaca413de" kind="dir">
     <compoundname>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI</compoundname>
     <innerdir refid="dir_fd8049f1820f82d03301a95654a7eae5">C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts</innerdir>
+    <innerfile refid="_barrier_drag_8cs">BarrierDrag.cs</innerfile>
     <innerfile refid="_button_controller_8cs">ButtonController.cs</innerfile>
     <innerfile refid="_camera_panning_8cs">CameraPanning.cs</innerfile>
     <innerfile refid="_camera_panning_cursor_8cs">CameraPanningCursor.cs</innerfile>
     <innerfile refid="_cursor_move_8cs">CursorMove.cs</innerfile>
     <innerfile refid="_cursor_selection_8cs">CursorSelection.cs</innerfile>
+    <innerfile refid="_drag_interface_8cs">DragInterface.cs</innerfile>
     <innerfile refid="_input_detection_8cs">InputDetection.cs</innerfile>
-    <innerfile refid="_miner_drag_8cs">MinerDrag.cs</innerfile>
     <innerfile refid="_timer_8cs">Timer.cs</innerfile>
-    <innerfile refid="_tower_drag_8cs">TowerDrag.cs</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

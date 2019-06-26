@@ -36,24 +36,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="62">
+      <node id="89">
         <label>GameManager</label>
         <link refid="class_game_manager"/>
-        <childnode refid="63" relation="public-inheritance">
+        <childnode refid="90" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="63">
+      <node id="90">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="64">
+      <node id="91">
         <label>GameManager</label>
         <link refid="class_game_manager"/>
-        <childnode refid="65" relation="public-inheritance">
+        <childnode refid="92" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="65">
+      <node id="92">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>

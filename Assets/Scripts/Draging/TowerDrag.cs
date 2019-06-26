@@ -149,11 +149,19 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
             //Condition for barrier
             if(!hit.collider.GetComponent<WorldTile>().isBlockedBarrier && hit.collider.GetComponent<WorldTile>().walkable && currentTower.name.Contains("Barrier")
-                && (tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count) && waveManager.CurrentWave.TimeUntilSpawn >= 0 && waveManager.EnableSpawning == false)
+                && waveManager.CurrentWave.TimeUntilSpawn >= 0 && waveManager.EnableSpawning == false)
             {
-                GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
                 hit.collider.GetComponent<WorldTile>().isBlockedBarrier = true;
+                    GameObject newTower = null;
+                tileNodes.CheckBlockedPath();
 
+                if(tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count /*&& !tileNodes.pathData.blockedPaths.Contains(waveManager.CurrentWave.Paths[0])*/)
+                    newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
+                else
+                {
+                    hit.collider.GetComponent<WorldTile>().isBlockedBarrier = false;
+                    tileNodes.CheckBlockedPath();
+                }
 
                 //Destory old UI Tower
                 Destroy(currentTower);

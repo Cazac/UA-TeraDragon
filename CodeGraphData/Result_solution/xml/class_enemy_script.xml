@@ -16,7 +16,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="9" bodyend="-1"/>
-        <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="131">DynamicPathRelocation</referencedby>
+        <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="127">DynamicPathRelocation</referencedby>
         <referencedby refid="class_enemy_script_1a1033134339a3ffbee7e98c9b6dbd756d" compoundref="_enemy_script_8cs" startline="47" endline="54">FixedUpdate</referencedby>
         <referencedby refid="class_enemy_script_1add0f8eee29617a94df0467533cad1d74" compoundref="_enemy_script_8cs" startline="63" endline="97">Move</referencedby>
       </memberdef>
@@ -33,7 +33,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="10" bodyend="-1"/>
-        <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="131">DynamicPathRelocation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_enemy_script_1ab16cb5c586d820cbf42ca4d9a33e7843" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -60,7 +59,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="18" bodyend="-1"/>
-        <referencedby refid="class_enemy_script_1a5d7e4e7d49ee735c2b1ceec83f2a3f31" compoundref="_enemy_script_8cs" startline="149" endline="161">TakeDamage</referencedby>
+        <referencedby refid="class_enemy_script_1a5d7e4e7d49ee735c2b1ceec83f2a3f31" compoundref="_enemy_script_8cs" startline="145" endline="157">TakeDamage</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_enemy_script_1a2c618fda4a3b98cd7fc1089c682c3e90" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -122,7 +121,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="14" bodyend="-1"/>
-        <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="131">DynamicPathRelocation</referencedby>
+        <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="127">DynamicPathRelocation</referencedby>
         <referencedby refid="class_enemy_script_1a61a56df6ca1e4301e3b17525a2885f0a" compoundref="_enemy_script_8cs" startline="30" endline="45">Start</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_enemy_script_1a8a4debfb9cc25fb192dec4f958ee5d06" prot="private" static="no" mutable="no">
@@ -180,7 +179,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="25" bodyend="-1"/>
-        <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="131">DynamicPathRelocation</referencedby>
+        <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="127">DynamicPathRelocation</referencedby>
         <referencedby refid="class_enemy_script_1add0f8eee29617a94df0467533cad1d74" compoundref="_enemy_script_8cs" startline="63" endline="97">Move</referencedby>
       </memberdef>
       </sectiondef>
@@ -214,7 +213,7 @@
         </inbodydescription>
         <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="47" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="47" bodyend="54"/>
         <references refid="class_enemy_script_1a20e45acc4753089a439f591cb3eacfc5" compoundref="_enemy_script_8cs" startline="9">currentWaypoints</references>
-        <references refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="131">DynamicPathRelocation</references>
+        <references refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="127">DynamicPathRelocation</references>
         <references refid="class_enemy_script_1add0f8eee29617a94df0467533cad1d74" compoundref="_enemy_script_8cs" startline="63" endline="97">Move</references>
       </memberdef>
       <memberdef kind="function" id="class_enemy_script_1add0f8eee29617a94df0467533cad1d74" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -261,11 +260,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="106" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="106" bodyend="131"/>
-        <references refid="class_enemy_script_1ae8809313e6b155557feee15e18c823b0" compoundref="_enemy_script_8cs" startline="10">blockedWaypoints</references>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="106" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="106" bodyend="127"/>
+        <references refid="class_paths_data_1a28b06131b0fff4b4ddc247df13f911be" compoundref="_paths_data_8cs" startline="17">PathsData.blockedPaths</references>
         <references refid="class_enemy_script_1a20e45acc4753089a439f591cb3eacfc5" compoundref="_enemy_script_8cs" startline="9">currentWaypoints</references>
-        <references refid="class_world_tile_1a8f5987fb6a965ae214c37cfad2cf7b4b" compoundref="_world_tile_8cs" startline="26">WorldTile.isBlockedBarrier</references>
-        <references refid="class_tile_nodes_1a39fcc4af28f59271e7240cd247d82f1c" compoundref="_tile_nodes_8cs" startline="62">TileNodes.pathData</references>
+        <references refid="class_tile_nodes_1a39fcc4af28f59271e7240cd247d82f1c" compoundref="_tile_nodes_8cs" startline="63">TileNodes.pathData</references>
         <references refid="class_paths_data_1a0c983e89eebbb01db59f6d663ff1b7ad" compoundref="_paths_data_8cs" startline="16">PathsData.paths</references>
         <references refid="class_enemy_script_1aa5591cdbe1d7223a9a777ffdfee847a7" compoundref="_enemy_script_8cs" startline="25">StartPosition</references>
         <references refid="class_enemy_script_1a07d716905f47bff4bcf700119e559425" compoundref="_enemy_script_8cs" startline="14">tileNodes</references>
@@ -286,7 +284,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="138" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="138" bodyend="146"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="134" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="134" bodyend="142"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -305,7 +303,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="149" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="149" bodyend="161"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="145" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="145" bodyend="157"/>
         <references refid="class_enemy_script_1ae8f37b47dbf347e64db652cf78174ad7" compoundref="_enemy_script_8cs" startline="18">CurrentHealth</references>
       </memberdef>
       <memberdef kind="function" id="class_enemy_script_1a6ee07f1345fa5e6c4491c52a7b25ad4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -319,7 +317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="164" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="164" bodyend="167"/>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="160" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="160" bodyend="163"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -327,56 +325,63 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="54">
+      <node id="80">
         <label>EnemyScript</label>
         <link refid="class_enemy_script"/>
-        <childnode refid="55" relation="public-inheritance">
+        <childnode refid="81" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="55">
+      <node id="81">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="60">
+      <node id="87">
         <label>EnemyData</label>
         <link refid="class_enemy_data"/>
-        <childnode refid="61" relation="public-inheritance">
+        <childnode refid="88" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="59">
+      <node id="85">
         <label>PathsData</label>
         <link refid="class_paths_data"/>
       </node>
-      <node id="56">
+      <node id="82">
         <label>EnemyScript</label>
         <link refid="class_enemy_script"/>
-        <childnode refid="57" relation="public-inheritance">
+        <childnode refid="83" relation="public-inheritance">
         </childnode>
-        <childnode refid="58" relation="usage">
+        <childnode refid="84" relation="usage">
           <edgelabel>tileNodes</edgelabel>
         </childnode>
-        <childnode refid="60" relation="usage">
+        <childnode refid="87" relation="usage">
           <edgelabel>enemyData</edgelabel>
         </childnode>
       </node>
-      <node id="58">
+      <node id="86">
+        <label>HiddenTileManager</label>
+        <link refid="class_hidden_tile_manager"/>
+      </node>
+      <node id="84">
         <label>TileNodes</label>
         <link refid="class_tile_nodes"/>
-        <childnode refid="57" relation="public-inheritance">
+        <childnode refid="83" relation="public-inheritance">
         </childnode>
-        <childnode refid="59" relation="usage">
+        <childnode refid="85" relation="usage">
           <edgelabel>pathData</edgelabel>
         </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>hiddenTileManager</edgelabel>
+        </childnode>
       </node>
-      <node id="61">
+      <node id="88">
         <label>ScriptableObject</label>
       </node>
-      <node id="57">
+      <node id="83">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="5" bodyend="168"/>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy/EnemyScript.cs" bodystart="5" bodyend="164"/>
     <listofallmembers>
       <member refid="class_enemy_script_1a6ee07f1345fa5e6c4491c52a7b25ad4e" prot="public" virt="non-virtual"><scope>EnemyScript</scope><name>ApplySlow</name></member>
       <member refid="class_enemy_script_1ae8809313e6b155557feee15e18c823b0" prot="public" virt="non-virtual"><scope>EnemyScript</scope><name>blockedWaypoints</name></member>

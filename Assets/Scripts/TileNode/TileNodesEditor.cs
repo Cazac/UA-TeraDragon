@@ -20,5 +20,30 @@ public class TileNodesEditor : Editor
         {
             myScript.Editor_SelectList();
         }
+
+        if (GUILayout.Button("Test hide tile"))
+        {
+            myScript.HideTiles(myScript.hiddenTileManager.list, myScript.uniqueTilemap);
+            //foreach (var item in myScript.hiddenTileManager.list)
+            //{
+            //    foreach (var item1 in item.list)
+            //    {
+            //        Debug.Log(item1.ToString());
+            //    }
+            //}
+        }
+
+        if (GUILayout.Button("Test show tile"))
+        {
+            myScript.ShowTiles(myScript.hiddenTileManager.list, myScript.uniqueTilemap);
+            //foreach (var item in myScript.hiddenTileManager.list)
+            //{
+            //    foreach (var item1 in item.list)
+            //    {
+            //        Debug.Log(item1.ToString());
+            //    }
+            //}
+        }
+
     }
 }

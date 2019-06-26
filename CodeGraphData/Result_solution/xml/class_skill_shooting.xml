@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_skill_shooting" kind="class" prot="public">
+    <compoundname>SkillShooting</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_skill_shooting_1a5966a31d5730d8977ecac993ba9635de" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SkillShooting.skillDamage</definition>
+        <argsstring></argsstring>
+        <name>skillDamage</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_skill_shooting_1a5898d1b8ff5d69f2e046d87a1409be9f" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_enemy_script" kindref="compound">EnemyScript</ref> &gt;</type>
+        <definition>List&lt;EnemyScript&gt; SkillShooting.MonstersToShoot</definition>
+        <argsstring></argsstring>
+        <name>MonstersToShoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_skill_shooting_1ac4a9d0c45c520dda6cccceb583620360" compoundref="_skill_shooting_8cs" startline="64" endline="83">ShootAll</referencedby>
+        <referencedby refid="class_skill_shooting_1a7ffe645703a2244c6ad34b7c01e27d99" compoundref="_skill_shooting_8cs" startline="19" endline="23">Start</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_skill_shooting_1a9c8b4690ac77357d81ff41a10d478fca" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject SkillShooting.buildUpParticules</definition>
+        <argsstring></argsstring>
+        <name>buildUpParticules</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_skill_shooting_1aee536e689a1daec58f7ff872e5ca2e51" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject SkillShooting.releaseParticules</definition>
+        <argsstring></argsstring>
+        <name>releaseParticules</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_skill_shooting_1a7ffe645703a2244c6ad34b7c01e27d99" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkillShooting.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" bodystart="19" bodyend="23"/>
+        <references refid="class_skill_shooting_1a5898d1b8ff5d69f2e046d87a1409be9f" compoundref="_skill_shooting_8cs" startline="11">MonstersToShoot</references>
+        <references refid="class_skill_shooting_1a4f69bb788c27652b261fe6ab1df13c14" compoundref="_skill_shooting_8cs" startline="47" endline="57">StartSkill</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_skill_shooting_1ab50ab01bfa6852177fbb2ae6cd048c27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkillShooting.OnTriggerEnter2D</definition>
+        <argsstring>(Collider2D collider)</argsstring>
+        <name>OnTriggerEnter2D</name>
+        <param>
+          <type>Collider2D</type>
+          <declname>collider</declname>
+        </param>
+        <briefdescription>
+<para>UNDOCUMTNETED </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" line="30" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" bodystart="30" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skill_shooting_1a4f69bb788c27652b261fe6ab1df13c14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator SkillShooting.StartSkill</definition>
+        <argsstring>()</argsstring>
+        <name>StartSkill</name>
+        <briefdescription>
+<para>UNDOCUMTNETED </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" line="47" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" bodystart="47" bodyend="57"/>
+        <references refid="class_skill_shooting_1ac4a9d0c45c520dda6cccceb583620360" compoundref="_skill_shooting_8cs" startline="64" endline="83">ShootAll</references>
+        <referencedby refid="class_skill_shooting_1a7ffe645703a2244c6ad34b7c01e27d99" compoundref="_skill_shooting_8cs" startline="19" endline="23">Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_skill_shooting_1ac4a9d0c45c520dda6cccceb583620360" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkillShooting.ShootAll</definition>
+        <argsstring>()</argsstring>
+        <name>ShootAll</name>
+        <briefdescription>
+<para>UNDOCUMTNETED </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" line="64" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" bodystart="64" bodyend="83"/>
+        <references refid="class_skill_shooting_1a5898d1b8ff5d69f2e046d87a1409be9f" compoundref="_skill_shooting_8cs" startline="11">MonstersToShoot</references>
+        <referencedby refid="class_skill_shooting_1a4f69bb788c27652b261fe6ab1df13c14" compoundref="_skill_shooting_8cs" startline="47" endline="57">StartSkill</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_skill_shooting_1aac86a2f26d2946ccdc472d5ea38a8794" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkillShooting.OnTriggerExit2D</definition>
+        <argsstring>(Collider2D collider)</argsstring>
+        <name>OnTriggerExit2D</name>
+        <param>
+          <type>Collider2D</type>
+          <declname>collider</declname>
+        </param>
+        <briefdescription>
+<para>UNDOCUMTNETED </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" line="90" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" bodystart="90" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="191">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="190">
+        <label>SkillShooting</label>
+        <link refid="class_skill_shooting"/>
+        <childnode refid="191" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="193">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="192">
+        <label>SkillShooting</label>
+        <link refid="class_skill_shooting"/>
+        <childnode refid="193" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS/SkillShooting.cs" bodystart="5" bodyend="99"/>
+    <listofallmembers>
+      <member refid="class_skill_shooting_1a9c8b4690ac77357d81ff41a10d478fca" prot="public" virt="non-virtual"><scope>SkillShooting</scope><name>buildUpParticules</name></member>
+      <member refid="class_skill_shooting_1a5898d1b8ff5d69f2e046d87a1409be9f" prot="public" virt="non-virtual"><scope>SkillShooting</scope><name>MonstersToShoot</name></member>
+      <member refid="class_skill_shooting_1ab50ab01bfa6852177fbb2ae6cd048c27" prot="public" virt="non-virtual"><scope>SkillShooting</scope><name>OnTriggerEnter2D</name></member>
+      <member refid="class_skill_shooting_1aac86a2f26d2946ccdc472d5ea38a8794" prot="public" virt="non-virtual"><scope>SkillShooting</scope><name>OnTriggerExit2D</name></member>
+      <member refid="class_skill_shooting_1aee536e689a1daec58f7ff872e5ca2e51" prot="public" virt="non-virtual"><scope>SkillShooting</scope><name>releaseParticules</name></member>
+      <member refid="class_skill_shooting_1ac4a9d0c45c520dda6cccceb583620360" prot="public" virt="non-virtual"><scope>SkillShooting</scope><name>ShootAll</name></member>
+      <member refid="class_skill_shooting_1a5966a31d5730d8977ecac993ba9635de" prot="public" virt="non-virtual"><scope>SkillShooting</scope><name>skillDamage</name></member>
+      <member refid="class_skill_shooting_1a7ffe645703a2244c6ad34b7c01e27d99" prot="private" virt="non-virtual"><scope>SkillShooting</scope><name>Start</name></member>
+      <member refid="class_skill_shooting_1a4f69bb788c27652b261fe6ab1df13c14" prot="public" virt="non-virtual"><scope>SkillShooting</scope><name>StartSkill</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

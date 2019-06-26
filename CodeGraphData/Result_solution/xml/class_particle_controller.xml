@@ -105,24 +105,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="102">
+      <node id="132">
         <label>MonoBehaviour</label>
       </node>
-      <node id="101">
+      <node id="131">
         <label>ParticleController</label>
         <link refid="class_particle_controller"/>
-        <childnode refid="102" relation="public-inheritance">
+        <childnode refid="132" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="104">
+      <node id="134">
         <label>MonoBehaviour</label>
       </node>
-      <node id="103">
+      <node id="133">
         <label>ParticleController</label>
         <link refid="class_particle_controller"/>
-        <childnode refid="104" relation="public-inheritance">
+        <childnode refid="134" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

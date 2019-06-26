@@ -140,102 +140,112 @@
     <detaileddescription>
 <para><ref refid="class_cursor_selection" kindref="compound">CursorSelection</ref></para>    </detaileddescription>
     <inheritancegraph>
-      <node id="32">
+      <node id="42">
         <label>MonoBehaviour</label>
       </node>
-      <node id="31">
+      <node id="41">
         <label>CursorSelection</label>
         <link refid="class_cursor_selection"/>
-        <childnode refid="32" relation="public-inheritance">
+        <childnode refid="42" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="37">
+      <node id="48">
         <label>WaveSystem.WaveManager</label>
         <link refid="class_wave_system_1_1_wave_manager"/>
-        <childnode refid="34" relation="public-inheritance">
+        <childnode refid="44" relation="public-inheritance">
         </childnode>
-        <childnode refid="38" relation="usage">
+        <childnode refid="49" relation="usage">
           <edgelabel>waves</edgelabel>
           <edgelabel>currentWave</edgelabel>
         </childnode>
-        <childnode refid="41" relation="usage">
+        <childnode refid="52" relation="usage">
           <edgelabel>soundManager</edgelabel>
         </childnode>
-        <childnode refid="35" relation="usage">
+        <childnode refid="45" relation="usage">
           <edgelabel>tileNodes</edgelabel>
           <edgelabel>tiles</edgelabel>
         </childnode>
-        <childnode refid="33" relation="usage">
+        <childnode refid="43" relation="usage">
           <edgelabel>cursorSelection</edgelabel>
         </childnode>
-        <childnode refid="43" relation="usage">
+        <childnode refid="54" relation="usage">
           <edgelabel>currentTimer</edgelabel>
         </childnode>
       </node>
-      <node id="40">
+      <node id="51">
         <label>PathWrapper</label>
         <link refid="class_path_wrapper"/>
-        <childnode refid="39" relation="public-inheritance">
+        <childnode refid="50" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="36">
+      <node id="46">
         <label>PathsData</label>
         <link refid="class_paths_data"/>
       </node>
-      <node id="42">
+      <node id="53">
         <label>SoundObject</label>
         <link refid="class_sound_object"/>
-        <childnode refid="39" relation="public-inheritance">
+        <childnode refid="50" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="41">
+      <node id="52">
         <label>SoundManager</label>
         <link refid="class_sound_manager"/>
-        <childnode refid="34" relation="public-inheritance">
+        <childnode refid="44" relation="public-inheritance">
         </childnode>
-        <childnode refid="42" relation="usage">
+        <childnode refid="53" relation="usage">
           <edgelabel>soundClips</edgelabel>
         </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>waveManager</edgelabel>
+        </childnode>
       </node>
-      <node id="43">
+      <node id="47">
+        <label>HiddenTileManager</label>
+        <link refid="class_hidden_tile_manager"/>
+      </node>
+      <node id="54">
         <label>Timer</label>
         <link refid="class_timer"/>
       </node>
-      <node id="35">
+      <node id="45">
         <label>TileNodes</label>
         <link refid="class_tile_nodes"/>
-        <childnode refid="34" relation="public-inheritance">
+        <childnode refid="44" relation="public-inheritance">
         </childnode>
-        <childnode refid="36" relation="usage">
+        <childnode refid="46" relation="usage">
           <edgelabel>pathData</edgelabel>
         </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>hiddenTileManager</edgelabel>
+        </childnode>
       </node>
-      <node id="39">
+      <node id="50">
         <label>ScriptableObject</label>
       </node>
-      <node id="34">
+      <node id="44">
         <label>MonoBehaviour</label>
       </node>
-      <node id="38">
+      <node id="49">
         <label>WaveData</label>
         <link refid="class_wave_data"/>
-        <childnode refid="39" relation="public-inheritance">
+        <childnode refid="50" relation="public-inheritance">
         </childnode>
-        <childnode refid="40" relation="usage">
+        <childnode refid="51" relation="usage">
           <edgelabel>listWapper</edgelabel>
         </childnode>
       </node>
-      <node id="33">
+      <node id="43">
         <label>CursorSelection</label>
         <link refid="class_cursor_selection"/>
-        <childnode refid="34" relation="public-inheritance">
+        <childnode refid="44" relation="public-inheritance">
         </childnode>
-        <childnode refid="35" relation="usage">
+        <childnode refid="45" relation="usage">
           <edgelabel>tileNodes</edgelabel>
         </childnode>
-        <childnode refid="37" relation="usage">
+        <childnode refid="48" relation="usage">
           <edgelabel>waveManager</edgelabel>
         </childnode>
       </node>

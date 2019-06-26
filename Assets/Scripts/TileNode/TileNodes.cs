@@ -42,6 +42,7 @@ public class TileNodes : MonoBehaviour
     private List<GameObject> selectedNodes = new List<GameObject>();
     public List<GameObject> SelectedNodes { get => selectedNodes; set => selectedNodes = value; }
 
+
     // Sorted 2D array of nodes
     public GameObject[,] nodes; 
 
@@ -61,27 +62,37 @@ public class TileNodes : MonoBehaviour
     public List<WorldTile> selectedList;
     public PathsData pathData;
 
+    public HiddenTileManager hiddenTileManager = new HiddenTileManager();
+
+
 
 
     //////////////////////////////////////////////////////////
 
     private void Awake() { BuildTable(); }
-    private void Start() { }
+    private void Start()
+    {
+       
+    }
     private void Update()
     {
         CheckBlockedPath();
     }
 
-    private void CheckBlockedPath()
+    public void CheckBlockedPath()
     {
-        foreach (var path in pathData.paths)
+        if(pathData != null)
         {
-            foreach (WorldTile tile in path)
+            pathData.blockedPaths.Clear();
+            foreach (var path in pathData.paths)
             {
-                if (tile.isBlockedBarrier == true)
+                foreach (WorldTile tile in path)
                 {
-                    pathData.blockedPaths.Add(path);
-                    break;
+                    if (tile.isBlockedBarrier == true)
+                    {
+                        pathData.blockedPaths.Add(path);
+                        break;
+                    }
                 }
             }
         }
@@ -355,8 +366,6 @@ public class TileNodes : MonoBehaviour
         }
     }
 
-
-
     private void OnDrawGizmos()
     {
         // draws the lines that represent the path currently selected
@@ -385,6 +394,56 @@ public class TileNodes : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="tileList">HiddenTileMananger object</param>
+    /// <param name="tileMap">Tilemap that contains hidden tiles</param>
+    public void HideTiles(List<TransformList> tileList, Tilemap tileMap)
+    {
+        foreach (TransformList tileTransformListObject in tileList)
+        {
+            foreach (Transform transformPos in tileTransformListObject.list)
+            {
+                transformPos.gameObject.SetActive(false);
+                //Remove blocked options for tile, default is Lock Colour
 
+                Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
+                SetTileColor(temp, Color.black, tileMap);
+            }
+        }
+    }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="tileList">HiddenTileMananger object</param>
+    /// <param name="tileMap">Tilemap that contains hidden tiles</param>
+    public void ShowTiles(List<TransformList> tileList, Tilemap tileMap)
+    {
+        foreach (TransformList tileTransformListObject in tileList)
+        {
+            if(tileTransformListObject.breakableBlockPos == null)
+            {
+                foreach (Transform transformPos in tileTransformListObject.list)
+                {
+                    transformPos.gameObject.SetActive(true);
+                    Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
+                    SetTileColor(temp, Color.white, tileMap);
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="tileCellPosition">Position of tile in tile map</param>
+    /// <param name="color">Color of tile to be set</param>
+    /// <param name="tileMap">Tilemap that contains hidden tiles</param>
+    private void SetTileColor(Vector3Int tileCellPosition,Color color, Tilemap tileMap)
+    {
+        tileMap.SetTileFlags(tileCellPosition, TileFlags.None);
+        tileMap.SetColor(tileCellPosition, color);
+    }
 }
