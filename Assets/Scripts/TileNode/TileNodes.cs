@@ -107,13 +107,13 @@ public class TileNodes : MonoBehaviour
         //   listWapper = new ListWapper
         if (parentNodes.Length < 2)
         {
-            for (int i = 0; i < parentNodes.Length; i++)
-            {
-                if (parentNodes[i] != null)
-                {
-                    DestroyImmediate(parentNodes[i]);
-                }
-            }
+            //for (int i = 0; i < parentNodes.Length; i++)
+            //{
+            //    if (parentNodes[i] != null)
+            //    {
+            //        DestroyImmediate(parentNodes[i]);
+            //    }
+            //}
 
             parentNodes = new GameObject[TileNodesPrefabs.Length];
 
