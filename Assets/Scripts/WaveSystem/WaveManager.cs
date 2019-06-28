@@ -81,7 +81,7 @@ namespace WaveSystem
 
         private void Start()
         {
-            soundManager = GameManager.FindObjectOfType<SoundManager>();
+            //soundManager = GameManager.FindObjectOfType<SoundManager>();
             tileNodes = GameObject.FindObjectOfType<TileNodes>();
             //Cached CursorSelection
             cursorSelection = GameObject.FindObjectOfType<CursorSelection>();

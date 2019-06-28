@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.5754717, g: 0.3305638, b: 0, a: 1}
+  m_Color: {r: 0.5754717, g: 0.21875, b: 0, a: 0.19607843}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,6 +99,8 @@ MonoBehaviour:
   posX: 0
   posY: 0
   walkable: 1
+  towering: 0
+  isBlockedBarrier: 0
   myNeighbours: []
 --- !u!50 &-1452315230598678834
 Rigidbody2D:

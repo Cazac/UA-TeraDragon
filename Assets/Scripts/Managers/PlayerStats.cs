@@ -55,6 +55,7 @@ public class PlayerStats : MonoBehaviour
         UpdateSkillUI();
     }
 
+    /////////////////////////////////////////////////////////////////
 
     public void RemoveLife(int i)
     {
