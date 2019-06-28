@@ -135,6 +135,7 @@ public class TileNodes : MonoBehaviour
         }
     }
 
+    public Dictionary<string, GameObject> dictionaryTest;
 
     ///////////////
     /// <summary>
@@ -218,13 +219,21 @@ public class TileNodes : MonoBehaviour
                             node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
                         }
                     }
+                    // checks if tile is found in Cystal
+                    foreach (Tile tile in CrystalTiles)
+                    {
+                        if (name == tile.name)
+                        {
+                            node = Instantiate(TileNodesPrefabs[2], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                        }
+                    }
                     // checks if tile is found in unwalkable
                     //foreach (Tile tile in TowerTiles)
                     //{
-                        //if (name == tile.name)
-                        //{
-                            //node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
-                       //}
+                    //if (name == tile.name)
+                    //{
+                    //node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                    //}
                     //}
 
 
@@ -237,6 +246,8 @@ public class TileNodes : MonoBehaviour
                     {
                         unsortedNodes.Add(node);
                         wt = node.GetComponent<WorldTile>();
+                        if(wt == null)
+                            wt = node.GetComponent<CrystalTile>();
                         wt.gridX = GridX;
                         wt.gridY = GirdY;
                     }

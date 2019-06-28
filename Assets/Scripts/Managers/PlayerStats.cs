@@ -84,6 +84,28 @@ public class PlayerStats : MonoBehaviour
         Debug.Log("Game over man, Game over");
     }
 
+    public void AddCrystal(CrystalColor color)
+    {
+        switch (color)
+        {
+            case CrystalColor.RED:
+                crystalsOwned_Red++;
+                return;
+            case CrystalColor.BLUE:
+                crystalsOwned_Blue++;
+                return;
+            case CrystalColor.GREEN:
+                crystalsOwned_Green++;
+                return;
+            case CrystalColor.YELLOW:
+                crystalsOwned_Yellow++;
+                return;
+        }
+    }
+
+
+
+
 
     ///////////////
     /// <summary>
@@ -104,41 +126,11 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    ///////////////
     /// <summary>
     /// Undocumented
     /// </summary>
-    ///////////////
     public IEnumerator UpdateCrystalValues()
     {
-        //Upadate Extra Values
-        crystalsExtra_Red += crystalsPerSecond_Red;
-        crystalsExtra_Blue += crystalsPerSecond_Blue;
-        crystalsExtra_Green += crystalsPerSecond_Green;
-        crystalsExtra_Yellow += crystalsPerSecond_Yellow;
-
-        //Check if values are over 1
-        if (crystalsExtra_Red >= 1)
-        {
-            crystalsOwned_Red++;
-            crystalsExtra_Red--;
-        }
-        if (crystalsExtra_Blue >= 1)
-        {
-            crystalsOwned_Blue++;
-            crystalsExtra_Blue--;
-        }
-        if (crystalsExtra_Green >= 1)
-        {
-            crystalsOwned_Green++;
-            crystalsExtra_Green--;
-        }
-        if (crystalsExtra_Yellow >= 1)
-        {
-            crystalsOwned_Yellow++;
-            crystalsExtra_Yellow--;
-        }
-
 
         UpdateCrystalUI();
 
@@ -153,12 +145,9 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-
-    ///////////////
     /// <summary>
     /// Update Crystal UI elements
     /// </summary>
-    ///////////////
     public void UpdateCrystalUI()
     {
         crystalText_Red.text = "Red Gems: " + crystalsOwned_Red;

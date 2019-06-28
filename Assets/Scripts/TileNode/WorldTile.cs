@@ -28,14 +28,6 @@ public class WorldTile : MonoBehaviour
     public List<WorldTile> myNeighbours;
 
 
-
-    //General Crystal Values, Better place to put it ???
-
-    public float crystalValueRed;
-    public float crystalValueBlue;
-    public float crystalValueGreen;
-    public float crystalValueYellow;
-
     /////////////////////////////////////////////////////////////////
 
     public override string ToString()
