@@ -36,11 +36,6 @@ public class TileNodes : MonoBehaviour
     public Tile[] TowerTiles;
     public Tile[] CrystalTiles;
 
-    //  TO DO   // - Used for ???
-    [Header("Selected Nodes")]
-    [SerializeField]
-    private List<GameObject> selectedNodes = new List<GameObject>();
-    public List<GameObject> SelectedNodes { get => selectedNodes; set => selectedNodes = value; }
 
 
     // Sorted 2D array of nodes

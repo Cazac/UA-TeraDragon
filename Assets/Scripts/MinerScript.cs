@@ -6,6 +6,7 @@ public class MinerScript : MonoBehaviour
 {
     public int level;
     public CrystalTile crystalTile;
+    public float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class MinerScript : MonoBehaviour
         CrystalTimer();
     }
 
-    public float timer;
+
     void CrystalTimer()
     {
         timer += level * Time.fixedDeltaTime;

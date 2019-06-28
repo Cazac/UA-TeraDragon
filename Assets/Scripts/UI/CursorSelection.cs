@@ -15,18 +15,20 @@ public class CursorSelection : MonoBehaviour
 {
     [Header("The layer that floor tile is in")]
     public int tileLayer;
+    [Header("The layer that tower tile is in")]
+    public int TowerLayer;
+   // int layer_mask = LayerMask.GetMask("Tower");
 
     private WaveManager waveManager;
-    private TileNodes tileNodes;
+    private TowerSelector selectorManager;
 
     /////////////////////////////////////////////////////////////////
 
     private void Start() 
     {
-        tileNodes = GameObject.FindObjectOfType<TileNodes>();
-
-        //Bit shift tileLayer
-        tileLayer = 1 << tileLayer;
+        TowerLayer = LayerMask.GetMask("Tower");
+        selectorManager = GameObject.FindObjectOfType<TowerSelector>();
+        
 
         //Caching reference
         waveManager = GameObject.FindObjectOfType<WaveManager>();
@@ -53,18 +55,33 @@ public class CursorSelection : MonoBehaviour
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity, tileLayer))
+        if(Physics.Raycast(raycastMouse, out hit, Mathf.Infinity, TowerLayer))
         {
+            selectorManager.selectedNode = hit.collider.gameObject;
+
+            // waveManager.NodeSpawnPosition.Add(hit.collider.gameObject.transform.position);
+
+
+            Debug.Log("TowerLayer hit:" + hit.collider.gameObject.name + " selected");
+        }
+        else if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity, tileLayer))
+        {
+            Debug.Log("hit layer:" + hit.transform.gameObject.layer);
             //TODO: Color is hardcoded to black when a tile is clicked, need to change to dynamic
             hit.collider.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
-            LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(),
-            hit.collider.gameObject.transform.parent.gameObject.name);
+            //LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(),
+            //hit.collider.gameObject.transform.parent.gameObject.name);
 
             //Store hit tile node in a list in tD_TileNodes
-            tileNodes.SelectedNodes.Add(hit.collider.gameObject);
+          //  selectorManager.SelectedNodes.Add(hit.collider.gameObject);
+            selectorManager.selectedNode = hit.collider.gameObject; 
 
-            waveManager.NodeSpawnPosition.Add(hit.collider.gameObject.transform.position);
-            Debug.Log("Node added");
+            //waveManager.NodeSpawnPosition.Add(hit.collider.gameObject.transform.position);
+            Debug.Log(hit.collider.gameObject.name + " selected");
+        }
+        else
+        {
+            selectorManager.selectedNode = null;
         }
     }
 

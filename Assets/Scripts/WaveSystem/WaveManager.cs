@@ -24,7 +24,7 @@ namespace WaveSystem
 
 
         [Header("DEBUG ONLY currentWave")]
-        [SerializeField] 
+        [SerializeField]
         private WaveData currentWave;
 
 
@@ -108,7 +108,7 @@ namespace WaveSystem
                       //  tiles.pathData.paths[i]
                    // };
             //}
-        
+
             CurrentWave = waves[0];
             MakeParent();
 
@@ -135,7 +135,7 @@ namespace WaveSystem
 
         private void Update()
         {
-            //Create new timer object for current wave 
+            //Create new timer object for current wave
             if (EnableSpawning == true && currentTimer == null)
             {
                 InstantiateNewTimer(CurrentWave.TimeUntilSpawn, CurrentWave.WaveTimer, ref currentTimer);
@@ -192,7 +192,7 @@ namespace WaveSystem
         ///Main method for spawning a single type of enemy in multiple position
         /// </summary>
         /// <remarks>
-        ///Use IEnumerator and must only be called in Start() 
+        ///Use IEnumerator and must only be called in Start()
         ///</remarks>
         public IEnumerator SpawnSingleEnemyPerWave()
         {
@@ -257,7 +257,7 @@ namespace WaveSystem
         /// <summary>
         ///Check if all waves in waves[] have been processed
         /// </summary>
-        ///<returns>Returns true if reaches the end of array</returns> 
+        ///<returns>Returns true if reaches the end of array</returns>
         private Boolean AllWaveCompleted()
         {
             //Debug.Log("Wave index: " + waveIndex);
