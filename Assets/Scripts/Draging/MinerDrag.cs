@@ -69,7 +69,7 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             //Check hit tile name
 
             string tileTypeName = hit.collider.gameObject.name;
-            print(hit.collider.GetComponent<CrystalTile>() != null);
+            print("Is not null:" + hit.collider.GetComponent<CrystalTile>() != null);
             if (hit.collider.GetComponent<CrystalTile>() != null && hit.collider.GetComponent<CrystalTile>().towering)
             {
                 //Leave the Miner on the node, Call spawner later for init

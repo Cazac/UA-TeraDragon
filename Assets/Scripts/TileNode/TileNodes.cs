@@ -431,14 +431,17 @@ public class TileNodes : MonoBehaviour
     {
         foreach (TransformList tileTransformListObject in hiddenTileManager.list)
         {
-            if(tileTransformListObject.breakableBlockPos == null)
+            if (tileTransformListObject.breakableBlockPos == null)
             {
                 foreach (Transform transformPos in tileTransformListObject.list)
                 {
-                    Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
-                    SetTileColor(uniqueTilemap.WorldToCell(temp), Color.white, uniqueTilemap);
-                    transformPos.gameObject.SetActive(true);
+                    Vector3Int temp = new Vector3Int((int) transformPos.position.x, (int) transformPos.position.y, (int) transformPos.position.z);
+                    if (temp != null)
+                    {
+                        SetTileColor(uniqueTilemap.WorldToCell(temp), Color.white, uniqueTilemap);
+                        transformPos.gameObject.SetActive(true);
 
+                    }
                 }
             }
         }

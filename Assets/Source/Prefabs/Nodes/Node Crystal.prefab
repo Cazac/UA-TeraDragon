@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 1, b: 0.9335954, a: 0.19607843}
+  m_Color: {r: 1, g: 0, b: 0.07060623, a: 0.19607843}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -111,10 +111,10 @@ MonoBehaviour:
   posX: 0
   posY: 0
   walkable: 0
-  towering: 0
+  towering: 1
   isBlockedBarrier: 0
   myNeighbours: []
-  crystalValueRed: 0
-  crystalValueBlue: 0
-  crystalValueGreen: 0
-  crystalValueYellow: 0
+  crystalValueRed: 25
+  crystalValueBlue: 25
+  crystalValueGreen: 25
+  crystalValueYellow: 25
