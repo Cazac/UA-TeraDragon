@@ -10,7 +10,7 @@ public class TowerData: ScriptableObject
     public float BaseRange;
     public float BaseAttackSpeed;
     public Sprite towerSprite;
-    public Projectile projectile;
+    public ProjectileData projectile;
     // effects to give to its projectiles
     public string[] Effects;
     
