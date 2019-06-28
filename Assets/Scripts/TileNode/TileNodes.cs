@@ -40,7 +40,7 @@ public class TileNodes : MonoBehaviour
 
 
     // Sorted 2D array of nodes
-    public GameObject[,] nodes; 
+    public GameObject[,] nodes;
 
     // List of nodes before they are sorted
     private List<GameObject> unsortedNodes;
@@ -61,44 +61,18 @@ public class TileNodes : MonoBehaviour
     [SerializeField]
     public HiddenTileManager hiddenTileManager;
 
-    private HiddenTileManager internalHiddenTileObject;
-    public HiddenTileManager InternalHiddenTileObject { get => internalHiddenTileObject; set => internalHiddenTileObject = value; }
-
-
     //////////////////////////////////////////////////////////
 
     private void Awake()
     {
-        //internalHiddenTileObject = new HiddenTileManager();
-        //foreach (var item in hiddenTileManager.list)
-        //{
-        //    internalHiddenTileObject.list.Add(item);
-        //    foreach (var itemTransformList in internalHiddenTileObject.list)
-        //    {
-        //        itemTransformList.breakableBlockPos = hiddenTileManager.
-        //    }
 
-        //}
-        //hiddenTileManager = null;
-
-        internalHiddenTileObject = new HiddenTileManager(hiddenTileManager.list);
         HideTiles();
-
         BuildTable();
-    }
-
-    private void OnApplicationQuit()
-    {
-        foreach (var item in internalHiddenTileObject.list)
-        {
-            hiddenTileManager = new HiddenTileManager();
-            hiddenTileManager.list.Add(item);
-        }
     }
 
     private void Start()
     {
-        
+
     }
     private void Update()
     {
@@ -107,7 +81,7 @@ public class TileNodes : MonoBehaviour
 
     public void CheckBlockedPath()
     {
-        if(pathData != null)
+        if (pathData != null)
         {
             pathData.blockedPaths.Clear();
             foreach (var path in pathData.paths)
@@ -126,24 +100,52 @@ public class TileNodes : MonoBehaviour
 
     public void BuildTable()
     {
-        //   listWapper = new ListWapper();
-        permanentSpawnPoints = new List<WorldTile>();
-        for (int i = 0; i < parentNodes.Length; i++)
+
+        mapConstant = gridBase.cellSize.x;
+
+
+        //   listWapper = new ListWapper
+        if (parentNodes.Length < 2)
         {
-            if (parentNodes[i] != null)
+            for (int i = 0; i < parentNodes.Length; i++)
             {
-                DestroyImmediate(parentNodes[i]);
+                if (parentNodes[i] != null)
+                {
+                    DestroyImmediate(parentNodes[i]);
+                }
             }
+
+            parentNodes = new GameObject[TileNodesPrefabs.Length];
+
+            parentNodes[0] = new GameObject("Parent_WalkableTiles");
+            parentNodes[0].transform.SetParent(transform);
+
+            parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
+            parentNodes[1].transform.SetParent(transform);
+
         }
 
-        unsortedNodes = new List<GameObject>();
-        mapConstant = gridBase.cellSize.x;
-       
-        generateNodes();
-        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints, maxGridX);
+        //else
+        //{
+        //    foreach (GameObject child in parentNodes[0].gameObject.transform)
+        //    {
+        //        DestroyImmediate(child);
+        //    }
 
+        //    foreach (GameObject child in parentNodes[1].gameObject.transform)
+        //    {
+        //        DestroyImmediate(child);
+        //    }
+        //}
+
+
+        permanentSpawnPoints = new List<WorldTile>();
+        unsortedNodes = new List<GameObject>();
+        //generateNodes();
+
+        pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints, maxGridX);
     }
-        
+
 
     ///////////////
     /// <summary>
@@ -194,13 +196,13 @@ public class TileNodes : MonoBehaviour
     private void LoopThroughTileset()
     {
         WorldTile wt; GameObject node;
-        parentNodes = new GameObject[TileNodesPrefabs.Length];
+        //parentNodes = new GameObject[TileNodesPrefabs.Length];
 
-         parentNodes[0] = new GameObject("Parent_WalkableTiles");
-        parentNodes[0].transform.SetParent(transform);
+        //parentNodes[0] = new GameObject("Parent_WalkableTiles");
+        //parentNodes[0].transform.SetParent(transform);
 
-         parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
-        parentNodes[1].transform.SetParent(transform);
+        //parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
+        //parentNodes[1].transform.SetParent(transform);
 
         int GridX = 0; int GirdY = 0;
         for (int x = -(nodes.GetLength(0)) - 1; x < nodes.GetLength(0) + 1; x++)
@@ -208,7 +210,7 @@ public class TileNodes : MonoBehaviour
             for (int y = -(nodes.GetLength(1)) - 1; y < nodes.GetLength(1) + 1; y++)
             {
                 TileBase tb = uniqueTilemap.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
-                
+
 
                 if (tb != null)
                 {
@@ -272,7 +274,7 @@ public class TileNodes : MonoBehaviour
                     {
                         unsortedNodes.Add(node);
                         wt = node.GetComponent<WorldTile>();
-                        if(wt == null)
+                        if (wt == null)
                             wt = node.GetComponent<CrystalTile>();
                         wt.gridX = GridX;
                         wt.gridY = GirdY;
@@ -320,9 +322,9 @@ public class TileNodes : MonoBehaviour
             if (wt.gridX > maxGridX)
             {
                 maxGridX = wt.gridX;
-                
+
             }
-            
+
         }
         //print("MaxGridx:" + maxGridX);
         //unsortedNodes.Clear();
@@ -438,11 +440,12 @@ public class TileNodes : MonoBehaviour
     /// <param name="tileMap">Tilemap that contains hidden tiles</param>
     public void HideTiles()
     {
-        foreach (TransformList tileTransformListObject in internalHiddenTileObject.list)
+        foreach (TransformList tileTransformListObject in hiddenTileManager.list)
         {
             foreach (Transform transformPos in tileTransformListObject.listOfNodes)
             {
                 //Remove blocked options for tile, default is Lock Colour
+                transformPos.gameObject.SetActive(false);
 
                 Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
 
@@ -454,29 +457,37 @@ public class TileNodes : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// Reveal hidden area
+    /// <para>
+    /// Loop through each TransformList class to get required properties
+    /// </para>
     /// </summary>
-    /// <param name="tileList">HiddenTileMananger object</param>
-    /// <param name="tileMap">Tilemap that contains hidden tiles</param>
     public void ShowTiles()
     {
-        foreach (TransformList tileTransformListObject in internalHiddenTileObject.list)
+        foreach (TransformList tileTransformListObject in hiddenTileManager.list)
         {
-            if(tileTransformListObject.breakableBlockPos == null)
+            foreach (Transform transformPos in tileTransformListObject.listOfNodes)
             {
-                foreach (Transform transformPos in tileTransformListObject.listOfNodes)
-                {
-                    Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
-                    SetTileColor(uniqueTilemap.WorldToCell(temp), Color.white, uniqueTilemap);
-                    transformPos.gameObject.SetActive(true);
-                }
+                transformPos.gameObject.SetActive(true);
+
+                Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
+                SetTileColor(uniqueTilemap.WorldToCell(temp), Color.white, uniqueTilemap);
+                transformPos.gameObject.SetActive(true);
             }
         }
     }
 
+    /// <summary>
+    /// Reveal hidden area
+    /// <para>
+    /// Loop through each TransformList class to get required properties
+    /// </para>
+    /// </summary>
+    /// <param name="destructableTile">Node (associates with tile) that will reveal hidden area</param>
+
     public void ShowTiles(Transform destructableTile)
     {
-        foreach (TransformList tileTransformListObject in internalHiddenTileObject.list)
+        foreach (TransformList tileTransformListObject in hiddenTileManager.list)
         {
             if (tileTransformListObject.breakableBlockPos == destructableTile)
             {
@@ -491,12 +502,12 @@ public class TileNodes : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// Set tile color as black to hide tiles and white to show tile
     /// </summary>
     /// <param name="tileCellPosition">Position of tile in tile map</param>
     /// <param name="color">Color of tile to be set</param>
     /// <param name="tileMap">Tilemap that contains hidden tiles</param>
-    private void SetTileColor(Vector3Int tileCellPosition,Color color, Tilemap tileMap)
+    private void SetTileColor(Vector3Int tileCellPosition, Color color, Tilemap tileMap)
     {
         tileMap.SetTileFlags(tileCellPosition, TileFlags.None);
         tileMap.SetColor(tileCellPosition, color);

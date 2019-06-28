@@ -45,5 +45,10 @@ public class TileNodesEditor : Editor
             //}
         }
 
+        if (GUILayout.Button("Calculate Path"))
+        {
+            //myScript.Editor_CalculatePath();
+        }
+
     }
 }
