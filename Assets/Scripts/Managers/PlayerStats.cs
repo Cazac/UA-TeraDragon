@@ -112,6 +112,28 @@ public class PlayerStats : MonoBehaviour
         crystalText_Blue.text = "Blue Gems: " + crystalsOwned_Blue;
         crystalText_Green.text = "Green Gems: " + crystalsOwned_Green;
         crystalText_Yellow.text = "Yellow Gems: " + crystalsOwned_Yellow;
+
+        //Disable buttons
+        if (crystalsOwned_Red >= 5)
+        {
+            crystalText_Red.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            crystalText_Red.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+        }
+
+        if (crystalsOwned_Blue >= 5)
+        {
+            crystalText_Blue.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            crystalText_Blue.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+        }
+
+
+
     }
 
 }

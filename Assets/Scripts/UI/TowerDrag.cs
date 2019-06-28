@@ -72,8 +72,21 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         //Check Raycast for any hit with COLLIDERS
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
         {
-            //Check node name
-            string tileLayer = hit.collider.gameObject.transform.parent.gameObject.name;
+            string tileLayer = "";
+
+
+            if (hit.collider.gameObject.transform.parent != null)
+            {
+                tileLayer = hit.collider.gameObject.transform.parent.gameObject.name;
+            }
+            else
+            {
+                print("Destroy Tower");
+                Destroy(currentTower);
+
+                return;
+            }
+
 
 
       //      print(tileLayer);
