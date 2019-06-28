@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using System.IO;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 ///////////////
 /// <summary>
@@ -57,17 +58,47 @@ public class TileNodes : MonoBehaviour
     public List<WorldTile> selectedList;
     public PathsData pathData;
 
-    public HiddenTileManager hiddenTileManager = new HiddenTileManager();
+    [SerializeField]
+    public HiddenTileManager hiddenTileManager;
 
-
+    private HiddenTileManager internalHiddenTileObject;
+    public HiddenTileManager InternalHiddenTileObject { get => internalHiddenTileObject; set => internalHiddenTileObject = value; }
 
 
     //////////////////////////////////////////////////////////
 
-    private void Awake() { BuildTable(); }
+    private void Awake()
+    {
+        //internalHiddenTileObject = new HiddenTileManager();
+        //foreach (var item in hiddenTileManager.list)
+        //{
+        //    internalHiddenTileObject.list.Add(item);
+        //    foreach (var itemTransformList in internalHiddenTileObject.list)
+        //    {
+        //        itemTransformList.breakableBlockPos = hiddenTileManager.
+        //    }
+
+        //}
+        //hiddenTileManager = null;
+
+        internalHiddenTileObject = new HiddenTileManager(hiddenTileManager.list);
+        HideTiles();
+
+        BuildTable();
+    }
+
+    private void OnApplicationQuit()
+    {
+        foreach (var item in internalHiddenTileObject.list)
+        {
+            hiddenTileManager = new HiddenTileManager();
+            hiddenTileManager.list.Add(item);
+        }
+    }
+
     private void Start()
     {
-       
+        
     }
     private void Update()
     {
@@ -165,10 +196,10 @@ public class TileNodes : MonoBehaviour
         WorldTile wt; GameObject node;
         parentNodes = new GameObject[TileNodesPrefabs.Length];
 
-        parentNodes[0] = new GameObject("Parent_WalkableTiles");
+         parentNodes[0] = new GameObject("Parent_WalkableTiles");
         parentNodes[0].transform.SetParent(transform);
 
-        parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
+         parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
         parentNodes[1].transform.SetParent(transform);
 
         int GridX = 0; int GirdY = 0;
@@ -294,7 +325,7 @@ public class TileNodes : MonoBehaviour
             
         }
         //print("MaxGridx:" + maxGridX);
-        unsortedNodes.Clear();
+        //unsortedNodes.Clear();
     }
     int maxGridX = 0;
 
@@ -407,9 +438,9 @@ public class TileNodes : MonoBehaviour
     /// <param name="tileMap">Tilemap that contains hidden tiles</param>
     public void HideTiles()
     {
-        foreach (TransformList tileTransformListObject in hiddenTileManager.list)
+        foreach (TransformList tileTransformListObject in internalHiddenTileObject.list)
         {
-            foreach (Transform transformPos in tileTransformListObject.list)
+            foreach (Transform transformPos in tileTransformListObject.listOfNodes)
             {
                 //Remove blocked options for tile, default is Lock Colour
 
@@ -429,16 +460,31 @@ public class TileNodes : MonoBehaviour
     /// <param name="tileMap">Tilemap that contains hidden tiles</param>
     public void ShowTiles()
     {
-        foreach (TransformList tileTransformListObject in hiddenTileManager.list)
+        foreach (TransformList tileTransformListObject in internalHiddenTileObject.list)
         {
             if(tileTransformListObject.breakableBlockPos == null)
             {
-                foreach (Transform transformPos in tileTransformListObject.list)
+                foreach (Transform transformPos in tileTransformListObject.listOfNodes)
                 {
                     Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
                     SetTileColor(uniqueTilemap.WorldToCell(temp), Color.white, uniqueTilemap);
                     transformPos.gameObject.SetActive(true);
+                }
+            }
+        }
+    }
 
+    public void ShowTiles(Transform destructableTile)
+    {
+        foreach (TransformList tileTransformListObject in internalHiddenTileObject.list)
+        {
+            if (tileTransformListObject.breakableBlockPos == destructableTile)
+            {
+                foreach (Transform transformPos in tileTransformListObject.listOfNodes)
+                {
+                    Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
+                    SetTileColor(uniqueTilemap.WorldToCell(temp), Color.white, uniqueTilemap);
+                    transformPos.gameObject.SetActive(true);
                 }
             }
         }
