@@ -10,11 +10,22 @@ using UnityEngine.Tilemaps;
 public class TransformList
 {
     public Transform breakableBlockPos;
-    public List<Transform> list;
+    public List<Transform> listOfNodes;
+
 }
 
 [System.Serializable]
 public class HiddenTileManager
 {
     public List<TransformList> list;
+
+    public HiddenTileManager()
+    {
+        list = new List<TransformList>();
+    }
+
+    public HiddenTileManager(List<TransformList> list)
+    {
+        this.list = new List<TransformList>(list);
+    }
 }

@@ -41,12 +41,14 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     //TO DO HARD CODED COST
     private int towerCost = 5;
 
-    
+
     private void Start()
     {
         waveManager = GameObject.FindObjectOfType<WaveManager>();
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
         soundManager = GameObject.FindObjectOfType<SoundManager>();
+
+        
     }
 
     /////////////////////////////////////////////////////////////////
