@@ -21,12 +21,15 @@ public class TileNodes : MonoBehaviour
     [Header("Main Grid / Tilemap")]
     public Grid gridBase;
     public Tilemap uniqueTilemap;
+    public Tilemap hiddenTileMap;
+
 
     [Header("Monster Prefabs")]
     public GameObject enemyPrefab;
 
     [Header("Tile Node Prefabs")]
     public GameObject[] TileNodesPrefabs;
+
 
     //  TO DO   // - This is not the best?
     [Header("Tile Sprites For Layers")]
@@ -51,6 +54,8 @@ public class TileNodes : MonoBehaviour
 
     [SerializeField] // necessary to have the nodes saved in and out of play
     GameObject[] parentNodes = new GameObject[0];
+    GameObject parentHiddenNodes;
+
 
     [Header("Editor variables")]
     // variables used for gizmo draw and 
@@ -65,7 +70,6 @@ public class TileNodes : MonoBehaviour
 
     private void Awake()
     {
-
         HideTiles();
         BuildTable();
     }
@@ -105,15 +109,15 @@ public class TileNodes : MonoBehaviour
 
 
         //   listWapper = new ListWapper
-        if (parentNodes.Length < 2)
+        //if (parentNodes.Length < 2)
         {
-            //for (int i = 0; i < parentNodes.Length; i++)
-            //{
-            //    if (parentNodes[i] != null)
-            //    {
-            //        DestroyImmediate(parentNodes[i]);
-            //    }
-            //}
+            for (int i = 0; i < parentNodes.Length; i++)
+            {
+                if (parentNodes[i] != null)
+                {
+                    DestroyImmediate(parentNodes[i]);
+                }
+            }
 
             parentNodes = new GameObject[TileNodesPrefabs.Length];
 
@@ -141,7 +145,7 @@ public class TileNodes : MonoBehaviour
 
         permanentSpawnPoints = new List<WorldTile>();
         unsortedNodes = new List<GameObject>();
-        //generateNodes();
+        generateNodes();
 
         pathData = PathFinding.GetPaths(nodes, permanentSpawnPoints, maxGridX);
     }
@@ -187,6 +191,57 @@ public class TileNodes : MonoBehaviour
         // give each node their neighbours
         SetNeigbours();
     }
+
+    public void BuildHiddenNodes()
+    {
+        parentHiddenNodes = new GameObject("Parent_HiddenNodes");
+        parentHiddenNodes.transform.SetParent(transform);
+        hiddenTileMap.CompressBounds();
+
+        BoundsInt bounds = hiddenTileMap.cellBounds;
+        int tableX = hiddenTileMap.cellBounds.size.x;
+        int tableY = hiddenTileMap.cellBounds.size.y;
+
+
+        nodes = new GameObject[tableX, tableY];
+
+        WorldTile wt; GameObject node = null;
+
+        int GridX = 0; int GirdY = 0;
+        for (int x = -(nodes.GetLength(0)) - 1; x < nodes.GetLength(0) + 1; x++)
+        {
+            for (int y = -(nodes.GetLength(1)) - 1; y < nodes.GetLength(1) + 1; y++)
+            {
+                TileBase tb = hiddenTileMap.GetTile(new Vector3Int(x, y, 0)); //check if we have a floor tile at that world coords
+
+                if (tb != null)
+                {
+                    Vector3 nodePosition = new Vector3(mapConstant / 2 + ((x + gridBase.transform.position.x) * mapConstant), ((y + 0.5f + gridBase.transform.position.y) * mapConstant), 0);
+
+                    string name = hiddenTileMap.GetTile(hiddenTileMap.WorldToCell(nodePosition)).name;
+
+                    foreach (Tile tile in HiddenTiles)
+                    {
+                        if (name == tile.name)
+                        {
+                            node = Instantiate(TileNodesPrefabs[0], nodePosition, Quaternion.identity, parentHiddenNodes.transform);
+                        }
+                    }
+
+                    wt = node.GetComponent<WorldTile>();
+                    if (wt == null)
+                        wt = node.GetComponent<CrystalTile>();
+                    wt.gridX = GridX;
+                    wt.gridY = GirdY;
+                }
+                GirdY++;
+            }
+            GirdY = 0; ;
+            GridX++;
+        }
+    }
+
+
 
     ///////////////
     /// <summary>
@@ -255,14 +310,15 @@ public class TileNodes : MonoBehaviour
                             node = Instantiate(TileNodesPrefabs[2], nodePosition, Quaternion.identity, parentNodes[1].transform);
                         }
                     }
-                    // checks if tile is found in unwalkable
-                    //foreach (Tile tile in TowerTiles)
-                    //{
-                    //if (name == tile.name)
-                    //{
-                    //node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
-                    //}
-                    //}
+
+                        // checks if tile is found in unwalkable
+                        //foreach (Tile tile in TowerTiles)
+                        //{
+                        //if (name == tile.name)
+                        //{
+                        //node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                        //}
+                        //}
 
 
 
@@ -445,16 +501,16 @@ public class TileNodes : MonoBehaviour
             foreach (Transform transformPos in tileTransformListObject.listOfNodes)
             {
                 //Remove blocked options for tile, default is Lock Colour
-                transformPos.gameObject.SetActive(false);
+                //transformPos.gameObject.SetActive(false);
 
                 Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
 
-                SetTileColor(uniqueTilemap.WorldToCell(temp), Color.black, uniqueTilemap);
+                SetTileColor(hiddenTileMap.WorldToCell(temp), new Color(0,0,0,1), hiddenTileMap);
                 transformPos.gameObject.SetActive(false);
 
             }
         }
-        BuildTable();
+        //BuildTable();
     }
 
     /// <summary>
@@ -469,14 +525,14 @@ public class TileNodes : MonoBehaviour
         {
             foreach (Transform transformPos in tileTransformListObject.listOfNodes)
             {
-                transformPos.gameObject.SetActive(true);
+                //transformPos.gameObject.SetActive(true);
 
                 Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
-                SetTileColor(uniqueTilemap.WorldToCell(temp), Color.white, uniqueTilemap);
+                SetTileColor(hiddenTileMap.WorldToCell(temp), new Color(0, 0, 0, 0), hiddenTileMap);
                 transformPos.gameObject.SetActive(true);
             }
         }
-        BuildTable();
+        //BuildTable();
     }
 
     /// <summary>
@@ -496,8 +552,8 @@ public class TileNodes : MonoBehaviour
                 foreach (Transform transformPos in tileTransformListObject.listOfNodes)
                 {
                     Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
-                    SetTileColor(uniqueTilemap.WorldToCell(temp), Color.white, uniqueTilemap);
-                    transformPos.gameObject.SetActive(true);
+                    SetTileColor(hiddenTileMap.WorldToCell(temp), new Color(0, 0, 0, 0), hiddenTileMap);
+                    //transformPos.gameObject.SetActive(true);
                 }
             }
         }

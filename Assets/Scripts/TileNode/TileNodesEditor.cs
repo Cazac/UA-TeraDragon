@@ -45,9 +45,9 @@ public class TileNodesEditor : Editor
             //}
         }
 
-        if (GUILayout.Button("Calculate Path"))
+        if (GUILayout.Button("Build map hidden"))
         {
-            //myScript.Editor_CalculatePath();
+            myScript.BuildHiddenNodes();
         }
 
     }
