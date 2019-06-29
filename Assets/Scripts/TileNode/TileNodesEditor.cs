@@ -45,5 +45,10 @@ public class TileNodesEditor : Editor
             //}
         }
 
+        if (GUILayout.Button("Build map hidden"))
+        {
+            myScript.BuildHiddenNodes();
+        }
+
     }
 }
