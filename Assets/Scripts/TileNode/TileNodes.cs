@@ -454,6 +454,7 @@ public class TileNodes : MonoBehaviour
 
             }
         }
+        BuildTable();
     }
 
     /// <summary>
@@ -475,6 +476,7 @@ public class TileNodes : MonoBehaviour
                 transformPos.gameObject.SetActive(true);
             }
         }
+        BuildTable();
     }
 
     /// <summary>
