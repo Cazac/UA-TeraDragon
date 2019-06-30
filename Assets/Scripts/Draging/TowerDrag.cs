@@ -128,44 +128,54 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         //Check Raycast for any hit with COLLIDERS
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
         {
+
             //Check node name
             string tileLayer = hit.collider.gameObject.transform.parent.gameObject.name;
-
-            //print(tileLayer);
-
-            if (hit.collider.GetComponent<WorldTile>().towering && currentTower.name.Contains("Tower"))
+            if (tileLayer == null)
             {
-                //Leave the Tower on the node, Call spawner later for init
-                //currentTower.transform.position = hit.collider.gameObject.transform.position;
-
-                GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
-
-                hit.collider.GetComponent<WorldTile>().towering = false;
-
-                //Destory old UI Tower
+                print("called");
                 Destroy(currentTower);
-                return;
             }
-
-            //Condition for barrier
-            if(!hit.collider.GetComponent<WorldTile>().isBlockedBarrier && hit.collider.GetComponent<WorldTile>().walkable && currentTower.name.Contains("Barrier")
-                && waveManager.CurrentWave.TimeUntilSpawn >= 0 && waveManager.EnableSpawning == false)
+            else
             {
-                hit.collider.GetComponent<WorldTile>().isBlockedBarrier = true;
-                    GameObject newTower = null;
-                tileNodes.CheckBlockedPath();
+                //print(tileLayer);
+                if (hit.collider.GetComponent<WorldTile>().towering && currentTower.name.Contains("Tower"))
+                {
+                    //Leave the Tower on the node, Call spawner later for init
+                    //currentTower.transform.position = hit.collider.gameObject.transform.position;
 
-                if(tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count /*&& !tileNodes.pathData.blockedPaths.Contains(waveManager.CurrentWave.Paths[0])*/)
-                    newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
+                    GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
+
+                    hit.collider.GetComponent<WorldTile>().towering = false;
+
+                    //Destory old UI Tower
+                    Destroy(currentTower);
+                    return;
+                }
+                //Condition for barrier
+                else if (!hit.collider.GetComponent<WorldTile>().isBlockedBarrier && hit.collider.GetComponent<WorldTile>().walkable && currentTower.name.Contains("Barrier")
+                    && waveManager.CurrentWave.TimeUntilSpawn >= 0 && waveManager.EnableSpawning == false)
+                {
+                    hit.collider.GetComponent<WorldTile>().isBlockedBarrier = true;
+                    GameObject newTower = null;
+                    tileNodes.CheckBlockedPath();
+
+                    if (tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count /*&& !tileNodes.pathData.blockedPaths.Contains(waveManager.CurrentWave.Paths[0])*/)
+                        newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
+                    else
+                    {
+                        hit.collider.GetComponent<WorldTile>().isBlockedBarrier = false;
+                        tileNodes.CheckBlockedPath();
+                    }
+
+                    //Destory old UI Tower
+                    Destroy(currentTower);
+                    return;
+                }
                 else
                 {
-                    hit.collider.GetComponent<WorldTile>().isBlockedBarrier = false;
-                    tileNodes.CheckBlockedPath();
+                    Destroy(currentTower);
                 }
-
-                //Destory old UI Tower
-                Destroy(currentTower);
-                return;
             }
         }
 
