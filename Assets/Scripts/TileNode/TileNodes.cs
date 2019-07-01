@@ -5,7 +5,6 @@ using UnityEditor;
 using UnityEngine;
 using System.IO;
 using UnityEngine.Tilemaps;
-using UnityEngine.SceneManagement;
 
 ///////////////
 /// <summary>
@@ -63,8 +62,7 @@ public class TileNodes : MonoBehaviour
     public List<WorldTile> selectedList;
     public PathsData pathData;
 
-    [SerializeField]
-    public HiddenTileManager hiddenTileManager;
+    public HiddenTileManager hiddenTileManager = new HiddenTileManager();
 
     //////////////////////////////////////////////////////////
 
@@ -383,7 +381,7 @@ public class TileNodes : MonoBehaviour
 
         }
         //print("MaxGridx:" + maxGridX);
-        //unsortedNodes.Clear();
+        unsortedNodes.Clear();
     }
     int maxGridX = 0;
 
@@ -498,7 +496,7 @@ public class TileNodes : MonoBehaviour
     {
         foreach (TransformList tileTransformListObject in hiddenTileManager.list)
         {
-            foreach (Transform transformPos in tileTransformListObject.listOfNodes)
+            foreach (Transform transformPos in tileTransformListObject.list)
             {
                 //Remove blocked options for tile, default is Lock Colour
                 //transformPos.gameObject.SetActive(false);
