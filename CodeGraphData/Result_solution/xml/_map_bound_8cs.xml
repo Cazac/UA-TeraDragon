@@ -20,6 +20,6 @@
 <codeline lineno="10" refid="class_map_bound_1a517236adf607f6ac6ec9ea84451156dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[]<sp/><ref refid="class_map_bound_1a517236adf607f6ac6ec9ea84451156dc" kindref="member">positionX</ref>;</highlight></codeline>
 <codeline lineno="11"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBound.cs"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Map Bounds/MapBound.cs"/>
   </compounddef>
 </doxygen>

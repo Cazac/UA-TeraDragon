@@ -26,10 +26,16 @@ public class EnemyScript : MonoBehaviour
 
 
     /////////////////////////////////////////////////////////////////
-
-    private void Start()
+    private void Awake()
     {
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
+        PathRelocation(transform.position);
+    }   
+    private void Start()
+    {
+        PathRelocation(transform.position);
+
+        //DynamicPathRelocation(transform.position);
 
         if (enemyData != null)
         {
@@ -49,7 +55,8 @@ public class EnemyScript : MonoBehaviour
         if (currentWaypoints.Count > 1)
         {
             Move();
-            DynamicPathRelocation(transform.position);
+            //DynamicPathRelocation(transform.position);
+            PathRelocation();
         }
     }
 
@@ -62,10 +69,8 @@ public class EnemyScript : MonoBehaviour
     ///////////////
     private void Move()
     {
-
         StartPosition = currentWaypoints[currentWaypoint].transform.position;
         endPosition = currentWaypoints[currentWaypoint + 1].transform.position;
-
         dir = endPosition - StartPosition;
 
         transform.position += dir.normalized * speed * Time.fixedDeltaTime;
@@ -96,14 +101,13 @@ public class EnemyScript : MonoBehaviour
 
     }
 
-
     /// <summary>
     /// Recalulate path when current path has a barrier
     /// <para>Function runs by scanning for path that contains blocked tile, 
     /// and redirect to path without blocked tile </para>
     /// </summary>
     /// <param name="currentPosition">Current captured position of enemy gameobject at runtime</param>
-    private void DynamicPathRelocation(Vector3 currentPosition)
+    private void PathRelocation(Vector3 currentPosition)
     {
         //scan map for block waypoibt
       
@@ -114,7 +118,30 @@ public class EnemyScript : MonoBehaviour
             if (!tileNodes.pathData.blockedPaths.Contains(path) && tileNodes.pathData.blockedPaths.Count >= 1)
             {
                 currentWaypoints = path;
-                StartPosition = currentPosition;
+                //StartPosition = currentPosition;
+                return;
+            }
+
+            //If there's still a path to take
+            else
+            {
+
+            }
+        }
+    }
+
+    public void PathRelocation()
+    {
+        //scan map for block waypoibt
+
+        //Reapply waypoints
+        foreach (var path in tileNodes.pathData.paths)
+        {
+            //If there's still a path to take
+            if (!tileNodes.pathData.blockedPaths.Contains(path) && tileNodes.pathData.blockedPaths.Count >= 1)
+            {
+                currentWaypoints = path;
+                //StartPosition = currentPosition;
                 return;
             }
 

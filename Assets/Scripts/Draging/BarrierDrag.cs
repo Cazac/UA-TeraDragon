@@ -41,7 +41,6 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     //TO DO HARD CODED COST
     private int towerCost = 5;
 
-
     private void Start()
     {
         waveManager = GameObject.FindObjectOfType<WaveManager>();
@@ -62,7 +61,7 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (gameObject.GetComponent<Button>().interactable)
         {
             //Charge Player
-            if(towerColor == "Red")
+            if (towerColor == "Red")
             {
                 playerStats.crystalsOwned_Red -= towerCost;
             }
@@ -109,7 +108,7 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
             currentTower.transform.position = cursorPosition;
         }
-       
+
     }
 
 
@@ -148,15 +147,17 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             }
 
             //Condition for barrier
-            if(!hit.collider.GetComponent<WorldTile>().isBlockedBarrier && hit.collider.GetComponent<WorldTile>().walkable && currentTower.name.Contains("Barrier")
+            if (!hit.collider.GetComponent<WorldTile>().isBlockedBarrier && hit.collider.GetComponent<WorldTile>().walkable && currentTower.name.Contains("Barrier")
                 && waveManager.CurrentWave.TimeUntilSpawn >= 0 && waveManager.EnableSpawning == false && waveManager.waveParent.transform.childCount <= 0)
             {
                 hit.collider.GetComponent<WorldTile>().isBlockedBarrier = true;
-                    GameObject newTower = null;
+                GameObject newTower = null;
                 tileNodes.CheckBlockedPath();
 
-                if(tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count /*&& !tileNodes.pathData.blockedPaths.Contains(waveManager.CurrentWave.Paths[0])*/)
+                if (tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count /*&& !tileNodes.pathData.blockedPaths.Contains(waveManager.CurrentWave.Paths[0])*/)
+                {
                     newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
+                }
                 else
                 {
                     hit.collider.GetComponent<WorldTile>().isBlockedBarrier = false;

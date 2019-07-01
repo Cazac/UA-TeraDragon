@@ -18,19 +18,39 @@
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine;</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine.Tilemaps;</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal">[System.Serializable]</highlight></codeline>
-<codeline lineno="10" refid="class_transform_list" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_transform_list" kindref="compound">TransformList</ref></highlight></codeline>
-<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="12" refid="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Transform<sp/><ref refid="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" kindref="member">breakableBlockPos</ref>;</highlight></codeline>
-<codeline lineno="13" refid="class_transform_list_1a73df2c7ef28634403ce240821069145e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;Transform&gt;<sp/><ref refid="class_transform_list_1a73df2c7ef28634403ce240821069145e" kindref="member">list</ref>;</highlight></codeline>
-<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal">[System.Serializable]</highlight></codeline>
-<codeline lineno="17" refid="class_hidden_tile_manager" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_hidden_tile_manager" kindref="compound">HiddenTileManager</ref></highlight></codeline>
-<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="19" refid="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;TransformList&gt;<sp/><ref refid="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" kindref="member">list</ref>;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">[System.Serializable]</highlight></codeline>
+<codeline lineno="13" refid="class_transform_list" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_transform_list" kindref="compound">TransformList</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15" refid="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Transform<sp/><ref refid="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" kindref="member">breakableBlockPos</ref>;</highlight></codeline>
+<codeline lineno="16" refid="class_transform_list_1addc3b9d0da8183a8dfbc4a32ef7bedd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;Transform&gt;<sp/><ref refid="class_transform_list_1addc3b9d0da8183a8dfbc4a32ef7bedd8" kindref="member">listOfNodes</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_transform_list_1a7c5e13014448ffd26c14ccbb9296c28b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_transform_list_1a7c5e13014448ffd26c14ccbb9296c28b" kindref="member">TransformList</ref>(Transform<sp/><ref refid="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" kindref="member">breakableBlockPos</ref>,<sp/>List&lt;Transform&gt;<sp/><ref refid="class_transform_list_1addc3b9d0da8183a8dfbc4a32ef7bedd8" kindref="member">listOfNodes</ref>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.breakableBlockPos<sp/>=<sp/><ref refid="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" kindref="member">breakableBlockPos</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.listOfNodes<sp/>=<sp/><ref refid="class_transform_list_1addc3b9d0da8183a8dfbc4a32ef7bedd8" kindref="member">listOfNodes</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">[System.Serializable]</highlight></codeline>
+<codeline lineno="29" refid="class_hidden_tile_manager" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_hidden_tile_manager" kindref="compound">HiddenTileManager</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31" refid="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;TransformList&gt;<sp/><ref refid="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" kindref="member">list</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_hidden_tile_manager_1ae9ac6081732826a75ddc94dac4923d15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_hidden_tile_manager_1ae9ac6081732826a75ddc94dac4923d15" kindref="member">HiddenTileManager</ref>()</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" kindref="member">list</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>List&lt;TransformList&gt;();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_hidden_tile_manager_1a89124d2f4b7a460d226a0b5f3734aa60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_hidden_tile_manager_1a89124d2f4b7a460d226a0b5f3734aa60" kindref="member">HiddenTileManager</ref>(List&lt;TransformList&gt;<sp/><ref refid="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" kindref="member">list</ref>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.list<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>List&lt;TransformList&gt;();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="class_transform_list" kindref="compound">TransformList</ref><sp/>item<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/><ref refid="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" kindref="member">list</ref>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.list.Add(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_transform_list" kindref="compound">TransformList</ref>(item.<ref refid="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" kindref="member">breakableBlockPos</ref>,<sp/>item.<ref refid="class_transform_list_1addc3b9d0da8183a8dfbc4a32ef7bedd8" kindref="member">listOfNodes</ref>));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs"/>
   </compounddef>
 </doxygen>

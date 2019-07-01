@@ -14,32 +14,63 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="12" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_hidden_tile_manager_1a89124d2f4b7a460d226a0b5f3734aa60" compoundref="_hidden_tile_list_8cs" startline="38" endline="45">HiddenTileManager.HiddenTileManager</referencedby>
+        <referencedby refid="class_tile_nodes_1a58410c9aa433072f9c5987d6126cea58" compoundref="_tile_nodes_8cs" startline="543" endline="557">TileNodes.ShowTiles</referencedby>
+        <referencedby refid="class_transform_list_1a7c5e13014448ffd26c14ccbb9296c28b" compoundref="_hidden_tile_list_8cs" startline="18" endline="22">TransformList</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="class_transform_list_1a73df2c7ef28634403ce240821069145e" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="class_transform_list_1addc3b9d0da8183a8dfbc4a32ef7bedd8" prot="public" static="no" mutable="no">
         <type>List&lt; Transform &gt;</type>
-        <definition>List&lt;Transform&gt; TransformList.list</definition>
+        <definition>List&lt;Transform&gt; TransformList.listOfNodes</definition>
         <argsstring></argsstring>
-        <name>list</name>
+        <name>listOfNodes</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="13" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1a7083882752d5e8d4e0af43e6d80bd178" compoundref="_tile_nodes_8cs" startline="397" endline="409">TileNodes.HideTiles</referencedby>
-        <referencedby refid="class_tile_nodes_1a8631d5c16e9a000e5d75a0be86669c9d" compoundref="_tile_nodes_8cs" startline="411" endline="422">TileNodes.ShowTiles</referencedby>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_hidden_tile_manager_1a89124d2f4b7a460d226a0b5f3734aa60" compoundref="_hidden_tile_list_8cs" startline="38" endline="45">HiddenTileManager.HiddenTileManager</referencedby>
+        <referencedby refid="class_tile_nodes_1a481eb60f9778c12224aedbb472fd762b" compoundref="_tile_nodes_8cs" startline="494" endline="511">TileNodes.HideTiles</referencedby>
+        <referencedby refid="class_tile_nodes_1a2ecd90ad0017988632b820e723a3cdca" compoundref="_tile_nodes_8cs" startline="519" endline="533">TileNodes.ShowTiles</referencedby>
+        <referencedby refid="class_transform_list_1a7c5e13014448ffd26c14ccbb9296c28b" compoundref="_hidden_tile_list_8cs" startline="18" endline="22">TransformList</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_transform_list_1a7c5e13014448ffd26c14ccbb9296c28b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TransformList.TransformList</definition>
+        <argsstring>(Transform breakableBlockPos, List&lt; Transform &gt; listOfNodes)</argsstring>
+        <name>TransformList</name>
+        <param>
+          <type>Transform</type>
+          <declname>breakableBlockPos</declname>
+        </param>
+        <param>
+          <type>List&lt; Transform &gt;</type>
+          <declname>listOfNodes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="18" bodyend="22"/>
+        <references refid="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" compoundref="_hidden_tile_list_8cs" startline="15">breakableBlockPos</references>
+        <references refid="class_transform_list_1addc3b9d0da8183a8dfbc4a32ef7bedd8" compoundref="_hidden_tile_list_8cs" startline="16">listOfNodes</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Serilizable class to store breakableBlock and list of nodes that connects to breakableBlock </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="10" bodyend="14"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="13" bodyend="23"/>
     <listofallmembers>
       <member refid="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" prot="public" virt="non-virtual"><scope>TransformList</scope><name>breakableBlockPos</name></member>
-      <member refid="class_transform_list_1a73df2c7ef28634403ce240821069145e" prot="public" virt="non-virtual"><scope>TransformList</scope><name>list</name></member>
+      <member refid="class_transform_list_1addc3b9d0da8183a8dfbc4a32ef7bedd8" prot="public" virt="non-virtual"><scope>TransformList</scope><name>listOfNodes</name></member>
+      <member refid="class_transform_list_1a7c5e13014448ffd26c14ccbb9296c28b" prot="public" virt="non-virtual"><scope>TransformList</scope><name>TransformList</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveManager.cs" line="281" column="1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveManager.cs" line="278" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -28,18 +28,18 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="283">
+      <node id="317">
         <label>WaveSystemTimer</label>
         <link refid="class_wave_system_timer"/>
-        <childnode refid="282" relation="public-inheritance">
+        <childnode refid="316" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="282">
+      <node id="316">
         <label>WaveSystem.WaveInterface</label>
         <link refid="interface_wave_system_1_1_wave_interface"/>
       </node>
     </inheritancegraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveManager.cs" line="280" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveManager.cs" bodystart="279" bodyend="282"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveManager.cs" line="277" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveManager.cs" bodystart="276" bodyend="279"/>
     <listofallmembers>
       <member refid="interface_wave_system_1_1_wave_interface_1a99dd61cc0260436c7c57b6295606309e" prot="public" virt="non-virtual"><scope>WaveSystem::WaveInterface</scope><name>UIConnection</name></member>
     </listofallmembers>

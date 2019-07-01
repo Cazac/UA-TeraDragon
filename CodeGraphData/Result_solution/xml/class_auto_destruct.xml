@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/AutoDestruct.cs" line="4" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/AutoDestruct.cs" bodystart="4" bodyend="7"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/AutoDestruct.cs" line="4" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/AutoDestruct.cs" bodystart="4" bodyend="7"/>
         <references refid="class_auto_destruct_1a85267ddfe1d4ffbf9c3a8c8e28203c56" compoundref="_auto_destruct_8cs" startline="8" endline="15">DestroySelf</references>
       </memberdef>
       </sectiondef>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/AutoDestruct.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/AutoDestruct.cs" bodystart="8" bodyend="15"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/AutoDestruct.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/AutoDestruct.cs" bodystart="8" bodyend="15"/>
         <referencedby refid="class_auto_destruct_1a0d2f43392b64188335c5b611aa3d3374" compoundref="_auto_destruct_8cs" startline="4" endline="7">Update</referencedby>
       </memberdef>
       </sectiondef>
@@ -61,7 +61,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/AutoDestruct.cs" line="3" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound/AutoDestruct.cs" bodystart="2" bodyend="16"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/AutoDestruct.cs" line="3" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/AutoDestruct.cs" bodystart="2" bodyend="16"/>
     <listofallmembers>
       <member refid="class_auto_destruct_1a85267ddfe1d4ffbf9c3a8c8e28203c56" prot="public" virt="non-virtual"><scope>AutoDestruct</scope><name>DestroySelf</name></member>
       <member refid="class_auto_destruct_1a0d2f43392b64188335c5b611aa3d3374" prot="private" virt="non-virtual"><scope>AutoDestruct</scope><name>Update</name></member>

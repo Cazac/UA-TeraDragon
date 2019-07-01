@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_tower_selector" kind="class" prot="public">
+    <compoundname>TowerSelector</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tower_selector_1a95c0f0ccddb7d5c0a3c448cf508c7839" prot="private" static="no" mutable="no">
+        <type>List&lt; GameObject &gt;</type>
+        <definition>List&lt;GameObject&gt; TowerSelector.selectedNodes</definition>
+        <argsstring></argsstring>
+        <name>selectedNodes</name>
+        <initializer>= new List&lt;GameObject&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_tower_selector_1a9a20ae62fe725d068fd2242dea6a84c4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; GameObject &gt;</type>
+        <definition>List&lt;GameObject&gt; TowerSelector.SelectedNodes</definition>
+        <argsstring></argsstring>
+        <name>SelectedNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_tower_selector_1ad2d64a9c923a94b0daede377d83f39e2" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject TowerSelector.selectedNode</definition>
+        <argsstring></argsstring>
+        <name>selectedNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_cursor_selection_1a9149264a75d97d444104e894fc21e5e6" compoundref="_cursor_selection_8cs" startline="48" endline="86">CursorSelection.OnClickSelect</referencedby>
+        <referencedby refid="class_tower_selector_1a5882f069129c1e6900a82fcf5d9fcda4" compoundref="_tower_selector_8cs" startline="37" endline="44">TowerUI</referencedby>
+        <referencedby refid="class_tower_selector_1a36e5bf2af3a9c9ac467006638519c1f3" compoundref="_tower_selector_8cs" startline="23" endline="34">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_tower_selector_1ad3d1def1b6cb418c8f3e9c9bac9dc1b1" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject TowerSelector.TowerWindowPrefab</definition>
+        <argsstring></argsstring>
+        <name>TowerWindowPrefab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_tower_selector_1a5882f069129c1e6900a82fcf5d9fcda4" compoundref="_tower_selector_8cs" startline="37" endline="44">TowerUI</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_tower_selector_1a117616e532f2179ada01194ca23b1086" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject TowerSelector.CurrentTowerWindow</definition>
+        <argsstring></argsstring>
+        <name>CurrentTowerWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" line="36" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_tower_selector_1a5882f069129c1e6900a82fcf5d9fcda4" compoundref="_tower_selector_8cs" startline="37" endline="44">TowerUI</referencedby>
+        <referencedby refid="class_tower_selector_1a36e5bf2af3a9c9ac467006638519c1f3" compoundref="_tower_selector_8cs" startline="23" endline="34">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_tower_selector_1a385ddd5dd0fa9c513d631091525b5a9b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerSelector.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" line="17" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_selector_1a36e5bf2af3a9c9ac467006638519c1f3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerSelector.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" line="23" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" bodystart="23" bodyend="34"/>
+        <references refid="class_tower_selector_1a117616e532f2179ada01194ca23b1086" compoundref="_tower_selector_8cs" startline="36">CurrentTowerWindow</references>
+        <references refid="class_tower_selector_1ad2d64a9c923a94b0daede377d83f39e2" compoundref="_tower_selector_8cs" startline="13">selectedNode</references>
+        <references refid="class_tower_selector_1a5882f069129c1e6900a82fcf5d9fcda4" compoundref="_tower_selector_8cs" startline="37" endline="44">TowerUI</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_selector_1a5882f069129c1e6900a82fcf5d9fcda4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerSelector.TowerUI</definition>
+        <argsstring>()</argsstring>
+        <name>TowerUI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" line="37" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" bodystart="37" bodyend="44"/>
+        <references refid="class_tower_selector_1a117616e532f2179ada01194ca23b1086" compoundref="_tower_selector_8cs" startline="36">CurrentTowerWindow</references>
+        <references refid="class_tower_selector_1ad2d64a9c923a94b0daede377d83f39e2" compoundref="_tower_selector_8cs" startline="13">selectedNode</references>
+        <references refid="class_tower_selector_1ad3d1def1b6cb418c8f3e9c9bac9dc1b1" compoundref="_tower_selector_8cs" startline="15">TowerWindowPrefab</references>
+        <referencedby refid="class_tower_selector_1a36e5bf2af3a9c9ac467006638519c1f3" compoundref="_tower_selector_8cs" startline="23" endline="34">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="288">
+        <label>TowerSelector</label>
+        <link refid="class_tower_selector"/>
+        <childnode refid="289" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="289">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="290">
+        <label>TowerSelector</label>
+        <link refid="class_tower_selector"/>
+        <childnode refid="291" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="291">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerSelector.cs" bodystart="5" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_tower_selector_1a117616e532f2179ada01194ca23b1086" prot="public" virt="non-virtual"><scope>TowerSelector</scope><name>CurrentTowerWindow</name></member>
+      <member refid="class_tower_selector_1ad2d64a9c923a94b0daede377d83f39e2" prot="public" virt="non-virtual"><scope>TowerSelector</scope><name>selectedNode</name></member>
+      <member refid="class_tower_selector_1a9a20ae62fe725d068fd2242dea6a84c4" prot="public" virt="non-virtual"><scope>TowerSelector</scope><name>SelectedNodes</name></member>
+      <member refid="class_tower_selector_1a95c0f0ccddb7d5c0a3c448cf508c7839" prot="private" virt="non-virtual"><scope>TowerSelector</scope><name>selectedNodes</name></member>
+      <member refid="class_tower_selector_1a385ddd5dd0fa9c513d631091525b5a9b" prot="private" virt="non-virtual"><scope>TowerSelector</scope><name>Start</name></member>
+      <member refid="class_tower_selector_1a5882f069129c1e6900a82fcf5d9fcda4" prot="private" virt="non-virtual"><scope>TowerSelector</scope><name>TowerUI</name></member>
+      <member refid="class_tower_selector_1ad3d1def1b6cb418c8f3e9c9bac9dc1b1" prot="public" virt="non-virtual"><scope>TowerSelector</scope><name>TowerWindowPrefab</name></member>
+      <member refid="class_tower_selector_1a36e5bf2af3a9c9ac467006638519c1f3" prot="private" virt="non-virtual"><scope>TowerSelector</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

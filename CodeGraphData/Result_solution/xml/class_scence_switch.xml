@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ScenceManager/ScenceSwitch.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ScenceManager/ScenceSwitch.cs" bodystart="8" bodyend="11"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/ScenceManager/ScenceSwitch.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/ScenceManager/ScenceSwitch.cs" bodystart="8" bodyend="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -27,28 +27,28 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="161">
+      <node id="195">
         <label>ScenceSwitch</label>
         <link refid="class_scence_switch"/>
-        <childnode refid="162" relation="public-inheritance">
+        <childnode refid="196" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="162">
+      <node id="196">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="163">
+      <node id="197">
         <label>ScenceSwitch</label>
         <link refid="class_scence_switch"/>
-        <childnode refid="164" relation="public-inheritance">
+        <childnode refid="198" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="164">
+      <node id="198">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ScenceManager/ScenceSwitch.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ScenceManager/ScenceSwitch.cs" bodystart="6" bodyend="12"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/ScenceManager/ScenceSwitch.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/ScenceManager/ScenceSwitch.cs" bodystart="6" bodyend="12"/>
     <listofallmembers>
       <member refid="class_scence_switch_1affe2721fb02441c79d86049b8251386e" prot="public" virt="non-virtual"><scope>ScenceSwitch</scope><name>SwitchToScence</name></member>
     </listofallmembers>

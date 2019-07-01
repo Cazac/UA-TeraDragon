@@ -101,36 +101,11 @@ namespace WaveSystem
                 }
             }
 
-            //for(int i = 0; i < tiles.pathData.paths.Count; i++)
-            //{
-               // waves[i].Paths = new List<List<WorldTile>>()
-                   // {
-                      //  tiles.pathData.paths[i]
-                   // };
-            //}
 
             CurrentWave = waves[0];
             MakeParent();
 
             StartCoroutine(SpawnSingleEnemyPerWave());
-            // // for testing purposes
-            // // gives waves paths form shortest to longest
-            //for (int i = 0; i < waves.Length; i++)
-            //{
-            //    if (i >= tiles.pathData.paths.Count)
-            //    {
-            //     //   waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[tiles.pathData.paths.Count-1] };
-            //    }
-            //    else
-            //    {
-            //     //   waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
-            //    }
-            //}
-
-            //currentWave = waves[0];
-            //MakeParent();
-
-            //StartCoroutine(SpawnSingleEnemyPerWave());
         }
 
         private void Update()
@@ -145,7 +120,14 @@ namespace WaveSystem
             if (currentTimer != null && EnableSpawning == true)
             {
                 if (currentTimer.WaveCountdown())
+                {
                     EnableSpawning = false;
+                    if (soundManager != null)
+                    {
+                        soundManager.PlaySpecificSound("Inter");
+                        soundManager.ReturnControl = true;
+                    }
+                }
             }
 
 
@@ -155,11 +137,11 @@ namespace WaveSystem
                 if (currentTimer.NextWaveCountdown())
                     EnableSpawning = true;
 
-                //if(soundManager !=null)
-                //{
-                //    soundManager.PlaySpecificSound("Main");
-                //    soundManager.ReturnControl = true;
-                //}
+                if (soundManager != null)
+                {
+                    soundManager.PlaySpecificSound("Main");
+                    soundManager.ReturnControl = true;
+                }
             }
         }
 
@@ -211,6 +193,8 @@ namespace WaveSystem
                             {
                                 GameObject enemy = Instantiate(CurrentWave.EnemyPrefab, path[0].transform.position, Quaternion.identity, CurrentWave.ParentGameobject.transform);
                                 enemy.GetComponent<EnemyScript>().currentWaypoints = path;
+                                enemy.GetComponent<EnemyScript>().PathRelocation();
+
                                 yield return new WaitForSeconds(CurrentWave.SpawnRate);
                             }
                         }

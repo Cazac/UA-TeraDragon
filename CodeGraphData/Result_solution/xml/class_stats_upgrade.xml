@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" bodystart="9" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" bodystart="9" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_stats_upgrade_1a33fc58a59ef75880d2ed14d5680361f0" prot="public" static="no" mutable="no">
         <type><ref refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddd" kindref="member">StatsCategory</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" bodystart="10" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" bodystart="10" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -36,43 +36,43 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="213">
+      <node id="249">
         <label>UpgradeNode</label>
         <link refid="class_upgrade_node"/>
-        <childnode refid="214" relation="public-inheritance">
+        <childnode refid="250" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="214">
+      <node id="250">
         <label>ScriptableObject</label>
       </node>
-      <node id="212">
+      <node id="248">
         <label>StatsUpgrade</label>
         <link refid="class_stats_upgrade"/>
-        <childnode refid="213" relation="public-inheritance">
+        <childnode refid="249" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="216">
+      <node id="252">
         <label>UpgradeNode</label>
         <link refid="class_upgrade_node"/>
-        <childnode refid="217" relation="public-inheritance">
+        <childnode refid="253" relation="public-inheritance">
         </childnode>
-        <childnode refid="216" relation="usage">
+        <childnode refid="252" relation="usage">
           <edgelabel>necessaryNodes</edgelabel>
         </childnode>
       </node>
-      <node id="217">
+      <node id="253">
         <label>ScriptableObject</label>
       </node>
-      <node id="215">
+      <node id="251">
         <label>StatsUpgrade</label>
         <link refid="class_stats_upgrade"/>
-        <childnode refid="216" relation="public-inheritance">
+        <childnode refid="252" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" bodystart="7" bodyend="12"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" bodystart="7" bodyend="12"/>
     <listofallmembers>
       <member refid="class_upgrade_node_1ac3956a662ddd6978fdad97ae1eb42966" prot="public" virt="non-virtual"><scope>StatsUpgrade</scope><name>ActivateUpgrade</name></member>
       <member refid="class_upgrade_node_1a2dd3d766f2689e12e9c28ff4da02e321" prot="public" virt="non-virtual"><scope>StatsUpgrade</scope><name>GetUpgradeType</name></member>

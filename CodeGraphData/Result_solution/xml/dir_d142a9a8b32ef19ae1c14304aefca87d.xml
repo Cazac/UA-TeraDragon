@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_d142a9a8b32ef19ae1c14304aefca87d" kind="dir">
+    <compoundname>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Managers</compoundname>
+    <innerfile refid="_game_over_script_8cs">GameOverScript.cs</innerfile>
+    <innerfile refid="_player_stats_8cs">PlayerStats.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Managers/"/>
+  </compounddef>
+</doxygen>

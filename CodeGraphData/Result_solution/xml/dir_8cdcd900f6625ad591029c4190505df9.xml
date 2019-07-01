@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_8cdcd900f6625ad591029c4190505df9" kind="dir">
+    <compoundname>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts</compoundname>
+    <innerdir refid="dir_054560c73b471d0a8e7fdac466a93d88">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data</innerdir>
+    <innerdir refid="dir_f9b36714f2b668127003ba9ea80a6692">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Draging</innerdir>
+    <innerdir refid="dir_f8dfc5ce472986e1d5aa7fb6f63e064a">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Enemy</innerdir>
+    <innerdir refid="dir_d142a9a8b32ef19ae1c14304aefca87d">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Managers</innerdir>
+    <innerdir refid="dir_590b1b06112fb813ebcd32ea74e67e0f">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Map Bounds</innerdir>
+    <innerdir refid="dir_6be9a29c03c812425cd411aceaa0b5a9">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/ScenceManager</innerdir>
+    <innerdir refid="dir_cdbf7f5f2ed682329595ca3d836da159">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound</innerdir>
+    <innerdir refid="dir_c088cc1a0ff43449b9ac4d5920f00227">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode</innerdir>
+    <innerdir refid="dir_2ae8fb8caec13e6feb87d6a5dfd635df">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower</innerdir>
+    <innerdir refid="dir_10951f24951b6607010c3dbfab68dd93">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI</innerdir>
+    <innerdir refid="dir_43e657774fab35750394a97b4ceec732">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/"/>
+  </compounddef>
+</doxygen>

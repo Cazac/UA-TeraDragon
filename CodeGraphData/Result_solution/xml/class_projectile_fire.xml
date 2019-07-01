@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="8" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="8" bodyend="-1"/>
         <referencedby refid="class_projectile_fire_1aef5def8b3b252a7a2ff40b24be25fddd" compoundref="_projectile_fire_8cs" startline="121" endline="142">BeamTarget</referencedby>
         <referencedby refid="class_projectile_fire_1a3d7884cd3578758cdf3297b645aa02ef" compoundref="_projectile_fire_8cs" startline="56" endline="76">ChaseTarget</referencedby>
         <referencedby refid="class_projectile_fire_1accf5d055ef45cf89b29510fe4b90e3dc" compoundref="_projectile_fire_8cs" startline="98" endline="119">HitTarget</referencedby>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="12" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="12" bodyend="-1"/>
         <referencedby refid="class_projectile_fire_1aefe60993b84cafabcb12aebc3821fe0e" compoundref="_projectile_fire_8cs" startline="37" endline="48">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_projectile_fire_1a6c96072637ed7e0558a62c5b398f2a28" prot="public" static="no" mutable="no">
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="13" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="13" bodyend="-1"/>
         <referencedby refid="class_projectile_fire_1aef5def8b3b252a7a2ff40b24be25fddd" compoundref="_projectile_fire_8cs" startline="121" endline="142">BeamTarget</referencedby>
         <referencedby refid="class_projectile_fire_1accf5d055ef45cf89b29510fe4b90e3dc" compoundref="_projectile_fire_8cs" startline="98" endline="119">HitTarget</referencedby>
       </memberdef>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="14" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_projectile_fire_1a0928b50b14dacfffd66ed859757900c9" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="15" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_projectile_fire_1aadda343133a41cf3fef52007f2e83cd5" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -87,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="18" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="18" bodyend="-1"/>
         <referencedby refid="class_projectile_fire_1aef5def8b3b252a7a2ff40b24be25fddd" compoundref="_projectile_fire_8cs" startline="121" endline="142">BeamTarget</referencedby>
         <referencedby refid="class_projectile_fire_1accf5d055ef45cf89b29510fe4b90e3dc" compoundref="_projectile_fire_8cs" startline="98" endline="119">HitTarget</referencedby>
       </memberdef>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="19" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_projectile_fire_1af25c448fcb294a47f328cfe25105c588" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="20" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_projectile_fire_1a59529d02af04a4f991d66e4be417f294" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="21" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_projectile_fire_1a9ee1f15dbaf9d5c7773975ec83552699" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="22" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_projectile_fire_1af516b7e2acb6d38662c85e2db02816b9" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="25" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="25" bodyend="-1"/>
         <referencedby refid="class_projectile_fire_1aefe60993b84cafabcb12aebc3821fe0e" compoundref="_projectile_fire_8cs" startline="37" endline="48">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_projectile_fire_1a3a621549b4ad701c59826ab8f460a6c4" prot="public" static="no" mutable="no">
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="26" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="26" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="26" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_projectile_fire_1aea09677f3082eed496178c90dcd00c4d" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -181,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="27" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_projectile_fire_1a616d0c3f47ac8e46e9481cb87775f100" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -194,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="28" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="28" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="28" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="28" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -209,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="32" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="32" bodyend="35"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="32" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="32" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="class_projectile_fire_1aefe60993b84cafabcb12aebc3821fe0e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -222,7 +222,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="37" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="37" bodyend="48"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="37" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="37" bodyend="48"/>
         <references refid="class_projectile_fire_1a3d7884cd3578758cdf3297b645aa02ef" compoundref="_projectile_fire_8cs" startline="56" endline="76">ChaseTarget</references>
         <references refid="class_projectile_fire_1af516b7e2acb6d38662c85e2db02816b9" compoundref="_projectile_fire_8cs" startline="25">isBeam</references>
         <references refid="class_projectile_fire_1a5d769162adf84789046f2a4a59e7b3e6" compoundref="_projectile_fire_8cs" startline="12">isProjectile</references>
@@ -240,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="56" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="56" bodyend="76"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="56" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="56" bodyend="76"/>
         <references refid="class_projectile_fire_1a4f8c159959a9eba135b1175cc1fd2806" compoundref="_projectile_fire_8cs" startline="8">enemy</references>
         <referencedby refid="class_projectile_fire_1aefe60993b84cafabcb12aebc3821fe0e" compoundref="_projectile_fire_8cs" startline="37" endline="48">Update</referencedby>
       </memberdef>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="83" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="83" bodyend="95"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="83" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="83" bodyend="95"/>
         <references refid="class_projectile_fire_1a4f8c159959a9eba135b1175cc1fd2806" compoundref="_projectile_fire_8cs" startline="8">enemy</references>
         <references refid="class_projectile_fire_1accf5d055ef45cf89b29510fe4b90e3dc" compoundref="_projectile_fire_8cs" startline="98" endline="119">HitTarget</references>
       </memberdef>
@@ -274,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="98" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="98" bodyend="119"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="98" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="98" bodyend="119"/>
         <references refid="class_projectile_fire_1a4f8c159959a9eba135b1175cc1fd2806" compoundref="_projectile_fire_8cs" startline="8">enemy</references>
         <references refid="class_projectile_fire_1aadda343133a41cf3fef52007f2e83cd5" compoundref="_projectile_fire_8cs" startline="18">isExplosive</references>
         <references refid="class_projectile_fire_1a6c96072637ed7e0558a62c5b398f2a28" compoundref="_projectile_fire_8cs" startline="13">projectileDamage</references>
@@ -291,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="121" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="121" bodyend="142"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="121" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="121" bodyend="142"/>
         <references refid="class_projectile_fire_1a4f8c159959a9eba135b1175cc1fd2806" compoundref="_projectile_fire_8cs" startline="8">enemy</references>
         <references refid="class_projectile_fire_1aadda343133a41cf3fef52007f2e83cd5" compoundref="_projectile_fire_8cs" startline="18">isExplosive</references>
         <references refid="class_projectile_fire_1a6c96072637ed7e0558a62c5b398f2a28" compoundref="_projectile_fire_8cs" startline="13">projectileDamage</references>
@@ -302,28 +302,28 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="158">
+      <node id="192">
         <label>MonoBehaviour</label>
       </node>
-      <node id="157">
+      <node id="191">
         <label>ProjectileFire</label>
         <link refid="class_projectile_fire"/>
-        <childnode refid="158" relation="public-inheritance">
+        <childnode refid="192" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="160">
+      <node id="194">
         <label>MonoBehaviour</label>
       </node>
-      <node id="159">
+      <node id="193">
         <label>ProjectileFire</label>
         <link refid="class_projectile_fire"/>
-        <childnode refid="160" relation="public-inheritance">
+        <childnode refid="194" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileFire.cs" bodystart="5" bodyend="143"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileFire.cs" bodystart="5" bodyend="143"/>
     <listofallmembers>
       <member refid="class_projectile_fire_1a616d0c3f47ac8e46e9481cb87775f100" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>beamChainTargets</name></member>
       <member refid="class_projectile_fire_1a3a621549b4ad701c59826ab8f460a6c4" prot="public" virt="non-virtual"><scope>ProjectileFire</scope><name>beamDamage</name></member>

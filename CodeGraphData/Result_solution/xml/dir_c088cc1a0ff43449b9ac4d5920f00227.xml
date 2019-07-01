@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_c088cc1a0ff43449b9ac4d5920f00227" kind="dir">
+    <compoundname>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode</compoundname>
+    <innerfile refid="_base_node_8cs">BaseNode.cs</innerfile>
+    <innerfile refid="_crystal_tile_8cs">CrystalTile.cs</innerfile>
+    <innerfile refid="_path_finding_8cs">PathFinding.cs</innerfile>
+    <innerfile refid="_tile_nodes_8cs">TileNodes.cs</innerfile>
+    <innerfile refid="_tile_nodes_editor_8cs">TileNodesEditor.cs</innerfile>
+    <innerfile refid="_world_tile_8cs">WorldTile.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/"/>
+  </compounddef>
+</doxygen>

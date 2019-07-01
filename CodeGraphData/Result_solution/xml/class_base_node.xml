@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" bodystart="8" bodyend="11"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" bodystart="8" bodyend="11"/>
       </memberdef>
       <memberdef kind="function" id="class_base_node_1a65578d9665e406df72a181c35cc1d916" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" bodystart="14" bodyend="17"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" bodystart="14" bodyend="17"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" bodystart="19" bodyend="22"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" bodystart="19" bodyend="22"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -55,49 +55,46 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="15">
+      <node id="35">
         <label>WorldTile</label>
         <link refid="class_world_tile"/>
-        <childnode refid="16" relation="public-inheritance">
+        <childnode refid="36" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="14">
+      <node id="34">
         <label>BaseNode</label>
         <link refid="class_base_node"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="35" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="16">
+      <node id="36">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="18">
+      <node id="38">
         <label>WorldTile</label>
         <link refid="class_world_tile"/>
-        <childnode refid="19" relation="public-inheritance">
+        <childnode refid="39" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="17">
+      <node id="37">
         <label>BaseNode</label>
         <link refid="class_base_node"/>
-        <childnode refid="18" relation="public-inheritance">
+        <childnode refid="38" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="19">
+      <node id="39">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" bodystart="5" bodyend="23"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/BaseNode.cs" bodystart="5" bodyend="23"/>
     <listofallmembers>
       <member refid="class_base_node_1a91d540fbf54039dbd21845c6f519b5e4" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>BaseIsHit</name></member>
-      <member refid="class_world_tile_1a5faa48b04daa3e69fa2ba7f2b0a4f58e" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>crystalValueBlue</name></member>
-      <member refid="class_world_tile_1a04bc708e60c4d6650cedfeb2f76bedfd" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>crystalValueGreen</name></member>
-      <member refid="class_world_tile_1aa329cbb27cdbc33d78816e5067043f3f" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>crystalValueRed</name></member>
-      <member refid="class_world_tile_1a815dd72c7a6d5bca1630fe88b8c1a65e" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>crystalValueYellow</name></member>
       <member refid="class_world_tile_1a0e656c3b5770c4c79608125683ea7709" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>gridX</name></member>
       <member refid="class_world_tile_1aa4c5505813dc257adb4a4255d5025641" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>gridY</name></member>
       <member refid="class_world_tile_1a8f5987fb6a965ae214c37cfad2cf7b4b" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>isBlockedBarrier</name></member>
+      <member refid="class_world_tile_1ab143fd67f312bebf9250e549faed59f9" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>isDestroyed</name></member>
       <member refid="class_world_tile_1a8bb9aed53ffb5e7251e04003f75022c5" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>myNeighbours</name></member>
       <member refid="class_world_tile_1a3183df67122339b04fae067faf461b8a" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>posX</name></member>
       <member refid="class_world_tile_1a84ee3d3afbc295ad8003ba0cf8490b24" prot="public" virt="non-virtual"><scope>BaseNode</scope><name>posY</name></member>

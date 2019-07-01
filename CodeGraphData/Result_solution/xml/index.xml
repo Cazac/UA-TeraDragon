@@ -16,18 +16,28 @@
   <compound refid="class_assets_1_1_scripts_1_1_data_1_1_barrier_data" kind="class"><name>Assets::Scripts::Data::BarrierData</name>
   </compound>
   <compound refid="class_barrier_drag" kind="class"><name>BarrierDrag</name>
+    <member refid="class_barrier_drag_1a8f272432d3e0e7035374bdf620fa781f" kind="variable"><name>towerPrefab_UI</name></member>
+    <member refid="class_barrier_drag_1a1e8c336dd56da0667f054157329b7061" kind="variable"><name>towerPrefab_Spawn</name></member>
+    <member refid="class_barrier_drag_1a6d061f2dd6ea6deed266d70482f92985" kind="variable"><name>towerParent</name></member>
+    <member refid="class_barrier_drag_1a68263b084ca1977278994f8bbc3767df" kind="variable"><name>soundEffect</name></member>
+    <member refid="class_barrier_drag_1a0bfad8f3fdb96de5eb7ae6cd5ab43e8e" kind="variable"><name>playerStats</name></member>
+    <member refid="class_barrier_drag_1a46bdb49bb4ebc4289dd864ce92aad76b" kind="variable"><name>towerColor</name></member>
+    <member refid="class_barrier_drag_1ac777982f382c3082d15acc367f5d7d74" kind="variable"><name>currentTower</name></member>
+    <member refid="class_barrier_drag_1a0297d36e587a4321491ca87f3880aa4b" kind="variable"><name>soundManager</name></member>
+    <member refid="class_barrier_drag_1a8a83c6a48fb35b11f1b254fc8465ff35" kind="variable"><name>tileNodes</name></member>
+    <member refid="class_barrier_drag_1ab6b3c4466fdac2da5e4dd4c3cfcd8245" kind="variable"><name>waveManager</name></member>
+    <member refid="class_barrier_drag_1a4e27ccd5a7bf8a0e6be84f0e82b99d4d" kind="variable"><name>towerCost</name></member>
+    <member refid="class_barrier_drag_1a8c2e34eaeb16ff99dd9a1cc921663977" kind="function"><name>Start</name></member>
+    <member refid="class_barrier_drag_1a830a58bc74fc4b5f5e1fc5177b828e0f" kind="function"><name>LogRaycasthitObject</name></member>
     <member refid="class_barrier_drag_1a0d2144958dcf263f1d90eb8defe28f8c" kind="function"><name>OnBeginDrag</name></member>
     <member refid="class_barrier_drag_1a170b75f14181d6b6fd56dd80b190b8c8" kind="function"><name>OnDrag</name></member>
     <member refid="class_barrier_drag_1a0f0a30373c56b38e003a22fe6f275bdf" kind="function"><name>OnEndDrag</name></member>
+    <member refid="class_barrier_drag_1a1180401a30ace4a9562c283697c57f12" kind="function"><name>RefundDragTower</name></member>
   </compound>
   <compound refid="class_base_node" kind="class"><name>BaseNode</name>
     <member refid="class_base_node_1abd7cff8011b1ab4f62481184fe85b64e" kind="function"><name>Start</name></member>
     <member refid="class_base_node_1a65578d9665e406df72a181c35cc1d916" kind="function"><name>Update</name></member>
     <member refid="class_base_node_1a91d540fbf54039dbd21845c6f519b5e4" kind="function"><name>BaseIsHit</name></member>
-  </compound>
-  <compound refid="class_blockade_drag" kind="class"><name>BlockadeDrag</name>
-    <member refid="class_blockade_drag_1a34e705c78379008d08bea1f8fc34605a" kind="function"><name>Start</name></member>
-    <member refid="class_blockade_drag_1a55f6c8b3edaf47a0e0e3646852eb9960" kind="function"><name>Update</name></member>
   </compound>
   <compound refid="class_button_controller" kind="class"><name>ButtonController</name>
     <member refid="class_button_controller_1af7f7034d22d66b36e0648e8e38dcda69" kind="variable"><name>isMusicPlaying</name></member>
@@ -88,6 +98,16 @@
     <member refid="class_camera_panning_cursor_1ab07a76496a84f96ec7ac1ba49872453e" kind="function"><name>IsInsideBound</name></member>
     <member refid="class_camera_panning_cursor_1a33159d41bb25358d51cfb5627f5053c5" kind="function"><name>SetCameraBounds</name></member>
   </compound>
+  <compound refid="class_crystal_tile" kind="class"><name>CrystalTile</name>
+    <member refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" kind="variable"><name>crystalValueRed</name></member>
+    <member refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" kind="variable"><name>crystalValueBlue</name></member>
+    <member refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" kind="variable"><name>crystalValueGreen</name></member>
+    <member refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" kind="variable"><name>crystalValueYellow</name></member>
+    <member refid="class_crystal_tile_1a269364c1d61e286d6ad10f1c03187f4a" kind="function"><name>Start</name></member>
+    <member refid="class_crystal_tile_1a8d4b02d5cead75676076314b08a87cf7" kind="function"><name>RandomCrystalValues</name></member>
+    <member refid="class_crystal_tile_1aadfda470cc2a9d583adda07a0532c08e" kind="function"><name>UniqueCrystalValue</name></member>
+    <member refid="class_crystal_tile_1a8fdd64bb47c0234e65333771c51be393" kind="function"><name>ProduceRandomCrystal</name></member>
+  </compound>
   <compound refid="class_cursor_move" kind="class"><name>CursorMove</name>
     <member refid="class_cursor_move_1a4803d9f187c7d22306b083dfff499d3a" kind="variable"><name>speed</name></member>
     <member refid="class_cursor_move_1a0d261c4fda4f53981b257c5876111847" kind="variable"><name>tilemap</name></member>
@@ -104,8 +124,9 @@
   </compound>
   <compound refid="class_cursor_selection" kind="class"><name>CursorSelection</name>
     <member refid="class_cursor_selection_1abfeaa9d3cc2925c0bb990521fecca61d" kind="variable"><name>tileLayer</name></member>
+    <member refid="class_cursor_selection_1a764d0b8e281d0d0e8a5a3fcfe3cb9050" kind="variable"><name>TowerLayer</name></member>
     <member refid="class_cursor_selection_1a06efe3ffa1bafc47f44c1a638f59f368" kind="variable"><name>waveManager</name></member>
-    <member refid="class_cursor_selection_1a059a2ccefb225a4ddd2f36bba55e47c9" kind="variable"><name>tileNodes</name></member>
+    <member refid="class_cursor_selection_1a3bb9bf681231a577d3aef5d1c60d5a95" kind="variable"><name>selectorManager</name></member>
     <member refid="class_cursor_selection_1a64278855cb9178d6e2aff31760135974" kind="function"><name>Start</name></member>
     <member refid="class_cursor_selection_1a12de30246d879157d839ead34329ace7" kind="function"><name>Update</name></member>
     <member refid="class_cursor_selection_1a9149264a75d97d444104e894fc21e5e6" kind="function"><name>OnClickSelect</name></member>
@@ -151,10 +172,6 @@
     <member refid="class_enemy_script_1a5d7e4e7d49ee735c2b1ceec83f2a3f31" kind="function"><name>TakeDamage</name></member>
     <member refid="class_enemy_script_1a6ee07f1345fa5e6c4491c52a7b25ad4e" kind="function"><name>ApplySlow</name></member>
   </compound>
-  <compound refid="class_game_manager" kind="class"><name>GameManager</name>
-    <member refid="class_game_manager_1a5ccfacd027ad08eeb4ff1f25a7f59c98" kind="function"><name>Start</name></member>
-    <member refid="class_game_manager_1a44c79b205dec16bfe650e21259860c5b" kind="function"><name>Update</name></member>
-  </compound>
   <compound refid="class_game_over_script" kind="class"><name>GameOverScript</name>
     <member refid="class_game_over_script_1aa2031ce3e750bbcb7e7c442ef20bee4c" kind="property"><name>isGameOver</name></member>
     <member refid="class_game_over_script_1add101bb06c576bea5e8133b78c1e56a6" kind="variable"><name>GameOverPanel</name></member>
@@ -164,6 +181,8 @@
   </compound>
   <compound refid="class_hidden_tile_manager" kind="class"><name>HiddenTileManager</name>
     <member refid="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" kind="variable"><name>list</name></member>
+    <member refid="class_hidden_tile_manager_1ae9ac6081732826a75ddc94dac4923d15" kind="function"><name>HiddenTileManager</name></member>
+    <member refid="class_hidden_tile_manager_1a89124d2f4b7a460d226a0b5f3734aa60" kind="function"><name>HiddenTileManager</name></member>
   </compound>
   <compound refid="class_input_detection" kind="class"><name>InputDetection</name>
     <member refid="class_input_detection_1ac8ed2cac98caa1d0f952630ebec4bf9a" kind="variable"><name>isSwiping</name></member>
@@ -216,6 +235,15 @@
     <member refid="class_miner_drag_1acde9eb2bd049cd3e0577eea6d6881f86" kind="function"><name>OnEndDrag</name></member>
     <member refid="class_miner_drag_1ad0fb2891077169acdf5dc4d4cd1655b8" kind="function"><name>LogRaycasthitObject</name></member>
   </compound>
+  <compound refid="class_miner_script" kind="class"><name>MinerScript</name>
+    <member refid="class_miner_script_1a8e192b2e45a4a78c3fefba7abbe7aa01" kind="variable"><name>level</name></member>
+    <member refid="class_miner_script_1a02c8ad6db5e7b0895ae37939d9fbe372" kind="variable"><name>crystalTile</name></member>
+    <member refid="class_miner_script_1a3bce13cc6349f73364a8aa1d67d55ea9" kind="variable"><name>timer</name></member>
+    <member refid="class_miner_script_1ad7f6cf7c80e691d8f59c786730665a80" kind="function"><name>Start</name></member>
+    <member refid="class_miner_script_1ade262f366909eeaf9aa7458f92f4d76f" kind="function"><name>Update</name></member>
+    <member refid="class_miner_script_1ac1ed630fd281b84655ad5be689791857" kind="function"><name>CrystalTimer</name></member>
+    <member refid="class_miner_script_1a5466c78a40846a7f1d06f511ddd0af0a" kind="function"><name>GetCrytals</name></member>
+  </compound>
   <compound refid="class_particle_controller" kind="class"><name>ParticleController</name>
     <member refid="class_particle_controller_1acc84482972387ae6c09811da69277661" kind="variable"><name>thisButton</name></member>
     <member refid="class_particle_controller_1a1fc95ae704617b07d32817a798f7b032" kind="variable"><name>boundsParticles</name></member>
@@ -243,6 +271,17 @@
   </compound>
   <compound refid="class_path_wrapper" kind="class"><name>PathWrapper</name>
     <member refid="class_path_wrapper_1a2752a3aadeb4e18d4728d34e9b5a8d4e" kind="variable"><name>selectedPath</name></member>
+  </compound>
+  <compound refid="class_pause_menu_script" kind="class"><name>PauseMenuScript</name>
+    <member refid="class_pause_menu_script_1a8905fa79283a95a2255f526c49520aea" kind="property"><name>isGameOver</name></member>
+    <member refid="class_pause_menu_script_1a045f1ca181adf3728e8c6345afef58db" kind="variable"><name>PauseMenu</name></member>
+    <member refid="class_pause_menu_script_1aeb516e6ac305d6a830c42f6590fa471c" kind="variable"><name>PlayMenu</name></member>
+    <member refid="class_pause_menu_script_1af433bd92474fa6181ff0c8afe5791dc7" kind="function"><name>Update</name></member>
+    <member refid="class_pause_menu_script_1a851c2b813e44a38cdcd801bcdd549097" kind="function"><name>Start</name></member>
+    <member refid="class_pause_menu_script_1afb61df53e88a74463b852fd99f78e62f" kind="function"><name>TurnOnPause</name></member>
+    <member refid="class_pause_menu_script_1a806478538125f9c283769265dde9dd78" kind="function"><name>TurnOffPause</name></member>
+    <member refid="class_pause_menu_script_1adf3dc3cd1a7bf6cb69b33be6fb6f535c" kind="function"><name>GoToMainMenuButton</name></member>
+    <member refid="class_pause_menu_script_1a7107562e87a71c6ec22363b2d350a905" kind="function"><name>UnpuaseButton</name></member>
   </compound>
   <compound refid="class_player_stats" kind="class"><name>PlayerStats</name>
     <member refid="class_player_stats_1a04a9245d1a63c62a33bc7c1e03bc008b" kind="variable"><name>MaxLives</name></member>
@@ -272,17 +311,23 @@
     <member refid="class_player_stats_1a9af9d64b3ac36bcb38da32fc95815321" kind="function"><name>RemoveLife</name></member>
     <member refid="class_player_stats_1a2423f642f67c16f9f6e507dbd9db3387" kind="function"><name>CheckLife</name></member>
     <member refid="class_player_stats_1a393666cb5cf63349e182c35860736c14" kind="function"><name>GameOver</name></member>
+    <member refid="class_player_stats_1a850e08065ecf6ff2149cec84defe812f" kind="function"><name>AddCrystal</name></member>
     <member refid="class_player_stats_1a9e8dfdd25c3d59d575150f194615664d" kind="function"><name>UpdateSkillCooldowns</name></member>
     <member refid="class_player_stats_1a3996e838b0bdbbe472736a7cfba649ab" kind="function"><name>UpdateCrystalValues</name></member>
     <member refid="class_player_stats_1ad19f9c0d74ea78c8d734baac7ac18ebf" kind="function"><name>UpdateCrystalUI</name></member>
     <member refid="class_player_stats_1a4a7177e9639721aecb17ce7fc50933f6" kind="function"><name>UpdateSkillUI</name></member>
   </compound>
-  <compound refid="class_projectile" kind="class"><name>Projectile</name>
-    <member refid="class_projectile_1a346860eaea2a553b425f1d278c1bae3c" kind="variable"><name>ProjectileName</name></member>
-    <member refid="class_projectile_1a3fab349abea4a67162837393e0e4e9c1" kind="variable"><name>BaseProjectileSpeed</name></member>
-    <member refid="class_projectile_1a7912c0663014fec3df6f477a3038b227" kind="variable"><name>BaseDamage</name></member>
-    <member refid="class_projectile_1a9b441f6ff0558e322ea53269ec8f063d" kind="variable"><name>sprite</name></member>
-    <member refid="class_projectile_1a02308b63d1c7f05a3c2db9b4475d4801" kind="variable"><name>Effects</name></member>
+  <compound refid="class_popup_u_i" kind="class"><name>PopupUI</name>
+    <member refid="class_popup_u_i_1ad20bfc8564d61059621656862aba1757" kind="variable"><name>uiPrefab</name></member>
+    <member refid="class_popup_u_i_1af30c188e6f024e20d426691be764418f" kind="variable"><name>inputDetection</name></member>
+    <member refid="class_popup_u_i_1a0c571eafc53cc7c1018e6995999639fc" kind="variable"><name>currentUIPrefab</name></member>
+    <member refid="class_popup_u_i_1aeecf67a315f257feaa785e31751a89dc" kind="variable"><name>exitCondition</name></member>
+    <member refid="class_popup_u_i_1a4bd279333bc664bf53af874e4914ab8e" kind="variable"><name>tileNodes</name></member>
+    <member refid="class_popup_u_i_1a9b46f8697128bba2a3184861cf54fec3" kind="function"><name>Start</name></member>
+    <member refid="class_popup_u_i_1ae97674a76a7f848610bdcfedb5538977" kind="function"><name>Update</name></member>
+    <member refid="class_popup_u_i_1a58e3a0f5ffce7ccb6072780e2ded2a3b" kind="function"><name>ClosePopUpPanel</name></member>
+    <member refid="class_popup_u_i_1a600eceb3db3b4316f8a7b84b6eae78ea" kind="function"><name>ShowPopUpPanel</name></member>
+    <member refid="class_popup_u_i_1a6cf9ffe83e721d3a139c100de3d07741" kind="function"><name>ButtonListener_ShowTiles</name></member>
   </compound>
   <compound refid="class_projectile_data" kind="class"><name>ProjectileData</name>
     <member refid="class_projectile_data_1ae1536a05d49e3e0c25f65da2a0d23866" kind="variable"><name>projectilePrefab</name></member>
@@ -403,6 +448,7 @@
   <compound refid="class_tile_nodes" kind="class"><name>TileNodes</name>
     <member refid="class_tile_nodes_1af16f96ce799acf1980dd093038414a14" kind="variable"><name>gridBase</name></member>
     <member refid="class_tile_nodes_1a8a1664c6685852267f1e2f6bfbc62753" kind="variable"><name>uniqueTilemap</name></member>
+    <member refid="class_tile_nodes_1acd1e5606402a0104e252488e506667a0" kind="variable"><name>hiddenTileMap</name></member>
     <member refid="class_tile_nodes_1a20148be059e178a928b312445f254d09" kind="variable"><name>enemyPrefab</name></member>
     <member refid="class_tile_nodes_1a6fd9c73b126eb38c5c430a505c53ac8b" kind="variable"><name>TileNodesPrefabs</name></member>
     <member refid="class_tile_nodes_1a5045dd74604c69bdb42a845726a81149" kind="variable"><name>WalkableTiles</name></member>
@@ -416,13 +462,13 @@
     <member refid="class_tile_nodes_1ac0c4f96c30c24ce1a95a74f6653a7cb4" kind="variable"><name>selectedList</name></member>
     <member refid="class_tile_nodes_1a39fcc4af28f59271e7240cd247d82f1c" kind="variable"><name>pathData</name></member>
     <member refid="class_tile_nodes_1a6e41f0f9876f665c405751fe82b2f898" kind="variable"><name>hiddenTileManager</name></member>
-    <member refid="class_tile_nodes_1ae4cd6d6cc01d53e622c72801248430f7" kind="variable"><name>selectedNodes</name></member>
+    <member refid="class_tile_nodes_1a83eb952a3d8416e051af8eef4397a95d" kind="variable"><name>dictionaryTest</name></member>
     <member refid="class_tile_nodes_1a087b01a53f8c26a028516c27d3b1b512" kind="variable"><name>unsortedNodes</name></member>
     <member refid="class_tile_nodes_1a01f5f5e71a343d5b80076b2d7cffbf9d" kind="variable"><name>permanentSpawnPoints</name></member>
     <member refid="class_tile_nodes_1adfe6ff8844ffd91eaa10118f79c6cea8" kind="variable"><name>mapConstant</name></member>
     <member refid="class_tile_nodes_1a6de8f4d49a8506edbe79598f1ab768a0" kind="variable"><name>parentNodes</name></member>
+    <member refid="class_tile_nodes_1a69818b98767f4a6bc5e500be60d65ccb" kind="variable"><name>parentHiddenNodes</name></member>
     <member refid="class_tile_nodes_1a742cad762988dd19f0d42766c68522e0" kind="variable"><name>maxGridX</name></member>
-    <member refid="class_tile_nodes_1a2ddcee0f68672a5f8dcee946280a6076" kind="property"><name>SelectedNodes</name></member>
     <member refid="class_tile_nodes_1a7898107bcc8d734c1d17637e79fbccac" kind="function"><name>Awake</name></member>
     <member refid="class_tile_nodes_1a69f9661768889712032eb49c9ed09480" kind="function"><name>Start</name></member>
     <member refid="class_tile_nodes_1ac98b771ebb362f8f18ae7f00e7fd02d5" kind="function"><name>Update</name></member>
@@ -437,9 +483,11 @@
     <member refid="class_tile_nodes_1a1ccf7b0f073c26d31eb580fb09a7deb1" kind="function"><name>CheckBlockedPath</name></member>
     <member refid="class_tile_nodes_1abce6255cd88b6acd2e7199203b5921a0" kind="function"><name>BuildTable</name></member>
     <member refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" kind="function"><name>Editor_SelectList</name></member>
+    <member refid="class_tile_nodes_1aa02acfe6ce5a766ccbf949d3620fa911" kind="function"><name>BuildHiddenNodes</name></member>
     <member refid="class_tile_nodes_1a682a75a288b3455f7118464c72d1ade8" kind="function"><name>SetSpawnStartPosFromSelected</name></member>
-    <member refid="class_tile_nodes_1a7083882752d5e8d4e0af43e6d80bd178" kind="function"><name>HideTiles</name></member>
-    <member refid="class_tile_nodes_1a8631d5c16e9a000e5d75a0be86669c9d" kind="function"><name>ShowTiles</name></member>
+    <member refid="class_tile_nodes_1a481eb60f9778c12224aedbb472fd762b" kind="function"><name>HideTiles</name></member>
+    <member refid="class_tile_nodes_1a2ecd90ad0017988632b820e723a3cdca" kind="function"><name>ShowTiles</name></member>
+    <member refid="class_tile_nodes_1a58410c9aa433072f9c5987d6126cea58" kind="function"><name>ShowTiles</name></member>
   </compound>
   <compound refid="class_tile_nodes_editor" kind="class"><name>TileNodesEditor</name>
     <member refid="class_tile_nodes_editor_1a7d757bd4dcd5725cd36be2478b1cd9b4" kind="function"><name>OnInspectorGUI</name></member>
@@ -462,27 +510,42 @@
     <member refid="class_tower_data_1abbcc2685678bd2b87920a25ed0e4501f" kind="variable"><name>BaseRange</name></member>
     <member refid="class_tower_data_1a2d127aa058ce41013fd988231729affe" kind="variable"><name>BaseAttackSpeed</name></member>
     <member refid="class_tower_data_1a56436388c773b0f97505ffef1af36f1b" kind="variable"><name>towerSprite</name></member>
-    <member refid="class_tower_data_1a914dd90f022d05fd4f501a0eb47d7822" kind="variable"><name>projectile</name></member>
+    <member refid="class_tower_data_1a825b9389030d4f4ffa3b582b0c3642fc" kind="variable"><name>projectile</name></member>
     <member refid="class_tower_data_1ae785b01d7b9d4b01c037da56033b365b" kind="variable"><name>Effects</name></member>
   </compound>
-  <compound refid="class_tower_drag" kind="class"><name>TowerDrag</name>
-    <member refid="class_tower_drag_1a99ddd4c5542440707df225641e66fe93" kind="variable"><name>towerPrefab_UI</name></member>
-    <member refid="class_tower_drag_1a610155e220a57773f5735d02d539f395" kind="variable"><name>towerPrefab_Spawn</name></member>
-    <member refid="class_tower_drag_1a8c82ab96f978a777463aa67fb18f27d6" kind="variable"><name>towerParent</name></member>
-    <member refid="class_tower_drag_1a97e37af76998afccd5f5aaf1ab421504" kind="variable"><name>soundEffect</name></member>
-    <member refid="class_tower_drag_1a0f13dc0294965b6c5e1b322f05f58998" kind="variable"><name>playerStats</name></member>
-    <member refid="class_tower_drag_1a193dd481f655d4c981590781a9bf6d9b" kind="variable"><name>towerColor</name></member>
-    <member refid="class_tower_drag_1a609315919fd1c1590067f5e31e865a35" kind="variable"><name>currentTower</name></member>
-    <member refid="class_tower_drag_1aaeac30ea041f6547f384284c9e55d335" kind="variable"><name>soundManager</name></member>
-    <member refid="class_tower_drag_1a885a00e9b1ca1c5c0717ce742be9e154" kind="variable"><name>tileNodes</name></member>
-    <member refid="class_tower_drag_1ac93e3c252589280d7975988fa376b9a8" kind="variable"><name>waveManager</name></member>
-    <member refid="class_tower_drag_1a28c88236a440e61ba58f02483ea36e01" kind="variable"><name>towerCost</name></member>
-    <member refid="class_tower_drag_1a923e26de0542f54a3b2f55c3a94cd6cb" kind="function"><name>Start</name></member>
-    <member refid="class_tower_drag_1ae70d73d2f9d64501f7273424f334a70d" kind="function"><name>LogRaycasthitObject</name></member>
-    <member refid="class_tower_drag_1a8b0712fcbb9e25ec01081a540505a019" kind="function"><name>OnBeginDrag</name></member>
-    <member refid="class_tower_drag_1a5249c368ce5257c2acc56c5276a90b4d" kind="function"><name>OnDrag</name></member>
-    <member refid="class_tower_drag_1a942a12b2f914655d1e71a166b4c9a968" kind="function"><name>OnEndDrag</name></member>
-    <member refid="class_tower_drag_1a66c6d36e22059a7b6ac920a74c8308e4" kind="function"><name>RefundDragTower</name></member>
+  <compound refid="class_tower_drag_o_l_d" kind="class"><name>TowerDragOLD</name>
+    <member refid="class_tower_drag_o_l_d_1a730d57763b248a2aab7d4a9d1fda241f" kind="variable"><name>towerPrefab</name></member>
+    <member refid="class_tower_drag_o_l_d_1a2d5bb0150cd0bbeb2278c9a7424353de" kind="variable"><name>tileLayer</name></member>
+    <member refid="class_tower_drag_o_l_d_1a6554efc025ccbd127622d1555001efe3" kind="variable"><name>currentTowerLOCAL</name></member>
+    <member refid="class_tower_drag_o_l_d_1a2b60c138ffd6617e1fd72b3aeca8d643" kind="variable"><name>tileNodes</name></member>
+    <member refid="class_tower_drag_o_l_d_1a1dc2c6ec9420fbec6cb68d4d335a18f9" kind="function"><name>Start</name></member>
+    <member refid="class_tower_drag_o_l_d_1a35b7dacc52637be1a6711df39f159960" kind="function"><name>LogRaycasthitObject</name></member>
+    <member refid="class_tower_drag_o_l_d_1ade2afb3331214cb93460729b105f55c9" kind="function"><name>OnBeginDrag</name></member>
+    <member refid="class_tower_drag_o_l_d_1a4844f59838f03bc7fd21dd69e5606c5e" kind="function"><name>OnDrag</name></member>
+    <member refid="class_tower_drag_o_l_d_1a8d06758a789c4a046e468bd5088eb730" kind="function"><name>OnEndDrag</name></member>
+  </compound>
+  <compound refid="class_tower_script" kind="class"><name>TowerScript</name>
+    <member refid="class_tower_script_1a74a57b88d21d7f4203830d743c33761c" kind="variable"><name>timer</name></member>
+    <member refid="class_tower_script_1a797a6b58f339832bf66b0e9c8a82946d" kind="variable"><name>closestPosition</name></member>
+    <member refid="class_tower_script_1ae53f45339375e288582c4ee00ba3eaa4" kind="function"><name>Start</name></member>
+    <member refid="class_tower_script_1a9672898d83f37112f520e10893f5e6fa" kind="function"><name>Update</name></member>
+    <member refid="class_tower_script_1ab8618e1a87d194d548bcf5a9133f03f0" kind="function"><name>ShootTarget</name></member>
+    <member refid="class_tower_script_1afe418d022858e76c145173adc6268fd5" kind="function"><name>OnTriggerEnter2D</name></member>
+    <member refid="class_tower_script_1a9d1f7ded757048f6525203b70552bbe1" kind="function"><name>OnTriggerStay2D</name></member>
+    <member refid="class_tower_script_1ad24801c3bd4ccfbc0578d702b2fdfca4" kind="function"><name>OnTriggerExit2D</name></member>
+    <member refid="class_tower_script_1a542add2e5090f8b9d9d85c8902e71e79" kind="function"><name>OnCollisionStay2D</name></member>
+    <member refid="class_tower_script_1a9ab2eb3f62319c706cb781b03cf4c94b" kind="function"><name>OnTriggerStay</name></member>
+    <member refid="class_tower_script_1a9a5f4b3ef14d55faf0cd94166827aa7c" kind="function"><name>OnCollisionStay</name></member>
+  </compound>
+  <compound refid="class_tower_selector" kind="class"><name>TowerSelector</name>
+    <member refid="class_tower_selector_1a95c0f0ccddb7d5c0a3c448cf508c7839" kind="variable"><name>selectedNodes</name></member>
+    <member refid="class_tower_selector_1a9a20ae62fe725d068fd2242dea6a84c4" kind="property"><name>SelectedNodes</name></member>
+    <member refid="class_tower_selector_1ad2d64a9c923a94b0daede377d83f39e2" kind="variable"><name>selectedNode</name></member>
+    <member refid="class_tower_selector_1ad3d1def1b6cb418c8f3e9c9bac9dc1b1" kind="variable"><name>TowerWindowPrefab</name></member>
+    <member refid="class_tower_selector_1a117616e532f2179ada01194ca23b1086" kind="variable"><name>CurrentTowerWindow</name></member>
+    <member refid="class_tower_selector_1a385ddd5dd0fa9c513d631091525b5a9b" kind="function"><name>Start</name></member>
+    <member refid="class_tower_selector_1a36e5bf2af3a9c9ac467006638519c1f3" kind="function"><name>Update</name></member>
+    <member refid="class_tower_selector_1a5882f069129c1e6900a82fcf5d9fcda4" kind="function"><name>TowerUI</name></member>
   </compound>
   <compound refid="class_tower_shooting" kind="class"><name>TowerShooting</name>
     <member refid="class_tower_shooting_1a29006971761aef5abcfaa06fc01e0827" kind="variable"><name>projectilePresetData</name></member>
@@ -500,7 +563,8 @@
   </compound>
   <compound refid="class_transform_list" kind="class"><name>TransformList</name>
     <member refid="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" kind="variable"><name>breakableBlockPos</name></member>
-    <member refid="class_transform_list_1a73df2c7ef28634403ce240821069145e" kind="variable"><name>list</name></member>
+    <member refid="class_transform_list_1addc3b9d0da8183a8dfbc4a32ef7bedd8" kind="variable"><name>listOfNodes</name></member>
+    <member refid="class_transform_list_1a7c5e13014448ffd26c14ccbb9296c28b" kind="function"><name>TransformList</name></member>
   </compound>
   <compound refid="class_upgrade_node" kind="class"><name>UpgradeNode</name>
     <member refid="class_upgrade_node_1a23963e928ee9d6e13be978c081a4f044" kind="variable"><name>upgradeName</name></member>
@@ -575,11 +639,8 @@
     <member refid="class_world_tile_1a67a5d10ed54c58b0959281ecd844ec69" kind="variable"><name>walkable</name></member>
     <member refid="class_world_tile_1a73553fd14575c6acc8c0eeb2c8132e4a" kind="variable"><name>towering</name></member>
     <member refid="class_world_tile_1a8f5987fb6a965ae214c37cfad2cf7b4b" kind="variable"><name>isBlockedBarrier</name></member>
+    <member refid="class_world_tile_1ab143fd67f312bebf9250e549faed59f9" kind="variable"><name>isDestroyed</name></member>
     <member refid="class_world_tile_1a8bb9aed53ffb5e7251e04003f75022c5" kind="variable"><name>myNeighbours</name></member>
-    <member refid="class_world_tile_1aa329cbb27cdbc33d78816e5067043f3f" kind="variable"><name>crystalValueRed</name></member>
-    <member refid="class_world_tile_1a5faa48b04daa3e69fa2ba7f2b0a4f58e" kind="variable"><name>crystalValueBlue</name></member>
-    <member refid="class_world_tile_1a04bc708e60c4d6650cedfeb2f76bedfd" kind="variable"><name>crystalValueGreen</name></member>
-    <member refid="class_world_tile_1a815dd72c7a6d5bca1630fe88b8c1a65e" kind="variable"><name>crystalValueYellow</name></member>
     <member refid="class_world_tile_1a68744bed9f6974f656c7677e5fcc500a" kind="function"><name>ToString</name></member>
   </compound>
   <compound refid="namespace_assets" kind="namespace"><name>Assets</name>
@@ -630,10 +691,6 @@
   </compound>
   <compound refid="_path_wrapper_8cs" kind="file"><name>PathWrapper.cs</name>
   </compound>
-  <compound refid="_data_2_projectile_data_8cs" kind="file"><name>ProjectileData.cs</name>
-  </compound>
-  <compound refid="_projectile_data_8cs" kind="file"><name>ProjectileData.cs</name>
-  </compound>
   <compound refid="_scriptable_object_utility_8cs" kind="file"><name>ScriptableObjectUtility.cs</name>
   </compound>
   <compound refid="_tower_data_8cs" kind="file"><name>TowerData.cs</name>
@@ -658,27 +715,21 @@
   </compound>
   <compound refid="_wave_data_8cs" kind="file"><name>WaveData.cs</name>
   </compound>
-  <compound refid="_blockade_drag_8cs" kind="file"><name>BlockadeDrag.cs</name>
+  <compound refid="_barrier_drag_8cs" kind="file"><name>BarrierDrag.cs</name>
   </compound>
   <compound refid="_miner_drag_8cs" kind="file"><name>MinerDrag.cs</name>
   </compound>
   <compound refid="_skill_drag_8cs" kind="file"><name>SkillDrag.cs</name>
   </compound>
-  <compound refid="_tower_drag_8cs" kind="file"><name>TowerDrag.cs</name>
-  </compound>
   <compound refid="_enemy_script_8cs" kind="file"><name>EnemyScript.cs</name>
   </compound>
   <compound refid="_game_over_script_8cs" kind="file"><name>GameOverScript.cs</name>
-  </compound>
-  <compound refid="_game_manager_8cs" kind="file"><name>GameManager.cs</name>
   </compound>
   <compound refid="_player_stats_8cs" kind="file"><name>PlayerStats.cs</name>
   </compound>
   <compound refid="_map_bound_8cs" kind="file"><name>MapBound.cs</name>
   </compound>
   <compound refid="_map_bounds_updater_8cs" kind="file"><name>MapBoundsUpdater.cs</name>
-  </compound>
-  <compound refid="_projectile_fire_8cs" kind="file"><name>ProjectileFire.cs</name>
   </compound>
   <compound refid="_scence_switch_8cs" kind="file"><name>ScenceSwitch.cs</name>
   </compound>
@@ -690,6 +741,13 @@
   </compound>
   <compound refid="_base_node_8cs" kind="file"><name>BaseNode.cs</name>
   </compound>
+  <compound refid="_crystal_tile_8cs" kind="file"><name>CrystalTile.cs</name>
+    <member refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3" kind="enum"><name>CrystalColor</name></member>
+    <member refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3aa2d9547b5d3dd9f05984475f7c926da0" kind="enumvalue"><name>RED</name></member>
+    <member refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a8a568e5f41b7e4da88fe5c4a00aad34e" kind="enumvalue"><name>YELLOW</name></member>
+    <member refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a1b3e1ee9bff86431dea6b181365ba65f" kind="enumvalue"><name>BLUE</name></member>
+    <member refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a9de0e5dd94e861317e74964bed179fa0" kind="enumvalue"><name>GREEN</name></member>
+  </compound>
   <compound refid="_path_finding_8cs" kind="file"><name>PathFinding.cs</name>
   </compound>
   <compound refid="_tile_nodes_8cs" kind="file"><name>TileNodes.cs</name>
@@ -698,11 +756,21 @@
   </compound>
   <compound refid="_world_tile_8cs" kind="file"><name>WorldTile.cs</name>
   </compound>
+  <compound refid="_miner_script_8cs" kind="file"><name>MinerScript.cs</name>
+  </compound>
+  <compound refid="_pause_menu_script_8cs" kind="file"><name>PauseMenuScript.cs</name>
+  </compound>
+  <compound refid="_projectile_data_8cs" kind="file"><name>ProjectileData.cs</name>
+  </compound>
+  <compound refid="_projectile_fire_8cs" kind="file"><name>ProjectileFire.cs</name>
+  </compound>
   <compound refid="_skill_shooting_8cs" kind="file"><name>SkillShooting.cs</name>
   </compound>
-  <compound refid="_tower_shooting_8cs" kind="file"><name>TowerShooting.cs</name>
+  <compound refid="_tower_script_8cs" kind="file"><name>TowerScript.cs</name>
   </compound>
-  <compound refid="_barrier_drag_8cs" kind="file"><name>BarrierDrag.cs</name>
+  <compound refid="_tower_selector_8cs" kind="file"><name>TowerSelector.cs</name>
+  </compound>
+  <compound refid="_tower_shooting_8cs" kind="file"><name>TowerShooting.cs</name>
   </compound>
   <compound refid="_button_controller_8cs" kind="file"><name>ButtonController.cs</name>
   </compound>
@@ -722,48 +790,52 @@
   </compound>
   <compound refid="_particle_controller_8cs" kind="file"><name>ParticleController.cs</name>
   </compound>
+  <compound refid="_popup_u_i_8cs" kind="file"><name>PopupUI.cs</name>
+  </compound>
   <compound refid="_timer_8cs" kind="file"><name>Timer.cs</name>
+  </compound>
+  <compound refid="_tower_drag_8cs" kind="file"><name>TowerDrag.cs</name>
   </compound>
   <compound refid="_wave_manager_8cs" kind="file"><name>WaveManager.cs</name>
   </compound>
   <compound refid="_wave_system_timer_8cs" kind="file"><name>WaveSystemTimer.cs</name>
   </compound>
-  <compound refid="dir_7308abb27ce1242fd940d4e9d9634ab1" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets</name>
+  <compound refid="dir_bf9dbb824ffdb02fcc8b0ffa9eff657c" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets</name>
   </compound>
-  <compound refid="dir_1f2b0a7adc6883eb1675c8d7263bcca9" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data</name>
+  <compound refid="dir_054560c73b471d0a8e7fdac466a93d88" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data</name>
   </compound>
-  <compound refid="dir_ada129f5bff7359ff04ecf7050045237" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging</name>
+  <compound refid="dir_f9b36714f2b668127003ba9ea80a6692" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Draging</name>
   </compound>
-  <compound refid="dir_215a866ae79e0865808e2a6893856752" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy</name>
+  <compound refid="dir_f8dfc5ce472986e1d5aa7fb6f63e064a" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Enemy</name>
   </compound>
-  <compound refid="dir_fd8049f1820f82d03301a95654a7eae5" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts</name>
+  <compound refid="dir_dd31f3a1df9a85a7ad6bc8a4c9674314" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts</name>
   </compound>
-  <compound refid="dir_a7511bee0c07a6fc403cd31d2569a9a0" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers</name>
+  <compound refid="dir_d142a9a8b32ef19ae1c14304aefca87d" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Managers</name>
   </compound>
-  <compound refid="dir_afff80df7e0b2612f1e3dd7497a06e77" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds</name>
+  <compound refid="dir_590b1b06112fb813ebcd32ea74e67e0f" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Map Bounds</name>
   </compound>
-  <compound refid="dir_bfecd958422dbbeb04e3d3d3adae3100" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ScenceManager</name>
+  <compound refid="dir_6be9a29c03c812425cd411aceaa0b5a9" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/ScenceManager</name>
   </compound>
-  <compound refid="dir_d4f379ff019d8f672cac2d1996aa7805" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts</name>
+  <compound refid="dir_8cdcd900f6625ad591029c4190505df9" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts</name>
   </compound>
-  <compound refid="dir_1b93297b0eb4b3eb9119184c4f00ab2a" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound</name>
+  <compound refid="dir_cdbf7f5f2ed682329595ca3d836da159" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound</name>
   </compound>
-  <compound refid="dir_c9d9335cbf4dbd92660c4bcc108b7e12" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode</name>
+  <compound refid="dir_a39156c162f2dd00f12ac0581b3b2e78" kind="dir"><name>C:/Uniprj/Tower/TeraNew</name>
+  </compound>
+  <compound refid="dir_c088cc1a0ff43449b9ac4d5920f00227" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode</name>
+  </compound>
+  <compound refid="dir_2ae8fb8caec13e6feb87d6a5dfd635df" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower</name>
   </compound>
   <compound refid="dir_a0d3c24bec68c1a8b7f63730cd3c66c4" kind="dir"><name>C:/Uniprj/Tower</name>
   </compound>
-  <compound refid="dir_df6d461dabb0c7676a271c8e8ae7393f" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS</name>
+  <compound refid="dir_46121b3eebac45fa187399d375a91e9b" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon</name>
   </compound>
-  <compound refid="dir_90b721d808cb13f2d9248b2f01fce0c8" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon</name>
-  </compound>
-  <compound refid="dir_d19571259dff4c5ed2c520663fbc3059" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC</name>
-  </compound>
-  <compound refid="dir_178a537f795f8bf2a71249baaca413de" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI</name>
+  <compound refid="dir_10951f24951b6607010c3dbfab68dd93" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI</name>
   </compound>
   <compound refid="dir_2e0266405d61f1795af834bfab0ef0b7" kind="dir"><name>C:/Uniprj</name>
   </compound>
-  <compound refid="dir_853f47b250ba41a7e26d47c5c41fbfb5" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts</name>
+  <compound refid="dir_f21289ae67a6707981c3e02ead7fcf2a" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts</name>
   </compound>
-  <compound refid="dir_41932836bf0646e4479392573e51e99c" kind="dir"><name>C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem</name>
+  <compound refid="dir_43e657774fab35750394a97b4ceec732" kind="dir"><name>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem</name>
   </compound>
 </doxygenindex>

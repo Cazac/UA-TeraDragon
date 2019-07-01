@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" bodystart="14" bodyend="21"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs" bodystart="14" bodyend="21"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -84,6 +84,6 @@
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_stats_upgrade_8cs_1abc9b38e0d4ceb2c0139f07555758dddda03570470bad94692ce93e32700d2e1cb" kindref="member">OTHER</ref></highlight></codeline>
 <codeline lineno="21"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/StatsUpgrade.cs"/>
   </compounddef>
 </doxygen>

@@ -14,15 +14,56 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="19" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="31" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_hidden_tile_manager_1ae9ac6081732826a75ddc94dac4923d15" compoundref="_hidden_tile_list_8cs" startline="33" endline="36">HiddenTileManager</referencedby>
+        <referencedby refid="class_tile_nodes_1a481eb60f9778c12224aedbb472fd762b" compoundref="_tile_nodes_8cs" startline="494" endline="511">TileNodes.HideTiles</referencedby>
+        <referencedby refid="class_tile_nodes_1a2ecd90ad0017988632b820e723a3cdca" compoundref="_tile_nodes_8cs" startline="519" endline="533">TileNodes.ShowTiles</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hidden_tile_manager_1ae9ac6081732826a75ddc94dac4923d15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HiddenTileManager.HiddenTileManager</definition>
+        <argsstring>()</argsstring>
+        <name>HiddenTileManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="33" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="33" bodyend="36"/>
+        <references refid="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" compoundref="_hidden_tile_list_8cs" startline="31">list</references>
+      </memberdef>
+      <memberdef kind="function" id="class_hidden_tile_manager_1a89124d2f4b7a460d226a0b5f3734aa60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HiddenTileManager.HiddenTileManager</definition>
+        <argsstring>(List&lt; TransformList &gt; list)</argsstring>
+        <name>HiddenTileManager</name>
+        <param>
+          <type>List&lt; <ref refid="class_transform_list" kindref="compound">TransformList</ref> &gt;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="38" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="38" bodyend="45"/>
+        <references refid="class_transform_list_1aae9a4e1dcdc7cac11618ac5d4f01f4c4" compoundref="_hidden_tile_list_8cs" startline="15">TransformList.breakableBlockPos</references>
+        <references refid="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" compoundref="_hidden_tile_list_8cs" startline="31">list</references>
+        <references refid="class_transform_list_1addc3b9d0da8183a8dfbc4a32ef7bedd8" compoundref="_hidden_tile_list_8cs" startline="16">TransformList.listOfNodes</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Serilizable class to store list of <ref refid="class_transform_list" kindref="compound">TransformList</ref> object </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="17" bodyend="20"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" line="30" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/HiddenTileList.cs" bodystart="29" bodyend="46"/>
     <listofallmembers>
+      <member refid="class_hidden_tile_manager_1ae9ac6081732826a75ddc94dac4923d15" prot="public" virt="non-virtual"><scope>HiddenTileManager</scope><name>HiddenTileManager</name></member>
+      <member refid="class_hidden_tile_manager_1a89124d2f4b7a460d226a0b5f3734aa60" prot="public" virt="non-virtual"><scope>HiddenTileManager</scope><name>HiddenTileManager</name></member>
       <member refid="class_hidden_tile_manager_1a0dab9499aab3377f90335d5ee8826d17" prot="public" virt="non-virtual"><scope>HiddenTileManager</scope><name>list</name></member>
     </listofallmembers>
   </compounddef>

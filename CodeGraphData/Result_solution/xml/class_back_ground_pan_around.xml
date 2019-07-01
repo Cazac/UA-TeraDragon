@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="7" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="7" bodyend="-1"/>
         <referencedby refid="class_back_ground_pan_around_1a67f76e481b8e7e151491c0f3b0c1ef50" compoundref="_back_ground_pan_around_8cs" startline="21" endline="33">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_back_ground_pan_around_1a5f44c441cfbd2b34d9608351551d8bf9" prot="public" static="no" mutable="no">
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="8" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="8" bodyend="-1"/>
         <referencedby refid="class_back_ground_pan_around_1a67f76e481b8e7e151491c0f3b0c1ef50" compoundref="_back_ground_pan_around_8cs" startline="21" endline="33">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_back_ground_pan_around_1ad0fb9186c83ac11c095f09c34ed76c17" prot="public" static="no" mutable="no">
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="9" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="9" bodyend="-1"/>
         <referencedby refid="class_back_ground_pan_around_1a67f76e481b8e7e151491c0f3b0c1ef50" compoundref="_back_ground_pan_around_8cs" startline="21" endline="33">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_back_ground_pan_around_1a050c7784584679971dc617c07c398a21" prot="public" static="no" mutable="no">
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="10" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="10" bodyend="-1"/>
         <referencedby refid="class_back_ground_pan_around_1a67f76e481b8e7e151491c0f3b0c1ef50" compoundref="_back_ground_pan_around_8cs" startline="21" endline="33">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_back_ground_pan_around_1a45d78ac148474303b0f4f672f2df6734" prot="public" static="no" mutable="no">
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="12" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="12" bodyend="-1"/>
         <referencedby refid="class_back_ground_pan_around_1a67f76e481b8e7e151491c0f3b0c1ef50" compoundref="_back_ground_pan_around_8cs" startline="21" endline="33">Update</referencedby>
       </memberdef>
       </sectiondef>
@@ -87,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="15" bodyend="18"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="15" bodyend="18"/>
       </memberdef>
       <memberdef kind="function" id="class_back_ground_pan_around_1a67f76e481b8e7e151491c0f3b0c1ef50" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="21" bodyend="33"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="21" bodyend="33"/>
         <references refid="class_back_ground_pan_around_1adaf79dc6668e70e70dec6a2cf918bc99" compoundref="_back_ground_pan_around_8cs" startline="7">mouseX</references>
         <references refid="class_back_ground_pan_around_1a5f44c441cfbd2b34d9608351551d8bf9" compoundref="_back_ground_pan_around_8cs" startline="8">mouseY</references>
         <references refid="class_back_ground_pan_around_1a050c7784584679971dc617c07c398a21" compoundref="_back_ground_pan_around_8cs" startline="10">moveSensitivity</references>
@@ -134,7 +134,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="5" bodyend="34"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts/BackGroundPanAround.cs" bodystart="5" bodyend="34"/>
     <listofallmembers>
       <member refid="class_back_ground_pan_around_1adaf79dc6668e70e70dec6a2cf918bc99" prot="public" virt="non-virtual"><scope>BackGroundPanAround</scope><name>mouseX</name></member>
       <member refid="class_back_ground_pan_around_1a5f44c441cfbd2b34d9608351551d8bf9" prot="public" virt="non-virtual"><scope>BackGroundPanAround</scope><name>mouseY</name></member>

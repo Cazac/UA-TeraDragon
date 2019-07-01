@@ -78,7 +78,7 @@ public class TileNodes : MonoBehaviour
     }
     private void Update()
     {
-        CheckBlockedPath();
+        //CheckBlockedPath();
     }
 
     public void CheckBlockedPath()
@@ -308,14 +308,14 @@ public class TileNodes : MonoBehaviour
                         }
                     }
 
-                        // checks if tile is found in unwalkable
-                        //foreach (Tile tile in TowerTiles)
-                        //{
-                        //if (name == tile.name)
-                        //{
-                        //node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
-                        //}
-                        //}
+                    // checks if tile is found in unwalkable
+                    //foreach (Tile tile in TowerTiles)
+                    //{
+                    //if (name == tile.name)
+                    //{
+                    //node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                    //}
+                    //}
 
 
 
@@ -502,7 +502,7 @@ public class TileNodes : MonoBehaviour
 
                 Vector3Int temp = new Vector3Int((int)transformPos.position.x, (int)transformPos.position.y, (int)transformPos.position.z);
 
-                SetTileColor(hiddenTileMap.WorldToCell(temp), new Color(0,0,0,1), hiddenTileMap);
+                SetTileColor(hiddenTileMap.WorldToCell(temp), new Color(0, 0, 0, 1), hiddenTileMap);
                 transformPos.gameObject.SetActive(false);
 
             }

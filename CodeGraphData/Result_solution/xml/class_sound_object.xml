@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" bodystart="8" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" bodystart="8" bodyend="-1"/>
         <referencedby refid="class_sound_object_1ae46236f364d8ae25705c253d89dad9fe" compoundref="_sound_object_8cs" startline="16" endline="25">SoundObject</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_sound_object_1a23ac4b8c602d9c2ea2befbf2fd567a4f" prot="public" static="no" mutable="no">
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" bodystart="9" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" bodystart="9" bodyend="-1"/>
         <referencedby refid="class_sound_object_1ae46236f364d8ae25705c253d89dad9fe" compoundref="_sound_object_8cs" startline="16" endline="25">SoundObject</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_sound_object_1a57ebb473ec885be4e3075c8abcc97530" prot="public" static="no" mutable="no">
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" bodystart="10" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" bodystart="10" bodyend="-1"/>
         <referencedby refid="class_sound_object_1ae46236f364d8ae25705c253d89dad9fe" compoundref="_sound_object_8cs" startline="16" endline="25">SoundObject</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_sound_object_1afddeed821f4a00c61f8a2db80ed969e4" prot="public" static="no" mutable="no">
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" bodystart="11" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" line="11" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" bodystart="11" bodyend="-1"/>
         <referencedby refid="class_sound_object_1ae46236f364d8ae25705c253d89dad9fe" compoundref="_sound_object_8cs" startline="16" endline="25">SoundObject</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_sound_object_1a97c03dad70f2623ffe749eb82ee493aa" prot="public" static="no" mutable="no">
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" bodystart="12" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" bodystart="12" bodyend="-1"/>
         <referencedby refid="class_sound_object_1ae46236f364d8ae25705c253d89dad9fe" compoundref="_sound_object_8cs" startline="16" endline="25">SoundObject</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_sound_object_1a724e14474a945ce44e90c5bdf4dc7cb6" prot="public" static="no" mutable="no">
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" bodystart="13" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" bodystart="13" bodyend="-1"/>
         <referencedby refid="class_sound_object_1ae46236f364d8ae25705c253d89dad9fe" compoundref="_sound_object_8cs" startline="16" endline="25">SoundObject</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_sound_object_1a5a6a09d9fcb2585420ee1458c52174c4" prot="public" static="no" mutable="no">
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" bodystart="14" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" bodystart="14" bodyend="-1"/>
         <referencedby refid="class_sound_object_1ae46236f364d8ae25705c253d89dad9fe" compoundref="_sound_object_8cs" startline="16" endline="25">SoundObject</referencedby>
       </memberdef>
       </sectiondef>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" bodystart="16" bodyend="25"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" bodystart="16" bodyend="25"/>
         <references refid="class_sound_object_1a23ac4b8c602d9c2ea2befbf2fd567a4f" compoundref="_sound_object_8cs" startline="9">AudioClip</references>
         <references refid="class_sound_object_1a5a6a09d9fcb2585420ee1458c52174c4" compoundref="_sound_object_8cs" startline="14">IsAllowedAudioDampening</references>
         <references refid="class_sound_object_1a724e14474a945ce44e90c5bdf4dc7cb6" compoundref="_sound_object_8cs" startline="13">IsAllowedAutoDestruct</references>
@@ -163,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" bodystart="27" bodyend="29"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" bodystart="27" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="class_sound_object_1a4e901c9ff067b95f1dadd24fa0943b51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" line="31" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" bodystart="31" bodyend="34"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" line="31" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" bodystart="31" bodyend="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -188,28 +188,28 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="208">
+      <node id="244">
         <label>SoundObject</label>
         <link refid="class_sound_object"/>
-        <childnode refid="209" relation="public-inheritance">
+        <childnode refid="245" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="209">
+      <node id="245">
         <label>ScriptableObject</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="210">
+      <node id="246">
         <label>SoundObject</label>
         <link refid="class_sound_object"/>
-        <childnode refid="211" relation="public-inheritance">
+        <childnode refid="247" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="211">
+      <node id="247">
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/SoundObject.cs" bodystart="6" bodyend="35"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound/SoundObject.cs" bodystart="6" bodyend="35"/>
     <listofallmembers>
       <member refid="class_sound_object_1a23ac4b8c602d9c2ea2befbf2fd567a4f" prot="public" virt="non-virtual"><scope>SoundObject</scope><name>AudioClip</name></member>
       <member refid="class_sound_object_1a5a6a09d9fcb2585420ee1458c52174c4" prot="public" virt="non-virtual"><scope>SoundObject</scope><name>IsAllowedAudioDampening</name></member>
