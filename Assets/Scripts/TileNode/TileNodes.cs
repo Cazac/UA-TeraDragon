@@ -85,7 +85,6 @@ public class TileNodes : MonoBehaviour
     {
         if (pathData != null)
         {
-            pathData.blockedPaths.Clear();
             foreach (var path in pathData.paths)
             {
                 foreach (WorldTile tile in path)
@@ -496,7 +495,7 @@ public class TileNodes : MonoBehaviour
     {
         foreach (TransformList tileTransformListObject in hiddenTileManager.list)
         {
-            foreach (Transform transformPos in tileTransformListObject.list)
+            foreach (Transform transformPos in tileTransformListObject.listOfNodes)
             {
                 //Remove blocked options for tile, default is Lock Colour
                 //transformPos.gameObject.SetActive(false);

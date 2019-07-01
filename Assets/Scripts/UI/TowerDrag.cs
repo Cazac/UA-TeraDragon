@@ -17,12 +17,17 @@ public class TowerDragOLD : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
    
     public GameObject towerPrefab;
     private GameObject currentTowerLOCAL;
+    private TileNodes tileNodes;
 
     // TO DO ???
     public int tileLayer;
 
     /////////////////////////////////////////////////////////////////
 
+    private void Start()
+    {
+        tileNodes = GameObject.FindObjectOfType<TileNodes>();
+    }
 
     ///////////////
     /// <summary>
@@ -106,7 +111,6 @@ public class TowerDragOLD : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 currentTowerLOCAL.transform.position += Vector3.back;
                 //LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
                 hit.collider.GetComponent<WorldTile>().towering = false;
-
             }
             else
             {

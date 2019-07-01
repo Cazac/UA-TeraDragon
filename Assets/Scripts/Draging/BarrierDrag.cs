@@ -14,7 +14,7 @@ using WaveSystem;
 /// </summary>
 ///////////////
 
-public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [Header("Prefab Towers")]
     public GameObject towerPrefab_UI;
@@ -47,8 +47,6 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         waveManager = GameObject.FindObjectOfType<WaveManager>();
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
         soundManager = GameObject.FindObjectOfType<SoundManager>();
-
-        
     }
 
     /////////////////////////////////////////////////////////////////
@@ -151,7 +149,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
             //Condition for barrier
             if(!hit.collider.GetComponent<WorldTile>().isBlockedBarrier && hit.collider.GetComponent<WorldTile>().walkable && currentTower.name.Contains("Barrier")
-                && waveManager.CurrentWave.TimeUntilSpawn >= 0 && waveManager.EnableSpawning == false)
+                && waveManager.CurrentWave.TimeUntilSpawn >= 0 && waveManager.EnableSpawning == false && waveManager.waveParent.transform.childCount <= 0)
             {
                 hit.collider.GetComponent<WorldTile>().isBlockedBarrier = true;
                     GameObject newTower = null;

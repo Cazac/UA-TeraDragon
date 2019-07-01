@@ -150,7 +150,7 @@ namespace WaveSystem
 
 
             //If timer between wave hits 0, turn on spawning
-            if (currentTimer != null && EnableSpawning == false && !AllWaveCompleted())
+            if (currentTimer != null && EnableSpawning == false && !AllWaveCompleted() && waveParent.transform.childCount <= 0)
             {
                 if (currentTimer.NextWaveCountdown())
                     EnableSpawning = true;
@@ -161,9 +161,6 @@ namespace WaveSystem
                 //    soundManager.ReturnControl = true;
                 //}
             }
-
-            //Debug.Log("Current wave timer: " + currentTimer.WaveTimer);
-            //Debug.Log("Current wave timer interwave: " + currentTimer.TimeUntilNextSpawn);
         }
 
 
