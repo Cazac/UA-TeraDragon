@@ -152,9 +152,10 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             {
                 hit.collider.GetComponent<WorldTile>().isBlockedBarrier = true;
                 GameObject newTower = null;
-                tileNodes.CheckBlockedPath();
 
-                if (tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count /*&& !tileNodes.pathData.blockedPaths.Contains(waveManager.CurrentWave.Paths[0])*/)
+                //DrawBlockedPath(tileNodes.pathData);
+                
+                if (tileNodes.CheckBlockedPath() && tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count)
                 {
                     newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
                 }
@@ -174,8 +175,16 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         RefundDragTower();
     }
 
-
-
+    private void DrawBlockedPath(PathsData blockedPath)
+    {
+        foreach (var path in blockedPath.blockedPaths)
+        {
+            for (int i = 0; i < path.Count - 1; i++)
+            {
+                Debug.DrawRay(path[i].transform.position, path[i + 1].transform.position - path[i].transform.position, Color.red, 100f, false);
+            }
+        }
+    }
     public void RefundDragTower()
     {
         if (currentTower != null)

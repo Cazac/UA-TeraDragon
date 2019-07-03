@@ -79,24 +79,36 @@ public class TileNodes : MonoBehaviour
     private void Update()
     {
         //CheckBlockedPath();
+        DrawAllPath();
     }
 
-    public void CheckBlockedPath()
+    public bool CheckBlockedPath()
     {
         if (pathData != null)
         {
             foreach (var path in pathData.paths)
             {
+                bool isModified = false;
                 foreach (WorldTile tile in path)
                 {
                     if (tile.isBlockedBarrier == true)
                     {
+                        isModified = true;
+
+                        // Condition for when player places more than 1 barrier in the same path, false will be returned --> deny request
+                        if (pathData.blockedPaths.Contains(path))
+                            return false;
+
                         pathData.blockedPaths.Add(path);
                         break;
                     }
                 }
+
+                if(!isModified && pathData.blockedPaths.Contains(path))
+                    pathData.blockedPaths.Remove(path);
             }
         }
+        return true;
     }
 
     public void BuildTable()
@@ -187,6 +199,25 @@ public class TileNodes : MonoBehaviour
         FillNodeTable();
         // give each node their neighbours
         SetNeigbours();
+    }
+
+    private void DrawAllPath()
+    {
+        foreach (var path in pathData.paths)
+        {
+            for (int i = 0; i < path.Count - 1; i++)
+            {
+                Debug.DrawRay(path[i].transform.position, path[i + 1].transform.position - path[i].transform.position, Color.cyan);
+            }
+        }
+
+        foreach (var path in pathData.blockedPaths)
+        {
+            for (int i = 0; i < path.Count - 1; i++)
+            {
+                Debug.DrawRay(path[i].transform.position, path[i + 1].transform.position - path[i].transform.position, Color.red);
+            }
+        }
     }
 
     public void BuildHiddenNodes()

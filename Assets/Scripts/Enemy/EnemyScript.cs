@@ -1,23 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WaveSystem;
 
 public class EnemyScript : MonoBehaviour
 {
-
-    
     public List<WorldTile> currentWaypoints;
     public List<List<WorldTile>> blockedWaypoints = new List<List<WorldTile>>();
 
     private int currentWaypoint = 0;
     private EnemyData enemyData;
     private TileNodes tileNodes;
+    private WaveManager waveManager;
+
+    private GameObject currentBarrier;
 
     [Header("Enemy Stats")]
     public int MaxHealth;
     public int CurrentHealth;
     [Range(0.05f, 30f)]
     public float speed = 1.0f;
+
+    private bool isAttacking = false;
 
     // This seems better because allows us to change speed and reverse it
     Vector3 startPosition, endPosition, dir;
@@ -29,12 +33,11 @@ public class EnemyScript : MonoBehaviour
     private void Awake()
     {
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
-        PathRelocation(transform.position);
+        waveManager = GameObject.FindObjectOfType<WaveManager>();
     }   
     private void Start()
     {
-        PathRelocation(transform.position);
-
+      
         //DynamicPathRelocation(transform.position);
 
         if (enemyData != null)
@@ -52,12 +55,23 @@ public class EnemyScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (currentWaypoints.Count > 1)
+        if (currentWaypoints.Count > 1 && isAttacking == false)
         {
             Move();
             //DynamicPathRelocation(transform.position);
-            PathRelocation();
         }
+    }
+
+    private void Update()
+    {
+        if(currentBarrier != null)
+        {
+            if (isAttacking)
+                StartCoroutine(AttackBarrier(currentBarrier.GetComponent<BarrierData>()));
+            if (!isAttacking)
+                StopCoroutine(AttackBarrier(currentBarrier.GetComponent<BarrierData>()));
+        }
+
     }
 
     /////////////////////////////////////////////////////////////////
@@ -115,9 +129,11 @@ public class EnemyScript : MonoBehaviour
         foreach (var path in tileNodes.pathData.paths)
         {
             //If there's still a path to take
-            if (!tileNodes.pathData.blockedPaths.Contains(path) && tileNodes.pathData.blockedPaths.Count >= 1)
+            if (!tileNodes.pathData.blockedPaths.Contains(path) && tileNodes.pathData.blockedPaths.Count >= 1 
+               )
             {
-                currentWaypoints = path;
+                currentWaypoints = new List<WorldTile>(path);
+
                 //StartPosition = currentPosition;
                 return;
             }
@@ -140,16 +156,21 @@ public class EnemyScript : MonoBehaviour
             //If there's still a path to take
             if (!tileNodes.pathData.blockedPaths.Contains(path) && tileNodes.pathData.blockedPaths.Count >= 1)
             {
-                currentWaypoints = path;
-                //StartPosition = currentPosition;
-                return;
+                int gridXCurrentWave = waveManager.CurrentWave.Paths[0][0].gridX;
+                int gridYCurrentWave = waveManager.CurrentWave.Paths[0][0].gridY;
+                if (gridXCurrentWave == path[0].gridX && gridYCurrentWave == path[0].gridY)
+                {
+                    currentWaypoints = new List<WorldTile>(path);
+                    return;
+                }
+               
             }
 
             //If there's still a path to take
-            else
-            {
+            //else
+            //{
 
-            }
+            //}
         }
     }
 
@@ -166,8 +187,30 @@ public class EnemyScript : MonoBehaviour
             collision.transform.GetComponent<BaseNode>().BaseIsHit(1);
             Destroy(gameObject);
         }
+
+        if(collision.gameObject.tag == "Barrier")
+        {
+            currentBarrier = collision.gameObject;
+            isAttacking = true;
+        }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Barrier")
+        {
+            currentBarrier = collision.gameObject;
+            isAttacking = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Barrier")
+        {
+            isAttacking = false;
+        }
+    }
 
     public void TakeDamage(float damage)
     {
@@ -186,6 +229,27 @@ public class EnemyScript : MonoBehaviour
     //To DO
     public void ApplySlow()
     {
+
+    }
+
+    public IEnumerator AttackBarrier(BarrierData barrierData)
+    {
+        while (isAttacking)
+        {
+            yield return new WaitForSeconds(2);
+
+            if (barrierData.Health >= 0)
+                barrierData.Health -= 10;
+
+            else
+            {
+                isAttacking = false;
+                barrierData.IsDestroyed = true;
+                //TODO: Remove this
+                currentBarrier.GetComponent<SpriteRenderer>().color = Color.grey;
+                currentBarrier.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
 
     }
 }

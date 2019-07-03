@@ -14,7 +14,7 @@ using UnityEngine;
 public class PathsData {
 
     public List<List<WorldTile>> paths;
-    public List<List<WorldTile>> blockedPaths;
+    public HashSet<List<WorldTile>> blockedPaths;
     public Dictionary<WorldTile, List<List<WorldTile>>> PathsByStart;
     public Dictionary<WorldTile, List<List<WorldTile>>> PathsByEnd;
 
@@ -22,7 +22,7 @@ public class PathsData {
     public PathsData(List<List<WorldTile>> paths) {
         ListSize comparator = new ListSize();
         this.paths = paths;
-        this.blockedPaths = new List<List<WorldTile>>();
+        this.blockedPaths = new HashSet<List<WorldTile>>();
 
         PathsByStart = new Dictionary<WorldTile, List<List<WorldTile>>>();
         PathsByEnd = new Dictionary<WorldTile, List<List<WorldTile>>>();

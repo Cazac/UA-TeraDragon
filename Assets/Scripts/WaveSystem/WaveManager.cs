@@ -191,6 +191,8 @@ namespace WaveSystem
                             //Enumerator will return at this index, need to check if spawning option is still available
                             if (EnableSpawning == true)
                             {
+                                DrawDebugPath(CurrentWave.Paths);
+
                                 GameObject enemy = Instantiate(CurrentWave.EnemyPrefab, path[0].transform.position, Quaternion.identity, CurrentWave.ParentGameobject.transform);
                                 enemy.GetComponent<EnemyScript>().currentWaypoints = path;
                                 enemy.GetComponent<EnemyScript>().PathRelocation();
@@ -250,7 +252,20 @@ namespace WaveSystem
             }
             return false;
         }
+
+        private void DrawDebugPath(List<List<WorldTile>> pathData)
+        {
+            foreach (var path in pathData)
+            {
+                for (int i = 0; i < path.Count - 1; i++)
+                {
+                    Debug.DrawRay(path[i].transform.position, path[i + 1].transform.position - path[i].transform.position, Color.white, 100f, false);
+                }
+            }
+        }
     }
+
+
 
 
 

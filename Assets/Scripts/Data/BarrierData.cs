@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
-namespace Assets.Scripts.Data
+public class BarrierData : MonoBehaviour
 {
-    class BarrierData
-    {
-    }
+    public int health;
+
+    [Header("DEBUG ONLY")]
+    [SerializeField]
+    private bool isDestroyed = false;
+
+
+
+    public int Health { get => health; set => health = value; }
+    public bool IsDestroyed { get => isDestroyed; set => isDestroyed = value; }
 }
