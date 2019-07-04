@@ -27,6 +27,7 @@ public class CursorSelection : MonoBehaviour
     private void Start() 
     {
         TowerLayer = LayerMask.GetMask("Tower");
+        print("Tower Mask:" + LayerMask.GetMask("Tower"));
         selectorManager = GameObject.FindObjectOfType<TowerSelector>();
         
 
@@ -51,11 +52,18 @@ public class CursorSelection : MonoBehaviour
         {
             return;
         }
+        print("On click called");
             
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if(Physics.Raycast(raycastMouse, out hit, Mathf.Infinity, TowerLayer))
+
+        if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
+        {
+            print("On click hit:" + hit.transform.gameObject.name + " layer:" + hit.transform.gameObject.layer);
+
+        }
+            if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity, TowerLayer))
         {
             selectorManager.selectedNode = hit.collider.gameObject;
 

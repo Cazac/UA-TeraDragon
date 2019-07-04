@@ -12,6 +12,8 @@ public class TowerSelector : MonoBehaviour
 
     public GameObject selectedNode;
 
+    public TowerScript SelectedTower;
+
     public GameObject TowerWindowPrefab;
     // Start is called before the first frame update
     void Start()
@@ -22,24 +24,40 @@ public class TowerSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TowerUI();
-        if (selectedNode == null)
+        if (Input.GetMouseButton(0))
         {
-            if(CurrentTowerWindow != null)
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            RaycastHit2D hit2D = Physics2D.Raycast(mousePos, Vector2.zero, 10, LayerMask.GetMask("Tower"));
+
+            //if anything is collided
+            if (hit2D.collider != null)
             {
-                Destroy(CurrentTowerWindow);
-                CurrentTowerWindow = null;
+                print("2D hit:" + hit2D.collider.name);
+                SelectedTower = hit2D.collider.gameObject.GetComponent<TowerScript>();
             }
+            else
+            {
+              //  SelectedTower = null;
+            }
+
         }
+        TowerUI();
+
     }
 
     public GameObject CurrentTowerWindow;
     void TowerUI()
     {
-        if(selectedNode != null && selectedNode.GetComponent<TowerScript>() != null)
+        if(SelectedTower != null)
         {
-            CurrentTowerWindow = Instantiate(TowerWindowPrefab, selectedNode.transform.position, new Quaternion());
 
+            if(CurrentTowerWindow == null)
+                CurrentTowerWindow = Instantiate(TowerWindowPrefab, SelectedTower.transform.position, new Quaternion());
+        }
+        if(SelectedTower == null)
+        {
+          //  Destroy(CurrentTowerWindow);
         }
     }
 
