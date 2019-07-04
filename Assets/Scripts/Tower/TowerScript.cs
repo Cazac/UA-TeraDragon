@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class TowerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public float timer = 5f;
     // Update is called once per frame

@@ -115,6 +115,7 @@ MonoBehaviour:
   timeToReload: 2
   reloadProgress: 0
   isReadyToShoot: 0
+  TowerName: Fire Tower
 --- !u!1 &4164669925235955899
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,6 +356,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4164669925235955896}
     m_Modifications:
+    - target: {fileID: 1864443865439904897, guid: 58c6962c355ce6c40a379265e8917114,
+        type: 3}
+      propertyPath: m_Name
+      value: Tower Placement Particle System
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864443865439904897, guid: 58c6962c355ce6c40a379265e8917114,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3716404249786664749, guid: 58c6962c355ce6c40a379265e8917114,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -408,16 +419,6 @@ PrefabInstance:
     - target: {fileID: 3716404249786664749, guid: 58c6962c355ce6c40a379265e8917114,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864443865439904897, guid: 58c6962c355ce6c40a379265e8917114,
-        type: 3}
-      propertyPath: m_Name
-      value: Tower Placement Particle System
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864443865439904897, guid: 58c6962c355ce6c40a379265e8917114,
-        type: 3}
-      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

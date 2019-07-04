@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TowerSelector : MonoBehaviour
 {
@@ -11,14 +12,14 @@ public class TowerSelector : MonoBehaviour
     public List<GameObject> SelectedNodes { get => selectedNodes; set => selectedNodes = value; }
 
     public GameObject selectedNode;
-
-    public TowerScript SelectedTower;
-
     public GameObject TowerWindowPrefab;
+
+    public TowerShooting SelectedTower;
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -34,31 +35,37 @@ public class TowerSelector : MonoBehaviour
             if (hit2D.collider != null)
             {
                 print("2D hit:" + hit2D.collider.name);
-                SelectedTower = hit2D.collider.gameObject.GetComponent<TowerScript>();
-            }
-            else
-            {
-              //  SelectedTower = null;
+                SelectedTower = hit2D.collider.gameObject.GetComponentInChildren<TowerShooting>();
             }
 
         }
+        else if (Input.GetMouseButton(1))
+        {
+            SelectedTower = null;
+        }
         TowerUI();
-
     }
-
+    
     public GameObject CurrentTowerWindow;
     void TowerUI()
     {
         if(SelectedTower != null)
         {
-
             if(CurrentTowerWindow == null)
+            {
                 CurrentTowerWindow = Instantiate(TowerWindowPrefab, SelectedTower.transform.position, new Quaternion());
+                CurrentTowerWindow.GetComponent<TowerNodeUIScript>().changeNodeText(
+                    SelectedTower.TowerName + " \n" + 
+                    "Damage: " + SelectedTower.projectilePresetData.projectileDamage + "  \n" + 
+                    "Attack Speed: " + SelectedTower.timeToReload);
+                Debug.Log(SelectedTower.projectilePresetData.name + " \n" + SelectedTower.projectilePresetData.projectileDamage + "  \n" + SelectedTower.timeToReload);
+            }
         }
         if(SelectedTower == null)
         {
-          //  Destroy(CurrentTowerWindow);
+            Destroy(CurrentTowerWindow);
         }
     }
+    
 
 }

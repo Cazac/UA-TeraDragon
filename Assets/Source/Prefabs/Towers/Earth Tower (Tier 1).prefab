@@ -347,3 +347,4 @@ MonoBehaviour:
   timeToReload: 2
   reloadProgress: 0
   isReadyToShoot: 0
+  TowerName: Earth Tower

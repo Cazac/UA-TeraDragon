@@ -115,6 +115,7 @@ MonoBehaviour:
   timeToReload: 2
   reloadProgress: 0
   isReadyToShoot: 0
+  TowerName: Light Tower
 --- !u!1 &1042300668267733366
 GameObject:
   m_ObjectHideFlags: 0

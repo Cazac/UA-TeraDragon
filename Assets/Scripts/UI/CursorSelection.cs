@@ -60,7 +60,7 @@ public class CursorSelection : MonoBehaviour
 
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
         {
-            print("On click hit:" + hit.transform.gameObject.name + " layer:" + hit.transform.gameObject.layer);
+        //    print("On click hit:" + hit.transform.gameObject.name + " layer:" + hit.transform.gameObject.layer);
 
         }
             if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity, TowerLayer))
