@@ -34,6 +34,8 @@ public class CameraPanningCursor : MonoBehaviour
     public Vector2 CameraBoundingY { get => cameraBoundingY; set => cameraBoundingY = value; }
 
     private InputDetection inputDetection = new InputDetection();
+    private bool isUIDragging;
+
     public Vector2[] CameraFOVBounds
     {
         get
@@ -52,7 +54,7 @@ public class CameraPanningCursor : MonoBehaviour
         }
     }
 
-
+    public bool IsUIDragging { get => isUIDragging; set => isUIDragging = value; }
 
     public GameObject playArea;
    
@@ -125,17 +127,17 @@ public class CameraPanningCursor : MonoBehaviour
         inputDetection.DetectingSwipe();
         inputDetection.DetectingKeyboardInputEvent();
 
-        if (inputDetection.BeginClickEvent() == "Pressed")
+        if (inputDetection.BeginClickEvent() == "Pressed" && !isUIDragging)
         {
             TranslateWithMousePos();
         }
 
-        if (inputDetection.BeginClickEvent() == "Scrolling")
+        if (inputDetection.BeginClickEvent() == "Scrolling" )
         {
             ZoomWithMouseWheel();
         }
 
-        if (inputDetection.IsKeyboardInput)
+        if (inputDetection.IsKeyboardInput )
         {
             TranslateWithKeyboard();
         }

@@ -37,6 +37,7 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private TileNodes tileNodes;
     private WaveManager waveManager;
+    private CameraPanningCursor cameraPanningCursor;
 
     //TO DO HARD CODED COST
     private int towerCost = 5;
@@ -46,6 +47,7 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         waveManager = GameObject.FindObjectOfType<WaveManager>();
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
         soundManager = GameObject.FindObjectOfType<SoundManager>();
+        cameraPanningCursor = GameObject.FindObjectOfType<CameraPanningCursor>();
     }
 
     /////////////////////////////////////////////////////////////////
@@ -108,7 +110,7 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
             currentTower.transform.position = cursorPosition;
         }
-
+        cameraPanningCursor.IsUIDragging = true;
     }
 
 
@@ -173,6 +175,9 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         //Refund The Tower
         RefundDragTower();
+
+        cameraPanningCursor.IsUIDragging = false;
+
     }
 
     private void DrawBlockedPath(PathsData blockedPath)

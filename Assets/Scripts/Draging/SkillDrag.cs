@@ -37,6 +37,7 @@ public class SkillDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     private TileNodes tileNodes;
     private WaveManager waveManager;
+    private CameraPanningCursor cameraPanningCursor;
 
     //TO DO HARD CODED COST
     private int skillCost = 5;
@@ -47,6 +48,7 @@ public class SkillDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         waveManager = GameObject.FindObjectOfType<WaveManager>();
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
         soundManager = GameObject.FindObjectOfType<SoundManager>();
+        cameraPanningCursor = GameObject.FindObjectOfType<CameraPanningCursor>();
     }
 
     /////////////////////////////////////////////////////////////////
@@ -108,6 +110,8 @@ public class SkillDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
             currentSkill.transform.position = cursorPosition;
         }
+
+        cameraPanningCursor.IsUIDragging = true;
     }
 
 
@@ -122,6 +126,7 @@ public class SkillDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
+        cameraPanningCursor.IsUIDragging = false;
 
         //Check Raycast for any hit with COLLIDERS
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
@@ -150,6 +155,8 @@ public class SkillDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             Debug.Log("BOUND ERRORORORS");
             return;
         }
+
+
     }
 
     /////////////////////////////////////////////////////////////////

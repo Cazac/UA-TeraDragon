@@ -18,12 +18,17 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public GameObject minerPrefab;
     private GameObject currentMiner;
+    private CameraPanningCursor cameraPanningCursor;
 
     //Permitted Tiles
     public TileBase[] validTileTypes;
 
     /////////////////////////////////////////////////////////////////
 
+    private void Start()
+    {
+        cameraPanningCursor = GameObject.FindObjectOfType<CameraPanningCursor>();
+    }
 
     ///////////////
     /// <summary>
@@ -48,6 +53,8 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
 
         currentMiner.transform.position = cursorPosition;
+
+        cameraPanningCursor.IsUIDragging = true;
     }
 
 
@@ -61,6 +68,8 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         //Get current mouse raycast
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+
+        cameraPanningCursor.IsUIDragging = false;
 
 
         //Check Raycast for any hit with COLLIDERS
