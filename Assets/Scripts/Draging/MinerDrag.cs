@@ -20,7 +20,7 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     private GameObject currentMiner;
     private CameraPanningCursor cameraPanningCursor;
 
-    //Permitted Tiles
+    //Permitted Tiles To Place a Miner On
     public TileBase[] validTileTypes;
 
     /////////////////////////////////////////////////////////////////
@@ -51,9 +51,10 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         cursorPosition.z = 0;
 
-
+        //Set position to mouse
         currentMiner.transform.position = cursorPosition;
 
+        //???
         cameraPanningCursor.IsUIDragging = true;
     }
 
@@ -67,60 +68,48 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     {
         //Get current mouse raycast
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
 
+        //Useful?
         cameraPanningCursor.IsUIDragging = false;
 
 
         //Check Raycast for any hit with COLLIDERS
-        if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
+        if (Physics.Raycast(raycastMouse, out RaycastHit hit, Mathf.Infinity))
         {
             //Check hit tile name
-
             string tileTypeName = hit.collider.gameObject.name;
-            print("Is not null:" + hit.collider.GetComponent<CrystalTile>() != null);
+            print("Raycast is not null: " + hit.collider.GetComponent<CrystalTile>() != null);
+
             if (hit.collider.GetComponent<CrystalTile>() != null && hit.collider.GetComponent<CrystalTile>().towering)
             {
                 //Leave the Miner on the node, Call spawner later for init
                 currentMiner.transform.position = hit.collider.gameObject.transform.position;
-                LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
-
+                
                 currentMiner.GetComponent<MinerScript>().level = 1;
                 currentMiner.GetComponent<MinerScript>().crystalTile = hit.collider.GetComponent<CrystalTile>();
                 hit.collider.GetComponent<WorldTile>().towering = false;
-                
-
                 return;
-
             }
             else
             {
                 //No Match
-                print("Destroy Miner");
+                print("No Matching Value, Destroy Miner");
                 Destroy(currentMiner);
-
+                return;
             }
 
         }
         else
         {
             //No Raycast
-            print("Destroy Miner");
+            print("No Raycast Hit, Destroy Miner");
             Destroy(currentMiner);
+            return;
         }
     }
 
 
-    ///////////////
-    /// <summary>
-    /// Undocumented
-    /// </summary>
-    ///////////////
-    private void LogRaycasthitObject(String position, String type)
-    {
-        String logString = String.Format("Hit node spawing tower at position: {0}, is type of: {1}", position, type);
-        Debug.Log(logString);
-    }
+
 
     /////////////////////////////////////////////////////////////////
 }
