@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TowerSelector : MonoBehaviour
 {
@@ -11,36 +12,60 @@ public class TowerSelector : MonoBehaviour
     public List<GameObject> SelectedNodes { get => selectedNodes; set => selectedNodes = value; }
 
     public GameObject selectedNode;
-
     public GameObject TowerWindowPrefab;
+
+    public TowerShooting SelectedTower;
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        TowerUI();
-        if (selectedNode == null)
+        if (Input.GetMouseButton(0))
         {
-            if(CurrentTowerWindow != null)
-            {
-                Destroy(CurrentTowerWindow);
-                CurrentTowerWindow = null;
-            }
-        }
-    }
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+            RaycastHit2D hit2D = Physics2D.Raycast(mousePos, Vector2.zero, 10, LayerMask.GetMask("Tower"));
+
+            //if anything is collided
+            if (hit2D.collider != null)
+            {
+                print("2D hit:" + hit2D.collider.name);
+                SelectedTower = hit2D.collider.gameObject.GetComponentInChildren<TowerShooting>();
+            }
+
+        }
+        else if (Input.GetMouseButton(1))
+        {
+            SelectedTower = null;
+        }
+        TowerUI();
+    }
+    
     public GameObject CurrentTowerWindow;
     void TowerUI()
     {
-        if(selectedNode != null && selectedNode.GetComponent<TowerScript>() != null)
+        if(SelectedTower != null)
         {
-            CurrentTowerWindow = Instantiate(TowerWindowPrefab, selectedNode.transform.position, new Quaternion());
-
+            if(CurrentTowerWindow == null)
+            {
+                CurrentTowerWindow = Instantiate(TowerWindowPrefab, SelectedTower.transform.position, new Quaternion());
+                CurrentTowerWindow.GetComponent<TowerNodeUIScript>().changeNodeText(
+                    SelectedTower.TowerName + " \n" + 
+                    "Damage: " + SelectedTower.projectilePresetData.projectileDamage + "  \n" + 
+                    "Attack Speed: " + SelectedTower.timeToReload);
+                Debug.Log(SelectedTower.projectilePresetData.name + " \n" + SelectedTower.projectilePresetData.projectileDamage + "  \n" + SelectedTower.timeToReload);
+            }
+        }
+        if(SelectedTower == null)
+        {
+            Destroy(CurrentTowerWindow);
         }
     }
+    
 
 }

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1944aecb4a26cfe49be7cc05672a8872, type: 3}
+  m_Name: Earth Strike Projectile
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 0}
+  isProjectile: 0
+  projectileDamage: 0
+  projectileSpeed: 0
+  projectileSlowdown: 0
+  isExplosive: 0
+  explosionRadius: 0
+  explosionLinger: 0
+  explosionDamage: 0
+  explosionSlowdown: 0
+  isBeam: 0
+  beamDamage: 0
+  beamSlowdown: 0
+  beamChainTargets: 0

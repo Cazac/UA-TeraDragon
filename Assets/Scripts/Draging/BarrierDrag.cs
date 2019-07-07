@@ -8,9 +8,9 @@ using WaveSystem;
 
 ///////////////
 /// <summary>
-///     
+///
 /// TD_TowerDrag is used to drag and drop all towers into the game onto TD_TowerDrop sockets
-/// 
+///
 /// </summary>
 ///////////////
 
@@ -129,23 +129,13 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         //Check Raycast for any hit with COLLIDERS
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
         {
+
             //Check node name
             string tileLayer = hit.collider.gameObject.transform.parent.gameObject.name;
-
-            //print(tileLayer);
-
-            if (hit.collider.GetComponent<WorldTile>().towering && currentTower.name.Contains("Tower"))
+            if (tileLayer == null)
             {
-                //Leave the Tower on the node, Call spawner later for init
-                //currentTower.transform.position = hit.collider.gameObject.transform.position;
-
-                GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
-
-                hit.collider.GetComponent<WorldTile>().towering = false;
-
-                //Destory old UI Tower
+                print("called");
                 Destroy(currentTower);
-                return;
             }
 
             //Condition for barrier
@@ -156,20 +146,15 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 GameObject newTower = null;
 
                 //DrawBlockedPath(tileNodes.pathData);
-                
+
                 if (tileNodes.CheckBlockedPath() && tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count)
                 {
                     newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
                 }
                 else
                 {
-                    hit.collider.GetComponent<WorldTile>().isBlockedBarrier = false;
-                    tileNodes.CheckBlockedPath();
+                    Destroy(currentTower);
                 }
-
-                //Destory old UI Tower
-                Destroy(currentTower);
-                return;
             }
         }
 

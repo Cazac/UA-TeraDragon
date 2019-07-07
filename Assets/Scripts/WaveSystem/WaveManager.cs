@@ -90,6 +90,8 @@ namespace WaveSystem
             {
                 if (i >= tiles.pathData.paths.Count)
                 {
+
+                    print("Test Code: BLANK " + waves.Length);
                     waves[i].Paths = new List<List<WorldTile>>()
                     {
                         tiles.pathData.paths[tiles.pathData.paths.Count-1]
@@ -113,6 +115,7 @@ namespace WaveSystem
             //Create new timer object for current wave
             if (EnableSpawning == true && currentTimer == null)
             {
+                print("Test Code: " + CurrentWave.name);
                 InstantiateNewTimer(CurrentWave.TimeUntilSpawn, CurrentWave.WaveTimer, ref currentTimer);
             }
 

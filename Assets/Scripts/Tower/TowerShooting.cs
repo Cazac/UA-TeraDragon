@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,6 +23,7 @@ public class TowerShooting : MonoBehaviour
     public float timeToReload = 2f;
     public float reloadProgress = 0;
     public bool isReadyToShoot;
+    public string TowerName;
 
     //////////////////////////////////////////////////////////
 
