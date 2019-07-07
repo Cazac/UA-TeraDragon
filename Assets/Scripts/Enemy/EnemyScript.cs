@@ -48,7 +48,7 @@ public class EnemyScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Spawing Monster from prefab data");
+            //Debug.Log("Spawing Monster from prefab data");
         }
 
     }
@@ -102,11 +102,11 @@ public class EnemyScript : MonoBehaviour
 
                 if (enemyData != null)
                 {
-                    Debug.Log(enemyData.name + " has died");
+                    //Debug.Log(enemyData.name + " has died");
                 }
                 else
                 {
-                    Debug.Log("Death???");
+                    //Debug.Log("Death???");
                 }
 
                 Destroy(gameObject);
