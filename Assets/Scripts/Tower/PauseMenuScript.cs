@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class PauseMenuScript : MonoBehaviour
 {
     public bool isGameOver { get; set; }
-    public GameObject PauseMenu;
+
     public GameObject PlayMenu;
+    public GameObject PauseMenu;
+
 
     private void Update()
     {
