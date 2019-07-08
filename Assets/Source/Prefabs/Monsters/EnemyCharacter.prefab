@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5954217775785473977}
   - component: {fileID: 8287863575618493019}
   - component: {fileID: 8629214290285586392}
+  - component: {fileID: 7197087214752175707}
   m_Layer: 0
   m_Name: EnemyCharacter
   m_TagString: Untagged
@@ -94,11 +95,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9ce33395151114681c5b52e907cbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
+  currentWaypoints: []
   MaxHealth: 0
   CurrentHealth: 0
   speed: 30
-  attributes: []
 --- !u!50 &8287863575618493019
 Rigidbody2D:
   serializedVersion: 4
@@ -146,3 +146,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 30, y: 41.670002}
   m_EdgeRadius: 0
+--- !u!114 &7197087214752175707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954217775785473978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ad6fa676d37d549aac4a32272a21d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  crystalTile: {fileID: 0}
+  timer: 0
