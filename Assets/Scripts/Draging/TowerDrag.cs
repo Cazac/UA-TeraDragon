@@ -3,31 +3,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using WaveSystem;
 
 ///////////////
 /// <summary>
-///     
+///
 /// TD_TowerDrag is used to drag and drop all towers into the game onto TD_TowerDrop sockets
-/// 
+///
 /// </summary>
 ///////////////
 
-public class TowerDragOLD : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-   
-    public GameObject towerPrefab;
-    private GameObject currentTowerLOCAL;
+    [Header("Prefab Towers")]
+    public GameObject towerPrefab_UI;
+    public GameObject towerPrefab_Spawn;
+
+    [Header("Parent Gameobject")]
+    public GameObject towerParent;
+
+    [Header("UI_SoundEffect onclick")]
+    public SoundObject soundEffect;
+
+    [Header("Player Stats")]
+    public PlayerStats playerStats;
+
+    [Header("Color")]
+    public string towerColor;
+
+    private GameObject currentBarrier;
+    private SoundManager soundManager;
+
     private TileNodes tileNodes;
+    private WaveManager waveManager;
+    private CameraPanningCursor cameraPanningCursor;
 
-    // TO DO ???
-    public int tileLayer;
-
-    /////////////////////////////////////////////////////////////////
+    //TO DO HARD CODED COST
+    private int barrierCost = 0;
 
     private void Start()
     {
+        waveManager = GameObject.FindObjectOfType<WaveManager>();
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
+        soundManager = GameObject.FindObjectOfType<SoundManager>();
+        cameraPanningCursor = GameObject.FindObjectOfType<CameraPanningCursor>();
     }
+
+    /////////////////////////////////////////////////////////////////
 
     ///////////////
     /// <summary>
@@ -36,14 +59,39 @@ public class TowerDragOLD : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     ///////////////
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // TO DO ???
-        //Check Money
-        //Charge PLyaer
-        //Spawn Tower UI
-        //Get Reff To Tower
-        //Attach to Cursor
 
-        currentTowerLOCAL = Instantiate(towerPrefab);
+        if (gameObject.GetComponent<Button>().interactable)
+        {
+            //Charge Player
+            if (towerColor == "Red")
+            {
+                playerStats.crystalsOwned_Red -= barrierCost;
+            }
+            if (towerColor == "Blue")
+            {
+                playerStats.crystalsOwned_Blue -= barrierCost;
+            }
+            if (towerColor == "Green")
+            {
+                playerStats.crystalsOwned_Green -= barrierCost;
+            }
+            if (towerColor == "Yellow")
+            {
+                playerStats.crystalsOwned_Yellow -= barrierCost;
+            }
+
+            playerStats.UpdateCrystalUI();
+
+            //Spawn Tower Drag
+            currentBarrier = Instantiate(towerPrefab_UI);
+            soundManager.PlayOnUIClick(soundEffect);
+        }
+        else
+        {
+            //Error SFX
+            Debug.Log("No Money");
+        }
+
     }
 
 
@@ -54,11 +102,15 @@ public class TowerDragOLD : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     ///////////////
     public void OnDrag(PointerEventData eventData)
     {
-        //currentTowerLOCAL.transform.position = cursor.transform.position;
-        Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        cursorPosition.z = 0;
+        if (currentBarrier != null)
+        {
+            //currentTower.transform.position = cursor.transform.position;
+            Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            cursorPosition.z = 0;
 
-        currentTowerLOCAL.transform.position = cursorPosition;
+            currentBarrier.transform.position = cursorPosition;
+        }
+        cameraPanningCursor.IsUIDragging = true;
     }
 
 
@@ -68,74 +120,88 @@ public class TowerDragOLD : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     /// </summary>
     ///////////////
     public void OnEndDrag(PointerEventData eventData)
-    {    
+    {
         //Get current mouse raycast
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
 
+        //Useful?
+        cameraPanningCursor.IsUIDragging = false;
 
         //Check Raycast for any hit with COLLIDERS
-        if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
+        if (Physics.Raycast(raycastMouse, out RaycastHit hit, Mathf.Infinity))
         {
-            string tileLayer = "";
+            //Check hit tile name
+            string tileTypeName = hit.collider.gameObject.name;
+            Debug.Log(tileTypeName);
 
-
-            if (hit.collider.gameObject.transform.parent != null)
+            if (hit.collider.GetComponent<WorldTile>() != null && hit.collider.GetComponent<WorldTile>().towering)
             {
-                tileLayer = hit.collider.gameObject.transform.parent.gameObject.name;
+                //Create Spawn Tower
+                GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
+
+                //Remove old tower
+                Destroy(currentBarrier);
+                hit.collider.GetComponent<WorldTile>().towering = false;
+                return;
             }
             else
             {
-                print("Destroy Tower");
-                Destroy(currentTowerLOCAL);
-
+                //No Match
+                print("No Matching Value, Destroy Miner");
+                Destroy(currentBarrier);
+                RefundDragTower();
                 return;
             }
 
-
-
-      //      print(tileLayer);
-      //      print("Name:" + hit.collider.gameObject.name);
-      //      print("Name:" + hit.collider.GetComponent<WorldTile>().towering);
-
-
-            //  TO DO   // - HARD CODED ???
-            if (tileLayer == "Parent_Ground" || tileLayer == "Parent_UnwalkableTiles")
-            {
-                //Leave the Tower on the node, Call spawner later for init
-            }
-            if (hit.collider.GetComponent<WorldTile>().towering)
-            {
-                //Leave the Tower on the node, Call spawner later for init
-                currentTowerLOCAL.transform.position = hit.collider.gameObject.transform.position;
-                currentTowerLOCAL.transform.position += Vector3.back;
-                //LogRaycasthitObject(hit.collider.gameObject.transform.position.ToString(), hit.collider.gameObject.transform.parent.gameObject.name);
-                hit.collider.GetComponent<WorldTile>().towering = false;
-            }
-            else
-            {
-                print("Destroy Tower");
-                Destroy(currentTowerLOCAL);
-            }
         }
         else
         {
-            print("Destroy Tower");
-            Destroy(currentTowerLOCAL);
+            //No Raycast
+            print("No Raycast Hit, Destroy Tower");
+            Destroy(currentBarrier);
+            RefundDragTower();
+            return;
         }
+
+
+
+
+        // ???
+        cameraPanningCursor.IsUIDragging = false;
     }
 
 
-    ///////////////
-    /// <summary>
-    /// Undocumented
-    /// </summary>
-    ///////////////
-    private void LogRaycasthitObject(String position, String type)
+
+    public void RefundDragTower()
     {
-        String logString = String.Format("Hit node spawing tower at position: {0}, is type of: {1}", position, type);
-      //  Debug.Log(logString);
+        if (currentBarrier != null)
+        {
+            print("Refund Tower");
+
+            //Refund Player
+            if (towerColor == "Red")
+            {
+                playerStats.crystalsOwned_Red += barrierCost;
+            }
+            if (towerColor == "Blue")
+            {
+                playerStats.crystalsOwned_Blue += barrierCost;
+            }
+            if (towerColor == "Green")
+            {
+                playerStats.crystalsOwned_Green += barrierCost;
+            }
+            if (towerColor == "Yellow")
+            {
+                playerStats.crystalsOwned_Yellow += barrierCost;
+            }
+
+            playerStats.UpdateCrystalUI();
+            Destroy(currentBarrier);
+        }
     }
 
     /////////////////////////////////////////////////////////////////
 }
+
+

@@ -90,8 +90,6 @@ namespace WaveSystem
             {
                 if (i >= tiles.pathData.paths.Count)
                 {
-
-                    print("Test Code: BLANK " + waves.Length);
                     waves[i].Paths = new List<List<WorldTile>>()
                     {
                         tiles.pathData.paths[tiles.pathData.paths.Count-1]

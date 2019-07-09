@@ -29,10 +29,7 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     [Header("Player Stats")]
     public PlayerStats playerStats;
 
-    [Header("Color")]
-    public string towerColor;
-
-    private GameObject currentTower;
+    private GameObject currentBarrier;
     private SoundManager soundManager;
 
     private TileNodes tileNodes;
@@ -40,7 +37,7 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private CameraPanningCursor cameraPanningCursor;
 
     //TO DO HARD CODED COST
-    private int towerCost = 5;
+    private int barrierCost = 0;
 
     private void Start()
     {
@@ -63,27 +60,27 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (gameObject.GetComponent<Button>().interactable)
         {
             //Charge Player
-            if (towerColor == "Red")
+            //if (towerColor == "Red")
             {
-                playerStats.crystalsOwned_Red -= towerCost;
+                playerStats.crystalsOwned_Red -= barrierCost;
             }
-            if (towerColor == "Blue")
+            //if (towerColor == "Blue")
             {
-                playerStats.crystalsOwned_Blue -= towerCost;
+                playerStats.crystalsOwned_Blue -= barrierCost;
             }
-            if (towerColor == "Green")
+            //if (towerColor == "Green")
             {
-                playerStats.crystalsOwned_Green -= towerCost;
+                playerStats.crystalsOwned_Green -= barrierCost;
             }
-            if (towerColor == "Yellow")
+            //if (towerColor == "Yellow")
             {
-                playerStats.crystalsOwned_Yellow -= towerCost;
+                playerStats.crystalsOwned_Yellow -= barrierCost;
             }
 
             playerStats.UpdateCrystalUI();
 
             //Spawn Tower Drag
-            currentTower = Instantiate(towerPrefab_UI);
+            currentBarrier = Instantiate(towerPrefab_UI);
             soundManager.PlayOnUIClick(soundEffect);
         }
         else
@@ -102,13 +99,13 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     ///////////////
     public void OnDrag(PointerEventData eventData)
     {
-        if (currentTower != null)
+        if (currentBarrier != null)
         {
             //currentTower.transform.position = cursor.transform.position;
             Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             cursorPosition.z = 0;
 
-            currentTower.transform.position = cursorPosition;
+            currentBarrier.transform.position = cursorPosition;
         }
         cameraPanningCursor.IsUIDragging = true;
     }
@@ -135,11 +132,11 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             if (tileLayer == null)
             {
                 print("called");
-                Destroy(currentTower);
+                Destroy(currentBarrier);
             }
 
             //Condition for barrier
-            if (!hit.collider.GetComponent<WorldTile>().isBlockedBarrier && hit.collider.GetComponent<WorldTile>().walkable && currentTower.name.Contains("Barrier")
+            if (!hit.collider.GetComponent<WorldTile>().isBlockedBarrier && hit.collider.GetComponent<WorldTile>().walkable && currentBarrier.name.Contains("Barrier")
                 && waveManager.CurrentWave.TimeUntilSpawn >= 0 && waveManager.EnableSpawning == false && waveManager.waveParent.transform.childCount <= 0)
             {
                 hit.collider.GetComponent<WorldTile>().isBlockedBarrier = true;
@@ -153,7 +150,7 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 }
                 else
                 {
-                    Destroy(currentTower);
+                    Destroy(currentBarrier);
                 }
             }
         }
@@ -175,44 +172,34 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             }
         }
     }
+
     public void RefundDragTower()
     {
-        if (currentTower != null)
+        if (currentBarrier != null)
         {
             print("Refund Tower");
 
             //Refund Player
-            if (towerColor == "Red")
+           // if (towerColor == "Red")
             {
-                playerStats.crystalsOwned_Red += towerCost;
+                playerStats.crystalsOwned_Red += barrierCost;
             }
-            if (towerColor == "Blue")
+            //if (towerColor == "Blue")
             {
-                playerStats.crystalsOwned_Blue += towerCost;
+                playerStats.crystalsOwned_Blue += barrierCost;
             }
-            if (towerColor == "Green")
+            //if (towerColor == "Green")
             {
-                playerStats.crystalsOwned_Green += towerCost;
+                playerStats.crystalsOwned_Green += barrierCost;
             }
-            if (towerColor == "Yellow")
+            //if (towerColor == "Yellow")
             {
-                playerStats.crystalsOwned_Yellow += towerCost;
+                playerStats.crystalsOwned_Yellow += barrierCost;
             }
 
             playerStats.UpdateCrystalUI();
-            Destroy(currentTower);
+            Destroy(currentBarrier);
         }
-    }
-
-    ///////////////
-    /// <summary>
-    /// Undocumented
-    /// </summary>
-    ///////////////
-    private void LogRaycasthitObject(String position, String type)
-    {
-        String logString = String.Format("Hit node spawing tower at position: {0}, is type of: {1}", position, type);
-        //  Debug.Log(logString);
     }
 
     /////////////////////////////////////////////////////////////////

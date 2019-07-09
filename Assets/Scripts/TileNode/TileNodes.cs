@@ -130,10 +130,10 @@ public class TileNodes : MonoBehaviour
 
             parentNodes = new GameObject[TileNodesPrefabs.Length];
 
-            parentNodes[0] = new GameObject("Parent_WalkableTiles");
+            parentNodes[0] = new GameObject("Node Parent (Unwalkable)");
             parentNodes[0].transform.SetParent(transform);
 
-            parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
+            parentNodes[1] = new GameObject("Node Parent (Walkable)");
             parentNodes[1].transform.SetParent(transform);
 
         }
