@@ -18,22 +18,16 @@ public class PlayerStats : MonoBehaviour
     [Header("Skill UI Elements")]
     public GameObject skillGameObject_Red;
 
+    [Header("Crystals")]
     public int crystalsOwned_Red;
     public int crystalsOwned_Blue;
     public int crystalsOwned_Green;
     public int crystalsOwned_Yellow;
 
-    private float crystalsExtra_Red;
-    private float crystalsExtra_Blue;
-    private float crystalsExtra_Green;
-    private float crystalsExtra_Yellow;
-
-    private float crystalsPerSecond_Red = 0.5f;
-    private float crystalsPerSecond_Blue = 0.1f;
-    private float crystalsPerSecond_Green = 0.1f;
-    private float crystalsPerSecond_Yellow = 0.1f;
-
     public bool skillReady_Red;
+    public bool skillReady_Blue;
+    public bool skillReady_Green;
+    public bool skillReady_Yellow;
 
     private float skillCountdown_Red;
 
@@ -214,6 +208,40 @@ public class PlayerStats : MonoBehaviour
         {
             skillGameObject_Red.gameObject.transform.GetComponent<Button>().interactable = false;
         }
+
+        /*
+
+        //Blue
+        if (skillReady_Blue)
+        {
+            skillGameObject_Red.gameObject.transform.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            skillGameObject_Red.gameObject.transform.GetComponent<Button>().interactable = false;
+        }
+
+        //Red
+        if (skillReady_Red)
+        {
+            skillGameObject_Red.gameObject.transform.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            skillGameObject_Red.gameObject.transform.GetComponent<Button>().interactable = false;
+        }
+
+        //Red
+        if (skillReady_Red)
+        {
+            skillGameObject_Red.gameObject.transform.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            skillGameObject_Red.gameObject.transform.GetComponent<Button>().interactable = false;
+        }
+
+    */
 
     }
 

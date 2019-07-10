@@ -109,10 +109,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 068b33e2a8bd0e94c8977e3bdbc75278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDamage: 20
-  MonstersToShoot: []
+  skillController: {fileID: 2138895298}
+  backgroundParticules: {fileID: 0}
   buildUpParticules: {fileID: 1638177503029602915}
   releaseParticules: {fileID: 6186025559026590233}
+  MonstersToShoot: []
+  skillDuration: 0
+  skillDamage: 0
 --- !u!1 &824724313684287654
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 824724313684287653}
+  - component: {fileID: 2138895298}
   m_Layer: 0
   m_Name: Fire Skill (Tier 1)
   m_TagString: Untagged
@@ -146,6 +150,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2138895298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824724313684287654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f28b5703d1a2744981e40ee0721d45f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: ab3fd4b8484967c4c9da607b4bed56c2, type: 2}
+  skillRange: {fileID: 926103265640918228}
 --- !u!1 &1638177503029602915
 GameObject:
   m_ObjectHideFlags: 0

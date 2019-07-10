@@ -78,7 +78,6 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         {
             //Check hit tile name
             string tileTypeName = hit.collider.gameObject.name;
-            print("Raycast is not null: " + hit.collider.GetComponent<CrystalTile>() != null);
 
             if (hit.collider.GetComponent<CrystalTile>() != null && hit.collider.GetComponent<CrystalTile>().towering)
             {

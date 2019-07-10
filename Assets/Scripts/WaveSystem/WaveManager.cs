@@ -3,10 +3,28 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 
+///////////////
+/// <summary>
+///     
+/// Why does WaveSystem have a namespace?
+/// 
+/// </summary>
+///////////////
+
 namespace WaveSystem
 {
+
+    ///////////////
+    /// <summary>
+    ///     
+    /// WaveManager
+    /// 
+    /// </summary>
+    ///////////////
+
     public class WaveManager : MonoBehaviour
     {
+        [Header("TileNodes Refference")]
         public TileNodes tiles;
 
         // public GameObject[] spawnEnemies; //TODO: Reimplement this!
@@ -14,12 +32,8 @@ namespace WaveSystem
         public bool enableSpawning;
         public bool EnableSpawning { get => enableSpawning; set => enableSpawning = value; }
 
-        // public Vector3[] positions;
 
-        // [SerializeField]
-        // private float internalTimer;
-
-        [Header("Scriptable wave object")]
+        [Header("Scriptable wave objects")]
         public WaveData[] waves;
 
 

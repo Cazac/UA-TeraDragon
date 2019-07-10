@@ -9,7 +9,7 @@ using WaveSystem;
 ///////////////
 /// <summary>
 ///
-/// TD_TowerDrag is used to drag and drop all towers into the game onto TD_TowerDrop sockets
+/// TD_TowerDrag is used to drag and drop all towers into the game
 ///
 /// </summary>
 ///////////////
@@ -32,15 +32,19 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     [Header("Color")]
     public string towerColor;
 
-    private GameObject currentBarrier;
-    private SoundManager soundManager;
+    //Dragging Tower
+    private GameObject currentTower;
 
+    //Managers
     private TileNodes tileNodes;
+    private SoundManager soundManager;
     private WaveManager waveManager;
     private CameraPanningCursor cameraPanningCursor;
 
     //TO DO HARD CODED COST
-    private int barrierCost = 0;
+    private int towerCost = 5;
+
+    /////////////////////////////////////////////////////////////////
 
     private void Start()
     {
@@ -54,7 +58,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     ///////////////
     /// <summary>
-    /// Undocumented
+    /// Dragging a tower will charge the player the cost then create a drag version of the Gameobject.
     /// </summary>
     ///////////////
     public void OnBeginDrag(PointerEventData eventData)
@@ -65,25 +69,25 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             //Charge Player
             if (towerColor == "Red")
             {
-                playerStats.crystalsOwned_Red -= barrierCost;
+                playerStats.crystalsOwned_Red -= towerCost;
             }
             if (towerColor == "Blue")
             {
-                playerStats.crystalsOwned_Blue -= barrierCost;
+                playerStats.crystalsOwned_Blue -= towerCost;
             }
             if (towerColor == "Green")
             {
-                playerStats.crystalsOwned_Green -= barrierCost;
+                playerStats.crystalsOwned_Green -= towerCost;
             }
             if (towerColor == "Yellow")
             {
-                playerStats.crystalsOwned_Yellow -= barrierCost;
+                playerStats.crystalsOwned_Yellow -= towerCost;
             }
 
             playerStats.UpdateCrystalUI();
 
             //Spawn Tower Drag
-            currentBarrier = Instantiate(towerPrefab_UI);
+            currentTower = Instantiate(towerPrefab_UI);
             soundManager.PlayOnUIClick(soundEffect);
         }
         else
@@ -102,13 +106,13 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     ///////////////
     public void OnDrag(PointerEventData eventData)
     {
-        if (currentBarrier != null)
+        if (currentTower != null)
         {
             //currentTower.transform.position = cursor.transform.position;
             Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             cursorPosition.z = 0;
 
-            currentBarrier.transform.position = cursorPosition;
+            currentTower.transform.position = cursorPosition;
         }
         cameraPanningCursor.IsUIDragging = true;
     }
@@ -132,7 +136,6 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         {
             //Check hit tile name
             string tileTypeName = hit.collider.gameObject.name;
-            Debug.Log(tileTypeName);
 
             if (hit.collider.GetComponent<WorldTile>() != null && hit.collider.GetComponent<WorldTile>().towering)
             {
@@ -140,7 +143,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
 
                 //Remove old tower
-                Destroy(currentBarrier);
+                Destroy(currentTower);
                 hit.collider.GetComponent<WorldTile>().towering = false;
                 return;
             }
@@ -148,7 +151,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             {
                 //No Match
                 print("No Matching Value, Destroy Miner");
-                Destroy(currentBarrier);
+                Destroy(currentTower);
                 RefundDragTower();
                 return;
             }
@@ -158,7 +161,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         {
             //No Raycast
             print("No Raycast Hit, Destroy Tower");
-            Destroy(currentBarrier);
+            Destroy(currentTower);
             RefundDragTower();
             return;
         }
@@ -174,30 +177,30 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void RefundDragTower()
     {
-        if (currentBarrier != null)
+        if (currentTower != null)
         {
             print("Refund Tower");
 
             //Refund Player
             if (towerColor == "Red")
             {
-                playerStats.crystalsOwned_Red += barrierCost;
+                playerStats.crystalsOwned_Red += towerCost;
             }
             if (towerColor == "Blue")
             {
-                playerStats.crystalsOwned_Blue += barrierCost;
+                playerStats.crystalsOwned_Blue += towerCost;
             }
             if (towerColor == "Green")
             {
-                playerStats.crystalsOwned_Green += barrierCost;
+                playerStats.crystalsOwned_Green += towerCost;
             }
             if (towerColor == "Yellow")
             {
-                playerStats.crystalsOwned_Yellow += barrierCost;
+                playerStats.crystalsOwned_Yellow += towerCost;
             }
 
             playerStats.UpdateCrystalUI();
-            Destroy(currentBarrier);
+            Destroy(currentTower);
         }
     }
 

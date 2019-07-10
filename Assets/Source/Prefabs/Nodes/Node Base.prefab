@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546970844939111403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -178.27815, y: -146.95126, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 30}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   walkable: 1
   towering: 0
   isBlockedBarrier: 0
+  isDestroyed: 0
   myNeighbours: []
 --- !u!50 &-1452315230598678834
 Rigidbody2D:
