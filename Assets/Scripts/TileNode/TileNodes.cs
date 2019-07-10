@@ -59,6 +59,7 @@ public class TileNodes : MonoBehaviour
     [Header("Editor variables")]
     // variables used for gizmo draw and 
     public int SelectedPath = 0;
+
     public List<WorldTile> selectedList;
     public PathsData pathData;
 
@@ -104,7 +105,7 @@ public class TileNodes : MonoBehaviour
                     }
                 }
 
-                if(!isModified && pathData.blockedPaths.Contains(path))
+                if (!isModified && pathData.blockedPaths.Contains(path))
                     pathData.blockedPaths.Remove(path);
             }
         }
@@ -128,12 +129,12 @@ public class TileNodes : MonoBehaviour
                 }
             }
 
-            parentNodes = new GameObject[TileNodesPrefabs.Length];
+            parentNodes = new GameObject[TileNodesPrefabs.Length - 1]; //Remove the crystal tile
 
-            parentNodes[0] = new GameObject("Node Parent (Unwalkable)");
+            parentNodes[0] = new GameObject("Parent_WalkableTiles");
             parentNodes[0].transform.SetParent(transform);
 
-            parentNodes[1] = new GameObject("Node Parent (Walkable)");
+            parentNodes[1] = new GameObject("Parent_UnwalkableTiles");
             parentNodes[1].transform.SetParent(transform);
 
         }

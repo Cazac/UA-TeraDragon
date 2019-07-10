@@ -29,6 +29,10 @@ public class SoundManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    private void Awake()
+    {
+        //AutoDestroySelf();
+    }
     private void AutoDestroySelf()
     {
         if (GameObject.FindObjectsOfType<SoundManager>().Length > 1)
@@ -40,8 +44,8 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        AutoDestroySelf();
-        DontDestroyOnLoad(this);
+        
+        //DontDestroyOnLoad(this);
         waveManager = GameObject.FindObjectOfType<WaveManager>();
     }
 
