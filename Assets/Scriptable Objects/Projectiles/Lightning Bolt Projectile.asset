@@ -9,13 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00c16d94b8b3563449472477d1858891, type: 3}
+  m_Script: {fileID: 11500000, guid: 1944aecb4a26cfe49be7cc05672a8872, type: 3}
   m_Name: Lightning Bolt Projectile
   m_EditorClassIdentifier: 
-  TowerLevel: 0
-  BaseAttack: 0
-  BaseRange: 0
-  BaseAttackSpeed: 0
-  towerSprite: {fileID: 0}
-  projectile: {fileID: 0}
-  Effects: []
+  projectilePrefab: {fileID: 0}
+  isProjectile: 0
+  projectileDamage: 0
+  projectileSpeed: 0
+  projectileSlowdown: 0
+  projectileSlowdownTime: 0
+  isExplosive: 0
+  explosionRadius: 0
+  explosionLinger: 0
+  explosionDamage: 0
+  explosionSlowdown: 0
+  isBeam: 0
+  beamDamage: 0
+  beamSlowdown: 0
+  beamChainTargets: 0

@@ -182,6 +182,7 @@ public class TowerRange : MonoBehaviour
         projectileScript.projectileDamage = currentProjectileData.projectileDamage;
         projectileScript.projectileSpeed = currentProjectileData.projectileSpeed;
         projectileScript.projectileSlowdown = currentProjectileData.projectileSlowdown;
+        projectileScript.projectileSlowdownTime = currentProjectileData.projectileSlowdownTime;
 
         //Does Not get Modified
         projectileScript.isExplosive = currentProjectileData.isExplosive;

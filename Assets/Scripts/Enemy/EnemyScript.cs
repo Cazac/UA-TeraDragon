@@ -20,6 +20,8 @@ public class EnemyScript : MonoBehaviour
     public int CurrentHealth;
     [Range(0.05f, 30f)]
     public float speed = 1.0f;
+    public float currentSpeed;
+    public float speedWearOffTime;
 
     private bool isAttacking = false;
 
@@ -34,10 +36,12 @@ public class EnemyScript : MonoBehaviour
     {
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
         waveManager = GameObject.FindObjectOfType<WaveManager>();
+
+     
     }   
     private void Start()
     {
-      
+        currentSpeed = speed;
         //DynamicPathRelocation(transform.position);
 
         if (enemyData != null)
@@ -64,14 +68,19 @@ public class EnemyScript : MonoBehaviour
 
     private void Update()
     {
-        if(currentBarrier != null)
+        RefreshSlow();
+
+        if (currentBarrier != null)
         {
             if (isAttacking)
+            {
                 StartCoroutine(AttackBarrier(currentBarrier.GetComponent<BarrierData>()));
+            }
             if (!isAttacking)
+            {
                 StopCoroutine(AttackBarrier(currentBarrier.GetComponent<BarrierData>()));
+            }
         }
-
     }
 
     /////////////////////////////////////////////////////////////////
@@ -87,7 +96,7 @@ public class EnemyScript : MonoBehaviour
         endPosition = currentWaypoints[currentWaypoint + 1].transform.position;
         dir = endPosition - StartPosition;
 
-        transform.position += dir.normalized * speed * Time.fixedDeltaTime;
+        transform.position += dir.normalized * currentSpeed * Time.fixedDeltaTime;
 
         if (Vector3.Distance(gameObject.transform.position, endPosition) < 0.5f)
         {
@@ -217,7 +226,7 @@ public class EnemyScript : MonoBehaviour
         //Normalize float vs int???
         CurrentHealth -= (int)damage;
 
-        //Armor??????
+        //Armor?????? TO DO
 
         if (CurrentHealth <= 0)
         {
@@ -226,11 +235,51 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    //To DO
-    public void ApplySlow()
-    {
 
+    public void ApplySlow(float slowSpeed, float slowTimer)
+    {
+        if (currentSpeed == speed)
+        {
+            //Apply Effect + Timer
+            currentSpeed = currentSpeed * slowSpeed;
+            speedWearOffTime = slowTimer;
+        }
+        else
+        {
+            //If can be slower, slow down more
+            if ((speed * slowSpeed) < currentSpeed)
+            {
+                currentSpeed = speed * slowSpeed;
+            }
+
+            //Timer Refresh
+            if (speedWearOffTime <= 0)
+            {
+                //New Timer
+                speedWearOffTime = slowTimer;
+            }
+            else
+            {
+                //Stack Timer
+                speedWearOffTime += slowTimer;
+            }
+        }
     }
+
+
+    private void RefreshSlow()
+    {
+        if (speedWearOffTime <= 0)
+        {
+            currentSpeed = speed;
+            speedWearOffTime = 0;
+        }
+        else
+        {
+            speedWearOffTime -= Time.deltaTime;
+        }
+    }
+
 
     public IEnumerator AttackBarrier(BarrierData barrierData)
     {

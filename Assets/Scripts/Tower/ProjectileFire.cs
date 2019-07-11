@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ProjectileFire : MonoBehaviour
 {
-    //Who to chase
+    [Header("Who to chase")]
     public GameObject enemy;
-
 
     [Header("Projectile Data")]
     public bool isProjectile;
     public float projectileDamage;
     public float projectileSpeed;
     public float projectileSlowdown;
+    public float projectileSlowdownTime;
 
     [Header("Bonus Explosive Data")]
     public bool isExplosive;
@@ -104,11 +104,21 @@ public class ProjectileFire : MonoBehaviour
         }
         else
         {
-            //Deal that damage!
+            //Get The Monster!
             EnemyScript enemyScript = enemy.GetComponent<EnemyScript>();
+
+            //Slowdown!
+            if (projectileSlowdown > 0)
+            {
+                Debug.Log("SLOW)");
+                enemyScript.ApplySlow(projectileSlowdown, projectileSlowdownTime);
+            }
+
+            //Deal that damage!
             enemyScript.TakeDamage(projectileDamage);
         }
 
+        //Bonus Damage!
         if (isExplosive)
         {
             //Target get a bounus explosion collition now
