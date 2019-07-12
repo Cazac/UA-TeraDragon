@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8716833556434465185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -114,6 +114,7 @@ MonoBehaviour:
   projectileDamage: 0
   projectileSpeed: 0
   projectileSlowdown: 0
+  projectileSlowdownTime: 0
   isExplosive: 0
   explosionRadius: 0
   explosionLinger: 0

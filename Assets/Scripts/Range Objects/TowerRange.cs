@@ -170,7 +170,7 @@ public class TowerRange : MonoBehaviour
     ///////////////
     public void GenerateProjectile(GameObject monster)
     {
-        GameObject projectile = Instantiate(currentProjectileData.projectilePrefab, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+        GameObject projectile = Instantiate(currentProjectileData.projectilePrefab, gameObject.transform.position, Quaternion.identity, gameObject.transform.parent.transform);
         ProjectileFire projectileScript = projectile.GetComponent<ProjectileFire>();
 
 

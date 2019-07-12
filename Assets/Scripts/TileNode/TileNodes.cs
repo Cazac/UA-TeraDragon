@@ -204,6 +204,9 @@ public class TileNodes : MonoBehaviour
 
     private void DrawAllPath()
     {
+        //stfu stop placing errors in the log
+        return;
+
         foreach (var path in pathData.paths)
         {
             for (int i = 0; i < path.Count - 1; i++)

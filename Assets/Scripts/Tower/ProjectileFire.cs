@@ -110,7 +110,6 @@ public class ProjectileFire : MonoBehaviour
             //Slowdown!
             if (projectileSlowdown > 0)
             {
-                Debug.Log("SLOW)");
                 enemyScript.ApplySlow(projectileSlowdown, projectileSlowdownTime);
             }
 

@@ -238,6 +238,9 @@ public class EnemyScript : MonoBehaviour
 
     public void ApplySlow(float slowSpeed, float slowTimer)
     {
+        //Apply Color
+        gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
+
         if (currentSpeed == speed)
         {
             //Apply Effect + Timer
@@ -269,8 +272,9 @@ public class EnemyScript : MonoBehaviour
 
     private void RefreshSlow()
     {
-        if (speedWearOffTime <= 0)
+        if (speedWearOffTime < 0)
         {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             currentSpeed = speed;
             speedWearOffTime = 0;
         }

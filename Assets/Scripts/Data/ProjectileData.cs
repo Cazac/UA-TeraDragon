@@ -14,6 +14,8 @@ public class ProjectileData : ScriptableObject
     public float projectileSpeed;
     public float projectileSlowdown;
     public float projectileSlowdownTime;
+    public float projectilePoison;
+    public float projectilePoisonTime;
 
     [Header("Bonus Explosive Data")]
     public bool isExplosive;

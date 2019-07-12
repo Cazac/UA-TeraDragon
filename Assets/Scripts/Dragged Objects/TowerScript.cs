@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 ///////////////
 /// <summary>
@@ -20,6 +21,11 @@ public class TowerScript : MonoBehaviour
     public TowerData towerData;
     public TowerRange towerRange;
     public SpriteRenderer towerSpriteRenderer;
+
+    [Header("Tower Info")]
+    public GameObject towerUIPanel;
+    public Text towerUpgradeText;
+    public Text towerSellText;
 
     //////////////////////////////////////////////////////////
 
@@ -60,67 +66,148 @@ public class TowerScript : MonoBehaviour
     //////////////////////////////////////////////////////////
 
 
+
+    private void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            //Raycast Mouse
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit2D = Physics2D.Raycast(mousePos, Vector2.zero, 10, LayerMask.GetMask("Tower"));
+
+            //if anything is collided
+            if (hit2D.collider != null)
+            {
+                //if correct tower hit.
+                if (hit2D.collider == gameObject.GetComponent<Collider2D>())
+                {
+                    OpenTowerUI();
+                }
+                else
+                {
+                    CloseTowerUI();
+                }
+            }
+
+        }
+        else if (Input.GetMouseButton(1))
+        {
+            CloseTowerUI();
+        }
+
+    }
+
+
+    private void CloseTowerUI()
+    {
+        towerUIPanel.SetActive(false);
+    }
+
+
+    private void OpenTowerUI()
+    {
+        towerUIPanel.SetActive(true);
+
+
+        LoadTowerDataUI();
+
+    }
+
+    private void LoadTowerDataUI()
+    {
+
+    }
+
+
+    //////////////////////////////////////////////////////////
+
     /*
 
-    
 
-    public float timer = 5f;
-
-    // Update is called once per frame
-    void Update()
+private void TowerUI()
+{
+    if (SelectedTower != null)
     {
-        timer -= Time.deltaTime;
-        if(timer < 0)
+        if (CurrentTowerWindow == null)
         {
-            ShootTarget();
-            timer = 5f;
+            CurrentTowerWindow = Instantiate(TowerWindowPrefab, SelectedTower.transform.position, new Quaternion());
+            CurrentTowerWindow.GetComponent<TowerNodeUIScript>().changeNodeText(
+                SelectedTower.towerName + " \n" +
+                "Damage: " + SelectedTower.towerRange.currentProjectileData.projectileDamage + "  \n" +
+                "Attack Speed: " + SelectedTower.towerRange.timeToReload);
+            //Debug.Log(SelectedTower.projectileData.name + " \n" + SelectedTower.projectileData.projectileDamage + "  \n" + SelectedTower.timeToReload);
         }
     }
-
-    void ShootTarget()
+    if (SelectedTower == null)
     {
-        print(closestPosition);
+        Destroy(CurrentTowerWindow);
     }
+}
 
-    Vector3 closestPosition;
-    private void OnTriggerEnter2D(Collider2D collision)
+
+//////////////////////////////////////////////////////////
+
+
+
+
+
+public float timer = 5f;
+
+// Update is called once per frame
+void Update()
+{
+    timer -= Time.deltaTime;
+    if(timer < 0)
     {
-        Debug.Log(collision.transform.position);
-        if(Vector3.Distance(transform.position, collision.transform.position) < Vector3.Distance(transform.position, closestPosition))
-        {
-            closestPosition = collision.transform.position;
-        }
+        ShootTarget();
+        timer = 5f;
     }
+}
 
-    private void OnTriggerStay2D(Collider2D collision)
+void ShootTarget()
+{
+    print(closestPosition);
+}
+
+Vector3 closestPosition;
+private void OnTriggerEnter2D(Collider2D collision)
+{
+    Debug.Log(collision.transform.position);
+    if(Vector3.Distance(transform.position, collision.transform.position) < Vector3.Distance(transform.position, closestPosition))
     {
-        Debug.Log(collision.transform.position);
-        if (Vector3.Distance(transform.position, collision.transform.position) < Vector3.Distance(transform.position, closestPosition))
-        {
-            closestPosition = collision.transform.position;
-        }
+        closestPosition = collision.transform.position;
     }
+}
 
-    private void OnTriggerExit2D(Collider2D collision)
+private void OnTriggerStay2D(Collider2D collision)
+{
+    Debug.Log(collision.transform.position);
+    if (Vector3.Distance(transform.position, collision.transform.position) < Vector3.Distance(transform.position, closestPosition))
     {
-        Debug.Log(collision.transform.position);
+        closestPosition = collision.transform.position;
     }
+}
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        Debug.Log("Collider stay:" + collision.transform.position);
-    }
+private void OnTriggerExit2D(Collider2D collision)
+{
+    Debug.Log(collision.transform.position);
+}
 
-    private void OnTriggerStay(Collider other)
-    {
-        Debug.Log("Trigger 3d stay:" + other.transform.position);
-    }
+private void OnCollisionStay2D(Collision2D collision)
+{
+    Debug.Log("Collider stay:" + collision.transform.position);
+}
 
-    private void OnCollisionStay(Collision collision)
-    {
-        Debug.Log("Collision 3d stay:" + collision.transform.position);
-    }
+private void OnTriggerStay(Collider other)
+{
+    Debug.Log("Trigger 3d stay:" + other.transform.position);
+}
+
+private void OnCollisionStay(Collision collision)
+{
+    Debug.Log("Collision 3d stay:" + collision.transform.position);
+}
 
 
-    */
+*/
 }
