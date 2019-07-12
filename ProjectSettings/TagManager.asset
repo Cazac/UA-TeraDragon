@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Barrier
+  - Destroyable
   layers:
   - Default
   - TransparentFX

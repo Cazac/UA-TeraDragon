@@ -19,10 +19,10 @@ public class PopupUI : MonoBehaviour
     private void Update()
     {
         //Excetue 
-        if (inputDetection.BeginClickEvent() == "Clicked")
-        {
+        if (inputDetection.BeginClickEvent() == "Pressed")
             ShowPopUpPanel(uiPrefab);
-        }
+        //if (inputDetection.MouseReleaseEvent() == "Released")
+        //    ClosePopUpPanelWithoutReavlingTiles(currentUIPrefab);
     }
     public void ShowPopUpPanel(GameObject uiPrefab)
     {
@@ -32,10 +32,10 @@ public class PopupUI : MonoBehaviour
         if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
         {
             //Check for tileNode or check for tile?
-            if(hit.collider.gameObject.name.Contains("Node(Clone)") && !hit.collider.gameObject.GetComponent<WorldTile>().isDestroyed)
+            if((hit.collider.gameObject.name.Contains("Node(Clone)") || hit.collider.gameObject.tag == "Destroyable") && !hit.collider.gameObject.GetComponent<WorldTile>().isDestroyed)
             {
                 Vector3Int nodePosition = Vector3Int.FloorToInt(hit.collider.gameObject.transform.position);
-                if (tileNodes.hiddenTileMap.GetTile(tileNodes.hiddenTileMap.WorldToCell(nodePosition)).name.Contains("Destroyable"))
+                //if (tileNodes.hiddenTileMap.GetTile(tileNodes.hiddenTileMap.WorldToCell(nodePosition)).name.Contains("Destroyable"))
                 {
                     GameObject canvas = GameObject.Find("Canvas");
 
@@ -68,8 +68,10 @@ public class PopupUI : MonoBehaviour
         DestroyImmediate(uiPrefab);
     }
 
-    public void ButtonListener_ShowTiles()
+    void ClosePopUpPanelWithoutReavlingTiles(GameObject uiPrefab)
     {
+        DestroyImmediate(uiPrefab);
     }
+
 
 }

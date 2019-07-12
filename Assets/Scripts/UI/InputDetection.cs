@@ -82,20 +82,22 @@ public class InputDetection
     public String BeginClickEvent()
     {
         if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
-        {
             return "Clicked";
-        }
 
         if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
-        {
             return "Pressed";
-        }
 
         if (Input.mouseScrollDelta != new Vector2(0, 0))
-        {
             return "Scrolling";
-        }
 
+
+        return "None";
+    }
+
+    public String MouseReleaseEvent()
+    {
+        if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
+            return "Released";
 
         return "None";
     }

@@ -207,7 +207,7 @@ public class TowerRange : MonoBehaviour
             //Generate Projectile with target
             LinkBeam(monster_GO);
         }
-        
+
     }
 
 
@@ -289,7 +289,7 @@ public class TowerRange : MonoBehaviour
             {
 
                 //Tell enemy stop
-                collider.gameObject.GetComponent<EnemyScript>()
+                collider.gameObject.GetComponent<EnemyScript>();
 
                 //tell prjectile to fuck off
 
