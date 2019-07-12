@@ -12,18 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1944aecb4a26cfe49be7cc05672a8872, type: 3}
   m_Name: Lightning Bolt Projectile
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 6023936796375517477, guid: 37a71d8ae454a6e438f30850b51d2736,
+    type: 3}
   isProjectile: 0
   projectileDamage: 0
   projectileSpeed: 0
   projectileSlowdown: 0
   projectileSlowdownTime: 0
+  projectilePoison: 0
+  projectilePoisonTime: 0
   isExplosive: 0
   explosionRadius: 0
   explosionLinger: 0
   explosionDamage: 0
   explosionSlowdown: 0
-  isBeam: 0
-  beamDamage: 0
-  beamSlowdown: 0
-  beamChainTargets: 0
+  isBeam: 1
+  beamDamage: 0.1
+  beamReload: 0
+  beamChainTargets: 3

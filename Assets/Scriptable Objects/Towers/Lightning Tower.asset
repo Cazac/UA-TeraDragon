@@ -15,13 +15,13 @@ MonoBehaviour:
   TowerStartingLevel: 1
   towerSprite_T1: {fileID: 21300000, guid: 7d3cc1dccaee8a34a8534999e3b47320, type: 3}
   projectile_T1: {fileID: 11400000, guid: aaa090905f381af45b517b2ca537ebf9, type: 2}
-  towerRange_T1: 3
+  towerRange_T1: 4
   towerReloadSpeed_T1: 1
   towerSprite_T2: {fileID: 21300000, guid: 7d3cc1dccaee8a34a8534999e3b47320, type: 3}
   projectile_T2: {fileID: 11400000, guid: 1f22f19b9f0ee5547ac88d9f3a62e848, type: 2}
-  towerRange_T2: 4
+  towerRange_T2: 5
   towerReloadSpeed_T2: 1
   towerSprite_T3: {fileID: 21300000, guid: 7d3cc1dccaee8a34a8534999e3b47320, type: 3}
   projectile_T3: {fileID: 11400000, guid: 40729549802cd3b4aa936ea32de1d512, type: 2}
-  towerRange_T3: 5
+  towerRange_T3: 6
   towerReloadSpeed_T3: 1

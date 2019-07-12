@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6311894626682151327}
   - component: {fileID: 6761991098099133655}
   m_Layer: 10
-  m_Name: Light Tower
+  m_Name: Light Tower (UI)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

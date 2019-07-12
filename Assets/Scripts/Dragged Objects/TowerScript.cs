@@ -20,10 +20,11 @@ public class TowerScript : MonoBehaviour
     [Header("Refferences")]
     public TowerData towerData;
     public TowerRange towerRange;
+    public GameObject firingPoint;
+    public GameObject towerUIPanel;
     public SpriteRenderer towerSpriteRenderer;
 
-    [Header("Tower Info")]
-    public GameObject towerUIPanel;
+    [Header("Tower UI")]
     public Text towerUpgradeText;
     public Text towerSellText;
 

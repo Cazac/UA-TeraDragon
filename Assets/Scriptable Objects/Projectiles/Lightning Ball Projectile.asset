@@ -27,5 +27,5 @@ MonoBehaviour:
   explosionSlowdown: 0
   isBeam: 0
   beamDamage: 0
-  beamSlowdown: 0
+  beamReload: 0
   beamChainTargets: 0

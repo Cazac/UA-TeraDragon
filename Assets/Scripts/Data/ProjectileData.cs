@@ -27,6 +27,6 @@ public class ProjectileData : ScriptableObject
     [Header("Beam Data")]
     public bool isBeam;
     public float beamDamage;
-    public float beamSlowdown;
+    public float beamReload;
     public int beamChainTargets;
 }

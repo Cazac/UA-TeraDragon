@@ -72,15 +72,15 @@ public class SkillDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             }
             if (skillColor == "Blue")
             {
-                //playerStats.crystalsOwned_Blue -= towerCost;
+                playerStats.skillReady_Blue = false;
             }
             if (skillColor == "Green")
             {
-                //playerStats.crystalsOwned_Green -= towerCost;
+                playerStats.skillReady_Green = false;
             }
             if (skillColor == "Yellow")
             {
-                //playerStats.crystalsOwned_Yellow -= towerCost;
+                playerStats.skillReady_Yellow = false;
             }
 
             playerStats.UpdateCrystalUI();

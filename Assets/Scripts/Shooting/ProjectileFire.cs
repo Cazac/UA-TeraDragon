@@ -7,6 +7,9 @@ public class ProjectileFire : MonoBehaviour
     [Header("Who to chase")]
     public GameObject enemy;
 
+    [Header("Tower That Shot")]
+    public GameObject tower;
+
     [Header("Projectile Data")]
     public bool isProjectile;
     public float projectileDamage;
@@ -24,8 +27,11 @@ public class ProjectileFire : MonoBehaviour
     [Header("Beam Data")]
     public bool isBeam;
     public float beamDamage;
-    public float beamSlowdown;
+    public float beamReload;
     public int beamChainTargets;
+
+    [Header("Reload")]
+    public float beamReloadCurrent;
 
     //////////////////////////////////////////////////////////
 
@@ -44,8 +50,13 @@ public class ProjectileFire : MonoBehaviour
         else if (isBeam)
         {
             //Latch
+            BeamTargetTrace();
+            BeamReload();
+            BeamDamage();
         }
     }
+
+    //////////////////////////////////////////////////////////
 
 
     ///////////////
@@ -84,8 +95,6 @@ public class ProjectileFire : MonoBehaviour
     {
         if (collider.gameObject == enemy)
         {
-            //print("Hit!");
-
             //Deal damage
             HitTarget();
 
@@ -93,8 +102,12 @@ public class ProjectileFire : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
+    
+    ///////////////
+    /// <summary>
+    /// UNDOCUMTNETED
+    /// </summary>
+    ///////////////
     public void HitTarget()
     {
         if (enemy == null)
@@ -127,7 +140,9 @@ public class ProjectileFire : MonoBehaviour
         }
     }
 
-    public void BeamTarget()
+    //////////////////////////////////////////////////////////
+
+    public void BeamTargetTrace()
     {
         if (enemy == null)
         {
@@ -136,17 +151,49 @@ public class ProjectileFire : MonoBehaviour
         }
         else
         {
-            //Deal that damage!
+            //Get The Monster!
             EnemyScript enemyScript = enemy.GetComponent<EnemyScript>();
-            enemyScript.TakeDamage(projectileDamage);
-        }
+            LineRenderer lineMaker = tower.GetComponent<LineRenderer>();
 
-        if (isExplosive)
-        {
-            //Target get a bounus explosion collition now
+            //Get Positions!
+            Vector3 origin = gameObject.transform.position;
+            Vector3 destintation = enemyScript.transform.position;
 
+            //Edit Z Values!
+            origin.z = -11f;
+            destintation.z = -11f;
 
+            int monstersToBeShotCount = beamChainTargets;
 
+        
+
+            //Draw Lines!
+            lineMaker.SetPosition(0, origin);
+            lineMaker.SetPosition(1, destintation);
         }
     }
+
+    public void BeamReload()
+    {
+
+    }
+
+    public void BeamDamage()
+    {
+        if (enemy == null)
+        {
+            //Remove projectile before hitting if there is nothing to hit
+            Destroy(gameObject);
+        }
+        else
+        {
+            //Get The Monster!
+            EnemyScript enemyScript = enemy.GetComponent<EnemyScript>();
+
+            //Deal that damage!
+            enemyScript.TakeDamage(beamDamage);
+        }
+    }
+
+    //////////////////////////////////////////////////////////
 }
