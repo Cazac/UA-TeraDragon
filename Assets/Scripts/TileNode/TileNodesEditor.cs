@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(TileNodes))]
-public class TileNodesEditor : Editor
+//[CustomEditor(typeof(TileNodes))]
+public class TileNodesEditor 
 {
+
+    /*
+
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
@@ -50,5 +53,9 @@ public class TileNodesEditor : Editor
             myScript.BuildHiddenNodes();
         }
 
+
+   
     }
+
+     */
 }

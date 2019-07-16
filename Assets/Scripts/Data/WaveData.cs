@@ -6,20 +6,33 @@ using static TileNodes;
 [CreateAssetMenu(fileName="NewWave", menuName= "Scriptable Objects/Wave")]
 public class WaveData : ScriptableObject
 {
+    [Header("Enemy Prefab")]
     public GameObject EnemyPrefab;
-    public GameObject[] EnemiesPrefab;
 
-    public PathWrapper listWapper;
+    [Header("???")]
+    public int NumberOfEnemyPerPos; //Numver of enemy per position
+
+    [Header("How Long The Interwave Lasts")]
+    public float TimeUntilSpawn; //Count down timer until next wave
+
+    [Header("How Long The Wave Spawning Lasts")]
+    public float WaveTimer; //Timer for current wave
+
+    [Header("How Long Until Next Unit Spawn")]
+    public float SpawnRate; //How many enemy should be spawn after some time
+
+    private GameObject[] EnemiesPrefab;
+    private PathWrapper listWapper;
 
     //Add node to list will set value of SpawnPosition
+    [HideInInspector]
     public List<WorldTile> Path;
+    [HideInInspector]
     public List<List<WorldTile>> Paths;
     [HideInInspector]
     public GameObject ParentGameobject;
-    public int NumberOfEnemyPerPos; //Numver of enemy per position
-    public float TimeUntilSpawn; //Count down timer until next wave
-    public float WaveTimer; //Timer for current wave
-    public float SpawnRate; //How many enemy should be spawn after some time
+
+    /////////////////////////////////////////////////////////////////
 
     /// <summary>
     ///Constructor with parameter for spawning one type of enemy

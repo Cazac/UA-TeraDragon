@@ -44,8 +44,6 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        
-        //DontDestroyOnLoad(this);
         waveManager = GameObject.FindObjectOfType<WaveManager>();
     }
 

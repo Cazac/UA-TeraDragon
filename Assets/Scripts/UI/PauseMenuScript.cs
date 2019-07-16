@@ -13,7 +13,7 @@ public class PauseMenuScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isGameOver)
             {
@@ -34,7 +34,7 @@ public class PauseMenuScript : MonoBehaviour
         isGameOver = false;
     }
     
-    void TurnOnPause()
+    public void TurnOnPause()
     {
         isGameOver = true;
         Time.timeScale = 0;
@@ -42,7 +42,7 @@ public class PauseMenuScript : MonoBehaviour
         PauseMenu.SetActive(true);
     }
 
-    void TurnOffPause()
+    public void TurnOffPause()
     {
         isGameOver = false;
         Time.timeScale = 1;

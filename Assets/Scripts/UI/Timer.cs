@@ -46,11 +46,6 @@ public class Timer
     /// <param name="spawnRatePerSecond">How many enemy can be spawn per second</param>
     public Timer(float timeUntilSpawn, float waveTimer, float spawnRatePerSecond)
     {
-
-        Debug.Log("TIMESZZZ");
-
-
-
         TimeUntilNextSpawn = timeUntilSpawn;
         WaveTimer = waveTimer;
         SpawnRatePerSecond = spawnRatePerSecond;
@@ -69,7 +64,7 @@ public class Timer
         timeUntilNextSpawn -= Time.deltaTime;
 
         //Update UI
-        timerUI.UpdateInterwaveTimer(timeUntilNextSpawn);
+        timerUI.UpdateInterwaveTimer(timeUntilNextSpawn, this);
 
         //Check if timer is done
         if (timeUntilNextSpawn <= 0)
@@ -93,8 +88,8 @@ public class Timer
         //Subtract Time
         waveTimer -= Time.deltaTime;
 
-        //Update UI
-        timerUI.UpdateWaveTimer(waveTimer);
+        //Update UI + Send Timer
+        timerUI.UpdateWaveTimer(waveTimer, this);
 
         //Check if timer is done
         if (waveTimer <= 0)
