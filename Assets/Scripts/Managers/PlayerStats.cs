@@ -38,7 +38,7 @@ public class PlayerStats : MonoBehaviour
     private float skillCountdown_Yellow;
 
     //STATIC VALUES WHERE TO CHANGE???
-    private float skillCooldown_Red = 5f;
+    private float skillCooldown_Red = 10f;
     private float skillCooldown_Blue = 5f;
     private float skillCooldown_Green = 5f;
     private float skillCooldown_Yellow = 5f;

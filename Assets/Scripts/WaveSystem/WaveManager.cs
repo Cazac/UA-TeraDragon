@@ -215,9 +215,17 @@ namespace WaveSystem
                     if (!AllWaveCompleted() && currentTimer.TimeUntilNextSpawn <= 0)
                     {
                         CurrentWave = null;
-                        CurrentWave = waves[++waveIndex];
-                        //Debug.Log("Current wave: " + currentWave.ToString());
 
+                        //Double Check
+                        if (waves.Length >= waveIndex + 1)
+                        {
+                            CurrentWave = waves[++waveIndex];
+                        }
+                        else
+                        {
+                            Debug.Log("NOOOPE");
+                        }
+                 
                         InstantiateNewTimer(CurrentWave.TimeUntilSpawn, CurrentWave.WaveTimer, ref currentTimer);
 
                         EnableSpawning = true;
@@ -251,10 +259,20 @@ namespace WaveSystem
             if (waveIndex > waves.Length - 1)
             {
                 Debug.Log("End of all waves");
+
+                Winner();
+
                 return true;
             }
 
             return false;
+        }
+
+
+        private void Winner()
+        {
+            WinnerScript winner = GameObject.FindObjectOfType<WinnerScript>();
+            winner.TurnOnWinner();
         }
 
         private void DrawDebugPath(List<List<WorldTile>> pathData)

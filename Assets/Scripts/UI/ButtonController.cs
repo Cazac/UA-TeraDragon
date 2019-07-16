@@ -18,11 +18,17 @@ public class ButtonController : MonoBehaviour
 
 
     ////////////////////////////////
-
+    
+    [Header("Menu Reffs")]
     public Text menuMuteMusic_TEXT;
     public Text menuMuteSFX_TEXT;
 
     public GameObject menuSettingPanel;
+
+
+    [Header("Game Reffs")]
+
+
 
     private bool isMusicPlaying;
     private bool isSFXPlaying;
