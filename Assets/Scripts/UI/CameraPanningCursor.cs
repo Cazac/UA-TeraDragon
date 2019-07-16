@@ -82,7 +82,7 @@ public class CameraPanningCursor : MonoBehaviour
 
         StartCoroutine(ReshiftCam( 11.2f));
 
-        SetCameraBounds(5);
+        SetCameraBounds(4);
     }
 
     /// <summary>
@@ -246,12 +246,15 @@ public class CameraPanningCursor : MonoBehaviour
 
         //Multiple the base value by tile size
         boundRight = boundRight * 11.2f;
-        //print(boundRight);
 
-        CameraBoundingX = new Vector2(-tileSize.x / 2, boundRight);
+        //GOOD VALUE 
+        //float boundLeft = -tileSize.x / 2;
 
+        //DEBUG VALUE
+        float boundLeft = -200;
 
-        //StartCoroutine(ReshiftCam(CameraBoundingX, CameraBoundingY));
+        //Change Size of Camera Bounds
+        CameraBoundingX = new Vector2(boundLeft, boundRight);
     }
 
 }

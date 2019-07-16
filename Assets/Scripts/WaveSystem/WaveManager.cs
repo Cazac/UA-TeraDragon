@@ -27,43 +27,40 @@ namespace WaveSystem
         [Header("TileNodes Refference")]
         public TileNodes tiles;
 
+        [Header("Scriptable wave objects")]
+        public WaveData[] waves;
+
+        [Header("DEBUG ONLY currentWave")]
+        [SerializeField]
+        private WaveData currentWave;
+
+        [Header("Parent Gameobject For Waves")]
+        public GameObject waveParent;
+
+
         // public GameObject[] spawnEnemies; //TODO: Reimplement this!
         public GameObject spawnSingleEnemy;
         public bool enableSpawning;
         public bool EnableSpawning { get => enableSpawning; set => enableSpawning = value; }
 
 
-        [Header("Scriptable wave objects")]
-        public WaveData[] waves;
-
-
-        [Header("DEBUG ONLY currentWave")]
-        [SerializeField]
-        private WaveData currentWave;
-
-
-
         [SerializeField] //TODO: Delete serializeField
         private List<Vector3> selectedNodeSpawnPosition = new List<Vector3>();
         public List<Vector3> NodeSpawnPosition { get => selectedNodeSpawnPosition; set => selectedNodeSpawnPosition = value; }
 
-        [Header("Parent Gameobject For Waves")]
-        public GameObject waveParent;
-
-        //private const string WAVE_PARENT_NAME = "Parent_EnemyWave";
 
         private Timer currentTimer;
         public WaveData CurrentWave { get => currentWave; set => currentWave = value; }
         private int waveIndex = 0;
 
-        private TileNodes tileNodes;
 
+        private TileNodes tileNodes;
         private CursorSelection cursorSelection;
         private SoundManager soundManager;
-        public int WaveIndex
-        {
-            get => waveIndex;
-        }
+
+        public int WaveIndex { get => waveIndex; }
+
+        //////////////////////////////////////////////////////////
 
         public String TimeUntilNextWave
         {
@@ -86,12 +83,7 @@ namespace WaveSystem
             }
         }
 
-
-
-        private void Awake()
-        {
-        }
-
+        //////////////////////////////////////////////////////////
 
         private void Start()
         {
@@ -117,7 +109,6 @@ namespace WaveSystem
 
 
             CurrentWave = waves[0];
-            MakeParent();
 
             StartCoroutine(SpawnSingleEnemyPerWave());
         }
@@ -127,9 +118,11 @@ namespace WaveSystem
             //Create new timer object for current wave
             if (EnableSpawning == true && currentTimer == null)
             {
-                //print("Test Code: " + CurrentWave.name);
+                //print("New Timer For: " + CurrentWave.name);
                 InstantiateNewTimer(CurrentWave.TimeUntilSpawn, CurrentWave.WaveTimer, ref currentTimer);
             }
+
+            //Debug.Log("Is Current Timer Null? " + currentTimer != null);
 
             //If timer for a wave hits 0, turn off spawning
             if (currentTimer != null && EnableSpawning == true)
@@ -139,6 +132,7 @@ namespace WaveSystem
                     EnableSpawning = false;
                     if (soundManager != null)
                     {
+                        Debug.Log("Inter");
                         soundManager.PlaySpecificSound("Inter");
                         soundManager.ReturnControl = true;
                     }
@@ -160,15 +154,7 @@ namespace WaveSystem
             }
         }
 
-
-        /// <summary>
-        ///Create new parent gameobject to store enemy info
-        /// </summary>
-        private void MakeParent()
-        {
-            //new GameObject(WAVE_PARENT_NAME);
-        }
-
+        //////////////////////////////////////////////////////////
 
         /// <summary>
         ///Create a new timer instance when a wave is finished
@@ -178,8 +164,11 @@ namespace WaveSystem
         /// <param name="timer">ref variable timer to reference the timer instance</param>
         private void InstantiateNewTimer(float timeUntilSpawn, float waveTimer, ref Timer timer)
         {
+            //Debug.Log("Timer");
             timer = null;
             timer = new Timer(timeUntilSpawn, waveTimer);
+
+           //Debug.Log("Is Current Timer Null? " + currentTimer != null);
         }
 
         /// <summary>
@@ -258,13 +247,13 @@ namespace WaveSystem
         ///<returns>Returns true if reaches the end of array</returns>
         private Boolean AllWaveCompleted()
         {
-            //Debug.Log("Wave index: " + waveIndex);
-
+ 
             if (waveIndex > waves.Length - 1)
             {
-                //Debug.Log("End of all waves");
+                Debug.Log("End of all waves");
                 return true;
             }
+
             return false;
         }
 
@@ -282,8 +271,6 @@ namespace WaveSystem
 
 
 
-
-
     /// <summary>
     ///Interface for connection UI to WaveManager class
     /// </summary>
@@ -291,4 +278,5 @@ namespace WaveSystem
     {
         void UIConnection(WaveManager waveManager);
     }
+
 }

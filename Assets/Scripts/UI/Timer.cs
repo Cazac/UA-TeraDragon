@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer
 {
@@ -8,7 +9,10 @@ public class Timer
     private float waveTimer;
     private float spawnRatePerSecond;
 
-    //------------------------Properties------------------------
+    private TimerUI timerUI;
+
+    //////////////////////////////////////////////////////////
+
     public float TimeUntilNextSpawn
     {
         get
@@ -31,8 +35,8 @@ public class Timer
         }
         set => waveTimer = value;
     }
-    //------------------------Properties------------------------
 
+    //////////////////////////////////////////////////////////
 
     /// <summary>
     ///Constructor for creating timer for current wave
@@ -42,6 +46,11 @@ public class Timer
     /// <param name="spawnRatePerSecond">How many enemy can be spawn per second</param>
     public Timer(float timeUntilSpawn, float waveTimer, float spawnRatePerSecond)
     {
+
+        Debug.Log("TIMESZZZ");
+
+
+
         TimeUntilNextSpawn = timeUntilSpawn;
         WaveTimer = waveTimer;
         SpawnRatePerSecond = spawnRatePerSecond;
@@ -53,12 +62,23 @@ public class Timer
     /// <returns>Return true when timer hits 0</returns> 
     public bool NextWaveCountdown()
     {
+        //Set Reff
+        timerUI = GameObject.FindObjectOfType<TimerUI>();
+
+        //Subtract Time
         timeUntilNextSpawn -= Time.deltaTime;
 
-        if (timeUntilNextSpawn <= 0)
-            return true;
-        return false;
+        //Update UI
+        timerUI.UpdateInterwaveTimer(timeUntilNextSpawn);
 
+        //Check if timer is done
+        if (timeUntilNextSpawn <= 0)
+        {
+            Debug.Log("Start New Wave");
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>
@@ -67,13 +87,24 @@ public class Timer
     /// <returns>Return true when timer hits 0</returns> 
     public bool WaveCountdown()
     {
+        //Set Reff
+        timerUI = GameObject.FindObjectOfType<TimerUI>();
+
+        //Subtract Time
         waveTimer -= Time.deltaTime;
+
+        //Update UI
+        timerUI.UpdateWaveTimer(waveTimer);
+
+        //Check if timer is done
         if (waveTimer <= 0)
         {
-            //Debug.Log("End of wave");
+            Debug.Log("End Wave");
             return true;
         }
 
         return false;
     }
+
+
 }

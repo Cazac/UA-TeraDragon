@@ -11,6 +11,7 @@ public class EnemyScript : MonoBehaviour
     private int currentWaypoint = 0;
     private EnemyData enemyData;
     private TileNodes tileNodes;
+    private PlayerStats playerStats;
     private WaveManager waveManager;
 
     private GameObject currentBarrier;
@@ -32,13 +33,14 @@ public class EnemyScript : MonoBehaviour
 
 
     /////////////////////////////////////////////////////////////////
+
     private void Awake()
     {
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
         waveManager = GameObject.FindObjectOfType<WaveManager>();
-
-     
-    }   
+        playerStats = GameObject.FindObjectOfType<PlayerStats>();  
+    }
+    
     private void Start()
     {
         currentSpeed = speed;
@@ -118,6 +120,12 @@ public class EnemyScript : MonoBehaviour
                     //Debug.Log("Death???");
                 }
 
+
+  
+                //Deal Damage
+                playerStats.RemoveLife(1);
+
+                //Base Damage Destruction
                 Destroy(gameObject);
             }
         }
@@ -190,7 +198,9 @@ public class EnemyScript : MonoBehaviour
     ///////////////
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Check for collision with the ending tile
+
+
+        //Check for collision with the ending tile - USELESS IN CURRENT VERSION????????
         if (collision.transform.GetComponent<BaseNode>() != null)
         {
             collision.transform.GetComponent<BaseNode>().BaseIsHit(1);
