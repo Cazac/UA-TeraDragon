@@ -30,7 +30,7 @@ public class TowerRange : MonoBehaviour
     [Header("Tower Stats")]
     public float timeToReload = 0;
     public float reloadProgress = 0;
-    public bool isReadyToShoot = false;
+    public bool isReadyToShoot = true;
 
     //////////////////////////////////////////////////////////
 
