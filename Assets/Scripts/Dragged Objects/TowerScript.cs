@@ -27,8 +27,13 @@ public class TowerScript : MonoBehaviour
     [Header("Tower UI")]
     public Text towerUpgradeText;
     public Text towerSellText;
+    public GameObject RangeVisualizer;
 
     //////////////////////////////////////////////////////////
+    private void Start()
+    {
+        RangeVisualizer.SetActive(false);
+    }
 
     public void UpgradeTower()
     {
@@ -83,10 +88,12 @@ public class TowerScript : MonoBehaviour
                 if (hit2D.collider == gameObject.GetComponent<Collider2D>())
                 {
                     OpenTowerUI();
+                    RangeVisualizer.SetActive(true);
                 }
                 else
                 {
                     CloseTowerUI();
+                    RangeVisualizer.SetActive(false);
                 }
             }
 
@@ -94,6 +101,7 @@ public class TowerScript : MonoBehaviour
         else if (Input.GetMouseButton(1))
         {
             CloseTowerUI();
+            RangeVisualizer.SetActive(false);
         }
 
     }
