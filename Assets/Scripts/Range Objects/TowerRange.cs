@@ -28,13 +28,13 @@ public class TowerRange : MonoBehaviour
     public List<ProjectileFire> projectilesShot;
 
     [Header("Range Visualizer")]
-    public GameObject range;
+    public GameObject rangeVis;
 
     [Header("Tower Stats")]
     public float timeToReload = 0;
     public float reloadProgress = 0;
     public bool isReadyToShoot = true;
-    public float towerRange = 1;
+    public float towerRange = 0;
 
     //////////////////////////////////////////////////////////
 
@@ -43,6 +43,9 @@ public class TowerRange : MonoBehaviour
         MonstersToShoot = new List<EnemyScript>();
         projectilesShot = new List<ProjectileFire>();
         GetTowerData();
+
+
+        rangeVis.transform.localScale = new Vector3(towerRange, towerRange, towerRange);
     }
 
     private void Update()
@@ -55,8 +58,11 @@ public class TowerRange : MonoBehaviour
         {
             Shoot();
         }
-        range.transform.localScale = new Vector3(towerRange, towerRange, towerRange);
-        GetComponent<CircleCollider2D>().radius = 2f * towerRange;
+
+
+
+       
+
     }
 
     //////////////////////////////////////////////////////////
@@ -69,7 +75,7 @@ public class TowerRange : MonoBehaviour
     public void GetTowerData()
     {
         int towerTier = parentTowerScript.currentTowerTier;
-        float scale;
+   
 
         switch (towerTier)
         {
@@ -84,6 +90,10 @@ public class TowerRange : MonoBehaviour
                 //New Reload Speed
                 timeToReload = parentTowerScript.towerData.towerReloadSpeed_T1;
 
+                //New Range Scale Size
+                towerRange = parentTowerScript.towerData.towerRange_T1;
+                GetComponent<CircleCollider2D>().radius = towerRange;
+
                 //New Projectile
                 currentProjectileData = parentTowerScript.towerData.projectile_T1;
 
@@ -95,8 +105,8 @@ public class TowerRange : MonoBehaviour
                 timeToReload = parentTowerScript.towerData.towerReloadSpeed_T2;
 
                 //New Range Scale Size
-                scale = parentTowerScript.towerData.towerRange_T2;
-                gameObject.transform.localScale = new Vector3(scale, scale, scale);
+                towerRange = parentTowerScript.towerData.towerRange_T2;
+                gameObject.transform.localScale = new Vector3(towerRange, towerRange, towerRange);
 
                 //New Projectile
                 currentProjectileData = parentTowerScript.towerData.projectile_T3;
@@ -109,8 +119,8 @@ public class TowerRange : MonoBehaviour
                 timeToReload = parentTowerScript.towerData.towerReloadSpeed_T3;
 
                 //New Range Scale Size
-                scale = parentTowerScript.towerData.towerRange_T3;
-                gameObject.transform.localScale = new Vector3(scale, scale, scale);
+                towerRange = parentTowerScript.towerData.towerRange_T3;
+                gameObject.transform.localScale = new Vector3(towerRange, towerRange, towerRange);
 
                 //New Projectile
                 currentProjectileData = parentTowerScript.towerData.projectile_T3;
