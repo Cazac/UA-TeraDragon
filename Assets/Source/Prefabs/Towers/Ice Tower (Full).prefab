@@ -5587,7 +5587,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4569212895105361220}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -5661,7 +5661,7 @@ MonoBehaviour:
   currentProjectileData: {fileID: 0}
   MonstersToShoot: []
   projectilesShot: []
-  range: {fileID: 5185699327325793926}
+  rangeVis: {fileID: 5185699327325793926}
   timeToReload: 0
   reloadProgress: 0
   isReadyToShoot: 1

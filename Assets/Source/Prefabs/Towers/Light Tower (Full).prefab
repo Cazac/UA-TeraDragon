@@ -5296,7 +5296,7 @@ MonoBehaviour:
     type: 2}
   MonstersToShoot: []
   projectilesShot: []
-  range: {fileID: 8043965136115109469}
+  rangeVis: {fileID: 8043965136115109469}
   timeToReload: 0
   reloadProgress: 0
   isReadyToShoot: 1

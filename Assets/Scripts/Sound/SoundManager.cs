@@ -93,7 +93,9 @@ public class SoundManager : MonoBehaviour
         foreach (var clip in soundClips)
         {
             if (clip.SoundName.Contains(soundName))
+            {
                 PlaySoundByName(clip);
+            }
         }
     }
 

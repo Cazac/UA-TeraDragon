@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SoundObject", menuName = "Scriptable Objects/Sound System")]
+[CreateAssetMenu(fileName = "SoundObject", menuName = "Scriptable Objects/Sound Object")]
 public class SoundObject : ScriptableObject
 {
     public string SoundName;
@@ -26,6 +26,7 @@ public class SoundObject : ScriptableObject
 
     public SoundObject()
     {
+
     }
 
     public void PlayClip(AudioSource audioSource)

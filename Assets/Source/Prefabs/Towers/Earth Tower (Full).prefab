@@ -6122,7 +6122,7 @@ MonoBehaviour:
   currentProjectileData: {fileID: 0}
   MonstersToShoot: []
   projectilesShot: []
-  range: {fileID: 2228180903335314714}
+  rangeVis: {fileID: 2228180903335314714}
   timeToReload: 0
   reloadProgress: 0
   isReadyToShoot: 1
