@@ -26,6 +26,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     [Header("Sound Effects")]
     public SoundObject towerDrag_SFX;
+    public SoundObject towerPlacement_SFX;
     public SoundObject towerError_SFX;
 
     [Header("Player Stats")]
@@ -146,6 +147,9 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             {
                 //Create real tower on node
                 GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
+
+                //Placement SFX
+                soundManager.PlayOnUIClick(towerPlacement_SFX);
 
                 //Remove old tower
                 Destroy(currentTower);
