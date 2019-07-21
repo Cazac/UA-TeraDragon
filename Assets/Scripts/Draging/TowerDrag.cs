@@ -149,6 +149,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
                 //Remove old tower
                 Destroy(currentTower);
+                newTower.transform.position = new Vector3 (newTower.transform.position.x, newTower.transform.position.y, newTower.transform.position.z + hit.collider.GetComponent<WorldTile>().posY * 0.1f);
                 hit.collider.GetComponent<WorldTile>().towering = false;
                 return;
             }

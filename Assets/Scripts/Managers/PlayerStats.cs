@@ -233,20 +233,10 @@ public class PlayerStats : MonoBehaviour
             crystalText_Green.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
         }
 
-
-
-
-        //THESE ARE ALL DISABLED
-        //THESE ARE ALL DISABLED
-        //THESE ARE ALL DISABLED
-        //THESE ARE ALL DISABLED
-        //THESE ARE ALL DISABLED
-
-
         //Yellow
         if (crystalsOwned_Yellow >= 5)
         {
-            crystalText_Yellow.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
+            crystalText_Yellow.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = true;
         }
         else
         {
