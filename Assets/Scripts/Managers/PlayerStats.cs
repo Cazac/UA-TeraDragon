@@ -27,11 +27,19 @@ public class PlayerStats : MonoBehaviour
     public int crystalsOwned_Green;
     public int crystalsOwned_Yellow;
 
+    //Skill ready values
     public bool skillReady_Red;
     public bool skillReady_Blue;
     public bool skillReady_Green;
     public bool skillReady_Yellow;
 
+    //Skill ready to recharge values
+    //public bool skillReady_Red;
+    //public bool skillReady_Blue;
+   // public bool skillReady_Green;
+    //public bool skillReady_Yellow;
+
+    //Skill countdown values
     private float skillCountdown_Red;
     private float skillCountdown_Blue;
     private float skillCountdown_Green;

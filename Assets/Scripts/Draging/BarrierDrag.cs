@@ -9,38 +9,46 @@ using WaveSystem;
 ///////////////
 /// <summary>
 ///
-/// TD_TowerDrag is used to drag and drop all towers into the game onto TD_TowerDrop sockets
+/// BarrierDrag is used to drag and drop all skills into the game.
+/// A UI version of the tower is attached to the mouse to drag and when dropped if the tile is valid,
+/// a real barrier that will activate will be placed.
 ///
 /// </summary>
 ///////////////
 
 public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [Header("Prefab Towers")]
-    public GameObject towerPrefab_UI;
-    public GameObject towerPrefab_Spawn;
+    [Header("Prefab Barriers")]
+    public GameObject barrierPrefab_UI;
+    public GameObject barrierPrefab_Spawn;
 
     [Header("Parent Gameobject")]
-    public GameObject towerParent;
+    public GameObject barrierParent;
 
-    [Header("UI_SoundEffect onclick")]
-    public SoundObject soundEffect;
+    [Header("Sound Effects")]
+    public SoundObject barrierDrag_SFX;
+    public SoundObject barrierError_SFX;
 
     [Header("Player Stats")]
     public PlayerStats playerStats;
 
+    //Current dragged barrier
     private GameObject currentBarrier;
-    private SoundManager soundManager;
 
+    //Managers
     private TileNodes tileNodes;
     private WaveManager waveManager;
+    private SoundManager soundManager;
     private CameraPanningCursor cameraPanningCursor;
 
     //TO DO HARD CODED COST
     private int barrierCost = 0;
 
+    /////////////////////////////////////////////////////////////////
+
     private void Start()
     {
+        //Setup Managers
         waveManager = GameObject.FindObjectOfType<WaveManager>();
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
         soundManager = GameObject.FindObjectOfType<SoundManager>();
@@ -51,12 +59,12 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     ///////////////
     /// <summary>
-    /// Undocumented
+    /// Dragging a barrier will charge the player the cost then create a drag version of the Gameobject attached to the cursor.
     /// </summary>
     ///////////////
     public void OnBeginDrag(PointerEventData eventData)
     {
-
+        //Check if the button is usable
         if (gameObject.GetComponent<Button>().interactable)
         {
             //Charge Player
@@ -77,36 +85,39 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 playerStats.crystalsOwned_Yellow -= barrierCost;
             }
 
-            playerStats.UpdateCrystalUI();
-
             //Spawn Tower Drag
-            currentBarrier = Instantiate(towerPrefab_UI);
-            soundManager.PlayOnUIClick(soundEffect);
+            currentBarrier = Instantiate(barrierPrefab_UI);
+
+            //Spawn SFX
+            soundManager.PlayOnUIClick(barrierDrag_SFX);
         }
         else
         {
             //Error SFX
-            Debug.Log("No Money");
+            soundManager.PlayOnUIClick(barrierError_SFX);
         }
-
     }
 
 
     ///////////////
     /// <summary>
-    /// Undocumented
+    /// Every frame the cursor moves make the current dragged barrier follow it.
     /// </summary>
     ///////////////
     public void OnDrag(PointerEventData eventData)
     {
+        //Check for a barrier
         if (currentBarrier != null)
         {
-            //currentTower.transform.position = cursor.transform.position;
+            //Get cursor position
             Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             cursorPosition.z = 0;
 
+            //Move barrier
             currentBarrier.transform.position = cursorPosition;
         }
+
+        //usefull ???
         cameraPanningCursor.IsUIDragging = true;
     }
 
@@ -120,48 +131,63 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         //Get current mouse raycast
         Ray raycastMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
 
+        //Useful?
+        cameraPanningCursor.IsUIDragging = false;
 
         //Check Raycast for any hit with COLLIDERS
-        if (Physics.Raycast(raycastMouse, out hit, Mathf.Infinity))
+        if (Physics.Raycast(raycastMouse, out RaycastHit hit, Mathf.Infinity))
         {
-
-            //Check node name
+            //Check hit node name
             string tileLayer = hit.collider.gameObject.transform.parent.gameObject.name;
+
+            // ????
             if (tileLayer == null)
             {
                 print("called");
                 Destroy(currentBarrier);
             }
 
-            //Condition for barrier
-            if (!hit.collider.GetComponent<WorldTile>().isBlockedBarrier && hit.collider.GetComponent<WorldTile>().walkable && currentBarrier.name.Contains("Barrier")
-                && waveManager.CurrentWave.TimeUntilSpawn >= 0 && waveManager.EnableSpawning == false && waveManager.waveParent.transform.childCount <= 0)
+            //Condition for barrier ??????????
+            if (!hit.collider.GetComponent<WorldTile>().isBlockedBarrier && hit.collider.GetComponent<WorldTile>().walkable && currentBarrier.name.Contains("Barrier"))
             {
-                hit.collider.GetComponent<WorldTile>().isBlockedBarrier = true;
-                GameObject newTower = null;
-
-                //DrawBlockedPath(tileNodes.pathData);
-
-                if (tileNodes.CheckBlockedPath() && tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count)
+                //Condition for barrier ??????????
+                if (waveManager.CurrentWave.TimeUntilSpawn >= 0 && waveManager.EnableSpawning == false && waveManager.waveParent.transform.childCount <= 0)
                 {
-                    newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
-                }
-                else
-                {
-                    Destroy(currentBarrier);
+                    // ???
+                    hit.collider.GetComponent<WorldTile>().isBlockedBarrier = true;
+
+                    //DrawBlockedPath(tileNodes.pathData);
+
+                    // ?????
+                    if (tileNodes.CheckBlockedPath() && tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count)
+                    {
+                        GameObject newBarrier = Instantiate(barrierPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, barrierParent.transform);
+                    }
+                    else
+                    {
+                        Destroy(currentBarrier);
+                    }
                 }
             }
         }
 
-        //Refund The Tower
-        RefundDragTower();
+        //Refund the barrier
+        //RefundDragTower();
 
-        cameraPanningCursor.IsUIDragging = false;
+        //Remove it?????
+        Destroy(currentBarrier);
 
+        //usefull ???
+        cameraPanningCursor.IsUIDragging = true;
     }
 
+
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
     private void DrawBlockedPath(PathsData blockedPath)
     {
         foreach (var path in blockedPath.blockedPaths)
@@ -173,6 +199,12 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         }
     }
 
+
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
     public void RefundDragTower()
     {
         if (currentBarrier != null)
