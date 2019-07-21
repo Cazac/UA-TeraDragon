@@ -27,10 +27,14 @@ public class TowerRange : MonoBehaviour
     [Header("Projectiles Fired")]
     public List<ProjectileFire> projectilesShot;
 
+    [Header("Range Visualizer")]
+    public GameObject range;
+
     [Header("Tower Stats")]
     public float timeToReload = 0;
     public float reloadProgress = 0;
     public bool isReadyToShoot = true;
+    public float towerRange = 1;
 
     //////////////////////////////////////////////////////////
 
@@ -51,6 +55,8 @@ public class TowerRange : MonoBehaviour
         {
             Shoot();
         }
+        range.transform.localScale = new Vector3(towerRange, towerRange, towerRange);
+        GetComponent<CircleCollider2D>().radius = 2f * towerRange;
     }
 
     //////////////////////////////////////////////////////////
@@ -77,10 +83,6 @@ public class TowerRange : MonoBehaviour
 
                 //New Reload Speed
                 timeToReload = parentTowerScript.towerData.towerReloadSpeed_T1;
-
-                //New Range Scale Size
-                scale = parentTowerScript.towerData.towerRange_T1;
-                gameObject.transform.localScale = new Vector3(scale, scale, scale);
 
                 //New Projectile
                 currentProjectileData = parentTowerScript.towerData.projectile_T1;
@@ -195,11 +197,10 @@ public class TowerRange : MonoBehaviour
 
 
 
-
-        if (MonstersToShoot.Count > 0)
+        foreach (EnemyScript go in MonstersToShoot)
         {
             //Find first monsters
-            GameObject monster_GO = MonstersToShoot[0].gameObject;
+            GameObject monster_GO = go.gameObject;
 
             //Generate Projectile with target
             GenerateProjectile(monster_GO);
