@@ -132,9 +132,12 @@ namespace WaveSystem
                     EnableSpawning = false;
                     if (soundManager != null)
                     {
-                        Debug.Log("Inter");
-                        soundManager.PlaySpecificSound("Inter");
-                        soundManager.ReturnControl = true;
+                        if (!(soundManager.mainAudioSourceSoundtrack.clip.name == "Calm"))
+                        {
+                            //Debug.Log("Inter");
+                            soundManager.PlaySpecificSound("Inter");
+                            soundManager.ReturnControl = true;
+                        }
                     }
                 }
             }
@@ -144,12 +147,18 @@ namespace WaveSystem
             if (currentTimer != null && EnableSpawning == false && !AllWaveCompleted() && waveParent.transform.childCount <= 0)
             {
                 if (currentTimer.NextWaveCountdown())
+                {
                     EnableSpawning = true;
+                }
 
                 if (soundManager != null)
                 {
-                    soundManager.PlaySpecificSound("Main");
-                    soundManager.ReturnControl = true;
+                    if (!(soundManager.mainAudioSourceSoundtrack.clip.name == "Landing"))
+                    {
+                        //Debug.Log("Main");
+                        soundManager.PlaySpecificSound("Main");
+                        soundManager.ReturnControl = true;
+                    }
                 }
             }
         }
