@@ -19,30 +19,32 @@ public class ButtonController : MonoBehaviour
 
     ////////////////////////////////
     
-    [Header("Menu Reffs")]
+    [Header("Menu Music Text")]
     public Text menuMuteMusic_TEXT;
     public Text menuMuteSFX_TEXT;
 
-    public GameObject menuSettingPanel;
-
+    [Header("Game Music Text")]
+    public Text gameMuteMusic_TEXT;
+    public Text gameMuteSFX_TEXT;
 
     [Header("Game Reffs")]
+    public GameObject menuSettingPanel;
 
 
 
     private bool isMusicPlaying;
     private bool isSFXPlaying;
 
-    SoundManager soundManager;
+    private SoundManager soundManager;
 
     /////////////////////////////////////////////////////////////////
 
-    public void Start()
+    public void Awake()
     {
         soundManager = GameObject.FindObjectOfType<SoundManager>();
     }
 
-    ///////////////////////////////////////////////////////////////// - Extra Buttons
+    ///////////////////////////////////////////////////////////////// - Game Buttons
 
     public void ButtonGame_StartNextWave()
     {
@@ -72,6 +74,36 @@ public class ButtonController : MonoBehaviour
     {
         //Load into main game
         SceneManager.LoadScene("Main Menu");
+    }
+
+    ///////////////////////////////////////////////////////////////// - Game Audio Buttons
+
+    public void ButtonGame_MuteMusic()
+    {
+        soundManager.MuteSoundtrack();
+
+        if (soundManager.IsMuteSoundtrack)
+        {
+            gameMuteMusic_TEXT.text = "Unmute SoundTrack";
+        }
+        else
+        {
+            gameMuteMusic_TEXT.text = "Mute SoundTrack";
+        }
+    }
+
+    public void ButtonGame_MuteSFX()
+    {
+        soundManager.MuteUI();
+
+        if (soundManager.IsMuteUI)
+        {
+            gameMuteSFX_TEXT.text = "Unmute UI";
+        }
+        else
+        {
+            gameMuteSFX_TEXT.text = "Mute UI";
+        }
     }
 
     ///////////////////////////////////////////////////////////////// - Main Menu
@@ -104,7 +136,7 @@ public class ButtonController : MonoBehaviour
 
     public void ButtonMenu_MuteMusic()
     {
-        Debug.Log("Mute Music");
+        soundManager.MuteSoundtrack();
 
         if (soundManager.IsMuteSoundtrack)
         {
@@ -118,7 +150,7 @@ public class ButtonController : MonoBehaviour
 
     public void ButtonMenu_MuteSFX()
     {
-        Debug.Log("Mute SFX");
+        soundManager.MuteUI();
 
         if (soundManager.IsMuteUI)
         {

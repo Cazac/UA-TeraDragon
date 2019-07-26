@@ -240,7 +240,7 @@ public class EnemyScript : MonoBehaviour
 
         if (CurrentHealth <= 0)
         {
-            print("Death takes me...");
+            //print("Death takes me...");
             Destroy(gameObject);
         }
     }

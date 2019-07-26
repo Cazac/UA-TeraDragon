@@ -52,6 +52,7 @@ public class PlayerStats : MonoBehaviour
     private float skillCooldown_Yellow = 5f;
 
     private GameOverScript gameOverScript;
+    private SoundManager soundManager;
 
     /////////////////////////////////////////////////////////////////
 
@@ -60,8 +61,7 @@ public class PlayerStats : MonoBehaviour
         CurrentLives = MaxLives;
 
         gameOverScript = GameObject.FindObjectOfType<GameOverScript>();
-        //Start the crystal chekcer
-        //StartCoroutine(UpdateCrystalValues());
+        soundManager = GameObject.FindObjectOfType<SoundManager>();
     }
 
     private void Update()
@@ -99,6 +99,7 @@ public class PlayerStats : MonoBehaviour
     {
         Debug.Log("Game over man, Game over");
         gameOverScript.TurnOnGameOver();
+        soundManager.PlaySpecificSound("Death");
     }
 
     public void AddCrystal(CrystalColor color)

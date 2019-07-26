@@ -24,6 +24,8 @@ public class SoundManager : MonoBehaviour
     private WaveManager waveManager;
     private bool autoControl = true;
 
+    /////////////////////////////////////////////////////////////////
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -33,19 +35,13 @@ public class SoundManager : MonoBehaviour
     {
         //AutoDestroySelf();
     }
-    private void AutoDestroySelf()
-    {
-        if (GameObject.FindObjectsOfType<SoundManager>().Length > 1)
-        {
-            DestroyImmediate(this.gameObject);
-            //this.GetComponent<AudioSource>().clip = null;
-        }
-    }
 
     private void Start()
     {
         waveManager = GameObject.FindObjectOfType<WaveManager>();
     }
+
+    /////////////////////////////////////////////////////////////////
 
     private void OnLevelWasLoaded(int level)
     {
@@ -57,11 +53,21 @@ public class SoundManager : MonoBehaviour
         triggerOnLevelLoad = true;
     }
 
-
     private void OnScenceLoad()
     {
         triggerOnLevelLoad = true;
     }
+
+    private void AutoDestroySelf()
+    {
+        if (GameObject.FindObjectsOfType<SoundManager>().Length > 1)
+        {
+            DestroyImmediate(this.gameObject);
+            //this.GetComponent<AudioSource>().clip = null;
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////
 
     private void Update()
     {
@@ -138,10 +144,11 @@ public class SoundManager : MonoBehaviour
         mainAudioSourceSoundtrack.Play();
 
         //Begin lerping volume of sound
-        //if (audioClip.IsAllowedAudioDampening == true)
-        //{
-        //    StartCoroutine(AudioVolumeDampeningOnLoad(mainAudioSourceSoundtrack, 0.5f, mainAudioSourceSoundtrack.volume, 0.2f));
-        //}
+        if (audioClip.IsAllowedAudioDampening == true)
+        {
+            Debug.Log("Volume Dampening????");
+            StartCoroutine(AudioVolumeDampeningOnLoad(mainAudioSourceSoundtrack, 0.1f, mainAudioSourceSoundtrack.volume, 0.25f));
+        }
     }
 
     private IEnumerator AudioVolumeDampeningOnLoad(AudioSource audioSource, float smallestLerpValue, float initialVolumeValue, float lerpTime)
@@ -152,18 +159,30 @@ public class SoundManager : MonoBehaviour
 
         while (audioSource.volume < initialVolumeValue)
         {
-            if (audioSource.volume >= 0.98)
+            if (audioSource.volume >= initialVolumeValue)
             {
-                audioSource.volume = 1;
-                Debug.Log("Coroutine stopped");
+                audioSource.volume = initialVolumeValue;
+                //Debug.Log("Coroutine stopped");
                 StopCoroutine(AudioVolumeDampeningOnLoad(audioSource, smallestLerpValue, initialVolumeValue, lerpTime));
             }
-            audioSource.volume += lerpTime * Time.deltaTime;
-            yield return null;
+
+
+            if (Time.timeScale == 1)
+            {
+                audioSource.volume += lerpTime * Time.deltaTime;
+            }
+            else
+            {
+                audioSource.volume += lerpTime * 0.02f;
+            }
+
+            yield return 0.1f;
         }
 
        
     }
+
+    /////////////////////////////////////////////////////////////////
 
     public void VolumeChangeSoundtrack(Slider slider)
     {
@@ -174,6 +193,8 @@ public class SoundManager : MonoBehaviour
     {
         mainAudioSourceUI.volume = slider.value;
     }
+
+    /////////////////////////////////////////////////////////////////
 
     public void MuteUI()
     {
@@ -196,14 +217,14 @@ public class SoundManager : MonoBehaviour
         {
             IsMuteSoundtrack = false;
         }
-
         else
         {
             IsMuteSoundtrack = true;
         }
+
         mainAudioSourceSoundtrack.mute = IsMuteSoundtrack;
     }
 
-
+    /////////////////////////////////////////////////////////////////
 }
 
