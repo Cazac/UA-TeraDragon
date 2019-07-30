@@ -54,6 +54,20 @@ public class PlayerStats : MonoBehaviour
     private GameOverScript gameOverScript;
     private SoundManager soundManager;
 
+    [Header("Sprite Prefabs")]
+    public GameObject hpSprite_Prefab;
+    public GameObject levelSprite_Prefab;
+
+    [Header("Sprite Sheets")]
+    public Sprite[] hpSpriteSheet;
+    public Sprite[] levelSpriteSheet;
+
+    private GameObject baseNode;
+    private GameObject hpSprite;
+    private GameObject levelSprite;
+
+    private int currentWaveCounter = 0;
+
     /////////////////////////////////////////////////////////////////
 
     private void Start()
@@ -62,6 +76,18 @@ public class PlayerStats : MonoBehaviour
 
         gameOverScript = GameObject.FindObjectOfType<GameOverScript>();
         soundManager = GameObject.FindObjectOfType<SoundManager>();
+
+        //Get Base Node and make Sprite prefabs
+        baseNode = GameObject.Find("NODE 0 : 10");
+        hpSprite = Instantiate(hpSprite_Prefab, baseNode.transform.position, Quaternion.identity, baseNode.transform);
+        levelSprite = Instantiate(levelSprite_Prefab, baseNode.transform.position, Quaternion.identity, baseNode.transform);
+
+        //Move up the HP 
+        levelSprite.transform.position = new Vector3(levelSprite.transform.position.x - 3.2f, levelSprite.transform.position.y + 1.4f, -50);
+
+        //Set Base Sprites
+        hpSprite.GetComponent<SpriteRenderer>().sprite = hpSpriteSheet[CurrentLives];
+        levelSprite.GetComponent<SpriteRenderer>().sprite = levelSpriteSheet[currentWaveCounter];
     }
 
     private void Update()
@@ -73,14 +99,29 @@ public class PlayerStats : MonoBehaviour
 
     /////////////////////////////////////////////////////////////////
 
+    public void IncrementWaveSprite()
+    {
+        currentWaveCounter++;
+        levelSprite.GetComponent<SpriteRenderer>().sprite = levelSpriteSheet[currentWaveCounter];
+    }
+
     public void RemoveLife(int i)
     {
         CurrentLives -= i;
         Debug.Log("Hit! Lose " + i + " lives, Current Lives:" + CurrentLives);
 
+        if (CurrentLives >= 0)
+        {
+            hpSprite.GetComponent<SpriteRenderer>().sprite = hpSpriteSheet[CurrentLives];
+        }
+
         if (CurrentLives < 0)
         {
             CurrentLives = 0;
+        }
+        else
+        {
+            
         }
 
         if (CurrentLives == 0)

@@ -146,7 +146,7 @@ public class SoundManager : MonoBehaviour
         //Begin lerping volume of sound
         if (audioClip.IsAllowedAudioDampening == true)
         {
-            Debug.Log("Volume Dampening????");
+            //Debug.Log("Volume Dampening????");
             StartCoroutine(AudioVolumeDampeningOnLoad(mainAudioSourceSoundtrack, 0.1f, mainAudioSourceSoundtrack.volume, 0.25f));
         }
     }

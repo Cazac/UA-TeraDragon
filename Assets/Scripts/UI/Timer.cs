@@ -94,6 +94,7 @@ public class Timer
         //Check if timer is done
         if (waveTimer <= 0)
         {
+            GameObject.FindObjectOfType<PlayerStats>().IncrementWaveSprite();
             Debug.Log("End Wave");
             return true;
         }
