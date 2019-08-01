@@ -163,6 +163,7 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     if (tileNodes.CheckBlockedPath() && tileNodes.pathData.blockedPaths.Count <= tileNodes.pathData.paths.Count)
                     {
                         GameObject newBarrier = Instantiate(barrierPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, barrierParent.transform);
+                        newBarrier.transform.position = new Vector3(newBarrier.transform.position.x, newBarrier.transform.position.y, -10 + hit.collider.transform.position.y * 0.01f);
                     }
                     else
                     {

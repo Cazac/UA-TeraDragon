@@ -153,8 +153,8 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
                 //Remove old tower
                 Destroy(currentTower);
-                Debug.Log("Hit collider position:" + hit.collider.gameObject.transform.position);
-                Debug.Log("Hit collider World tile position:" + hit.collider.transform.position.y);
+
+                // Place new tower
                 newTower.transform.position = new Vector3 (newTower.transform.position.x, newTower.transform.position.y, -10 + hit.collider.transform.position.y * 0.01f);
                 hit.collider.GetComponent<WorldTile>().towering = false;
                 return;

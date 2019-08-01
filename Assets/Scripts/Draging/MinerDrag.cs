@@ -146,8 +146,9 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 GameObject newMiner = Instantiate(minerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, minerParent.transform);
 
                 //Set new miner values to tile
-                currentMiner.GetComponent<MinerScript>().level = 1;
-                currentMiner.GetComponent<MinerScript>().crystalTile = hit.collider.GetComponent<CrystalTile>();
+                newMiner.GetComponent<MinerScript>().level = 1;
+                newMiner.GetComponent<MinerScript>().crystalTile = hit.collider.GetComponent<CrystalTile>();
+
 
                 //Remove old miner
                 Destroy(currentMiner);
