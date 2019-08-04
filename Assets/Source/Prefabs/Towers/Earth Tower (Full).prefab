@@ -5933,9 +5933,11 @@ GameObject:
   - component: {fileID: 8772478043854573931}
   - component: {fileID: 8634303632754624468}
   - component: {fileID: 2442996158695826179}
+  - component: {fileID: 1493763239797301010}
+  - component: {fileID: 7877437962329397456}
   m_Layer: 10
   m_Name: Earth Tower (Full)
-  m_TagString: Untagged
+  m_TagString: EarthTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6008,6 +6010,37 @@ MonoBehaviour:
   towerUpgradeText: {fileID: 5526375706479608912}
   towerSellText: {fileID: 1202445692086045215}
   RangeVisualizer: {fileID: 2228180903335314714}
+--- !u!114 &1493763239797301010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772478043854573928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f0405bad94d794d98f42b938efc5f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &7877437962329397456
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772478043854573928}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8032334235c04cf47aa49d4daf76fd35, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8772478043941597727
 GameObject:
   m_ObjectHideFlags: 0

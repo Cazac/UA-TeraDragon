@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Barrier
   - Destroyable
+  - IceTower
+  - FireTower
+  - LightTower
+  - EarthTower
   layers:
   - Default
   - TransparentFX

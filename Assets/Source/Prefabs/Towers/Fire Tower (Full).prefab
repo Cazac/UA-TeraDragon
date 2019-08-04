@@ -360,9 +360,10 @@ GameObject:
   - component: {fileID: 1125466132764182425}
   - component: {fileID: 4448582083692840221}
   - component: {fileID: 8112026782966990466}
+  - component: {fileID: -1426139665920316005}
   m_Layer: 10
   m_Name: Fire Tower (Full)
-  m_TagString: Untagged
+  m_TagString: FireTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,6 +503,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-1426139665920316005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4551227503457069776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f0405bad94d794d98f42b938efc5f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5351890242194202528
 GameObject:
   m_ObjectHideFlags: 0
