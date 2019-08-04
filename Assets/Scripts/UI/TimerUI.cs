@@ -46,8 +46,24 @@ public class TimerUI : MonoBehaviour
     {
         if (currentTimer != null)
         {
+            //Give Gems to Miners
+            GameObject minerParent = GameObject.Find("Miner Parent");
+
+            foreach (Transform child in minerParent.transform)
+            {
+                MinerScript minerScript = child.gameObject.GetComponent<MinerScript>();
+
+                minerScript.timer += currentTimer.TimeUntilNextSpawn;
+            }
+
+
+
+
             waveText.text = "Next Waves Start in: 0";
             currentTimer.TimeUntilNextSpawn = 1;
+
+
+    
         }
     }
 }

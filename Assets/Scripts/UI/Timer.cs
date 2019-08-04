@@ -95,7 +95,11 @@ public class Timer
         if (waveTimer <= 0)
         {
             GameObject.FindObjectOfType<PlayerStats>().IncrementWaveSprite();
-            Debug.Log("End Wave");
+            PlayerStats playerstats = GameObject.FindObjectOfType<PlayerStats>();
+
+            //Add a miner
+            playerstats.minersOwned++;
+
             return true;
         }
 

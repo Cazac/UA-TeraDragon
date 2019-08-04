@@ -11,36 +11,35 @@ public class MinerScript : MonoBehaviour
     private PlayerStats playerStats;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         playerStats = FindObjectOfType<PlayerStats>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         CrystalTimer();
     }
 
 
-    void CrystalTimer()
+    private void CrystalTimer()
     {
         timer += level * Time.fixedDeltaTime;
-        if(timer > 20)
-        {
-            timer = 0;
 
+        if(timer > 15)
+        {
+            //Remove Cost
+            timer -= 15;
+
+            //Get color
             CrystalColor gemColor = GetCrytals();
 
-
-
-
+            //Add to player
             playerStats.AddCrystal(gemColor);
+
+            //UI Popup
             PopupText(1, gemColor);
-
-
-
-
         }
     }
 

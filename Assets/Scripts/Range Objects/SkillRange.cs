@@ -91,7 +91,7 @@ public class SkillRange : MonoBehaviour
         }
 
         //Wait
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(3f);
 
         //Release
         if (releaseParticules != null)
@@ -104,6 +104,8 @@ public class SkillRange : MonoBehaviour
         {
             ShootAll();
         }
+
+        yield return new WaitForSeconds(0.8f);
 
         //Destroy Parent
         skillController.RemoveSkill();

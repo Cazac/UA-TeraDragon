@@ -49,7 +49,8 @@ public class GemPopup : MonoBehaviour
         textMesh.color = color;
 
         // ???
-        moveVector = new Vector3(.7f, 1) * 60f;
+        float randomX = Random.Range(-2f, 2f);
+        moveVector = new Vector3(randomX, 1) * 60f;
     }
 
 

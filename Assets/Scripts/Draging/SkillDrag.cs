@@ -152,7 +152,7 @@ public class SkillDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             //No Raycast
             Destroy(currentSkill);
             playerStats.skillReady_Red = true;
-            Debug.Log("BOUND ERROR, NO COLLIDER");
+            //Debug.Log("BOUND ERROR, NO COLLIDER");
             return;
         }
     }

@@ -113,7 +113,7 @@ public class PlayerStats : MonoBehaviour
     public void RemoveLife(int i)
     {
         CurrentLives -= i;
-        Debug.Log("Hit! Lose " + i + " lives, Current Lives:" + CurrentLives);
+        //Debug.Log("Hit! Lose " + i + " lives, Current Lives:" + CurrentLives);
 
         if (CurrentLives >= 0)
         {
@@ -143,7 +143,7 @@ public class PlayerStats : MonoBehaviour
 
     public void GameOver()
     {
-        Debug.Log("Game over man, Game over");
+        //Debug.Log("Game over man, Game over");
         gameOverScript.TurnOnGameOver();
         soundManager.PlaySpecificSound("Death");
     }

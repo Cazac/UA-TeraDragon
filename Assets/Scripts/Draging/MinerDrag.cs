@@ -131,6 +131,9 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 //Create real miner on node
                 GameObject newMiner = Instantiate(minerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, minerParent.transform);
 
+                //Raise Miner 
+                newMiner.transform.position = new Vector2(newMiner.transform.position.x, newMiner.transform.position.y + 3.5f);
+
                 //Set new miner values to tile
                 newMiner.GetComponent<MinerScript>().level = 1;
                 newMiner.GetComponent<MinerScript>().crystalTile = hit.collider.GetComponent<CrystalTile>();
