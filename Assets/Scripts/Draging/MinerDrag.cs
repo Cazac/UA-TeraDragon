@@ -29,6 +29,9 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public SoundObject minerDrag_SFX;
     public SoundObject minerError_SFX;
 
+    [Header("Player Stats")]
+    public PlayerStats playerStats;
+
     //Managers
     private TileNodes tileNodes;
     private SoundManager soundManager;
@@ -64,25 +67,8 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         if (gameObject.GetComponent<Button>().interactable)
         {
             //Charge player for the tower
-            /*
-            if (towerColor == "Red")
-            {
-                playerStats.crystalsOwned_Red -= towerCost;
-            }
-            if (towerColor == "Blue")
-            {
-                playerStats.crystalsOwned_Blue -= towerCost;
-            }
-            if (towerColor == "Green")
-            {
-                playerStats.crystalsOwned_Green -= towerCost;
-            }
-            if (towerColor == "Yellow")
-            {
-                playerStats.crystalsOwned_Yellow -= towerCost;
-            }
-            */
-
+            playerStats.minersOwned -= 1;
+           
             //Spawn Drag Miner 
             currentMiner = Instantiate(minerPrefab_UI);
 
@@ -160,6 +146,7 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 //No Match
                 print("No Matching Value, Destroy Miner");
                 Destroy(currentMiner);
+                RefundDragMiner();
                 return;
             }
         }
@@ -168,6 +155,7 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             //No Raycast
             print("No Raycast Hit, Destroy Miner");
             Destroy(currentMiner);
+            RefundDragMiner();
             return;
         }
     }
@@ -178,33 +166,14 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     /// Give the player the money back and remove the dragged miner.
     /// </summary>
     ///////////////
-    public void RefundDragTower()
+    public void RefundDragMiner()
     {
-        /*
-
-        //Check for a tower
-        if (currentTower != null)
+        //Check for a miner
+        if (currentMiner != null)
         {
             //Refund Player
-            if (towerColor == "Red")
-            {
-                playerStats.crystalsOwned_Red += towerCost;
-            }
-            if (towerColor == "Blue")
-            {
-                playerStats.crystalsOwned_Blue += towerCost;
-            }
-            if (towerColor == "Green")
-            {
-                playerStats.crystalsOwned_Green += towerCost;
-            }
-            if (towerColor == "Yellow")
-            {
-                playerStats.crystalsOwned_Yellow += towerCost;
-            }
+            playerStats.minersOwned += 1;
         }
-
-    */
     }
 
     /////////////////////////////////////////////////////////////////

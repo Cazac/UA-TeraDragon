@@ -15,11 +15,17 @@ public class PlayerStats : MonoBehaviour
     public Text crystalText_Green;
     public Text crystalText_Yellow;
 
+    [Header("Miners UI ELements")]
+    public Text minerText;
+
     [Header("Skill UI Elements")]
     public GameObject skillGameObject_Red;
     public GameObject skillGameObject_Blue;
     public GameObject skillGameObject_Green;
     public GameObject skillGameObject_Yellow;
+
+    [Header("Miners")]
+    public int minersOwned;
 
     [Header("Crystals")]
     public int crystalsOwned_Red;
@@ -32,12 +38,6 @@ public class PlayerStats : MonoBehaviour
     public bool skillReady_Blue;
     public bool skillReady_Green;
     public bool skillReady_Yellow;
-
-    //Skill ready to recharge values
-    //public bool skillReady_Red;
-    //public bool skillReady_Blue;
-   // public bool skillReady_Green;
-    //public bool skillReady_Yellow;
 
     //Skill countdown values
     private float skillCountdown_Red;
@@ -68,6 +68,10 @@ public class PlayerStats : MonoBehaviour
 
     private int currentWaveCounter = 0;
 
+    [Header("Text Prefabs")]
+    public GameObject popupDamageText_Prefab;
+    public GameObject popupGemText_Prefab;
+
     /////////////////////////////////////////////////////////////////
 
     private void Start()
@@ -78,7 +82,7 @@ public class PlayerStats : MonoBehaviour
         soundManager = GameObject.FindObjectOfType<SoundManager>();
 
         //Get Base Node and make Sprite prefabs
-        baseNode = GameObject.Find("NODE 0 : 10");
+        baseNode = GameObject.Find("NODE 0 : 8");
         hpSprite = Instantiate(hpSprite_Prefab, baseNode.transform.position, Quaternion.identity, baseNode.transform);
         levelSprite = Instantiate(levelSprite_Prefab, baseNode.transform.position, Quaternion.identity, baseNode.transform);
 
@@ -95,6 +99,7 @@ public class PlayerStats : MonoBehaviour
         UpdateCrystalUI();
         UpdateSkillCooldowns();
         UpdateSkillUI();
+        UpdateMinerUI();
     }
 
     /////////////////////////////////////////////////////////////////
@@ -240,10 +245,10 @@ public class PlayerStats : MonoBehaviour
     /// </summary>
     public void UpdateCrystalUI()
     {
-        crystalText_Red.text = "Gems: " + crystalsOwned_Red;
-        crystalText_Blue.text = "Gems: " + crystalsOwned_Blue;
-        crystalText_Green.text = "Gems: " + crystalsOwned_Green;
-        crystalText_Yellow.text = "Gems: " + crystalsOwned_Yellow;
+        crystalText_Red.text = crystalsOwned_Red.ToString();
+        crystalText_Blue.text = crystalsOwned_Blue.ToString();
+        crystalText_Green.text = crystalsOwned_Green.ToString();
+        crystalText_Yellow.text = crystalsOwned_Yellow.ToString();
 
         //Red
         if (crystalsOwned_Red >= 5)
@@ -278,11 +283,29 @@ public class PlayerStats : MonoBehaviour
         //Yellow
         if (crystalsOwned_Yellow >= 5)
         {
-            crystalText_Yellow.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+            crystalText_Yellow.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
         }
         else
         {
             crystalText_Yellow.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
+        }
+    }
+
+    /// <summary>
+    /// Update Crystal UI elements
+    /// </summary>
+    public void UpdateMinerUI()
+    {
+        minerText.text = minersOwned.ToString();
+  
+        //Miners
+        if (minersOwned >= 1)
+        {
+            minerText.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            minerText.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
         }
     }
 

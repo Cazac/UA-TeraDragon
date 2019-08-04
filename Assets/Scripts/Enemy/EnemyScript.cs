@@ -231,12 +231,25 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
+
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
     public void TakeDamage(float damage)
     {
         //Normalize float vs int???
         CurrentHealth -= (int)damage;
 
         //Armor?????? TO DO
+
+
+
+        //TEXT
+        PopupText(damage);
+
+
 
         if (CurrentHealth <= 0)
         {
@@ -245,7 +258,31 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
+    public void PopupText(float damage)
+    {
+        //Normalize float vs int???
+        int normalDamage = (int)damage;
+        
+        //Get From PLayer Stasts
+        GameObject textPrefab = playerStats.popupDamageText_Prefab;
 
+
+        //Create
+        GameObject popupText = Instantiate(textPrefab, transform.position, Quaternion.identity);
+
+        //Setup
+        DamagePopup dmgPopup = popupText.GetComponent<DamagePopup>();
+
+
+        dmgPopup.Setup(normalDamage);
+
+    }
+
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
     public void ApplySlow(float slowSpeed, float slowTimer)
     {
         //Apply Color
@@ -279,7 +316,11 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
     private void RefreshSlow()
     {
         if (speedWearOffTime < 0)
@@ -294,7 +335,11 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
     public IEnumerator AttackBarrier(BarrierData barrierData)
     {
         while (isAttacking)
