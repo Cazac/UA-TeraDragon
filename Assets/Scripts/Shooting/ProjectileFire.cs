@@ -79,7 +79,7 @@ public class ProjectileFire : MonoBehaviour
             float step = 100 * Time.deltaTime;
 
             //Look at?
-            transform.up = target - transform.position;
+            transform.right = target - transform.position;
 
 
             transform.position = Vector2.MoveTowards(gameObject.transform.position, target, step);
