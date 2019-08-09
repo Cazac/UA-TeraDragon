@@ -283,7 +283,7 @@ public class PlayerStats : MonoBehaviour
         //Yellow
         if (crystalsOwned_Yellow >= 5)
         {
-            crystalText_Yellow.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
+            crystalText_Yellow.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = true;
         }
         else
         {
@@ -327,23 +327,10 @@ public class PlayerStats : MonoBehaviour
             skillGameObject_Red.gameObject.transform.GetComponent<Button>().interactable = false;
         }
 
-
-
-
-
-        //THESE ARE ALL DISABLED
-        //THESE ARE ALL DISABLED
-        //THESE ARE ALL DISABLED
-        //THESE ARE ALL DISABLED
-        //THESE ARE ALL DISABLED
-
-
-
-
         //Blue
         if (skillReady_Blue)
         {
-            skillGameObject_Blue.gameObject.transform.GetComponent<Button>().interactable = false;
+            skillGameObject_Blue.gameObject.transform.GetComponent<Button>().interactable = true;
         }
         else
         {
@@ -353,7 +340,7 @@ public class PlayerStats : MonoBehaviour
         //Green
         if (skillReady_Green)
         {
-            skillGameObject_Green.gameObject.transform.GetComponent<Button>().interactable = false;
+            skillGameObject_Green.gameObject.transform.GetComponent<Button>().interactable = true;
         }
         else
         {
@@ -363,7 +350,7 @@ public class PlayerStats : MonoBehaviour
         //Yellow
         if (skillReady_Yellow)
         {
-            skillGameObject_Yellow.gameObject.transform.GetComponent<Button>().interactable = false;
+            skillGameObject_Yellow.gameObject.transform.GetComponent<Button>().interactable = true;
         }
         else
         {

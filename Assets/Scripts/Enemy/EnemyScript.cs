@@ -285,8 +285,7 @@ public class EnemyScript : MonoBehaviour
     ///////////////
     public void ApplySlow(float slowSpeed, float slowTimer)
     {
-        //Apply Color
-        gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
+  
 
         if (currentSpeed == speed)
         {
@@ -313,6 +312,17 @@ public class EnemyScript : MonoBehaviour
                 //Stack Timer
                 speedWearOffTime += slowTimer;
             }
+        }
+
+        if (currentSpeed < 1f)
+        {
+            //Apply Color
+            gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+        }
+        else
+        {
+            //Apply Color
+            gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
         }
     }
 

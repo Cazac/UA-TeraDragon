@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   isProjectile: 1
   projectileDamage: 20
-  projectileSpeed: 10
+  projectileSpeed: 90
   projectileSlowdown: 0
   projectileSlowdownTime: 0
   projectilePoison: 1
@@ -28,5 +28,5 @@ MonoBehaviour:
   explosionSlowdown: 0
   isBeam: 0
   beamDamage: 0
-  beamSlowdown: 0
+  beamReload: 0
   beamChainTargets: 0

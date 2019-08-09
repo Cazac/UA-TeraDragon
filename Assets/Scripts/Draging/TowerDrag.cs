@@ -107,6 +107,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     ///////////////
     public void OnDrag(PointerEventData eventData)
     {
+
         //Check for a tower
         if (currentTower != null)
         {

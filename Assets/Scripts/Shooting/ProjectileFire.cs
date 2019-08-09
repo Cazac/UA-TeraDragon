@@ -76,7 +76,7 @@ public class ProjectileFire : MonoBehaviour
             Vector3 target = enemy.transform.position;
 
             //USE A SPEED VALUE
-            float step = 100 * Time.deltaTime;
+            float step = projectileSpeed * Time.deltaTime;
 
             //Look at?
             transform.right = target - transform.position;
