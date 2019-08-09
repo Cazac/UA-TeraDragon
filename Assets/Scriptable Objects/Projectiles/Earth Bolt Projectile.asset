@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   isProjectile: 1
   projectileDamage: 20
-  projectileSpeed: 90
+  projectileSpeed: 80
   projectileSlowdown: 0
   projectileSlowdownTime: 0
   projectilePoison: 1

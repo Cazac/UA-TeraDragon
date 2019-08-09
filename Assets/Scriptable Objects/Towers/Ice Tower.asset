@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerStartingLevel: 1
   towerSprite_T1: {fileID: 21300000, guid: 64bf6d1227911494e80fe1ac6de7f457, type: 3}
-  projectile_T1: {fileID: 11400000, guid: 599dfb6ce65eb234da07c7a328fb7cb1, type: 2}
+  projectile_T1: {fileID: 11400000, guid: 24c0e066686c6b7448bb38f74ee86ac9, type: 2}
   towerRange_T1: 20
   towerReloadSpeed_T1: 0.5
   towerSprite_T2: {fileID: 21300000, guid: 64bf6d1227911494e80fe1ac6de7f457, type: 3}
