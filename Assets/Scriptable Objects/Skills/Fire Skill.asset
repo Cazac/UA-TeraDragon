@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f57eca791f9df204389ec9880a4209cf, type: 3}
   m_Name: Fire Skill
   m_EditorClassIdentifier: 
-  skillDuration: 3
+  skillDuration: 0
   isDamageSingular: 1
-  singularDamage: 20
+  singularDamage: 10
   isDamageConstant: 0
   constantDamage: 0
   slowdown: 0

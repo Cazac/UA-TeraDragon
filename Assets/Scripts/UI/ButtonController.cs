@@ -122,8 +122,8 @@ public class ButtonController : MonoBehaviour
 
     public void ButtonMenu_Credits()
     {
-        //Open Settings
-        menuSettingPanel.SetActive(!menuSettingPanel.activeSelf);
+        //Load into credits
+        SceneManager.LoadScene("Credits");
     }
 
     public void ButtonMenu_Quit()

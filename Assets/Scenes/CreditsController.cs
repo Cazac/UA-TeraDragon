@@ -24,7 +24,7 @@ public class CreditsController : MonoBehaviour
     {
         if (Input.GetKey("space"))
         {
-            CreditsAnimator.speed = 10f;
+            CreditsAnimator.speed = 5f;
         }
         else
         {
@@ -41,7 +41,7 @@ public class CreditsController : MonoBehaviour
 
     private IEnumerator CreditsPlay()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
 
 
         //Credit Slidshow

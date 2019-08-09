@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Earth Skill
   m_EditorClassIdentifier: 
   skillDuration: 0
-  isDamageSingular: 0
-  singularDamage: 0
+  isDamageSingular: 1
+  singularDamage: 10
   isDamageConstant: 0
   constantDamage: 0
   slowdown: 0
