@@ -74,12 +74,12 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             currentMiner = Instantiate(minerPrefab_UI);
 
             //Spawn SFX
-            soundManager.PlayOnUIClick(minerDrag_SFX);
+            soundManager.PlayOnUIClick(minerDrag_SFX, 0);
         }
         else
         {
             //Error SFX
-            soundManager.PlayOnUIClick(minerError_SFX);
+            //soundManager.PlayOnUIClick(minerError_SFX);
         }
     }
 
@@ -133,7 +133,7 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 GameObject newMiner = Instantiate(minerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, minerParent.transform);
 
                 //Placement SFX
-                soundManager.PlayOnUIClick(minerPlacement_SFX);
+                soundManager.PlayOnUIClick(minerPlacement_SFX, 0.1f);
 
                 //Raise Miner 
                 newMiner.transform.position = new Vector2(newMiner.transform.position.x, newMiner.transform.position.y + 3.5f);

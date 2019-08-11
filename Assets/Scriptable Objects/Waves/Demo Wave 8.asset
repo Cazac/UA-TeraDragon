@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63481b4f989909643afd3e309ea1f415, type: 3}
-  m_Name: Demo Wave 4
+  m_Name: Demo Wave 8
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 5183016958187622406, guid: a657b833a5a8ebf4fab21ec3d8c8d087,
+  EnemyPrefab: {fileID: 4309955642369637034, guid: 2887937b010fbf54b90718b0b303900a,
     type: 3}
   NumberOfEnemyPerPos: 10
   TimeUntilSpawn: 10
   WaveTimer: 15
-  SpawnRate: 1.1
+  SpawnRate: 0.8
   Path: []
   ParentGameobject: {fileID: 0}

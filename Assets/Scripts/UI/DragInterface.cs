@@ -33,7 +33,7 @@ public abstract class DragInterface : MonoBehaviour
         currentTower = Instantiate(dragPrefab_UI);
         if (soundManager != null)
         {
-            soundManager.PlayOnUIClick(soundEffect);
+            soundManager.PlayOnUIClick(soundEffect, 0f);
         }
     }
 

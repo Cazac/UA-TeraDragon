@@ -89,12 +89,12 @@ public class BarrierDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             currentBarrier = Instantiate(barrierPrefab_UI);
 
             //Spawn SFX
-            soundManager.PlayOnUIClick(barrierDrag_SFX);
+            soundManager.PlayOnUIClick(barrierDrag_SFX, 0);
         }
         else
         {
             //Error SFX
-            soundManager.PlayOnUIClick(barrierError_SFX);
+            //soundManager.PlayOnUIClick(barrierError_SFX);
         }
     }
 

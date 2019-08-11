@@ -90,12 +90,12 @@ public class SkillDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             currentSkill = Instantiate(skillPrefab_UI);
 
             //Skill SFX
-            soundManager.PlayOnUIClick(skillDrag_SFX);
+            soundManager.PlayOnUIClick(skillDrag_SFX, 0);
         }
         else
         {
             //Error SFX
-            soundManager.PlayOnUIClick(skillError_SFX);
+            //soundManager.PlayOnUIClick(skillError_SFX, );
         }
     }
 

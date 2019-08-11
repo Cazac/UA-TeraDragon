@@ -97,8 +97,12 @@ public class Timer
             GameObject.FindObjectOfType<PlayerStats>().IncrementWaveSprite();
             PlayerStats playerstats = GameObject.FindObjectOfType<PlayerStats>();
 
-            //Add a miner
-            playerstats.minersOwned++;
+            if (playerstats.currentWaveCounter % 2 == 0)
+            {
+                //Add a miner
+                playerstats.minersOwned++;
+            }
+  
 
             return true;
         }

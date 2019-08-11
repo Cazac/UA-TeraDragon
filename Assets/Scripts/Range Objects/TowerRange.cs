@@ -256,7 +256,7 @@ public class TowerRange : MonoBehaviour
     public void GenerateProjectile(GameObject monster)
     {
         //SFX
-        FindObjectOfType<SoundManager>().PlayOnUIClick(shootSFX);
+        FindObjectOfType<SoundManager>().PlayOnUIClick(shootSFX, 0.1f);
 
 
         GameObject projectile = Instantiate(currentProjectileData.projectilePrefab, parentTowerScript.firingPoint.transform.position, Quaternion.identity, parentTowerScript.firingPoint.transform);

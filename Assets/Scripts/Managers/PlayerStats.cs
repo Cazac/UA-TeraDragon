@@ -50,10 +50,10 @@ public class PlayerStats : MonoBehaviour
     private float skillCountdown_Yellow;
 
     //STATIC VALUES WHERE TO CHANGE???
-    private float skillCooldown_Red = 15f;
-    private float skillCooldown_Blue = 10f;
-    private float skillCooldown_Green = 20f;
-    private float skillCooldown_Yellow = 10f;
+    private float skillCooldown_Red = 20f;
+    private float skillCooldown_Blue = 15f;
+    private float skillCooldown_Green = 25f;
+    private float skillCooldown_Yellow = 15f;
 
     private GameOverScript gameOverScript;
     private SoundManager soundManager;
@@ -66,11 +66,12 @@ public class PlayerStats : MonoBehaviour
     public Sprite[] hpSpriteSheet;
     public Sprite[] levelSpriteSheet;
 
-    private GameObject baseNode;
+    [Header("Base Node")]
+    public GameObject baseNode;
     private GameObject hpSprite;
     private GameObject levelSprite;
 
-    private int currentWaveCounter = 0;
+    public int currentWaveCounter = 0;
 
     [Header("Text Prefabs")]
     public GameObject popupDamageText_Prefab;
@@ -111,7 +112,11 @@ public class PlayerStats : MonoBehaviour
     public void IncrementWaveSprite()
     {
         currentWaveCounter++;
-        levelSprite.GetComponent<SpriteRenderer>().sprite = levelSpriteSheet[currentWaveCounter];
+
+        if (levelSpriteSheet.Length >= currentWaveCounter + 1)
+        {
+            levelSprite.GetComponent<SpriteRenderer>().sprite = levelSpriteSheet[currentWaveCounter];
+        }
     }
 
     public void RemoveLife(int i)
@@ -119,7 +124,7 @@ public class PlayerStats : MonoBehaviour
         CurrentLives -= i;
 
         //SFX
-        soundManager.PlayOnUIClick(hitSFX);
+        soundManager.PlayOnUIClick(hitSFX, 0);
 
         //Debug.Log("Hit! Lose " + i + " lives, Current Lives:" + CurrentLives);
 
@@ -159,7 +164,7 @@ public class PlayerStats : MonoBehaviour
     public void AddCrystal(CrystalColor color)
     {
         //SFX
-        soundManager.PlayOnUIClick(gemSFX);
+        soundManager.PlayOnUIClick(gemSFX, 0.1f);
 
 
         switch (color)

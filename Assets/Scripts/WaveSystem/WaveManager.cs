@@ -254,7 +254,7 @@ namespace WaveSystem
  
             if (waveIndex > waves.Length - 1)
             {
-                Debug.Log("End of all waves");
+                //Debug.Log("End of all waves");
 
                 Winner();
 

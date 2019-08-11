@@ -8,6 +8,8 @@ public class MinerScript : MonoBehaviour
     public CrystalTile crystalTile;
     public float timer;
 
+    private int cooldownTimer = 12;
+
     private PlayerStats playerStats;
 
     // Start is called before the first frame update
@@ -27,10 +29,10 @@ public class MinerScript : MonoBehaviour
     {
         timer += level * Time.fixedDeltaTime;
 
-        if(timer > 15)
+        if(timer > cooldownTimer)
         {
             //Remove Cost
-            timer -= 15;
+            timer -= cooldownTimer;
 
             //Get color
             CrystalColor gemColor = GetCrytals();

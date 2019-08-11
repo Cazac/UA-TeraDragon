@@ -98,8 +98,15 @@ public class EnemyScript : MonoBehaviour
         endPosition = currentWaypoints[currentWaypoint + 1].transform.position;
         dir = endPosition - StartPosition;
 
+        Debug.Log("StartPosition: " + StartPosition);
+        Debug.Log("endPosition: " + endPosition);
+        Debug.Log("currentSpeed: " + currentSpeed);
+        Debug.Log("Dir: " + dir);
+
+
         transform.position += dir.normalized * currentSpeed * Time.fixedDeltaTime;
 
+        //If Close enough to base
         if (Vector3.Distance(gameObject.transform.position, endPosition) < 0.5f)
         {
             if (currentWaypoint < currentWaypoints.Count - 2)
@@ -130,7 +137,18 @@ public class EnemyScript : MonoBehaviour
             }
         }
 
+
+
+        //Running Away From base? Fuck it you die.
+        if (Vector3.Distance(gameObject.transform.position, playerStats.baseNode.transform.position) > 400f)
+        {
+            //Base Damage Destruction
+            Destroy(gameObject);
+        }
+
     }
+
+
 
     /// <summary>
     /// Recalulate path when current path has a barrier
@@ -285,35 +303,74 @@ public class EnemyScript : MonoBehaviour
     ///////////////
     public void ApplySlow(float slowSpeed, float slowTimer)
     {
-  
-
-        if (currentSpeed == speed)
+        if (!gameObject.name.Contains("BOSS"))
         {
-            //Apply Effect + Timer
-            currentSpeed = currentSpeed * slowSpeed;
-            speedWearOffTime = slowTimer;
-        }
-        else
-        {
-            //If can be slower, slow down more
-            if ((speed * slowSpeed) < currentSpeed)
+            if (currentSpeed == speed)
             {
-                currentSpeed = speed * slowSpeed;
-            }
-
-            //Timer Refresh
-            if (speedWearOffTime <= 0)
-            {
-                //New Timer
+                //Apply Effect + Timer
+                currentSpeed = currentSpeed * slowSpeed;
                 speedWearOffTime = slowTimer;
             }
             else
             {
-                //Stack Timer
-                speedWearOffTime += slowTimer;
+                //If can be slower, slow down more
+                if ((speed * slowSpeed) < currentSpeed)
+                {
+                    currentSpeed = speed * slowSpeed;
+                }
+
+                //Timer Refresh
+                if (speedWearOffTime <= 0)
+                {
+                    //New Timer
+                    speedWearOffTime = slowTimer;
+                }
+                else
+                {
+                    //Stack Timer
+                    speedWearOffTime += slowTimer;
+                }
             }
         }
+        else
+        {
+            if (currentSpeed == speed)
+            {
 
+                speedWearOffTime = slowTimer / 2f;
+            }
+
+
+
+       
+            if (slowSpeed < 0.1f)
+            {
+                currentSpeed = 0.01f;
+            }
+            else
+            {
+                currentSpeed = 4f;
+            }
+
+            if (currentSpeed < 1f)
+            {
+                //Apply Color
+                gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+            }
+            else
+            {
+                //Apply Color
+                gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
+            }
+
+        }
+
+       
+
+
+
+
+        //Color
         if (currentSpeed < 1f)
         {
             //Apply Color
@@ -324,6 +381,7 @@ public class EnemyScript : MonoBehaviour
             //Apply Color
             gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
         }
+
     }
 
     ///////////////

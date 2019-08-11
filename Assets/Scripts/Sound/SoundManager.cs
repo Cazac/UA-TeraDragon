@@ -113,12 +113,13 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlayOnUIClick(SoundObject clip)
+    public void PlayOnUIClick(SoundObject clip, float pitchRange)
     {
-
+ 
         GameObject newSFX = Instantiate(SFXPrefab, SFXParent.transform);
 
         newSFX.GetComponent<AudioSource>().clip = clip.AudioClip;
+        newSFX.GetComponent<AudioSource>().pitch = 1 + (UnityEngine.Random.Range(-pitchRange, pitchRange));
         newSFX.GetComponent<AudioSource>().volume = mainAudioSourceUI.volume;
         newSFX.GetComponent<AudioSource>().Play();
 

@@ -85,7 +85,7 @@ public class SkillRange : MonoBehaviour
     public IEnumerator StartSkill()
     {
         //SFX
-        FindObjectOfType<SoundManager>().PlayOnUIClick(skillSFX);
+        FindObjectOfType<SoundManager>().PlayOnUIClick(skillSFX, 0);
 
 
         //Background

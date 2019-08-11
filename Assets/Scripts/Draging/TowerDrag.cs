@@ -90,12 +90,12 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             currentTower = Instantiate(towerPrefab_UI);
 
             //Spawn SFX
-            soundManager.PlayOnUIClick(towerDrag_SFX);
+            soundManager.PlayOnUIClick(towerDrag_SFX, 0);
         }
         else
         {
             //Error SFX
-            soundManager.PlayOnUIClick(towerError_SFX);
+            //soundManager.PlayOnUIClick(towerError_SFX);
         }
     }
 
@@ -150,7 +150,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
 
                 //Placement SFX
-                soundManager.PlayOnUIClick(towerPlacement_SFX);
+                soundManager.PlayOnUIClick(towerPlacement_SFX, 0.1f);
 
                 //Remove old tower
                 Destroy(currentTower);
