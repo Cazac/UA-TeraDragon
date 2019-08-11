@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fire Tower
   m_EditorClassIdentifier: 
   TowerStartingLevel: 1
+  shootingSFX: {fileID: 11400000, guid: 9cd31f1fc2485314692410f8759fc4b8, type: 2}
   towerSprite_T1: {fileID: 21300000, guid: 3ec0a4d2acd7ef64ba18ae3cd9ca4c5c, type: 3}
   projectile_T1: {fileID: 11400000, guid: 4ac143697d26ac4428b9731156a0b414, type: 2}
   towerRange_T1: 20

@@ -43,7 +43,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -170,7 +170,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a7866c19e5df80f45b5c940df08f2237, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -299,6 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8907ae4595df4e84191df2c7af7dc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SFXPrefab: {fileID: 180086338489329949, guid: f881ddad84616db49aa7d7303cdcf547,
+    type: 3}
   mainAudioSourceSoundtrack: {fileID: 4765093881596186557}
   mainAudioSourceUI: {fileID: 4765093881798379697}
   soundClips:

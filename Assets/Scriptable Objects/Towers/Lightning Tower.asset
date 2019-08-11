@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Lightning Tower
   m_EditorClassIdentifier: 
   TowerStartingLevel: 1
+  shootingSFX: {fileID: 11400000, guid: 9cd31f1fc2485314692410f8759fc4b8, type: 2}
   towerSprite_T1: {fileID: 21300000, guid: 7d3cc1dccaee8a34a8534999e3b47320, type: 3}
   projectile_T1: {fileID: 11400000, guid: aaa090905f381af45b517b2ca537ebf9, type: 2}
   towerRange_T1: 35

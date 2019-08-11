@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8b7bf0263a5c142a06c502cb8e0d7e, type: 3}
   m_Name: SFX_LightSkill
   m_EditorClassIdentifier: 
-  SoundName: 
-  AudioClip: {fileID: 0}
-  Volume: 0
-  Pitch: 0
+  SoundName: Light Skill
+  AudioClip: {fileID: 8300000, guid: 12fa9d0f37c444a48ac211f38b991b94, type: 3}
+  Volume: 1
+  Pitch: 1
   IsAllowedLooping: 0
   IsAllowedAutoDestruct: 0
   IsAllowedAudioDampening: 0

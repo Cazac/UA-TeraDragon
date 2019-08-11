@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f57eca791f9df204389ec9880a4209cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d8b7bf0263a5c142a06c502cb8e0d7e, type: 3}
   m_Name: SFX_EarthSKill
   m_EditorClassIdentifier: 
-  skillDuration: 0
-  isDamageSingular: 0
-  singularDamage: 0
-  isDamageConstant: 0
-  constantDamage: 0
-  slowdown: 0
-  poison: 0
-  skillSFX: {fileID: 0}
+  SoundName: Earth Skill
+  AudioClip: {fileID: 8300000, guid: de54747a57d1c1d4c813fb2a96e1f3e4, type: 3}
+  Volume: 1
+  Pitch: 1
+  IsAllowedLooping: 0
+  IsAllowedAutoDestruct: 0
+  IsAllowedAudioDampening: 0

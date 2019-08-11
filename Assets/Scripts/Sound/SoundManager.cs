@@ -8,6 +8,12 @@ using WaveSystem;
 
 public class SoundManager : MonoBehaviour
 {
+    [Header("SFX Prefab")]
+    public GameObject SFXPrefab;
+
+    [Header("SFX Parent")]
+    public GameObject SFXParent;
+
     public AudioSource mainAudioSourceSoundtrack;
     public AudioSource mainAudioSourceUI;
     public bool IsMuteSoundtrack { get; set; }
@@ -100,18 +106,34 @@ public class SoundManager : MonoBehaviour
         {
             if (clip.SoundName.Contains(soundName))
             {
-                PlaySoundByName(clip);
+                PlaySoundByObject(clip);
             }
         }
     }
 
     public void PlayOnUIClick(SoundObject clip)
     {
-        if (mainAudioSourceUI.GetComponent<AudioSource>().isPlaying)
-            mainAudioSourceUI.clip = null;
-        mainAudioSourceUI.clip = clip.AudioClip;
 
+        GameObject newSFX = Instantiate(SFXPrefab, SFXParent.transform);
+
+        newSFX.GetComponent<AudioSource>().clip = clip.AudioClip;
+        newSFX.GetComponent<AudioSource>().volume = mainAudioSourceUI.volume;
+        newSFX.GetComponent<AudioSource>().Play();
+
+        //Setup Auto Destruct
+        newSFX.GetComponent<SelfDestruct>().Setup(clip.AudioClip.length);
+
+
+        /*
+        if (mainAudioSourceUI.GetComponent<AudioSource>().isPlaying)
+        {
+            mainAudioSourceUI.clip = null;
+        }
+
+        mainAudioSourceUI.clip = clip.AudioClip;
         mainAudioSourceUI.Play();
+
+        */
     }
 
     private void LoopThroughSoundList(SoundObject[] clips)
@@ -120,22 +142,22 @@ public class SoundManager : MonoBehaviour
         {
             if (clip.SoundName.Contains("Menu") && SceneManager.GetActiveScene().name.Contains("Menu") && autoControl)
             {
-                PlaySoundByName(clip);
+                PlaySoundByObject(clip);
             }
 
             if (clip.SoundName.Contains("Game") && SceneManager.GetActiveScene().name.Contains("Game") && autoControl)
             {
-                PlaySoundByName(clip);
+                PlaySoundByObject(clip);
             }
 
             if(clip.SoundName.Contains("Inter") && !autoControl)
             {
-                PlaySoundByName(clip);
+                PlaySoundByObject(clip);
             }
         }
     }
 
-    public void PlaySoundByName(SoundObject audioClip)
+    public void PlaySoundByObject(SoundObject audioClip)
     {
         //Set default value from SoundObject
         mainAudioSourceSoundtrack.clip = audioClip.AudioClip;

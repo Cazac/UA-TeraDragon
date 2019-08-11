@@ -28,7 +28,5 @@ public class BackGroundPanAround : MonoBehaviour
 
         targetPosition = new Vector3(mouseX, mouseY, -10);
         this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, Time.deltaTime * smoothSpeed);
-
-        //this.transform.Translate(mouseX, mouseY, 0);
     }
 }

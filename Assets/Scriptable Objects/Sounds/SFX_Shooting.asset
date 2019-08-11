@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d8b7bf0263a5c142a06c502cb8e0d7e, type: 3}
-  m_Name: SFX_FireSkill
+  m_Name: SFX_Shooting
   m_EditorClassIdentifier: 
-  SoundName: 
-  AudioClip: {fileID: 8300000, guid: b48a22a54325f9c48a6e01e305fc1829, type: 3}
+  SoundName: Shooting
+  AudioClip: {fileID: 8300000, guid: a772c3b86711bba4ca6eec6643507485, type: 3}
   Volume: 1
   Pitch: 1
   IsAllowedLooping: 0

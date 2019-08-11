@@ -30,6 +30,9 @@ public class TowerRange : MonoBehaviour
     [Header("Range Visualizer")]
     public GameObject rangeVis;
 
+    [Header("Shoot SFX")]
+    public SoundObject shootSFX;
+
     [Header("Tower Stats")]
     public float timeToReload = 0;
     public float reloadProgress = 0;
@@ -77,7 +80,7 @@ public class TowerRange : MonoBehaviour
     public void GetTowerData()
     {
         int towerTier = parentTowerScript.currentTowerTier;
-   
+        shootSFX = parentTowerScript.towerData.shootingSFX;
 
         switch (towerTier)
         {
@@ -252,6 +255,10 @@ public class TowerRange : MonoBehaviour
     ///////////////
     public void GenerateProjectile(GameObject monster)
     {
+        //SFX
+        FindObjectOfType<SoundManager>().PlayOnUIClick(shootSFX);
+
+
         GameObject projectile = Instantiate(currentProjectileData.projectilePrefab, parentTowerScript.firingPoint.transform.position, Quaternion.identity, parentTowerScript.firingPoint.transform);
         ProjectileFire projectileScript = projectile.GetComponent<ProjectileFire>();
 
