@@ -19,3 +19,4 @@ MonoBehaviour:
   constantDamage: 0
   slowdown: 0
   poison: 0
+  skillSFX: {fileID: 11400000, guid: 44927dc9838544a4d815a645669d4218, type: 2}

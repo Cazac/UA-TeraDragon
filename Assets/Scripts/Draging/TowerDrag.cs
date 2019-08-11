@@ -163,7 +163,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             else
             {
                 //No Match
-                print("No Matching Value, Destroy Miner");
+                //print("No Matching Value, Destroy Miner");
                 Destroy(currentTower);
                 RefundDragTower();
                 return;
@@ -172,7 +172,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         else
         {
             //No Raycast
-            print("No Raycast Hit, Destroy Tower");
+            //print("No Raycast Hit, Destroy Tower");
             Destroy(currentTower);
             RefundDragTower();
             return;

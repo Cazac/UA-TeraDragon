@@ -27,6 +27,10 @@ public class PlayerStats : MonoBehaviour
     [Header("Miners")]
     public int minersOwned;
 
+    [Header("SFX")]
+    public SoundObject hitSFX;
+    public SoundObject gemSFX;
+
     [Header("Crystals")]
     public int crystalsOwned_Red;
     public int crystalsOwned_Blue;
@@ -113,6 +117,10 @@ public class PlayerStats : MonoBehaviour
     public void RemoveLife(int i)
     {
         CurrentLives -= i;
+
+        //SFX
+        soundManager.PlayOnUIClick(hitSFX);
+
         //Debug.Log("Hit! Lose " + i + " lives, Current Lives:" + CurrentLives);
 
         if (CurrentLives >= 0)
@@ -150,6 +158,10 @@ public class PlayerStats : MonoBehaviour
 
     public void AddCrystal(CrystalColor color)
     {
+        //SFX
+        soundManager.PlayOnUIClick(gemSFX);
+
+
         switch (color)
         {
             case CrystalColor.RED:

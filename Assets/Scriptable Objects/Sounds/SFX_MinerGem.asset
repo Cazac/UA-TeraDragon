@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d8b7bf0263a5c142a06c502cb8e0d7e, type: 3}
-  m_Name: SFX_TowerPlacement
+  m_Name: SFX_MinerGem
   m_EditorClassIdentifier: 
-  SoundName: Tower Placement
-  AudioClip: {fileID: 8300000, guid: 0a2fb23e8e54a4048a31cac0441b954d, type: 3}
+  SoundName: Miner Drill
+  AudioClip: {fileID: 8300000, guid: 786b679b65a9bfe4abc99db451c8c2b0, type: 3}
   Volume: 1
   Pitch: 1
   IsAllowedLooping: 0

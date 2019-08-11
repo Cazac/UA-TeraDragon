@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SkillRange : MonoBehaviour
 {
     [Header("Skill Controller")]
     public SkillScript skillController;
+
+    [Header("SFX")]
+    public SoundObject skillSFX;
 
     [Header("Particule Parents")]
     public GameObject backgroundParticules;
@@ -67,8 +71,10 @@ public class SkillRange : MonoBehaviour
             skillDamage = skillController.skillData.constantDamage;
         }
 
+        //SFX
+        skillSFX = skillController.skillData.skillSFX;
+
         //TO DO EFFECTS
-        
     }
 
     ///////////////
@@ -78,6 +84,10 @@ public class SkillRange : MonoBehaviour
     ///////////////
     public IEnumerator StartSkill()
     {
+        //SFX
+        FindObjectOfType<SoundManager>().PlayOnUIClick(skillSFX);
+
+
         //Background
         if (backgroundParticules != null)
         {

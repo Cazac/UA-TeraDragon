@@ -53,8 +53,11 @@ public class ButtonController : MonoBehaviour
 
     public void ButtonGame_RestartGame()
     {
+        //Time Scale
+        Time.timeScale = 1;
+
         //Load into main game
-        SceneManager.LoadScene("Main Game (Full Merge)");
+        SceneManager.LoadScene("Main Game");
     }
 
     public void ButtonGame_ResumeGame()
@@ -72,6 +75,9 @@ public class ButtonController : MonoBehaviour
 
     public void ButtonGame_ReturnToMenu()
     {
+        //Time Scale
+        Time.timeScale = 1;
+
         //Load into main game
         SceneManager.LoadScene("Main Menu");
     }
@@ -111,7 +117,7 @@ public class ButtonController : MonoBehaviour
     public void ButtonMenu_Play()
     {
         //Load into main game
-        SceneManager.LoadScene("Main Game (Full Merge)");
+        SceneManager.LoadScene("Main Game");
     }
 
     public void ButtonMenu_Settings()

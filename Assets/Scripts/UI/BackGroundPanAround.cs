@@ -23,7 +23,7 @@ public class BackGroundPanAround : MonoBehaviour
         mouseX += Input.GetAxis("Mouse X") * moveSensitivity;
         mouseY += Input.GetAxis("Mouse Y") * moveSensitivity;
 
-        mouseX = Mathf.Clamp(mouseX, -20, 20);
+        mouseX = Mathf.Clamp(mouseX, -15, 15);
         mouseY = Mathf.Clamp(mouseY, -5, 5);
 
         targetPosition = new Vector3(mouseX, mouseY, -10);

@@ -19,4 +19,7 @@ public class SkillData : ScriptableObject
     [Header("Effects")]
     public float slowdown;
     public float poison;
+
+    [Header("SFX")]
+    public SoundObject skillSFX;
 }

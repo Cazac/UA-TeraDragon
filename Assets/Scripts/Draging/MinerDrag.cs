@@ -27,6 +27,7 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     [Header("Sound Effects")]
     public SoundObject minerDrag_SFX;
+    public SoundObject minerPlacement_SFX;
     public SoundObject minerError_SFX;
 
     [Header("Player Stats")]
@@ -130,6 +131,9 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             {
                 //Create real miner on node
                 GameObject newMiner = Instantiate(minerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, minerParent.transform);
+
+                //Placement SFX
+                soundManager.PlayOnUIClick(minerPlacement_SFX);
 
                 //Raise Miner 
                 newMiner.transform.position = new Vector2(newMiner.transform.position.x, newMiner.transform.position.y + 3.5f);
