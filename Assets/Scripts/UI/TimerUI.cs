@@ -14,6 +14,13 @@ public class TimerUI : MonoBehaviour
     {
         int timeLeft = (int)time;
 
+        //MUSIC (Battle)
+        if (!(FindObjectOfType<SoundManager>().mainAudioSourceSoundtrack.clip.name == "Landing"))
+        {
+            //Debug.Log("Battle");
+            FindObjectOfType<SoundManager>().PlaySpecificSound("Main");
+        }
+
         if (timeLeft != 0)
         {
             waveText.text = "Wave Lasts For: " + timeLeft;
@@ -32,6 +39,13 @@ public class TimerUI : MonoBehaviour
 
     public void UpdateInterwaveTimer(float time, Timer timer)
     {
+        //MUSIC (Interwave)
+        if (!(FindObjectOfType<SoundManager>().mainAudioSourceSoundtrack.clip.name == "Calm"))
+        {
+            //Debug.Log("Inter");
+            FindObjectOfType<SoundManager>().PlaySpecificSound("Inter");
+        }
+
         int timeLeft = (int)time;
         waveText.text = "Next Waves Start in: " + timeLeft;
 

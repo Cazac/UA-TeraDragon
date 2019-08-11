@@ -85,7 +85,9 @@ public class SoundManager : MonoBehaviour
         }
 
         if (!mainAudioSourceSoundtrack.GetComponent<AudioSource>().isPlaying/* && autoControl*/)
+        {
             LoopThroughSoundList(soundClips);
+        }
 
         //if (!autoControl)
         //{

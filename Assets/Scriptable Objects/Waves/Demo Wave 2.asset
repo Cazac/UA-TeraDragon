@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   NumberOfEnemyPerPos: 10
   TimeUntilSpawn: 20
-  WaveTimer: 20
+  WaveTimer: 3
   SpawnRate: 1
   Path: []
   ParentGameobject: {fileID: 0}

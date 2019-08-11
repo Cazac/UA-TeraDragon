@@ -42949,6 +42949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillController: {fileID: 1904018088}
+  skillSFX: {fileID: 0}
   backgroundParticules: {fileID: 4660113497618616279}
   buildUpParticules: {fileID: 0}
   releaseParticules: {fileID: 274394344173488045}
@@ -42980,7 +42981,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6730057002083779858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6730057001919145572}
