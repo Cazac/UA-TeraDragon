@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 828398829978205626}
   - component: {fileID: 7107125528770320214}
   - component: {fileID: 3617301389672155114}
+  - component: {fileID: 44124016}
   m_Layer: 0
   m_Name: Ice Bolt Projectile
   m_TagString: Untagged
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8428846787963139559, guid: f857b432be78e8f46997dcd353be8ee8,
+  m_Sprite: {fileID: -2014531396064697442, guid: f857b432be78e8f46997dcd353be8ee8,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -127,3 +128,22 @@ MonoBehaviour:
   beamReload: 0
   beamChainTargets: 0
   beamReloadCurrent: 0
+--- !u!95 &44124016
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716833556434465185}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a92d26a09e2d734ab8f43e48e62d12c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

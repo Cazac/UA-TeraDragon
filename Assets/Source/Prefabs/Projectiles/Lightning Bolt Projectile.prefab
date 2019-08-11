@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2314334739262473534}
   - component: {fileID: 5314439379246264274}
   - component: {fileID: 1824528516705337198}
+  - component: {fileID: 7128803716402468908}
   m_Layer: 0
   m_Name: Lightning Bolt Projectile
   m_TagString: Untagged
@@ -127,3 +128,22 @@ MonoBehaviour:
   beamReload: 0
   beamChainTargets: 0
   beamReloadCurrent: 0
+--- !u!95 &7128803716402468908
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6023936796375517477}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c1fc756eb769d884690d8968eb6ec6a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6548182430718121695}
   - component: {fileID: 3675311549555964979}
   - component: {fileID: -2048015160182510449}
+  - component: {fileID: 199968326}
   m_Layer: 0
   m_Name: Fire Projectile
   m_TagString: Untagged
@@ -127,3 +128,22 @@ MonoBehaviour:
   beamReload: 0
   beamChainTargets: 0
   beamReloadCurrent: 0
+--- !u!95 &199968326
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2979316478175632068}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: abb519adf7f5d6c4b9e926c6f5001fb1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
