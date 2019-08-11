@@ -24,7 +24,7 @@ public class BackGroundPanAround : MonoBehaviour
         mouseY += Input.GetAxis("Mouse Y") * moveSensitivity;
 
         mouseX = Mathf.Clamp(mouseX, -15, 15);
-        mouseY = Mathf.Clamp(mouseY, -5, 5);
+        mouseY = Mathf.Clamp(mouseY, -4.5f, 4.5f);
 
         targetPosition = new Vector3(mouseX, mouseY, -10);
         this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, Time.deltaTime * smoothSpeed);
