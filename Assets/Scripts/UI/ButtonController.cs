@@ -43,6 +43,18 @@ public class ButtonController : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////// - Game Buttons
 
+    public void ButtonGame_RemoveHelp()
+    {
+        HelpMenuScript helpScript = GameObject.FindObjectOfType<HelpMenuScript>();
+        helpScript.TurnOffHelp();
+    }
+
+    public void ButtonGame_Help()
+    {
+        HelpMenuScript helpScript = GameObject.FindObjectOfType<HelpMenuScript>();
+        helpScript.TurnOnHelp();
+    }
+
     public void ButtonGame_RestartGame()
     {
         //Time Scale
