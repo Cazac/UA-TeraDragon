@@ -98,10 +98,10 @@ public class EnemyScript : MonoBehaviour
         endPosition = currentWaypoints[currentWaypoint + 1].transform.position;
         dir = endPosition - StartPosition;
 
-        Debug.Log("StartPosition: " + StartPosition);
-        Debug.Log("endPosition: " + endPosition);
-        Debug.Log("currentSpeed: " + currentSpeed);
-        Debug.Log("Dir: " + dir);
+        //Debug.Log("StartPosition: " + StartPosition);
+        //Debug.Log("endPosition: " + endPosition);
+        //Debug.Log("currentSpeed: " + currentSpeed);
+        //Debug.Log("Dir: " + dir);
 
 
         transform.position += dir.normalized * currentSpeed * Time.fixedDeltaTime;

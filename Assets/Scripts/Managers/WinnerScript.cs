@@ -11,7 +11,7 @@ public class WinnerScript : MonoBehaviour
     {
         isWinner = true;
         WinnerPanel.SetActive(true);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
     }
 
     public void TurnOffWinner()

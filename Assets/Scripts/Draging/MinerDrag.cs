@@ -121,6 +121,12 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         //Useful?
         cameraPanningCursor.IsUIDragging = false;
 
+        //Dragging an empty Miner
+        if (currentMiner == null)
+        {
+            return;
+        }
+
         //Check Raycast for any hit with COLLIDERS
         if (Physics.Raycast(raycastMouse, out RaycastHit hit, Mathf.Infinity))
         {

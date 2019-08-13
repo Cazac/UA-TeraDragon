@@ -137,6 +137,12 @@ public class SkillDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         //Useful ???
         cameraPanningCursor.IsUIDragging = false;
 
+        //Dragging an empty skill
+        if (currentSkill == null)
+        {
+            return;
+        }
+
         //Check Raycast for any hit with COLLIDERS
         if (Physics.Raycast(raycastMouse, out RaycastHit hit, Mathf.Infinity))
         {

@@ -14,9 +14,6 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
-
-
-
     ////////////////////////////////
     
     [Header("Menu Music Text")]
@@ -46,11 +43,6 @@ public class ButtonController : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////// - Game Buttons
 
-    public void ButtonGame_StartNextWave()
-    {
-        Debug.Log("Wave");
-    }
-
     public void ButtonGame_RestartGame()
     {
         //Time Scale
@@ -69,8 +61,20 @@ public class ButtonController : MonoBehaviour
 
     public void ButtonGame_QuitGame()
     {
+        //Time Scale
+        Time.timeScale = 1;
+
         //Close game
         Application.Quit();
+    }
+
+    public void ButtonMenu_Credits()
+    {
+        //Time Scale
+        Time.timeScale = 1;
+
+        //Load into credits
+        SceneManager.LoadScene("Credits");
     }
 
     public void ButtonGame_ReturnToMenu()
@@ -78,37 +82,41 @@ public class ButtonController : MonoBehaviour
         //Time Scale
         Time.timeScale = 1;
 
+        WinnerScript winner = GameObject.FindObjectOfType<WinnerScript>();
+        winner.TurnOffWinner();
+
         //Load into main game
         SceneManager.LoadScene("Main Menu");
+
     }
 
     ///////////////////////////////////////////////////////////////// - Game Audio Buttons
 
-    public void ButtonGame_MuteMusic()
+    public void ButtonGame_MuteMusic(Text gameText)
     {
         soundManager.MuteSoundtrack();
 
         if (soundManager.IsMuteSoundtrack)
         {
-            gameMuteMusic_TEXT.text = "Unmute SoundTrack";
+            gameText.text = "Music: OFF";
         }
         else
         {
-            gameMuteMusic_TEXT.text = "Mute SoundTrack";
+            gameText.text = "Music: ON";
         }
     }
 
-    public void ButtonGame_MuteSFX()
+    public void ButtonGame_MuteSFX(Text gameText)
     {
         soundManager.MuteUI();
 
         if (soundManager.IsMuteUI)
         {
-            gameMuteSFX_TEXT.text = "Unmute UI";
+            gameText.text = "SFX: OFF";
         }
-        else
+        else 
         {
-            gameMuteSFX_TEXT.text = "Mute UI";
+            gameText.text = "SFX: ON";
         }
     }
 
@@ -116,6 +124,9 @@ public class ButtonController : MonoBehaviour
 
     public void ButtonMenu_Play()
     {
+        //Time Scale
+        Time.timeScale = 1;
+
         //Load into main game
         SceneManager.LoadScene("Main Game");
     }
@@ -126,8 +137,11 @@ public class ButtonController : MonoBehaviour
         menuSettingPanel.SetActive(!menuSettingPanel.activeSelf);
     }
 
-    public void ButtonMenu_Credits()
+    public void ButtonGame_Credits()
     {
+        //Time Scale
+        Time.timeScale = 1;
+
         //Load into credits
         SceneManager.LoadScene("Credits");
     }
@@ -146,11 +160,11 @@ public class ButtonController : MonoBehaviour
 
         if (soundManager.IsMuteSoundtrack)
         {
-            menuMuteMusic_TEXT.text = "Unmute SoundTrack";
+            menuMuteMusic_TEXT.text = "Music: OFF";
         }
         else
         {
-            menuMuteMusic_TEXT.text = "Mute SoundTrack";
+            menuMuteMusic_TEXT.text = "Music: ON";
         }
     }
 
@@ -160,11 +174,11 @@ public class ButtonController : MonoBehaviour
 
         if (soundManager.IsMuteUI)
         {
-            menuMuteSFX_TEXT.text = "Unmute UI";
+            menuMuteSFX_TEXT.text = "SFX: OFF";
         }
         else
         {
-            menuMuteSFX_TEXT.text = "Mute UI";
+            menuMuteSFX_TEXT.text = "SFX: ON";
         }
     }
 

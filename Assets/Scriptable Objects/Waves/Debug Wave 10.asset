@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63481b4f989909643afd3e309ea1f415, type: 3}
+  m_Name: Debug Wave 10
+  m_EditorClassIdentifier: 
+  EnemyPrefab: {fileID: 4309955642369637034, guid: 2887937b010fbf54b90718b0b303900a,
+    type: 3}
+  NumberOfEnemyPerPos: 10
+  TimeUntilSpawn: 20
+  WaveTimer: 0.2
+  SpawnRate: 0.5
+  Path: []
+  ParentGameobject: {fileID: 0}

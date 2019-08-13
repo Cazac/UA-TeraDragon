@@ -27,7 +27,7 @@ public class MinerScript : MonoBehaviour
 
     private void CrystalTimer()
     {
-        timer += level * Time.fixedDeltaTime;
+        timer += level * Time.deltaTime;
 
         if(timer > cooldownTimer)
         {

@@ -144,6 +144,13 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             //Check hit tile name
             string tileTypeName = hit.collider.gameObject.name;
 
+            //Dragging an empty tower
+            if (currentTower == null)
+            {
+                return;
+            }
+
+
             if (hit.collider.GetComponent<WorldTile>() != null && hit.collider.GetComponent<WorldTile>().towering)
             {
                 //Create real tower on node
