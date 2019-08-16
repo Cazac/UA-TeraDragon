@@ -146,6 +146,7 @@ public class ButtonController : MonoBehaviour
     public void ButtonMenu_Settings()
     {
         //Open Settings
+        //menuSettingPanel.SetActive(true);
         menuSettingPanel.SetActive(!menuSettingPanel.activeSelf);
     }
 
