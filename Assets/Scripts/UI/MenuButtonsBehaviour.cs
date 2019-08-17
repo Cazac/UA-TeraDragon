@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-
+[System.Serializable]
 public class MenuButtonsBehaviour : Toggle
 {
     private RectTransform _thisTransform;
@@ -18,6 +18,9 @@ public class MenuButtonsBehaviour : Toggle
     public ColorBlock myColorBlock;
     public SpriteState mySprites;
 
+    public UnityEvent onEvent;
+    public UnityEvent myEvent;
+
     void Start()
     {
         _thisTransform = GetComponent<RectTransform>();
@@ -26,6 +29,7 @@ public class MenuButtonsBehaviour : Toggle
 
         colors = myColorBlock;
         spriteState = mySprites;
+
     }
 
     void Update()

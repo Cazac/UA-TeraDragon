@@ -689,7 +689,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 217143901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 54d96e7886b2c7f4e9189d1de7eb688c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -698,20 +698,20 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.39215687, g: 1, b: 0.7882353, a: 1}
-    m_PressedColor: {r: 0, g: 0.58, b: 0.37793553, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.74509805}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_PressedColor: {r: 0.6901961, g: 0.8392157, b: 0.34117648, a: 1}
+    m_SelectedColor: {r: 1, g: 0.7058824, b: 0, a: 1}
+    m_DisabledColor: {r: 1, g: 0.7058824, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: ae7327ba35694df4baeea1e740a11269,
+    m_HighlightedSprite: {fileID: 21300000, guid: 2059f68d587234642acbfddb5d68e8e0,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: ae7327ba35694df4baeea1e740a11269, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 48fc7c600ada6da458d2a1bb9bf23a5c, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: ab716be0717ea984b8c156a5f8ca496c, type: 3}
+    m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -727,18 +727,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 205418402}
-        m_MethodName: PlayOnUIClick
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 6a6828264a75deb4e88f93c7a12de200,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: SoundObject, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1048450983}
         m_MethodName: ButtonMenu_Quit
         m_Mode: 1
@@ -753,6 +741,32 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+  _targetPosition: {x: 20, y: 0, z: 0}
+  offsetSpeed: 10
+  myColorBlock:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.39215687, g: 1, b: 0.7882353, a: 1}
+    m_PressedColor: {r: 0.6901961, g: 0.8392157, b: 0.34117648, a: 1}
+    m_SelectedColor: {r: 1, g: 0.7058824, b: 0, a: 1}
+    m_DisabledColor: {r: 1, g: 0.7058824, b: 0, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  mySprites:
+    m_HighlightedSprite: {fileID: 21300000, guid: 2059f68d587234642acbfddb5d68e8e0,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: ab716be0717ea984b8c156a5f8ca496c, type: 3}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!222 &217143905
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1850,7 +1864,7 @@ GameObject:
   - component: {fileID: 543147296}
   - component: {fileID: 543147295}
   m_Layer: 5
-  m_Name: ButtonBackground
+  m_Name: Play_ButtonBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2163,7 +2177,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.39215687, g: 1, b: 0.7882353, a: 1}
@@ -2173,11 +2187,11 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 2059f68d587234642acbfddb5d68e8e0,
+    m_HighlightedSprite: {fileID: 21300000, guid: b2db179f4c1f9c24b91499df1ae956c1,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: ab716be0717ea984b8c156a5f8ca496c, type: 3}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: cfa6d070ee5c35446a26271c0c8c4ae2, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: cfa6d070ee5c35446a26271c0c8c4ae2, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: cfa6d070ee5c35446a26271c0c8c4ae2, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -2207,7 +2221,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
   _targetPosition: {x: 20, y: 0, z: 0}
-  offsetSpeed: 5
+  offsetSpeed: 10
   myColorBlock:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.39215687, g: 1, b: 0.7882353, a: 1}
@@ -2217,11 +2231,21 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   mySprites:
-    m_HighlightedSprite: {fileID: 21300000, guid: 2059f68d587234642acbfddb5d68e8e0,
+    m_HighlightedSprite: {fileID: 21300000, guid: b2db179f4c1f9c24b91499df1ae956c1,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: ab716be0717ea984b8c156a5f8ca496c, type: 3}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: 071a0cc2843494a038a815f9f17ff57b, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: cfa6d070ee5c35446a26271c0c8c4ae2, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: cfa6d070ee5c35446a26271c0c8c4ae2, type: 3}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!222 &662396570
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2316,7 +2340,7 @@ GameObject:
   - component: {fileID: 728030692}
   - component: {fileID: 728030691}
   m_Layer: 5
-  m_Name: ButtonBackground
+  m_Name: Settings_ButtonBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7303,7 +7327,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1060257376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 54d96e7886b2c7f4e9189d1de7eb688c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -7312,20 +7336,20 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.39215687, g: 1, b: 0.7882353, a: 1}
     m_PressedColor: {r: 0.6901961, g: 0.8392157, b: 0.34117648, a: 1}
     m_SelectedColor: {r: 1, g: 0.7058824, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 0.7058824, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: f719f7ba959f1454b99857b0ca69af98,
+    m_HighlightedSprite: {fileID: 21300000, guid: 2059f68d587234642acbfddb5d68e8e0,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: f719f7ba959f1454b99857b0ca69af98, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: ab716be0717ea984b8c156a5f8ca496c, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: ab716be0717ea984b8c156a5f8ca496c, type: 3}
+    m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -7341,8 +7365,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5996400815622478605, guid: 7618c527cda324a419983a492a292671,
-          type: 3}
+      - m_Target: {fileID: 1048450983}
         m_MethodName: ButtonMenu_Play
         m_Mode: 1
         m_Arguments:
@@ -7356,6 +7379,32 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+  _targetPosition: {x: 20, y: 0, z: 0}
+  offsetSpeed: 10
+  myColorBlock:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.39215687, g: 1, b: 0.7882353, a: 1}
+    m_PressedColor: {r: 0.6901961, g: 0.8392157, b: 0.34117648, a: 1}
+    m_SelectedColor: {r: 1, g: 0.7058824, b: 0, a: 1}
+    m_DisabledColor: {r: 1, g: 0.7058824, b: 0, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  mySprites:
+    m_HighlightedSprite: {fileID: 21300000, guid: 2059f68d587234642acbfddb5d68e8e0,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: ab716be0717ea984b8c156a5f8ca496c, type: 3}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!222 &1060257380
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7601,7 +7650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1314605927
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7970,7 +8019,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1424594123
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8117,7 +8166,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1438409046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 54d96e7886b2c7f4e9189d1de7eb688c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -8132,14 +8181,14 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.39215687, g: 1, b: 0.7882353, a: 1}
     m_PressedColor: {r: 0.6901961, g: 0.8392157, b: 0.34117648, a: 1}
     m_SelectedColor: {r: 1, g: 0.7058824, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 0.7058824, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 2059f68d587234642acbfddb5d68e8e0,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 2059f68d587234642acbfddb5d68e8e0, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: ef9c0b9403948bf40818d12b597193c7, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: ab716be0717ea984b8c156a5f8ca496c, type: 3}
+    m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -8155,18 +8204,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 205418402}
-        m_MethodName: PlayOnUIClick
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 6a6828264a75deb4e88f93c7a12de200,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: SoundObject, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1048450983}
         m_MethodName: ButtonMenu_Credits
         m_Mode: 1
@@ -8181,6 +8218,32 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+  _targetPosition: {x: 20, y: 0, z: 0}
+  offsetSpeed: 10
+  myColorBlock:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.39215687, g: 1, b: 0.7882353, a: 1}
+    m_PressedColor: {r: 0.6901961, g: 0.8392157, b: 0.34117648, a: 1}
+    m_SelectedColor: {r: 1, g: 0.7058824, b: 0, a: 1}
+    m_DisabledColor: {r: 1, g: 0.7058824, b: 0, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  mySprites:
+    m_HighlightedSprite: {fileID: 21300000, guid: 2059f68d587234642acbfddb5d68e8e0,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: ab716be0717ea984b8c156a5f8ca496c, type: 3}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!222 &1438409050
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8276,7 +8339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1543949688
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8605,7 +8668,7 @@ GameObject:
   - component: {fileID: 1811093835}
   - component: {fileID: 1811093834}
   m_Layer: 5
-  m_Name: ButtonBackground
+  m_Name: Credits_ButtonBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8757,7 +8820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1909133928
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8832,7 +8895,7 @@ GameObject:
   - component: {fileID: 2071987343}
   - component: {fileID: 2071987342}
   m_Layer: 5
-  m_Name: ButtonBackground
+  m_Name: Exit_ButtonBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

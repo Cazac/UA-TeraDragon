@@ -1,34 +1,35 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
 
 [CustomEditor(typeof(MenuButtonsBehaviour))]
 public class MenuButtonCustomEditor : UnityEditor.UI.ToggleEditor
 {
     public static MenuButtonsBehaviour button;
+    public float something = 1;
+
 
     //----------------//
     //CUSTOM INSPECTOR//
     //----------------//
     public override void OnInspectorGUI()
     {
-        base.OnInspectorGUI();
-
         button = (MenuButtonsBehaviour)target;
+        //base.OnInspectorGUI();
 
-        //EditorGUILayout.BeginVertical("box");
 
-        //RenderDefaultSettings();
-        //RenderTransitionBox();
 
-        //EditorGUILayout.EndVertical();
-
+        RenderDefaultSettings();
+        RenderTransitionBox();
         RenderCustomVariables();
+        RenderUnityEvent();
     }
 
-    //---------------------//
-    //TRANSITION BOX RENDER//
-    //---------------------//
+    /// <summary>
+    /// Renders the color block.
+    /// </summary>
     public void RenderColorBlock()
     {
 
@@ -47,6 +48,9 @@ public class MenuButtonCustomEditor : UnityEditor.UI.ToggleEditor
 
     }
 
+    /// <summary>
+    /// Renders the sprite swap.
+    /// </summary>
     public void RenderSpriteSwap()
     {
         EditorGUILayout.BeginVertical();
@@ -54,10 +58,15 @@ public class MenuButtonCustomEditor : UnityEditor.UI.ToggleEditor
         button.mySprites.highlightedSprite = (Sprite)EditorGUILayout.ObjectField("Highlighted Sprite", button.mySprites.highlightedSprite, typeof(Sprite), true);
         button.mySprites.pressedSprite = (Sprite)EditorGUILayout.ObjectField("Pressed Sprite", button.mySprites.pressedSprite, typeof(Sprite), true);
         button.mySprites.selectedSprite = (Sprite)EditorGUILayout.ObjectField("Selected Sprite", button.mySprites.selectedSprite, typeof(Sprite), true);
+        button.mySprites.disabledSprite = (Sprite)EditorGUILayout.ObjectField("Disabled Sprite", button.mySprites.disabledSprite, typeof(Sprite), true);
+
 
         EditorGUILayout.EndVertical();
     }
 
+    /// <summary>
+    /// Renders the transition box.
+    /// </summary>
     public void RenderTransitionBox()
     {
         EditorGUILayout.BeginVertical("box");
@@ -84,24 +93,48 @@ public class MenuButtonCustomEditor : UnityEditor.UI.ToggleEditor
         EditorGUILayout.EndVertical();
     }
 
+    /// <summary>
+    /// Renders the default settings.
+    /// </summary>
     public void RenderDefaultSettings()
     {
         //label
+        EditorGUILayout.BeginVertical("box");
+
         EditorGUILayout.LabelField("Toggle Settings", EditorStyles.boldLabel);
 
         button.interactable = EditorGUILayout.Toggle("Interactable", button.interactable);
         button.isOn = EditorGUILayout.Toggle("Is the button On?", button.isOn);
         button.targetGraphic = (Graphic)EditorGUILayout.ObjectField("Target Graphic", button.targetGraphic, typeof(Object), true);
         button.group = (ToggleGroup)EditorGUILayout.ObjectField("Toggle Group", button.group, typeof(Object), true);
+
+        EditorGUILayout.EndVertical();
     }
 
+    /// <summary>
+    /// Renders the custom variables.
+    /// </summary>
     public void RenderCustomVariables()
     {
         EditorGUILayout.BeginVertical("box");
 
         EditorGUILayout.LabelField("Custom Variables", EditorStyles.boldLabel);
-        button.offsetSpeed = EditorGUILayout.Slider("Offset speed", button.offsetSpeed, 1, 5);
+        button.offsetSpeed = EditorGUILayout.Slider("Offset speed", button.offsetSpeed, 1, 20);
         button._targetPosition = EditorGUILayout.Vector3Field("Target Position Offset", button._targetPosition);
+
+        EditorGUILayout.EndVertical();
+    }
+
+    /// <summary>
+    /// Renders the unity event.
+    /// </summary>
+    public void RenderUnityEvent() 
+    {
+        EditorGUILayout.BeginVertical("box");
+
+        this.serializedObject.Update();
+        EditorGUILayout.PropertyField(this.serializedObject.FindProperty("onValueChanged"), true);
+        this.serializedObject.ApplyModifiedProperties();
 
         EditorGUILayout.EndVertical();
     }
