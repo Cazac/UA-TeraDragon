@@ -18,8 +18,6 @@ public class MenuButtonsBehaviour : Toggle
     public ColorBlock myColorBlock;
     public SpriteState mySprites;
 
-    public UnityEvent onEvent;
-    public UnityEvent myEvent;
 
     void Start()
     {
