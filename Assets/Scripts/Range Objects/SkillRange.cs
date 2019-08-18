@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,7 +21,7 @@ public class SkillRange : MonoBehaviour
 
     [Header("Skill Stats")]
     public float skillDuration = 0;
-    public float skillDamage = 0;
+    public int skillDamage = 0;
 
     //////////////////////////////////////////////////////////
 
