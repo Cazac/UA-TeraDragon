@@ -27,7 +27,9 @@ public class EnemyScript : MonoBehaviour
     private bool isAttacking = false;
 
     [Header("Enemy Statues")]
+    // percentage, (1 - cuurentcold) is how much you slow the enemy by
     public float currentCold;
+    // could be the damge the enemy takes per second
     public float currentFire;
 
     private List<EnemyStatus> statues;
@@ -177,15 +179,13 @@ public class EnemyScript : MonoBehaviour
             }
         }
 
-        //Color
+        // depending on the statues affecting the enmy, change the color of the sprite.
         if (currentCold > 0f)
         {
-            //Apply Color
             gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
         }
         else
         {
-            //Apply Color
             gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
 
@@ -341,11 +341,12 @@ public class EnemyScript : MonoBehaviour
 
     }
 
-    ///////////////
+   
     /// <summary>
-    /// UNDOCUMENTED
+    /// Add a temporary slow effect the to monster
     /// </summary>
-    ///////////////
+    /// <param name="slowSpeed">Must bewteen 0 and 1, and indicates the percentage that the enemy is slowed</param>
+    /// <param name="slowTimer">Determines how long the slow lasts</param>
     public void AddSlow(float slowSpeed, float slowTimer)
     {
         EnemyStatus newStatus = new EnemyStatus();
