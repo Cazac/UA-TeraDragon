@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 ///////////////
 /// <summary>
@@ -17,8 +18,8 @@ public class ButtonController : MonoBehaviour
     ////////////////////////////////
     
     [Header("Menu Music Text")]
-    public Text menuMuteMusic_TEXT;
-    public Text menuMuteSFX_TEXT;
+    public TextMeshProUGUI menuMuteMusic_TEXT;
+    public TextMeshProUGUI menuMuteSFX_TEXT;
 
     [Header("Game Music Text")]
     public Text gameMuteMusic_TEXT;
@@ -146,6 +147,7 @@ public class ButtonController : MonoBehaviour
     public void ButtonMenu_Settings()
     {
         //Open Settings
+        //menuSettingPanel.SetActive(true);
         menuSettingPanel.SetActive(!menuSettingPanel.activeSelf);
     }
 
