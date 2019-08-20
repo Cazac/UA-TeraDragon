@@ -17,27 +17,33 @@ public class PlayerStats : MonoBehaviour
 
     [Header("Skill UI Elements")]
     public GameObject skillGameObject_Red;
+    public GameObject skillGameObject_Blue;
+    public GameObject skillGameObject_Green;
+    public GameObject skillGameObject_Yellow;
 
+    [Header("Crystals")]
     public int crystalsOwned_Red;
     public int crystalsOwned_Blue;
     public int crystalsOwned_Green;
     public int crystalsOwned_Yellow;
 
-    private float crystalsExtra_Red;
-    private float crystalsExtra_Blue;
-    private float crystalsExtra_Green;
-    private float crystalsExtra_Yellow;
-
-    private float crystalsPerSecond_Red = 0.5f;
-    private float crystalsPerSecond_Blue = 0.1f;
-    private float crystalsPerSecond_Green = 0.1f;
-    private float crystalsPerSecond_Yellow = 0.1f;
-
     public bool skillReady_Red;
+    public bool skillReady_Blue;
+    public bool skillReady_Green;
+    public bool skillReady_Yellow;
 
     private float skillCountdown_Red;
+    private float skillCountdown_Blue;
+    private float skillCountdown_Green;
+    private float skillCountdown_Yellow;
 
-    private float skillCooldown_Red = 5f;
+    //STATIC VALUES WHERE TO CHANGE???
+    private float skillCooldown_Red = 10f;
+    private float skillCooldown_Blue = 5f;
+    private float skillCooldown_Green = 5f;
+    private float skillCooldown_Yellow = 5f;
+
+    private GameOverScript gameOverScript;
 
     /////////////////////////////////////////////////////////////////
 
@@ -45,12 +51,14 @@ public class PlayerStats : MonoBehaviour
     {
         CurrentLives = MaxLives;
 
+        gameOverScript = GameObject.FindObjectOfType<GameOverScript>();
         //Start the crystal chekcer
-        StartCoroutine(UpdateCrystalValues());
+        //StartCoroutine(UpdateCrystalValues());
     }
 
     private void Update()
     {
+        UpdateCrystalUI();
         UpdateSkillCooldowns();
         UpdateSkillUI();
     }
@@ -60,7 +68,8 @@ public class PlayerStats : MonoBehaviour
     public void RemoveLife(int i)
     {
         CurrentLives -= i;
-        Debug.Log("Lose " + i + " lives, Current Lives:" + CurrentLives);
+        Debug.Log("Hit! Lose " + i + " lives, Current Lives:" + CurrentLives);
+
         if (CurrentLives < 0)
         {
             CurrentLives = 0;
@@ -80,9 +89,8 @@ public class PlayerStats : MonoBehaviour
 
     public void GameOver()
     {
-        GameOverScript gos = (GameOverScript) FindObjectOfType(typeof(GameOverScript));
-        gos.TurnOnGameOver();
         Debug.Log("Game over man, Game over");
+        gameOverScript.TurnOnGameOver();
     }
 
     public void AddCrystal(CrystalColor color)
@@ -105,12 +113,9 @@ public class PlayerStats : MonoBehaviour
     }
 
 
-
-
-
     ///////////////
     /// <summary>
-    /// Undocumented
+    /// Update the counters on the skills cooldown
     /// </summary>
     ///////////////
     public void UpdateSkillCooldowns()
@@ -125,14 +130,47 @@ public class PlayerStats : MonoBehaviour
                 skillCountdown_Red = 0;
             }
         }
+
+        if (!skillReady_Blue)
+        {
+            skillCountdown_Blue += Time.deltaTime;
+
+            if (skillCountdown_Blue >= skillCooldown_Blue)
+            {
+                skillReady_Blue = true;
+                skillCountdown_Blue = 0;
+            }
+        }
+
+        if (!skillReady_Green)
+        {
+            skillCountdown_Green += Time.deltaTime;
+
+            if (skillCountdown_Green >= skillCooldown_Green)
+            {
+                skillReady_Green = true;
+                skillCountdown_Green = 0;
+            }
+        }
+
+        if (!skillReady_Yellow)
+        {
+            skillCountdown_Yellow += Time.deltaTime;
+
+            if (skillCountdown_Yellow >= skillCooldown_Yellow)
+            {
+                skillReady_Yellow = true;
+                skillCountdown_Yellow = 0;
+            }
+        }
     }
 
     /// <summary>
     /// Undocumented
     /// </summary>
+    /*
     public IEnumerator UpdateCrystalValues()
     {
-
         UpdateCrystalUI();
 
         yield return new WaitForSeconds(1);
@@ -145,16 +183,17 @@ public class PlayerStats : MonoBehaviour
             StartCoroutine(UpdateCrystalValues());
         }
     }
+    */
 
     /// <summary>
     /// Update Crystal UI elements
     /// </summary>
     public void UpdateCrystalUI()
     {
-        crystalText_Red.text = "Red Gems: " + crystalsOwned_Red;
-        crystalText_Blue.text = "Blue Gems: " + crystalsOwned_Blue;
-        crystalText_Green.text = "Green Gems: " + crystalsOwned_Green;
-        crystalText_Yellow.text = "Yellow Gems: " + crystalsOwned_Yellow;
+        crystalText_Red.text = "Gems: " + crystalsOwned_Red;
+        crystalText_Blue.text = "Gems: " + crystalsOwned_Blue;
+        crystalText_Green.text = "Gems: " + crystalsOwned_Green;
+        crystalText_Yellow.text = "Gems: " + crystalsOwned_Yellow;
 
         //Red
         if (crystalsOwned_Red >= 5)
@@ -186,10 +225,20 @@ public class PlayerStats : MonoBehaviour
             crystalText_Green.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
         }
 
+
+
+
+        //THESE ARE ALL DISABLED
+        //THESE ARE ALL DISABLED
+        //THESE ARE ALL DISABLED
+        //THESE ARE ALL DISABLED
+        //THESE ARE ALL DISABLED
+
+
         //Yellow
         if (crystalsOwned_Yellow >= 5)
         {
-            crystalText_Yellow.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+            crystalText_Yellow.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
         }
         else
         {
@@ -200,7 +249,7 @@ public class PlayerStats : MonoBehaviour
 
     ///////////////
     /// <summary>
-    /// Update Crystal UI elements
+    /// Update Skill UI elements
     /// </summary>
     ///////////////
     public void UpdateSkillUI()
@@ -213,6 +262,49 @@ public class PlayerStats : MonoBehaviour
         else
         {
             skillGameObject_Red.gameObject.transform.GetComponent<Button>().interactable = false;
+        }
+
+
+
+
+
+        //THESE ARE ALL DISABLED
+        //THESE ARE ALL DISABLED
+        //THESE ARE ALL DISABLED
+        //THESE ARE ALL DISABLED
+        //THESE ARE ALL DISABLED
+
+
+
+
+        //Blue
+        if (skillReady_Blue)
+        {
+            skillGameObject_Blue.gameObject.transform.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            skillGameObject_Blue.gameObject.transform.GetComponent<Button>().interactable = false;
+        }
+
+        //Green
+        if (skillReady_Green)
+        {
+            skillGameObject_Green.gameObject.transform.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            skillGameObject_Green.gameObject.transform.GetComponent<Button>().interactable = false;
+        }
+
+        //Yellow
+        if (skillReady_Yellow)
+        {
+            skillGameObject_Yellow.gameObject.transform.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            skillGameObject_Yellow.gameObject.transform.GetComponent<Button>().interactable = false;
         }
 
     }

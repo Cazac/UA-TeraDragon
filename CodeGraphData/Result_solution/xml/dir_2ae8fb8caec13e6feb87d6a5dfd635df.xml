@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_2ae8fb8caec13e6feb87d6a5dfd635df" kind="dir">
+    <compoundname>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower</compoundname>
+    <innerfile refid="_miner_script_8cs">MinerScript.cs</innerfile>
+    <innerfile refid="_pause_menu_script_8cs">PauseMenuScript.cs</innerfile>
+    <innerfile refid="_projectile_data_8cs">ProjectileData.cs</innerfile>
+    <innerfile refid="_projectile_fire_8cs">ProjectileFire.cs</innerfile>
+    <innerfile refid="_skill_shooting_8cs">SkillShooting.cs</innerfile>
+    <innerfile refid="_tower_script_8cs">TowerScript.cs</innerfile>
+    <innerfile refid="_tower_selector_8cs">TowerSelector.cs</innerfile>
+    <innerfile refid="_tower_shooting_8cs">TowerShooting.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/"/>
+  </compounddef>
+</doxygen>

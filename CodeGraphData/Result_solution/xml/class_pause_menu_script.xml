@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_pause_menu_script" kind="class" prot="public">
+    <compoundname>PauseMenuScript</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_pause_menu_script_1a8905fa79283a95a2255f526c49520aea" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool PauseMenuScript.isGameOver</definition>
+        <argsstring></argsstring>
+        <name>isGameOver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_pause_menu_script_1a851c2b813e44a38cdcd801bcdd549097" compoundref="_pause_menu_script_8cs" startline="28" endline="33">Start</referencedby>
+        <referencedby refid="class_pause_menu_script_1a806478538125f9c283769265dde9dd78" compoundref="_pause_menu_script_8cs" startline="43" endline="49">TurnOffPause</referencedby>
+        <referencedby refid="class_pause_menu_script_1afb61df53e88a74463b852fd99f78e62f" compoundref="_pause_menu_script_8cs" startline="35" endline="41">TurnOnPause</referencedby>
+        <referencedby refid="class_pause_menu_script_1af433bd92474fa6181ff0c8afe5791dc7" compoundref="_pause_menu_script_8cs" startline="12" endline="25">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_pause_menu_script_1a045f1ca181adf3728e8c6345afef58db" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject PauseMenuScript.PauseMenu</definition>
+        <argsstring></argsstring>
+        <name>PauseMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_script_1aeb516e6ac305d6a830c42f6590fa471c" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject PauseMenuScript.PlayMenu</definition>
+        <argsstring></argsstring>
+        <name>PlayMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_pause_menu_script_1af433bd92474fa6181ff0c8afe5791dc7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenuScript.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" bodystart="12" bodyend="25"/>
+        <references refid="class_pause_menu_script_1a8905fa79283a95a2255f526c49520aea" compoundref="_pause_menu_script_8cs" startline="8">isGameOver</references>
+        <references refid="class_pause_menu_script_1a806478538125f9c283769265dde9dd78" compoundref="_pause_menu_script_8cs" startline="43" endline="49">TurnOffPause</references>
+        <references refid="class_pause_menu_script_1afb61df53e88a74463b852fd99f78e62f" compoundref="_pause_menu_script_8cs" startline="35" endline="41">TurnOnPause</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_script_1a851c2b813e44a38cdcd801bcdd549097" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenuScript.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" line="28" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" bodystart="28" bodyend="33"/>
+        <references refid="class_pause_menu_script_1a8905fa79283a95a2255f526c49520aea" compoundref="_pause_menu_script_8cs" startline="8">isGameOver</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_script_1afb61df53e88a74463b852fd99f78e62f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenuScript.TurnOnPause</definition>
+        <argsstring>()</argsstring>
+        <name>TurnOnPause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" line="35" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" bodystart="35" bodyend="41"/>
+        <references refid="class_pause_menu_script_1a8905fa79283a95a2255f526c49520aea" compoundref="_pause_menu_script_8cs" startline="8">isGameOver</references>
+        <referencedby refid="class_pause_menu_script_1af433bd92474fa6181ff0c8afe5791dc7" compoundref="_pause_menu_script_8cs" startline="12" endline="25">Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_script_1a806478538125f9c283769265dde9dd78" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenuScript.TurnOffPause</definition>
+        <argsstring>()</argsstring>
+        <name>TurnOffPause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" line="43" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" bodystart="43" bodyend="49"/>
+        <references refid="class_pause_menu_script_1a8905fa79283a95a2255f526c49520aea" compoundref="_pause_menu_script_8cs" startline="8">isGameOver</references>
+        <referencedby refid="class_pause_menu_script_1a7107562e87a71c6ec22363b2d350a905" compoundref="_pause_menu_script_8cs" startline="58" endline="61">UnpuaseButton</referencedby>
+        <referencedby refid="class_pause_menu_script_1af433bd92474fa6181ff0c8afe5791dc7" compoundref="_pause_menu_script_8cs" startline="12" endline="25">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pause_menu_script_1adf3dc3cd1a7bf6cb69b33be6fb6f535c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenuScript.GoToMainMenuButton</definition>
+        <argsstring>()</argsstring>
+        <name>GoToMainMenuButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" line="53" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_script_1a7107562e87a71c6ec22363b2d350a905" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenuScript.UnpuaseButton</definition>
+        <argsstring>()</argsstring>
+        <name>UnpuaseButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" line="58" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" bodystart="58" bodyend="61"/>
+        <references refid="class_pause_menu_script_1a806478538125f9c283769265dde9dd78" compoundref="_pause_menu_script_8cs" startline="43" endline="49">TurnOffPause</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="170">
+        <label>PauseMenuScript</label>
+        <link refid="class_pause_menu_script"/>
+        <childnode refid="171" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="171">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="172">
+        <label>PauseMenuScript</label>
+        <link refid="class_pause_menu_script"/>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="173">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/PauseMenuScript.cs" bodystart="6" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_pause_menu_script_1adf3dc3cd1a7bf6cb69b33be6fb6f535c" prot="public" virt="non-virtual"><scope>PauseMenuScript</scope><name>GoToMainMenuButton</name></member>
+      <member refid="class_pause_menu_script_1a8905fa79283a95a2255f526c49520aea" prot="public" virt="non-virtual"><scope>PauseMenuScript</scope><name>isGameOver</name></member>
+      <member refid="class_pause_menu_script_1a045f1ca181adf3728e8c6345afef58db" prot="public" virt="non-virtual"><scope>PauseMenuScript</scope><name>PauseMenu</name></member>
+      <member refid="class_pause_menu_script_1aeb516e6ac305d6a830c42f6590fa471c" prot="public" virt="non-virtual"><scope>PauseMenuScript</scope><name>PlayMenu</name></member>
+      <member refid="class_pause_menu_script_1a851c2b813e44a38cdcd801bcdd549097" prot="private" virt="non-virtual"><scope>PauseMenuScript</scope><name>Start</name></member>
+      <member refid="class_pause_menu_script_1a806478538125f9c283769265dde9dd78" prot="private" virt="non-virtual"><scope>PauseMenuScript</scope><name>TurnOffPause</name></member>
+      <member refid="class_pause_menu_script_1afb61df53e88a74463b852fd99f78e62f" prot="private" virt="non-virtual"><scope>PauseMenuScript</scope><name>TurnOnPause</name></member>
+      <member refid="class_pause_menu_script_1a7107562e87a71c6ec22363b2d350a905" prot="public" virt="non-virtual"><scope>PauseMenuScript</scope><name>UnpuaseButton</name></member>
+      <member refid="class_pause_menu_script_1af433bd92474fa6181ff0c8afe5791dc7" prot="private" virt="non-virtual"><scope>PauseMenuScript</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

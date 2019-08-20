@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_tower_script" kind="class" prot="public">
+    <compoundname>TowerScript</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_tower_script_1a74a57b88d21d7f4203830d743c33761c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TowerScript.timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <initializer>= 5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_tower_script_1a9672898d83f37112f520e10893f5e6fa" compoundref="_tower_script_8cs" startline="15" endline="23">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tower_script_1a797a6b58f339832bf66b0e9c8a82946d" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 TowerScript.closestPosition</definition>
+        <argsstring></argsstring>
+        <name>closestPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" line="30" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_tower_script_1afe418d022858e76c145173adc6268fd5" compoundref="_tower_script_8cs" startline="31" endline="38">OnTriggerEnter2D</referencedby>
+        <referencedby refid="class_tower_script_1a9d1f7ded757048f6525203b70552bbe1" compoundref="_tower_script_8cs" startline="40" endline="47">OnTriggerStay2D</referencedby>
+        <referencedby refid="class_tower_script_1ab8618e1a87d194d548bcf5a9133f03f0" compoundref="_tower_script_8cs" startline="25" endline="28">ShootTarget</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_tower_script_1ae53f45339375e288582c4ee00ba3eaa4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerScript.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_script_1a9672898d83f37112f520e10893f5e6fa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerScript.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" bodystart="15" bodyend="23"/>
+        <references refid="class_tower_script_1ab8618e1a87d194d548bcf5a9133f03f0" compoundref="_tower_script_8cs" startline="25" endline="28">ShootTarget</references>
+        <references refid="class_tower_script_1a74a57b88d21d7f4203830d743c33761c" compoundref="_tower_script_8cs" startline="13">timer</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_script_1ab8618e1a87d194d548bcf5a9133f03f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerScript.ShootTarget</definition>
+        <argsstring>()</argsstring>
+        <name>ShootTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" bodystart="25" bodyend="28"/>
+        <references refid="class_tower_script_1a797a6b58f339832bf66b0e9c8a82946d" compoundref="_tower_script_8cs" startline="30">closestPosition</references>
+        <referencedby refid="class_tower_script_1a9672898d83f37112f520e10893f5e6fa" compoundref="_tower_script_8cs" startline="15" endline="23">Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_script_1afe418d022858e76c145173adc6268fd5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerScript.OnTriggerEnter2D</definition>
+        <argsstring>(Collider2D collision)</argsstring>
+        <name>OnTriggerEnter2D</name>
+        <param>
+          <type>Collider2D</type>
+          <declname>collision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" line="31" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" bodystart="31" bodyend="38"/>
+        <references refid="class_tower_script_1a797a6b58f339832bf66b0e9c8a82946d" compoundref="_tower_script_8cs" startline="30">closestPosition</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_script_1a9d1f7ded757048f6525203b70552bbe1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerScript.OnTriggerStay2D</definition>
+        <argsstring>(Collider2D collision)</argsstring>
+        <name>OnTriggerStay2D</name>
+        <param>
+          <type>Collider2D</type>
+          <declname>collision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" line="40" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" bodystart="40" bodyend="47"/>
+        <references refid="class_tower_script_1a797a6b58f339832bf66b0e9c8a82946d" compoundref="_tower_script_8cs" startline="30">closestPosition</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_script_1ad24801c3bd4ccfbc0578d702b2fdfca4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerScript.OnTriggerExit2D</definition>
+        <argsstring>(Collider2D collision)</argsstring>
+        <name>OnTriggerExit2D</name>
+        <param>
+          <type>Collider2D</type>
+          <declname>collision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" line="49" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_script_1a542add2e5090f8b9d9d85c8902e71e79" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerScript.OnCollisionStay2D</definition>
+        <argsstring>(Collision2D collision)</argsstring>
+        <name>OnCollisionStay2D</name>
+        <param>
+          <type>Collision2D</type>
+          <declname>collision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" line="54" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_script_1a9ab2eb3f62319c706cb781b03cf4c94b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerScript.OnTriggerStay</definition>
+        <argsstring>(Collider other)</argsstring>
+        <name>OnTriggerStay</name>
+        <param>
+          <type>Collider</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" line="59" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_script_1a9a5f4b3ef14d55faf0cd94166827aa7c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerScript.OnCollisionStay</definition>
+        <argsstring>(Collision collision)</argsstring>
+        <name>OnCollisionStay</name>
+        <param>
+          <type>Collision</type>
+          <declname>collision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" line="64" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" bodystart="64" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="285">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="284">
+        <label>TowerScript</label>
+        <link refid="class_tower_script"/>
+        <childnode refid="285" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="287">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="286">
+        <label>TowerScript</label>
+        <link refid="class_tower_script"/>
+        <childnode refid="287" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/TowerScript.cs" bodystart="5" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_tower_script_1a797a6b58f339832bf66b0e9c8a82946d" prot="private" virt="non-virtual"><scope>TowerScript</scope><name>closestPosition</name></member>
+      <member refid="class_tower_script_1a9a5f4b3ef14d55faf0cd94166827aa7c" prot="private" virt="non-virtual"><scope>TowerScript</scope><name>OnCollisionStay</name></member>
+      <member refid="class_tower_script_1a542add2e5090f8b9d9d85c8902e71e79" prot="private" virt="non-virtual"><scope>TowerScript</scope><name>OnCollisionStay2D</name></member>
+      <member refid="class_tower_script_1afe418d022858e76c145173adc6268fd5" prot="private" virt="non-virtual"><scope>TowerScript</scope><name>OnTriggerEnter2D</name></member>
+      <member refid="class_tower_script_1ad24801c3bd4ccfbc0578d702b2fdfca4" prot="private" virt="non-virtual"><scope>TowerScript</scope><name>OnTriggerExit2D</name></member>
+      <member refid="class_tower_script_1a9ab2eb3f62319c706cb781b03cf4c94b" prot="private" virt="non-virtual"><scope>TowerScript</scope><name>OnTriggerStay</name></member>
+      <member refid="class_tower_script_1a9d1f7ded757048f6525203b70552bbe1" prot="private" virt="non-virtual"><scope>TowerScript</scope><name>OnTriggerStay2D</name></member>
+      <member refid="class_tower_script_1ab8618e1a87d194d548bcf5a9133f03f0" prot="private" virt="non-virtual"><scope>TowerScript</scope><name>ShootTarget</name></member>
+      <member refid="class_tower_script_1ae53f45339375e288582c4ee00ba3eaa4" prot="private" virt="non-virtual"><scope>TowerScript</scope><name>Start</name></member>
+      <member refid="class_tower_script_1a74a57b88d21d7f4203830d743c33761c" prot="public" virt="non-virtual"><scope>TowerScript</scope><name>timer</name></member>
+      <member refid="class_tower_script_1a9672898d83f37112f520e10893f5e6fa" prot="private" virt="non-virtual"><scope>TowerScript</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

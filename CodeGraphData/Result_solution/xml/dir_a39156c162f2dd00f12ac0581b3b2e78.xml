@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_a39156c162f2dd00f12ac0581b3b2e78" kind="dir">
+    <compoundname>C:/Uniprj/Tower/TeraNew</compoundname>
+    <innerdir refid="dir_46121b3eebac45fa187399d375a91e9b">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/TeraNew/"/>
+  </compounddef>
+</doxygen>

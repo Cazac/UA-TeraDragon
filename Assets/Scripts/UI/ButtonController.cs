@@ -2,93 +2,99 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
+
+///////////////
+/// <summary>
+///     
+/// TD_ButtonController is used to manage all of the button inputs
+/// 
+/// </summary>
+///////////////
 
 public class ButtonController : MonoBehaviour
 {
 
-    ///////////////
-    /// <summary>
-    ///     
-    /// TD_ButtonController is used to manage all of the button inputs
-    /// 
-    /// </summary>
-    ///////////////
+
 
     ////////////////////////////////
+    
+    [Header("Menu Reffs")]
+    public Text menuMuteMusic_TEXT;
+    public Text menuMuteSFX_TEXT;
+
+    public GameObject menuSettingPanel;
+
+
+    [Header("Game Reffs")]
+
+
 
     private bool isMusicPlaying;
     private bool isSFXPlaying;
 
-    ///////////////////////////////////////////////////////////////// - Extra uttons
+    SoundManager soundManager;
 
-    public void Button_StartNextWave()
+    /////////////////////////////////////////////////////////////////
+
+    public void Start()
+    {
+        soundManager = GameObject.FindObjectOfType<SoundManager>();
+    }
+
+    ///////////////////////////////////////////////////////////////// - Extra Buttons
+
+    public void ButtonGame_StartNextWave()
     {
         Debug.Log("Wave");
     }
 
-    ///////////////////////////////////////////////////////////////// - Tower Buttons
-
-    public void Button_TowerFire()
+    public void ButtonGame_RestartGame()
     {
-        Debug.Log("Tower");
+        //Load into main game
+        SceneManager.LoadScene("Main Game (Full Merge)");
     }
 
-    public void Button_TowerIce()
+    public void ButtonGame_ResumeGame()
     {
-        Debug.Log("Tower");
+        //Unpause game
+        PauseMenuScript pauseScript = GameObject.FindObjectOfType<PauseMenuScript>();
+        pauseScript.TurnOffPause();
     }
 
-    public void Button_TowerEarth()
+    public void ButtonGame_QuitGame()
     {
-        Debug.Log("Tower");
+        //Close game
+        Application.Quit();
     }
 
-    public void Button_TowerLightning()
+    public void ButtonGame_ReturnToMenu()
     {
-        Debug.Log("Tower");
-    }
-
-    ///////////////////////////////////////////////////////////////// - Skill Buttons
-
-    public void Button_SkillFire()
-    {
-        Debug.Log("Fire");
-    }
-
-    public void Button_SkillIce()
-    {
-        Debug.Log("Ice");
-    }
-
-    public void Button_SkillEarth()
-    {
-        Debug.Log("Earth");
-    }
-
-    public void Button_SkillLightning()
-    {
-        Debug.Log("Lightning");
+        //Load into main game
+        SceneManager.LoadScene("Main Menu");
     }
 
     ///////////////////////////////////////////////////////////////// - Main Menu
 
-    public void Button_Play()
+    public void ButtonMenu_Play()
     {
         //Load into main game
-        SceneManager.LoadScene("Main Game");
+        SceneManager.LoadScene("Main Game (Full Merge)");
     }
 
-    public void Button_Help()
+    public void ButtonMenu_Settings()
     {
-        Debug.Log("Fire");
+        //Open Settings
+        menuSettingPanel.SetActive(!menuSettingPanel.activeSelf);
     }
 
-    public void Button_Credits()
+    public void ButtonMenu_Credits()
     {
-        Debug.Log("Fire");
+        //Open Settings
+        menuSettingPanel.SetActive(!menuSettingPanel.activeSelf);
     }
 
-    public void Button_Quit()
+    public void ButtonMenu_Quit()
     {
         //Close game
         Application.Quit();
@@ -96,14 +102,32 @@ public class ButtonController : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////// - Audio Menu
 
-    public void Button_Music()
+    public void ButtonMenu_MuteMusic()
     {
         Debug.Log("Mute Music");
+
+        if (soundManager.IsMuteSoundtrack)
+        {
+            menuMuteMusic_TEXT.text = "Unmute SoundTrack";
+        }
+        else
+        {
+            menuMuteMusic_TEXT.text = "Mute SoundTrack";
+        }
     }
 
-    public void Button_SFX()
+    public void ButtonMenu_MuteSFX()
     {
         Debug.Log("Mute SFX");
+
+        if (soundManager.IsMuteUI)
+        {
+            menuMuteSFX_TEXT.text = "Unmute UI";
+        }
+        else
+        {
+            menuMuteSFX_TEXT.text = "Mute UI";
+        }
     }
 
     /////////////////////////////////////////////////////////////////

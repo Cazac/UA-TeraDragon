@@ -34,6 +34,8 @@ public class CameraPanningCursor : MonoBehaviour
     public Vector2 CameraBoundingY { get => cameraBoundingY; set => cameraBoundingY = value; }
 
     private InputDetection inputDetection = new InputDetection();
+    private bool isUIDragging;
+
     public Vector2[] CameraFOVBounds
     {
         get
@@ -52,7 +54,7 @@ public class CameraPanningCursor : MonoBehaviour
         }
     }
 
-
+    public bool IsUIDragging { get => isUIDragging; set => isUIDragging = value; }
 
     public GameObject playArea;
    
@@ -80,7 +82,7 @@ public class CameraPanningCursor : MonoBehaviour
 
         StartCoroutine(ReshiftCam( 11.2f));
 
-        SetCameraBounds(5);
+        SetCameraBounds(4);
     }
 
     /// <summary>
@@ -125,17 +127,17 @@ public class CameraPanningCursor : MonoBehaviour
         inputDetection.DetectingSwipe();
         inputDetection.DetectingKeyboardInputEvent();
 
-        if (inputDetection.BeginClickEvent() == "Pressed")
+        if (inputDetection.BeginClickEvent() == "Pressed" && !isUIDragging)
         {
             TranslateWithMousePos();
         }
 
-        if (inputDetection.BeginClickEvent() == "Scrolling")
+        if (inputDetection.BeginClickEvent() == "Scrolling" )
         {
             ZoomWithMouseWheel();
         }
 
-        if (inputDetection.IsKeyboardInput)
+        if (inputDetection.IsKeyboardInput )
         {
             TranslateWithKeyboard();
         }
@@ -244,12 +246,15 @@ public class CameraPanningCursor : MonoBehaviour
 
         //Multiple the base value by tile size
         boundRight = boundRight * 11.2f;
-        //print(boundRight);
 
-        CameraBoundingX = new Vector2(-tileSize.x / 2, boundRight);
+        //GOOD VALUE 
+        //float boundLeft = -tileSize.x / 2;
 
+        //DEBUG VALUE
+        float boundLeft = -200;
 
-        //StartCoroutine(ReshiftCam(CameraBoundingX, CameraBoundingY));
+        //Change Size of Camera Bounds
+        CameraBoundingX = new Vector2(boundLeft, boundRight);
     }
 
 }

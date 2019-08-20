@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_crystal_tile_8cs" kind="file">
+    <compoundname>CrystalTile.cs</compoundname>
+    <innerclass refid="class_crystal_tile" prot="public">CrystalTile</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3" prot="public" static="no">
+        <name>CrystalColor</name>
+        <enumvalue id="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3aa2d9547b5d3dd9f05984475f7c926da0" prot="public">
+          <name>RED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a8a568e5f41b7e4da88fe5c4a00aad34e" prot="public">
+          <name>YELLOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a1b3e1ee9bff86431dea6b181365ba65f" prot="public">
+          <name>BLUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a9de0e5dd94e861317e74964bed179fa0" prot="public">
+          <name>GREEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" line="86" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" bodystart="86" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_crystal_tile" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_crystal_tile" kindref="compound">CrystalTile</ref><sp/>:<sp/><ref refid="class_world_tile" kindref="compound">WorldTile</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>[Range(10,<sp/>50)]</highlight></codeline>
+<codeline lineno="8" refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" kindref="member">crystalValueRed</ref><sp/>=<sp/>25;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>[Range(10,<sp/>50)]</highlight></codeline>
+<codeline lineno="10" refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" kindref="member">crystalValueBlue</ref><sp/>=<sp/>25;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>[Range(10,<sp/>50)]</highlight></codeline>
+<codeline lineno="12" refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" kindref="member">crystalValueGreen</ref><sp/>=<sp/>25;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>[Range(10,<sp/>50)]</highlight></codeline>
+<codeline lineno="14" refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" kindref="member">crystalValueYellow</ref><sp/>=<sp/>25;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_crystal_tile_1a269364c1d61e286d6ad10f1c03187f4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_crystal_tile_1a269364c1d61e286d6ad10f1c03187f4a" kindref="member">Start</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>RandomCrystalValues();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24" refid="class_crystal_tile_1a8fdd64bb47c0234e65333771c51be393" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3" kindref="member">CrystalColor</ref><sp/><ref refid="class_crystal_tile_1a8fdd64bb47c0234e65333771c51be393" kindref="member">ProduceRandomCrystal</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>total<sp/>=<sp/><ref refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" kindref="member">crystalValueRed</ref><sp/>+<sp/><ref refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" kindref="member">crystalValueBlue</ref><sp/>+<sp/><ref refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" kindref="member">crystalValueGreen</ref><sp/>+<sp/><ref refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" kindref="member">crystalValueYellow</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>randVale<sp/>=<sp/>Random.Range(0,<sp/>total);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(randVale<sp/>&lt;<sp/><ref refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" kindref="member">crystalValueRed</ref>)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3aa2d9547b5d3dd9f05984475f7c926da0" kindref="member">CrystalColor.RED</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(randVale<sp/>&lt;<sp/><ref refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" kindref="member">crystalValueRed</ref><sp/>+<sp/><ref refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" kindref="member">crystalValueBlue</ref>)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a1b3e1ee9bff86431dea6b181365ba65f" kindref="member">CrystalColor.BLUE</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(randVale<sp/>&lt;<sp/><ref refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" kindref="member">crystalValueRed</ref><sp/>+<sp/><ref refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" kindref="member">crystalValueBlue</ref><sp/>+<sp/><ref refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" kindref="member">crystalValueGreen</ref>)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a9de0e5dd94e861317e74964bed179fa0" kindref="member">CrystalColor.GREEN</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a8a568e5f41b7e4da88fe5c4a00aad34e" kindref="member">CrystalColor.YELLOW</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_crystal_tile_1a8d4b02d5cead75676076314b08a87cf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_crystal_tile_1a8d4b02d5cead75676076314b08a87cf7" kindref="member">RandomCrystalValues</ref>()</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" kindref="member">crystalValueRed</ref><sp/>=<sp/>Random.Range(10,<sp/>51);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" kindref="member">crystalValueBlue</ref><sp/>=<sp/>Random.Range(10,<sp/>51);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" kindref="member">crystalValueGreen</ref><sp/>=<sp/>Random.Range(10,<sp/>51);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" kindref="member">crystalValueYellow</ref><sp/>=<sp/>Random.Range(10,<sp/>51);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_crystal_tile_1aadfda470cc2a9d583adda07a0532c08e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_crystal_tile_1aadfda470cc2a9d583adda07a0532c08e" kindref="member">UniqueCrystalValue</ref>(<ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3" kindref="member">CrystalColor</ref><sp/>cc)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(cc)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CrystalColor.RED:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" kindref="member">crystalValueRed</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" kindref="member">crystalValueBlue</ref><sp/>=<sp/><ref refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" kindref="member">crystalValueGreen</ref><sp/>=<sp/><ref refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" kindref="member">crystalValueYellow</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CrystalColor.YELLOW:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" kindref="member">crystalValueYellow</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" kindref="member">crystalValueBlue</ref><sp/>=<sp/><ref refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" kindref="member">crystalValueGreen</ref><sp/>=<sp/><ref refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" kindref="member">crystalValueRed</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CrystalColor.BLUE:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" kindref="member">crystalValueBlue</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" kindref="member">crystalValueRed</ref><sp/>=<sp/><ref refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" kindref="member">crystalValueGreen</ref><sp/>=<sp/><ref refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" kindref="member">crystalValueYellow</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CrystalColor.GREEN:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" kindref="member">crystalValueGreen</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" kindref="member">crystalValueBlue</ref><sp/>=<sp/><ref refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" kindref="member">crystalValueRed</ref><sp/>=<sp/><ref refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" kindref="member">crystalValueYellow</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3" kindref="member">CrystalColor</ref><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3aa2d9547b5d3dd9f05984475f7c926da0" kindref="member">RED</ref>,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a8a568e5f41b7e4da88fe5c4a00aad34e" kindref="member">YELLOW</ref>,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a1b3e1ee9bff86431dea6b181365ba65f" kindref="member">BLUE</ref>,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a9de0e5dd94e861317e74964bed179fa0" kindref="member">GREEN</ref></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_popup_u_i" kind="class" prot="public">
+    <compoundname>PopupUI</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_popup_u_i_1ad20bfc8564d61059621656862aba1757" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject PopupUI.uiPrefab</definition>
+        <argsstring></argsstring>
+        <name>uiPrefab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" bodystart="7" bodyend="-1"/>
+        <referencedby refid="class_popup_u_i_1a600eceb3db3b4316f8a7b84b6eae78ea" compoundref="_popup_u_i_8cs" startline="27" endline="62">ShowPopUpPanel</referencedby>
+        <referencedby refid="class_popup_u_i_1ae97674a76a7f848610bdcfedb5538977" compoundref="_popup_u_i_8cs" startline="19" endline="26">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_popup_u_i_1af30c188e6f024e20d426691be764418f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_input_detection" kindref="compound">InputDetection</ref></type>
+        <definition>InputDetection PopupUI.inputDetection</definition>
+        <argsstring></argsstring>
+        <name>inputDetection</name>
+        <initializer>= new <ref refid="class_input_detection" kindref="compound">InputDetection</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_popup_u_i_1ae97674a76a7f848610bdcfedb5538977" compoundref="_popup_u_i_8cs" startline="19" endline="26">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_popup_u_i_1a0c571eafc53cc7c1018e6995999639fc" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject PopupUI.currentUIPrefab</definition>
+        <argsstring></argsstring>
+        <name>currentUIPrefab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_popup_u_i_1a600eceb3db3b4316f8a7b84b6eae78ea" compoundref="_popup_u_i_8cs" startline="27" endline="62">ShowPopUpPanel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_popup_u_i_1aeecf67a315f257feaa785e31751a89dc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PopupUI.exitCondition</definition>
+        <argsstring></argsstring>
+        <name>exitCondition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_popup_u_i_1a4bd279333bc664bf53af874e4914ab8e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_nodes" kindref="compound">TileNodes</ref></type>
+        <definition>TileNodes PopupUI.tileNodes</definition>
+        <argsstring></argsstring>
+        <name>tileNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_popup_u_i_1a600eceb3db3b4316f8a7b84b6eae78ea" compoundref="_popup_u_i_8cs" startline="27" endline="62">ShowPopUpPanel</referencedby>
+        <referencedby refid="class_popup_u_i_1a9b46f8697128bba2a3184861cf54fec3" compoundref="_popup_u_i_8cs" startline="14" endline="17">Start</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_popup_u_i_1a9b46f8697128bba2a3184861cf54fec3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PopupUI.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" bodystart="14" bodyend="17"/>
+        <references refid="class_popup_u_i_1a4bd279333bc664bf53af874e4914ab8e" compoundref="_popup_u_i_8cs" startline="13">tileNodes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_popup_u_i_1ae97674a76a7f848610bdcfedb5538977" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PopupUI.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" bodystart="19" bodyend="26"/>
+        <references refid="class_input_detection_1af83989ead0d3e78a6c7f9ce7b32e01b0" compoundref="_input_detection_8cs" startline="82" endline="101">InputDetection.BeginClickEvent</references>
+        <references refid="class_popup_u_i_1af30c188e6f024e20d426691be764418f" compoundref="_popup_u_i_8cs" startline="9">inputDetection</references>
+        <references refid="class_popup_u_i_1a600eceb3db3b4316f8a7b84b6eae78ea" compoundref="_popup_u_i_8cs" startline="27" endline="62">ShowPopUpPanel</references>
+        <references refid="class_popup_u_i_1ad20bfc8564d61059621656862aba1757" compoundref="_popup_u_i_8cs" startline="7">uiPrefab</references>
+      </memberdef>
+      <memberdef kind="function" id="class_popup_u_i_1a58e3a0f5ffce7ccb6072780e2ded2a3b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PopupUI.ClosePopUpPanel</definition>
+        <argsstring>(GameObject uiPrefab, Transform breakableBlock)</argsstring>
+        <name>ClosePopUpPanel</name>
+        <param>
+          <type>GameObject</type>
+          <declname>uiPrefab</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>breakableBlock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" line="64" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" bodystart="64" bodyend="69"/>
+        <referencedby refid="class_popup_u_i_1a600eceb3db3b4316f8a7b84b6eae78ea" compoundref="_popup_u_i_8cs" startline="27" endline="62">ShowPopUpPanel</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_popup_u_i_1a600eceb3db3b4316f8a7b84b6eae78ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PopupUI.ShowPopUpPanel</definition>
+        <argsstring>(GameObject uiPrefab)</argsstring>
+        <name>ShowPopUpPanel</name>
+        <param>
+          <type>GameObject</type>
+          <declname>uiPrefab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" bodystart="27" bodyend="62"/>
+        <references refid="class_popup_u_i_1a58e3a0f5ffce7ccb6072780e2ded2a3b" compoundref="_popup_u_i_8cs" startline="64" endline="69">ClosePopUpPanel</references>
+        <references refid="class_popup_u_i_1a0c571eafc53cc7c1018e6995999639fc" compoundref="_popup_u_i_8cs" startline="10">currentUIPrefab</references>
+        <references refid="class_tile_nodes_1acd1e5606402a0104e252488e506667a0" compoundref="_tile_nodes_8cs" startline="23">TileNodes.hiddenTileMap</references>
+        <references refid="class_popup_u_i_1a4bd279333bc664bf53af874e4914ab8e" compoundref="_popup_u_i_8cs" startline="13">tileNodes</references>
+        <references refid="class_popup_u_i_1ad20bfc8564d61059621656862aba1757" compoundref="_popup_u_i_8cs" startline="7">uiPrefab</references>
+        <referencedby refid="class_popup_u_i_1ae97674a76a7f848610bdcfedb5538977" compoundref="_popup_u_i_8cs" startline="19" endline="26">Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_popup_u_i_1a6cf9ffe83e721d3a139c100de3d07741" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PopupUI.ButtonListener_ShowTiles</definition>
+        <argsstring>()</argsstring>
+        <name>ButtonListener_ShowTiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" line="71" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" bodystart="71" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="179">
+        <label>PopupUI</label>
+        <link refid="class_popup_u_i"/>
+        <childnode refid="180" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="180">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="181">
+        <label>PopupUI</label>
+        <link refid="class_popup_u_i"/>
+        <childnode refid="182" relation="public-inheritance">
+        </childnode>
+        <childnode refid="183" relation="usage">
+          <edgelabel>tileNodes</edgelabel>
+        </childnode>
+        <childnode refid="186" relation="usage">
+          <edgelabel>inputDetection</edgelabel>
+        </childnode>
+      </node>
+      <node id="184">
+        <label>PathsData</label>
+        <link refid="class_paths_data"/>
+      </node>
+      <node id="186">
+        <label>InputDetection</label>
+        <link refid="class_input_detection"/>
+      </node>
+      <node id="185">
+        <label>HiddenTileManager</label>
+        <link refid="class_hidden_tile_manager"/>
+      </node>
+      <node id="183">
+        <label>TileNodes</label>
+        <link refid="class_tile_nodes"/>
+        <childnode refid="182" relation="public-inheritance">
+        </childnode>
+        <childnode refid="184" relation="usage">
+          <edgelabel>pathData</edgelabel>
+        </childnode>
+        <childnode refid="185" relation="usage">
+          <edgelabel>hiddenTileManager</edgelabel>
+        </childnode>
+      </node>
+      <node id="182">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/PopupUI.cs" bodystart="5" bodyend="75"/>
+    <listofallmembers>
+      <member refid="class_popup_u_i_1a6cf9ffe83e721d3a139c100de3d07741" prot="public" virt="non-virtual"><scope>PopupUI</scope><name>ButtonListener_ShowTiles</name></member>
+      <member refid="class_popup_u_i_1a58e3a0f5ffce7ccb6072780e2ded2a3b" prot="private" virt="non-virtual"><scope>PopupUI</scope><name>ClosePopUpPanel</name></member>
+      <member refid="class_popup_u_i_1a0c571eafc53cc7c1018e6995999639fc" prot="private" virt="non-virtual"><scope>PopupUI</scope><name>currentUIPrefab</name></member>
+      <member refid="class_popup_u_i_1aeecf67a315f257feaa785e31751a89dc" prot="private" virt="non-virtual"><scope>PopupUI</scope><name>exitCondition</name></member>
+      <member refid="class_popup_u_i_1af30c188e6f024e20d426691be764418f" prot="private" virt="non-virtual"><scope>PopupUI</scope><name>inputDetection</name></member>
+      <member refid="class_popup_u_i_1a600eceb3db3b4316f8a7b84b6eae78ea" prot="public" virt="non-virtual"><scope>PopupUI</scope><name>ShowPopUpPanel</name></member>
+      <member refid="class_popup_u_i_1a9b46f8697128bba2a3184861cf54fec3" prot="private" virt="non-virtual"><scope>PopupUI</scope><name>Start</name></member>
+      <member refid="class_popup_u_i_1a4bd279333bc664bf53af874e4914ab8e" prot="private" virt="non-virtual"><scope>PopupUI</scope><name>tileNodes</name></member>
+      <member refid="class_popup_u_i_1ad20bfc8564d61059621656862aba1757" prot="public" virt="non-virtual"><scope>PopupUI</scope><name>uiPrefab</name></member>
+      <member refid="class_popup_u_i_1ae97674a76a7f848610bdcfedb5538977" prot="private" virt="non-virtual"><scope>PopupUI</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

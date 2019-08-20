@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="7" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="7" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_upgrade_node_1ab635a985b611181c3371a0d4b966d13d" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="9" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="9" bodyend="-1"/>
         <referencedby refid="class_upgrade_node_1ac3956a662ddd6978fdad97ae1eb42966" compoundref="_upgrade_node_8cs" startline="12" endline="18">ActivateUpgrade</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_upgrade_node_1a9167888231fd908a86bb1b0c0a6e82a0" prot="public" static="no" mutable="no">
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="10" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="10" bodyend="-1"/>
         <referencedby refid="class_upgrade_node_1ac3956a662ddd6978fdad97ae1eb42966" compoundref="_upgrade_node_8cs" startline="12" endline="18">ActivateUpgrade</referencedby>
       </memberdef>
       </sectiondef>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="8" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="8" bodyend="-1"/>
         <referencedby refid="class_upgrade_node_1a2dd3d766f2689e12e9c28ff4da02e321" compoundref="_upgrade_node_8cs" startline="20" endline="22">GetUpgradeType</referencedby>
       </memberdef>
       </sectiondef>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="12" bodyend="18"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="12" bodyend="18"/>
         <references refid="class_upgrade_node_1ab635a985b611181c3371a0d4b966d13d" compoundref="_upgrade_node_8cs" startline="9">isActive</references>
         <references refid="class_upgrade_node_1a9167888231fd908a86bb1b0c0a6e82a0" compoundref="_upgrade_node_8cs" startline="10">necessaryNodes</references>
       </memberdef>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="20" bodyend="22"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="20" bodyend="22"/>
         <references refid="class_upgrade_node_1a1d914a36640225d83d2158080e2d90f5" compoundref="_upgrade_node_8cs" startline="8">upgradeType</references>
         <referencedby refid="class_upgrade_tree_1a5ba19043ebbecfc5b6ec055e8dedd9cf" compoundref="_upgrade_tree_8cs" startline="23" endline="32">UpgradeTree.GetActivateAbilities</referencedby>
         <referencedby refid="class_upgrade_tree_1ac0fb5815446cafdedf58c5161386e8a9" compoundref="_upgrade_tree_8cs" startline="11" endline="21">UpgradeTree.GetTotalStatsUpgrade</referencedby>
@@ -102,43 +102,43 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="266">
+      <node id="300">
         <label>UpgradeNode</label>
         <link refid="class_upgrade_node"/>
-        <childnode refid="267" relation="public-inheritance">
+        <childnode refid="301" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="267">
+      <node id="301">
         <label>ScriptableObject</label>
       </node>
-      <node id="269">
+      <node id="303">
         <label>StatsUpgrade</label>
         <link refid="class_stats_upgrade"/>
-        <childnode refid="266" relation="public-inheritance">
+        <childnode refid="300" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="268">
+      <node id="302">
         <label>EffectUpgrade</label>
         <link refid="class_effect_upgrade"/>
-        <childnode refid="266" relation="public-inheritance">
+        <childnode refid="300" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="270">
+      <node id="304">
         <label>UpgradeNode</label>
         <link refid="class_upgrade_node"/>
-        <childnode refid="271" relation="public-inheritance">
+        <childnode refid="305" relation="public-inheritance">
         </childnode>
-        <childnode refid="270" relation="usage">
+        <childnode refid="304" relation="usage">
           <edgelabel>necessaryNodes</edgelabel>
         </childnode>
       </node>
-      <node id="271">
+      <node id="305">
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="6" bodyend="24"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="6" bodyend="24"/>
     <listofallmembers>
       <member refid="class_upgrade_node_1ac3956a662ddd6978fdad97ae1eb42966" prot="public" virt="non-virtual"><scope>UpgradeNode</scope><name>ActivateUpgrade</name></member>
       <member refid="class_upgrade_node_1a2dd3d766f2689e12e9c28ff4da02e321" prot="public" virt="non-virtual"><scope>UpgradeNode</scope><name>GetUpgradeType</name></member>

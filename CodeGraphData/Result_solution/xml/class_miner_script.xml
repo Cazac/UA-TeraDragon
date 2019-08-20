@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_miner_script" kind="class" prot="public">
+    <compoundname>MinerScript</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_miner_script_1a8e192b2e45a4a78c3fefba7abbe7aa01" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MinerScript.level</definition>
+        <argsstring></argsstring>
+        <name>level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" bodystart="7" bodyend="-1"/>
+        <referencedby refid="class_miner_script_1ac1ed630fd281b84655ad5be689791857" compoundref="_miner_script_8cs" startline="24" endline="32">CrystalTimer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_miner_script_1a02c8ad6db5e7b0895ae37939d9fbe372" prot="public" static="no" mutable="no">
+        <type><ref refid="class_crystal_tile" kindref="compound">CrystalTile</ref></type>
+        <definition>CrystalTile MinerScript.crystalTile</definition>
+        <argsstring></argsstring>
+        <name>crystalTile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_miner_script_1a3bce13cc6349f73364a8aa1d67d55ea9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MinerScript.timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_miner_script_1ac1ed630fd281b84655ad5be689791857" compoundref="_miner_script_8cs" startline="24" endline="32">CrystalTimer</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_miner_script_1ad7f6cf7c80e691d8f59c786730665a80" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinerScript.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_miner_script_1ade262f366909eeaf9aa7458f92f4d76f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinerScript.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" bodystart="18" bodyend="21"/>
+        <references refid="class_miner_script_1ac1ed630fd281b84655ad5be689791857" compoundref="_miner_script_8cs" startline="24" endline="32">CrystalTimer</references>
+      </memberdef>
+      <memberdef kind="function" id="class_miner_script_1ac1ed630fd281b84655ad5be689791857" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinerScript.CrystalTimer</definition>
+        <argsstring>()</argsstring>
+        <name>CrystalTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" line="24" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" bodystart="24" bodyend="32"/>
+        <references refid="class_miner_script_1a5466c78a40846a7f1d06f511ddd0af0a" compoundref="_miner_script_8cs" startline="34" endline="37">GetCrytals</references>
+        <references refid="class_miner_script_1a8e192b2e45a4a78c3fefba7abbe7aa01" compoundref="_miner_script_8cs" startline="7">level</references>
+        <references refid="class_miner_script_1a3bce13cc6349f73364a8aa1d67d55ea9" compoundref="_miner_script_8cs" startline="9">timer</references>
+        <referencedby refid="class_miner_script_1ade262f366909eeaf9aa7458f92f4d76f" compoundref="_miner_script_8cs" startline="18" endline="21">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_miner_script_1a5466c78a40846a7f1d06f511ddd0af0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3" kindref="member">CrystalColor</ref></type>
+        <definition>CrystalColor MinerScript.GetCrytals</definition>
+        <argsstring>()</argsstring>
+        <name>GetCrytals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" line="34" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" bodystart="34" bodyend="37"/>
+        <referencedby refid="class_miner_script_1ac1ed630fd281b84655ad5be689791857" compoundref="_miner_script_8cs" startline="24" endline="32">CrystalTimer</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="151">
+        <label>MinerScript</label>
+        <link refid="class_miner_script"/>
+        <childnode refid="152" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="152">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="155">
+        <label>CrystalTile</label>
+        <link refid="class_crystal_tile"/>
+        <childnode refid="156" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="156">
+        <label>WorldTile</label>
+        <link refid="class_world_tile"/>
+        <childnode refid="154" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="153">
+        <label>MinerScript</label>
+        <link refid="class_miner_script"/>
+        <childnode refid="154" relation="public-inheritance">
+        </childnode>
+        <childnode refid="155" relation="usage">
+          <edgelabel>crystalTile</edgelabel>
+        </childnode>
+      </node>
+      <node id="154">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/MinerScript.cs" bodystart="5" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_miner_script_1a02c8ad6db5e7b0895ae37939d9fbe372" prot="public" virt="non-virtual"><scope>MinerScript</scope><name>crystalTile</name></member>
+      <member refid="class_miner_script_1ac1ed630fd281b84655ad5be689791857" prot="private" virt="non-virtual"><scope>MinerScript</scope><name>CrystalTimer</name></member>
+      <member refid="class_miner_script_1a5466c78a40846a7f1d06f511ddd0af0a" prot="public" virt="non-virtual"><scope>MinerScript</scope><name>GetCrytals</name></member>
+      <member refid="class_miner_script_1a8e192b2e45a4a78c3fefba7abbe7aa01" prot="public" virt="non-virtual"><scope>MinerScript</scope><name>level</name></member>
+      <member refid="class_miner_script_1ad7f6cf7c80e691d8f59c786730665a80" prot="private" virt="non-virtual"><scope>MinerScript</scope><name>Start</name></member>
+      <member refid="class_miner_script_1a3bce13cc6349f73364a8aa1d67d55ea9" prot="public" virt="non-virtual"><scope>MinerScript</scope><name>timer</name></member>
+      <member refid="class_miner_script_1ade262f366909eeaf9aa7458f92f4d76f" prot="private" virt="non-virtual"><scope>MinerScript</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

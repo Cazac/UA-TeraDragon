@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="16" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_camera_panning_1a66a793af19cd6778777dbabf40225290" prot="public" static="no" mutable="no">
         <type>GameObject[]</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="19" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="19" bodyend="-1"/>
         <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
         <referencedby refid="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" compoundref="_camera_panning_8cs" startline="49" endline="53">Setup</referencedby>
       </memberdef>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="25" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="25" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="25" bodyend="-1"/>
         <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
       </memberdef>
       </sectiondef>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="21" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="21" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="21" bodyend="-1"/>
         <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
         <referencedby refid="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" compoundref="_camera_panning_8cs" startline="49" endline="53">Setup</referencedby>
       </memberdef>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="22" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="22" bodyend="-1"/>
         <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
         <referencedby refid="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" compoundref="_camera_panning_8cs" startline="49" endline="53">Setup</referencedby>
       </memberdef>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="27" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="27" bodyend="-1"/>
         <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
         <referencedby refid="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" compoundref="_camera_panning_8cs" startline="49" endline="53">Setup</referencedby>
       </memberdef>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="28" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="28" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="28" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="28" bodyend="-1"/>
         <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_camera_panning_1a91052c8cd59b6eaddc63d39146343780" prot="private" static="no" mutable="no">
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="29" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="29" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="29" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="29" bodyend="-1"/>
         <referencedby refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</referencedby>
       </memberdef>
       </sectiondef>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="33" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="33" bodyend="36"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="33" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="33" bodyend="36"/>
         <references refid="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" compoundref="_camera_panning_8cs" startline="49" endline="53">Setup</references>
       </memberdef>
       <memberdef kind="function" id="class_camera_panning_1a4a8d0c62b000a2a1242fda486321e537" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -152,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="38" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="38" bodyend="41"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="38" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="38" bodyend="41"/>
         <references refid="class_camera_panning_1af7512dda4fbd8d3bffd3630a3c9c9bc9" compoundref="_camera_panning_8cs" startline="61" endline="96">MoveCamera</references>
       </memberdef>
       <memberdef kind="function" id="class_camera_panning_1aac230bf2c60ee5c9f02b87cfd2adf5bd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="49" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="49" bodyend="53"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="49" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="49" bodyend="53"/>
         <references refid="class_camera_panning_1a66a793af19cd6778777dbabf40225290" compoundref="_camera_panning_8cs" startline="19">CameraNodes</references>
         <references refid="class_camera_panning_1afaa577e5a6f07aca30fec925a8ab7870" compoundref="_camera_panning_8cs" startline="21">currentNode</references>
         <references refid="class_camera_panning_1a2cbe73009281c0bcdcf11a41f6d63103" compoundref="_camera_panning_8cs" startline="27">currentNodeCounter</references>
@@ -184,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="61" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="61" bodyend="96"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="61" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="61" bodyend="96"/>
         <references refid="class_camera_panning_1a66a793af19cd6778777dbabf40225290" compoundref="_camera_panning_8cs" startline="19">CameraNodes</references>
         <references refid="class_camera_panning_1a8a94ec647b1ebf20f9775e541e13b1b5" compoundref="_camera_panning_8cs" startline="28">currentIncrement</references>
         <references refid="class_camera_panning_1afaa577e5a6f07aca30fec925a8ab7870" compoundref="_camera_panning_8cs" startline="21">currentNode</references>
@@ -200,28 +200,28 @@
     <detaileddescription>
 <para>TD_CameraPanning is used to move the camera around the title screen</para>    </detaileddescription>
     <inheritancegraph>
-      <node id="28">
+      <node id="44">
         <label>CameraPanning</label>
         <link refid="class_camera_panning"/>
-        <childnode refid="29" relation="public-inheritance">
+        <childnode refid="45" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="29">
+      <node id="45">
         <label>MonoBehaviour</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="30">
+      <node id="46">
         <label>CameraPanning</label>
         <link refid="class_camera_panning"/>
-        <childnode refid="31" relation="public-inheritance">
+        <childnode refid="47" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="31">
+      <node id="47">
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="13" bodyend="98"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/CameraPanning.cs" bodystart="13" bodyend="98"/>
     <listofallmembers>
       <member refid="class_camera_panning_1a66a793af19cd6778777dbabf40225290" prot="public" virt="non-virtual"><scope>CameraPanning</scope><name>CameraNodes</name></member>
       <member refid="class_camera_panning_1a8a94ec647b1ebf20f9775e541e13b1b5" prot="private" virt="non-virtual"><scope>CameraPanning</scope><name>currentIncrement</name></member>

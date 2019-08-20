@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_054560c73b471d0a8e7fdac466a93d88" kind="dir">
+    <compoundname>C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data</compoundname>
+    <innerdir refid="dir_f21289ae67a6707981c3e02ead7fcf2a">C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts</innerdir>
+    <innerfile refid="_barrier_data_8cs">BarrierData.cs</innerfile>
+    <innerfile refid="_enemy_data_8cs">EnemyData.cs</innerfile>
+    <innerfile refid="_hidden_tile_list_8cs">HiddenTileList.cs</innerfile>
+    <innerfile refid="_paths_data_8cs">PathsData.cs</innerfile>
+    <innerfile refid="_path_wrapper_8cs">PathWrapper.cs</innerfile>
+    <innerfile refid="_scriptable_object_utility_8cs">ScriptableObjectUtility.cs</innerfile>
+    <innerfile refid="_tower_data_8cs">TowerData.cs</innerfile>
+    <innerfile refid="_wave_data_8cs">WaveData.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/"/>
+  </compounddef>
+</doxygen>

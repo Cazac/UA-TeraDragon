@@ -38,6 +38,6 @@
 <codeline lineno="28" refid="class_projectile_data_1af6dec5b0cc17d83f1af5eea7721a44b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_projectile_data_1af6dec5b0cc17d83f1af5eea7721a44b7" kindref="member">beamChainTargets</ref>;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ProjectileData.cs"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower/ProjectileData.cs"/>
   </compounddef>
 </doxygen>

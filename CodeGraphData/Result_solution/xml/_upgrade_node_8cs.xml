@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="26" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="26" bodyend="29"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" line="26" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs" bodystart="26" bodyend="29"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -64,6 +64,6 @@
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_upgrade_node_8cs_1aed791e8d3de5c0066e62b3790b3bb10ea7d48183be5b6641b73f3451e7a9ed44f" kindref="member">EFFECT</ref>,</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts/UpgradeNode.cs"/>
   </compounddef>
 </doxygen>

@@ -5,6 +5,10 @@ using System.Collections.Generic;
 
 public static class ScriptableObjectUtility
 {
+
+
+    /*
+
     /// <summary>
     //	This makes it easy to create, name and place unique new ScriptableObject asset files.
     /// </summary>
@@ -32,4 +36,7 @@ public static class ScriptableObjectUtility
         Selection.activeObject = asset;
     }
     
+
+
+    */
 }

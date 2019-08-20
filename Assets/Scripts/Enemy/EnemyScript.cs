@@ -1,23 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WaveSystem;
 
 public class EnemyScript : MonoBehaviour
 {
-
-    
     public List<WorldTile> currentWaypoints;
     public List<List<WorldTile>> blockedWaypoints = new List<List<WorldTile>>();
 
     private int currentWaypoint = 0;
     private EnemyData enemyData;
     private TileNodes tileNodes;
+    private PlayerStats playerStats;
+    private WaveManager waveManager;
+
+    private GameObject currentBarrier;
 
     [Header("Enemy Stats")]
     public int MaxHealth;
     public int CurrentHealth;
     [Range(0.05f, 30f)]
     public float speed = 1.0f;
+    public float currentSpeed;
+    public float speedWearOffTime;
+
+    private bool isAttacking = false;
 
     // This seems better because allows us to change speed and reverse it
     Vector3 startPosition, endPosition, dir;
@@ -27,9 +34,17 @@ public class EnemyScript : MonoBehaviour
 
     /////////////////////////////////////////////////////////////////
 
-    private void Start()
+    private void Awake()
     {
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
+        waveManager = GameObject.FindObjectOfType<WaveManager>();
+        playerStats = GameObject.FindObjectOfType<PlayerStats>();  
+    }
+    
+    private void Start()
+    {
+        currentSpeed = speed;
+        //DynamicPathRelocation(transform.position);
 
         if (enemyData != null)
         {
@@ -39,17 +54,34 @@ public class EnemyScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Spawing Monster from prefab data");
+            //Debug.Log("Spawing Monster from prefab data");
         }
 
     }
 
     private void FixedUpdate()
     {
-        if (currentWaypoints.Count > 1)
+        if (currentWaypoints.Count > 1 && isAttacking == false)
         {
             Move();
-            DynamicPathRelocation(transform.position);
+            //DynamicPathRelocation(transform.position);
+        }
+    }
+
+    private void Update()
+    {
+        RefreshSlow();
+
+        if (currentBarrier != null)
+        {
+            if (isAttacking)
+            {
+                StartCoroutine(AttackBarrier(currentBarrier.GetComponent<BarrierData>()));
+            }
+            if (!isAttacking)
+            {
+                StopCoroutine(AttackBarrier(currentBarrier.GetComponent<BarrierData>()));
+            }
         }
     }
 
@@ -62,13 +94,11 @@ public class EnemyScript : MonoBehaviour
     ///////////////
     private void Move()
     {
-
         StartPosition = currentWaypoints[currentWaypoint].transform.position;
         endPosition = currentWaypoints[currentWaypoint + 1].transform.position;
-
         dir = endPosition - StartPosition;
 
-        transform.position += dir.normalized * speed * Time.fixedDeltaTime;
+        transform.position += dir.normalized * currentSpeed * Time.fixedDeltaTime;
 
         if (Vector3.Distance(gameObject.transform.position, endPosition) < 0.5f)
         {
@@ -83,19 +113,24 @@ public class EnemyScript : MonoBehaviour
 
                 if (enemyData != null)
                 {
-                    Debug.Log(enemyData.name + " has died");
+                    //Debug.Log(enemyData.name + " has died");
                 }
                 else
                 {
-                    Debug.Log("Death???");
+                    //Debug.Log("Death???");
                 }
 
+
+  
+                //Deal Damage
+                playerStats.RemoveLife(1);
+
+                //Base Damage Destruction
                 Destroy(gameObject);
             }
         }
 
     }
-
 
     /// <summary>
     /// Recalulate path when current path has a barrier
@@ -103,7 +138,7 @@ public class EnemyScript : MonoBehaviour
     /// and redirect to path without blocked tile </para>
     /// </summary>
     /// <param name="currentPosition">Current captured position of enemy gameobject at runtime</param>
-    private void DynamicPathRelocation(Vector3 currentPosition)
+    private void PathRelocation(Vector3 currentPosition)
     {
         //scan map for block waypoibt
       
@@ -111,10 +146,12 @@ public class EnemyScript : MonoBehaviour
         foreach (var path in tileNodes.pathData.paths)
         {
             //If there's still a path to take
-            if (!tileNodes.pathData.blockedPaths.Contains(path) && tileNodes.pathData.blockedPaths.Count >= 1)
+            if (!tileNodes.pathData.blockedPaths.Contains(path) && tileNodes.pathData.blockedPaths.Count >= 1 
+               )
             {
-                currentWaypoints = path;
-                StartPosition = currentPosition;
+                currentWaypoints = new List<WorldTile>(path);
+
+                //StartPosition = currentPosition;
                 return;
             }
 
@@ -126,6 +163,34 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
+    public void PathRelocation()
+    {
+        //scan map for block waypoibt
+
+        //Reapply waypoints
+        foreach (var path in tileNodes.pathData.paths)
+        {
+            //If there's still a path to take
+            if (!tileNodes.pathData.blockedPaths.Contains(path) && tileNodes.pathData.blockedPaths.Count >= 1)
+            {
+                int gridXCurrentWave = waveManager.CurrentWave.Paths[0][0].gridX;
+                int gridYCurrentWave = waveManager.CurrentWave.Paths[0][0].gridY;
+                if (gridXCurrentWave == path[0].gridX && gridYCurrentWave == path[0].gridY)
+                {
+                    currentWaypoints = new List<WorldTile>(path);
+                    return;
+                }
+               
+            }
+
+            //If there's still a path to take
+            //else
+            //{
+
+            //}
+        }
+    }
+
     ///////////////
     /// <summary>
     /// UNDOCUMENTED
@@ -133,21 +198,45 @@ public class EnemyScript : MonoBehaviour
     ///////////////
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Check for collision with the ending tile
+
+
+        //Check for collision with the ending tile - USELESS IN CURRENT VERSION????????
         if (collision.transform.GetComponent<BaseNode>() != null)
         {
             collision.transform.GetComponent<BaseNode>().BaseIsHit(1);
             Destroy(gameObject);
         }
+
+        if(collision.gameObject.tag == "Barrier")
+        {
+            currentBarrier = collision.gameObject;
+            isAttacking = true;
+        }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Barrier")
+        {
+            currentBarrier = collision.gameObject;
+            isAttacking = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Barrier")
+        {
+            isAttacking = false;
+        }
+    }
 
     public void TakeDamage(float damage)
     {
         //Normalize float vs int???
         CurrentHealth -= (int)damage;
 
-        //Armor??????
+        //Armor?????? TO DO
 
         if (CurrentHealth <= 0)
         {
@@ -156,9 +245,74 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    //To DO
-    public void ApplySlow()
+
+    public void ApplySlow(float slowSpeed, float slowTimer)
     {
+        //Apply Color
+        gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
+
+        if (currentSpeed == speed)
+        {
+            //Apply Effect + Timer
+            currentSpeed = currentSpeed * slowSpeed;
+            speedWearOffTime = slowTimer;
+        }
+        else
+        {
+            //If can be slower, slow down more
+            if ((speed * slowSpeed) < currentSpeed)
+            {
+                currentSpeed = speed * slowSpeed;
+            }
+
+            //Timer Refresh
+            if (speedWearOffTime <= 0)
+            {
+                //New Timer
+                speedWearOffTime = slowTimer;
+            }
+            else
+            {
+                //Stack Timer
+                speedWearOffTime += slowTimer;
+            }
+        }
+    }
+
+
+    private void RefreshSlow()
+    {
+        if (speedWearOffTime < 0)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            currentSpeed = speed;
+            speedWearOffTime = 0;
+        }
+        else
+        {
+            speedWearOffTime -= Time.deltaTime;
+        }
+    }
+
+
+    public IEnumerator AttackBarrier(BarrierData barrierData)
+    {
+        while (isAttacking)
+        {
+            yield return new WaitForSeconds(2);
+
+            if (barrierData.Health >= 0)
+                barrierData.Health -= 10;
+
+            else
+            {
+                isAttacking = false;
+                barrierData.IsDestroyed = true;
+                //TODO: Remove this
+                currentBarrier.GetComponent<SpriteRenderer>().color = Color.grey;
+                currentBarrier.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
 
     }
 }

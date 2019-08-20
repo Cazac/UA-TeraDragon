@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="7" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="7" bodyend="-1"/>
         <referencedby refid="class_input_detection_1a7e1ced5e8db1bf1a0dd266f6acd09f97" compoundref="_input_detection_8cs" startline="19" endline="39">DetectingSwipe</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_input_detection_1a92b215dade834fe699a81611d944eac2" prot="private" static="no" mutable="no">
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="9" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="9" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="9" bodyend="-1"/>
         <referencedby refid="class_input_detection_1a7e1ced5e8db1bf1a0dd266f6acd09f97" compoundref="_input_detection_8cs" startline="19" endline="39">DetectingSwipe</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_input_detection_1a757624836e5e69754f0f5d96afe672c7" prot="private" static="no" mutable="no">
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="12" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="12" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_input_detection_1a33f79b4aa6ce7d0d2799d525b417918d" prot="private" static="no" mutable="no">
         <type>Vector3</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="16" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="16" bodyend="-1"/>
         <referencedby refid="class_input_detection_1a7e1ced5e8db1bf1a0dd266f6acd09f97" compoundref="_input_detection_8cs" startline="19" endline="39">DetectingSwipe</referencedby>
       </memberdef>
       </sectiondef>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="8" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="8" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_input_detection_1a7be977662f89a7c2d74d982c9af1c674" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
         <type>float</type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="10" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="10" bodyend="-1"/>
         <referencedby refid="class_camera_panning_cursor_1ae438a598214e661cccca4798abe87dc5" compoundref="_camera_panning_cursor_8cs" startline="158" endline="171">CameraPanningCursor.TranslateWithMousePos</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_input_detection_1af281ecbd28d3f638553ec81c355c502d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="13" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="13" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="13" bodyend="-1"/>
         <referencedby refid="class_input_detection_1a88a00ed4234fc9d96456fcb59ea7e1e0" compoundref="_input_detection_8cs" startline="42" endline="76">DetectingKeyboardInputEvent</referencedby>
         <referencedby refid="class_camera_panning_cursor_1afe648ec2e57ab6385fcae2fdff56c5f9" compoundref="_camera_panning_cursor_8cs" startline="122" endline="142">CameraPanningCursor.Update</referencedby>
       </memberdef>
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="19" bodyend="39"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="19" bodyend="39"/>
         <references refid="class_input_detection_1a92b215dade834fe699a81611d944eac2" compoundref="_input_detection_8cs" startline="9">deltaSwipe</references>
         <references refid="class_input_detection_1a33f79b4aa6ce7d0d2799d525b417918d" compoundref="_input_detection_8cs" startline="16">firstMousePos</references>
         <references refid="class_input_detection_1ac8ed2cac98caa1d0f952630ebec4bf9a" compoundref="_input_detection_8cs" startline="7">isSwiping</references>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="42" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="42" bodyend="76"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="42" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="42" bodyend="76"/>
         <references refid="class_input_detection_1af281ecbd28d3f638553ec81c355c502d" compoundref="_input_detection_8cs" startline="13">IsKeyboardInput</references>
         <referencedby refid="class_camera_panning_cursor_1a09b25fffa7a251a08969d5b373984934" compoundref="_camera_panning_cursor_8cs" startline="208" endline="221">CameraPanningCursor.TranslateWithKeyboard</referencedby>
       </memberdef>
@@ -146,7 +146,8 @@
 <para>Detect if left or right mouse button is pressed </para><para>returns&gt;String stating whhich event has been captured(click, press, scroll,...)</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="82" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="82" bodyend="96"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="82" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="82" bodyend="101"/>
+        <referencedby refid="class_popup_u_i_1ae97674a76a7f848610bdcfedb5538977" compoundref="_popup_u_i_8cs" startline="19" endline="26">PopupUI.Update</referencedby>
         <referencedby refid="class_camera_panning_cursor_1afe648ec2e57ab6385fcae2fdff56c5f9" compoundref="_camera_panning_cursor_8cs" startline="122" endline="142">CameraPanningCursor.Update</referencedby>
       </memberdef>
       </sectiondef>
@@ -154,7 +155,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="5" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="4" bodyend="97"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" line="5" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/InputDetection.cs" bodystart="4" bodyend="102"/>
     <listofallmembers>
       <member refid="class_input_detection_1af83989ead0d3e78a6c7f9ce7b32e01b0" prot="public" virt="non-virtual"><scope>InputDetection</scope><name>BeginClickEvent</name></member>
       <member refid="class_input_detection_1a92b215dade834fe699a81611d944eac2" prot="private" virt="non-virtual"><scope>InputDetection</scope><name>deltaSwipe</name></member>

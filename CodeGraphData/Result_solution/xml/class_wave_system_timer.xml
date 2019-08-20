@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" bodystart="8" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" bodystart="8" bodyend="-1"/>
         <referencedby refid="class_wave_system_timer_1a861867bea4ae3aa93b8a8a00095e2648" compoundref="_wave_system_timer_8cs" startline="10" endline="13">Start</referencedby>
         <referencedby refid="class_wave_system_timer_1a395d9d7e8ff65beb96dbb88d0796310e" compoundref="_wave_system_timer_8cs" startline="29" endline="35">Update</referencedby>
       </memberdef>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" bodystart="10" bodyend="13"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" bodystart="10" bodyend="13"/>
         <references refid="class_wave_system_timer_1ae46a1d3654620872662c3a2432fbb884" compoundref="_wave_system_timer_8cs" startline="8">waveManager</references>
       </memberdef>
       <memberdef kind="function" id="class_wave_system_timer_1a395d9d7e8ff65beb96dbb88d0796310e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" line="29" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" bodystart="29" bodyend="35"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" line="29" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" bodystart="29" bodyend="35"/>
         <references refid="class_wave_system_timer_1a8d8fd61620be7b69f900e0968e342eba" compoundref="_wave_system_timer_8cs" startline="15" endline="27">UIConnection</references>
         <references refid="class_wave_system_timer_1ae46a1d3654620872662c3a2432fbb884" compoundref="_wave_system_timer_8cs" startline="8">waveManager</references>
       </memberdef>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" bodystart="15" bodyend="27"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" line="15" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" bodystart="15" bodyend="27"/>
         <references refid="class_wave_system_1_1_wave_manager_1ae0efbb3ae5ba3700d3912d1198c7691b" compoundref="_wave_manager_8cs" startline="15">WaveSystem.WaveManager.EnableSpawning</references>
         <references refid="class_wave_system_1_1_wave_manager_1a05b66e32c5d56f17d121215199172893" compoundref="_wave_manager_8cs" startline="55">WaveSystem.WaveManager.TimeUntilNextWave</references>
         <references refid="class_wave_system_1_1_wave_manager_1a728712f4cbff12c14de142dc0914a36a" compoundref="_wave_manager_8cs" startline="50">WaveSystem.WaveManager.WaveIndex</references>
@@ -81,138 +81,144 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="299">
+      <node id="334">
         <label>WaveSystemTimer</label>
         <link refid="class_wave_system_timer"/>
-        <childnode refid="300" relation="public-inheritance">
+        <childnode refid="335" relation="public-inheritance">
         </childnode>
-        <childnode refid="301" relation="public-inheritance">
+        <childnode refid="336" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="300">
+      <node id="335">
         <label>MonoBehaviour</label>
       </node>
-      <node id="301">
+      <node id="336">
         <label>WaveInterface</label>
         <link refid="interface_wave_system_1_1_wave_interface"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="305">
+      <node id="340">
         <label>WaveSystem.WaveManager</label>
         <link refid="class_wave_system_1_1_wave_manager"/>
-        <childnode refid="303" relation="public-inheritance">
+        <childnode refid="338" relation="public-inheritance">
         </childnode>
-        <childnode refid="306" relation="usage">
+        <childnode refid="341" relation="usage">
           <edgelabel>waves</edgelabel>
           <edgelabel>currentWave</edgelabel>
         </childnode>
-        <childnode refid="309" relation="usage">
+        <childnode refid="344" relation="usage">
           <edgelabel>soundManager</edgelabel>
         </childnode>
-        <childnode refid="311" relation="usage">
+        <childnode refid="346" relation="usage">
           <edgelabel>tileNodes</edgelabel>
           <edgelabel>tiles</edgelabel>
         </childnode>
-        <childnode refid="314" relation="usage">
+        <childnode refid="349" relation="usage">
           <edgelabel>cursorSelection</edgelabel>
         </childnode>
-        <childnode refid="315" relation="usage">
+        <childnode refid="351" relation="usage">
           <edgelabel>currentTimer</edgelabel>
         </childnode>
       </node>
-      <node id="308">
+      <node id="343">
         <label>PathWrapper</label>
         <link refid="class_path_wrapper"/>
-        <childnode refid="307" relation="public-inheritance">
+        <childnode refid="342" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="312">
+      <node id="347">
         <label>PathsData</label>
         <link refid="class_paths_data"/>
       </node>
-      <node id="302">
+      <node id="337">
         <label>WaveSystemTimer</label>
         <link refid="class_wave_system_timer"/>
-        <childnode refid="303" relation="public-inheritance">
+        <childnode refid="338" relation="public-inheritance">
         </childnode>
-        <childnode refid="304" relation="public-inheritance">
+        <childnode refid="339" relation="public-inheritance">
         </childnode>
-        <childnode refid="305" relation="usage">
+        <childnode refid="340" relation="usage">
           <edgelabel>waveManager</edgelabel>
         </childnode>
       </node>
-      <node id="310">
+      <node id="350">
+        <label>TowerSelector</label>
+        <link refid="class_tower_selector"/>
+        <childnode refid="338" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="345">
         <label>SoundObject</label>
         <link refid="class_sound_object"/>
-        <childnode refid="307" relation="public-inheritance">
+        <childnode refid="342" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="309">
+      <node id="344">
         <label>SoundManager</label>
         <link refid="class_sound_manager"/>
-        <childnode refid="303" relation="public-inheritance">
+        <childnode refid="338" relation="public-inheritance">
         </childnode>
-        <childnode refid="310" relation="usage">
+        <childnode refid="345" relation="usage">
           <edgelabel>soundClips</edgelabel>
         </childnode>
-        <childnode refid="305" relation="usage">
+        <childnode refid="340" relation="usage">
           <edgelabel>waveManager</edgelabel>
         </childnode>
       </node>
-      <node id="313">
+      <node id="348">
         <label>HiddenTileManager</label>
         <link refid="class_hidden_tile_manager"/>
       </node>
-      <node id="315">
+      <node id="351">
         <label>Timer</label>
         <link refid="class_timer"/>
       </node>
-      <node id="311">
+      <node id="346">
         <label>TileNodes</label>
         <link refid="class_tile_nodes"/>
-        <childnode refid="303" relation="public-inheritance">
+        <childnode refid="338" relation="public-inheritance">
         </childnode>
-        <childnode refid="312" relation="usage">
+        <childnode refid="347" relation="usage">
           <edgelabel>pathData</edgelabel>
         </childnode>
-        <childnode refid="313" relation="usage">
+        <childnode refid="348" relation="usage">
           <edgelabel>hiddenTileManager</edgelabel>
         </childnode>
       </node>
-      <node id="307">
+      <node id="342">
         <label>ScriptableObject</label>
       </node>
-      <node id="303">
+      <node id="338">
         <label>MonoBehaviour</label>
       </node>
-      <node id="306">
+      <node id="341">
         <label>WaveData</label>
         <link refid="class_wave_data"/>
-        <childnode refid="307" relation="public-inheritance">
+        <childnode refid="342" relation="public-inheritance">
         </childnode>
-        <childnode refid="308" relation="usage">
+        <childnode refid="343" relation="usage">
           <edgelabel>listWapper</edgelabel>
         </childnode>
       </node>
-      <node id="314">
+      <node id="349">
         <label>CursorSelection</label>
         <link refid="class_cursor_selection"/>
-        <childnode refid="303" relation="public-inheritance">
+        <childnode refid="338" relation="public-inheritance">
         </childnode>
-        <childnode refid="311" relation="usage">
-          <edgelabel>tileNodes</edgelabel>
+        <childnode refid="350" relation="usage">
+          <edgelabel>selectorManager</edgelabel>
         </childnode>
-        <childnode refid="305" relation="usage">
+        <childnode refid="340" relation="usage">
           <edgelabel>waveManager</edgelabel>
         </childnode>
       </node>
-      <node id="304">
+      <node id="339">
         <label>WaveInterface</label>
         <link refid="interface_wave_system_1_1_wave_interface"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" bodystart="6" bodyend="36"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" line="7" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem/WaveSystemTimer.cs" bodystart="6" bodyend="36"/>
     <listofallmembers>
       <member refid="class_wave_system_timer_1a861867bea4ae3aa93b8a8a00095e2648" prot="private" virt="non-virtual"><scope>WaveSystemTimer</scope><name>Start</name></member>
       <member refid="class_wave_system_timer_1a8d8fd61620be7b69f900e0968e342eba" prot="public" virt="non-virtual"><scope>WaveSystemTimer</scope><name>UIConnection</name></member>

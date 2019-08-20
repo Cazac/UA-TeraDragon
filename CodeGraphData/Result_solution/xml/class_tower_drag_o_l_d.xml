@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_tower_drag_o_l_d" kind="class" prot="public">
+    <compoundname>TowerDragOLD</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IBeginDragHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IDragHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IEndDragHandler</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_tower_drag_o_l_d_1a730d57763b248a2aab7d4a9d1fda241f" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject TowerDragOLD.towerPrefab</definition>
+        <argsstring></argsstring>
+        <name>towerPrefab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_tower_drag_o_l_d_1ade2afb3331214cb93460729b105f55c9" compoundref="_tower_drag_8cs" startline="37" endline="47">OnBeginDrag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_tower_drag_o_l_d_1a2d5bb0150cd0bbeb2278c9a7424353de" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TowerDragOLD.tileLayer</definition>
+        <argsstring></argsstring>
+        <name>tileLayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" line="23" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_tower_drag_o_l_d_1a8d06758a789c4a046e468bd5088eb730" compoundref="_tower_drag_8cs" startline="70" endline="126">OnEndDrag</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tower_drag_o_l_d_1a6554efc025ccbd127622d1555001efe3" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject TowerDragOLD.currentTowerLOCAL</definition>
+        <argsstring></argsstring>
+        <name>currentTowerLOCAL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_tower_drag_o_l_d_1ade2afb3331214cb93460729b105f55c9" compoundref="_tower_drag_8cs" startline="37" endline="47">OnBeginDrag</referencedby>
+        <referencedby refid="class_tower_drag_o_l_d_1a8d06758a789c4a046e468bd5088eb730" compoundref="_tower_drag_8cs" startline="70" endline="126">OnEndDrag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_tower_drag_o_l_d_1a2b60c138ffd6617e1fd72b3aeca8d643" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_nodes" kindref="compound">TileNodes</ref></type>
+        <definition>TileNodes TowerDragOLD.tileNodes</definition>
+        <argsstring></argsstring>
+        <name>tileNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" line="20" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_tower_drag_o_l_d_1a1dc2c6ec9420fbec6cb68d4d335a18f9" compoundref="_tower_drag_8cs" startline="27" endline="30">Start</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_tower_drag_o_l_d_1a1dc2c6ec9420fbec6cb68d4d335a18f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerDragOLD.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" line="27" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" bodystart="27" bodyend="30"/>
+        <references refid="class_tower_drag_o_l_d_1a2b60c138ffd6617e1fd72b3aeca8d643" compoundref="_tower_drag_8cs" startline="20">tileNodes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_drag_o_l_d_1a35b7dacc52637be1a6711df39f159960" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerDragOLD.LogRaycasthitObject</definition>
+        <argsstring>(String position, String type)</argsstring>
+        <name>LogRaycasthitObject</name>
+        <param>
+          <type>String</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Undocumented </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" line="134" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" bodystart="134" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tower_drag_o_l_d_1ade2afb3331214cb93460729b105f55c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerDragOLD.OnBeginDrag</definition>
+        <argsstring>(PointerEventData eventData)</argsstring>
+        <name>OnBeginDrag</name>
+        <param>
+          <type>PointerEventData</type>
+          <declname>eventData</declname>
+        </param>
+        <briefdescription>
+<para>Undocumented </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" line="37" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" bodystart="37" bodyend="47"/>
+        <references refid="class_tower_drag_o_l_d_1a6554efc025ccbd127622d1555001efe3" compoundref="_tower_drag_8cs" startline="19">currentTowerLOCAL</references>
+        <references refid="class_tower_drag_o_l_d_1a730d57763b248a2aab7d4a9d1fda241f" compoundref="_tower_drag_8cs" startline="18">towerPrefab</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_drag_o_l_d_1a4844f59838f03bc7fd21dd69e5606c5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerDragOLD.OnDrag</definition>
+        <argsstring>(PointerEventData eventData)</argsstring>
+        <name>OnDrag</name>
+        <param>
+          <type>PointerEventData</type>
+          <declname>eventData</declname>
+        </param>
+        <briefdescription>
+<para>Undocumented </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" line="55" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" bodystart="55" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tower_drag_o_l_d_1a8d06758a789c4a046e468bd5088eb730" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TowerDragOLD.OnEndDrag</definition>
+        <argsstring>(PointerEventData eventData)</argsstring>
+        <name>OnEndDrag</name>
+        <param>
+          <type>PointerEventData</type>
+          <declname>eventData</declname>
+        </param>
+        <briefdescription>
+<para>Raycast the tilemap looking for a node under the mouse when the tower is dropped onto the map, validation check the tile then add it to the map. If not valid remove the tower from the cursor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" line="70" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" bodystart="70" bodyend="126"/>
+        <references refid="class_tower_drag_o_l_d_1a6554efc025ccbd127622d1555001efe3" compoundref="_tower_drag_8cs" startline="19">currentTowerLOCAL</references>
+        <references refid="class_tower_drag_o_l_d_1a2d5bb0150cd0bbeb2278c9a7424353de" compoundref="_tower_drag_8cs" startline="23">tileLayer</references>
+        <references refid="class_world_tile_1a73553fd14575c6acc8c0eeb2c8132e4a" compoundref="_world_tile_8cs" startline="25">WorldTile.towering</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>TD_TowerDrag is used to drag and drop all towers into the game onto TD_TowerDrop sockets</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="275">
+        <label>IEndDragHandler</label>
+      </node>
+      <node id="271">
+        <label>TowerDragOLD</label>
+        <link refid="class_tower_drag_o_l_d"/>
+        <childnode refid="272" relation="public-inheritance">
+        </childnode>
+        <childnode refid="273" relation="public-inheritance">
+        </childnode>
+        <childnode refid="274" relation="public-inheritance">
+        </childnode>
+        <childnode refid="275" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="273">
+        <label>IBeginDragHandler</label>
+      </node>
+      <node id="272">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="274">
+        <label>IDragHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="280">
+        <label>IEndDragHandler</label>
+      </node>
+      <node id="276">
+        <label>TowerDragOLD</label>
+        <link refid="class_tower_drag_o_l_d"/>
+        <childnode refid="277" relation="public-inheritance">
+        </childnode>
+        <childnode refid="278" relation="public-inheritance">
+        </childnode>
+        <childnode refid="279" relation="public-inheritance">
+        </childnode>
+        <childnode refid="280" relation="public-inheritance">
+        </childnode>
+        <childnode refid="281" relation="usage">
+          <edgelabel>tileNodes</edgelabel>
+        </childnode>
+      </node>
+      <node id="282">
+        <label>PathsData</label>
+        <link refid="class_paths_data"/>
+      </node>
+      <node id="283">
+        <label>HiddenTileManager</label>
+        <link refid="class_hidden_tile_manager"/>
+      </node>
+      <node id="281">
+        <label>TileNodes</label>
+        <link refid="class_tile_nodes"/>
+        <childnode refid="277" relation="public-inheritance">
+        </childnode>
+        <childnode refid="282" relation="usage">
+          <edgelabel>pathData</edgelabel>
+        </childnode>
+        <childnode refid="283" relation="usage">
+          <edgelabel>hiddenTileManager</edgelabel>
+        </childnode>
+      </node>
+      <node id="278">
+        <label>IBeginDragHandler</label>
+      </node>
+      <node id="277">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="279">
+        <label>IDragHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/TowerDrag.cs" bodystart="15" bodyend="141"/>
+    <listofallmembers>
+      <member refid="class_tower_drag_o_l_d_1a6554efc025ccbd127622d1555001efe3" prot="private" virt="non-virtual"><scope>TowerDragOLD</scope><name>currentTowerLOCAL</name></member>
+      <member refid="class_tower_drag_o_l_d_1a35b7dacc52637be1a6711df39f159960" prot="private" virt="non-virtual"><scope>TowerDragOLD</scope><name>LogRaycasthitObject</name></member>
+      <member refid="class_tower_drag_o_l_d_1ade2afb3331214cb93460729b105f55c9" prot="public" virt="non-virtual"><scope>TowerDragOLD</scope><name>OnBeginDrag</name></member>
+      <member refid="class_tower_drag_o_l_d_1a4844f59838f03bc7fd21dd69e5606c5e" prot="public" virt="non-virtual"><scope>TowerDragOLD</scope><name>OnDrag</name></member>
+      <member refid="class_tower_drag_o_l_d_1a8d06758a789c4a046e468bd5088eb730" prot="public" virt="non-virtual"><scope>TowerDragOLD</scope><name>OnEndDrag</name></member>
+      <member refid="class_tower_drag_o_l_d_1a1dc2c6ec9420fbec6cb68d4d335a18f9" prot="private" virt="non-virtual"><scope>TowerDragOLD</scope><name>Start</name></member>
+      <member refid="class_tower_drag_o_l_d_1a2d5bb0150cd0bbeb2278c9a7424353de" prot="public" virt="non-virtual"><scope>TowerDragOLD</scope><name>tileLayer</name></member>
+      <member refid="class_tower_drag_o_l_d_1a2b60c138ffd6617e1fd72b3aeca8d643" prot="private" virt="non-virtual"><scope>TowerDragOLD</scope><name>tileNodes</name></member>
+      <member refid="class_tower_drag_o_l_d_1a730d57763b248a2aab7d4a9d1fda241f" prot="public" virt="non-virtual"><scope>TowerDragOLD</scope><name>towerPrefab</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -3,53 +3,64 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 
+///////////////
+/// <summary>
+///     
+/// Why does WaveSystem have a namespace?
+/// 
+/// </summary>
+///////////////
+
 namespace WaveSystem
 {
+
+    ///////////////
+    /// <summary>
+    ///     
+    /// WaveManager
+    /// 
+    /// </summary>
+    ///////////////
+
     public class WaveManager : MonoBehaviour
     {
+        [Header("TileNodes Refference")]
         public TileNodes tiles;
+
+        [Header("Scriptable wave objects")]
+        public WaveData[] waves;
+
+        [Header("DEBUG ONLY currentWave")]
+        [SerializeField]
+        private WaveData currentWave;
+
+        [Header("Parent Gameobject For Waves")]
+        public GameObject waveParent;
+
 
         // public GameObject[] spawnEnemies; //TODO: Reimplement this!
         public GameObject spawnSingleEnemy;
         public bool enableSpawning;
         public bool EnableSpawning { get => enableSpawning; set => enableSpawning = value; }
 
-        // public Vector3[] positions;
-
-        // [SerializeField]
-        // private float internalTimer;
-
-        [Header("Scriptable wave object")]
-        public WaveData[] waves;
-
-
-        [Header("DEBUG ONLY currentWave")]
-        [SerializeField]
-        private WaveData currentWave;
-
-
 
         [SerializeField] //TODO: Delete serializeField
         private List<Vector3> selectedNodeSpawnPosition = new List<Vector3>();
         public List<Vector3> NodeSpawnPosition { get => selectedNodeSpawnPosition; set => selectedNodeSpawnPosition = value; }
 
-        [Header("Parent Gameobject For Waves")]
-        public GameObject waveParent;
-
-        //private const string WAVE_PARENT_NAME = "Parent_EnemyWave";
 
         private Timer currentTimer;
         public WaveData CurrentWave { get => currentWave; set => currentWave = value; }
         private int waveIndex = 0;
 
-        private TileNodes tileNodes;
 
+        private TileNodes tileNodes;
         private CursorSelection cursorSelection;
         private SoundManager soundManager;
-        public int WaveIndex
-        {
-            get => waveIndex;
-        }
+
+        public int WaveIndex { get => waveIndex; }
+
+        //////////////////////////////////////////////////////////
 
         public String TimeUntilNextWave
         {
@@ -72,16 +83,11 @@ namespace WaveSystem
             }
         }
 
-
-
-        private void Awake()
-        {
-        }
-
+        //////////////////////////////////////////////////////////
 
         private void Start()
         {
-            //soundManager = GameManager.FindObjectOfType<SoundManager>();
+            soundManager = GameObject.FindObjectOfType<SoundManager>();
             tileNodes = GameObject.FindObjectOfType<TileNodes>();
             //Cached CursorSelection
             cursorSelection = GameObject.FindObjectOfType<CursorSelection>();
@@ -90,8 +96,6 @@ namespace WaveSystem
             {
                 if (i >= tiles.pathData.paths.Count)
                 {
-
-                    print("Test Code: BLANK " + waves.Length);
                     waves[i].Paths = new List<List<WorldTile>>()
                     {
                         tiles.pathData.paths[tiles.pathData.paths.Count-1]
@@ -103,36 +107,10 @@ namespace WaveSystem
                 }
             }
 
-            //for(int i = 0; i < tiles.pathData.paths.Count; i++)
-            //{
-               // waves[i].Paths = new List<List<WorldTile>>()
-                   // {
-                      //  tiles.pathData.paths[i]
-                   // };
-            //}
 
             CurrentWave = waves[0];
-            MakeParent();
 
             StartCoroutine(SpawnSingleEnemyPerWave());
-            // // for testing purposes
-            // // gives waves paths form shortest to longest
-            //for (int i = 0; i < waves.Length; i++)
-            //{
-            //    if (i >= tiles.pathData.paths.Count)
-            //    {
-            //     //   waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[tiles.pathData.paths.Count-1] };
-            //    }
-            //    else
-            //    {
-            //     //   waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
-            //    }
-            //}
-
-            //currentWave = waves[0];
-            //MakeParent();
-
-            //StartCoroutine(SpawnSingleEnemyPerWave());
         }
 
         private void Update()
@@ -140,44 +118,43 @@ namespace WaveSystem
             //Create new timer object for current wave
             if (EnableSpawning == true && currentTimer == null)
             {
-                print("Test Code: " + CurrentWave.name);
+                //print("New Timer For: " + CurrentWave.name);
                 InstantiateNewTimer(CurrentWave.TimeUntilSpawn, CurrentWave.WaveTimer, ref currentTimer);
             }
+
+            //Debug.Log("Is Current Timer Null? " + currentTimer != null);
 
             //If timer for a wave hits 0, turn off spawning
             if (currentTimer != null && EnableSpawning == true)
             {
                 if (currentTimer.WaveCountdown())
+                {
                     EnableSpawning = false;
+                    if (soundManager != null)
+                    {
+                        Debug.Log("Inter");
+                        soundManager.PlaySpecificSound("Inter");
+                        soundManager.ReturnControl = true;
+                    }
+                }
             }
 
 
             //If timer between wave hits 0, turn on spawning
-            if (currentTimer != null && EnableSpawning == false && !AllWaveCompleted())
+            if (currentTimer != null && EnableSpawning == false && !AllWaveCompleted() && waveParent.transform.childCount <= 0)
             {
                 if (currentTimer.NextWaveCountdown())
                     EnableSpawning = true;
 
-                //if(soundManager !=null)
-                //{
-                //    soundManager.PlaySpecificSound("Main");
-                //    soundManager.ReturnControl = true;
-                //}
+                if (soundManager != null)
+                {
+                    soundManager.PlaySpecificSound("Main");
+                    soundManager.ReturnControl = true;
+                }
             }
-
-            //Debug.Log("Current wave timer: " + currentTimer.WaveTimer);
-            //Debug.Log("Current wave timer interwave: " + currentTimer.TimeUntilNextSpawn);
         }
 
-
-        /// <summary>
-        ///Create new parent gameobject to store enemy info
-        /// </summary>
-        private void MakeParent()
-        {
-            //new GameObject(WAVE_PARENT_NAME);
-        }
-
+        //////////////////////////////////////////////////////////
 
         /// <summary>
         ///Create a new timer instance when a wave is finished
@@ -187,8 +164,11 @@ namespace WaveSystem
         /// <param name="timer">ref variable timer to reference the timer instance</param>
         private void InstantiateNewTimer(float timeUntilSpawn, float waveTimer, ref Timer timer)
         {
+            //Debug.Log("Timer");
             timer = null;
             timer = new Timer(timeUntilSpawn, waveTimer);
+
+           //Debug.Log("Is Current Timer Null? " + currentTimer != null);
         }
 
         /// <summary>
@@ -215,8 +195,12 @@ namespace WaveSystem
                             //Enumerator will return at this index, need to check if spawning option is still available
                             if (EnableSpawning == true)
                             {
+                                DrawDebugPath(CurrentWave.Paths);
+
                                 GameObject enemy = Instantiate(CurrentWave.EnemyPrefab, path[0].transform.position, Quaternion.identity, CurrentWave.ParentGameobject.transform);
                                 enemy.GetComponent<EnemyScript>().currentWaypoints = path;
+                                enemy.GetComponent<EnemyScript>().PathRelocation();
+
                                 yield return new WaitForSeconds(CurrentWave.SpawnRate);
                             }
                         }
@@ -231,9 +215,17 @@ namespace WaveSystem
                     if (!AllWaveCompleted() && currentTimer.TimeUntilNextSpawn <= 0)
                     {
                         CurrentWave = null;
-                        CurrentWave = waves[++waveIndex];
-                        //Debug.Log("Current wave: " + currentWave.ToString());
 
+                        //Double Check
+                        if (waves.Length >= waveIndex + 1)
+                        {
+                            CurrentWave = waves[++waveIndex];
+                        }
+                        else
+                        {
+                            Debug.Log("NOOOPE");
+                        }
+                 
                         InstantiateNewTimer(CurrentWave.TimeUntilSpawn, CurrentWave.WaveTimer, ref currentTimer);
 
                         EnableSpawning = true;
@@ -263,14 +255,35 @@ namespace WaveSystem
         ///<returns>Returns true if reaches the end of array</returns>
         private Boolean AllWaveCompleted()
         {
-            //Debug.Log("Wave index: " + waveIndex);
-
+ 
             if (waveIndex > waves.Length - 1)
             {
-                //Debug.Log("End of all waves");
+                Debug.Log("End of all waves");
+
+                Winner();
+
                 return true;
             }
+
             return false;
+        }
+
+
+        private void Winner()
+        {
+            WinnerScript winner = GameObject.FindObjectOfType<WinnerScript>();
+            winner.TurnOnWinner();
+        }
+
+        private void DrawDebugPath(List<List<WorldTile>> pathData)
+        {
+            foreach (var path in pathData)
+            {
+                for (int i = 0; i < path.Count - 1; i++)
+                {
+                    Debug.DrawRay(path[i].transform.position, path[i + 1].transform.position - path[i].transform.position, Color.white, 100f, false);
+                }
+            }
         }
     }
 
@@ -283,4 +296,5 @@ namespace WaveSystem
     {
         void UIConnection(WaveManager waveManager);
     }
+
 }

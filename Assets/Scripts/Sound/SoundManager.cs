@@ -13,7 +13,7 @@ public class SoundManager : MonoBehaviour
     public bool IsMuteSoundtrack { get; set; }
     public bool IsMuteUI { get; set; }
 
-    public bool ReturnControl { get => returnControl; set => returnControl = value; }
+    public bool ReturnControl { get => autoControl; set => autoControl = value; }
 
 
     public SoundObject[] soundClips;
@@ -22,13 +22,17 @@ public class SoundManager : MonoBehaviour
     private AudioClip currentClip;
     private bool triggerOnLevelLoad = false;
     private WaveManager waveManager;
-    private bool returnControl = true;
+    private bool autoControl = true;
 
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    private void Awake()
+    {
+        //AutoDestroySelf();
+    }
     private void AutoDestroySelf()
     {
         if (GameObject.FindObjectsOfType<SoundManager>().Length > 1)
@@ -40,8 +44,6 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        AutoDestroySelf();
-        DontDestroyOnLoad(this);
         waveManager = GameObject.FindObjectOfType<WaveManager>();
     }
 
@@ -70,20 +72,20 @@ public class SoundManager : MonoBehaviour
             triggerOnLevelLoad = false;
         }
 
-        if (!mainAudioSourceSoundtrack.GetComponent<AudioSource>().isPlaying && returnControl)
+        if (!mainAudioSourceSoundtrack.GetComponent<AudioSource>().isPlaying/* && autoControl*/)
             LoopThroughSoundList(soundClips);
 
-        if (!returnControl)
-        {
-            LoopThroughSoundList(soundClips);
-            returnControl = true;
-        }
+        //if (!autoControl)
+        //{
+        //    LoopThroughSoundList(soundClips);
+        //    autoControl = true;
+        //}
    
 
-        if (waveManager!=null && waveManager.EnableSpawning == false)
-            returnControl = false;
-        else
-            returnControl = true;
+        //if (waveManager!=null && waveManager.EnableSpawning == false)
+        //    autoControl = false;
+        //else
+        //    autoControl = true;
     }
 
     public void PlaySpecificSound(String soundName)
@@ -108,18 +110,17 @@ public class SoundManager : MonoBehaviour
     {
         foreach (var clip in clips)
         {
-            //Debug.Log("Looping");
-            if (clip.SoundName.Contains("Menu") && SceneManager.GetActiveScene().name.Contains("Menu") && returnControl)
+            if (clip.SoundName.Contains("Menu") && SceneManager.GetActiveScene().name.Contains("Menu") && autoControl)
             {
                 PlaySoundByName(clip);
             }
 
-            if (clip.SoundName.Contains("Game") && SceneManager.GetActiveScene().name.Contains("Game") && returnControl)
+            if (clip.SoundName.Contains("Game") && SceneManager.GetActiveScene().name.Contains("Game") && autoControl)
             {
                 PlaySoundByName(clip);
             }
 
-            if(clip.SoundName.Contains("Inter") && !returnControl)
+            if(clip.SoundName.Contains("Inter") && !autoControl)
             {
                 PlaySoundByName(clip);
             }

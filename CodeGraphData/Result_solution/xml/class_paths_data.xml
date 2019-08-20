@@ -14,12 +14,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="16" bodyend="-1"/>
-        <referencedby refid="class_tile_nodes_1a1ccf7b0f073c26d31eb580fb09a7deb1" compoundref="_tile_nodes_8cs" startline="82" endline="99">TileNodes.CheckBlockedPath</referencedby>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_tile_nodes_1a1ccf7b0f073c26d31eb580fb09a7deb1" compoundref="_tile_nodes_8cs" startline="84" endline="100">TileNodes.CheckBlockedPath</referencedby>
         <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="127">EnemyScript.DynamicPathRelocation</referencedby>
-        <referencedby refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" compoundref="_tile_nodes_8cs" startline="127" endline="136">TileNodes.Editor_SelectList</referencedby>
-        <referencedby refid="class_tile_nodes_1a01f4a1ba0ca7e1f2ab7e415d6c7f9659" compoundref="_tile_nodes_8cs" startline="369" endline="387">TileNodes.OnDrawGizmos</referencedby>
-        <referencedby refid="class_tower_drag_1a942a12b2f914655d1e71a166b4c9a968" compoundref="_tower_drag_8cs" startline="121" endline="174">TowerDrag.OnEndDrag</referencedby>
+        <referencedby refid="class_tile_nodes_1adb3694ba919da0b74b3c4268c5542664" compoundref="_tile_nodes_8cs" startline="156" endline="165">TileNodes.Editor_SelectList</referencedby>
+        <referencedby refid="class_tile_nodes_1a01f4a1ba0ca7e1f2ab7e415d6c7f9659" compoundref="_tile_nodes_8cs" startline="461" endline="479">TileNodes.OnDrawGizmos</referencedby>
+        <referencedby refid="class_barrier_drag_1a0f0a30373c56b38e003a22fe6f275bdf" compoundref="_barrier_drag_8cs" startline="121" endline="174">BarrierDrag.OnEndDrag</referencedby>
         <referencedby refid="class_paths_data_1af2fab5caabbdac3bed14660f555f63f7" compoundref="_paths_data_8cs" startline="22" endline="53">PathsData</referencedby>
         <referencedby refid="class_wave_system_1_1_wave_manager_1aa2291654e818f94332b0916457d1204f" compoundref="_wave_manager_8cs" startline="82" endline="134">WaveSystem.WaveManager.Start</referencedby>
       </memberdef>
@@ -34,9 +34,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="17" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="17" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="17" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="17" bodyend="-1"/>
         <referencedby refid="class_enemy_script_1a8ca21cbea279d681ba35266beebec4e4" compoundref="_enemy_script_8cs" startline="106" endline="127">EnemyScript.DynamicPathRelocation</referencedby>
-        <referencedby refid="class_tower_drag_1a942a12b2f914655d1e71a166b4c9a968" compoundref="_tower_drag_8cs" startline="121" endline="174">TowerDrag.OnEndDrag</referencedby>
+        <referencedby refid="class_barrier_drag_1a0f0a30373c56b38e003a22fe6f275bdf" compoundref="_barrier_drag_8cs" startline="121" endline="174">BarrierDrag.OnEndDrag</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_paths_data_1a1ab725c318985cd37fc7a31f35f02aa2" prot="public" static="no" mutable="no">
         <type>Dictionary&lt; <ref refid="class_world_tile" kindref="compound">WorldTile</ref>, List&lt; List&lt; <ref refid="class_world_tile" kindref="compound">WorldTile</ref> &gt; &gt; &gt;</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="18" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="18" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="18" bodyend="-1"/>
         <referencedby refid="class_paths_data_1af2fab5caabbdac3bed14660f555f63f7" compoundref="_paths_data_8cs" startline="22" endline="53">PathsData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_paths_data_1a6436e2fe0c46de30452a2694ae95978c" prot="public" static="no" mutable="no">
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="19" bodyend="-1"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="19" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="19" bodyend="-1"/>
         <referencedby refid="class_paths_data_1af2fab5caabbdac3bed14660f555f63f7" compoundref="_paths_data_8cs" startline="22" endline="53">PathsData</referencedby>
       </memberdef>
       </sectiondef>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="22" bodyend="53"/>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="22" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="22" bodyend="53"/>
         <references refid="class_paths_data_1a0c983e89eebbb01db59f6d663ff1b7ad" compoundref="_paths_data_8cs" startline="16">paths</references>
         <references refid="class_paths_data_1a6436e2fe0c46de30452a2694ae95978c" compoundref="_paths_data_8cs" startline="19">PathsByEnd</references>
         <references refid="class_paths_data_1a1ab725c318985cd37fc7a31f35f02aa2" compoundref="_paths_data_8cs" startline="18">PathsByStart</references>
@@ -95,7 +95,7 @@
 <para><itemizedlist>
 <listitem><para>paths: all paths from shortest to longest</para></listitem><listitem><para>PathsByStarts: starting tiles as keys, retrieves all paths associated with key</para></listitem><listitem><para>PathsByEnd: ending tiles as keys, retrieves all paths associated with key </para></listitem></itemizedlist>
 </para>    </detaileddescription>
-    <location file="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="14" bodyend="54"/>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/PathsData.cs" bodystart="14" bodyend="54"/>
     <listofallmembers>
       <member refid="class_paths_data_1a28b06131b0fff4b4ddc247df13f911be" prot="public" virt="non-virtual"><scope>PathsData</scope><name>blockedPaths</name></member>
       <member refid="class_paths_data_1a0c983e89eebbb01db59f6d663ff1b7ad" prot="public" virt="non-virtual"><scope>PathsData</scope><name>paths</name></member>

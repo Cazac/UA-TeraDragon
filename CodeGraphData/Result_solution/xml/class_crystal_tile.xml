@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_crystal_tile" kind="class" prot="public">
+    <compoundname>CrystalTile</compoundname>
+    <basecompoundref refid="class_world_tile" prot="public" virt="non-virtual">WorldTile</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CrystalTile.crystalValueRed</definition>
+        <argsstring></argsstring>
+        <name>crystalValueRed</name>
+        <initializer>= 25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" line="8" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_crystal_tile_1a8fdd64bb47c0234e65333771c51be393" compoundref="_crystal_tile_8cs" startline="24" endline="45">ProduceRandomCrystal</referencedby>
+        <referencedby refid="class_crystal_tile_1a8d4b02d5cead75676076314b08a87cf7" compoundref="_crystal_tile_8cs" startline="50" endline="56">RandomCrystalValues</referencedby>
+        <referencedby refid="class_crystal_tile_1aadfda470cc2a9d583adda07a0532c08e" compoundref="_crystal_tile_8cs" startline="62" endline="83">UniqueCrystalValue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CrystalTile.crystalValueBlue</definition>
+        <argsstring></argsstring>
+        <name>crystalValueBlue</name>
+        <initializer>= 25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" line="10" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_crystal_tile_1a8fdd64bb47c0234e65333771c51be393" compoundref="_crystal_tile_8cs" startline="24" endline="45">ProduceRandomCrystal</referencedby>
+        <referencedby refid="class_crystal_tile_1a8d4b02d5cead75676076314b08a87cf7" compoundref="_crystal_tile_8cs" startline="50" endline="56">RandomCrystalValues</referencedby>
+        <referencedby refid="class_crystal_tile_1aadfda470cc2a9d583adda07a0532c08e" compoundref="_crystal_tile_8cs" startline="62" endline="83">UniqueCrystalValue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CrystalTile.crystalValueGreen</definition>
+        <argsstring></argsstring>
+        <name>crystalValueGreen</name>
+        <initializer>= 25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" line="12" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_crystal_tile_1a8fdd64bb47c0234e65333771c51be393" compoundref="_crystal_tile_8cs" startline="24" endline="45">ProduceRandomCrystal</referencedby>
+        <referencedby refid="class_crystal_tile_1a8d4b02d5cead75676076314b08a87cf7" compoundref="_crystal_tile_8cs" startline="50" endline="56">RandomCrystalValues</referencedby>
+        <referencedby refid="class_crystal_tile_1aadfda470cc2a9d583adda07a0532c08e" compoundref="_crystal_tile_8cs" startline="62" endline="83">UniqueCrystalValue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CrystalTile.crystalValueYellow</definition>
+        <argsstring></argsstring>
+        <name>crystalValueYellow</name>
+        <initializer>= 25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" line="14" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_crystal_tile_1a8fdd64bb47c0234e65333771c51be393" compoundref="_crystal_tile_8cs" startline="24" endline="45">ProduceRandomCrystal</referencedby>
+        <referencedby refid="class_crystal_tile_1a8d4b02d5cead75676076314b08a87cf7" compoundref="_crystal_tile_8cs" startline="50" endline="56">RandomCrystalValues</referencedby>
+        <referencedby refid="class_crystal_tile_1aadfda470cc2a9d583adda07a0532c08e" compoundref="_crystal_tile_8cs" startline="62" endline="83">UniqueCrystalValue</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_crystal_tile_1a269364c1d61e286d6ad10f1c03187f4a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CrystalTile.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" line="16" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_crystal_tile_1a8d4b02d5cead75676076314b08a87cf7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CrystalTile.RandomCrystalValues</definition>
+        <argsstring>()</argsstring>
+        <name>RandomCrystalValues</name>
+        <briefdescription>
+<para>Generates random values for each crystal values </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" line="50" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" bodystart="50" bodyend="56"/>
+        <references refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" compoundref="_crystal_tile_8cs" startline="10">crystalValueBlue</references>
+        <references refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" compoundref="_crystal_tile_8cs" startline="12">crystalValueGreen</references>
+        <references refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" compoundref="_crystal_tile_8cs" startline="8">crystalValueRed</references>
+        <references refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" compoundref="_crystal_tile_8cs" startline="14">crystalValueYellow</references>
+      </memberdef>
+      <memberdef kind="function" id="class_crystal_tile_1aadfda470cc2a9d583adda07a0532c08e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CrystalTile.UniqueCrystalValue</definition>
+        <argsstring>(CrystalColor cc)</argsstring>
+        <name>UniqueCrystalValue</name>
+        <param>
+          <type><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3" kindref="member">CrystalColor</ref></type>
+          <declname>cc</declname>
+        </param>
+        <briefdescription>
+<para>Set crystal tile such a that only 1 color crystal is produced </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique color chosen</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" line="62" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" bodystart="62" bodyend="83"/>
+        <references refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" compoundref="_crystal_tile_8cs" startline="10">crystalValueBlue</references>
+        <references refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" compoundref="_crystal_tile_8cs" startline="12">crystalValueGreen</references>
+        <references refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" compoundref="_crystal_tile_8cs" startline="8">crystalValueRed</references>
+        <references refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" compoundref="_crystal_tile_8cs" startline="14">crystalValueYellow</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_crystal_tile_1a8fdd64bb47c0234e65333771c51be393" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3" kindref="member">CrystalColor</ref></type>
+        <definition>CrystalColor CrystalTile.ProduceRandomCrystal</definition>
+        <argsstring>()</argsstring>
+        <name>ProduceRandomCrystal</name>
+        <briefdescription>
+<para>Selects a color for the crystal. probabilities are determined by each Crystal values </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Color of the crystal</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" line="24" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" bodystart="24" bodyend="45"/>
+        <references refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a1b3e1ee9bff86431dea6b181365ba65f">BLUE</references>
+        <references refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" compoundref="_crystal_tile_8cs" startline="10">crystalValueBlue</references>
+        <references refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" compoundref="_crystal_tile_8cs" startline="12">crystalValueGreen</references>
+        <references refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" compoundref="_crystal_tile_8cs" startline="8">crystalValueRed</references>
+        <references refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" compoundref="_crystal_tile_8cs" startline="14">crystalValueYellow</references>
+        <references refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a9de0e5dd94e861317e74964bed179fa0">GREEN</references>
+        <references refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3aa2d9547b5d3dd9f05984475f7c926da0">RED</references>
+        <references refid="_crystal_tile_8cs_1a3b496b9e1d86172ad1c10559741f9bc3a8a568e5f41b7e4da88fe5c4a00aad34e">YELLOW</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="53">
+        <label>CrystalTile</label>
+        <link refid="class_crystal_tile"/>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>WorldTile</label>
+        <link refid="class_world_tile"/>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="56">
+        <label>CrystalTile</label>
+        <link refid="class_crystal_tile"/>
+        <childnode refid="57" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>WorldTile</label>
+        <link refid="class_world_tile"/>
+        <childnode refid="58" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" line="6" column="1" bodyfile="C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode/CrystalTile.cs" bodystart="5" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_crystal_tile_1afab7bdf66d763d7c795b57877ae459cb" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>crystalValueBlue</name></member>
+      <member refid="class_crystal_tile_1ae656b8eb77a114e5266c4ee13d8ce2b5" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>crystalValueGreen</name></member>
+      <member refid="class_crystal_tile_1ad84560b9694278f2a363e3c171dc9cc7" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>crystalValueRed</name></member>
+      <member refid="class_crystal_tile_1a6a4ae58b9fea4d1bad09b295aadcb92a" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>crystalValueYellow</name></member>
+      <member refid="class_world_tile_1a0e656c3b5770c4c79608125683ea7709" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>gridX</name></member>
+      <member refid="class_world_tile_1aa4c5505813dc257adb4a4255d5025641" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>gridY</name></member>
+      <member refid="class_world_tile_1a8f5987fb6a965ae214c37cfad2cf7b4b" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>isBlockedBarrier</name></member>
+      <member refid="class_world_tile_1ab143fd67f312bebf9250e549faed59f9" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>isDestroyed</name></member>
+      <member refid="class_world_tile_1a8bb9aed53ffb5e7251e04003f75022c5" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>myNeighbours</name></member>
+      <member refid="class_world_tile_1a3183df67122339b04fae067faf461b8a" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>posX</name></member>
+      <member refid="class_world_tile_1a84ee3d3afbc295ad8003ba0cf8490b24" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>posY</name></member>
+      <member refid="class_crystal_tile_1a8fdd64bb47c0234e65333771c51be393" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>ProduceRandomCrystal</name></member>
+      <member refid="class_crystal_tile_1a8d4b02d5cead75676076314b08a87cf7" prot="private" virt="non-virtual"><scope>CrystalTile</scope><name>RandomCrystalValues</name></member>
+      <member refid="class_crystal_tile_1a269364c1d61e286d6ad10f1c03187f4a" prot="private" virt="non-virtual"><scope>CrystalTile</scope><name>Start</name></member>
+      <member refid="class_world_tile_1a68744bed9f6974f656c7677e5fcc500a" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>ToString</name></member>
+      <member refid="class_world_tile_1a73553fd14575c6acc8c0eeb2c8132e4a" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>towering</name></member>
+      <member refid="class_crystal_tile_1aadfda470cc2a9d583adda07a0532c08e" prot="private" virt="non-virtual"><scope>CrystalTile</scope><name>UniqueCrystalValue</name></member>
+      <member refid="class_world_tile_1a67a5d10ed54c58b0959281ecd844ec69" prot="public" virt="non-virtual"><scope>CrystalTile</scope><name>walkable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

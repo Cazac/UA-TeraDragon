@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1944aecb4a26cfe49be7cc05672a8872, type: 3}
+  m_Name: Ice Ball Projectile
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 8716833556434465185, guid: 21495890508cb7044a5c96ed1e8551f9,
+    type: 3}
+  isProjectile: 1
+  projectileDamage: 1
+  projectileSpeed: 20
+  projectileSlowdown: 0.5
+  projectileSlowdownTime: 0.7
+  isExplosive: 0
+  explosionRadius: 0
+  explosionLinger: 0
+  explosionDamage: 0
+  explosionSlowdown: 0
+  isBeam: 0
+  beamDamage: 0
+  beamSlowdown: 0
+  beamChainTargets: 0

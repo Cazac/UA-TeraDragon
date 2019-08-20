@@ -3,7 +3,7 @@ PROJECT_NAME = UA-Tera_Dragon_solution
 PROJECT_NUMBER = 
 PROJECT_BRIEF = 
 PROJECT_LOGO = 
-OUTPUT_DIRECTORY = "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/CodeGraphData/Result_solution"
+OUTPUT_DIRECTORY = "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/CodeGraphData/Result_solution"
 CREATE_SUBDIRS = NO
 OUTPUT_LANGUAGE = English
 BRIEF_MEMBER_DESC = YES
@@ -83,20 +83,19 @@ WARN_IF_DOC_ERROR = YES
 WARN_NO_PARAMDOC = NO
 WARN_FORMAT = "$file:$line: $text"
 WARN_LOGFILE = 
-INPUT = "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Draging" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Enemy" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Managers" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Map Bounds" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/ScenceManager" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/Sound" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TileNode" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/TowerS" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts" \
-     "C:/Uniprj/Tower/UA-Tera_Dragon RC/UA-Tera_Dragon/Assets/Scripts/WaveSystem"
+INPUT = "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data" \
+     "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Data/UpgradeScripts" \
+     "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Draging" \
+     "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Enemy" \
+     "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Managers" \
+     "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Map Bounds" \
+     "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/ScenceManager" \
+     "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Sound" \
+     "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/TileNode" \
+     "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/Tower" \
+     "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI" \
+     "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/UI/MainMenu Scripts" \
+     "C:/Uniprj/Tower/TeraNew/UA-Tera_Dragon/Assets/Scripts/WaveSystem"
 INPUT_ENCODING = UTF-8
 FILE_PATTERNS = *.c \
      *.cc \
