@@ -8,6 +8,30 @@ TextureImporter:
   - first:
       213: -2234233641424463814
     second: defend_spritesheet_1
+  - first:
+      213: -2189154561883593400
+    second: defend_spritesheet_2
+  - first:
+      213: -7867857646080757115
+    second: defend_spritesheet_3
+  - first:
+      213: -4483889851601355421
+    second: defend_spritesheet_4
+  - first:
+      213: -236967008230603198
+    second: defend_spritesheet_5
+  - first:
+      213: 8238012400102288093
+    second: defend_spritesheet_6
+  - first:
+      213: 3644574423460651642
+    second: defend_spritesheet_7
+  - first:
+      213: -5261657602286104974
+    second: defend_spritesheet_8
+  - first:
+      213: -7274095509410514903
+    second: defend_spritesheet_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -138,9 +162,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 70
-        width: 320
-        height: 52
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,7 +172,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 345161b4f9cb22643aba59a3df3bf376
+      spriteID: d12131dd3a0ba6347842c16b2febcc89
       internalID: 8536107246913814344
       vertices: []
       indices: 
@@ -158,10 +182,10 @@ TextureImporter:
       name: defend_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 6
-        width: 320
-        height: 52
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,8 +193,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a71b01ede77be2b4d9116b89573414c0
+      spriteID: c73b41952d251574ab56331473e3555b
       internalID: -2234233641424463814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defend_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c73933309508ae4cb3ab0a30c77252c
+      internalID: -2189154561883593400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defend_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d4a1ee4037e9141a4432a2881d643b
+      internalID: -7867857646080757115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defend_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4752ac6546fb64d98743babf1dc069
+      internalID: -4483889851601355421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defend_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd70b2c227d3094f8765c3e2e503279
+      internalID: -236967008230603198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defend_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b2af4d4d4b90740a56ec0e477e898d
+      internalID: 8238012400102288093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defend_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df970962c3a8394aad876d5c4ea1604
+      internalID: 3644574423460651642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defend_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6695cba5904be2040bd8c55e916c15cd
+      internalID: -5261657602286104974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defend_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3bb6be330cf0543a3f0d8e8ee1384a
+      internalID: -7274095509410514903
       vertices: []
       indices: 
       edges: []

@@ -27,10 +27,17 @@ public class TowerRange : MonoBehaviour
     [Header("Projectiles Fired")]
     public List<ProjectileFire> projectilesShot;
 
+    [Header("Range Visualizer")]
+    public GameObject rangeVis;
+
+    [Header("Shoot SFX")]
+    public SoundObject shootSFX;
+
     [Header("Tower Stats")]
     public float timeToReload = 0;
     public float reloadProgress = 0;
-    public bool isReadyToShoot = false;
+    public bool isReadyToShoot = true;
+    public float towerRange = 0;
 
     //////////////////////////////////////////////////////////
 
@@ -39,6 +46,9 @@ public class TowerRange : MonoBehaviour
         MonstersToShoot = new List<EnemyScript>();
         projectilesShot = new List<ProjectileFire>();
         GetTowerData();
+
+
+        rangeVis.transform.localScale = new Vector3(towerRange, towerRange, towerRange);
     }
 
     private void Update()
@@ -51,6 +61,13 @@ public class TowerRange : MonoBehaviour
         {
             Shoot();
         }
+
+
+
+
+        rangeVis.transform.localScale = new Vector3(towerRange, towerRange, towerRange);
+        GetComponent<CircleCollider2D>().radius = towerRange * 1.95f;
+
     }
 
     //////////////////////////////////////////////////////////
@@ -63,7 +80,7 @@ public class TowerRange : MonoBehaviour
     public void GetTowerData()
     {
         int towerTier = parentTowerScript.currentTowerTier;
-        float scale;
+        shootSFX = parentTowerScript.towerData.shootingSFX;
 
         switch (towerTier)
         {
@@ -79,8 +96,8 @@ public class TowerRange : MonoBehaviour
                 timeToReload = parentTowerScript.towerData.towerReloadSpeed_T1;
 
                 //New Range Scale Size
-                scale = parentTowerScript.towerData.towerRange_T1;
-                gameObject.transform.localScale = new Vector3(scale, scale, scale);
+                towerRange = parentTowerScript.towerData.towerRange_T1;
+                GetComponent<CircleCollider2D>().radius = towerRange * 1.95f;
 
                 //New Projectile
                 currentProjectileData = parentTowerScript.towerData.projectile_T1;
@@ -93,8 +110,8 @@ public class TowerRange : MonoBehaviour
                 timeToReload = parentTowerScript.towerData.towerReloadSpeed_T2;
 
                 //New Range Scale Size
-                scale = parentTowerScript.towerData.towerRange_T2;
-                gameObject.transform.localScale = new Vector3(scale, scale, scale);
+                towerRange = parentTowerScript.towerData.towerRange_T2;
+                gameObject.transform.localScale = new Vector3(towerRange, towerRange, towerRange);
 
                 //New Projectile
                 currentProjectileData = parentTowerScript.towerData.projectile_T3;
@@ -107,8 +124,8 @@ public class TowerRange : MonoBehaviour
                 timeToReload = parentTowerScript.towerData.towerReloadSpeed_T3;
 
                 //New Range Scale Size
-                scale = parentTowerScript.towerData.towerRange_T3;
-                gameObject.transform.localScale = new Vector3(scale, scale, scale);
+                towerRange = parentTowerScript.towerData.towerRange_T3;
+                gameObject.transform.localScale = new Vector3(towerRange, towerRange, towerRange);
 
                 //New Projectile
                 currentProjectileData = parentTowerScript.towerData.projectile_T3;
@@ -195,11 +212,10 @@ public class TowerRange : MonoBehaviour
 
 
 
-
-        if (MonstersToShoot.Count > 0)
+        foreach (EnemyScript go in MonstersToShoot)
         {
             //Find first monsters
-            GameObject monster_GO = MonstersToShoot[0].gameObject;
+            GameObject monster_GO = go.gameObject;
 
             //Generate Projectile with target
             GenerateProjectile(monster_GO);
@@ -239,6 +255,10 @@ public class TowerRange : MonoBehaviour
     ///////////////
     public void GenerateProjectile(GameObject monster)
     {
+        //SFX
+        FindObjectOfType<SoundManager>().PlayOnUIClick(shootSFX, 0.1f);
+
+
         GameObject projectile = Instantiate(currentProjectileData.projectilePrefab, parentTowerScript.firingPoint.transform.position, Quaternion.identity, parentTowerScript.firingPoint.transform);
         ProjectileFire projectileScript = projectile.GetComponent<ProjectileFire>();
 

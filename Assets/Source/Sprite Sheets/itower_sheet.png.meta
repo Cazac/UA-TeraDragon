@@ -1,7 +1,115 @@
 fileFormatVersion: 2
 guid: 47a5689290f9aef45bf63c15288b916c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 226420191600130227
+    second: itower_sheet_0
+  - first:
+      213: 5489647913113433975
+    second: itower_sheet_1
+  - first:
+      213: -4027595059420756522
+    second: itower_sheet_2
+  - first:
+      213: -989463290937873016
+    second: itower_sheet_3
+  - first:
+      213: 4290124736880148942
+    second: itower_sheet_4
+  - first:
+      213: 4679744619276188240
+    second: itower_sheet_5
+  - first:
+      213: -6885889800778859942
+    second: itower_sheet_6
+  - first:
+      213: -8140494255025082415
+    second: itower_sheet_7
+  - first:
+      213: 7860832465699441537
+    second: itower_sheet_8
+  - first:
+      213: -5010969116919966044
+    second: itower_sheet_9
+  - first:
+      213: 8731385492089599742
+    second: itower_sheet_10
+  - first:
+      213: 4601186006289791933
+    second: itower_sheet_11
+  - first:
+      213: 8657207899371876264
+    second: itower_sheet_12
+  - first:
+      213: -5313225248335792141
+    second: itower_sheet_13
+  - first:
+      213: 2493159136561900113
+    second: itower_sheet_14
+  - first:
+      213: -8253248141199293793
+    second: itower_sheet_15
+  - first:
+      213: -1909506402877663059
+    second: itower_sheet_16
+  - first:
+      213: 9020461824172671498
+    second: itower_sheet_17
+  - first:
+      213: 6595154901348739637
+    second: itower_sheet_18
+  - first:
+      213: -8535292848312207437
+    second: itower_sheet_19
+  - first:
+      213: -5340693430196923452
+    second: itower_sheet_20
+  - first:
+      213: -2913808819343444289
+    second: itower_sheet_21
+  - first:
+      213: -3297863660187473933
+    second: itower_sheet_22
+  - first:
+      213: 8247670981391105667
+    second: itower_sheet_23
+  - first:
+      213: -1750647729054394291
+    second: itower_sheet_24
+  - first:
+      213: 1089006393031839557
+    second: itower_sheet_25
+  - first:
+      213: -6301606837973159123
+    second: itower_sheet_26
+  - first:
+      213: -6529114802412092093
+    second: itower_sheet_27
+  - first:
+      213: -7904666267861356198
+    second: itower_sheet_28
+  - first:
+      213: 4060574351874801510
+    second: itower_sheet_29
+  - first:
+      213: 8238782299173372672
+    second: itower_sheet_30
+  - first:
+      213: 6900232552828703989
+    second: itower_sheet_31
+  - first:
+      213: 5742629162836446810
+    second: itower_sheet_32
+  - first:
+      213: -4710527019034199733
+    second: itower_sheet_33
+  - first:
+      213: 492808044041782475
+    second: itower_sheet_34
+  - first:
+      213: -2927309847842023871
+    second: itower_sheet_35
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +148,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +177,692 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: itower_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b255a05391f6b04ea048805898d051d
+      internalID: 226420191600130227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07940e1415a285e4497635d806e86966
+      internalID: 5489647913113433975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52186d2d9ac38d04da5f9c33c9ca5871
+      internalID: -4027595059420756522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c23922f3d1a39c42ad6ef8c5082362b
+      internalID: -989463290937873016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ec7c86a50b5e145b134dd0db48646c
+      internalID: 4290124736880148942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c675fe2bb62f2a24e80d7767685fdc9c
+      internalID: 4679744619276188240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbf84d2fec59d84b913c7a9858cca6a
+      internalID: -6885889800778859942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d823ca23f4ae64145bcd132095ae11c2
+      internalID: -8140494255025082415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a683597419f05f34eb6972b2671a0159
+      internalID: 7860832465699441537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24481eb7736ee9419e502089427e779
+      internalID: -5010969116919966044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19be345bb555c9645a8e77f0a2775eeb
+      internalID: 8731385492089599742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bca7d8c16a8f0f459ed276334429bff
+      internalID: 4601186006289791933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e31083bd97a73a41a06796c7c90242f
+      internalID: 8657207899371876264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf282b3a88acb3b44ba2528e66cbb0ec
+      internalID: -5313225248335792141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390eb5c75ddfc254f993b59d4453498a
+      internalID: 2493159136561900113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30eb630a01924c045b4db2853f20da14
+      internalID: -8253248141199293793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea3a46bc37cbc949bb8d561698fc048
+      internalID: -1909506402877663059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79d88ca90f9ffa4c9162e4bec6d1549
+      internalID: 9020461824172671498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497766ab50376fe4c8ca5f065c708111
+      internalID: 6595154901348739637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d83df1b9052344d899bce4528244dd
+      internalID: -8535292848312207437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fb8b231182c0c418ef010b95fff7bf
+      internalID: -5340693430196923452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9762f28f08ff649a4156d3704ff006
+      internalID: -2913808819343444289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafd7512c303d474da1060634a357f25
+      internalID: -3297863660187473933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cae0982777ae8540bef98755d934d0c
+      internalID: 8247670981391105667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de3c7c708105b347a8fad8b31c7dce0
+      internalID: -1750647729054394291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0830d598e3d97314c83b8b5b1e694434
+      internalID: 1089006393031839557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c91c3577ad7ac439b9860409d5d109
+      internalID: -6301606837973159123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41078f150c0b0ad478d9b12691dd7b0a
+      internalID: -6529114802412092093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec9f116e3b4ad644a7e5788f621f714
+      internalID: -7904666267861356198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063a5a760e568da4aa5cdbd7bbd4b9e2
+      internalID: 4060574351874801510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1baec0ccaa4e74abbfee9596eae26c
+      internalID: 8238782299173372672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itower_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2acb12557fb91a14f908c012a3bc41ab
+      internalID: 6900232552828703989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

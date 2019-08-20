@@ -36,6 +36,7 @@ public class PauseMenuScript : MonoBehaviour
     
     public void TurnOnPause()
     {
+        Deselecting();
         isGameOver = true;
         Time.timeScale = 0;
         PlayMenu.SetActive(false);
@@ -60,6 +61,20 @@ public class PauseMenuScript : MonoBehaviour
     public void UnpuaseButton()
     {
         TurnOffPause();
+    }
+
+    public void Deselecting()
+    {
+        TowerDrag[] towerDrags = FindObjectsOfType<TowerDrag>();
+        foreach(TowerDrag td in towerDrags)
+        {
+            td.ManualDeselect();
+        }
+        MinerDrag[] minerDrag = FindObjectsOfType<MinerDrag>();
+        foreach (MinerDrag md in minerDrag)
+        {
+            md.ManualDeselect();
+        }
     }
 
 }

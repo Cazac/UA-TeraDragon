@@ -1,0 +1,374 @@
+fileFormatVersion: 2
+guid: a9cbe694c7ccb1d41a7084d2d6bd5940
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4627304806471391993
+    second: lvlnbr
+  - first:
+      213: 7655985088438399144
+    second: lvlnbr_0
+  - first:
+      213: -3370110349098539275
+    second: lvlnbr_1
+  - first:
+      213: -8146089609139038458
+    second: lvlnbr_2
+  - first:
+      213: 4186910088169665223
+    second: lvlnbr_3
+  - first:
+      213: -3000602585585908250
+    second: lvlnbr_4
+  - first:
+      213: 7365162183493648413
+    second: lvlnbr_5
+  - first:
+      213: -7054959346914063041
+    second: lvlnbr_6
+  - first:
+      213: -83085310536032428
+    second: lvlnbr_7
+  - first:
+      213: -8913342250562287923
+    second: lvlnbr_8
+  - first:
+      213: 219776178785313532
+    second: lvlnbr_9
+  - first:
+      213: -3781807217041741211
+    second: lvlno_sheet_0
+  - first:
+      213: -6960646069542196000
+    second: lvlno_sheet_1
+  - first:
+      213: -7272365281582385919
+    second: lvlno_sheet_2
+  - first:
+      213: -6794178812870552311
+    second: lvlno_sheet_3
+  - first:
+      213: 7645631014640303049
+    second: lvlno_sheet_4
+  - first:
+      213: -2692068682640995445
+    second: lvlno_sheet_5
+  - first:
+      213: -6098951344974270625
+    second: lvlno_sheet_6
+  - first:
+      213: -537012453462866609
+    second: lvlno_sheet_7
+  - first:
+      213: 2879125351921016127
+    second: lvlno_sheet_8
+  - first:
+      213: -7740985479383168409
+    second: lvlno_sheet_9
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lvlno_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 12.5
+        width: 9
+        height: 12.5
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27573eb30b382414db55d7aea750bbca
+      internalID: -3781807217041741211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvlno_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 12.5
+        width: 9
+        height: 12.5
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1780698f7ae40404fbec768d3a547609
+      internalID: -6960646069542196000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvlno_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 12.5
+        width: 9
+        height: 12.5
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84cb75cb632c3d4c82c1e03cd10db6f
+      internalID: -7272365281582385919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvlno_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 12.5
+        width: 9
+        height: 12.5
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d6728d116600846bd15be229072c08
+      internalID: -6794178812870552311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvlno_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 12.5
+        width: 9
+        height: 12.5
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab53ddbee727594799032eb63b6dd59
+      internalID: 7645631014640303049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvlno_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 12.5
+        width: 9
+        height: 12.5
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21965ef1afa343846a0f8127a51bc4ae
+      internalID: -2692068682640995445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvlno_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0.5
+        width: 9
+        height: 12.5
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78042a332dc97146bc7296c90a199b3
+      internalID: -6098951344974270625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvlno_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0.5
+        width: 9
+        height: 12.5
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b472555367c5e4d428dc6197b6183466
+      internalID: -537012453462866609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvlno_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0.5
+        width: 9
+        height: 12.5
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7f6e24b5205c144884e59b98d6ddd9
+      internalID: 2879125351921016127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvlno_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0.5
+        width: 9
+        height: 12.5
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970da8606dd14534c8144c7b67bedbc1
+      internalID: -7740985479383168409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e44201f31ec573478ab43c5072fdd28
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

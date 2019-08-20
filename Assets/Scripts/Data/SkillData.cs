@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,13 +10,16 @@ public class SkillData : ScriptableObject
 
     [Header("Singular Damage")]
     public bool isDamageSingular;
-    public float singularDamage;
+    public int singularDamage;
 
     [Header("Constant Damage")]
     public bool isDamageConstant;
-    public float constantDamage;
+    public int constantDamage;
 
     [Header("Effects")]
     public float slowdown;
     public float poison;
+
+    [Header("SFX")]
+    public SoundObject skillSFX;
 }

@@ -1,11 +1,15 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 public class SkillRange : MonoBehaviour
 {
     [Header("Skill Controller")]
     public SkillScript skillController;
+
+    [Header("SFX")]
+    public SoundObject skillSFX;
 
     [Header("Particule Parents")]
     public GameObject backgroundParticules;
@@ -17,7 +21,7 @@ public class SkillRange : MonoBehaviour
 
     [Header("Skill Stats")]
     public float skillDuration = 0;
-    public float skillDamage = 0;
+    public int skillDamage = 0;
 
     //////////////////////////////////////////////////////////
 
@@ -67,8 +71,10 @@ public class SkillRange : MonoBehaviour
             skillDamage = skillController.skillData.constantDamage;
         }
 
+        //SFX
+        skillSFX = skillController.skillData.skillSFX;
+
         //TO DO EFFECTS
-        
     }
 
     ///////////////
@@ -78,6 +84,10 @@ public class SkillRange : MonoBehaviour
     ///////////////
     public IEnumerator StartSkill()
     {
+        //SFX
+        FindObjectOfType<SoundManager>().PlayOnUIClick(skillSFX, 0);
+
+
         //Background
         if (backgroundParticules != null)
         {
@@ -91,7 +101,7 @@ public class SkillRange : MonoBehaviour
         }
 
         //Wait
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(3f);
 
         //Release
         if (releaseParticules != null)
@@ -104,6 +114,8 @@ public class SkillRange : MonoBehaviour
         {
             ShootAll();
         }
+
+        yield return new WaitForSeconds(0.8f);
 
         //Destroy Parent
         skillController.RemoveSkill();

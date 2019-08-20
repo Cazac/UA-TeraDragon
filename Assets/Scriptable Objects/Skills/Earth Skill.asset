@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Earth Skill
   m_EditorClassIdentifier: 
   skillDuration: 0
-  isDamageSingular: 0
-  singularDamage: 0
+  isDamageSingular: 1
+  singularDamage: 50
   isDamageConstant: 0
   constantDamage: 0
   slowdown: 0
   poison: 0
+  skillSFX: {fileID: 11400000, guid: 846ffe68ab32eea4a8b015ca0b92d4ed, type: 2}

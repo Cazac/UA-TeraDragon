@@ -15,8 +15,8 @@ MonoBehaviour:
   EnemyPrefab: {fileID: 5183016958187622406, guid: a657b833a5a8ebf4fab21ec3d8c8d087,
     type: 3}
   NumberOfEnemyPerPos: 10
-  TimeUntilSpawn: 20
-  WaveTimer: 20
-  SpawnRate: 1
+  TimeUntilSpawn: 10
+  WaveTimer: 15
+  SpawnRate: 1.5
   Path: []
   ParentGameobject: {fileID: 0}

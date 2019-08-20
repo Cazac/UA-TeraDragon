@@ -92,6 +92,12 @@ TextureImporter:
   - first:
       213: 1598766035296523725
     second: etower_sheet_29
+  - first:
+      213: -1658688075690724895
+    second: etower_sheet_30
+  - first:
+      213: -8825450380426687374
+    second: etower_sheet_31
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -221,18 +227,18 @@ TextureImporter:
       name: etower_sheet_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 7
         y: 96
-        width: 46
-        height: 95
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b401ce13d31dae74ebd31310a97fdd3d
+      spriteID: c6afd4d2bbc1a5a4387a0c629d6e1b93
       internalID: 8188967525551602556
       vertices: []
       indices: 
@@ -242,18 +248,18 @@ TextureImporter:
       name: etower_sheet_1
       rect:
         serializedVersion: 2
-        x: 73
+        x: 71
         y: 96
-        width: 47
+        width: 50
         height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3db56c65fc2a17445b1f650eca948f79
+      spriteID: 85da01d30be49dc4c8f3b692c909df64
       internalID: 3638290906581578802
       vertices: []
       indices: 
@@ -263,18 +269,18 @@ TextureImporter:
       name: etower_sheet_2
       rect:
         serializedVersion: 2
-        x: 137
+        x: 135
         y: 96
-        width: 48
+        width: 50
         height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89d6b19fb5999f14ebb4d4ad4746b539
+      spriteID: fedeec177d867db43b547f8f5dfa5f47
       internalID: -1723183908289407901
       vertices: []
       indices: 
@@ -284,18 +290,18 @@ TextureImporter:
       name: etower_sheet_3
       rect:
         serializedVersion: 2
-        x: 201
+        x: 199
         y: 96
-        width: 46
-        height: 95
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7707037a6961a494aacfeda9f89e2f0c
+      spriteID: 627810d71695d184785e1150cfd48945
       internalID: -2405287467857046487
       vertices: []
       indices: 
@@ -305,18 +311,18 @@ TextureImporter:
       name: etower_sheet_4
       rect:
         serializedVersion: 2
-        x: 265
+        x: 263
         y: 96
-        width: 46
-        height: 94
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95eea59a3ef999d42b53fcb62256faa7
+      spriteID: 66ec6aaac3710ab45bda2c27ea182781
       internalID: 6155745905726427590
       vertices: []
       indices: 
@@ -326,18 +332,18 @@ TextureImporter:
       name: etower_sheet_5
       rect:
         serializedVersion: 2
-        x: 329
+        x: 327
         y: 96
-        width: 46
-        height: 93
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 453b3c133ed072244b53c0aac068614d
+      spriteID: 6619857dbdd9eeb46b67cbae12870de0
       internalID: 6305015300812598712
       vertices: []
       indices: 
@@ -347,18 +353,18 @@ TextureImporter:
       name: etower_sheet_6
       rect:
         serializedVersion: 2
-        x: 393
+        x: 391
         y: 96
-        width: 46
-        height: 93
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb27440bdf0d04e428678ce0d8b7bb54
+      spriteID: 7b4f8e7b3b3ca6f479145a882814e088
       internalID: 3531282073444878918
       vertices: []
       indices: 
@@ -368,18 +374,18 @@ TextureImporter:
       name: etower_sheet_7
       rect:
         serializedVersion: 2
-        x: 457
+        x: 455
         y: 96
-        width: 46
-        height: 94
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cd9c443bf5432644ade04231eeb8c73
+      spriteID: 1b1f942c6fbb8134086de5beace69041
       internalID: -7446506885978422609
       vertices: []
       indices: 
@@ -389,18 +395,18 @@ TextureImporter:
       name: etower_sheet_8
       rect:
         serializedVersion: 2
-        x: 521
+        x: 519
         y: 96
-        width: 46
-        height: 95
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecd4672de2709fd4da40d914ca32ff97
+      spriteID: cb83d36c38300e74b91792bdb044a5a7
       internalID: -418180082767973068
       vertices: []
       indices: 
@@ -410,18 +416,18 @@ TextureImporter:
       name: etower_sheet_9
       rect:
         serializedVersion: 2
-        x: 585
-        y: 0
-        width: 46
-        height: 192
+        x: 583
+        y: 96
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebf0102f497ddd747b5afefa7be32bbf
+      spriteID: 7db5bdcb680755e48905b421ae0e37bf
       internalID: 6141484739479042637
       vertices: []
       indices: 
@@ -431,18 +437,18 @@ TextureImporter:
       name: etower_sheet_10
       rect:
         serializedVersion: 2
-        x: 649
-        y: 0
-        width: 46
-        height: 192
+        x: 647
+        y: 96
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1368d1213f162b242b19c8b4e5a9df3e
+      spriteID: a17a77c6e542ad549a0f06e2aa449b08
       internalID: -6675891731021046196
       vertices: []
       indices: 
@@ -452,18 +458,18 @@ TextureImporter:
       name: etower_sheet_11
       rect:
         serializedVersion: 2
-        x: 713
+        x: 711
         y: 96
-        width: 46
-        height: 95
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44c379db55d758c4581a5701579d66a4
+      spriteID: ddfec4fdce084db48ad43ef34ccd228f
       internalID: -112598214000370169
       vertices: []
       indices: 
@@ -473,18 +479,18 @@ TextureImporter:
       name: etower_sheet_12
       rect:
         serializedVersion: 2
-        x: 777
+        x: 775
         y: 96
-        width: 46
-        height: 94
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 447fefafe62b24d418c1e0c86e02308c
+      spriteID: 11c9bc22f0b07bd43b245f59edf0cb02
       internalID: 4436197535303013780
       vertices: []
       indices: 
@@ -494,18 +500,18 @@ TextureImporter:
       name: etower_sheet_13
       rect:
         serializedVersion: 2
-        x: 841
+        x: 839
         y: 96
-        width: 46
-        height: 93
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef9647be5dc6afb4eb482a6be893d920
+      spriteID: 335f6931adf64bd4fb2f3bd04fea4907
       internalID: 1852929407391192456
       vertices: []
       indices: 
@@ -515,18 +521,18 @@ TextureImporter:
       name: etower_sheet_14
       rect:
         serializedVersion: 2
-        x: 905
+        x: 903
         y: 96
-        width: 46
-        height: 93
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5c3d6de91efa6e42a37d5f8511417e6
+      spriteID: 4b1a841d578800245bd8603d5790a2ca
       internalID: -7328809118175620470
       vertices: []
       indices: 
@@ -536,18 +542,18 @@ TextureImporter:
       name: etower_sheet_15
       rect:
         serializedVersion: 2
-        x: 969
+        x: 967
         y: 96
-        width: 46
-        height: 94
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95eda207060e8284d84d7c7b81e378d9
+      spriteID: 0fa5319f5ffaf0e408017752eda87b42
       internalID: -4963825838056971808
       vertices: []
       indices: 
@@ -557,18 +563,18 @@ TextureImporter:
       name: etower_sheet_16
       rect:
         serializedVersion: 2
-        x: 9
+        x: 7
         y: 0
-        width: 46
-        height: 95
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f3c6db3b3494a048b0a5c216154b146
+      spriteID: ef8f603274506414e854105eab8cf409
       internalID: 7383526819675358772
       vertices: []
       indices: 
@@ -578,18 +584,18 @@ TextureImporter:
       name: etower_sheet_17
       rect:
         serializedVersion: 2
-        x: 201
+        x: 71
         y: 0
-        width: 46
-        height: 95
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a59fabfab1de81645943366ed90c515d
+      spriteID: 19bd18cc90862c8448f555b77dedde72
       internalID: 1331175573940238533
       vertices: []
       indices: 
@@ -599,18 +605,18 @@ TextureImporter:
       name: etower_sheet_18
       rect:
         serializedVersion: 2
-        x: 265
+        x: 135
         y: 0
-        width: 46
-        height: 94
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2815301bf2ce0f9489c95e3a2a00cb96
+      spriteID: ef00fa1c32e67e34facd3d476baaac5e
       internalID: -3271759227441614001
       vertices: []
       indices: 
@@ -620,18 +626,18 @@ TextureImporter:
       name: etower_sheet_19
       rect:
         serializedVersion: 2
-        x: 329
+        x: 199
         y: 0
-        width: 46
-        height: 93
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4836a46ca39854349811f02457e824e7
+      spriteID: 3edcb496b8774764a87415175d472dab
       internalID: -3655949783640836547
       vertices: []
       indices: 
@@ -641,18 +647,18 @@ TextureImporter:
       name: etower_sheet_20
       rect:
         serializedVersion: 2
-        x: 393
+        x: 263
         y: 0
-        width: 46
-        height: 93
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa6cec51106543647a0bbaded8edbd92
+      spriteID: 246ff25d16afcb449985b2049f3f523b
       internalID: -3108345298857170912
       vertices: []
       indices: 
@@ -662,18 +668,18 @@ TextureImporter:
       name: etower_sheet_21
       rect:
         serializedVersion: 2
-        x: 457
+        x: 327
         y: 0
-        width: 46
-        height: 94
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1baca4bfd92743242a0520ad602c0de4
+      spriteID: c36bcf1ae12828c409493e9ebcdfb988
       internalID: -2727237053976256456
       vertices: []
       indices: 
@@ -683,18 +689,18 @@ TextureImporter:
       name: etower_sheet_22
       rect:
         serializedVersion: 2
-        x: 521
+        x: 391
         y: 0
-        width: 46
-        height: 95
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 560612bbdd610654c83d7169e9513044
+      spriteID: bb42db9c70ceab84a8bf0fb9d3439949
       internalID: -926361837519886284
       vertices: []
       indices: 
@@ -704,18 +710,18 @@ TextureImporter:
       name: etower_sheet_23
       rect:
         serializedVersion: 2
-        x: 713
+        x: 455
         y: 0
-        width: 46
-        height: 95
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcb2ab6da779d6c4e89ff5529ce2cf95
+      spriteID: ee86936d0a53d4c47989764af7f6bcba
       internalID: 7715716248376476169
       vertices: []
       indices: 
@@ -725,18 +731,18 @@ TextureImporter:
       name: etower_sheet_24
       rect:
         serializedVersion: 2
-        x: 777
+        x: 519
         y: 0
-        width: 46
-        height: 94
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa8cc379161ef32448983b2b3356b1ae
+      spriteID: 5d3db3764a4842d47a8c055e7f22ef74
       internalID: -1142696851534874622
       vertices: []
       indices: 
@@ -746,18 +752,18 @@ TextureImporter:
       name: etower_sheet_25
       rect:
         serializedVersion: 2
-        x: 841
+        x: 583
         y: 0
-        width: 46
-        height: 93
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcf165f2dbe8d6d4aabcc4e262c86483
+      spriteID: b24daa6c243c7c7459a7c233c96b7f3a
       internalID: -6148237959494240661
       vertices: []
       indices: 
@@ -767,18 +773,18 @@ TextureImporter:
       name: etower_sheet_26
       rect:
         serializedVersion: 2
-        x: 905
+        x: 647
         y: 0
-        width: 46
-        height: 93
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37b0a408fb7c49547bb496cdb5b03481
+      spriteID: 236e98e9786c3204f913c1ebb607bfbd
       internalID: -3193116655281816147
       vertices: []
       indices: 
@@ -788,18 +794,18 @@ TextureImporter:
       name: etower_sheet_27
       rect:
         serializedVersion: 2
-        x: 969
+        x: 711
         y: 0
-        width: 46
-        height: 94
+        width: 50
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6e07bef6b5eaa048967d7e09e6c33b4
+      spriteID: 58be4ad9c1d701b46b57ecf3dc545a50
       internalID: -6363230968580806517
       vertices: []
       indices: 
@@ -809,9 +815,9 @@ TextureImporter:
       name: etower_sheet_28
       rect:
         serializedVersion: 2
-        x: 70
+        x: 775
         y: 0
-        width: 54
+        width: 50
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -820,7 +826,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d3025ded9a957c4191e27dd36367a5a
+      spriteID: 972a77f2e732c2a419d2d813e83b2b58
       internalID: -352115577995338407
       vertices: []
       indices: 
@@ -830,9 +836,9 @@ TextureImporter:
       name: etower_sheet_29
       rect:
         serializedVersion: 2
-        x: 133
+        x: 839
         y: 0
-        width: 56
+        width: 50
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -841,8 +847,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0dad546c5276b04ca5b7341ff38b1d2
+      spriteID: 8bec91ed243c0f149a2a0ff703787783
       internalID: 1598766035296523725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: etower_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5bb8c9f99d42d64abfb1641a2db671a
+      internalID: -1658688075690724895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: etower_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e938c4ab07e5944419d3c7069bf97583
+      internalID: -8825450380426687374
       vertices: []
       indices: 
       edges: []

@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: Earth Tower
   m_EditorClassIdentifier: 
   TowerStartingLevel: 1
+  shootingSFX: {fileID: 11400000, guid: 9cd31f1fc2485314692410f8759fc4b8, type: 2}
   towerSprite_T1: {fileID: 21300000, guid: 0e20eae5f1f9b7b4c90da585c21db79f, type: 3}
   projectile_T1: {fileID: 11400000, guid: 24a4bbc60ae8ee24aa0f4e00183f8041, type: 2}
-  towerRange_T1: 3
+  towerRange_T1: 15
   towerReloadSpeed_T1: 5
   towerSprite_T2: {fileID: 21300000, guid: 0e20eae5f1f9b7b4c90da585c21db79f, type: 3}
   projectile_T2: {fileID: 11400000, guid: 1319cdc80e1dd0946af475d605c2a0e4, type: 2}
-  towerRange_T2: 4
+  towerRange_T2: 15
   towerReloadSpeed_T2: 4
   towerSprite_T3: {fileID: 21300000, guid: 0e20eae5f1f9b7b4c90da585c21db79f, type: 3}
   projectile_T3: {fileID: 11400000, guid: 5aefa6c2e0ae9b541be30ef30253af81, type: 2}
-  towerRange_T3: 5
+  towerRange_T3: 15
   towerReloadSpeed_T3: 3.5

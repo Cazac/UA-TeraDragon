@@ -7,6 +7,7 @@ public class TowerData: ScriptableObject
 {
     [Header("Placement Tier")]
     public int TowerStartingLevel;
+    public SoundObject shootingSFX;
 
     [Header("Tower Tier 1")]
     public Sprite towerSprite_T1;

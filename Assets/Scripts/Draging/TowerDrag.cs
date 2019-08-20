@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using WaveSystem;
 
 ///////////////
 /// <summary>
 ///
-/// TD_TowerDrag is used to drag and drop all towers into the game
+/// TowerDrag is used to drag and drop all towers into the game. 
+/// A UI version of the tower is attached to the mouse to drag and when dropped if the tile is valid,
+/// a real tower that can fire is placed.
 ///
 /// </summary>
 ///////////////
@@ -23,8 +24,10 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     [Header("Parent Gameobject")]
     public GameObject towerParent;
 
-    [Header("UI_SoundEffect onclick")]
-    public SoundObject soundEffect;
+    [Header("Sound Effects")]
+    public SoundObject towerDrag_SFX;
+    public SoundObject towerPlacement_SFX;
+    public SoundObject towerError_SFX;
 
     [Header("Player Stats")]
     public PlayerStats playerStats;
@@ -32,14 +35,13 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     [Header("Color")]
     public string towerColor;
 
-    //Dragging Tower
-    private GameObject currentTower;
-
     //Managers
     private TileNodes tileNodes;
     private SoundManager soundManager;
-    private WaveManager waveManager;
     private CameraPanningCursor cameraPanningCursor;
+
+    //Current dragged tower
+    private GameObject currentTower;
 
     //TO DO HARD CODED COST
     private int towerCost = 5;
@@ -48,7 +50,7 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     private void Start()
     {
-        waveManager = GameObject.FindObjectOfType<WaveManager>();
+        //Setup Managers
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
         soundManager = GameObject.FindObjectOfType<SoundManager>();
         cameraPanningCursor = GameObject.FindObjectOfType<CameraPanningCursor>();
@@ -58,15 +60,15 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     ///////////////
     /// <summary>
-    /// Dragging a tower will charge the player the cost then create a drag version of the Gameobject.
+    /// Dragging a tower will charge the player the cost then create a drag version of the Gameobject attached to the cursor.
     /// </summary>
     ///////////////
     public void OnBeginDrag(PointerEventData eventData)
     {
-
+        //Check if the button is usable
         if (gameObject.GetComponent<Button>().interactable)
         {
-            //Charge Player
+            //Charge player for the tower
             if (towerColor == "Red")
             {
                 playerStats.crystalsOwned_Red -= towerCost;
@@ -84,43 +86,48 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 playerStats.crystalsOwned_Yellow -= towerCost;
             }
 
-            playerStats.UpdateCrystalUI();
-
-            //Spawn Tower Drag
+            //Spawn Drag Tower 
             currentTower = Instantiate(towerPrefab_UI);
-            soundManager.PlayOnUIClick(soundEffect);
+
+            //Spawn SFX
+            soundManager.PlayOnUIClick(towerDrag_SFX, 0);
         }
         else
         {
             //Error SFX
-            Debug.Log("No Money");
+            //soundManager.PlayOnUIClick(towerError_SFX);
         }
-
     }
 
 
     ///////////////
     /// <summary>
-    /// Undocumented
+    /// Every frame the curosr moves make the current dragged tower follow it.
     /// </summary>
     ///////////////
     public void OnDrag(PointerEventData eventData)
     {
+
+        //Check for a tower
         if (currentTower != null)
         {
-            //currentTower.transform.position = cursor.transform.position;
+            //Get cursor position
             Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             cursorPosition.z = 0;
 
+            //Move tower
             currentTower.transform.position = cursorPosition;
         }
+
+        //usefull ???
         cameraPanningCursor.IsUIDragging = true;
     }
 
 
     ///////////////
     /// <summary>
-    /// Raycast the tilemap looking for a node under the mouse when the tower is dropped onto the map, validation check the tile then add it to the map. If not valid remove the tower from the cursor.
+    /// Raycast the tilemap looking for a node under the mouse when the tower is dropped onto the map, 
+    /// validation check the tile then add it to the map. If not valid remove the tower from the cursor.
     /// </summary>
     ///////////////
     public void OnEndDrag(PointerEventData eventData)
@@ -137,50 +144,55 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             //Check hit tile name
             string tileTypeName = hit.collider.gameObject.name;
 
+            //Dragging an empty tower
+            if (currentTower == null)
+            {
+                return;
+            }
+
+
             if (hit.collider.GetComponent<WorldTile>() != null && hit.collider.GetComponent<WorldTile>().towering)
             {
-                //Create Spawn Tower
+                //Create real tower on node
                 GameObject newTower = Instantiate(towerPrefab_Spawn, hit.collider.gameObject.transform.position, Quaternion.identity, towerParent.transform);
+
+                //Placement SFX
+                soundManager.PlayOnUIClick(towerPlacement_SFX, 0.1f);
 
                 //Remove old tower
                 Destroy(currentTower);
+
+                // Place new tower
+                newTower.transform.position = new Vector3 (newTower.transform.position.x, newTower.transform.position.y, -10 + hit.collider.transform.position.y * 0.01f);
                 hit.collider.GetComponent<WorldTile>().towering = false;
                 return;
             }
             else
             {
                 //No Match
-                print("No Matching Value, Destroy Miner");
-                Destroy(currentTower);
-                RefundDragTower();
-                return;
+                //print("No Matching Value, Destroy Miner");
+                ManualDeselect();
             }
-
         }
         else
         {
             //No Raycast
-            print("No Raycast Hit, Destroy Tower");
-            Destroy(currentTower);
-            RefundDragTower();
-            return;
+            //print("No Raycast Hit, Destroy Tower");
+            ManualDeselect();
         }
-
-
-
-
-        // ???
-        cameraPanningCursor.IsUIDragging = false;
     }
 
 
-
+    ///////////////
+    /// <summary>
+    /// Give the player the money back and remove the dragged tower.
+    /// </summary>
+    ///////////////
     public void RefundDragTower()
     {
+        //Check for a tower
         if (currentTower != null)
         {
-            print("Refund Tower");
-
             //Refund Player
             if (towerColor == "Red")
             {
@@ -198,12 +210,15 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             {
                 playerStats.crystalsOwned_Yellow += towerCost;
             }
-
-            playerStats.UpdateCrystalUI();
-            Destroy(currentTower);
         }
     }
 
+    public void ManualDeselect()
+    {
+        Destroy(currentTower);
+        RefundDragTower();
+        return;
+    }
     /////////////////////////////////////////////////////////////////
 }
 

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 03ad1404bc84b5b4fb7a7512e7066c32
   - enabled: 1
-    path: Assets/Scenes/Main Game (Full Merge).unity
+    path: Assets/Scenes/Main Game.unity
     guid: b00a226472b0d204f8011590902bdad6
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 3a9bb37f434356f4899777d69792d55a
   m_configObjects: {}

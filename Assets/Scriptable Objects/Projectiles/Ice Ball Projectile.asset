@@ -19,6 +19,8 @@ MonoBehaviour:
   projectileSpeed: 20
   projectileSlowdown: 0.5
   projectileSlowdownTime: 0.7
+  projectilePoison: 0
+  projectilePoisonTime: 0
   isExplosive: 0
   explosionRadius: 0
   explosionLinger: 0
@@ -26,5 +28,5 @@ MonoBehaviour:
   explosionSlowdown: 0
   isBeam: 0
   beamDamage: 0
-  beamSlowdown: 0
+  beamReload: 0
   beamChainTargets: 0

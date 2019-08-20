@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ public class ProjectileData : ScriptableObject
 
     [Header("Projectile Data")]
     public bool isProjectile;
-    public float projectileDamage;
+    public int projectileDamage;
     public float projectileSpeed;
     public float projectileSlowdown;
     public float projectileSlowdownTime;
@@ -21,12 +21,12 @@ public class ProjectileData : ScriptableObject
     public bool isExplosive;
     public float explosionRadius;
     public float explosionLinger;
-    public float explosionDamage;
+    public int explosionDamage;
     public float explosionSlowdown;
 
     [Header("Beam Data")]
     public bool isBeam;
-    public float beamDamage;
+    public int beamDamage;
     public float beamReload;
     public int beamChainTargets;
 }

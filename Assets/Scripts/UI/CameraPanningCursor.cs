@@ -82,7 +82,7 @@ public class CameraPanningCursor : MonoBehaviour
 
         StartCoroutine(ReshiftCam( 11.2f));
 
-        SetCameraBounds(4);
+        SetCameraBounds(26);
     }
 
     /// <summary>

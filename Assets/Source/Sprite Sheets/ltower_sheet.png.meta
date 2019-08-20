@@ -1,7 +1,103 @@
 fileFormatVersion: 2
 guid: 45f1eff1b92210241afb26462beb8f22
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4058914403223150726
+    second: ltower_sheet_0
+  - first:
+      213: -2879786441658668696
+    second: ltower_sheet_1
+  - first:
+      213: 3034730470458347233
+    second: ltower_sheet_2
+  - first:
+      213: 7898754127644667875
+    second: ltower_sheet_3
+  - first:
+      213: 3324798145503896805
+    second: ltower_sheet_4
+  - first:
+      213: 8251532996716443632
+    second: ltower_sheet_5
+  - first:
+      213: -876395576691245443
+    second: ltower_sheet_6
+  - first:
+      213: -884380378939296174
+    second: ltower_sheet_7
+  - first:
+      213: -4173682286280713644
+    second: ltower_sheet_8
+  - first:
+      213: -3801126526103040792
+    second: ltower_sheet_9
+  - first:
+      213: 6318814793798892230
+    second: ltower_sheet_10
+  - first:
+      213: -4248719687101311776
+    second: ltower_sheet_11
+  - first:
+      213: 1175439688282011539
+    second: ltower_sheet_12
+  - first:
+      213: -5868241888069377381
+    second: ltower_sheet_13
+  - first:
+      213: -4112568003726304897
+    second: ltower_sheet_14
+  - first:
+      213: 7813323575000294274
+    second: ltower_sheet_15
+  - first:
+      213: 7823803717740376520
+    second: ltower_sheet_16
+  - first:
+      213: -4338838755713804785
+    second: ltower_sheet_17
+  - first:
+      213: -320226447281676446
+    second: ltower_sheet_18
+  - first:
+      213: -4057738741347481034
+    second: ltower_sheet_19
+  - first:
+      213: -7123490585801530114
+    second: ltower_sheet_20
+  - first:
+      213: -7068796713093080965
+    second: ltower_sheet_21
+  - first:
+      213: 7588382907380040779
+    second: ltower_sheet_22
+  - first:
+      213: 184376360747708816
+    second: ltower_sheet_23
+  - first:
+      213: 3471273376983086555
+    second: ltower_sheet_24
+  - first:
+      213: 6358528589284043617
+    second: ltower_sheet_25
+  - first:
+      213: -2197863597251925471
+    second: ltower_sheet_26
+  - first:
+      213: -5092865059092588321
+    second: ltower_sheet_27
+  - first:
+      213: 1437560397435578161
+    second: ltower_sheet_28
+  - first:
+      213: 6742668166215968548
+    second: ltower_sheet_29
+  - first:
+      213: -3121409452561698907
+    second: ltower_sheet_30
+  - first:
+      213: 6158865249635391836
+    second: ltower_sheet_31
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +136,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +165,692 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ltower_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83eb7b648577059419b2fe3f6971c214
+      internalID: 4058914403223150726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4118d2fdc311df47936cfda8cfe3ffa
+      internalID: -2879786441658668696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1bd8846a4c3a040b334522e7cf269f
+      internalID: 3034730470458347233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fbad244f9373745a6edade60c53ffe
+      internalID: 7898754127644667875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b16d7e2d6cbd4447880b966607be433
+      internalID: 3324798145503896805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb41dec197dc9d43a7139b0ec43b45f
+      internalID: 8251532996716443632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bb431c71a4934448d61771073291f1
+      internalID: -876395576691245443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633d89bada464a047a7c581f62e31e32
+      internalID: -884380378939296174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e49a2373b36ec4fbf7fbafdea67b92
+      internalID: -4173682286280713644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f846cee978c77448bf5a973d2617ff
+      internalID: -3801126526103040792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100950964bc343a4ab9fa6170318614c
+      internalID: 6318814793798892230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0fc191c272bb2428cedf2ebc1b412a
+      internalID: -4248719687101311776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165683e11fa483247976a45efe550344
+      internalID: 1175439688282011539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71b723441cae2643a2de1cca0c81f67
+      internalID: -5868241888069377381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4ad460caa4e9e489d02f901c456e7f
+      internalID: -4112568003726304897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 96
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a413e4635748d34697b012a3b9978a1
+      internalID: 7813323575000294274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e216ddad38cd334fab0038ce6ab6337
+      internalID: 7823803717740376520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb9be82ec2b4204091e9e1ad178ce11
+      internalID: -4338838755713804785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8bdcfba562031c449dd9ef6c5ad77c2
+      internalID: -320226447281676446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777ed8804f9a38049b3880d1700df656
+      internalID: -4057738741347481034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94d1d0a66bd6e54494de95c16c8471e
+      internalID: -7123490585801530114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc6209dd388fbb4b847d49311ecbe34
+      internalID: -7068796713093080965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e8bb5334e36944197d28df473b3004
+      internalID: 7588382907380040779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65702d46c90f9b44ac214877f23ae23
+      internalID: 184376360747708816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1773a0d17b6ad94da7e3212b20c3c42
+      internalID: 3471273376983086555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa41ca00c8339a4ab61ddc104503e7a
+      internalID: 6358528589284043617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e677b6572b5d83646a23c0f94a0422f6
+      internalID: -2197863597251925471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9d3c93237ffc3428263a8a1d157ed0
+      internalID: -5092865059092588321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79d3cef1d9a40640ae187880d92bebc
+      internalID: 1437560397435578161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c627c7d21982143926d8510b4f019e
+      internalID: 6742668166215968548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ca544db8ed02640b032278f264d249
+      internalID: -3121409452561698907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ltower_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 0
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439a25f6aa57f254ba40758cff67addd
+      internalID: 6158865249635391836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

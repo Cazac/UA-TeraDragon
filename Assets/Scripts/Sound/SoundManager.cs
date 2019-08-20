@@ -8,6 +8,12 @@ using WaveSystem;
 
 public class SoundManager : MonoBehaviour
 {
+    [Header("SFX Prefab")]
+    public GameObject SFXPrefab;
+
+    [Header("SFX Parent")]
+    public GameObject SFXParent;
+
     public AudioSource mainAudioSourceSoundtrack;
     public AudioSource mainAudioSourceUI;
     public bool IsMuteSoundtrack { get; set; }
@@ -24,6 +30,8 @@ public class SoundManager : MonoBehaviour
     private WaveManager waveManager;
     private bool autoControl = true;
 
+    /////////////////////////////////////////////////////////////////
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -33,19 +41,13 @@ public class SoundManager : MonoBehaviour
     {
         //AutoDestroySelf();
     }
-    private void AutoDestroySelf()
-    {
-        if (GameObject.FindObjectsOfType<SoundManager>().Length > 1)
-        {
-            DestroyImmediate(this.gameObject);
-            //this.GetComponent<AudioSource>().clip = null;
-        }
-    }
 
     private void Start()
     {
         waveManager = GameObject.FindObjectOfType<WaveManager>();
     }
+
+    /////////////////////////////////////////////////////////////////
 
     private void OnLevelWasLoaded(int level)
     {
@@ -57,11 +59,21 @@ public class SoundManager : MonoBehaviour
         triggerOnLevelLoad = true;
     }
 
-
     private void OnScenceLoad()
     {
         triggerOnLevelLoad = true;
     }
+
+    private void AutoDestroySelf()
+    {
+        if (GameObject.FindObjectsOfType<SoundManager>().Length > 1)
+        {
+            DestroyImmediate(this.gameObject);
+            //this.GetComponent<AudioSource>().clip = null;
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////
 
     private void Update()
     {
@@ -73,7 +85,9 @@ public class SoundManager : MonoBehaviour
         }
 
         if (!mainAudioSourceSoundtrack.GetComponent<AudioSource>().isPlaying/* && autoControl*/)
+        {
             LoopThroughSoundList(soundClips);
+        }
 
         //if (!autoControl)
         //{
@@ -93,17 +107,36 @@ public class SoundManager : MonoBehaviour
         foreach (var clip in soundClips)
         {
             if (clip.SoundName.Contains(soundName))
-                PlaySoundByName(clip);
+            {
+                PlaySoundByObject(clip);
+            }
         }
     }
 
-    public void PlayOnUIClick(SoundObject clip)
+    public void PlayOnUIClick(SoundObject clip, float pitchRange)
     {
-        if (mainAudioSourceUI.GetComponent<AudioSource>().isPlaying)
-            mainAudioSourceUI.clip = null;
-        mainAudioSourceUI.clip = clip.AudioClip;
+ 
+        GameObject newSFX = Instantiate(SFXPrefab, SFXParent.transform);
 
+        newSFX.GetComponent<AudioSource>().clip = clip.AudioClip;
+        newSFX.GetComponent<AudioSource>().pitch = 1 + (UnityEngine.Random.Range(-pitchRange, pitchRange));
+        newSFX.GetComponent<AudioSource>().volume = mainAudioSourceUI.volume;
+        newSFX.GetComponent<AudioSource>().Play();
+
+        //Setup Auto Destruct
+        newSFX.GetComponent<SelfDestruct>().Setup(clip.AudioClip.length);
+
+
+        /*
+        if (mainAudioSourceUI.GetComponent<AudioSource>().isPlaying)
+        {
+            mainAudioSourceUI.clip = null;
+        }
+
+        mainAudioSourceUI.clip = clip.AudioClip;
         mainAudioSourceUI.Play();
+
+        */
     }
 
     private void LoopThroughSoundList(SoundObject[] clips)
@@ -112,22 +145,22 @@ public class SoundManager : MonoBehaviour
         {
             if (clip.SoundName.Contains("Menu") && SceneManager.GetActiveScene().name.Contains("Menu") && autoControl)
             {
-                PlaySoundByName(clip);
+                PlaySoundByObject(clip);
             }
 
             if (clip.SoundName.Contains("Game") && SceneManager.GetActiveScene().name.Contains("Game") && autoControl)
             {
-                PlaySoundByName(clip);
+                PlaySoundByObject(clip);
             }
 
             if(clip.SoundName.Contains("Inter") && !autoControl)
             {
-                PlaySoundByName(clip);
+                PlaySoundByObject(clip);
             }
         }
     }
 
-    public void PlaySoundByName(SoundObject audioClip)
+    public void PlaySoundByObject(SoundObject audioClip)
     {
         //Set default value from SoundObject
         mainAudioSourceSoundtrack.clip = audioClip.AudioClip;
@@ -136,10 +169,11 @@ public class SoundManager : MonoBehaviour
         mainAudioSourceSoundtrack.Play();
 
         //Begin lerping volume of sound
-        //if (audioClip.IsAllowedAudioDampening == true)
-        //{
-        //    StartCoroutine(AudioVolumeDampeningOnLoad(mainAudioSourceSoundtrack, 0.5f, mainAudioSourceSoundtrack.volume, 0.2f));
-        //}
+        if (audioClip.IsAllowedAudioDampening == true)
+        {
+            //Debug.Log("Volume Dampening????");
+            StartCoroutine(AudioVolumeDampeningOnLoad(mainAudioSourceSoundtrack, 0.1f, mainAudioSourceSoundtrack.volume, 0.25f));
+        }
     }
 
     private IEnumerator AudioVolumeDampeningOnLoad(AudioSource audioSource, float smallestLerpValue, float initialVolumeValue, float lerpTime)
@@ -150,18 +184,30 @@ public class SoundManager : MonoBehaviour
 
         while (audioSource.volume < initialVolumeValue)
         {
-            if (audioSource.volume >= 0.98)
+            if (audioSource.volume >= initialVolumeValue)
             {
-                audioSource.volume = 1;
-                Debug.Log("Coroutine stopped");
+                audioSource.volume = initialVolumeValue;
+                //Debug.Log("Coroutine stopped");
                 StopCoroutine(AudioVolumeDampeningOnLoad(audioSource, smallestLerpValue, initialVolumeValue, lerpTime));
             }
-            audioSource.volume += lerpTime * Time.deltaTime;
-            yield return null;
+
+
+            if (Time.timeScale == 1)
+            {
+                audioSource.volume += lerpTime * Time.deltaTime;
+            }
+            else
+            {
+                audioSource.volume += lerpTime * 0.02f;
+            }
+
+            yield return 0.1f;
         }
 
        
     }
+
+    /////////////////////////////////////////////////////////////////
 
     public void VolumeChangeSoundtrack(Slider slider)
     {
@@ -172,6 +218,8 @@ public class SoundManager : MonoBehaviour
     {
         mainAudioSourceUI.volume = slider.value;
     }
+
+    /////////////////////////////////////////////////////////////////
 
     public void MuteUI()
     {
@@ -194,14 +242,14 @@ public class SoundManager : MonoBehaviour
         {
             IsMuteSoundtrack = false;
         }
-
         else
         {
             IsMuteSoundtrack = true;
         }
+
         mainAudioSourceSoundtrack.mute = IsMuteSoundtrack;
     }
 
-
+    /////////////////////////////////////////////////////////////////
 }
 

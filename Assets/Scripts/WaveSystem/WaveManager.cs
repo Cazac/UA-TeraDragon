@@ -130,12 +130,6 @@ namespace WaveSystem
                 if (currentTimer.WaveCountdown())
                 {
                     EnableSpawning = false;
-                    if (soundManager != null)
-                    {
-                        Debug.Log("Inter");
-                        soundManager.PlaySpecificSound("Inter");
-                        soundManager.ReturnControl = true;
-                    }
                 }
             }
 
@@ -144,12 +138,8 @@ namespace WaveSystem
             if (currentTimer != null && EnableSpawning == false && !AllWaveCompleted() && waveParent.transform.childCount <= 0)
             {
                 if (currentTimer.NextWaveCountdown())
-                    EnableSpawning = true;
-
-                if (soundManager != null)
                 {
-                    soundManager.PlaySpecificSound("Main");
-                    soundManager.ReturnControl = true;
+                    EnableSpawning = true;
                 }
             }
         }
@@ -157,7 +147,7 @@ namespace WaveSystem
         //////////////////////////////////////////////////////////
 
         /// <summary>
-        ///Create a new timer instance when a wave is finished
+        ///     Create a new timer instance when a wave is finished
         /// </summary>
         /// <param name="timeUntilSpawn">Timer between wave until next wave starts</param>
         /// <param name="waveTimer">Timer for current wave</param>
@@ -172,11 +162,11 @@ namespace WaveSystem
         }
 
         /// <summary>
-        ///Main method for spawning a single type of enemy in multiple position
+        ///     Main method for spawning a single type of enemy in multiple position
         /// </summary>
         /// <remarks>
-        ///Use IEnumerator and must only be called in Start()
-        ///</remarks>
+        ///     Use IEnumerator and must only be called in Start()
+        /// </remarks>
         public IEnumerator SpawnSingleEnemyPerWave()
         {
             waveIndex = 0;
@@ -230,11 +220,17 @@ namespace WaveSystem
 
                         EnableSpawning = true;
 
-                        //if (soundManager != null)
-                        //{
-                        //    soundManager.ReturnControl = false;
-                        //    soundManager.PlaySpecificSound("Inter");
-                        //}
+                        if (soundManager != null)
+                        {
+
+                            //ENDING A WAVE SPAWNING
+
+                            //soundManager.ReturnControl = false;
+
+                            //Debug.Log("Interwave");
+
+                            //soundManager.PlaySpecificSound("Inter");
+                        }
                     }
 
                     else if (AllWaveCompleted())
@@ -258,7 +254,7 @@ namespace WaveSystem
  
             if (waveIndex > waves.Length - 1)
             {
-                Debug.Log("End of all waves");
+                //Debug.Log("End of all waves");
 
                 Winner();
 

@@ -26,6 +26,14 @@ public class EnemyScript : MonoBehaviour
 
     private bool isAttacking = false;
 
+    [Header("Enemy Statues")]
+    // percentage, (1 - cuurentcold) is how much you slow the enemy by
+    public float currentCold;
+    // could be the damge the enemy takes per second
+    public float currentFire;
+
+    private List<EnemyStatus> statues;
+
     // This seems better because allows us to change speed and reverse it
     Vector3 startPosition, endPosition, dir;
 
@@ -36,6 +44,7 @@ public class EnemyScript : MonoBehaviour
 
     private void Awake()
     {
+        statues = new List<EnemyStatus>();
         tileNodes = GameObject.FindObjectOfType<TileNodes>();
         waveManager = GameObject.FindObjectOfType<WaveManager>();
         playerStats = GameObject.FindObjectOfType<PlayerStats>();  
@@ -69,9 +78,8 @@ public class EnemyScript : MonoBehaviour
     }
 
     private void Update()
-    {
-        RefreshSlow();
-
+    { 
+        ProcessStatues();
         if (currentBarrier != null)
         {
             if (isAttacking)
@@ -98,8 +106,9 @@ public class EnemyScript : MonoBehaviour
         endPosition = currentWaypoints[currentWaypoint + 1].transform.position;
         dir = endPosition - StartPosition;
 
-        transform.position += dir.normalized * currentSpeed * Time.fixedDeltaTime;
+        transform.position += dir.normalized * GetMovementSpeed() * Time.fixedDeltaTime;
 
+        //If Close enough to base
         if (Vector3.Distance(gameObject.transform.position, endPosition) < 0.5f)
         {
             if (currentWaypoint < currentWaypoints.Count - 2)
@@ -119,8 +128,6 @@ public class EnemyScript : MonoBehaviour
                 {
                     //Debug.Log("Death???");
                 }
-
-
   
                 //Deal Damage
                 playerStats.RemoveLife(1);
@@ -129,8 +136,70 @@ public class EnemyScript : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        
+        //Running Away From base? Fuck it you die.
+        if (Vector3.Distance(gameObject.transform.position, playerStats.baseNode.transform.position) > 400f)
+        {
+            //Base Damage Destruction
+            Destroy(gameObject);
+        }
 
     }
+
+    /// <summary>
+    /// Updates all status cooldowns and take care of activating and desactivating them.
+    /// </summary>
+    private void ProcessStatues()
+    {
+        float timePassed = Time.fixedDeltaTime;
+        currentCold = 0;
+        currentFire = 0;
+        foreach (EnemyStatus es in statues)
+        {
+            switch (es.status)
+            {
+                case ENEMY_STATUS.COLD:
+                    if (es.statusEffect > currentCold)
+                        currentCold = es.statusEffect;
+                    break;
+                case ENEMY_STATUS.FIRE:
+                    if (es.statusEffect > currentFire)
+                        currentFire = es.statusEffect;
+                    break;
+            }
+
+            es.countdown -= timePassed;
+        }
+        for(int i = 0; i < statues.Count; i++)
+        {
+            if(statues[i].countdown <= 0f)
+            {
+                statues.RemoveAt(i);
+                i--;
+            }
+        }
+
+        // depending on the statues affecting the enmy, change the color of the sprite.
+        if (currentCold > 0f)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
+        }
+        else
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+
+
+    }
+
+
+    private float GetMovementSpeed()
+    {
+        float currentSpeed = speed;
+        currentSpeed = currentSpeed * (1 - currentCold);
+        return currentSpeed;
+    }
+
 
     /// <summary>
     /// Recalulate path when current path has a barrier
@@ -198,8 +267,6 @@ public class EnemyScript : MonoBehaviour
     ///////////////
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-
         //Check for collision with the ending tile - USELESS IN CURRENT VERSION????????
         if (collision.transform.GetComponent<BaseNode>() != null)
         {
@@ -231,70 +298,76 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage)
+
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
+    public void TakeDamage(int damage)
     {
         //Normalize float vs int???
-        CurrentHealth -= (int)damage;
+        CurrentHealth -= damage;
 
         //Armor?????? TO DO
-
+        
+        //TEXT
+        PopupText(damage);
+        
         if (CurrentHealth <= 0)
         {
-            print("Death takes me...");
+            //print("Death takes me...");
             Destroy(gameObject);
         }
     }
 
-
-    public void ApplySlow(float slowSpeed, float slowTimer)
+    private void PopupText(int damage)
     {
-        //Apply Color
-        gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
+        //Normalize float vs int???
+        int normalDamage = damage;
+        
+        //Get From PLayer Stasts
+        GameObject textPrefab = playerStats.popupDamageText_Prefab;
 
-        if (currentSpeed == speed)
-        {
-            //Apply Effect + Timer
-            currentSpeed = currentSpeed * slowSpeed;
-            speedWearOffTime = slowTimer;
-        }
-        else
-        {
-            //If can be slower, slow down more
-            if ((speed * slowSpeed) < currentSpeed)
-            {
-                currentSpeed = speed * slowSpeed;
-            }
 
-            //Timer Refresh
-            if (speedWearOffTime <= 0)
-            {
-                //New Timer
-                speedWearOffTime = slowTimer;
-            }
-            else
-            {
-                //Stack Timer
-                speedWearOffTime += slowTimer;
-            }
-        }
+        //Create
+        GameObject popupText = Instantiate(textPrefab, transform.position, Quaternion.identity);
+
+        //Setup
+        DamagePopup dmgPopup = popupText.GetComponent<DamagePopup>();
+
+
+        dmgPopup.Setup(normalDamage);
+
     }
 
-
-    private void RefreshSlow()
+   
+    /// <summary>
+    /// Add a temporary slow effect the to monster
+    /// </summary>
+    /// <param name="slowSpeed">Must bewteen 0 and 1, and indicates the percentage that the enemy is slowed</param>
+    /// <param name="slowTimer">Determines how long the slow lasts</param>
+    public void AddSlow(float slowSpeed, float slowTimer)
     {
-        if (speedWearOffTime < 0)
+        EnemyStatus newStatus = new EnemyStatus();
+
+        newStatus.countdown = slowTimer;
+        if (gameObject.name.Contains("BOSS"))
         {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-            currentSpeed = speed;
-            speedWearOffTime = 0;
+            newStatus.countdown /= 2;
         }
-        else
-        {
-            speedWearOffTime -= Time.deltaTime;
-        }
+        newStatus.statusEffect = slowSpeed;
+
+        statues.Add(newStatus);
+
     }
+  
 
-
+    ///////////////
+    /// <summary>
+    /// UNDOCUMENTED
+    /// </summary>
+    ///////////////
     public IEnumerator AttackBarrier(BarrierData barrierData)
     {
         while (isAttacking)
