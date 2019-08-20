@@ -171,18 +171,14 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             {
                 //No Match
                 //print("No Matching Value, Destroy Miner");
-                Destroy(currentTower);
-                RefundDragTower();
-                return;
+                ManualDeselect();
             }
         }
         else
         {
             //No Raycast
             //print("No Raycast Hit, Destroy Tower");
-            Destroy(currentTower);
-            RefundDragTower();
-            return;
+            ManualDeselect();
         }
     }
 
@@ -217,6 +213,12 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         }
     }
 
+    public void ManualDeselect()
+    {
+        Destroy(currentTower);
+        RefundDragTower();
+        return;
+    }
     /////////////////////////////////////////////////////////////////
 }
 

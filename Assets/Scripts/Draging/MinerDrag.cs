@@ -158,21 +158,23 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             {
                 //No Match
                 print("No Matching Value, Destroy Miner");
-                Destroy(currentMiner);
-                RefundDragMiner();
-                return;
+                ManualDeselect();
             }
         }
         else
         {
             //No Raycast
             print("No Raycast Hit, Destroy Miner");
-            Destroy(currentMiner);
-            RefundDragMiner();
-            return;
+            ManualDeselect();
         }
     }
 
+    public void ManualDeselect()
+    {
+        Destroy(currentMiner);
+        RefundDragMiner();
+        return;
+    }
 
     ///////////////
     /// <summary>
