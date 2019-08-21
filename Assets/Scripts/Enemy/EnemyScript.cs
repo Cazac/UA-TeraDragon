@@ -111,6 +111,7 @@ public class EnemyScript : MonoBehaviour
         //If Close enough to base
         if (Vector3.Distance(gameObject.transform.position, endPosition) < 0.5f)
         {
+            gameObject.transform.position = endPosition;
             if (currentWaypoint < currentWaypoints.Count - 2)
             {
                 currentWaypoint++;
