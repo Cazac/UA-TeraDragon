@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,11 +11,14 @@ public class BackGroundPanAround : MonoBehaviour
 
     public Vector3 targetPosition;
 
+    private Vector3 startposition;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        startposition = transform.position;
     }
+     
 
     // Update is called once per frame
     void Update()
@@ -23,8 +26,8 @@ public class BackGroundPanAround : MonoBehaviour
         mouseX += Input.GetAxis("Mouse X") * moveSensitivity;
         mouseY += Input.GetAxis("Mouse Y") * moveSensitivity;
 
-        mouseX = Mathf.Clamp(mouseX, -15, 15);
-        mouseY = Mathf.Clamp(mouseY, -4.5f, 4.5f);
+        mouseX = Mathf.Clamp(mouseX, -15 + startposition.x, 15 + startposition.x);
+        mouseY = Mathf.Clamp(mouseY, -4.5f + startposition.y, 4.5f + startposition.y);
 
         targetPosition = new Vector3(mouseX, mouseY, -10);
         this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, Time.deltaTime * smoothSpeed);
