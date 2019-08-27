@@ -332,6 +332,12 @@ public class TileNodes : MonoBehaviour
                         if (name == tile.name)
                         {
                             node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
+                            if (name == "Rock Tile")
+                            {
+                                //Debug.Log("Name: " + name);
+                             //   node.name = "test";
+                                  node.GetComponent<WorldTile>().towering = false;
+                            }
                         }
                     }
                     // checks if tile is found in Cystal

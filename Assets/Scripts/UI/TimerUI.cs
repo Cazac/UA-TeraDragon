@@ -17,8 +17,11 @@ public class TimerUI : MonoBehaviour
         //MUSIC (Battle)
         if (!(FindObjectOfType<SoundManager>().mainAudioSourceSoundtrack.clip.name == "Landing"))
         {
-            //Debug.Log("Battle");
-            FindObjectOfType<SoundManager>().PlaySpecificSound("Main");
+            if (!(FindObjectOfType<SoundManager>().mainAudioSourceSoundtrack.clip.name == "Death on a Distant World"))
+            {
+                //Debug.Log("Battle");
+                FindObjectOfType<SoundManager>().PlaySpecificSound("Main");
+            }
         }
 
         if (timeLeft != 0)
@@ -42,8 +45,11 @@ public class TimerUI : MonoBehaviour
         //MUSIC (Interwave)
         if (!(FindObjectOfType<SoundManager>().mainAudioSourceSoundtrack.clip.name == "Calm"))
         {
-            //Debug.Log("Inter");
-            FindObjectOfType<SoundManager>().PlaySpecificSound("Inter");
+            if (!(FindObjectOfType<SoundManager>().mainAudioSourceSoundtrack.clip.name == "Death on a Distant World"))
+            {
+                //Debug.Log("Inter");
+                FindObjectOfType<SoundManager>().PlaySpecificSound("Inter");
+            }
         }
 
         int timeLeft = (int)time;
@@ -69,6 +75,13 @@ public class TimerUI : MonoBehaviour
 
                 minerScript.timer += currentTimer.TimeUntilNextSpawn;
             }
+
+            PlayerStats playerStats = FindObjectOfType<PlayerStats>();
+
+            playerStats.skillCountdown_Red += currentTimer.TimeUntilNextSpawn;
+            playerStats.skillCountdown_Blue += currentTimer.TimeUntilNextSpawn;
+            playerStats.skillCountdown_Green += currentTimer.TimeUntilNextSpawn;
+            playerStats.skillCountdown_Yellow += currentTimer.TimeUntilNextSpawn;
 
 
 

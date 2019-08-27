@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoundName: Death
   AudioClip: {fileID: 8300000, guid: 7c5fab5406a54ea40bb3accdc42b79fc, type: 3}
-  Volume: 1
+  Volume: 0.7
   Pitch: 1
   IsAllowedLooping: 1
   IsAllowedAutoDestruct: 0
