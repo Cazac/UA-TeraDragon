@@ -15,7 +15,7 @@ using UnityEngine.UI;
 /// </summary>
 ///////////////
 
-public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("Prefab Towers")]
     public GameObject towerPrefab_UI;
@@ -34,6 +34,9 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     [Header("Color")]
     public string towerColor;
+
+    [Header("Hover Panel")]
+    public GameObject hoverPanel;
 
     //Managers
     private TileNodes tileNodes;
@@ -57,6 +60,19 @@ public class TowerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     }
 
     /////////////////////////////////////////////////////////////////
+
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        hoverPanel.SetActive(true);
+    }
+
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        hoverPanel.SetActive(false);
+    }
+
 
     ///////////////
     /// <summary>

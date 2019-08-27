@@ -17,7 +17,7 @@ public class TowerNodeUIScript : MonoBehaviour
     {
         if(NodeText == null)
         {
-            Debug.Log("Test is null");
+            //Debug.Log("Test is null");
         }
 
 

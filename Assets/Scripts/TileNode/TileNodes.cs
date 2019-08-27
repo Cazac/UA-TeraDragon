@@ -334,7 +334,7 @@ public class TileNodes : MonoBehaviour
                             node = Instantiate(TileNodesPrefabs[1], nodePosition, Quaternion.identity, parentNodes[1].transform);
                             if (name == "Rock Tile")
                             {
-                                Debug.Log("Name: " + name);
+                                //Debug.Log("Name: " + name);
                              //   node.name = "test";
                                   node.GetComponent<WorldTile>().towering = false;
                             }

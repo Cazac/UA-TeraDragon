@@ -24,6 +24,12 @@ public class PlayerStats : MonoBehaviour
     public GameObject skillGameObject_Green;
     public GameObject skillGameObject_Yellow;
 
+    [Header("Skill Fillbars UI")]
+    public GameObject skillFillGameObject_Red;
+    public GameObject skillFillGameObject_Blue;
+    public GameObject skillFillGameObject_Green;
+    public GameObject skillFillGameObject_Yellow;
+
     [Header("Miners")]
     public int minersOwned;
 
@@ -44,10 +50,10 @@ public class PlayerStats : MonoBehaviour
     public bool skillReady_Yellow;
 
     //Skill countdown values
-    private float skillCountdown_Red;
-    private float skillCountdown_Blue;
-    private float skillCountdown_Green;
-    private float skillCountdown_Yellow;
+    public float skillCountdown_Red;
+    public float skillCountdown_Blue;
+    public float skillCountdown_Green;
+    public float skillCountdown_Yellow;
 
     //STATIC VALUES WHERE TO CHANGE???
     private float skillCooldown_Red = 20f;
@@ -158,6 +164,7 @@ public class PlayerStats : MonoBehaviour
     {
         //Debug.Log("Game over man, Game over");
         gameOverScript.TurnOnGameOver();
+        print("Test Code: BLANK");
         soundManager.PlaySpecificSound("Death");
     }
 
@@ -187,7 +194,7 @@ public class PlayerStats : MonoBehaviour
 
     ///////////////
     /// <summary>
-    /// Update the counters on the skills cooldown
+    /// Update the counters on the skills cooldown, The fill bars are using a range of 60 - 0
     /// </summary>
     ///////////////
     public void UpdateSkillCooldowns()
@@ -196,16 +203,46 @@ public class PlayerStats : MonoBehaviour
         {
             skillCountdown_Red += Time.deltaTime;
 
+            //Set Ratio For Bar
+            float ratio = (skillCountdown_Red / skillCooldown_Red);
+            ratio = ratio * 60;
+            ratio = ratio - 60;
+
+            if (ratio > 0f)
+            {
+                ratio = 0f;
+            }
+
+            //Update Bar
+            skillFillGameObject_Red.GetComponent<RectTransform>().offsetMax = new Vector2(ratio, 0); 
+
             if (skillCountdown_Red >= skillCooldown_Red)
             {
                 skillReady_Red = true;
                 skillCountdown_Red = 0;
             }
         }
+        else
+        {
+            skillCountdown_Red = 0;
+        }
 
         if (!skillReady_Blue)
         {
             skillCountdown_Blue += Time.deltaTime;
+
+            //Set Ratio For Bar
+            float ratio = (skillCountdown_Blue / skillCooldown_Blue);
+            ratio = ratio * 60;
+            ratio = ratio - 60;
+
+            if (ratio > 0f)
+            {
+                ratio = 0f;
+            }
+
+            //Update Bar
+            skillFillGameObject_Blue.GetComponent<RectTransform>().offsetMax = new Vector2(ratio, 0);
 
             if (skillCountdown_Blue >= skillCooldown_Blue)
             {
@@ -213,10 +250,27 @@ public class PlayerStats : MonoBehaviour
                 skillCountdown_Blue = 0;
             }
         }
+        else
+        {
+            skillCountdown_Blue = 0;
+        }
 
         if (!skillReady_Green)
         {
             skillCountdown_Green += Time.deltaTime;
+
+            //Set Ratio For Bar
+            float ratio = (skillCountdown_Green / skillCooldown_Green);
+            ratio = ratio * 60;
+            ratio = ratio - 60;
+
+            if (ratio > 0f)
+            {
+                ratio = 0f;
+            }
+
+            //Update Bar
+            skillFillGameObject_Green.GetComponent<RectTransform>().offsetMax = new Vector2(ratio, 0);
 
             if (skillCountdown_Green >= skillCooldown_Green)
             {
@@ -224,10 +278,27 @@ public class PlayerStats : MonoBehaviour
                 skillCountdown_Green = 0;
             }
         }
+        else
+        {
+            skillCountdown_Green = 0;
+        }
 
         if (!skillReady_Yellow)
         {
             skillCountdown_Yellow += Time.deltaTime;
+
+            //Set Ratio For Bar
+            float ratio = (skillCountdown_Yellow / skillCooldown_Yellow);
+            ratio = ratio * 60;
+            ratio = ratio - 60;
+
+            if (ratio > 0f)
+            {
+                ratio = 0f;
+            }
+
+            //Update Bar
+            skillFillGameObject_Yellow.GetComponent<RectTransform>().offsetMax = new Vector2(ratio, 0);
 
             if (skillCountdown_Yellow >= skillCooldown_Yellow)
             {
@@ -235,31 +306,17 @@ public class PlayerStats : MonoBehaviour
                 skillCountdown_Yellow = 0;
             }
         }
-    }
-
-    /// <summary>
-    /// Undocumented
-    /// </summary>
-    /*
-    public IEnumerator UpdateCrystalValues()
-    {
-        UpdateCrystalUI();
-
-        yield return new WaitForSeconds(1);
-
-        GameOverScript gos = (GameOverScript)FindObjectOfType(typeof(GameOverScript));
-
-        if (!gos.isGameOver)
+        else
         {
-            //Restart the crystal methods
-            StartCoroutine(UpdateCrystalValues());
+            skillCountdown_Yellow = 0;
         }
     }
-    */
 
+    ///////////////
     /// <summary>
     /// Update Crystal UI elements
     /// </summary>
+    ///////////////
     public void UpdateCrystalUI()
     {
         crystalText_Red.text = crystalsOwned_Red.ToString();
@@ -308,9 +365,11 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    ///////////////
     /// <summary>
-    /// Update Crystal UI elements
+    /// Update Miner UI elements
     /// </summary>
+    ///////////////
     public void UpdateMinerUI()
     {
         minerText.text = minersOwned.ToString();
