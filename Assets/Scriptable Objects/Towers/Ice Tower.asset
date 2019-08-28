@@ -18,11 +18,17 @@ MonoBehaviour:
   projectile_T1: {fileID: 11400000, guid: 24c0e066686c6b7448bb38f74ee86ac9, type: 2}
   towerRange_T1: 20
   towerReloadSpeed_T1: 0.5
+  towerUpgradePrice_T1: 1
+  towerSellPrice_T1: 1
   towerSprite_T2: {fileID: 21300000, guid: 64bf6d1227911494e80fe1ac6de7f457, type: 3}
   projectile_T2: {fileID: 11400000, guid: 599dfb6ce65eb234da07c7a328fb7cb1, type: 2}
-  towerRange_T2: 20
+  towerRange_T2: 25
   towerReloadSpeed_T2: 0.4
+  towerUpgradePrice_T2: 2
+  towerSellPrice_T2: 2
   towerSprite_T3: {fileID: 21300000, guid: 64bf6d1227911494e80fe1ac6de7f457, type: 3}
   projectile_T3: {fileID: 11400000, guid: 0d338e16f1bf85549a901c781f6da6d5, type: 2}
-  towerRange_T3: 20
+  towerRange_T3: 30
   towerReloadSpeed_T3: 0.3
+  towerUpgradePrice_T3: 3
+  towerSellPrice_T3: 3

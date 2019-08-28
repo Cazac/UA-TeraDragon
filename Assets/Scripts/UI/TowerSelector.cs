@@ -61,10 +61,10 @@ public class TowerSelector : MonoBehaviour
             if (CurrentTowerWindow == null)
             {
                 CurrentTowerWindow = Instantiate(TowerWindowPrefab, SelectedTower.transform.position, new Quaternion());
-                CurrentTowerWindow.GetComponent<TowerNodeUIScript>().changeNodeText(
-                    SelectedTower.towerName + " \n" + 
-                    "Damage: " + SelectedTower.towerRange.currentProjectileData.projectileDamage + "  \n" + 
-                    "Attack Speed: " + SelectedTower.towerRange.timeToReload);
+                //CurrentTowerWindow.GetComponent<TowerNodeUIScript>().changeNodeText(
+                    //SelectedTower.towerName + " \n" + 
+                    //"Damage: " + SelectedTower.towerRange.currentProjectileData.projectileDamage + "  \n" + 
+                    //"Attack Speed: " + SelectedTower.towerRange.timeToReload);
                 //Debug.Log(SelectedTower.projectileData.name + " \n" + SelectedTower.projectileData.projectileDamage + "  \n" + SelectedTower.timeToReload);
             }
         }

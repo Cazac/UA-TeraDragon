@@ -15,12 +15,12 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1543840103994522185, guid: 52086ad188fbb2944b63b0259666a4a7,
     type: 3}
   isProjectile: 1
-  projectileDamage: 20
-  projectileSpeed: 10
+  projectileDamage: 300
+  projectileSpeed: 100
   projectileSlowdown: 0
   projectileSlowdownTime: 0
-  projectilePoison: 1
-  projectilePoisonTime: 4
+  projectilePoison: 0
+  projectilePoisonTime: 0
   isExplosive: 0
   explosionRadius: 0
   explosionLinger: 0
@@ -28,5 +28,5 @@ MonoBehaviour:
   explosionSlowdown: 0
   isBeam: 0
   beamDamage: 0
-  beamSlowdown: 0
+  beamReload: 0
   beamChainTargets: 0

@@ -5,28 +5,67 @@ using UnityEngine.UI;
 
 public class TowerNodeUIScript : MonoBehaviour
 {
-    public Text NodeText;
+    //////////////////////////////////////////////////////////
+    
+    [Header("Main Script")]
+    public TowerScript towerScript;
 
-    private void Start()
-    {
-        NodeText = GetComponentInChildren<Text>();
-     //   NodeText.text = "test start";
-    }
+    [Header("Tower Buttons")]
+    public Button upgradeButton;
+    public Button sellButton;
 
+    [Header("Tower Text")]
+    public Text towerUpgradeText;
+    public Text towerSellText;
+
+    //////////////////////////////////////////////////////////
+   
     private void Update()
     {
-        if(NodeText == null)
+        CheckButtonActive();
+    }
+
+    //////////////////////////////////////////////////////////
+
+    private void CheckButtonActive()
+    {
+
+        PlayerStats playerStats = FindObjectOfType<PlayerStats>();
+
+        int upgradePrice = towerScript.GetUpgradePrice();
+        string color = towerScript.color;
+        int crystalAmount = 0;
+
+        //Refund player for the tower
+        if (color == "Red")
         {
-            //Debug.Log("Test is null");
+            crystalAmount = playerStats.crystalsOwned_Red;
+        }
+        else if (color == "Blue")
+        {
+            crystalAmount = playerStats.crystalsOwned_Blue;
+        }
+        else if (color == "Green")
+        {
+            crystalAmount = playerStats.crystalsOwned_Green;
+        }
+        else if (color == "Yellow")
+        {
+            crystalAmount = playerStats.crystalsOwned_Yellow;
         }
 
 
+        if (crystalAmount >= upgradePrice)
+        {
+            //Enable
+            upgradeButton.interactable = true;
+        }
+        else
+        {
+            //Disable
+            upgradeButton.interactable = false;
+        }
     }
 
-    public void changeNodeText(string textInput)
-    {
-     //   NodeText = GetComponentInChildren<Text>();
-        Debug.Log("SET TEXT CALLED");
-        NodeText.text = textInput;
-    }
+    //////////////////////////////////////////////////////////
 }

@@ -14,16 +14,22 @@ public class TowerData: ScriptableObject
     public ProjectileData projectile_T1;
     public float towerRange_T1;
     public float towerReloadSpeed_T1;
+    public int towerUpgradePrice_T1;
+    public int towerSellPrice_T1;
 
     [Header("Tower Tier 2")]
     public Sprite towerSprite_T2;
     public ProjectileData projectile_T2;
     public float towerRange_T2;
     public float towerReloadSpeed_T2;
+    public int towerUpgradePrice_T2;
+    public int towerSellPrice_T2;
 
     [Header("Tower Tier 3")]
     public Sprite towerSprite_T3;
     public ProjectileData projectile_T3;
     public float towerRange_T3;
     public float towerReloadSpeed_T3;
+    public int towerUpgradePrice_T3;
+    public int towerSellPrice_T3;
 }

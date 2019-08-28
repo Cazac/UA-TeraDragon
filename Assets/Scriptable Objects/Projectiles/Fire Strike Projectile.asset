@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1944aecb4a26cfe49be7cc05672a8872, type: 3}
   m_Name: Fire Strike Projectile
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
-  isProjectile: 0
-  projectileDamage: 0
-  projectileSpeed: 0
+  projectilePrefab: {fileID: 1543840103994522185, guid: 52086ad188fbb2944b63b0259666a4a7,
+    type: 3}
+  isProjectile: 1
+  projectileDamage: 300
+  projectileSpeed: 100
   projectileSlowdown: 0
   projectileSlowdownTime: 0
   projectilePoison: 0
@@ -27,5 +28,5 @@ MonoBehaviour:
   explosionSlowdown: 0
   isBeam: 0
   beamDamage: 0
-  beamSlowdown: 0
+  beamReload: 0
   beamChainTargets: 0

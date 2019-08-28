@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1944aecb4a26cfe49be7cc05672a8872, type: 3}
   m_Name: Ice Strike Projectile
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 8716833556434465185, guid: 21495890508cb7044a5c96ed1e8551f9,
+  projectilePrefab: {fileID: 1543840103994522185, guid: 52086ad188fbb2944b63b0259666a4a7,
     type: 3}
   isProjectile: 1
-  projectileDamage: 1
-  projectileSpeed: 20
-  projectileSlowdown: 0.5
-  projectileSlowdownTime: 0.7
+  projectileDamage: 300
+  projectileSpeed: 100
+  projectileSlowdown: 0
+  projectileSlowdownTime: 0
+  projectilePoison: 0
+  projectilePoisonTime: 0
   isExplosive: 0
   explosionRadius: 0
   explosionLinger: 0
@@ -26,5 +28,5 @@ MonoBehaviour:
   explosionSlowdown: 0
   isBeam: 0
   beamDamage: 0
-  beamSlowdown: 0
+  beamReload: 0
   beamChainTargets: 0
