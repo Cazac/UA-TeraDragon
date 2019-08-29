@@ -2,6 +2,10 @@ using UnityEngine;
 using System.Collections;
 using System;
 using System.Collections.Generic;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
+using UnityEditor;
 
 ///////////////
 /// <summary>
@@ -21,14 +25,17 @@ namespace WaveSystem
     /// 
     /// </summary>
     ///////////////
-
     public class WaveManager : MonoBehaviour
     {
         [Header("TileNodes Refference")]
         public TileNodes tiles;
 
+
         [Header("Scriptable wave objects")]
-        public WaveData[] waves;
+        //public WaveData[] waves;
+        public SpawnList[] spawnListEditorInstance;
+        [SerializeField]
+        private SpawnList[] clonedSpawnListObject;
 
         [Header("DEBUG ONLY currentWave")]
         [SerializeField]
@@ -85,32 +92,27 @@ namespace WaveSystem
 
         //////////////////////////////////////////////////////////
 
+        private void Awake()
+        {
+            ReadSavePointsPrefab(ref spawnListEditorInstance);
+        }
+
         private void Start()
         {
+            clonedSpawnListObject = (SpawnList[])spawnListEditorInstance.Clone();
+            WaveData wave = clonedSpawnListObject[0].wave;
             soundManager = GameObject.FindObjectOfType<SoundManager>();
             tileNodes = GameObject.FindObjectOfType<TileNodes>();
             //Cached CursorSelection
             cursorSelection = GameObject.FindObjectOfType<CursorSelection>();
 
-            for (int i = 0; i < waves.Length; i++)
-            {
-                if (i >= tiles.pathData.paths.Count)
-                {
-                    waves[i].Paths = new List<List<WorldTile>>()
-                    {
-                        tiles.pathData.paths[tiles.pathData.paths.Count-1]
-                    };
-                }
-                else
-                {
-                    waves[i].Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
-                }
-            }
+            SaveSpawnPointsAsPrefab(clonedSpawnListObject);
 
+            AssignCurrentWavePath(clonedSpawnListObject);
 
-            CurrentWave = waves[0];
+            CurrentWave = clonedSpawnListObject[0].wave;
 
-            StartCoroutine(SpawnSingleEnemyPerWave());
+            StartCoroutine(SpawnEnemyPerWave());
         }
 
         private void Update()
@@ -167,7 +169,7 @@ namespace WaveSystem
         /// <remarks>
         ///     Use IEnumerator and must only be called in Start()
         /// </remarks>
-        public IEnumerator SpawnSingleEnemyPerWave()
+        public IEnumerator SpawnEnemyPerWave()
         {
             waveIndex = 0;
             //While loop to keep function running every frame if possible
@@ -178,22 +180,39 @@ namespace WaveSystem
                 {
                     CurrentWave.ParentGameobject = waveParent;
 
+                    //foreach (List<WorldTile> path in CurrentWave.Paths)
+                    //{
+                    //    for (int i = 0; i < CurrentWave.NumberOfEnemyPerPos; i++)
+                    //    {
+                    //        //Enumerator will return at this index, need to check if spawning option is still available
+                    //        if (EnableSpawning == true)
+                    //        {
+                    //            DrawDebugPath(CurrentWave.Paths);
+
+                    //            GameObject enemy = Instantiate(CurrentWave.EnemyPrefab, path[0].transform.position, Quaternion.identity, CurrentWave.ParentGameobject.transform);
+                    //            enemy.GetComponent<EnemyScript>().currentWaypoints = path;
+                    //            enemy.GetComponent<EnemyScript>().PathRelocation();
+
+                    //            yield return new WaitForSeconds(CurrentWave.SpawnRate);
+                    //        }
+                    //    }
+                    //}
+
                     foreach (List<WorldTile> path in CurrentWave.Paths)
                     {
-                        for (int i = 0; i < CurrentWave.NumberOfEnemyPerPos; i++)
+                        //Enumerator will return at this index, need to check if spawning option is still available
+                        if (EnableSpawning == true)
                         {
-                            //Enumerator will return at this index, need to check if spawning option is still available
-                            if (EnableSpawning == true)
-                            {
-                                DrawDebugPath(CurrentWave.Paths);
+                            DrawDebugPath(CurrentWave.Paths);
 
-                                GameObject enemy = Instantiate(CurrentWave.EnemyPrefab, path[0].transform.position, Quaternion.identity, CurrentWave.ParentGameobject.transform);
-                                enemy.GetComponent<EnemyScript>().currentWaypoints = path;
-                                enemy.GetComponent<EnemyScript>().PathRelocation();
+                            GameObject enemy = Instantiate(CurrentWave.EnemyPrefab, path[0].transform.position, Quaternion.identity, CurrentWave.ParentGameobject.transform);
+                            enemy.GetComponent<EnemyScript>().currentWaypoints = path;
+                            enemy.GetComponent<EnemyScript>().PathRelocation();
 
-                                yield return new WaitForSeconds(CurrentWave.SpawnRate);
-                            }
+                            yield return new WaitForSeconds(CurrentWave.SpawnRate);
                         }
+
+
                     }
 
                     //EnableSpawning = false;
@@ -207,9 +226,9 @@ namespace WaveSystem
                         CurrentWave = null;
 
                         //Double Check
-                        if (waves.Length >= waveIndex + 1)
+                        if (clonedSpawnListObject.Length >= waveIndex + 1)
                         {
-                            CurrentWave = waves[++waveIndex];
+                            CurrentWave = clonedSpawnListObject[++waveIndex].wave;
                         }
                         else
                         {
@@ -236,7 +255,7 @@ namespace WaveSystem
                     else if (AllWaveCompleted())
                     {
                         EnableSpawning = false;
-                        StopCoroutine(SpawnSingleEnemyPerWave());
+                        StopCoroutine(SpawnEnemyPerWave());
                     }
                 }
 
@@ -252,7 +271,7 @@ namespace WaveSystem
         private Boolean AllWaveCompleted()
         {
  
-            if (waveIndex > waves.Length - 1)
+            if (waveIndex > clonedSpawnListObject.Length - 1)
             {
                 //Debug.Log("End of all waves");
 
@@ -281,6 +300,91 @@ namespace WaveSystem
                 }
             }
         }
+
+        /// <summary>
+        /// Assign path of a wave using list from SpawnList object
+        /// </summary>
+        /// <param name="spawnList">parameter for SpawnList object list</param>
+        private void AssignCurrentWavePath(SpawnList[] spawnList)
+        {
+            for (int i = 0; i < spawnList.Length; i++)
+            {
+                if (spawnList[i].spawnTileList.Count <= 0)
+                    spawnList[i].wave.Paths = new List<List<WorldTile>>() { tiles.pathData.paths[i] };
+                else
+                {
+                    if (spawnList[i].wave.Paths == null)
+                        spawnList[i].wave.Paths = new List<List<WorldTile>>();
+
+                    foreach (WorldTile worldTile in spawnList[i].spawnTileList)
+                    {
+                        int pathIndex = GetPathIndexInList(tiles.pathData.paths, worldTile);
+                        if (pathIndex != -1)
+                            spawnList[i].wave.Paths.Add(tiles.pathData.paths[pathIndex]);
+                    }
+                }
+            }
+        }
+
+        private void SaveSpawnPointsAsPrefab(SpawnList[] spawnLists)
+        {
+            GameObject mainParent = new GameObject();
+            foreach (var spawnList in spawnLists)
+            {
+                GameObject wave = new GameObject(spawnList.wave.name);
+                wave.transform.SetParent(mainParent.transform);
+                foreach (var spawnPoint in spawnList.spawnTileList)
+                {
+                    WorldTile spawn = (WorldTile)spawnPoint.Clone();
+                    GameObject newPoint = new GameObject();
+                    newPoint.AddComponent<WorldTile>();
+                    spawnPoint.PasteThisComponentValues(ref newPoint);
+                    Instantiate(newPoint.gameObject, wave.transform);
+                }
+            }
+
+            PrefabUtility.SaveAsPrefabAsset(mainParent.gameObject, "Assets/Resources/spawnPoints.prefab");
+        }
+
+        [ExecuteInEditMode]
+        private void ReadSavePointsPrefab(ref SpawnList[] spawnLists)
+        {
+            GameObject spawnList = Resources.Load<GameObject>("spawnPoints");
+            if(spawnList != null)
+            {
+                for (int i = 0; i < spawnList.transform.childCount; i++)
+                {
+                    if (spawnList.transform.GetChild(i).childCount > 0)
+                    {
+                        spawnLists[i].spawnTileList.Clear();
+
+                        for (int j = 0; j < spawnList.transform.GetChild(i).childCount; j++)
+                            spawnLists[i].spawnTileList.Add(spawnList.transform.GetChild(i).GetChild(j).GetComponent<WorldTile>());
+                    }
+                }
+            }
+        }
+
+
+
+
+        /// <summary>
+        /// Get path index in list of path stores in PathDatas
+        /// </summary>
+        /// <param name="tileToCheck">Tile to check if path list contains tile</param>
+        /// <param name="pathDataList">list of path in PathDatas</param>
+        /// <returns>index of path or -1 if not found</returns>
+        private int GetPathIndexInList(List<List<WorldTile>>pathDataList,WorldTile tileToCheck)
+        {
+            for (int i = 0; i < pathDataList.Count; i++)
+            {
+                if (pathDataList[i].Exists(x => x.GetComponent<WorldTile>().gridX == tileToCheck.gridX && x.GetComponent<WorldTile>().gridY == tileToCheck.gridY))
+                    return i;
+            }
+
+            return -1;
+        }
+
     }
 
 

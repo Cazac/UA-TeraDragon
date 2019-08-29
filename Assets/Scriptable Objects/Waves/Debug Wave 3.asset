@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63481b4f989909643afd3e309ea1f415, type: 3}
   m_Name: Debug Wave 3
   m_EditorClassIdentifier: 
+  AcceptedTypes:
+  - {fileID: 0}
+  - {fileID: 0}
   EnemyPrefab: {fileID: 5183016958187622406, guid: a657b833a5a8ebf4fab21ec3d8c8d087,
     type: 3}
   NumberOfEnemyPerPos: 10
@@ -20,3 +23,4 @@ MonoBehaviour:
   SpawnRate: 1.5
   Path: []
   ParentGameobject: {fileID: 0}
+  SelectedSpawnTiles: []

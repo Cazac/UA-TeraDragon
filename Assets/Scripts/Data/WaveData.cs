@@ -6,10 +6,14 @@ using static TileNodes;
 [CreateAssetMenu(fileName="NewWave", menuName= "Scriptable Objects/Wave")]
 public class WaveData : ScriptableObject
 {
+
+    [Header("Accepted enemy type")]
+    public GameObject[] AcceptedTypes;
+
     [Header("Enemy Prefab")]
     public GameObject EnemyPrefab;
 
-    [Header("???")]
+    [Header("Enemy per base")]
     public int NumberOfEnemyPerPos; //Numver of enemy per position
 
     [Header("How Long The Interwave Lasts")]
@@ -31,6 +35,9 @@ public class WaveData : ScriptableObject
     public List<List<WorldTile>> Paths;
     [HideInInspector]
     public GameObject ParentGameobject;
+
+    public List<WorldTile> SelectedSpawnTiles;
+
 
     /////////////////////////////////////////////////////////////////
 
@@ -64,6 +71,15 @@ public class WaveData : ScriptableObject
         ParentGameobject = parentGameobject;
         NumberOfEnemyPerPos = numberOfEnemyPerPos;
     }
+
+    /// <summary>
+    /// Empty constructor
+    /// </summary>
+    public WaveData()
+    {
+
+    }
+
 
     public List<WorldTile> GetPath()
     {
