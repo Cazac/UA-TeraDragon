@@ -7,6 +7,7 @@ using UnityEditor;
 public class TileNodesEditor 
 {
 
+
     /*
 
     public override void OnInspectorGUI()
@@ -27,25 +28,25 @@ public class TileNodesEditor
         if (GUILayout.Button("Test hide tile"))
         {
             myScript.HideTiles();
-            //foreach (var item in myScript.hiddenTileManager.list)
-            //{
-            //    foreach (var item1 in item.list)
-            //    {
-            //        Debug.Log(item1.ToString());
-            //    }
-            //}
+            foreach (var item in myScript.hiddenTileManager.list)
+            {
+                foreach (var item1 in item.list)
+                {
+                    Debug.Log(item1.ToString());
+                }
+            }
         }
 
         if (GUILayout.Button("Test show tile"))
         {
             myScript.ShowTiles();
-            //foreach (var item in myScript.hiddenTileManager.list)
-            //{
-            //    foreach (var item1 in item.list)
-            //    {
-            //        Debug.Log(item1.ToString());
-            //    }
-            //}
+            foreach (var item in myScript.hiddenTileManager.list)
+            {
+                foreach (var item1 in item.list)
+                {
+                    Debug.Log(item1.ToString());
+                }
+            }
         }
 
         if (GUILayout.Button("Build map hidden"))
