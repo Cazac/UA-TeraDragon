@@ -142,7 +142,7 @@ public class MinerDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 soundManager.PlayOnUIClick(minerPlacement_SFX, 0.1f);
 
                 //Raise Miner 
-                newMiner.transform.position = new Vector2(newMiner.transform.position.x, newMiner.transform.position.y + 3.5f);
+                newMiner.transform.position = new Vector3(newMiner.transform.position.x, newMiner.transform.position.y, - 10 + newMiner.transform.position.y * 0.01f);
 
                 //Set new miner values to tile
                 newMiner.GetComponent<MinerScript>().level = 1;
