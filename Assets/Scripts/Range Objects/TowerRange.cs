@@ -111,7 +111,7 @@ public class TowerRange : MonoBehaviour
 
                 //New Range Scale Size
                 towerRange = parentTowerScript.towerData.towerRange_T2;
-                gameObject.transform.localScale = new Vector3(towerRange, towerRange, towerRange);
+                GetComponent<CircleCollider2D>().radius = towerRange * 1.95f;
 
                 //New Projectile
                 currentProjectileData = parentTowerScript.towerData.projectile_T3;
@@ -125,7 +125,7 @@ public class TowerRange : MonoBehaviour
 
                 //New Range Scale Size
                 towerRange = parentTowerScript.towerData.towerRange_T3;
-                gameObject.transform.localScale = new Vector3(towerRange, towerRange, towerRange);
+                GetComponent<CircleCollider2D>().radius = towerRange * 1.95f;
 
                 //New Projectile
                 currentProjectileData = parentTowerScript.towerData.projectile_T3;
