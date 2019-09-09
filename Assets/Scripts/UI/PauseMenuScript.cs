@@ -9,7 +9,7 @@ public class PauseMenuScript : MonoBehaviour
 
     public GameObject PlayMenu;
     public GameObject PauseMenu;
-
+    public GameObject UpgradeMenu;
 
     private void Update()
     {
@@ -24,6 +24,17 @@ public class PauseMenuScript : MonoBehaviour
                 TurnOnPause();
             }
         }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            if (isGameOver)
+            {
+                TurnOffUpgrade();
+            }
+            else
+            {
+                TurnOnUpgrade();
+            }
+        }
     }
 
     // Start is called before the first frame update
@@ -31,6 +42,7 @@ public class PauseMenuScript : MonoBehaviour
     {
         PlayMenu.SetActive(true);
         PauseMenu.SetActive(false);
+        UpgradeMenu.SetActive(false);
         isGameOver = false;
     }
     
@@ -40,6 +52,7 @@ public class PauseMenuScript : MonoBehaviour
         isGameOver = true;
         Time.timeScale = 0;
         PlayMenu.SetActive(false);
+        UpgradeMenu.SetActive(false);
         PauseMenu.SetActive(true);
     }
 
@@ -48,6 +61,27 @@ public class PauseMenuScript : MonoBehaviour
         isGameOver = false;
         Time.timeScale = 1;
         PlayMenu.SetActive(true);
+        UpgradeMenu.SetActive(false);
+        PauseMenu.SetActive(false);
+    }
+
+    public void TurnOnUpgrade()
+    {
+        Deselecting();
+        isGameOver = true;
+        Time.timeScale = 0;
+        PlayMenu.SetActive(false);
+        UpgradeMenu.SetActive(true);
+        PauseMenu.SetActive(false);
+    }
+
+    public void TurnOffUpgrade()
+    {
+        Deselecting();
+        isGameOver = false;
+        Time.timeScale = 1;
+        PlayMenu.SetActive(true);
+        UpgradeMenu.SetActive(false);
         PauseMenu.SetActive(false);
     }
 
@@ -58,7 +92,7 @@ public class PauseMenuScript : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
-    public void UnpuaseButton()
+    public void UnpauseButton()
     {
         TurnOffPause();
     }
