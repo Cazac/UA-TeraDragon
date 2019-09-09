@@ -38,6 +38,7 @@ public class TowerRange : MonoBehaviour
     public float reloadProgress = 0;
     public bool isReadyToShoot = true;
     public float towerRange = 0;
+    public CrystalColor cryColor;
 
     //////////////////////////////////////////////////////////
 
@@ -271,7 +272,7 @@ public class TowerRange : MonoBehaviour
         projectileScript.isBeam = currentProjectileData.isBeam;
 
         //Add Skill tree values TO DO!!!!!
-        projectileScript.projectileDamage = currentProjectileData.projectileDamage;
+        projectileScript.projectileDamage = (int) ( currentProjectileData.projectileDamage * DamageBonus_Temporary() );
         projectileScript.projectileSpeed = currentProjectileData.projectileSpeed;
         projectileScript.projectileSlowdown = currentProjectileData.projectileSlowdown;
         projectileScript.projectileSlowdownTime = currentProjectileData.projectileSlowdownTime;
@@ -318,6 +319,23 @@ public class TowerRange : MonoBehaviour
                 //collider.GetComponent<EnemyScript>().;
             }
         }
+    }
+
+    public UpgradeManager upgradeManager;
+    private float DamageBonus_Temporary()
+    {
+        switch (cryColor)
+        {
+            case CrystalColor.RED:
+                return 1 + upgradeManager.greenTowerUpgradeLevel;
+            case CrystalColor.GREEN:
+                return 1 + upgradeManager.greenTowerUpgradeLevel;
+            case CrystalColor.BLUE:
+                return 1 + upgradeManager.blueTowerUpgradeLevel;
+            case CrystalColor.YELLOW:
+                return 1 + upgradeManager.yellowTowerUpgradeLevel;
+        }
+        return 0f;
     }
 
     //////////////////////////////////////////////////////////

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public abstract class UpgradeNode : ScriptableObject {
+public abstract class UpgradeNodeTree : ScriptableObject {
     public string upgradeName;
     private UpgradeType upgradeType;
     public bool isActive;
-    public UpgradeNode[] necessaryNodes;
+    public UpgradeNodeTree[] necessaryNodes;
 
     public void ActivateUpgrade() {
-        foreach(UpgradeNode node in necessaryNodes) {
+        foreach(UpgradeNodeTree node in necessaryNodes) {
             if (!node.isActive)
                 return;
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 [CreateAssetMenu(fileName = "NewStatsUpgrade", menuName = "Scriptable Objects/Stats Upgrade")]
-public class StatsUpgrade : UpgradeNode {
+public class StatsUpgrade : UpgradeNodeTree {
 
     public float StatsMultiplier;
     public StatsCategory statsCategory;

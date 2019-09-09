@@ -6,14 +6,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewUpgradeTree", menuName = "Scriptable Objects/Upgrade Tree")]
 public class UpgradeTree : ScriptableObject {
     
-    public UpgradeNode[] tree;
+    public UpgradeNodeTree[] tree;
 
     public float GetTotalStatsUpgrade(StatsCategory category) {
         float total = 0f;
-        foreach (UpgradeNode upgradeNode in tree) {
+        foreach (UpgradeNodeTree upgradeNode in tree) {
             if (upgradeNode.GetUpgradeType() == UpgradeType.STATS_MODIFIER && upgradeNode.isActive) {
-                if(((StatsUpgrade)upgradeNode).statsCategory == category) {
-                    total += ((StatsUpgrade)upgradeNode).StatsMultiplier;
+                if( ( (StatsUpgrade) upgradeNode).statsCategory == category) {
+                    total += ( (StatsUpgrade) upgradeNode ).StatsMultiplier;
                 }
             }
         }
@@ -23,7 +23,7 @@ public class UpgradeTree : ScriptableObject {
     public List<string> GetActivateAbilities() {
         List<string> activeAbilities = new List<string>();
 
-        foreach (UpgradeNode upgradeNode in tree) {
+        foreach (UpgradeNodeTree upgradeNode in tree) {
             if (upgradeNode.GetUpgradeType() == UpgradeType.EFFECT && upgradeNode.isActive) {
                 activeAbilities.Add(((EffectUpgrade)upgradeNode).effectUpgrade);
             }
